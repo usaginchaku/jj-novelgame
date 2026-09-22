@@ -160,10 +160,25 @@ function renderHome() {
     (id === 'displayName' ? card : row).append(label);
   }
   card.insertBefore(row, card.children[1]);
+  const lastName = card.elements.namedItem('lastName');
+  const firstName = card.elements.namedItem('firstName');
+  const displayName = card.elements.namedItem('displayName');
+  const fullName = () => [lastName.value.trim(), firstName.value.trim()].filter(Boolean).join('　');
+  let automaticDisplayName = fullName();
+  const syncDisplayName = () => {
+    // Keep a manually chosen display name while continuing to track the surname and given name.
+    const followsName = !displayName.value.trim() || displayName.value === automaticDisplayName;
+    automaticDisplayName = fullName();
+    if (followsName) displayName.value = automaticDisplayName;
+  };
+  for (const input of [lastName, firstName]) {
+    input.addEventListener('input', syncDisplayName);
+    input.addEventListener('change', syncDisplayName);
+  }
   const start = el('button', '新しい日々をはじめる', 'primary');
   start.type = 'submit';
   card.append(start, button('記録からつづける', showSaves),
-    el('p', '姓・名は呼びかけ、表示名は話者欄に使います。初周は関係値を表示しません。新しく始めるとオートセーブを更新します。残したい日々は手動枠へ保存してください。', 'hint'));
+    el('p', '姓・名は呼びかけ、表示名は話者欄に使います。表示名は姓名から自動入力され、自由に変更できます。初周は関係値を表示しません。新しく始めるとオートセーブを更新します。残したい日々は手動枠へ保存してください。', 'hint'));
   card.addEventListener('submit', event => {
     event.preventDefault();
     guard(() => {
