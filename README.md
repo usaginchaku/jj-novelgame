@@ -26,19 +26,54 @@
 
 ## 素材出典
 
-ジョセフ・シーザー・花京院の名前横に、公式立ち絵の輪郭をCSSでシルエット表示しています。素材を本作独自の作画として扱っていません。
+全39人の名前横へ、アニメ絵の上半身をCSSで深緑のシルエットとして表示しています。37人はアニメ公式サイト、カーズ・テレンスはJoJo Wiki掲載のアニメ絵の切り抜きを使用しています。本作独自の作画として扱っていません。
 
-- [ジョセフ（第2部）](https://jojo-portal.com/anime/pb-bt/character/bt/01/)
-- [シーザー](https://jojo-portal.com/anime/pb-bt/character/bt/02/)
+- [ジョセフ](https://jojo-portal.com/anime/pb-bt/character/bt/01/)
 - [花京院](https://jojo-portal.com/anime/sc/character/02/)
+- [ディオ](https://jojo-portal.com/anime/pb-bt/character/pb/02/)
+- [ジョナサン](https://jojo-portal.com/anime/pb-bt/character/pb/01/)
+- [シーザー](https://jojo-portal.com/anime/pb-bt/character/bt/02/)
+- [プロシュート](https://jojo-portal.com/anime/gw/character/18/)
+- [リゾット](https://jojo-portal.com/anime/gw/character/15/)
+- [ギアッチョ](https://jojo-portal.com/anime/gw/character/21/)
+- [カーズ](https://jojowiki.com/File:Kars_Appearance.png)
+- [承太郎](https://jojo-portal.com/anime/sc/character/01/)
+- [ポルナレフ](https://jojo-portal.com/anime/sc/character/03/)
+- [テレンス・T・ダービー](https://jojowiki.com/File:Telence_T._D%27Arby_Infobox_Anime.png)
+- [メローネ](https://jojo-portal.com/anime/gw/character/20/)
+- [イルーゾォ](https://jojo-portal.com/anime/gw/character/17/)
+- [ディアボロ](https://jojo-portal.com/anime/gw/character/08/)
+- [仗助](https://jojo-portal.com/anime/du/character/01/)
+- [康一](https://jojo-portal.com/anime/du/character/02/)
+- [億泰](https://jojo-portal.com/anime/du/character/03/)
+- [徐倫](https://jojo-portal.com/anime/so/character/01/)
+- [エルメェス](https://jojo-portal.com/anime/so/character/02/)
+- [F・F](https://jojo-portal.com/anime/so/character/03/)
+- [露伴](https://jojo-portal.com/anime/du/character/04/)
+- [吉良](https://jojo-portal.com/anime/du/character/32/)
+- [ミキタカ](https://jojo-portal.com/anime/du/character/12/)
+- [ウェザー・リポート](https://jojo-portal.com/anime/so/character/05/)
+- [アナスイ](https://jojo-portal.com/anime/so/character/06/)
+- [プッチ](https://jojo-portal.com/anime/so/character/08/)
+- [ジョンガリ・A](https://jojo-portal.com/anime/so/character/10/)
+- [ジョルノ](https://jojo-portal.com/anime/gw/character/01/)
+- [ブチャラティ](https://jojo-portal.com/anime/gw/character/02/)
+- [アバッキオ](https://jojo-portal.com/anime/gw/character/05/)
+- [ミスタ](https://jojo-portal.com/anime/gw/character/03/)
+- [ナランチャ](https://jojo-portal.com/anime/gw/character/04/)
+- [フーゴ](https://jojo-portal.com/anime/gw/character/06/)
+- [ジャイロ](https://jojo-portal.com/anime/sbr/character/02/)
+- [ジョニィ](https://jojo-portal.com/anime/sbr/character/01/)
+- [ディエゴ](https://jojo-portal.com/anime/sbr/character/03/)
+- [サンドマン](https://jojo-portal.com/anime/sbr/character/06/)
+- [マウンテン・ティム](https://jojo-portal.com/anime/sbr/character/08/)
 
-第1期画像: ©荒木飛呂彦/集英社・ジョジョの奇妙な冒険製作委員会
+権利表記: 第1期 ©荒木飛呂彦/集英社・ジョジョの奇妙な冒険製作委員会。第2期 ©荒木飛呂彦＆LUCKY LAND COMMUNICATIONS/集英社・ジョジョの奇妙な冒険SC製作委員会。第3期 ©LUCKY LAND COMMUNICATIONS/集英社・ジョジョの奇妙な冒険DU製作委員会。第4期 ©LUCKY LAND COMMUNICATIONS/集英社・ジョジョの奇妙な冒険GW製作委員会。第5期 ©LUCKY LAND COMMUNICATIONS/集英社・ジョジョの奇妙な冒険SO製作委員会。第6期 ©LUCKY LAND COMMUNICATIONS/集英社・ジョジョの奇妙な冒険SBR製作委員会。アニメ10周年展 ©荒木飛呂彦&LUCKY LAND COMMUNICATIONS/集英社・ジョジョの奇妙な冒険 THE ANIMATION PROJECT。
 
-第2期画像: ©荒木飛呂彦＆LUCKY LAND COMMUNICATIONS/集英社・ジョジョの奇妙な冒険SC製作委員会
 
 ## 動作確認
 
-開発側で573件のテストとビルドを確認し、Chromeの同じ保存領域で全39人・234エンドへ通常選択から到達しました。セーブとJSONの復元、旧名の回想、390px幅の操作を確認しています。Firefox・Safari・実機モバイルと長期間の大量周回は未検証です。
+開発側で575件のテストとビルドを確認しています。全39人のシルエットを本編・メッセージ・回想へ追加しました。前回の公開受入では、Chromeの同じ保存領域で全39人・234エンドへ通常選択から到達しました。セーブとJSONの復元、旧名の回想、390px幅の操作を確認しています。Firefox・Safari・実機モバイルと長期間の大量周回は未検証です。
 
 ローカル配信の例（Pythonがある環境）:
 

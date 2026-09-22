@@ -124,12 +124,6 @@ input[type=file] { font-size:12px; max-width:100%; }
 .speaker { display:flex; align-items:center; gap:10px; }
 .speaker-portrait { position:relative; display:inline-block; flex:0 0 44px; width:44px; height:44px; overflow:hidden; border-radius:9px; background:#e8ede1; }
 .speaker-portrait::before { content:''; position:absolute; inset:0; background:var(--green); -webkit-mask-image:var(--portrait-image); mask-image:var(--portrait-image); -webkit-mask-size:var(--portrait-size, 80px auto); mask-size:var(--portrait-size, 80px auto); -webkit-mask-position:var(--portrait-position, center top); mask-position:var(--portrait-position, center top); -webkit-mask-repeat:no-repeat; mask-repeat:no-repeat; }
-/* Source crop: 170, -18, 560 × 560; displayed at 44px. */
-.portrait-joseph { --portrait-image:url('assets/portraits/joseph.png'); --portrait-size:58.0643px 107.25px; --portrait-position:-13.3571px 1.4143px; }
-/* Source crop: 65, -18, 540 × 540; displayed at 44px. */
-.portrait-caesar { --portrait-image:url('assets/portraits/caesar.png'); --portrait-size:49.9481px 114.8889px; --portrait-position:-5.2963px 1.4667px; }
-/* Source crop: 302, 127, 320 × 320; displayed at 44px. */
-.portrait-kakyoin { --portrait-image:url('assets/portraits/kakyoin.png'); --portrait-size:192.5px 206.525px; --portrait-position:-41.525px -17.4625px; }
 
 .world-picker { display:grid; gap:10px; margin-top:28px; font-size:13px; }
 .world-picker select { width:100%; max-width:100%; border:1px solid var(--line); border-radius:8px; padding:12px; font:inherit; color:var(--ink); background:var(--paper); }

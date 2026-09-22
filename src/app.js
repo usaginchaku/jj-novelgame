@@ -2,6 +2,7 @@ import { activeCharacterId, ENDINGS, RELATION_KEYS } from './model.js';
 import { createState, currentEvent, atChoices, availableChoices, formatText, revealScene, scenePageLines, recentMessageReply, choose, makeMemory } from './engine.js';
 import { createStorage, SAVE_SLOTS } from './storage.js';
 import { defaultWorlds, validateWorlds, loadWorldConfig } from './worlds.js';
+import { PORTRAITS } from './portraits.js';
 
 const app = document.querySelector('#app');
 const notice = document.querySelector('#notice');
@@ -65,9 +66,13 @@ function speakerName(id, player) {
 }
 function speakerLabel(id, player) {
   const label = el('p', undefined, 'speaker');
-  if (['joseph', 'caesar', 'kakyoin'].includes(id)) {
-    const portrait = el('span', undefined, 'speaker-portrait portrait-' + id);
+  const definition = Object.hasOwn(PORTRAITS, id) ? PORTRAITS[id] : undefined;
+  if (definition) {
+    const portrait = el('span', undefined, 'speaker-portrait');
     portrait.setAttribute('aria-hidden', 'true');
+    portrait.style.setProperty('--portrait-image', `url("${definition.image}")`);
+    portrait.style.setProperty('--portrait-size', definition.size);
+    portrait.style.setProperty('--portrait-position', definition.position);
     label.append(portrait);
   }
   label.append(document.createTextNode(speakerName(id, player)));
