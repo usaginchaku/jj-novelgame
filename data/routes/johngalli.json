@@ -1,0 +1,1194 @@
+{
+  "id": "johngalli",
+  "title": "ジョンガリ・A — 戻る音を、待って",
+  "intro": "同じ音を確かめ、違う間を持ち寄る。\n声で聞いてから近づく二人に、何も鳴らさない時間も増えていく。",
+  "startEvent": "pulse",
+  "character": {
+    "name": "ジョンガリ・A",
+    "adult": true,
+    "heightCm": 185,
+    "heightBasis": "二次資料JoJo Wikiの身長欄と出典注記を照合。ストーンオーシャン20話プロフィール。書籍・設定表現物は未照合。AUで同値を採用。",
+    "profile": "精密さと忍耐。相手の位置や条件を捉える。忠誠や目的への強い執念。",
+    "personality": [
+      "精密さと忍耐",
+      "相手の位置や条件を捉える",
+      "忠誠や目的への強い執念"
+    ],
+    "speech": {
+      "firstPerson": "オレ",
+      "addressing": "主人公は姓/おまえ。短く具体的な常体。",
+      "tone": "観察した根拠を端的に言う。語尾は感情と相手に合わせる。",
+      "habits": [
+        "観察した根拠を端的に言う",
+        "必要な指示を短く出す",
+        "おまえ、名前"
+      ],
+      "signaturePhrases": [],
+      "signatureNote": "日常の固定口癖は採用しない。象徴的な原作台詞と普段の話し方を混同せず、名台詞を貼り付けない。",
+      "avoid": [
+        "ウェザーと同じ無口な優男",
+        "盲目を全知覚の魔法にする",
+        "主人公への忠誠を原作事実と称する"
+      ]
+    },
+    "referenceSection": "docs/CHARACTER_REFERENCE.md#cast-johngalli"
+  },
+  "au": {
+    "role": "大学院生候補。計測制御・センシング・信号処理系は候補",
+    "routeEnabled": true,
+    "addressing": [
+      {
+        "text": "{player.lastName}"
+      }
+    ]
+  },
+  "events": [
+    {
+      "id": "pulse",
+      "title": "もう一度、同じ音を",
+      "chapter": 1,
+      "location": "公開音響展示の体験室",
+      "storyTime": {
+        "date": "5月10日",
+        "period": "昼"
+      },
+      "characterId": "johngalli",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "二つの木箱を叩き比べる展示で、ジョンガリ先輩と同じ台についた。学内の公開イベントで何度か話した人だ。私が先に小さく叩くと、先輩は音のやんだあとも待ち、同じ方をもう一度、と頼んだ。私は箱を動かさず、なるべく同じところへ指を下ろす。"
+        },
+        {
+          "speaker": "johngalli",
+          "text": "今度は少し強かった。違いを聞くなら、強さを揃えたい。"
+        },
+        {
+          "speaker": "player",
+          "text": "同じにしたつもりでした。もう一回、やってみます。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩は手前の縁へ指を置き、自分でも位置を確かめてから叩いた。小さな音が二つ続く。私にはまだ違いを言葉にできなかったが、できたふりをして先へ進みたくはなかった。分かりません、と正直に言うと、彼はそれでいい、と次の音まで待った。"
+        },
+        {
+          "speaker": "johngalli",
+          "text": "分からなければ、分からないと残せばいい。先に決めると、その音しか聞かなくなる。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私はもう一度指を下ろした。すぐ答えをもらえる展示ではなくなったけれど、先輩がこちらの一音を待っている。その静かな集中の中へ、自分の手も入れてみたかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "repeat",
+          "text": "分かったふりをせず、同じ条件でもう一度試す",
+          "next": "measure",
+          "effect": "workTogether",
+          "setFlags": [
+            "hearTwice"
+          ],
+          "lockRoute": "johngalli"
+        },
+        {
+          "id": "invite",
+          "text": "「先輩と、ほかの展示も回りたいです」と誘う",
+          "next": "measure",
+          "effect": "gameDate",
+          "lockRoute": "johngalli"
+        }
+      ]
+    },
+    {
+      "id": "measure",
+      "title": "同じ間隔ではなく",
+      "chapter": 1,
+      "location": "貸し音楽室",
+      "storyTime": {
+        "date": "5月17日",
+        "period": "昼"
+      },
+      "characterId": "johngalli",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "展示で貸し出していた小さな打楽器を、予約した部屋で試すことになった。二つの練習台の位置を言葉で確かめ、椅子を置く。先輩は自分の台の端を手で確かめてから、一定の間隔で指を下ろした。私はその間へ一つ足し、途中から少し遅らせてみる。"
+        },
+        {
+          "speaker": "johngalli",
+          "text": "そこは遅れた。今、変えたのか。"
+        },
+        {
+          "speaker": "player",
+          "text": "はい。ずっと同じだと、私、少し退屈で。戻ってくる前の間を長くしたくなりました。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩はすぐ合わせず、自分の拍をもう一度叩いた。その上で私が同じところを遅らせる。崩れたように聞こえた一度目と違い、二度目には待つ場所ができた。先輩は終わってから、もう一回そこだけ、と言った。"
+        },
+        {
+          "speaker": "johngalli",
+          "text": "決めて遅らせるなら、その長さを覚えたい。毎回違うと、オレの戻る場所も変わる。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私は自分の間を短い言葉で説明した。彼の基準へ全部揃えるのではなく、ずれるところを二人で聞く。言い終えてから叩いた一音は、前より自分の音に思えた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "mybeat",
+          "text": "自分が欲しい間を言葉と音で伝える",
+          "next": "wrong",
+          "effect": "shiftHelp",
+          "setFlags": [
+            "ownBeat"
+          ]
+        },
+        {
+          "id": "near",
+          "text": "「先輩の音の隣へ、もう少し入ってみたいです」と言う",
+          "next": "wrong",
+          "effect": "walkClose"
+        }
+      ]
+    },
+    {
+      "id": "wrong",
+      "title": "合わなかった一回",
+      "chapter": 1,
+      "location": "貸し音楽室",
+      "storyTime": {
+        "date": "5月24日",
+        "period": "昼"
+      },
+      "characterId": "johngalli",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "前と同じ短いリズムを合わせたつもりで、最後だけ噛み合わなかった。私が遅らせすぎたのかと思うと、先輩が手を止め、今のはオレだと言った。聞き直すための短い録音も、二人の了承を取って残してある。再生すると、彼の方が一音早く戻っていた。"
+        },
+        {
+          "speaker": "johngalli",
+          "text": "オレが先に入った。おまえの間が終わる前に。"
+        },
+        {
+          "speaker": "player",
+          "text": "私のせいだと思ってました。先輩も、先に行きたくなるんですね。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "そうだ、と短く返った。何でも聞き分けて必ず合う人なのではなく、一つのずれを残したままにしない人が隣にいる。私は今の録音を消すか尋ねた。先輩は自分だけで決めず、おまえはどうしたい、と聞き返した。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "残して比べたいですと答え、私も次は先に謝らずに聞こうと思った。二人で最後だけを試し、うまく戻れたところで椅子を離れる。先輩はまだ一度やりたそうだったが、予約の終わりが近いと自分で時刻を確かめ、片づけ始めた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "check",
+          "text": "どちらのずれも、聞いてから確かめると話す",
+          "next": "message",
+          "effect": "homeTogether",
+          "setFlags": [
+            "hisMistake"
+          ]
+        },
+        {
+          "id": "smile",
+          "text": "「合った時、先輩となら嬉しいです」と伝える",
+          "next": "message",
+          "effect": "walkClose"
+        }
+      ]
+    },
+    {
+      "id": "message",
+      "title": "再生を止めたあと",
+      "chapter": 1,
+      "location": "自分の部屋",
+      "storyTime": {
+        "date": "5月24日",
+        "period": "夜"
+      },
+      "characterId": "johngalli",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "共有した録音を家で聴くと、部屋で合わせた時より二つの音が離れて聞こえた。先輩へそう送ると、聞く場所も違うからな、と返ってくる。私ももう一度だけ再生し、終わりに小さく息を吐いた。"
+        },
+        {
+          "speaker": "johngalli",
+          "text": "今日は、最後が戻った。おまえが待った分が、ちゃんと残ってる。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "褒められたというより、自分の選んだ間を聞いてもらえたことが嬉しかった。私は再生を止め、今度は音ではない言葉を送ろうと端末を持ち直した。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "rhythm",
+          "text": "次も、自分の間を持っていきます。また合わせたいです",
+          "next": "rest",
+          "effect": "messageDaily",
+          "replyVariants": [
+            {
+              "text": "分かった。オレも、自分の戻るところをもう一度確かめておく。"
+            }
+          ]
+        },
+        {
+          "id": "you",
+          "text": "音を合わせる日以外にも、先輩に会いたいです",
+          "next": "rest",
+          "effect": "messageHeart",
+          "replyVariants": [
+            {
+              "when": {
+                "min": {
+                  "romanceChar": 20
+                }
+              },
+              "text": "オレも会いたい。何も再生しない時間も、おまえと過ごしたい。"
+            },
+            {
+              "text": "会おう。次は、食事の時間も取る。"
+            }
+          ]
+        }
+      ],
+      "message": true
+    },
+    {
+      "id": "rest",
+      "title": "何も叩かない時間",
+      "chapter": 1,
+      "location": "音楽室前の休憩席",
+      "storyTime": {
+        "date": "6月1日",
+        "period": "昼"
+      },
+      "characterId": "johngalli",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "続けて何度か試したあと、私は台から手を離した。指が痛いわけではないが、もう同じ音をよく聞けていなかった。休みたいです、と言うと、先輩も手を止めた。どれくらいかと聞かれ、まだ決められませんと答えた。"
+        },
+        {
+          "speaker": "johngalli",
+          "text": "なら、今はいったん止める。戻る時に言ってくれ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "部屋の外の席へ移り、飲み物を一つずつ買った。先輩は続きの回数を数える代わりに、自分も少し疲れたと話す。私はその声を聞いて、合わせるためにいない時間にも同じ席へ座りたかったのだと気づいた。"
+        },
+        {
+          "speaker": "player",
+          "text": "少ししたら戻りたいです。でも、今はもう少し話していたい。先輩は、どうですか。"
+        },
+        {
+          "speaker": "johngalli",
+          "text": "オレもここにいる。戻りたくなったら、そう言う。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "返事をもらって、私はカップを机へ置いた。置く音からリズムを作ることはせず、今日食べたものの話をする。先輩は聞こえなかった言葉を一度聞き返し、私は少し近くから言い直した。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "pause",
+          "text": "戻る時刻を急いで決めず、休みたい時間を伝える",
+          "next": "home",
+          "effect": "conferencePractical",
+          "setFlags": [
+            "realRest"
+          ]
+        },
+        {
+          "id": "together",
+          "text": "「何も合わせてなくても、隣にいたいです」と伝える",
+          "next": "home",
+          "effect": "rehearse"
+        }
+      ]
+    },
+    {
+      "id": "home",
+      "title": "始める合図",
+      "chapter": 1,
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "6月8日",
+        "period": "夕方"
+      },
+      "characterId": "johngalli",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "録音を聞き直してから食事にしようと、自分の家へ先輩を招いた。机からノートを片づける間に、先輩は椅子を引いた。向かいに腰を下ろし、二人の間へ端末を置く。いつも貸し音楽室で聞く声が自分の部屋にあるだけで、再生ボタンを押す指が遅れた。"
+        },
+        {
+          "speaker": "player",
+          "text": "再生しますね。終わったら、今度は私から始める合図を出してもいいですか。"
+        },
+        {
+          "speaker": "johngalli",
+          "text": "いい。声で一つ言ってくれ。それを聞いてから入る。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私が小さく数え、互いに指で机を叩いた。貸し部屋とは違う乾いた音だったが、戻る場所は分かった。終わると先輩も次は自分から合図を出したいと言う。二人で役を替えてから、私は食事を並べる場所を空けた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "食べ終え、皿を片づけて戻ると、彼はまだ同じ椅子にいた。もう一度聞くかと尋ねられ、私は今は再生しなくてもいいですと答える。用事のない席を、自分の家にもう一つ持っていたかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "signal",
+          "text": "次も合図を交代しようと話し、今日は玄関まで送る",
+          "next": "later",
+          "effect": "homeTogether",
+          "setFlags": [
+            "sharedSignal"
+          ]
+        },
+        {
+          "id": "talk",
+          "text": "「音の用事がなくても、また来てください」と話して見送る",
+          "next": "later",
+          "effect": "homeTalk"
+        },
+        {
+          "id": "stay",
+          "text": "「今夜は、先輩のそばにいたいです」と伝える",
+          "next": "consent",
+          "effect": "hotelInvite",
+          "when": {
+            "min": {
+              "trust": 35,
+              "desire": 8
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "consent",
+      "title": "声で確かめる",
+      "chapter": 1,
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "6月8日",
+        "period": "夜"
+      },
+      "characterId": "johngalli",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "そばにいたいともう一度言うと、先輩は私の声の方へ顔を向けた。私は椅子を引き、少し近くへ座り直すことを伝える。距離が変わっても、返事を待つ間はまだ同じように長かった。"
+        },
+        {
+          "speaker": "johngalli",
+          "text": "オレも、おまえに触れたい。今夜、一緒にいたい。恋人になるかとは別に、そう望んでる。"
+        },
+        {
+          "speaker": "player",
+          "text": "私もです。途中でやめたくなったら言います。先輩も、嫌な時は言ってください。"
+        },
+        {
+          "speaker": "johngalli",
+          "text": "言う。どちらかが止めたら止める。帰ってほしければ帰る。今どうしたいか、声で聞かせてくれ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "頷くだけで済ませかけた自分に気づき、私は息を吸った。読み取ってもらう返事ではなく、自分から届かせる言葉にしたかった。机の下で指を開き、今の望みをもう一度確かめた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「今夜、一緒にいたいです。手を取ってもいいですか」と聞く",
+          "next": "night",
+          "effect": "consent",
+          "setFlags": [
+            "mutualConsent",
+            "hadNight"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「今日はここまでにします。また昼に会いたいです」と伝える",
+          "next": "later",
+          "effect": "walkHome",
+          "setFlags": [
+            "declinedTouch"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "night",
+      "title": "触れてからの距離",
+      "chapter": 1,
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "6月8日",
+        "period": "夜"
+      },
+      "characterId": "johngalli",
+      "rating": "fade",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "いい、と返事があり、私は先輩の手へそっと触れた。握り返されたあと、私は立ち上がり、つながった手を少し引いた。彼も椅子を離れ、手をつないだまま向かい合う。顔を上げて、近づきたいですと言うと、先輩は私の肩へ触れていいかと尋ねた。"
+        },
+        {
+          "speaker": "player",
+          "text": "はい。触れてほしいです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "肩へ届いた掌を受け、私は彼の袖をもう片方の手でつかんだ。身を屈める動きが伝わり、私からも少し近づく。唇が触れる前に、彼がもう一度いいかと聞く。いいです、と答えた声のすぐあとに、距離がなくなった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "離れて息をつくと、先輩が私の名前を呼んだ。嬉しいです、と隠さず答え、もう一度触れたいと話す。彼の袖を引いて奥へ移り、私は灯りを落とした。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝、先輩が起きた気配に私から挨拶した。朝食を用意しますと話し、手を離して台所へ行く。彼は食べたら帰ると自分の予定を伝えた。二人分の皿を並べて向かいへ座ると、先輩がまだ温かいカップを両手で包んだ。昨夜より明るい部屋で同じ声を聞くのが、少し照れくさかった。",
+          "storyTime": {
+            "date": "6月9日",
+            "period": "朝"
+          }
+        }
+      ],
+      "choices": [
+        {
+          "id": "home",
+          "text": "朝食を取り、先輩を玄関まで送る",
+          "next": "after_message"
+        }
+      ],
+      "when": {
+        "flags": [
+          "mutualConsent"
+        ]
+      }
+    },
+    {
+      "id": "after_message",
+      "title": "音を送らない返事",
+      "chapter": 1,
+      "location": "自分の部屋",
+      "storyTime": {
+        "date": "6月9日",
+        "period": "夜"
+      },
+      "characterId": "johngalli",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "夜、自分の椅子へ座ると、昨日動かした分だけ机が近かった。元へ戻してから端末を開く。先輩からは、帰ったあと録音を聴かなかった、と文が来ていた。私も今日は再生していない。"
+        },
+        {
+          "speaker": "johngalli",
+          "text": "昨日の声を、まだ覚えてる。また会いたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "短い文を読んで、私は肘を机から離した。録った声ではないからこそ、もう一度会って聞きたいものがある。次に望む距離を、音の話で代わりにしないように返事を書いた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "again",
+          "text": "また夜も会いたいです。先輩をもっと好きになりました",
+          "next": "later",
+          "effect": "messageAgain",
+          "setFlags": [
+            "ongoing"
+          ],
+          "replyVariants": [
+            {
+              "text": "オレも会いたい。次に会ったら、その言葉をオレからも言う。"
+            }
+          ]
+        },
+        {
+          "id": "nights",
+          "text": "恋人とは決めず、望む夜にも会う友達でいたいです",
+          "next": "later",
+          "effect": "messageBoundaries",
+          "setFlags": [
+            "ongoing"
+          ],
+          "replyVariants": [
+            {
+              "text": "オレもそうしたい。次も、その時に互いの気持ちを聞こう。"
+            }
+          ]
+        },
+        {
+          "id": "days",
+          "text": "次からは昼に会う友達でいたいです",
+          "next": "later",
+          "effect": "messageDaily",
+          "setFlags": [
+            "endedNight"
+          ],
+          "replyVariants": [
+            {
+              "text": "分かった。昼に会おう。おまえが合わせたい時には、音も持ってきてくれ。"
+            }
+          ]
+        }
+      ],
+      "message": true
+    },
+    {
+      "id": "later",
+      "title": "数えない話",
+      "chapter": 1,
+      "location": "音楽室前の休憩席",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "johngalli",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "六月の間、互いに望んだ夜には私の家でも会った。泊まらない日もあり、朝にはそれぞれの予定へ戻る。昼に音を合わせる時間も続き、会いたいという言葉を何かの用事へ混ぜずに言えるようになった。",
+          "when": {
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "六月の間、貸し部屋で音を合わせ、昼食を取った。家で再生する日もあれば、何も鳴らさずに話す日もある。休憩の終わりを自分から伝える声に、先輩も自分の望みを返してくれた。",
+          "when": {
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "今日は道具を返してから、私が話したいことがありますと伝えた。休憩席へ座り、飲み物を一つずつ置く。先輩は私の声を聞いて顔を向け、待っていると短く言った。私は録音の話を始める癖を、今日は使わなかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "tell",
+          "text": "ジョンガリ先輩を好きになったと、自分から伝える",
+          "next": "confess_player",
+          "when": {
+            "min": {
+              "trust": 40,
+              "romancePlayer": 35,
+              "romanceChar": 35
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "listen",
+          "text": "先輩が私へ向けている言葉を聞く",
+          "next": "confess_char",
+          "when": {
+            "min": {
+              "trust": 40,
+              "romancePlayer": 20,
+              "romanceChar": 40
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "pact",
+          "text": "合図も間も持ち寄る、二人の短い曲を作る相棒になりたい",
+          "next": "pact",
+          "when": {
+            "min": {
+              "trust": 40,
+              "comfort": 60
+            },
+            "flags": [
+              "hearTwice",
+              "ownBeat",
+              "hisMistake",
+              "realRest",
+              "sharedSignal"
+            ],
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "nights",
+          "text": "恋人とは決めず、望む夜にも会う友情を続けたい",
+          "next": "fwb_choice",
+          "when": {
+            "min": {
+              "trust": 45,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "love",
+          "text": "夜を重ねた今、先輩の恋人になりたい",
+          "next": "end_fwb_love",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 30,
+              "romanceChar": 30,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "friends",
+          "text": "これからも一緒に音や話を楽しむ友達でいたい",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_player",
+      "title": "聞いてほしい一言",
+      "chapter": 4,
+      "location": "音楽室前の休憩席",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "johngalli",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先輩が好きです、と声にした。自分でも少し小さすぎたと思い、もう一度言おうとすると、聞こえた、と返ってくる。私はそこで止めず、何を望んでいるかも伝えたかった。"
+        },
+        {
+          "speaker": "player",
+          "text": "合わせる音がなくても会いたいです。先輩の隣で、私の声を聞いてほしい。恋人として一緒にいたいと思いました。"
+        },
+        {
+          "speaker": "johngalli",
+          "text": "オレも、おまえに会いたい。音のない時間にも。……好きだ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "短い返事のあと、自分の呼吸ばかり聞こえた。上手に言えたからではなく、届いたところから声が戻ったことが嬉しい。私は今、笑っています、と少し照れながら話した。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「私と付き合ってください」と伝える",
+          "next": "end_love_a",
+          "effect": "messageHeart"
+        },
+        {
+          "id": "no",
+          "text": "「今は友達として会いたいです」と伝え直す",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_char",
+      "title": "合図のない言葉",
+      "chapter": 4,
+      "location": "音楽室前の休憩席",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "johngalli",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先輩はカップを置き、私の名前を呼んだ。はいと答えると、少し間がある。次に始まる拍を待つ時とは違い、私はその人が何を言うかを知らないまま座っていた。"
+        },
+        {
+          "speaker": "johngalli",
+          "text": "オレは、おまえが好きだ。恋人として会いたい。おまえの気持ちを聞きたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私はグラスを両手から離した。頬が熱くなるのを隠そうとせず、少し待ってくださいと声にする。先輩は分かったと答え、続きを足さなかった。選ぶために空いた時間へ、私は自分の望みを置いた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「私も好きです。恋人になりたいです」と答える",
+          "next": "end_love_b",
+          "effect": "messageHeart"
+        },
+        {
+          "id": "no",
+          "text": "「恋人ではなく、友達でいたいです」と答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "refusedConfession",
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pact",
+      "title": "どちらからでも始める",
+      "chapter": 4,
+      "location": "音楽室前の休憩席",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "johngalli",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私の欲しい間と、先輩が戻ってくる音を、一つの短い曲にしたいと話した。大きな発表へ出す話ではない。二人で作った形を一度録り、また変えたくなれば変える。それなら私にも、自分から始めたいところがあった。"
+        },
+        {
+          "speaker": "player",
+          "text": "合図も交代したいです。私が決めるところと、先輩が決めるところを、両方残して。"
+        },
+        {
+          "speaker": "johngalli",
+          "text": "オレは、戻る音を決めたい。おまえは間を決めてくれ。合わなければ、どちらのせいか先に決めず、聞き直す。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "はい、と返し、恋人になるのとは別の約束だと確かめた。先輩は私の合図を一度聞き、自分の合図も言った。始める人をいつも同じにしないまま、二人で続ける形が少し見えた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "合図と間を持ち寄り、二人で短い曲を作る相棒になる",
+          "next": "end_special",
+          "effect": "homeTogether"
+        },
+        {
+          "id": "friends",
+          "text": "制作は決めず、気軽に音を楽しむ友達を選ぶ",
+          "next": "end_friend",
+          "effect": "friendPromise"
+        }
+      ]
+    },
+    {
+      "id": "fwb_choice",
+      "title": "前と同じと決めずに",
+      "chapter": 4,
+      "location": "音楽室前の休憩席",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "johngalli",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人とは決めず、望む夜にも会いたいと伝えると、先輩は自分もそうしたいと言った。私はその声を聞いてから、会うたびに泊まる約束にはしたくないと続ける。返事は、分かっている、ではなく、そうしよう、だった。"
+        },
+        {
+          "speaker": "johngalli",
+          "text": "会いたい時は誘う。違う時は断ってくれ。途中で止めたくなったら言う。オレも同じにする。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私からも誘いますと答えた。今日の返事が次の日付まで決めるのではなく、次はまたその時に話す。カップを片づける音がして、私も自分の荷物を持った。帰りの途中で寄りたい店を、今度は私から言った。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "その都度誘い合う、親密な友人として続ける",
+          "next": "end_fwb",
+          "effect": "messageBoundaries"
+        },
+        {
+          "id": "day",
+          "text": "次からは昼に会う友達に戻る",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "end_friend",
+      "title": "次の音を待って",
+      "chapter": 5,
+      "location": "貸し音楽室",
+      "storyTime": {
+        "date": "7月13日",
+        "period": "昼"
+      },
+      "characterId": "johngalli",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人にはならないと答えたあと、先輩は少し黙り、分かったと言った。その日はそこで別れ、数日後に私からまた合わせたいと連絡した。彼も同じ望みを返し、今日の部屋を予約した。",
+          "when": {
+            "flags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "昼に会う友達でいようと話してから、先輩とは貸し部屋で会った。夜の返事を変えさせる話は出ず、私も今日は音を合わせたいと自分から伝えた。近かった時間を消すためではない、次の約束だった。",
+          "when": {
+            "flags": [
+              "hadNight"
+            ],
+            "notFlags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "友達として次も音を合わせようと話し、今日は私から部屋を予約した。台の位置を確かめ、どちらが先に始めるかを声で決める。私が選んだ短いリズムを、先輩は最後まで聞いた。",
+          "when": {
+            "notFlags": [
+              "hadNight",
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "johngalli",
+          "text": "そこは前より長いな。今の方が、おまえの戻るところが分かる。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私ははいと返し、もう一度やってみたいと頼んだ。合った時には嬉しいと声にし、違った時には二人で聞き直す。終わったあとは別々の予定へ帰る。次の一音を待ってくれる友人へ、今日は私からまたねと言った。"
+        }
+      ],
+      "choices": [],
+      "ending": "FRIEND"
+    },
+    {
+      "id": "end_love_a",
+      "title": "私から手を取る",
+      "chapter": 5,
+      "location": "音楽室前と街路",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "johngalli",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "付き合いたい、と先輩が答えた。私は手を取っていいですかと聞き、いいという声を待ってから掌へ触れる。握り返されると、自分で望んだことなのに言葉が一度途切れた。彼が名前を呼ぶので、嬉しいですともう一度答えた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌週、何も借りない休日に会った。待ち合わせでこちらから声を掛け、隣へ行くことを伝える。今日は私の行きたい店を話し、先輩にもその先で寄りたいところを聞いた。",
+          "storyTime": {
+            "date": "7月6日",
+            "period": "昼"
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "道の途中で、また手をつなぎたいですと言った。彼は短く答え、触れた手を握る。合図のためではない温かさを受け取りながら、私は今度は少しゆっくり歩きたいと話した。"
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_A"
+    },
+    {
+      "id": "end_love_b",
+      "title": "その声の近くへ",
+      "chapter": 5,
+      "location": "音楽室前と街路",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "johngalli",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私も好きですと答えたあと、先輩は小さく息を吐いた。嬉しい、と返ってきた声が少し近くなった気がする。私から隣へ座り直していいかと聞き、椅子を動かす前に返事を待った。"
+        },
+        {
+          "speaker": "johngalli",
+          "text": "来てほしい。手にも、触れたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "はい、と掌を差し出し、彼の手へそっと重ねた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "次の休日、待ち合わせの広場で私は自分から先輩の名前を呼んだ。返事を聞く前に歩幅が大きくなり、そばまで行ってから、今日は会うだけで楽しみでしたと伝える。",
+          "storyTime": {
+            "date": "7月6日",
+            "period": "昼"
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "オレも、と短く返る。たったそれだけなのに、差し出そうとした手のひらまで熱かった。二人で歩き出す前に、もう一度手をつなぎたいと頼んだ。"
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_B"
+    },
+    {
+      "id": "end_fwb",
+      "title": "音を持たない夜",
+      "chapter": 5,
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "7月13日",
+        "period": "夜"
+      },
+      "characterId": "johngalli",
+      "rating": "fade",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "今夜会いたいと互いに伝え、先輩が私の家へ来た。食事を済ませ、机の上の皿を片づけたことを話す。泊まりたいかと改めて尋ねると、いたいと返る。私も一緒にいてほしいと伝え、翌朝に帰る予定を聞いた。"
+        },
+        {
+          "speaker": "johngalli",
+          "text": "今は、おまえに触れたい。近くへ行っていいか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "はい、と答えて隣へ移る位置を知らせた。先輩の手へ触れ、握り返されたあと、私から肩へ手を置く。どこにいるかを推し量ってもらうより、自分の声で近づきたいと伝える方が嬉しかった。口づけのあと、二人で机から離れた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝、台所から飲み物の用意ができたと声を掛けた。先輩が返事をし、私は机の前へ戻る。朝食のあと彼を玄関まで送り、次は昼にも会いたいと話す。自分の用事を始める前に、私は昨夜動かした椅子を元へ戻した。",
+          "storyTime": {
+            "date": "7月14日",
+            "period": "朝"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB"
+    },
+    {
+      "id": "end_fwb_love",
+      "title": "今の返事を重ねる",
+      "chapter": 5,
+      "location": "音楽室前と街路",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "johngalli",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "今は恋人になりたいと話した。先輩が黙っている間、私は続きを重ねずに待つ。前に触れた温かさは覚えていても、今日の返事までは知らない。彼が名前を呼び、オレも、と答えた時、ようやく肩の力が抜けた。"
+        },
+        {
+          "speaker": "johngalli",
+          "text": "オレも、おまえの恋人になりたい。今までの夜も、そのまま大事にする。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "手をつなぎたいですと伝え、自分から触れた。握り返す手に、今の二人が選んだ言葉が重なる。次の休日は何も合わせずに出かけたいと話し、私から行きたい場所を挙げた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌週、店を出てから、まだ帰りたくありませんと伝えた。先輩はあと少し歩こうと言う。どこまでかは一緒に決めることにして、私はもう一度隣の手を求めた。恋人という名前を声にする前に、少しだけ笑ってしまった。",
+          "storyTime": {
+            "date": "7月6日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB_TO_LOVE"
+    },
+    {
+      "id": "end_special",
+      "title": "戻るところを、二人で",
+      "chapter": 5,
+      "location": "貸し音楽室",
+      "storyTime": {
+        "date": "7月13日",
+        "period": "昼"
+      },
+      "characterId": "johngalli",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "二人で作った短い曲を録る前に、再生して残す範囲を互いに確かめた。最初は私が合図し、次の区切りでは先輩が始める。途中、戻る音が少しずれた。私は先に謝らず、今のところを聞きたいですと言った。"
+        },
+        {
+          "speaker": "johngalli",
+          "text": "オレも。どちらか決める前に、戻そう。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "聞き直すと、私の間が長くなり、先輩もその途中で入っていた。どちらのせいか一つに決めるより、二人で欲しい長さをもう一度作った。次に合った時、私は嬉しいと声を出し、先輩も今のを残したいと言った。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "恋人とは別の、合図をどちらからでも渡せる相棒ができた。録音を終えたあと、二人で何も叩かずに座る。その静けさまで作品にしようとはしなかった。次に始めたくなるまで、休んでいてよかった。"
+        }
+      ],
+      "choices": [],
+      "ending": "SPECIAL"
+    }
+  ],
+  "endingDescriptions": {
+    "FRIEND": {
+      "title": "次の音を待って",
+      "description": "合った時も違った時も、自分の声で伝え合う。次の一音を待ち、そのあと別々の予定へ帰る友人。"
+    },
+    "LOVE_A": {
+      "title": "私から手を取る",
+      "description": "自分から好きと望みを伝え、その返事を聞いて手へ触れる。合図ではない温かさを持って街へ。"
+    },
+    "LOVE_B": {
+      "title": "その声の近くへ",
+      "description": "彼の告白に自分の好きも返す。今いる場所も嬉しい気持ちも、声で届けて隣へ近づく。"
+    },
+    "FWB": {
+      "title": "音を持たない夜",
+      "description": "互いの望む夜を声で確かめ、朝は自分の予定へ。昼の時間も残る親密な友人関係。"
+    },
+    "FWB_TO_LOVE": {
+      "title": "今の返事を重ねる",
+      "description": "知っている温かさを答えの代わりにせず、今の声で恋人を選ぶ。何も合わせない休日も二人で。"
+    },
+    "SPECIAL": {
+      "title": "戻るところを、二人で",
+      "description": "同じ条件、違う間、ずれた音、休みと合図を重ねて短い曲を作る。恋人とは別の、聞き直せる合奏相棒。"
+    }
+  }
+}

@@ -1,0 +1,1206 @@
+{
+  "id": "koichi",
+  "title": "康一 — 終映のあとに",
+  "intro": "道を教えたあの日より、彼の声は近くなっていた。\n同じ画面を見ても違うものが残る。その続きを、また聞きたい。",
+  "startEvent": "ticket",
+  "character": {
+    "name": "康一",
+    "adult": true,
+    "heightCm": 157,
+    "heightBasis": "二次資料JoJo Wikiの身長欄と出典注記を照合。JOJO 6251。アニメ150・作画上の縮小とは分離。書籍・設定表現物は未照合。AUで同値を採用。",
+    "profile": "用心深く素直。友人を守る意志。迷っても必要な時は主張する。",
+    "personality": [
+      "用心深く素直",
+      "友人を守る意志",
+      "迷っても必要な時は主張する"
+    ],
+    "speech": {
+      "firstPerson": "ぼく",
+      "addressing": "主人公は姓＋先輩。柔らかな丁寧語。",
+      "tone": "丁寧な確認や聞き返し。語尾は感情と相手に合わせる。",
+      "habits": [
+        "丁寧な確認や聞き返し",
+        "納得した時ははっきり言う"
+      ],
+      "signaturePhrases": [],
+      "signatureNote": "日常の固定口癖は採用しない。象徴的な原作台詞と普段の話し方を混同せず、名台詞を貼り付けない。",
+      "avoid": [
+        "常に怯える幼児化",
+        "エコーズACT3の粗野な台詞を本人に移す"
+      ]
+    },
+    "referenceSection": "docs/CHARACTER_REFERENCE.md#cast-koichi"
+  },
+  "au": {
+    "role": "情報系候補の1年。オープンキャンパスで道案内を受けた後輩",
+    "routeEnabled": true,
+    "addressing": [
+      {
+        "text": "{player.lastName}先輩"
+      }
+    ]
+  },
+  "endingDescriptions": {
+    "FRIEND": {
+      "title": "話は駅まで続く",
+      "description": "違う感想を遠慮なく返せる友達。帰る電車が来ても、言い足りなかった続きを送れる。"
+    },
+    "LOVE_A": {
+      "title": "こちらを向く人",
+      "description": "自分から好きだと伝え、彼の返事を受け取る。呼ばなくても向く横顔へ、指を伸ばす。"
+    },
+    "LOVE_B": {
+      "title": "呼ぶより近くへ",
+      "description": "最後まで言い切った告白へ、自分の好きも返す。次の待ち合わせには、手を差し出して。"
+    },
+    "FWB": {
+      "title": "帰りの時刻まで",
+      "description": "互いが望む夜と、翌朝の予定を持ち寄る親密な友人。次の誘いは、自分の一日から送る。"
+    },
+    "FWB_TO_LOVE": {
+      "title": "今の私から",
+      "description": "近くで過ごした夜の先で、今の望みを伝え直す。何も見なかった日にも、隣を歩きたい。"
+    },
+    "SPECIAL": {
+      "title": "違う一本を持ち帰る",
+      "description": "同じ感想にならなくても、見終わった世界を持ち寄る相棒。まだ答えのない一場面を、二人の次の約束へ。"
+    }
+  },
+  "events": [
+    {
+      "id": "ticket",
+      "chapter": 1,
+      "title": "二枚を握って",
+      "location": "大学の渡り廊下",
+      "storyTime": {
+        "date": "5月9日",
+        "period": "昼"
+      },
+      "characterId": "koichi",
+      "rating": "general",
+      "tags": [
+        "koichi"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "渡り廊下で名前を呼ばれ、振り返ると康一くんが立っていた。オープンキャンパスで迷っているところを案内した彼が、今は一年生として同じ大学へ通っている。手には、街の小さな映画館の案内が二枚あった。一枚をこちらへ差し出してから、まだ券じゃありません、と笑う。"
+        },
+        {
+          "speaker": "koichi",
+          "text": "これ、見に行きたいんです。先輩も映画が好きだって、前に話してましたよね。よかったら、一緒にどうですか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "日付を指す爪が紙の端を少しへこませていた。連れていってほしいと頼まれたつもりで口を開きかけ、彼が上映時刻も道も調べてあるのに気づく。私は案内を持ち直した。こちらの返事を聞くまで、康一くんは紙から手を離さなかった。"
+        },
+        {
+          "speaker": "player",
+          "text": "うん、行きたい。康一くんが気になったところも、聞かせて。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "story",
+          "text": "どんなところを見たくなったのか聞く",
+          "next": "screen",
+          "effect": "ask"
+        },
+        {
+          "id": "time",
+          "text": "自分も見たいと答え、待ち合わせを決める",
+          "next": "screen",
+          "effect": "workTogether"
+        }
+      ]
+    },
+    {
+      "id": "screen",
+      "chapter": 1,
+      "title": "そこでは笑えなくて",
+      "location": "映画館の前",
+      "storyTime": {
+        "date": "5月12日",
+        "period": "夕方"
+      },
+      "characterId": "koichi",
+      "rating": "general",
+      "tags": [
+        "koichi"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "劇場を出ると、まだ外は明るかった。私は最後の場面の仕掛けがおかしくて、笑ってしまったと言った。康一くんは頷きかけてやめ、ぼくは、と口を開く。出口へ流れる人を避けて、二人で壁際へ寄った。"
+        },
+        {
+          "speaker": "koichi",
+          "text": "ぼくは、ちょっと寂しかったです。あの人、最後まで言えなかったから。……先輩が笑ったのも、分かるんですけど。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "反対したくないから薄めたのかと思ったが、彼は次の言葉を引っ込めなかった。画面の端にいた人物の話をされ、私は見落としていた椅子を思い出す。康一くんの指が、説明しながら小さく動いた。知らない顔を見た気がして、先に歩き出すのをやめた。"
+        },
+        {
+          "speaker": "player",
+          "text": "私、そっちは見てなかった。もう少し聞きたい。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "different",
+          "text": "違ったまま、互いに残った場面を話す",
+          "next": "lunch",
+          "effect": "honest",
+          "setFlags": [
+            "differentEyes"
+          ]
+        },
+        {
+          "id": "details",
+          "text": "印象に残った小道具を一緒に思い出す",
+          "next": "lunch",
+          "effect": "compareNotes"
+        }
+      ]
+    },
+    {
+      "id": "lunch",
+      "chapter": 1,
+      "title": "誘ったのはぼくです",
+      "location": "学内の食堂",
+      "storyTime": {
+        "date": "5月17日",
+        "period": "昼"
+      },
+      "characterId": "koichi",
+      "rating": "general",
+      "tags": [
+        "koichi"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "昼食に並びながら次に見る映画を選んでいると、私は慣れた調子で、康一くんの好きな方でいいよと言った。彼は二枚の案内を見比べたまま黙る。遠慮したのかと問い直そうとした時、先輩はどっちが見たいですか、と返ってきた。"
+        },
+        {
+          "speaker": "koichi",
+          "text": "ぼくが誘ったからって、付き合ってもらうだけにはしたくないです。つまらなかった時に、ぼくに言えないのも困りますし。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私の方が気を遣っているつもりだった。けれど、好きな作品を見てもらう人の顔は、ただ頷いてくれる相手を待っていなかった。私は案内の片方を指し、これには少し苦手な場面がありそうだと話した。康一くんは真剣に読み直し、それならもう一方はどうでしょうと尋ねた。 食後、彼は最初に見た映画のパンフレットを貸してくれた。見落とした場面も載っていると教えられ、次の約束まで借りることにした。"
+        },
+        {
+          "speaker": "player",
+          "text": "そっちは見たい。今度は、私から誘ってもいい？"
+        }
+      ],
+      "choices": [
+        {
+          "id": "my_choice",
+          "text": "自分の見たい一本を選び、彼にも希望を聞く",
+          "next": "message",
+          "effect": "homeTalk",
+          "setFlags": [
+            "bothChoose"
+          ]
+        },
+        {
+          "id": "invite",
+          "text": "二人で行ける日を、顔を見て尋ねる",
+          "next": "message",
+          "effect": "lunchTwo"
+        },
+        {
+          "id": "schedule",
+          "text": "都合の合う上映を一緒に探す",
+          "next": "message",
+          "effect": "shiftRest"
+        }
+      ]
+    },
+    {
+      "id": "message",
+      "chapter": 2,
+      "title": "感想はまだ送らない",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "5月20日",
+        "period": "夜"
+      },
+      "characterId": "koichi",
+      "rating": "general",
+      "tags": [
+        "koichi"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "借りた、最初に見た映画のパンフレットを読み終えると、康一くんから連絡が来ていた。感想を先に送ろうとしたのに、文面を読んで消す。次に見る映画の予告だけで結末を当てようとしているらしく、まだ見てもいない人物にずいぶん肩入れしていた。"
+        },
+        {
+          "speaker": "koichi",
+          "text": "先輩、あの人が犯人だと思いますか？　ぼくは違うと思うんです。……でも、答えは会ってから聞きます。文字だと先に結末を言っちゃいそうなので。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "見ていないのに結末は言えないよ、と打ちかけて笑った。彼がどんな顔で弁護するのか、自分も聞きたくなっている。机にパンフレットを開いたまま、次の約束の方へ返事をした。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "glad",
+          "text": "康一くんの話を聞くの、楽しみ。早く会いたいな",
+          "next": "rain",
+          "effect": "messageHeart",
+          "replyVariants": [
+            {
+              "text": "ぼくもです。先輩の説も聞きたいです。違ってても、今度は最初から言いますね。",
+              "when": {
+                "flags": [
+                  "differentEyes"
+                ]
+              }
+            },
+            {
+              "text": "ぼくも楽しみです。パンフレットは急がなくて大丈夫ですから。"
+            }
+          ],
+          "lockRoute": "koichi"
+        },
+        {
+          "id": "notice",
+          "text": "今度は私の予想も聞いてね",
+          "next": "rain",
+          "effect": "messageListen",
+          "replyVariants": [
+            {
+              "text": "もちろんです。先に先輩のを聞こうかな。つられそうですけど。"
+            }
+          ],
+          "lockRoute": "koichi"
+        },
+        {
+          "id": "thanks",
+          "text": "ありがとう。次に会う時、パンフレットも返すね",
+          "next": "rain",
+          "effect": "messageDaily",
+          "replyVariants": [
+            {
+              "text": "はい。読み終わってなくても、持ったままでいいですよ。"
+            }
+          ],
+          "lockRoute": "koichi"
+        }
+      ],
+      "message": true
+    },
+    {
+      "id": "rain",
+      "chapter": 2,
+      "title": "急がないで、言う",
+      "location": "駅前の屋根の下",
+      "storyTime": {
+        "date": "5月24日",
+        "period": "夕方"
+      },
+      "characterId": "koichi",
+      "rating": "general",
+      "tags": [
+        "koichi"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "上映時刻へ間に合うよう、駅から近道を選んだ。ところが工事で通れず、私が遠回りへ向き直ったところで雨が強くなる。急げば、と言いかけた私を、康一くんが呼び止めた。彼の肩も濡れていたが、走り出そうとはしなかった。"
+        },
+        {
+          "speaker": "koichi",
+          "text": "今日は、やめませんか。濡れたまま見ても、ぼく、映画に集中できそうにないです。別の日に、ちゃんと見たい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "せっかく来たのにと思った分だけ、すぐ返事ができなかった。彼は私の手にある案内を見て、まだ言いたいことを待っている。私は残念、と一度口にしてから頷いた。康一くんも残念です、と同じ重さで返す。"
+        },
+        {
+          "speaker": "player",
+          "text": "じゃあ、今日は温かいものを飲もう。映画じゃなくても、会えてよかったって言って帰りたい。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "another",
+          "text": "見られなかった一本を、別の日に一緒に見ると約束する",
+          "next": "home",
+          "effect": "conferencePractical",
+          "setFlags": [
+            "returnTogether"
+          ]
+        },
+        {
+          "id": "near",
+          "text": "雨が弱くなるまで、彼の隣で別の話をする",
+          "next": "home",
+          "effect": "walkClose"
+        },
+        {
+          "id": "finish",
+          "text": "雨宿りしてから、それぞれの家へ帰る",
+          "next": "home",
+          "effect": "walkHome"
+        }
+      ]
+    },
+    {
+      "id": "home",
+      "chapter": 3,
+      "title": "半券のない夜",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "6月7日",
+        "period": "夕方"
+      },
+      "characterId": "koichi",
+      "rating": "general",
+      "tags": [
+        "koichi"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "雨の日に見送った映画を、今日は最後まで見られた。夕食へ誘うと康一くんが頷いたので、買った惣菜を持って私の家へ来た。パンフレットを返し、互いの感想を話していたら、机の半分が皿、もう半分が紙で埋まった。康一くんは先に紙を鞄へしまい、これで食べられますね、と少し笑う。"
+        },
+        {
+          "speaker": "koichi",
+          "text": "先輩、あの人、犯人じゃなかったです。そこは当たりました。"
+        },
+        {
+          "speaker": "player",
+          "text": "うん。途中の予想は、二人とも全然違ったけど。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼が悔しそうに笑い、私も笑った。食事のあと、次の上映予定を隣同士で覗く。大きく動かなくても肩が触れそうな距離だった。康一くんが手帳へ日付を写している間、私はその横顔から画面へ戻るのを少し忘れた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "talk",
+          "text": "「また、康一くんと二人で見たい」と隣で話す",
+          "next": "evening",
+          "effect": "hotelTalk"
+        },
+        {
+          "id": "rest",
+          "text": "片づけのあと、次の案内を一緒に読む",
+          "next": "evening",
+          "effect": "homeRest"
+        }
+      ]
+    },
+    {
+      "id": "evening",
+      "chapter": 3,
+      "title": "立ち上がる前に",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "6月7日",
+        "period": "夜"
+      },
+      "characterId": "koichi",
+      "rating": "general",
+      "tags": [
+        "koichi"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "そろそろ帰ります、と康一くんが手帳を閉じた。私は持ち帰る容器の蓋を確かめ、紙袋へ入れる。何か渡すものを探していると、パンフレットは返してもらいましたよ、と笑われた。用事を増やして引き止めようとしていた自分が、急に恥ずかしくなる。"
+        },
+        {
+          "speaker": "koichi",
+          "text": "忘れ物はないと思います。……先輩、何か、言いかけました？"
+        },
+        {
+          "speaker": "narrator",
+          "text": "近くの目を見て、こちらまで笑ってごまかしたくはなかった。彼の鞄はまだ椅子に掛かっている。帰る支度を止めるなら、私の方から、残ってほしい理由を言いたかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "stay",
+          "text": "「今夜は、もっと近くにいたい」と自分の気持ちを伝える",
+          "next": "consent",
+          "effect": "hotelInvite",
+          "when": {
+            "min": {
+              "trust": 45,
+              "desire": 8
+            }
+          }
+        },
+        {
+          "id": "next_time",
+          "text": "次の待ち合わせを楽しみにしていると伝え、見送る",
+          "next": "next",
+          "effect": "walkHome"
+        }
+      ]
+    },
+    {
+      "id": "consent",
+      "chapter": 3,
+      "title": "小さくしない返事",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "6月7日",
+        "period": "夜"
+      },
+      "characterId": "koichi",
+      "rating": "general",
+      "tags": [
+        "koichi"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "康一くんは立ちかけた腰を戻した。目が合う高さへ私も座り直す。先に謝られたら何を言おうと考えるより早く、彼が口を開いた。"
+        },
+        {
+          "speaker": "koichi",
+          "text": "ぼくも、先輩に触れたいです。今夜、一緒にいたい。驚きましたけど、困ってるんじゃないです。"
+        },
+        {
+          "speaker": "player",
+          "text": "私も、そうしたい。今夜のことと、恋人になる約束は別にして話したいんだけど……それでも、いい？"
+        },
+        {
+          "speaker": "koichi",
+          "text": "はい。ぼくも、それでいいです。途中でやめたくなったら、お互いに言いましょう。どちらが言っても止めます。今から帰ることになっても、大丈夫です。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "頷いてから、私も途中ならちゃんと言うと答えた。彼は鞄へ伸ばしかけていた手を膝へ戻す。ためらうことと望んでいないことを、一緒にしない返事だった。私も手をほどき、自分の欲しい近さを選んだ。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「一緒にいてほしい」と答え、彼の手へ触れる",
+          "next": "night",
+          "effect": "consent",
+          "setFlags": [
+            "consented",
+            "hadNight"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「今日はここまでにしたい」と伝える",
+          "next": "next",
+          "effect": "walkHome",
+          "setFlags": [
+            "declinedTouch"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "night",
+      "chapter": 3,
+      "title": "目を閉じるまで",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "6月7日",
+        "period": "夜"
+      },
+      "characterId": "koichi",
+      "rating": "fade",
+      "tags": [
+        "koichi"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "触れた手を、康一くんが静かに握った。椅子を寄せ、私も顔を近づけると、見ている目が少しだけ伏せられる。今、いいですかと聞かれ、私は頷くだけでなく、いいよ、と返した。唇が触れる前に、彼の指へ力がこもった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "一度離れて笑いそうになったのは、嬉しくて息のつき方が分からなかったからだ。康一くんもつられて笑い、すぐにこちらを見た。もう一度は私から近づく。やがて二人で椅子を離れ、手をつないで部屋の奥へ移った。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝、私が起きると、康一くんも目を開けた。おはよう、と近くで言うのが照れくさく、布団の端を一度握る。彼は挨拶を返してから、何時ごろ帰ればいいですかと聞いた。朝食を一緒に食べたいと答え、私は先に起き上がった。",
+          "storyTime": {
+            "date": "6月8日",
+            "period": "朝"
+          }
+        },
+        {
+          "speaker": "koichi",
+          "text": "また、先輩とこうして過ごしたいです。でも、次の約束は、先輩の気持ちを聞いてからにしたい。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "again",
+          "text": "「恋人の約束はせず、また望む夜に会いたい」と答える",
+          "next": "next",
+          "effect": "messageBoundaries",
+          "setFlags": [
+            "ongoing"
+          ]
+        },
+        {
+          "id": "more",
+          "text": "「また夜も会いたい。康一くんをもっと好きになった」と伝える",
+          "next": "next",
+          "effect": "messageAgain",
+          "setFlags": [
+            "ongoing"
+          ]
+        },
+        {
+          "id": "day",
+          "text": "「これからは昼に会う友達でいたい」と答える",
+          "next": "next",
+          "effect": "messageDaily",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ],
+      "when": {
+        "flags": [
+          "consented"
+        ]
+      }
+    },
+    {
+      "id": "next",
+      "chapter": 4,
+      "title": "上映予定にない話",
+      "location": "大学の中庭",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "koichi",
+      "rating": "general",
+      "tags": [
+        "koichi"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "六月には映画へ行き、互いが望んだ夜には私の家でも会った。朝に別れたあと、それぞれの用事を済ませてから感想だけ送る日もある。会いたい時に自分から誘えるようになるほど、誘う理由を上映予定へ預けなくなった。",
+          "when": {
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "昼に会う友達でいたいと答えてから、康一くんはその通りに映画へ誘ってくれた。最初は少し言葉を選んだが、見終えた場面で意見が分かれると、いつもの声が戻った。私はその続きを聞きたくて、駅へ向かう道をゆっくり歩いた。",
+          "when": {
+            "flags": [
+              "hadNight",
+              "endedNight"
+            ],
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "六月にも映画へ行き、見られない週には昼食を一緒に食べた。次に何を見るかだけでなく、見たくないものの話もできる。どちらかが合わせ続けなくても次の約束ができると知って、私は自分から彼の名を呼ぶことが増えた。",
+          "when": {
+            "notFlags": [
+              "hadNight"
+            ]
+          }
+        },
+        {
+          "speaker": "koichi",
+          "text": "先輩、次は何を見ましょう。……それより先に、話しておきたいことって、何ですか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私が連絡に書いた一言を、康一くんは忘れていなかった。手帳を閉じ、膝へ置く。次の上映時刻を確かめる指が止まったところへ、私は自分の言葉を置こうとした。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "tell",
+          "text": "自分から、好きだと伝えたいと言う",
+          "next": "confess_player",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 35,
+              "romanceChar": 25
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "listen",
+          "text": "彼が言いたそうにしている言葉を待つ",
+          "next": "confess_koichi",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 20,
+              "romanceChar": 35
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "our_screen",
+          "text": "互いの見たい一本を持ち寄る約束を続けたいと話す",
+          "next": "own_screen",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 35,
+              "romanceChar": 30,
+              "comfort": 20
+            },
+            "flags": [
+              "differentEyes",
+              "bothChoose",
+              "returnTogether"
+            ],
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "nights",
+          "text": "望む夜にも会う、親密な友人でいたいと話す",
+          "next": "fwb_choice",
+          "when": {
+            "min": {
+              "trust": 50,
+              "desire": 25,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "love",
+          "text": "「今は、康一くんの恋人になりたい」と伝える",
+          "next": "end_fwb_love",
+          "when": {
+            "min": {
+              "trust": 60,
+              "romancePlayer": 50,
+              "romanceChar": 40,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          },
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "friends",
+          "text": "これからも自分の感想を言い合える友達でいたいと話す",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_player",
+      "chapter": 4,
+      "title": "結末より先に",
+      "location": "大学の中庭",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "koichi",
+      "rating": "general",
+      "tags": [
+        "koichi"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "映画がなくても会いたい、と言うと康一くんは頷いた。昼食の誘いだと思われただろうか。私は一度息を吸い、続きを言うために顔を上げた。彼は聞き返さず、手帳の角を指で押さえている。"
+        },
+        {
+          "speaker": "player",
+          "text": "康一くんが楽しそうだと、私まで嬉しくなる。でも、誰にでも同じように笑ってるのを見ると、私の方も向いてほしくなる。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "口にして初めて、ずいぶん自分勝手な願いだと思った。取り消しかけた私より先に、彼が向いてます、と小さく答える。その一言に背中を押されて、私はまだ言えていない名前を口にした。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "like",
+          "text": "「好き。私と付き合ってほしい」と伝える",
+          "next": "end_love_a",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "choose",
+          "text": "「康一くんの恋人になりたい。どうかな」と問いかける",
+          "next": "end_love_a",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "wait",
+          "text": "「今日は、友達としてまた誘いたい」と伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_koichi",
+      "chapter": 4,
+      "title": "最後まで、自分の声で",
+      "location": "大学の中庭",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "koichi",
+      "rating": "general",
+      "tags": [
+        "koichi"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "康一くんは手帳を閉じた指を動かし、話す前に一度だけ唇を結んだ。先輩、と呼ばれた声がいつもよりまっすぐ届く。私は頷いて待った。答えやすい冗談に変えてしまう気配はなかった。"
+        },
+        {
+          "speaker": "koichi",
+          "text": "ぼく、先輩が好きです。映画を見たいから誘うだけじゃないんです。一緒にいる時間が、終わってほしくなくて。ぼくと、付き合ってください。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "渡り廊下で二枚の案内を持っていた手が、今日は何も差し出さず膝にある。代わりに届いた言葉を、私は聞き間違えていないか確かめるように見つめた。康一くんは頬を赤くしたまま、自分の返事を足さずに待っていた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「私も好き。康一くんと付き合いたい」と答える",
+          "next": "end_love_b",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「恋人にはなれない。友達でいたい」と答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "refusedConfession",
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "own_screen",
+      "chapter": 4,
+      "title": "二人分の見たいもの",
+      "location": "大学の中庭",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "koichi",
+      "rating": "general",
+      "tags": [
+        "koichi"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人になるのとは違う、と最初に話した。けれど一人で見て終わりにしたくないものができるたび、最初に康一くんを思い出す。その相手でいたいと言うと、彼は少し考えてから、自分も、と答えた。"
+        },
+        {
+          "speaker": "koichi",
+          "text": "ぼくも、先輩が何を見たのか聞きたいです。同じ感想になるまで話すんじゃなくて、違うところを持って帰りたい。"
+        },
+        {
+          "speaker": "player",
+          "text": "じゃあ、一本ずつ選ぼうか。自分では選ばなかった方も、見終わったらちゃんと話したい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼が手帳の余白を開いた。私が題名を一つ書き、その下へ彼が別の一本を足す。二つの文字は揃わず、上映する場所も違っていた。康一くんは遠い方を見て、これは少し早く出ましょう、とすぐ行く道を考え始めた。"
+        },
+        {
+          "speaker": "koichi",
+          "text": "先輩、もし見て、好きになれなくても言ってください。ぼく、その時の話も聞きたいんです。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "partners",
+          "text": "「私も聞きたい」と答え、二人で選ぶ上映の相棒になる",
+          "next": "end_special",
+          "effect": "homeTogether",
+          "setFlags": [
+            "ourScreen"
+          ]
+        },
+        {
+          "id": "friend",
+          "text": "今は気になった時に誘い合う友達でいたいと言う",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fwb_choice",
+      "chapter": 4,
+      "title": "明日の話もして",
+      "location": "大学の中庭",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "koichi",
+      "rating": "general",
+      "tags": [
+        "koichi"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人の約束はしないまま、これからも望む夜には会いたいと話した。康一くんは目を伏せて考え、それから自分もそうしたいと言う。返事を急がせなかった間に、私も次の日の予定まで思い浮かべた。"
+        },
+        {
+          "speaker": "koichi",
+          "text": "会ったから必ず泊まる、じゃなくて、その時にも聞きたいです。途中でやめたい時も言ってください。ぼくも言います。"
+        },
+        {
+          "speaker": "player",
+          "text": "うん。会いたい時には、私からも誘うね。映画に行くだけの日も。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "今度の週末は、と尋ねると、彼は手帳を開いた。日曜の昼には用事があると教えてもらい、それなら朝食までと二人で決める。次の朝まで考えているのに、今ここで話す声が少しずつ軽くなった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "continue",
+          "text": "親密な友人として、次に会う日を決める",
+          "next": "end_fwb",
+          "effect": "messageBoundaries"
+        },
+        {
+          "id": "daytime",
+          "text": "考え直し、昼に会う友達でいたいと答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "end_friend",
+      "chapter": 5,
+      "title": "話は駅まで続く",
+      "location": "映画館から駅まで",
+      "storyTime": {
+        "date": "7月12日",
+        "period": "夕方"
+      },
+      "characterId": "koichi",
+      "rating": "general",
+      "tags": [
+        "koichi"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人にはなれないと答えた時、康一くんは少し黙り、それから分かりましたと言った。その日はそこで別れた。数日後に私から映画の案内を送ると、これ、ぼくも気になってました、と返ってきた。",
+          "when": {
+            "flags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "昼に会う友達でいたいという返事のあと、次の約束は映画館になった。夜を一緒に過ごしたことを消したわけではない。それでも今日は何を見たいか、自分から話せるようになっていた。",
+          "when": {
+            "flags": [
+              "hadNight",
+              "endedNight"
+            ],
+            "notFlags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "友達として次も見に行こうと約束し、今日はジョセフも誘った。映画館を出た三人が最初に口にした場面は、きれいに分かれた。康一くんが、そこでしたか、と笑って聞き返す。",
+          "when": {
+            "notFlags": [
+              "hadNight",
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "koichi",
+          "text": "ぼく、最後の人は帰ってきたと思うんです。映ってないだけで。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私は違う気がすると答え、その理由を歩きながら話した。康一くんは納得したところだけ頷き、それでも、と続きを返す。駅へ着く頃には、次に見たいものの話へ移っていた。帰る電車が来ても、言い足りなかった分をあとで送れる相手だった。"
+        }
+      ],
+      "choices": [],
+      "ending": "FRIEND"
+    },
+    {
+      "id": "end_love_a",
+      "chapter": 5,
+      "title": "こちらを向く人",
+      "location": "大学の中庭",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "koichi",
+      "rating": "general",
+      "tags": [
+        "koichi"
+      ],
+      "body": [
+        {
+          "speaker": "koichi",
+          "text": "ぼくも、先輩が好きです。付き合いたいです。……ちゃんと言えたらって、ずっと考えてたのに。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先に言ってごめんとは思わなかった。言えてよかった、と笑うと、彼もようやく笑った。膝の間にあった手を自分から差し出す。康一くんが指を重ねてくれた時、考えていた次の言葉が全部いらなくなった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌週、映画が始まるまで隣に座っていた。彼が画面の予告を見てから、私の方を向く。何、と尋ねると、呼ばれた気がして、と返った。呼んでないよと言いながら、私は椅子の間で手を伸ばす。触れられた指が、すぐに握り返した。",
+          "storyTime": {
+            "date": "7月5日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_A"
+    },
+    {
+      "id": "end_love_b",
+      "chapter": 5,
+      "title": "呼ぶより近くへ",
+      "location": "大学の中庭",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "koichi",
+      "rating": "general",
+      "tags": [
+        "koichi"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私も好き、と答えると、康一くんの肩が少し下がった。手帳を持ち上げかけてまた膝へ戻すのを見て、私まで笑ってしまう。彼は照れたまま、笑わないでくださいよと言った。声は怒っていなかった。"
+        },
+        {
+          "speaker": "player",
+          "text": "ごめん。嬉しくて。今、手をつないでもいい？"
+        },
+        {
+          "speaker": "koichi",
+          "text": "はい。ぼくも、そうしたいです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "次の休日、待ち合わせへ来た彼が少しだけ立ち止まった。私は先に手を出し、隣へ呼ぶ。いつもなら上映時刻を確かめるところで、康一くんは私の指を見た。もう覚えてます、と言って歩き出すので、今日は私も時計を見なかった。",
+          "storyTime": {
+            "date": "7月5日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_B"
+    },
+    {
+      "id": "end_fwb",
+      "chapter": 5,
+      "title": "帰りの時刻まで",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "7月12日",
+        "period": "夜"
+      },
+      "characterId": "koichi",
+      "rating": "fade",
+      "tags": [
+        "koichi"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "康一くんが持ってきた夕食を並べ、私は飲み物を注いだ。今日は泊まりたいです、と先に言われ、自分も一緒にいたいと答える。翌朝の用事に間に合う時間を確かめてから、二人で箸を取った。 食後、彼が少し声を落とした。"
+        },
+        {
+          "speaker": "koichi",
+          "text": "今日は、途中まで見た予告の話はしません。先輩と、別の話がしたいので。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "何の話、と隣へ寄ると、彼は少し困ったように笑い、今決めるところですと返した。私はその手に触れ、話す前に近づきたいと伝える。頷いた顔が近くなり、今度は私から唇を寄せた。二人で食卓の灯りを落とし、部屋の奥へ移る。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝食のあと、彼は鞄を持って玄関へ向かった。傘立てを見て、今日は晴れてますね、と言う。雨なら貸そうと思ってたと答えると、借りたら返しに来ます、と笑った。帰ったあと、私は自分の用事へ出る支度をした。",
+          "storyTime": {
+            "date": "7月13日",
+            "period": "朝"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB"
+    },
+    {
+      "id": "end_fwb_love",
+      "chapter": 5,
+      "title": "今の私から",
+      "location": "大学の中庭",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "koichi",
+      "rating": "general",
+      "tags": [
+        "koichi"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人になりたいと伝えたあと、私は彼の顔から目を逸らさなかった。近くで眠った日のことを思い出しても、今の返事の代わりにはならない。康一くんは手帳を閉じ、持っていたペンをしまってから私へ向いた。"
+        },
+        {
+          "speaker": "koichi",
+          "text": "ぼくも、先輩と付き合いたいです。夜に会えるから、それでいいと思ってたわけじゃなくて……今は、恋人として会いたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "頷くと、彼の手が伸びてきた。私は途中でその手を取り、前より好きになったと自分の方から言う。彼は嬉しいです、と笑い、それからもう一度握り直した。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "次に会った日は、映画館の席が離れてしか取れなかった。別々に座るか迷って、今日は散歩にしようと二人で決める。康一くんの隣を歩きながら、私は何も見なかった日のことも覚えていたいと思った。",
+          "storyTime": {
+            "date": "7月5日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB_TO_LOVE"
+    },
+    {
+      "id": "end_special",
+      "chapter": 5,
+      "title": "違う一本を持ち帰る",
+      "location": "映画館前の広場",
+      "storyTime": {
+        "date": "7月19日",
+        "period": "夕方"
+      },
+      "characterId": "koichi",
+      "rating": "general",
+      "tags": [
+        "koichi"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私が選んだ一本のあと、康一くんはしばらく言葉を探していた。気に入らなかった、と先に訊くのをやめて隣で待つ。やがて、好きにはなれなかったです、と返ってきた。寂しさは少しあったが、続きを聞きたい気持ちの方が大きかった。"
+        },
+        {
+          "speaker": "koichi",
+          "text": "でも、あの人が最後に戻った理由は、もっと考えたいです。先輩は、あそこが好きだったんですよね。"
+        },
+        {
+          "speaker": "player",
+          "text": "うん。今、康一くんに聞かれて、私もまだ全部は言えない気がしてきた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "二人で広場の端へ座り、パンフレットを間に開いた。次の一本は彼の選んだものだ。帰り道にまた違うことを言うかもしれない。その予感が、会う楽しみを減らさなかった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "恋人になる約束とは別に、見終わった世界を持ち寄る相手ができた。康一くんが手帳へ次の日を書き、私も自分の予定へ写す。題名の横に添えられた小さな疑問符は、消さずに残すことにした。"
+        }
+      ],
+      "choices": [],
+      "ending": "SPECIAL"
+    }
+  ]
+}

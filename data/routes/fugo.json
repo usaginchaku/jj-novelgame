@@ -1,0 +1,1203 @@
+{
+  "id": "fugo",
+  "title": "フーゴ — 余白に書く、次の約束",
+  "intro": "解けなかった問いの横に、別の答えが残った。\n本を閉じたあとで聞く声を、いつからか待つようになっていた。",
+  "startEvent": "question",
+  "character": {
+    "name": "フーゴ",
+    "adult": true,
+    "heightCm": 178,
+    "heightBasis": "二次資料JoJo Wikiの身長欄と出典注記を照合。黄金の風アニメ設定表CR200-20。小説GHGR175とは分離。書籍・設定表現物は未照合。AUで同値を採用。",
+    "profile": "知性と整った振る舞い。激しい短気。危険を見極める慎重さ。",
+    "personality": [
+      "知性と整った振る舞い",
+      "激しい短気",
+      "危険を見極める慎重さ"
+    ],
+    "speech": {
+      "firstPerson": "ぼく",
+      "addressing": "主人公は姓/さん、あなた。普段は丁寧語、苛立つと常体が混じる。",
+      "tone": "丁寧な説明から苛立ちで語気が鋭くなる。語尾は感情と相手に合わせる。",
+      "habits": [
+        "丁寧な説明から苛立ちで語気が鋭くなる",
+        "誤りを細かく指摘",
+        "冷静に戻る間を残す"
+      ],
+      "signaturePhrases": [],
+      "signatureNote": "日常の固定口癖は採用しない。象徴的な原作台詞と普段の話し方を混同せず、名台詞を貼り付けない。",
+      "avoid": [
+        "怒りを愛情表現として許容",
+        "知識だけの解説係",
+        "原作の選択を卑怯と断罪"
+      ]
+    },
+    "referenceSection": "docs/CHARACTER_REFERENCE.md#cast-fugo"
+  },
+  "au": {
+    "role": "学年・専攻未確定。学内勉強会で出会う",
+    "routeEnabled": true,
+    "addressing": [
+      {
+        "text": "{player.lastName}"
+      }
+    ]
+  },
+  "endingDescriptions": {
+    "FRIEND": {
+      "title": "机を広く使う日",
+      "description": "違う答えを持ち寄り、帰りの食事へも誘える友人。問いが解ける前に、次の楽しみを一つ作る。"
+    },
+    "LOVE_A": {
+      "title": "返事のあと、笑う",
+      "description": "自分から好きを伝え、開いた手で返事を受け取る。試し書きの紙へ二人の名前を並べる休日。"
+    },
+    "LOVE_B": {
+      "title": "本の外の名前",
+      "description": "言葉を足さずに渡された告白へ、自分の好きを返す。本を持たない待ち合わせにも、呼ぶ声がある。"
+    },
+    "FWB": {
+      "title": "帰りに残る色",
+      "description": "望む夜を共に過ごし、朝は自分の用事へ帰る。机に残る小さな箱が、次の誘いを思い出させる。"
+    },
+    "FWB_TO_LOVE": {
+      "title": "その先を、今の声で",
+      "description": "過ごした夜を大切にしたまま、今は恋人を選ぶ。話すことのない帰り道でも、手をつないで歩く。"
+    },
+    "SPECIAL": {
+      "title": "解けなかった日の頁",
+      "description": "問いを出す人も解く人も交代する、二人の問題帳の相棒。短気も見落としも消えないまま、次の頁へ。"
+    }
+  },
+  "events": [
+    {
+      "id": "question",
+      "chapter": 1,
+      "title": "二つ目の答え",
+      "location": "学内勉強会の作業室",
+      "storyTime": {
+        "date": "4月25日",
+        "period": "夕方"
+      },
+      "characterId": "fugo",
+      "rating": "general",
+      "tags": [
+        "fugo"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "学内の勉強会では、参加者が短い問題を持ち寄る。フーゴさんが配った論理の問いを読み、私は答えの欄より先に、条件の間へ小さな線を引いた。別の並びでも通るように見える。隣で自分の解答を確かめていた彼が、私の紙へ顔を向けた。"
+        },
+        {
+          "speaker": "fugo",
+          "text": "そこは、こちらの条件で外れるはずです。……その順番にしましたか。見せてもらっても？"
+        },
+        {
+          "speaker": "player",
+          "text": "はい。ここを先に決めなければ、これでもよさそうだと思ったんです。どこか読み落としてますか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼はすぐに線を消せとは言わず、自分の紙へ私の並びを写した。通りますね、と呟いたあと、しばらく頁が動かない。私は正解を教えてもらうつもりだった顔を少し引っ込め、彼の鉛筆が止まっているところを一緒に見た。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "ask",
+          "text": "二つ目の答えが通る理由を、一緒に確かめる",
+          "next": "copy",
+          "effect": "ask"
+        },
+        {
+          "id": "notes",
+          "text": "分かった条件を整理し、勉強会の記録を取る",
+          "next": "copy",
+          "effect": "workTogether"
+        }
+      ]
+    },
+    {
+      "id": "copy",
+      "chapter": 1,
+      "title": "紙にない一行",
+      "location": "学内勉強会の作業室",
+      "storyTime": {
+        "date": "5月2日",
+        "period": "夕方"
+      },
+      "characterId": "fugo",
+      "rating": "general",
+      "tags": [
+        "fugo"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "次の週、同じ問題を直したという紙を受け取った。途中でまた止まり、私は一つ前の条件を尋ねる。フーゴさんの返事が、今度は鋭かった。"
+        },
+        {
+          "speaker": "fugo",
+          "text": "そこはさっき説明したでしょう。まず最後まで読んでから……いや、待ってください。その紙を。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "言い終わる前に、彼は私の紙と自分の原稿を並べた。私の方には、下の一行が印刷されていなかった。胸の中に残った強い声がすぐ消えるわけではなく、私は紙を机へ置き、飲み物を買ってきますと立った。"
+        },
+        {
+          "speaker": "fugo",
+          "text": "ぼくの配ったものが欠けていました。あなたが読んでいないと決めつけたのは、間違いです。すみません。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "戻ると、訂正した紙が席へ置かれていた。彼は私が座るまで何も始めなかった。私は今度は読めますと言い、最初の紙も下へ重ねる。解き直したかった。さっきの言い方を好きになったわけではないが、この問いをここで投げ出すのは自分も嫌だった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "source",
+          "text": "元の紙と訂正版を並べ、違いから解き直す",
+          "next": "fold",
+          "effect": "honest",
+          "setFlags": [
+            "keptFirstAnswer"
+          ]
+        },
+        {
+          "id": "check",
+          "text": "訂正版だけを読み、残りの条件を確認する",
+          "next": "fold",
+          "effect": "compareNotes"
+        }
+      ]
+    },
+    {
+      "id": "fold",
+      "chapter": 1,
+      "title": "手順を知っていても",
+      "location": "大学のラウンジ",
+      "storyTime": {
+        "date": "5月9日",
+        "period": "昼"
+      },
+      "characterId": "fugo",
+      "rating": "general",
+      "tags": [
+        "fugo"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "勉強会で使う紙片を分けるため、空き時間に小さな折り箱を作っていた。折り方の図をフーゴさんへ渡すと、彼は一通り見てから手を動かし、最後の折り返しで止まった。できるはずなのに、と小さく言って角を押し直す。"
+        },
+        {
+          "speaker": "player",
+          "text": "そこ、紙を裏返してからです。私も最初は同じことしました。こっちから見てもらっていいですか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "隣へ移って自分の紙をゆっくり折ると、彼は図ではなく私の指を見ていた。端を起こして形にすると、なるほど、と声が近くなる。私は教える途中で、紙をつまむ位置を間違えそうになった。"
+        },
+        {
+          "speaker": "fugo",
+          "text": "知っているだけでは、手がその順に動くわけではないんですね。……もう一つ作ります。今度は自分で。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "できた箱へ余りの紙を入れ、二つ並べた。彼の方が角は鋭いけれど、私の方もちゃんと物が入る。見比べて笑うと、彼も少し口元を緩めた。今日は答えを言い当てるためではない隣の席だった。余った箱の一つは自分の机へ置こうと、私の鞄へ入れた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "hands",
+          "text": "もう一つを二人で折り、できた箱を持ち帰る",
+          "next": "message",
+          "effect": "homeTalk",
+          "setFlags": [
+            "foldedTogether"
+          ]
+        },
+        {
+          "id": "two",
+          "text": "「勉強会のあとも、フーゴさんと過ごしたいです」と誘う",
+          "next": "message",
+          "effect": "lunchTwo"
+        },
+        {
+          "id": "sort",
+          "text": "箱へ紙片を分け、次の勉強会の準備を終える",
+          "next": "message",
+          "effect": "shiftRest"
+        }
+      ]
+    },
+    {
+      "id": "message",
+      "chapter": 2,
+      "title": "机の隅の小さな箱",
+      "location": "自分の部屋",
+      "storyTime": {
+        "date": "5月12日",
+        "period": "夜"
+      },
+      "characterId": "fugo",
+      "rating": "general",
+      "tags": [
+        "fugo"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "フーゴさんから、次の問題の案が届いた。今度は条件が一枚に収まっている。読み終えたところで写真も届いた。机の隅に、あの日と同じ折り箱がある。"
+        },
+        {
+          "speaker": "fugo",
+          "text": "余った紙で、もう一つ作りました。紙片を入れるには浅いですが、置いておくにはこの大きさがいいですね。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "何を入れるつもりかを先に尋ねかけて、私は文を消した。使い道を決めずにそこへ置いてあることが嬉しかった。自分の机の箱にも目を向け、それから彼の写真をもう一度開く。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "glad",
+          "text": "また一緒に作りたいです。何も解かない日にも、会えたら嬉しいです",
+          "next": "stationery",
+          "effect": "messageHeart",
+          "replyVariants": [
+            {
+              "text": "ぼくも会いたいです。次は箱を増やすより、どこへ出かけるか考えましょうか。",
+              "when": {
+                "flags": [
+                  "foldedTogether"
+                ]
+              }
+            },
+            {
+              "text": "会いましょう。問題を用意しなくていいと思うと、少し妙な感じがします。"
+            }
+          ],
+          "lockRoute": "fugo"
+        },
+        {
+          "id": "notice",
+          "text": "その箱、私の机にもあります。写真を見て、少し嬉しくなりました",
+          "next": "stationery",
+          "effect": "messageListen",
+          "replyVariants": [
+            {
+              "text": "そうですか。……送ってよかった。ぼくも、見ていると思い出します。"
+            }
+          ],
+          "lockRoute": "fugo"
+        },
+        {
+          "id": "thanks",
+          "text": "問題の案、読みました。次の集まりで一緒に確かめましょう",
+          "next": "stationery",
+          "effect": "messageDaily",
+          "replyVariants": [
+            {
+              "text": "はい。こちらでも、抜けがないか読み直しておきます。"
+            }
+          ],
+          "lockRoute": "fugo"
+        }
+      ],
+      "message": true
+    },
+    {
+      "id": "stationery",
+      "chapter": 2,
+      "title": "買わなかったペン",
+      "location": "街の文具店",
+      "storyTime": {
+        "date": "5月24日",
+        "period": "昼"
+      },
+      "characterId": "fugo",
+      "rating": "general",
+      "tags": [
+        "fugo"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "二人で文具店へ入った。フーゴさんは欲しかったペンを棚で探し、品切れだと分かると、ほんの少し眉を寄せる。店を出るつもりで足を向けたが、私が別の棚へ戻るとついてきた。色の違う紙が並んでいる。"
+        },
+        {
+          "speaker": "player",
+          "text": "この紙なら、箱にしてもきれいかも。今日は買うだけじゃなくて、いろいろ見たかったんです。"
+        },
+        {
+          "speaker": "fugo",
+          "text": "……ぼくも見ます。ペン一本で、もう帰る理由にしていました。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼は紙の端へ指を滑らせ、こちらは折ると白が出ると話した。私はそれもよさそうだと言い、数枚ずつ色を選ぶ。会計のあと、昼食の店を探して歩いた。勉強会ならすぐ埋まる沈黙を、今日は彼の歩幅と一緒に少し残しておきたかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "afternoon",
+          "text": "買った紙をすぐ使わず、二人の午後を街で過ごす",
+          "next": "home",
+          "effect": "conferencePractical",
+          "setFlags": [
+            "unhurriedDay"
+          ]
+        },
+        {
+          "id": "closer",
+          "text": "「目的が終わっても、一緒にいられるのが嬉しいです」と言う",
+          "next": "home",
+          "effect": "walkClose"
+        },
+        {
+          "id": "walk",
+          "text": "軽く食事をして、一緒に駅へ向かう",
+          "next": "home",
+          "effect": "walkHome"
+        }
+      ]
+    },
+    {
+      "id": "home",
+      "chapter": 3,
+      "title": "問題のない机",
+      "location": "フーゴの自宅",
+      "storyTime": {
+        "date": "6月7日",
+        "period": "夕方"
+      },
+      "characterId": "fugo",
+      "rating": "general",
+      "tags": [
+        "fugo"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "あの紙で箱を折ってみたと聞き、見せてもらう約束でフーゴさんの家へ行った。机の隅には白い縁のある箱があり、切符や小さな紙が入っている。私は覗き込まず、折り返した角だけを近くで見た。彼が思ったより丈夫ですと話す。"
+        },
+        {
+          "speaker": "fugo",
+          "text": "どうぞ、座ってください。……今日は問題を出すつもりはありません。出さないと、かえって落ち着かないですね。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私も少し、と笑って答えた。夕食を並べるのを手伝い、彼が選んだパンを割る。用意した話がないせいで、ときどき言葉が重なった。私が途中で止まると、あなたから、と彼も同じところで止まっていた。"
+        },
+        {
+          "speaker": "player",
+          "text": "食べ終わったら、どんな紙を残したのか見せてください。箱の中じゃなくて、まだ折ってない方を。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "talk",
+          "text": "食後も隣へ座り、彼が残した色の話を聞く",
+          "next": "evening",
+          "effect": "hotelTalk"
+        },
+        {
+          "id": "rest",
+          "text": "片づけを手伝い、ゆっくり休んでから帰り支度をする",
+          "next": "evening",
+          "effect": "homeRest"
+        }
+      ]
+    },
+    {
+      "id": "evening",
+      "chapter": 3,
+      "title": "まだ折らない紙",
+      "location": "フーゴの自宅",
+      "storyTime": {
+        "date": "6月7日",
+        "period": "夜"
+      },
+      "characterId": "fugo",
+      "rating": "general",
+      "tags": [
+        "fugo"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "色紙を二枚見せてもらうと、それで用事は済んだはずだった。帰る前に袋へ戻そうとした私へ、フーゴさんが一枚持っていってもいいと言う。私は首を振り、次にここで折りたいですと答えた。"
+        },
+        {
+          "speaker": "fugo",
+          "text": "次も来てくれるんですか。……それなら、残しておきます。今日は、もう帰りますか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼が時刻を見る前に私を見たので、鞄へ伸ばした手が止まった。今日は、という言葉のところだけを聞き直したくなる。私は紙を机へ戻し、今すぐ帰りたいわけではないと話した。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "stay",
+          "text": "「今夜は、フーゴさんの近くにいたいです」と伝える",
+          "next": "consent",
+          "effect": "hotelInvite",
+          "when": {
+            "min": {
+              "trust": 45,
+              "desire": 8
+            }
+          }
+        },
+        {
+          "id": "next_time",
+          "text": "「また来たいです」と伝え、次の約束をして帰る",
+          "next": "next",
+          "effect": "walkHome"
+        }
+      ]
+    },
+    {
+      "id": "consent",
+      "chapter": 3,
+      "title": "答えを用意せず",
+      "location": "フーゴの自宅",
+      "storyTime": {
+        "date": "6月7日",
+        "period": "夜"
+      },
+      "characterId": "fugo",
+      "rating": "general",
+      "tags": [
+        "fugo"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "フーゴさんの指が机の端で止まった。私は自分の言ったことを言い直さず、彼が口を開くのを待つ。さっきまで近かった紙の話が、今は遠くにある。"
+        },
+        {
+          "speaker": "fugo",
+          "text": "ぼくも、あなたに触れたいです。今夜、一緒にいてほしいと思っています。あなたが望むなら。"
+        },
+        {
+          "speaker": "player",
+          "text": "私もそうしたいです。でも、恋人になる約束は今夜のこととは別に話したい。途中でやめたくなったら、言います。"
+        },
+        {
+          "speaker": "fugo",
+          "text": "分かりました。ぼくも言います。どちらかが止めたい時は止める。今から帰ることも、選んでいいんです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私は頷いてから、彼の手を見た。触れないまま置かれている指へ、自分の方から届かせたかった。机の紙を少し脇へ寄せると、白い場所に自分の指先が残った。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「今夜は、一緒にいたいです」と答える",
+          "next": "night",
+          "effect": "consent",
+          "setFlags": [
+            "consented",
+            "hadNight"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「今日は帰ります。また昼に会いたいです」と伝える",
+          "next": "next",
+          "effect": "walkHome",
+          "setFlags": [
+            "declinedTouch"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "night",
+      "chapter": 3,
+      "title": "手の続きを",
+      "location": "フーゴの自宅",
+      "storyTime": {
+        "date": "6月7日",
+        "period": "夜"
+      },
+      "characterId": "fugo",
+      "rating": "fade",
+      "tags": [
+        "fugo"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私が手へ触れると、彼の指が少しだけ動いた。いいですかと尋ねる声に頷き、二人で椅子から立つ。フーゴさんは体を少し屈め、私の頬へ空いた手を添えた。顔が近づく間にも目が合い、私は自分から背を伸ばした。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "唇が触れたあと、私は彼の袖を握っていたことに気づいた。離すと、彼がもう一度こちらを見た。私も、もう少し、と声にする。今度は彼の肩へ手を置き、返ってきた近さを自分で迎えた。手をつなぎ直して机を離れ、二人で奥の部屋の灯りを落とした。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝、近くで目が合うと、二人とも挨拶まで少し間があった。私が先におはようございますと言うと、彼も同じ声で返した。朝食を食べてから帰りたいと話し、まだ起き上がらずに毛布の端を持ち直す。昨日の続きを、今の顔でも聞きたかった。",
+          "storyTime": {
+            "date": "6月8日",
+            "period": "朝"
+          }
+        },
+        {
+          "speaker": "fugo",
+          "text": "ぼくは、またあなたとこうして会いたいです。今、どう思っていますか。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "again",
+          "text": "「恋人とは決めず、また望む夜に会いたいです」と答える",
+          "next": "next",
+          "effect": "messageBoundaries",
+          "setFlags": [
+            "ongoing"
+          ]
+        },
+        {
+          "id": "more",
+          "text": "「また夜も会いたいです。フーゴさんをもっと好きになりました」と答える",
+          "next": "next",
+          "effect": "messageAgain",
+          "setFlags": [
+            "ongoing"
+          ]
+        },
+        {
+          "id": "day",
+          "text": "「これからは昼に会う友人でいたいです」と答える",
+          "next": "next",
+          "effect": "messageDaily",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "chapter": 4,
+      "title": "空けておいた午後",
+      "location": "街の喫茶店",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "昼"
+      },
+      "characterId": "fugo",
+      "rating": "general",
+      "tags": [
+        "fugo"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "六月は勉強会のあとにも会い、互いに望む夜を彼の家で過ごした。泊まらず食事だけの日もあり、朝はそれぞれの用事へ戻る。私が何も持たずに訪ねると、フーゴさんも問題集を棚へ置いたまま迎えてくれた。",
+          "when": {
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "昼に会う友人でいたいと話してから、次は勉強会で顔を合わせた。フーゴさんは夜の答えを変えさせようとはしなかった。少し照れたまま私から問いを見せると、彼も紙を引き寄せる。終わったあとには、自分から食事へ誘った。",
+          "when": {
+            "flags": [
+              "hadNight",
+              "endedNight"
+            ],
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "六月にも勉強会で会い、集まりのない日に食事へ出かけた。解けた問題の続きを話す日もあれば、紙を出す前に雑談で午後が終わる日もある。今日も私は鞄へノートを入れたが、席へ着いてからまだ開いていなかった。",
+          "when": {
+            "notFlags": [
+              "hadNight"
+            ]
+          }
+        },
+        {
+          "speaker": "fugo",
+          "text": "今日は、そのままでいいですよ。話したいことがあると書いていましたから。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼が自分の本も脇へ寄せた。広くなった机には、私の伸ばしかけた手が目立つ。私はそれを膝へ戻さず、自分の声を置く場所を探した。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "tell",
+          "text": "自分からフーゴさんが好きだと伝える",
+          "next": "confess_player",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 35,
+              "romanceChar": 25
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "listen",
+          "text": "フーゴさんが言おうとしている言葉を聞く",
+          "next": "confess_fugo",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 20,
+              "romanceChar": 35
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "notebook",
+          "text": "二人で問いと別の解き方を残す、小さな問題帳を作りたい",
+          "next": "own_question",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 35,
+              "romanceChar": 30,
+              "comfort": 20
+            },
+            "flags": [
+              "keptFirstAnswer",
+              "foldedTogether",
+              "unhurriedDay"
+            ],
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "nights",
+          "text": "望む夜にも会う親密な友情を続けたいと話す",
+          "next": "fwb_choice",
+          "when": {
+            "min": {
+              "trust": 50,
+              "desire": 25,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "love",
+          "text": "「今は、フーゴさんの恋人になりたいです」と伝える",
+          "next": "end_fwb_love",
+          "when": {
+            "min": {
+              "trust": 60,
+              "romancePlayer": 50,
+              "romanceChar": 40,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          },
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "friends",
+          "text": "気軽に話し、自分からも誘う友人でいたいと伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_player",
+      "chapter": 4,
+      "title": "消さずに渡す",
+      "location": "街の喫茶店",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "昼"
+      },
+      "characterId": "fugo",
+      "rating": "general",
+      "tags": [
+        "fugo"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "好きですと言うと、フーゴさんは小さく息を吸った。私はその音まで聞いてしまい、用意した説明を忘れた。好きになった順番を並べるより、目の前の人へ今伝えたいことが一つあった。"
+        },
+        {
+          "speaker": "player",
+          "text": "会う用事がなくても、フーゴさんに会いたくなります。今日も、紙の話より先に声を聞きたかった。恋人になりたいと思っています。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼が私の名前を呼んだ。自分の姓に、いつもと違う間がある。それを聞くと少しだけ肩が緩み、私は机へ置いた手を開いた。取り消す言葉を探す代わりに、自分の望みをもう一度渡したかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "like",
+          "text": "「私と付き合ってください」と伝える",
+          "next": "end_love_a",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "choose",
+          "text": "「フーゴさんの恋人になりたいです。私のことは、どう思いますか」",
+          "next": "end_love_a",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "wait",
+          "text": "「今は友人として、これからも会いたいです」と伝え直す",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_fugo",
+      "chapter": 4,
+      "title": "言い直すなら、今",
+      "location": "街の喫茶店",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "昼"
+      },
+      "characterId": "fugo",
+      "rating": "general",
+      "tags": [
+        "fugo"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "フーゴさんは自分にも話があると言った。言葉を整える間、指が本の角へ伸び、そこには何も書かれていないと気づいたように戻る。私は自分の飲み物へ手を出さず、彼を待った。"
+        },
+        {
+          "speaker": "fugo",
+          "text": "{player.lastName}さん。ぼくは、あなたが好きです。恋人として会いたい。もっと適切な言い方を考えたんですが……今は、これ以外の言葉を足したくありません。付き合ってくれませんか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "言い終わっても、彼の目は逸れなかった。問いの答えを確かめる時より、ずっと長い時間だった。私は照れてしまった自分の顔を手で隠しかけ、やめる。今の彼に見せたくない顔ではなかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「私も好きです。フーゴさんと付き合いたいです」と答える",
+          "next": "end_love_b",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「恋人にはなれません。友人でいたいです」と答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "refusedConfession",
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "own_question",
+      "chapter": 4,
+      "title": "二色の余白",
+      "location": "街の喫茶店",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "昼"
+      },
+      "characterId": "fugo",
+      "rating": "general",
+      "tags": [
+        "fugo"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私は鞄から薄いノートを出した。最初の頁にあの問いを貼り、その横に二つ目の答えを書く場所を空けてある。恋人とは別に、問題を出す側も解く側も交代する相棒でいたいと話すと、彼は頁へ身を寄せた。"
+        },
+        {
+          "speaker": "fugo",
+          "text": "元の問題も残すんですか。穴のあった方を。……なら、どう直したかも書きたいですね。ぼくの解き方は、こちらへ。"
+        },
+        {
+          "speaker": "player",
+          "text": "私はこっちに書きます。次は、紙を折る問題を持ってきたいです。図だけでなく、実物も。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "手強そうですね、と彼が笑った。机の上で何も持たない指を動かすので、私は紙ならありますと一枚出す。問題を仕上げてから来るつもりだったのに、折る途中から見てもらいたくなった。彼は答えを急がず、私が最初の角を合わせるところを見ていた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "partners",
+          "text": "問いも解き方も持ち寄る、二人の問題帳の相棒になる",
+          "next": "end_special",
+          "effect": "homeTogether",
+          "setFlags": [
+            "ourNotebook"
+          ]
+        },
+        {
+          "id": "friend",
+          "text": "共同の問題帳は作らず、気軽に集まる友人でいたい",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fwb_choice",
+      "chapter": 4,
+      "title": "次の夜には、その時に",
+      "location": "街の喫茶店",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "昼"
+      },
+      "characterId": "fugo",
+      "rating": "general",
+      "tags": [
+        "fugo"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人とは決めず、望む夜にも会いたいと言った。彼は少し考えてから、ぼくもそうしたいですと答える。私は頷き、今の言葉を曖昧な頷きだけにしまわずに済んだことへ、ようやく息を吐いた。"
+        },
+        {
+          "speaker": "fugo",
+          "text": "会ったから必ず泊まるとは決めずにいましょう。途中でやめたい時も言ってください。ぼくも、自分の気持ちを話します。"
+        },
+        {
+          "speaker": "player",
+          "text": "はい。私からも誘います。昼の約束も、続けたいです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼が次に空いている日を二つ挙げ、私は自分の予定を確かめた。片方には用事があると言うと、それならもう片方で、と返る。話し終えたあと、彼のグラスがまだ半分残っていることに気づき、私は今日は急がないと椅子へ座り直した。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "continue",
+          "text": "その都度望みを伝える親密な友人として続ける",
+          "next": "end_fwb",
+          "effect": "messageBoundaries"
+        },
+        {
+          "id": "daytime",
+          "text": "考え直し、昼に会う友人でいたいと伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "end_friend",
+      "chapter": 5,
+      "title": "机を広く使う日",
+      "location": "学内勉強会の作業室",
+      "storyTime": {
+        "date": "7月12日",
+        "period": "昼"
+      },
+      "characterId": "fugo",
+      "rating": "general",
+      "tags": [
+        "fugo"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人にはなれないと答えると、フーゴさんは一度目を伏せ、分かりましたと言った。その日はそこで別れた。次の勉強会の前に私から短い感想を送り、当日話せたら嬉しいですと付け足す。彼も、聞かせてくださいと返した。",
+          "when": {
+            "flags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "昼に会う友人でいたいと伝えてから、フーゴさんは夜の話を持ち出して答えを変えさせようとはしなかった。次の勉強会で会い、私から自分の紙を見せる。前と同じに急いで戻らなくても、今日一緒に解きたいことはあった。",
+          "when": {
+            "flags": [
+              "hadNight",
+              "endedNight"
+            ],
+            "notFlags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "友人としてこれからも会おうと話し、今日は勉強会へ来た。フーゴさんは自分の紙を端へ寄せ、私がノートを開く場所を空ける。私も飲み物を反対側へ置き、同じ机を広く使った。",
+          "when": {
+            "notFlags": [
+              "hadNight",
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "fugo",
+          "text": "ここ、条件を一つ飛ばしています。……一緒に確かめましょう。ぼくも今、読み直しているところです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "確かにありました、と答え、二人で続きを読んだ。周りの参加者がそれぞれ違う答えを言い始め、彼がまた眉を寄せる。私は自分の並びを見せてから、終わったら何か食べに行きませんかと誘った。まだ解けていないけれど、帰りの楽しみは先に作ってよかった。"
+        }
+      ],
+      "choices": [],
+      "ending": "FRIEND"
+    },
+    {
+      "id": "end_love_a",
+      "chapter": 5,
+      "title": "返事のあと、笑う",
+      "location": "街の喫茶店",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "昼"
+      },
+      "characterId": "fugo",
+      "rating": "general",
+      "tags": [
+        "fugo"
+      ],
+      "body": [
+        {
+          "speaker": "fugo",
+          "text": "ぼくも好きです。あなたと付き合いたい。言ってくれて、嬉しいです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼の言葉を聞き終えても、すぐには返事ができなかった。机へ開いていた手を彼の方へ伸ばすと、彼も手を出す。私はそこへ触れ、少し笑った。何を笑ったか聞かれても、うまく説明できなかったが、彼は手を離さなかった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌週、文具店で彼がようやく目当てのペンを見つけた。試し書きの紙へ短く線を引き、私にも渡してくれる。私は自分の名前を書き、その下へ彼の名前も書いてしまった。フーゴさんはそれを見て少し黙り、今日はこのペンにします、と言った。",
+          "storyTime": {
+            "date": "7月5日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_A"
+    },
+    {
+      "id": "end_love_b",
+      "chapter": 5,
+      "title": "本の外の名前",
+      "location": "街の喫茶店",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "昼"
+      },
+      "characterId": "fugo",
+      "rating": "general",
+      "tags": [
+        "fugo"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私も好きですと返すと、彼の肩がわずかに下がった。嬉しいです、と私から言い足す。彼も同じ言葉を返し、少しだけ笑った。整えていた口元がほどけるところを、私はいつまでも見ていそうになった。"
+        },
+        {
+          "speaker": "player",
+          "text": "店を出たら、手をつないでもいいですか。"
+        },
+        {
+          "speaker": "fugo",
+          "text": "はい。ぼくも、そうしたいです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌週、待ち合わせでは私の姓を呼ぶ声が先に来た。隣へ並んで手を取ると、今日は本を持っていませんと彼が少し笑う。私もです、と答え、鞄を持ち替えた。空いた午後をどこで使うかは、歩きながら決めることにした。",
+          "storyTime": {
+            "date": "7月5日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_B"
+    },
+    {
+      "id": "end_fwb",
+      "chapter": 5,
+      "title": "帰りに残る色",
+      "location": "フーゴの自宅",
+      "storyTime": {
+        "date": "7月12日",
+        "period": "夜"
+      },
+      "characterId": "fugo",
+      "rating": "fade",
+      "tags": [
+        "fugo"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "互いに今夜会いたいと伝え、私はフーゴさんの家へ来た。食後、残してあった色紙を一枚ずつ折る。泊まりたいと自分から話すと、彼も一緒にいてほしいと答えた。翌朝は食事のあと帰ると確かめてから、作った箱を机へ置いた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼が隣へ来て、手へ触れてもいいかと訊く。私は頷き、自分から取った。少し身を屈めた顔へ私も近づき、口づけを返す。離れたあとにもう一度と頼んでから、二人で机を離れた。灯りが消える直前まで、折り返した紙の白が見えていた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝、自分の箱をつぶさないよう鞄へ入れた。玄関でまた誘いますと話すと、ぼくからも、と返る。帰ってから机へ置いた箱には、まだ何も入っていなかった。私はそれをそのままにして、自分の一日の用意を始めた。",
+          "storyTime": {
+            "date": "7月13日",
+            "period": "朝"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB"
+    },
+    {
+      "id": "end_fwb_love",
+      "chapter": 5,
+      "title": "その先を、今の声で",
+      "location": "街の喫茶店",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "昼"
+      },
+      "characterId": "fugo",
+      "rating": "general",
+      "tags": [
+        "fugo"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "今は恋人になりたいと話した。フーゴさんは本を閉じたまま私を見ている。近くで過ごした夜を先に並べることはせず、私は自分の言葉をそこで止めた。"
+        },
+        {
+          "speaker": "fugo",
+          "text": "ぼくも、あなたの恋人になりたいです。今まで会えたことを、間違いにしたいわけではありません。今は、その名前で隣にいたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私もですと返すと、彼が手を出した。知っている温かさを受け取りながら、今聞いた声だけをもう一度思い出す。次に会う日には、用事も紙も持たずに行きたかった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌週、食事のあとで駅へ向かった。まだ少し歩きたいと言うと、彼が時刻を確かめ、それなら向こうの道から、と曲がる。私も隣へ並び直し、つないだ手を握った。話すことが尽きても、すぐ本を開く必要はなかった。",
+          "storyTime": {
+            "date": "7月5日",
+            "period": "夕方"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB_TO_LOVE"
+    },
+    {
+      "id": "end_special",
+      "chapter": 5,
+      "title": "解けなかった日の頁",
+      "location": "街の喫茶店",
+      "storyTime": {
+        "date": "7月19日",
+        "period": "昼"
+      },
+      "characterId": "fugo",
+      "rating": "general",
+      "tags": [
+        "fugo"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "二人のノートへ、私が考えた紙の問題を貼った。フーゴさんは手順を読み、途中で実物を取る。そこで裏返すんですとだけ伝えると、分かっています、と少し鋭い声が返った。私は先の答えを言わず、自分の紙を折り始めた。"
+        },
+        {
+          "speaker": "fugo",
+          "text": "……すみません、急かされたわけでもないのに。今、ここが通らなくて。もう一度、最初の向きを見せてもらえますか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "同じ向きに並べてから、私はゆっくり一度折った。彼は今度は途中を飛ばさずに追う。形になってもまだ納得しきらない顔をしていて、別の手順なら、と頁の余白へ線を書き始めた。"
+        },
+        {
+          "speaker": "player",
+          "text": "その方も残しておきましょう。次は私が、図だけでできるか試します。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼が自分の線を一本消し、二本目を引いた。恋人と呼ばない相棒の机には、早く解けた人の答えだけでなく、引っかかったところも残る。帰る時刻になるとノートを閉じ、私は続きは次に、と自分の紙を箱へ収めた。"
+        }
+      ],
+      "choices": [],
+      "ending": "SPECIAL"
+    }
+  ]
+}

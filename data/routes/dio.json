@@ -1,0 +1,1257 @@
+{
+  "id": "dio",
+  "title": "ディオ — きみが選ぶ、その前に",
+  "intro": "整えられた展示と、崩れない微笑。\n眩しい先輩の隣で、あなた自身の答えを選ぶ。",
+  "startEvent": "panels",
+  "character": {
+    "name": "ディオ",
+    "adult": true,
+    "heightCm": 185,
+    "heightBasis": "二次資料JoJo Wikiの身長欄と出典注記を照合。作者の人物設計表（荒木飛呂彦の新・漫画術第2章）。原作本編で未提示の設計値であり確定プロフィールとは区別。書籍・設定表現物は未照合。AUで同値を採用。",
+    "profile": "外向けの優等生ぶりと激しい上昇志向が同居する。勝つために人や場を読む。侮られることに敏感。",
+    "personality": [
+      "外向けの優等生ぶりと激しい上昇志向が同居する",
+      "勝つために人や場を読む",
+      "侮られることに敏感"
+    ],
+    "speech": {
+      "firstPerson": "おれ",
+      "addressing": "主人公は姓/名前、きみ。優位を誇る時のおまえ等を普段の呼び名に固定しない。",
+      "tone": "整った断定に自信を含ませる。語尾は感情と相手に合わせる。",
+      "habits": [
+        "整った断定に自信を含ませる",
+        "余裕が崩れると荒い語尾が出る"
+      ],
+      "signaturePhrases": [],
+      "signatureNote": "日常の固定口癖は採用しない。象徴的な原作台詞と普段の話し方を混同せず、名台詞を貼り付けない。",
+      "avoid": [
+        "3部DIOの支配者口調だけにする",
+        "侮辱や支配を愛情の証明にする",
+        "常に優しい優等生にする"
+      ]
+    },
+    "referenceSection": "docs/CHARACTER_REFERENCE.md#cast-dio"
+  },
+  "au": {
+    "role": "応用化学系4年",
+    "routeEnabled": true,
+    "addressing": [
+      {
+        "text": "{player.lastName}"
+      }
+    ]
+  },
+  "endingDescriptions": {
+    "FRIEND": {
+      "title": "次も、遠慮なく",
+      "description": "隣で意見を言える友人として。次の展示にも、自分の案を持っていく。"
+    },
+    "LOVE_A": {
+      "title": "近くから見る",
+      "description": "憧れの向こうへ、自分から好きだと伝える。今度の行き先は、二人で決める。"
+    },
+    "LOVE_B": {
+      "title": "あなたからの約束",
+      "description": "口実をやめた先輩から、恋人になりたいと言われる。資料のない休日を、並んで歩く。"
+    },
+    "FWB": {
+      "title": "明日の予定はそれぞれ",
+      "description": "昼にも夜にも、互いに望んで会う友人。次の誘いを持ちながら、それぞれの朝へ帰る。"
+    },
+    "FWB_TO_LOVE": {
+      "title": "明るい時間に、もう一度",
+      "description": "親密な夜を重ねた先で、恋人として選び合う。知っている声が、明るい道で名前を呼ぶ。"
+    },
+    "SPECIAL": {
+      "title": "選び直すたびに",
+      "description": "当然の返事を渡さず、彼自身の願いを聞く。選ばれたいと言った人と、対等な恋人として次を選ぶ。"
+    }
+  },
+  "events": [
+    {
+      "id": "panels",
+      "chapter": 1,
+      "title": "光の当たる場所",
+      "location": "学内の展示ホール",
+      "storyTime": {
+        "date": "5月20日",
+        "period": "昼"
+      },
+      "characterId": "dio",
+      "rating": "general",
+      "tags": [
+        "dio"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "展示の案内画面を直してほしい、と頼まれたのは昼休みだった。色の見本を並べたパネルの前に、ディオ先輩が立っている。近づくだけで、さっきまで涼しかった耳のあたりが熱くなった。今日は先輩に会うと知っていたから、いつものポニーテールをほどいてある。それでも、見上げた拍子に髪が肩から滑った。"
+        },
+        {
+          "speaker": "dio",
+          "text": "来てくれたか。実物を見る前に帰られては困るからね。最初の画面を、もっと目を引くものにしたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "渡された案は端までよくできていた。けれど、押す場所を探しているうちに一枚目へ戻ってしまう。私は画面ではなく先輩の顔を見そうになるのをこらえ、指を止めた場所を示した。先輩は笑顔を少し薄くして、私の指先を見た。"
+        },
+        {
+          "speaker": "player",
+          "text": "きれいです。でも、初めて見る人はここで迷うと思います。入口だけ、私に試させてください。"
+        },
+        {
+          "speaker": "dio",
+          "text": "言うだけではないところを、見せてもらおうか。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "make_entrance",
+          "text": "自分の案を作り、実際に触ってもらう",
+          "next": "colors",
+          "effect": "workTogether"
+        },
+        {
+          "id": "ask_him",
+          "text": "先輩が一番見せたいものを、隣で聞く",
+          "next": "colors",
+          "effect": "ask"
+        }
+      ]
+    },
+    {
+      "id": "colors",
+      "chapter": 1,
+      "title": "似ているだけの色",
+      "location": "展示ホール",
+      "storyTime": {
+        "date": "5月23日",
+        "period": "夕方"
+      },
+      "characterId": "dio",
+      "rating": "general",
+      "tags": [
+        "dio"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "照明を変えると、見本の色が写真とずれた。画面の写真は鮮やかで、遠くからでも人の目を引く。ディオ先輩はそれを気に入っていた。撮り直した方の写真を並べたら、先輩の眉がわずかに動く。私の方でも、どちらが華やかかは分かった。"
+        },
+        {
+          "speaker": "dio",
+          "text": "目を留めてもらえなければ、違いを説明する機会もない。展示では、見せ方がものを言う。"
+        },
+        {
+          "speaker": "player",
+          "text": "実物を見てから帰る人には、こっちの色の方が近いですよね。先輩は、どう思いますか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "言ってしまってから、机を挟んだ距離が広く感じられた。先輩はしばらく二枚を比べ、華やかな方を裏返した。私の案に感心したような顔はしない。そのまま椅子を引き、もう一度作るなら今からだと言った。照明の下へ寄せられた椅子に、私は鞄を置いた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "stand_by_it",
+          "text": "「実物の色で作りたいです。私も最後までやります」と伝える",
+          "next": "lunch",
+          "effect": "honest",
+          "setFlags": [
+            "saidTruth"
+          ]
+        },
+        {
+          "id": "test_both",
+          "text": "二つの画面を並べ、文字の見え方から比べる",
+          "next": "lunch",
+          "effect": "compareNotes"
+        }
+      ]
+    },
+    {
+      "id": "lunch",
+      "chapter": 1,
+      "title": "選べる時刻",
+      "location": "学内カフェ",
+      "storyTime": {
+        "date": "5月26日",
+        "period": "昼"
+      },
+      "characterId": "dio",
+      "rating": "general",
+      "tags": [
+        "dio"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "カフェで待っていると、ディオ先輩は人に呼び止められながら入ってきた。誰にでも感じよく返事をして、私の机まで来る。その顔から挨拶のための笑みが消えるところを、私は見ていた。"
+        },
+        {
+          "speaker": "dio",
+          "text": "明日の修正は、食事のあとでどうだ。夜なら、きみも空いているだろう。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩の言い方には、私が頷くところまで含まれているようだった。明日はジョセフと課題を片づける約束がある。友人との予定を変えればここに座れる、と思う自分がいて、それが少し悔しかった。ストローの袋を折る手を止め、予定表を開いた。"
+        },
+        {
+          "speaker": "player",
+          "text": "明日の夜は、先に約束があります。先輩と作業するなら、別の日にしたいです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩は私を見て、それから手元の日付を見た。怒られはしなかった。ただ、当然のようには続かなかった会話の間が、机の上に残った。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "keep_promise",
+          "text": "約束は変えず、自分から別の日の時間を提案する",
+          "next": "message",
+          "effect": "homeTalk",
+          "setFlags": [
+            "keptPromise"
+          ]
+        },
+        {
+          "id": "another_lunch",
+          "text": "夜は約束へ行き、次の昼食を二人で取ると決める",
+          "next": "message",
+          "effect": "lunchTwo"
+        },
+        {
+          "id": "work_only",
+          "text": "空いている昼に、修正だけ済ませる予定を立てる",
+          "next": "message",
+          "effect": "shiftRest"
+        }
+      ]
+    },
+    {
+      "id": "message",
+      "chapter": 2,
+      "title": "閉じなかった画面",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "5月30日",
+        "period": "夜"
+      },
+      "characterId": "dio",
+      "rating": "general",
+      "tags": [
+        "dio"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "課題を終えて帰宅すると、先輩から画像が届いていた。展示画面の色が、あの日裏返した写真より落ち着いたものになっている。細い説明文字まで読み切ると、私の案の入口だけは残っていた。"
+        },
+        {
+          "speaker": "dio",
+          "text": "この形で進める。きみが直した入口は使いやすい。残りは月曜に確認しよう。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "短い文章の最後に、自分の案を認める言葉がある。褒められたと大げさに受け取りたくなくて、一度端末を伏せた。すぐに持ち直してしまうところまでは、先輩から見えない。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "happy",
+          "text": "先輩と、ここまで作れて嬉しいです",
+          "next": "preview",
+          "effect": "messageHeart",
+          "replyVariants": [
+            {
+              "text": "まだ完成ではないよ。……だが、おれも悪くないと思っている。",
+              "when": {
+                "flags": [
+                  "saidTruth"
+                ]
+              }
+            },
+            {
+              "text": "そうか。当日もきみの働きを頼りにしている。"
+            }
+          ],
+          "lockRoute": "dio"
+        },
+        {
+          "id": "noticed",
+          "text": "最後まで見ました。入口、残してくれたんですね",
+          "next": "preview",
+          "effect": "messageListen",
+          "replyVariants": [
+            {
+              "text": "使うべきものは使う。きみが作ったから、というだけの理由ではない。"
+            }
+          ],
+          "lockRoute": "dio"
+        },
+        {
+          "id": "checked",
+          "text": "確認しました。月曜に実機でも試します",
+          "next": "preview",
+          "effect": "messageDaily",
+          "replyVariants": [
+            {
+              "text": "頼む。先にホールを開けておく。"
+            }
+          ],
+          "lockRoute": "dio"
+        }
+      ],
+      "message": true
+    },
+    {
+      "id": "preview",
+      "chapter": 2,
+      "title": "目を逸らさない",
+      "location": "展示ホール",
+      "storyTime": {
+        "date": "6月2日",
+        "period": "夕方"
+      },
+      "characterId": "dio",
+      "rating": "general",
+      "tags": [
+        "dio"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "人のいないホールで実機を動かすと、画面に二人の顔が薄く映った。立つ位置を入れ替えながら確かめているうちに、先輩が私の後ろへ回る。操作する腕の外側に気配があり、押すつもりのなかった場所を押した。先輩は見逃してくれなかった。"
+        },
+        {
+          "speaker": "dio",
+          "text": "今のは画面のせいではなさそうだ。そんなに緊張されると、こちらまで気になるな。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "笑いを含んだ声に、また髪へ手をやりそうになる。けれど暑くなってきたし、作業の邪魔でもあった。私は手首のゴムを見た。先輩の前で隠していたものを見せるだけなのに、見本の色を選ぶ時よりためらった。"
+        },
+        {
+          "speaker": "player",
+          "text": "……先輩が見てるからです。間違えたところは、直します。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "meet_gaze",
+          "text": "髪を結び直し、先輩の目を見て笑う",
+          "next": "opening",
+          "effect": "walkClose",
+          "setFlags": [
+            "metGaze"
+          ]
+        },
+        {
+          "id": "try_again",
+          "text": "立つ場所を変えてもらい、操作をやり直す",
+          "next": "opening",
+          "effect": "walkHome"
+        }
+      ]
+    },
+    {
+      "id": "opening",
+      "chapter": 2,
+      "title": "拍手のあとに",
+      "location": "公開展示の会場",
+      "storyTime": {
+        "date": "6月7日",
+        "period": "昼"
+      },
+      "characterId": "dio",
+      "rating": "general",
+      "tags": [
+        "dio"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "公開展示の日、ジョセフが運んでくれた端末を机に固定した。ディオ先輩は来場者に合わせて説明の長さを変え、顔を上げた相手を次の見本へ導いていく。離れて見ていると隙がない。隣へ戻ると、襟元の布だけ少し湿っていた。"
+        },
+        {
+          "speaker": "joseph",
+          "text": "ちゃんと人が止まってんなァ。おまえの入口、いい仕事したじゃねえの。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "ジョセフに小さく頷いていると、先輩がこちらを見た。閉場後の投票では、私たちの展示は一位ではなかった。先輩は結果の紙を受け取り、笑顔で労いに答えたあと、誰もいない机へ戻ってきた。紙の端に、指の跡がついていた。"
+        },
+        {
+          "speaker": "dio",
+          "text": "次は、勝つ。あれだけ見てもらったのに、覚えて帰るものが足りなかった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "悔しくないふりはしない人なのだと思った。私は画面を閉じず、来場者が残した感想を一緒に読んだ。実物の色が見たくなった、と書かれた一行で、先輩の手が止まった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "stay_beside",
+          "text": "「次も、先輩の隣で作りたいです」と伝える",
+          "next": "supper",
+          "effect": "conferenceClose"
+        },
+        {
+          "id": "save_feedback",
+          "text": "感想を保存し、撤収を一緒に終える",
+          "next": "supper",
+          "effect": "conferencePractical"
+        }
+      ]
+    },
+    {
+      "id": "supper",
+      "chapter": 3,
+      "title": "見せるためではない部屋",
+      "location": "ディオの自宅",
+      "storyTime": {
+        "date": "6月7日",
+        "period": "夜"
+      },
+      "characterId": "dio",
+      "rating": "general",
+      "tags": [
+        "dio"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "撤収後、記録の写真を大きな画面で見直そうと先輩の家へ寄った。夕食は途中で二人分を買ってきた。片づいた机に袋を置くと、先輩は角の揃わない紙容器をしばらく見てから、ようやく箸を割った。誰かに見せる展示とは違い、ここでは私も足を崩して座った。"
+        },
+        {
+          "speaker": "dio",
+          "text": "あの結果、きみはそれほど悔しくなさそうだったね。"
+        },
+        {
+          "speaker": "player",
+          "text": "悔しいです。でも、一緒に作ったものを嫌いにはなれなくて。……先輩は、まだ嫌いですか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩は返さず、画面の写真を次へ送った。設営中に私が失敗したところまで写っていて、慌てて消そうとすると手を止められる。手首をつかむ代わりに、先輩の指がキーの前へ置かれた。"
+        },
+        {
+          "speaker": "dio",
+          "text": "残しておけ。これも、きみがここまで作った証拠だろう。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "胸の奥が温かくなるより先に、顔が熱くなった。今ここにいる人を、入口の遠い場所から見ていた頃には知らなかった。画面が暗くなっても、すぐには立ち上がれずにいた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "stay",
+          "text": "「今夜、もう少し近くにいたいです」と伝える",
+          "next": "consent",
+          "effect": "hotelInvite",
+          "when": {
+            "min": {
+              "trust": 45,
+              "desire": 12
+            }
+          }
+        },
+        {
+          "id": "talk",
+          "text": "時間まで話し、次に会う日を決めて帰る",
+          "next": "afterwards",
+          "effect": "hotelTalk"
+        },
+        {
+          "id": "leave",
+          "text": "片づけを手伝い、今日は帰る",
+          "next": "afterwards",
+          "effect": "homeRest"
+        }
+      ]
+    },
+    {
+      "id": "consent",
+      "chapter": 3,
+      "title": "決めるのは二人",
+      "location": "ディオの自宅",
+      "storyTime": {
+        "date": "6月7日",
+        "period": "夜"
+      },
+      "characterId": "dio",
+      "rating": "general",
+      "tags": [
+        "dio"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "近くにいたい、と言い終えると、先輩は机の画面を閉じた。私が立ち上がるのを待って向き直り、まだ触れない距離でこちらを見る。髪を下ろして隠すこともできたけれど、今はそのままでいたかった。"
+        },
+        {
+          "speaker": "dio",
+          "text": "おれもきみに触れたい。今夜、ここにいてほしい。だが、それを恋人になる返事だとは受け取らない。"
+        },
+        {
+          "speaker": "player",
+          "text": "私も、触れてほしいです。途中でやめたくなったら止めてください。先輩も、嫌なことは言ってください。"
+        },
+        {
+          "speaker": "dio",
+          "text": "分かった。どちらかがやめたいと言えばやめる。帰ると言うなら、それも聞く。今、どうしたい？"
+        },
+        {
+          "speaker": "narrator",
+          "text": "いつもなら先に決まっているように聞こえる問いが、今日は私の答えを待っている。先輩のシャツの袖から手へ視線を移し、私は指を開いた。近づく方にも、扉へ戻る方にも足は動かせた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「一緒にいたいです」と自分から手を取る",
+          "next": "night",
+          "effect": "consent",
+          "setFlags": [
+            "consented",
+            "hadNight"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「今日は帰ります」と答える",
+          "next": "afterwards",
+          "effect": "walkHome",
+          "setFlags": [
+            "declinedTouch"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "night",
+      "chapter": 3,
+      "title": "灯りを消してから",
+      "location": "ディオの自宅",
+      "storyTime": {
+        "date": "6月7日",
+        "period": "夜"
+      },
+      "characterId": "dio",
+      "rating": "fade",
+      "tags": [
+        "dio"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "指を重ねると、先輩の手がゆっくり握り返した。私から一歩近づき、見上げた顔へ触れようとして腕を上げる。先輩が少し身を屈めたので、ようやく同じ高さで目が合った。唇が触れたあと、私が離れるのを待つ間にも、つないだ手は急がなかった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "もう一度、と声にすると、先輩の表情から人前の微笑が消えた。私はその顔を見て、初めて目を閉じた。寝室へ移る時も、手を離さずに二人で歩いた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝、先輩は起きかけた私の動きで目を開けた。互いに身支度を済ませ、昨夜の紙容器をまとめながら窓を開ける。展示会場にいた時より短い返事で話せることが、少しおかしかった。",
+          "storyTime": {
+            "date": "6月8日",
+            "period": "朝"
+          }
+        },
+        {
+          "speaker": "dio",
+          "text": "また会いたい。昼にも、こういう夜にも。きみはどうだ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "聞き方は率直なのに、先輩は私の鞄を手渡してから返事を待った。帰る支度を終えた私からなら、次を欲しいと言うことも、今日はここまでと伝えることもできた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "again",
+          "text": "「友達のまま、また二人で夜を過ごしたいです」",
+          "next": "afterwards",
+          "effect": "messageBoundaries",
+          "setFlags": [
+            "ongoing"
+          ]
+        },
+        {
+          "id": "more",
+          "text": "「また会いたいです。先輩を、もっと好きになりました」",
+          "next": "afterwards",
+          "effect": "messageAgain",
+          "setFlags": [
+            "ongoing"
+          ]
+        },
+        {
+          "id": "daytime",
+          "text": "「これからは昼に会う友達でいたいです」",
+          "next": "afterwards",
+          "effect": "messageDaily",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ],
+      "when": {
+        "flags": [
+          "consented"
+        ]
+      }
+    },
+    {
+      "id": "afterwards",
+      "chapter": 4,
+      "title": "次の展示がなくても",
+      "location": "大学の中庭",
+      "storyTime": {
+        "date": "6月27日",
+        "period": "夕方"
+      },
+      "characterId": "dio",
+      "rating": "general",
+      "tags": [
+        "dio"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "展示が終わってからも、私たちは何度か食事をした。二人とも望んで先輩の部屋へ行った夜には、次の朝の予定を伝えてから泊まった。帰る日には先輩も引き留めず、別の日の誘いを寄こした。その繰り返しの間に、展示のために会っていた時とは違う言葉が増えた。",
+          "when": {
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "展示が終わってからは、昼に待ち合わせて食事をした。あの夜のあと私が伝えた返事を、先輩は次の誘いから変えてくれた。二人で会う時の距離に迷った日もあったけれど、仕事の感想を言い合ううちに、自分の声が戻ってきた。",
+          "when": {
+            "flags": [
+              "hadNight",
+              "endedNight"
+            ],
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "展示が終わると、毎日会う用件はなくなった。それでも修正版の画面を見せたり、昼食に誘われたりして、何度か二人で過ごした。先輩の言葉に慌てて髪を下ろすことは、少し減った。",
+          "when": {
+            "notFlags": [
+              "hadNight"
+            ]
+          }
+        },
+        {
+          "speaker": "dio",
+          "text": "次の展示に誘えば、きみは来るだろうね。だが、今日はその話ではない。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "中庭のベンチで、先輩は資料を持たずに隣へ座った。私は膝の上の鞄を持ち直す。頼まれたことに応じるだけでは、今の返事にはならないのだと思った。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "confess",
+          "text": "「先輩に、私から話したいことがあります」と切り出す",
+          "next": "confess_player",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 35,
+              "romanceChar": 25
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "listen",
+          "text": "先輩が言おうとしている続きを待つ",
+          "next": "confess_dio",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 20,
+              "romanceChar": 35
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "ask_choice",
+          "text": "「私が来るからではなく、先輩がどうしたいか聞きたいです」",
+          "next": "pride",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 35,
+              "romanceChar": 30,
+              "comfort": 20
+            },
+            "flags": [
+              "saidTruth",
+              "keptPromise",
+              "metGaze"
+            ],
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "night_friends",
+          "text": "これからも、昼と夜を楽しむ友人でいたいと話す",
+          "next": "fwb_choice",
+          "when": {
+            "min": {
+              "trust": 50,
+              "desire": 25,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "night_love",
+          "text": "「今は、先輩の恋人になりたいです」と伝える",
+          "next": "end_fwb_love",
+          "when": {
+            "min": {
+              "trust": 60,
+              "romancePlayer": 50,
+              "romanceChar": 40,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          },
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "friends",
+          "text": "「これからも、友人として会いたいです」と伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_player",
+      "chapter": 4,
+      "title": "先に差し出す言葉",
+      "location": "大学の中庭",
+      "storyTime": {
+        "date": "6月27日",
+        "period": "夕方"
+      },
+      "characterId": "dio",
+      "rating": "general",
+      "tags": [
+        "dio"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私から伝えたい、と言うと、先輩の口元に笑みが戻った。それを見て、うまく言おうとしていた言葉をやめた。私が緊張していることは、ずっと前から知られている。それでも、知っているだけでは手に入らない返事を、今から渡したかった。"
+        },
+        {
+          "speaker": "player",
+          "text": "憧れてるだけなら、もっと簡単だったと思います。一緒に作って、意見が違って、それでもまた会いたくなりました。"
+        },
+        {
+          "speaker": "dio",
+          "text": "……続きを聞かせてくれ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩の視線が私の髪から目へ移った。今日は耳が熱くても隠さない。ベンチに置いていた手を膝へ戻し、目の前の人へ、自分の言葉を選んだ。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "love",
+          "text": "「好きです。私と付き合ってください」",
+          "next": "end_love_a",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "choose",
+          "text": "「先輩を選びたいです。恋人として、そばにいさせてください」",
+          "next": "end_love_a",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "wait",
+          "text": "「今は、友人として会う約束がしたいです」",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_dio",
+      "chapter": 4,
+      "title": "用件のない誘い",
+      "location": "大学の中庭",
+      "storyTime": {
+        "date": "6月27日",
+        "period": "夕方"
+      },
+      "characterId": "dio",
+      "rating": "general",
+      "tags": [
+        "dio"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私が黙って待っていると、先輩は一度だけ指を組み直した。すぐ隣にいるのに、展示会場で話を始める時より長くかかった。私はその間を埋めるために笑わず、先輩を見ていた。"
+        },
+        {
+          "speaker": "dio",
+          "text": "きみが好きだ。仕事の続きを口実にして呼ぶのは、もうやめたい。おれと付き合わないか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "はっきり言われた途端、周りの音が少し遠くなった。聞き間違えなかったか確かめたくて顔を上げると、先輩は逃げずに見返してきた。いつも整っている襟元へ、今だけ目を逸らしたくなる。けれど、返事をするのは私だった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「私も好きです。先輩の恋人になりたいです」",
+          "next": "end_love_b",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「恋人にはなれません。友人でいたいです」",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "refusedConfession",
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pride",
+      "chapter": 4,
+      "title": "答えの前に",
+      "location": "大学の中庭",
+      "storyTime": {
+        "date": "6月27日",
+        "period": "夕方"
+      },
+      "characterId": "dio",
+      "rating": "general",
+      "tags": [
+        "dio"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私がどう答えるかではなく、先輩自身の望みを聞いた。返ってくると思った微笑が消え、先輩は少し顎を上げる。展示の色を譲らなかった日にも、約束を動かさなかった日にも見た顔だった。私は鞄を握り締めず、膝の上へ両手を置いた。"
+        },
+        {
+          "speaker": "dio",
+          "text": "……きみが、おれに何を言わせたいのかは分かる。"
+        },
+        {
+          "speaker": "player",
+          "text": "言わせたい答えじゃなくて、先輩の言葉を聞きたいんです。私が好きそうだから、で決めないでください。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩は立ち上がりかけ、結局、座り直した。その小さなやり直しを見て、私は待った。強く見せるための間ではなく、言わずに済ませてきた言葉を探す間だと思いたかった。先輩の手が伸びかけ、私に触れずに止まる。"
+        },
+        {
+          "speaker": "dio",
+          "text": "きみに選ばれたい。おれが誘えば来るからではない。……おれを好きでいてほしい。おれも、きみが好きだ。恋人になってくれ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "声の最後が、いつもの断定にならなかった。欲しかった言葉を受け取ると、勝ったと思うより先に、目の前の人へ手を伸ばしたくなった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choose_you",
+          "text": "「私が選びます。先輩と、恋人になりたいです」",
+          "next": "end_special",
+          "effect": "messageHeart",
+          "setFlags": [
+            "chosenEqually",
+            "dating"
+          ]
+        },
+        {
+          "id": "not_now",
+          "text": "「今は、友人として会いたいです」と答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "refusedConfession",
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fwb_choice",
+      "chapter": 4,
+      "title": "また誘う理由",
+      "location": "大学の中庭",
+      "storyTime": {
+        "date": "6月27日",
+        "period": "夕方"
+      },
+      "characterId": "dio",
+      "rating": "general",
+      "tags": [
+        "dio"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "友人として会いながら、望む夜には一緒に過ごしたいと話した。先輩はすぐ次の予定を出さず、こちらへ体を向けた。昼の食事と夜の記憶の両方を思い出しながら、私は恋人になる約束は今は望んでいない、と続けた。"
+        },
+        {
+          "speaker": "dio",
+          "text": "おれも、その形で会いたい。誘いを受けるかは、その時に聞く。きみも、会いたい時には言ってくれ。"
+        },
+        {
+          "speaker": "player",
+          "text": "はい。途中でやめたくなった時も、お互いに。昼のご飯も、楽しみにしてます。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩が短く頷いたので、肩から力が抜けた。次の夜を決める前に、今日はどこで食べようかと私から聞く。先輩は近くの店を二つ挙げ、私が選ぶまで待っていた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "continue",
+          "text": "これからも、親密な友人として会うと答える",
+          "next": "end_fwb",
+          "effect": "messageBoundaries"
+        },
+        {
+          "id": "daytime",
+          "text": "考え直して、昼に会う友人でいたいと答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "end_friend",
+      "chapter": 5,
+      "title": "次も、遠慮なく",
+      "location": "学内の展示準備室",
+      "storyTime": {
+        "date": "7月5日",
+        "period": "昼"
+      },
+      "characterId": "dio",
+      "rating": "general",
+      "tags": [
+        "dio"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人にはなれないと伝えたあと、先輩は少し黙り、それから分かったと言った。数日空けて届いたのは、次の展示案を見てほしいという連絡だった。私も見たいと思って、その日を選んだ。",
+          "when": {
+            "flags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "昼に会う友人でいたいと伝えてから、夜の誘いは来なくなった。次の展示案を見せたい、と昼の予定を訊かれた時、私は自分の空いている日を返した。",
+          "when": {
+            "flags": [
+              "hadNight",
+              "endedNight"
+            ],
+            "notFlags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "友人としてまた意見を聞かせてほしい、と先輩は次の案を送ってきた。見たいと言ってから予定を合わせ、今日は前より迷わず準備室の扉を開けた。",
+          "when": {
+            "notFlags": [
+              "hadNight",
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "dio",
+          "text": "今度の入口はどうだ。前と同じ指摘をする必要はないはずだが。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "自信のある声に、私は画面を一度最初へ戻した。隣ではジョセフが、新しい案にも文句をつけられるのかと面白そうに覗いている。分かりやすくなりました、と答えてから、別の一箇所を指した。先輩は眉を上げ、椅子を私の方へ引いた。今日は言えることが、まだ幾つもあった。"
+        }
+      ],
+      "choices": [],
+      "ending": "FRIEND"
+    },
+    {
+      "id": "end_love_a",
+      "chapter": 5,
+      "title": "近くから見る",
+      "location": "大学の中庭と街路",
+      "storyTime": {
+        "date": "6月27日",
+        "period": "夕方"
+      },
+      "characterId": "dio",
+      "rating": "general",
+      "tags": [
+        "dio"
+      ],
+      "body": [
+        {
+          "speaker": "dio",
+          "text": "おれも、きみが好きだ。付き合おう。……そんな顔をされると、こちらまで落ち着かなくなる。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "自分から言ったのに、先輩の返事を聞いたら視線が落ちた。差し出された手の上へ、私も手を置く。触れた途端に握り返され、さっきまで膝の上で迷っていた指が、先輩の手の形を覚え始めた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "次の休日、先輩と街へ出た。見たい展示を一つずつ挙げたら、先輩は自分の案を押し通さず、先に私の選んだ場所へ向かった。入口で少し立ち止まる背中を追い、私は隣へ並んだ。",
+          "storyTime": {
+            "date": "7月5日",
+            "period": "昼"
+          }
+        },
+        {
+          "speaker": "player",
+          "text": "今日は、私が案内する番ですね。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "頼りにしている、と返ってきた言葉には、少しだけからかいが混じっていた。見上げると今でも照れる。けれどその顔を見たくて、私は髪を耳に掛け、二人分の入場券を受け取った。"
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_A"
+    },
+    {
+      "id": "end_love_b",
+      "chapter": 5,
+      "title": "あなたからの約束",
+      "location": "大学の中庭と駅前",
+      "storyTime": {
+        "date": "6月27日",
+        "period": "夕方"
+      },
+      "characterId": "dio",
+      "rating": "general",
+      "tags": [
+        "dio"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "はい、と言った私の返事を、先輩は一度頷いて受け取った。それから、さっきより柔らかく名前を呼ぶ。私が近づくと、肩へ触れかけた手が途中で止まり、代わりに私の手を取った。私はその方が嬉しくて、少し笑った。"
+        },
+        {
+          "speaker": "dio",
+          "text": "次に会う日は、おれから誘わせてくれ。仕事の話は持ってこない。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "約束の日、駅前には資料を持たない先輩がいた。私を見つけると歩いてきて、行きたい店を訊く。考えてきていないのかと驚いた顔をしたら、二つまで絞った、と先に言い訳をされた。",
+          "storyTime": {
+            "date": "7月6日",
+            "period": "昼"
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "どちらも楽しそうで迷っていると、先輩は一軒目の方へ手を差し出した。もう一つは次に、と私が言う。その次まで自分から言えたことに少し照れながら、私は先輩の隣へ収まった。"
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_B"
+    },
+    {
+      "id": "end_fwb",
+      "chapter": 5,
+      "title": "明日の予定はそれぞれ",
+      "location": "ディオの自宅",
+      "storyTime": {
+        "date": "7月5日",
+        "period": "夜"
+      },
+      "characterId": "dio",
+      "rating": "fade",
+      "tags": [
+        "dio"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "夕食を買って先輩の家を訪ねると、机には仕事の資料がまだ残っていた。片づくまで待つ、と言ったのに、先輩はすぐにファイルを閉じた。私が持ってきた袋を受け取りながら、今夜は泊まりたいかと訊かれる。私は顔を見て頷き、自分でも一緒にいたいと伝えた。"
+        },
+        {
+          "speaker": "dio",
+          "text": "おれもだ。だが、明日は早く出る。朝は慌ただしくなるかもしれない。"
+        },
+        {
+          "speaker": "player",
+          "text": "私も朝に帰ります。今日は、そのぶんゆっくり食べましょう。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "互いの明日の予定を話してから、向かい合って食事をした。食べ終えると、先輩が私の隣へ座る。私から指先を重ねると、展示の図を追っていた手が、今は私の手を包んだ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌朝、玄関で二人同時に靴を履いた。先輩は先に開けた扉を支え、私が外へ出るのを待つ。別の方向へ行く前に、次は私から誘います、と言った。先輩の返事を背中に聞きながら、私は自分の予定へ歩き出した。",
+          "storyTime": {
+            "date": "7月6日",
+            "period": "朝"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB"
+    },
+    {
+      "id": "end_fwb_love",
+      "chapter": 5,
+      "title": "明るい時間に、もう一度",
+      "location": "大学の中庭と街路",
+      "storyTime": {
+        "date": "6月27日",
+        "period": "夕方"
+      },
+      "characterId": "dio",
+      "rating": "general",
+      "tags": [
+        "dio"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人になりたいと伝えてから、私は先輩の手を待った。何度も触れた手なのに、今日は膝の上でじっとしている。先輩は夜の約束を一つずつ思い返すように目を伏せ、それから私を見た。"
+        },
+        {
+          "speaker": "dio",
+          "text": "おれも、きみと付き合いたい。今までどおりでいい、と言われるのが気に入らなくなっていた。……だが、勝手に変えるわけにはいかないからね。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "その少し意地の悪い正直さに、私は笑ってしまった。先輩が眉を上げる前に、私から手を取る。望んで会った夜をいくつも持ったまま、今度は別の約束を作れるのだと思った。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌週、昼の通りを二人で歩いた。どちらかの家へ向かう道ではない。先輩が私の好きそうな店を見つけて立ち止まり、私もその隣で足を止めた。夜の部屋で聞いた声が、明るい店先で私の名前を呼んだ。",
+          "storyTime": {
+            "date": "7月5日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB_TO_LOVE"
+    },
+    {
+      "id": "end_special",
+      "chapter": 5,
+      "title": "選び直すたびに",
+      "location": "大学の中庭と学内カフェ",
+      "storyTime": {
+        "date": "6月27日",
+        "period": "夕方"
+      },
+      "characterId": "dio",
+      "rating": "general",
+      "tags": [
+        "dio"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先輩と恋人になりたいと答えると、止まっていた手が私の方へ伸びた。私はそれを取り、指を一本ずつ重ねる。勝負を終えた顔をしてほしくなくて見上げたけれど、先輩はまだ少し悔しそうだった。"
+        },
+        {
+          "speaker": "dio",
+          "text": "こんなに言葉を選ばされたのは、きみのせいだ。……だが、おれから言えてよかった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私も聞けてよかったです、と返すと、先輩が小さく笑った。誰かに選ばせるのが上手な人が、今は私の返事を握っている。その手を引いてベンチから立つと、初めて私の方が一歩先に歩いた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "後日届いた誘いには、時刻のあとに、きみの都合は、と一言添えられていた。私が別の日を返すと、それで決まった。カフェで会った先輩は、私が座るまでメニューを閉じずに待っている。今日は何を選ぶか、二人で違うものを指してから笑った。",
+          "storyTime": {
+            "date": "7月4日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "SPECIAL"
+    }
+  ]
+}

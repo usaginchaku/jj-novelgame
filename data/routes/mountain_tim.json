@@ -1,0 +1,1224 @@
+{
+  "id": "mountain_tim",
+  "title": "ティム — 空けておいた席",
+  "intro": "誰かに呼び止められる人と、何の用もない昼を約束する。\n持ってきたものを半分ずつ置けば、そこは二人の席になった。",
+  "startEvent": "reunion",
+  "character": {
+    "name": "マウンテン・ティム",
+    "adult": true,
+    "heightCm": null,
+    "heightBasis": "4巻23話までの参照範囲で身長を確認できず",
+    "profile": "経験に基づく判断。社交性。場を仕切る落ち着き。軽い皮肉。",
+    "personality": [
+      "経験に基づく判断",
+      "社交性",
+      "場を仕切る落ち着き",
+      "軽い皮肉"
+    ],
+    "speech": {
+      "firstPerson": "オレ",
+      "addressing": "主人公は姓/君。私的には気安い常体、公的場面の丁寧さは教員AUの調整。",
+      "tone": "短い確認と気安い声掛け。語尾は感情と相手に合わせる。",
+      "habits": [
+        "短い確認と気安い声掛け",
+        "必要なら冗談で場を動かす",
+        "職務の丁寧語はAU上の調整"
+      ],
+      "signaturePhrases": [],
+      "signatureNote": "日常の固定口癖は採用しない。象徴的な原作台詞と普段の話し方を混同せず、名台詞を貼り付けない。",
+      "avoid": [
+        "後半の恋愛台詞を根拠にする",
+        "父親役だけにする",
+        "野外で断りにくい状況を作る"
+      ]
+    },
+    "referenceSection": "docs/CHARACTER_REFERENCE.md#cast-mountain_tim"
+  },
+  "au": {
+    "role": "教員側。講師/准教授・地域環境/フィールド科学等は候補。恋愛は卒業後かつ全利害終了後",
+    "routeEnabled": true,
+    "addressing": [
+      {
+        "text": "{player.lastName}"
+      }
+    ]
+  },
+  "endingDescriptions": {
+    "FRIEND": {
+      "title": "先に食べて待つ",
+      "description": "自分が食べたい時に食べ、互いの分を少しずつ分ける友達。次の店へも、気軽に誘い合う。"
+    },
+    "LOVE_A": {
+      "title": "忘れてもいい話",
+      "description": "自分から好きと伝え、向かいから隣へ移る。用意した話を忘れても、その手を取りに行ける。"
+    },
+    "LOVE_B": {
+      "title": "隣の席へ",
+      "description": "隣にいてほしいという彼の告白へ、自分の好きで答える。待ち合わせへ近づく手にも、楽しみが残る。"
+    },
+    "FWB": {
+      "title": "朝に返す挨拶",
+      "description": "互いが望む夜にも会う親密な友人。朝に見送り、次は外で食べようと昼の約束を渡す。"
+    },
+    "FWB_TO_LOVE": {
+      "title": "今日、呼びたい関係",
+      "description": "過ごした夜を消さず、今は恋人になりたいと選ぶ。短い昼食のあとにも、自分から次を尋ねる。"
+    },
+    "SPECIAL": {
+      "title": "何の用もない二人分",
+      "description": "食べたいものと、用事のない昼を持ち寄る相棒。何も頼まれず座る席を、互いの隣に空けておく。"
+    }
+  },
+  "events": [
+    {
+      "id": "reunion",
+      "chapter": 1,
+      "title": "帰りに呼び止めた人",
+      "location": "公開自然観察会の解散場所",
+      "storyTime": {
+        "date": "4月26日",
+        "period": "昼"
+      },
+      "characterId": "mountain_tim",
+      "rating": "general",
+      "tags": [
+        "mountain_tim"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "卒業してから、大学と関わりのない公開の自然観察会に参加した。履修も評価も指導も研究も採用推薦も、ティム先生との利害関係はすべて終わっている。今後それらに戻る予定もない。今日は先生も一参加者で、解散の挨拶が済むと、私を見つけて手を上げた。"
+        },
+        {
+          "speaker": "mountain_tim",
+          "text": "{player.lastName}。君も来ていたのか。最後の鳥は見えた？　オレは枝しか見つけられなかった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私も枝でした、と笑うと、二人揃って立派な報告だなと返ってきた。次の移動先を指示されることはなく、先生は自分の鞄へ案内をしまう。見知った人に声を掛けられ、一言二言を返してから、また私の方へ体を向けた。"
+        },
+        {
+          "speaker": "player",
+          "text": "私はこのあと、何か食べて帰ります。よかったら、一緒にどうですか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "誘ってから、学生の頃よりも私の方が緊張していると気づいた。何を相談したいわけでもない。先生は少し考え、今日はもう用事はないと言った。それから、店は決めているのかと、私へ尋ねた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "invite",
+          "text": "自分が気になっていた店へ、二人で行こうと誘う",
+          "next": "bench",
+          "effect": "ask"
+        },
+        {
+          "id": "meal",
+          "text": "近くで食べられるものを、一緒に探す",
+          "next": "bench",
+          "effect": "workTogether"
+        }
+      ]
+    },
+    {
+      "id": "bench",
+      "chapter": 1,
+      "title": "冷めるまで待たない",
+      "location": "公園横のパン屋の前",
+      "storyTime": {
+        "date": "5月3日",
+        "period": "昼"
+      },
+      "characterId": "mountain_tim",
+      "rating": "general",
+      "tags": [
+        "mountain_tim"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "前の食事で話に出たパン屋へ、次の休日に二人で来た。外の席へ置いた袋から、焼けた生地の匂いがする。ティム先生が飲み物を買う間に、私は紙を開いた。戻る途中、先生は知り合いに呼ばれ、その場で立ち止まる。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "最初は眺めていたが、風で紙の端が鳴る頃には、先に食べたくなった。片手を上げて合図してから一口かじる。先生が席へ戻った時、私のパンは半分になっていた。"
+        },
+        {
+          "speaker": "player",
+          "text": "お先に食べてます。温かいうちに食べたかったので。"
+        },
+        {
+          "speaker": "mountain_tim",
+          "text": "それは正解だ。オレの挨拶のせいで、君の昼飯まで冷ますことはない。……こっちは、少し遅かったな。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "自分の袋を開けた先生が、生地を割ってこちらへ見せる。私は笑い、残していた別の味を指した。半分いりますかと訊くと、それはありがたいと言う。渡す間だけ紙の上で指が近づき、私は残った半分へ目を戻した。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "own_lunch",
+          "text": "待つだけにせず、自分が食べたい時に半分を差し出す",
+          "next": "seat",
+          "effect": "honest",
+          "setFlags": [
+            "myLunch"
+          ]
+        },
+        {
+          "id": "listen",
+          "text": "先生がこの店を知った時の話を、食べながら聞く",
+          "next": "seat",
+          "effect": "compareNotes"
+        }
+      ]
+    },
+    {
+      "id": "seat",
+      "chapter": 1,
+      "title": "先に見つけた日陰",
+      "location": "公園の中庭",
+      "storyTime": {
+        "date": "5月10日",
+        "period": "昼"
+      },
+      "characterId": "mountain_tim",
+      "rating": "general",
+      "tags": [
+        "mountain_tim"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "約束したベンチは、催しの準備で使えなかった。ティム先生から少し遠い入口を勧める連絡が来る。私はその手前で中庭を見つけ、日陰の席の写真を送った。こちらにいます、と添えると、ほどなく足音が近づいた。"
+        },
+        {
+          "speaker": "mountain_tim",
+          "text": "君の方がいい場所を見つけたな。オレはずいぶん遠回りを勧めるところだった。"
+        },
+        {
+          "speaker": "player",
+          "text": "今、空いてたんです。先生の分も座れそうだったから。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "鞄を自分の膝へ移すと、先生が隣へ腰を下ろした。慣れていそうな人にも、毎回うまくいく道があるわけではない。私は自分が選んだ席へ来てもらったことが嬉しくて、飲み物の蓋を開ける前に、今日はここにしましょうと言った。"
+        },
+        {
+          "speaker": "mountain_tim",
+          "text": "ああ。今日は案内される側で、遠慮なく休ませてもらおう。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "my_place",
+          "text": "「次も、見つけた席を半分空けておきます」と話す",
+          "next": "message",
+          "effect": "homeTalk",
+          "setFlags": [
+            "foundSeat"
+          ]
+        },
+        {
+          "id": "two",
+          "text": "「先生が隣へ来てくれて嬉しいです」と伝える",
+          "next": "message",
+          "effect": "lunchTwo"
+        },
+        {
+          "id": "rest",
+          "text": "自分も鞄を下ろし、木陰で昼食を広げる",
+          "next": "message",
+          "effect": "shiftRest"
+        }
+      ]
+    },
+    {
+      "id": "message",
+      "chapter": 2,
+      "title": "持っていくものは",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "5月13日",
+        "period": "夜"
+      },
+      "characterId": "mountain_tim",
+      "rating": "general",
+      "tags": [
+        "mountain_tim"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "ティム先生から、蓋を開けた小さな弁当箱の写真が届いた。まだ空で、奥に畳んだ布が見える。次の昼も外で食べようと話していたが、中身は決めていなかった。私は画面を寄せて、箱の大きさを確かめた。"
+        },
+        {
+          "speaker": "mountain_tim",
+          "text": "次はこれを持っていこうと思う。中身はまだ決まらない。君が食べたいものを全部当てるほど、器用じゃないからな。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "全部じゃなくても、一つ覚えてもらえたら嬉しい。そう書きかけて、好きなものを先に送った。あとから別の一行も足したくなり、送信の前で指が止まる。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "glad",
+          "text": "食べるものも楽しみですが、先生に会えるのを待ってます",
+          "next": "lunch",
+          "effect": "messageHeart",
+          "replyVariants": [
+            {
+              "text": "オレも、君の隣で食べる方を楽しみにしている。箱だけ渡して帰るのは、惜しいからな。",
+              "when": {
+                "flags": [
+                  "foundSeat"
+                ]
+              }
+            },
+            {
+              "text": "それなら、中身で失敗しても一緒に食べてもらえそうだな。オレも会えるのを楽しみにしている。"
+            }
+          ],
+          "lockRoute": "mountain_tim"
+        },
+        {
+          "id": "notice",
+          "text": "次は私も一つ持っていきます。先生は何が食べたいですか",
+          "next": "lunch",
+          "effect": "messageListen",
+          "replyVariants": [
+            {
+              "text": "甘いものが一つあると嬉しい。今聞いたからといって、無理に用意する必要はないよ。"
+            }
+          ],
+          "lockRoute": "mountain_tim"
+        },
+        {
+          "id": "thanks",
+          "text": "次の昼も楽しみにしています。天気も晴れるといいですね",
+          "next": "lunch",
+          "effect": "messageDaily",
+          "replyVariants": [
+            {
+              "text": "ありがとう。それを見てから買い物に行く。天気も、また前の日に確かめよう。"
+            }
+          ],
+          "lockRoute": "mountain_tim"
+        }
+      ],
+      "message": true
+    },
+    {
+      "id": "lunch",
+      "chapter": 2,
+      "title": "一つずつ、持ち寄る",
+      "location": "川辺の休憩広場",
+      "storyTime": {
+        "date": "5月24日",
+        "period": "昼"
+      },
+      "characterId": "mountain_tim",
+      "rating": "general",
+      "tags": [
+        "mountain_tim"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私は果物を、ティム先生は切り分けたサンドイッチを持ってきた。包みを広げると、先生の分は片側だけ具が寄っていた。持ち歩く間に滑ったらしい。私が笑うと、見栄えまで運ぶ方法は考えていなかったなと、先生も箱を覗いた。"
+        },
+        {
+          "speaker": "player",
+          "text": "味はここまで来てますよ。ほら、こっちの端を持てば大丈夫です。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "自分の分を持ち上げると、具が紙へ一つ落ちた。言い切ったばかりなので、私は拾いながら笑い直す。先生が空いた紙をこちらへ寄せた。少し離れたところで知り合いに手を振られたが、今日は立たずに挨拶を返し、こちらへ向き直る。"
+        },
+        {
+          "speaker": "mountain_tim",
+          "text": "今は君と食べているからな。話の続きが、まだあるだろう。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "何を話していたか、一瞬思い出せなかった。私は果物の容器を二人の間へ置き、じゃあ次は先生が選んでくださいと答える。先にどれを取るか真剣に見比べる顔を、少しだけ長く見ていた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "guest",
+          "text": "次は私が一品を選び、先生には手ぶらの時間も楽しんでほしい",
+          "next": "home",
+          "effect": "conferencePractical",
+          "setFlags": [
+            "guestHour"
+          ]
+        },
+        {
+          "id": "closer",
+          "text": "「話の続きを、私も聞いていてほしいです」と伝える",
+          "next": "home",
+          "effect": "walkClose"
+        },
+        {
+          "id": "meal",
+          "text": "互いの持ってきたものを食べ、広場で午後を過ごす",
+          "next": "home",
+          "effect": "walkHome"
+        }
+      ]
+    },
+    {
+      "id": "home",
+      "chapter": 3,
+      "title": "雨の予報が出た日",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "6月7日",
+        "period": "夕方"
+      },
+      "characterId": "mountain_tim",
+      "rating": "general",
+      "tags": [
+        "mountain_tim"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "前の日から雨の予報だったので、外で食べる代わりに私の家へ来てもらった。二人でそう決めたのに、玄関を開けるまでは落ち着かなかった。ティム先生は傘をたたみ、小さな袋を持ち上げる。中には私の好きだと送った菓子が入っていた。"
+        },
+        {
+          "speaker": "mountain_tim",
+          "text": "今日は場所を借りるからな。手ぶらで来るより、これを一緒に食べたかった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私は袋を受け取り、机へ皿を二枚出した。用意していた夕食も並べ、いつもの外の席より近い向かいへ座る。窓の雨を一度見た先生が、ここなら具も逃げないなと言うので、私はあの日の紙を思い出して笑った。"
+        },
+        {
+          "speaker": "player",
+          "text": "今日は、落としたら私が先に笑いますよ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "それは厳しい、と返ってきたが、先生も笑っていた。食べ終える頃には雨の音に慣れ、外が暗くなったことを時計より先に窓で知った。持ってきてもらった菓子は、まだ少し残っている。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "talk",
+          "text": "食後も机を挟んで、先生自身の次の休みの話を聞く",
+          "next": "evening",
+          "effect": "hotelTalk"
+        },
+        {
+          "id": "rest",
+          "text": "皿を片づけ、お菓子を分けてゆっくり過ごす",
+          "next": "evening",
+          "effect": "homeRest"
+        }
+      ]
+    },
+    {
+      "id": "evening",
+      "chapter": 3,
+      "title": "送る言葉の前に",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "6月7日",
+        "period": "夜"
+      },
+      "characterId": "mountain_tim",
+      "rating": "general",
+      "tags": [
+        "mountain_tim"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "空いた皿を片づけてから、ティム先生が窓の方を見た。雨は細くなっていた。帰れますねと言えば話は収まるのに、私は残った菓子を袋へ戻す手を止める。ここで引き止めたいのは、雨のせいではなかった。"
+        },
+        {
+          "speaker": "mountain_tim",
+          "text": "帰る支度をした方がいい時刻だな。……ただ、オレはまだ君といたい。どうするかは、二人で決めたいと思っている。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先生は立たずに私を見た。何かを任せても大丈夫な人だと思っていたが、今日は任せきりにしたくなかった。私は袋を机へ置き、今、自分がしたい方を言うために顔を上げた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "stay",
+          "text": "「私も、今夜は先生といたいです。近くにいたい」と伝える",
+          "next": "consent",
+          "effect": "hotelInvite",
+          "when": {
+            "min": {
+              "trust": 45,
+              "desire": 8
+            }
+          }
+        },
+        {
+          "id": "next_time",
+          "text": "「今日は見送ります。また二人で食べましょう」と伝える",
+          "next": "next",
+          "effect": "walkHome"
+        }
+      ]
+    },
+    {
+      "id": "consent",
+      "chapter": 3,
+      "title": "空いた掌",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "6月7日",
+        "period": "夜"
+      },
+      "characterId": "mountain_tim",
+      "rating": "general",
+      "tags": [
+        "mountain_tim"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "ティム先生が机から少し手を離した。私の方へ差し出す前に、その手が止まる。触れるまでの短い距離が、今までのどの帰り道より長く感じた。"
+        },
+        {
+          "speaker": "mountain_tim",
+          "text": "オレも君に触れたい。今夜、一緒にいたいと思っている。"
+        },
+        {
+          "speaker": "player",
+          "text": "私も触れたいです。でも、恋人になる約束は今夜とは別に話したい。途中でやめたくなったら、そう言います。"
+        },
+        {
+          "speaker": "mountain_tim",
+          "text": "ああ。オレも言う。どちらかが止めたい時は、そこで止めよう。今から帰ってほしいなら、遠慮なくそう言ってくれ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私は頷き、椅子の端に置いていた指をほどいた。尋ねられたから答えるだけではなく、自分から近づきたかった。先生の手がまだ空いているうちに、その気持ちを言葉にした。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「今夜、一緒にいてください」と答える",
+          "next": "night",
+          "effect": "consent",
+          "setFlags": [
+            "consented",
+            "hadNight"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「今日はここまでにします。また昼に会いたいです」と伝える",
+          "next": "next",
+          "effect": "walkHome",
+          "setFlags": [
+            "declinedTouch"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "night",
+      "chapter": 3,
+      "title": "向かいの席を離れて",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "6月7日",
+        "period": "夜"
+      },
+      "characterId": "mountain_tim",
+      "rating": "fade",
+      "tags": [
+        "mountain_tim"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私は席を立ち、先生の隣へ椅子を寄せた。差し出された手へ掌を重ねると、握る前に指の向きが少し変わる。近づいてもいいかと訊かれ、はい、と答えた。私も体を向け、二人で顔を寄せる。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "短い口づけのあと、先生はすぐに何かを言わなかった。自分の息が近くへ届くことに照れて、私は肩へ手を置く。もう一度、と頼むと、頷いた顔が近づいた。やがて二人で立ち上がり、手をつないだまま部屋の奥へ移って灯りを消した。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝、先に目が覚めた私は、隣で先生の手が動くのを見た。おはようございますと小さく言うと、同じ挨拶が返る。朝食を食べてから帰ると聞いて、私は頷いた。昨夜だけに聞こえた声を、明るいところでもう一度聞いていたかった。",
+          "storyTime": {
+            "date": "6月8日",
+            "period": "朝"
+          }
+        },
+        {
+          "speaker": "mountain_tim",
+          "text": "また夜にも会いたいと思っている。君は、今どう思う？"
+        }
+      ],
+      "choices": [
+        {
+          "id": "again",
+          "text": "「恋人とは決めず、また望む夜にも会いたいです」と答える",
+          "next": "next",
+          "effect": "messageBoundaries",
+          "setFlags": [
+            "ongoing"
+          ]
+        },
+        {
+          "id": "more",
+          "text": "「また夜も会いたいです。先生をもっと好きになりました」と答える",
+          "next": "next",
+          "effect": "messageAgain",
+          "setFlags": [
+            "ongoing"
+          ]
+        },
+        {
+          "id": "day",
+          "text": "「これからは昼に会う友達でいたいです」と答える",
+          "next": "next",
+          "effect": "messageDaily",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "chapter": 4,
+      "title": "包みを開く前に",
+      "location": "川辺の休憩広場",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "昼"
+      },
+      "characterId": "mountain_tim",
+      "rating": "general",
+      "tags": [
+        "mountain_tim"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "六月は外で食事をし、互いに望んだ夜には私の家でも会った。朝はそれぞれの用事へ戻る。今日は同じ広場へ来て、私の持ってきた包みを机へ置いた。先生も隣へ自分の分を出し、今日は何から食べようかと訊く。",
+          "when": {
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "昼に会う友達でいたいと話してから、次も外の席で食事をした。先生は夜の返事を変えさせようとはしなかった。少し照れが残った日にも自分から店を挙げられて、今日は前に来た川辺の広場へ二人で座った。",
+          "when": {
+            "flags": [
+              "hadNight",
+              "endedNight"
+            ],
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "六月にも休日を合わせ、外の席で食事をした。今日は前に来た川辺の広場へ座り、私は買ってきた包みを机へ置く。風で飛ばないよう先生が自分の水筒を端へ寄せた。私も自分の端を押さえ、ようやく落ち着いて座り直した。",
+          "when": {
+            "notFlags": [
+              "hadNight"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "中身を見せる前に、今日は少し話したいですと伝えた。先生は自分の包みを脇へ寄せ、私を見る。人の行き来がある席なのに、言うつもりの言葉だけが、急に二人の間で大きくなった。"
+        },
+        {
+          "speaker": "mountain_tim",
+          "text": "聞くよ。オレからも、君に話したいことがある。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "tell",
+          "text": "自分からティム先生が好きだと伝える",
+          "next": "confess_player",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 35,
+              "romanceChar": 25
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "listen",
+          "text": "ティム先生が話そうとしていることを聞く",
+          "next": "confess_tim",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 20,
+              "romanceChar": 35
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "shared_table",
+          "text": "用事のない昼を持ち寄る、二人の席をこれからも作りたい",
+          "next": "own_table",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 35,
+              "romanceChar": 30,
+              "comfort": 20
+            },
+            "flags": [
+              "myLunch",
+              "foundSeat",
+              "guestHour"
+            ],
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "nights",
+          "text": "望む夜にも会う親密な友情を続けたいと話す",
+          "next": "fwb_choice",
+          "when": {
+            "min": {
+              "trust": 50,
+              "desire": 25,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "love",
+          "text": "「今は先生の恋人になりたいです」と伝える",
+          "next": "end_fwb_love",
+          "when": {
+            "min": {
+              "trust": 60,
+              "romancePlayer": 50,
+              "romanceChar": 40,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          },
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "friends",
+          "text": "気軽に食事や休みの予定へ誘い合う友達でいたいと話す",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_player",
+      "chapter": 4,
+      "title": "相談ではない言葉",
+      "location": "川辺の休憩広場",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "昼"
+      },
+      "characterId": "mountain_tim",
+      "rating": "general",
+      "tags": [
+        "mountain_tim"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "ティム先生が好きです、と言うと、向かいの手が包みから離れた。私はその手を見ずに、顔を見た。どうしたらいいか教えてほしくて来たのではない。返事を聞くのが怖くても、ここまで自分で言いたかった。"
+        },
+        {
+          "speaker": "player",
+          "text": "会う日が決まると、何を持っていこうかずっと考えます。食べるものだけじゃなくて……先生に、どんなことを話そうかって。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "言い終えてから、自分でも少し笑った。用意した話を忘れる日があることも、目を合わせると今も忘れそうになることも、全部は言わずにおいた。先生が私の姓を呼ぶ。私はその先を待つ前に、もう一つだけ頼みたいと思った。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "like",
+          "text": "「私と付き合ってください」と伝える",
+          "next": "end_love_a",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "choose",
+          "text": "「先生の恋人になりたいです。どうですか」と尋ねる",
+          "next": "end_love_a",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "wait",
+          "text": "「今は友達として、これからも会いたいです」と伝え直す",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_tim",
+      "chapter": 4,
+      "title": "冗談を置いてきた人",
+      "location": "川辺の休憩広場",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "昼"
+      },
+      "characterId": "mountain_tim",
+      "rating": "general",
+      "tags": [
+        "mountain_tim"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先生は少し笑いかけてから、そのままにはしなかった。いつもなら何か軽い言葉が来るところで、私の姓を呼ぶ。私は膝へ両手を下ろした。外の席で向かい合うことには慣れたつもりだったが、今日は紙を開く音もしなかった。"
+        },
+        {
+          "speaker": "mountain_tim",
+          "text": "{player.lastName}。オレは君が好きだ。恋人として付き合いたい。君の隣の席を、毎回ほかの誰かに譲れるほど気前はよくない。……君はどう思う？"
+        },
+        {
+          "speaker": "narrator",
+          "text": "言い終えた先生の目は、私に返事を促すだけではなかった。自分で言ったことの行先を待っているように見えた。私はその顔から目を逸らさず、今、隣へ行きたくなっている自分の気持ちを確かめた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「私も好きです。先生と付き合いたい」と答える",
+          "next": "end_love_b",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「恋人にはなれません。友達でいたいです」と答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "refusedConfession",
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "own_table",
+      "chapter": 4,
+      "title": "何も頼まれない昼",
+      "location": "川辺の休憩広場",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "昼"
+      },
+      "characterId": "mountain_tim",
+      "rating": "general",
+      "tags": [
+        "mountain_tim"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "用事がなくても、食べたいものを持って同じ席へ来たいと話した。何かを教わる会ではなく、恋人の約束でもない。今日の続きの昼を二人で作りたい。先生は私の包みの結び目を見てから、自分の方を開いた。"
+        },
+        {
+          "speaker": "mountain_tim",
+          "text": "それなら、毎回立派なものを用意しないでくれ。オレも買い損ねたら、途中の店で済ませる。腹は減るが、豪華な弁当を競うのは勘弁してくれ。"
+        },
+        {
+          "speaker": "player",
+          "text": "私も、手を抜いた日はそのまま持ってきます。先生の分を全部考えるより、自分が食べたいものも選びたいので。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "そうしてほしい、と返ってきた。先生は自分の菓子を半分に割り、私の空けた場所へ置く。何も頼まれずに座れる昼もいいなと言われて、私は自分の包みをようやく開いた。店で選ぶ時、先生にも食べてもらいたいと思っていたものだった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "partners",
+          "text": "持ち寄る昼と、何の用もない席を分け合う相棒になる",
+          "next": "end_special",
+          "effect": "homeTogether",
+          "setFlags": [
+            "ourTable"
+          ]
+        },
+        {
+          "id": "friend",
+          "text": "決まった形にはせず、気軽に誘う友達でいたいと伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fwb_choice",
+      "chapter": 4,
+      "title": "次に会える夜",
+      "location": "川辺の休憩広場",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "昼"
+      },
+      "characterId": "mountain_tim",
+      "rating": "general",
+      "tags": [
+        "mountain_tim"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人とは決めず、望む夜にも会いたいと伝えた。先生は少し考え、オレもそうしたいと答える。私は次に会える日を開こうとして、その前に昼も誘いたいですと付け足した。"
+        },
+        {
+          "speaker": "mountain_tim",
+          "text": "もちろん。夜も、その時に互いが会いたければ。途中で止めたい時は言おう。オレも言うし、君の言葉も聞く。"
+        },
+        {
+          "speaker": "player",
+          "text": "はい。次は私からも誘います。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "自分の予定を開くと、最初に挙げた日は合わなかった。先生が別の日を示し、今度は私が頷く。約束を一つ決めてから、私は包みの中身を見せた。待っていた、と先生が笑い、二人で遅くなった昼食を始めた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "continue",
+          "text": "その都度誘い合う親密な友人として続ける",
+          "next": "end_fwb",
+          "effect": "messageBoundaries"
+        },
+        {
+          "id": "daytime",
+          "text": "考え直し、昼に会う友達でいたいと伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "end_friend",
+      "chapter": 5,
+      "title": "先に食べて待つ",
+      "location": "公園横のパン屋",
+      "storyTime": {
+        "date": "7月12日",
+        "period": "昼"
+      },
+      "characterId": "mountain_tim",
+      "rating": "general",
+      "tags": [
+        "mountain_tim"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人にはなれないと答えると、先生は一度目を伏せ、分かったと言った。その日は食事をしてから別れた。数日後、私からパン屋の話を送ると、昼なら会えると返ってきた。私は自分が行きたい時刻を伝え、今日を選んだ。",
+          "when": {
+            "flags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "昼に会う友達でいたいと話してから、次は前に行ったパン屋で会った。先生は夜の返事を変えさせようとはしなかった。少し照れがあっても、どれを食べたいかなら自分から言える。私は棚から二つを選んだ。",
+          "when": {
+            "flags": [
+              "hadNight",
+              "endedNight"
+            ],
+            "notFlags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "気軽に誘い合う友達でいようと話し、前に来たパン屋で待ち合わせた。私が先に着いたので、自分の分を買って外の席へ座る。今日は温かいうちに食べ始めた。",
+          "when": {
+            "notFlags": [
+              "hadNight",
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "飲み物を買って戻る途中、先生が知り合いに呼び止められた。私は片手を上げ、先に食べてますと口を動かす。笑って頷いた先生は短く挨拶を終え、私の向かいへ自分の袋を置いた。"
+        },
+        {
+          "speaker": "mountain_tim",
+          "text": "今日は間に合ったな。さて、君が選んだ方はどうだった？"
+        },
+        {
+          "speaker": "narrator",
+          "text": "おいしいです、と答え、まだ食べていない方を半分にした。先生の分も少し分けてもらう。ほかの席から聞こえる話し声の中で、次はどの店へ行こうかと私から訊いた。"
+        }
+      ],
+      "choices": [],
+      "ending": "FRIEND"
+    },
+    {
+      "id": "end_love_a",
+      "chapter": 5,
+      "title": "忘れてもいい話",
+      "location": "川辺の休憩広場",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "昼"
+      },
+      "characterId": "mountain_tim",
+      "rating": "general",
+      "tags": [
+        "mountain_tim"
+      ],
+      "body": [
+        {
+          "speaker": "mountain_tim",
+          "text": "オレも君が好きだ。付き合いたい。……用意した話があるなら、少しずつ聞かせてくれるか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "今は忘れてしまいました、と答えると、先生が笑った。私は向かいを離れて隣へ座りたいと頼み、空けてもらったところへ移る。差し出した手を取られた途端、ほかに何を言いたかったか、本当に思い出せなくなった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌週は店へ入る前から手をつないだ。いつもより歩くのが遅いですねと言うと、今日はもう少しこうしていたいからなと返る。予約は私からしておいたので、時刻には間に合いますと伝えた。店が見えてからも、扉の前までは指を離さなかった。",
+          "storyTime": {
+            "date": "7月5日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_A"
+    },
+    {
+      "id": "end_love_b",
+      "chapter": 5,
+      "title": "隣の席へ",
+      "location": "川辺の休憩広場",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "昼"
+      },
+      "characterId": "mountain_tim",
+      "rating": "general",
+      "tags": [
+        "mountain_tim"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私も好きですと返すと、先生が大きく息を吐いた。いつもの冗談を待ちかけたが、今は何も言われなくてよかった。私は自分の包みを一つにまとめ、隣へ行ってもいいですかと訊いた。"
+        },
+        {
+          "speaker": "mountain_tim",
+          "text": "ああ。来てほしい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "向かいから移ると、先生が手を差し出した。掌を重ねる前に自分の指が少し冷たいと気づき、すみませんと笑いかける。先生は気にしないと言って、私が握るまでそのまま待っていた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌週、待ち合わせの姿を見つけて自分から近づいた。手を取ると、今日は温かいなと小さく言われる。私は昨日から少し楽しみにしすぎていたと白状し、笑う顔の横へ並んだ。買ってきた二人分の袋が、空いた方の手で揺れた。",
+          "storyTime": {
+            "date": "7月5日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_B"
+    },
+    {
+      "id": "end_fwb",
+      "chapter": 5,
+      "title": "朝に返す挨拶",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "7月12日",
+        "period": "夜"
+      },
+      "characterId": "mountain_tim",
+      "rating": "fade",
+      "tags": [
+        "mountain_tim"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "互いに今夜会いたいと連絡し、先生が私の家へ来た。夕食のあと、泊まってほしいと私から伝える。オレも一緒にいたいと返ってから、翌朝は早く出る予定だと聞いた。私は起きる時刻を決め、空いた皿を二人で片づける。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "隣へ座り、触れたいですと言って手を出した。先生も掌を重ね、私が体を向けるのを待つ。二人で少しずつ近づき、短く唇を合わせた。離れたあと自分からもう一度と頼む。頷いた顔を近くで見てから、二人で立ち上がり、奥へ移って灯りを消した。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝、玄関へ来た先生に、忘れ物はありませんかと訊いた。鞄の中を一度確かめて頷くので、私は扉を開ける。次は外で食べたいですと伝えると、空いている日をあとで送ると返った。見送ってから、自分の朝食の残りへ戻った。",
+          "storyTime": {
+            "date": "7月13日",
+            "period": "朝"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB"
+    },
+    {
+      "id": "end_fwb_love",
+      "chapter": 5,
+      "title": "今日、呼びたい関係",
+      "location": "川辺の休憩広場",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "昼"
+      },
+      "characterId": "mountain_tim",
+      "rating": "general",
+      "tags": [
+        "mountain_tim"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "今は恋人になりたいですと言い、私は膝へ手を置いた。会ってきた夜を先に持ち出せば答えが決まるわけではない。先生が自分の言葉を選ぶ間、向かいの席で待ちたかった。"
+        },
+        {
+          "speaker": "mountain_tim",
+          "text": "オレも、今は君の恋人になりたい。今までが間違いだったとは思っていない。それでも、今日そう呼んでほしいと思った。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私も、と返してから、ようやく肩の力が抜けた。隣へ移って手を取ると、触れ慣れた指を握るだけで顔が熱くなる。先生が食事は冷めていないかなと言い、私は今それを言いますかと笑った。隣で、その人も笑っていた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "次の休日、短い昼食のあとにそれぞれの用事へ向かった。店の前で手を離す時、次に会える日を私から訊く。まだ分からないと返っても、今日聞きたかった言葉を急いで取り消す気にはならなかった。決まったら教えてくださいと言い、自分の方からも予定を送った。",
+          "storyTime": {
+            "date": "7月5日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB_TO_LOVE"
+    },
+    {
+      "id": "end_special",
+      "chapter": 5,
+      "title": "何の用もない二人分",
+      "location": "公園の中庭",
+      "storyTime": {
+        "date": "7月19日",
+        "period": "昼"
+      },
+      "characterId": "mountain_tim",
+      "rating": "general",
+      "tags": [
+        "mountain_tim"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "今度は先生が席を見つけ、私へ場所の写真を送ってくれた。着くと紙袋が一つ置かれ、先生は何もせずに座っていた。私の足音へ顔を上げ、今日は君が来るまで休んでいたと言う。私は隣の空いたところへ鞄を下ろした。"
+        },
+        {
+          "speaker": "mountain_tim",
+          "text": "買おうと思っていた店が休みでね。今日は途中のパン屋だ。君の方は？"
+        },
+        {
+          "speaker": "player",
+          "text": "私も買ってきました。食べたいのが二つあって、一つにできなくて。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "それなら両方食べられるなと、先生が自分の袋を開けた。互いに買ってきたものを半分にして置く。同じ具が重なっていて、私は先に笑った。恋人とは別の相棒と、相談しなかった昼を並べる。上手に分担できなかったことも、今日は一緒に食べる理由になった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "食べ終えても、次に行く場所は決めなかった。先生が背もたれへ体を預け、私は飲み物の残りを口へ運ぶ。風で紙が鳴るので、空いた袋へしまった。もう少しここにいましょうかと訊くと、オレもそうしたかったと返ってきた。"
+        }
+      ],
+      "choices": [],
+      "ending": "SPECIAL"
+    }
+  ],
+  "playerContext": {
+    "role": "卒業生。履修・評価・指導・研究・採用推薦などティムとの全利害関係が終了し、今後も戻らない",
+    "profile": "大学卒業後の成人主人公。ティムとの履修・評価・指導・研究・採用推薦などの利害関係はすべて終了し、今後も戻らない。私的な場で再会し、自分から休日や会いたい気持ちを選ぶ。"
+  }
+}

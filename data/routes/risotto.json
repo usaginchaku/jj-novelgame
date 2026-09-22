@@ -1,0 +1,1358 @@
+{
+  "id": "risotto",
+  "title": "リゾット — 荷物を置く場所",
+  "intro": "誰かの用事をまとめていた先輩が、ひとりで選んだ椅子。\n何もしない午後から、二人で持つ時間が増えていく。",
+  "startEvent": "boxes",
+  "character": {
+    "name": "リゾット",
+    "adult": true,
+    "heightCm": 185,
+    "heightBasis": "二次資料JoJo Wikiの身長欄と出典注記を照合。黄金の風設定表CR200-00の文字値。初期図の195相当と不一致、CR200-26で修正との二次注記あり。書籍・設定表現物は未照合。AUで同値を採用。",
+    "profile": "静かな判断力。仲間と成果への責任。不公平への反発。慎重な行動。",
+    "personality": [
+      "静かな判断力",
+      "仲間と成果への責任",
+      "不公平への反発",
+      "慎重な行動"
+    ],
+    "speech": {
+      "firstPerson": "オレ",
+      "addressing": "主人公は姓/おまえ。短く落ち着いた常体。",
+      "tone": "口数を絞り観察した事実を言う。語尾は感情と相手に合わせる。",
+      "habits": [
+        "口数を絞り観察した事実を言う",
+        "必要な時は意思を明言",
+        "間を三点リーダだけで埋めない"
+      ],
+      "signaturePhrases": [],
+      "signatureNote": "日常の固定口癖は採用しない。象徴的な原作台詞と普段の話し方を混同せず、名台詞を貼り付けない。",
+      "avoid": [
+        "無感情な巨漢",
+        "いつも優しく見守る父親",
+        "研究上の配分権限を親密さに使う"
+      ]
+    },
+    "referenceSection": "docs/CHARACTER_REFERENCE.md#cast-risotto"
+  },
+  "au": {
+    "role": "博士課程。研究室の実質的なリーダー",
+    "routeEnabled": true,
+    "addressing": [
+      {
+        "text": "{player.lastName}"
+      }
+    ]
+  },
+  "endingDescriptions": {
+    "FRIEND": {
+      "title": "荷物はそれぞれの手に",
+      "description": "手を貸し、任せ、違う物を選ぶ。気軽に呼び合える友人として。"
+    },
+    "LOVE_A": {
+      "title": "先に呼び止めた手",
+      "description": "私から告げた気持ちを、短い言葉で受け取ってくれる。次は隠さずに彼を待つ。"
+    },
+    "LOVE_B": {
+      "title": "隣へ来るまで",
+      "description": "静かな人が伝えた望みに、自分の望みを返す。隣へ椅子を寄せる日々へ。"
+    },
+    "FWB": {
+      "title": "夜に選ぶ席",
+      "description": "会いたい夜を互いに選ぶ。昼の友情もそれぞれの生活も残る親密な友人。"
+    },
+    "FWB_TO_LOVE": {
+      "title": "昼の待ち合わせ",
+      "description": "幾つもの夜の先で、恋人として遠くへ出かける。知っている手と、新しい行き先へ。"
+    },
+    "SPECIAL": {
+      "title": "誰の用事でもない場所",
+      "description": "役目を下ろした午後に、最初に呼ぶ相手。二人の地図には、空欄を残しておく。"
+    }
+  },
+  "events": [
+    {
+      "id": "boxes",
+      "title": "最後に残った箱",
+      "chapter": 1,
+      "location": "大学近くの道具交換会",
+      "storyTime": {
+        "date": "6月1日",
+        "period": "夕方"
+      },
+      "characterId": "risotto",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "交換会が終わる頃、受付の紙には持ち帰り先のない品物が残っていた。私は自分が出した本の箱を閉じ、長机の端を押さえる。向こうではリゾット先輩が、手伝いに来た人たちを順に帰していた。博士課程で、普段も研究室の仕事をまとめていると聞く。今日は誰の研究でもなく、近所の人も来る小さな催しだった。"
+        },
+        {
+          "speaker": "risotto",
+          "text": "その箱は置いていけ。回収の車が来る。"
+        },
+        {
+          "speaker": "player",
+          "text": "これは私が持ってきた分です。中身も、まだ私のなので。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩の目が、箱に書かれた私の名前へ落ちた。短く頷き、積み上げていた箱を一つ脇へ動かす。自分の持ち物を自分で運べるだけの隙間ができた。何でも取り上げて済ませる人ではないのだと分かり、私は段ボールの底へ腕を入れ直した。"
+        },
+        {
+          "speaker": "risotto",
+          "text": "車までの道は空けておく。持ち上げる時だけ呼べ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "最後の机が畳まれる音のあと、先輩の手には一本の折り畳み椅子が残っていた。自分の物ですかと訊くと、買った、と返ってくる。人に指示を出していた手が、帰り道に持っていきたい物を一つ選んでいた。そのことが、少し意外だった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "own",
+          "text": "自分の箱を運び終えてから、椅子を選んだ理由を聞く",
+          "next": "chair",
+          "effect": "workTogether",
+          "setFlags": [
+            "ownLoad"
+          ],
+          "lockRoute": "risotto"
+        },
+        {
+          "id": "wait",
+          "text": "片づけが終わるまで待って、一緒に帰りたいと言う",
+          "next": "chair",
+          "effect": "gameDate",
+          "lockRoute": "risotto"
+        }
+      ]
+    },
+    {
+      "id": "chair",
+      "title": "座る場所を選ぶ",
+      "chapter": 1,
+      "location": "川沿いの広場",
+      "storyTime": {
+        "date": "6月8日",
+        "period": "昼"
+      },
+      "characterId": "risotto",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "翌週の小さな市でも先輩を見つけた。今日は運営の腕章もなく、人に囲まれていない。私が声をかけると、前に買った椅子の袋を少し持ち上げた。試すつもりだと言うので、私は川沿いの広場までついていった。草の上ではなく、端の石畳へ椅子が置かれる。"
+        },
+        {
+          "speaker": "risotto",
+          "text": "ここなら、傾かない。おまえはそっちだ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "隣の低い段に腰を下ろすと、木の葉の影が靴に掛かった。立っている時には気づかなかったベンチの熱や、遠くの水の音があった。先輩は端末を出し、画面を見てから伏せた。何も始めない人の横で、私も鞄から本を出すのをやめる。"
+        },
+        {
+          "speaker": "player",
+          "text": "先輩も、こうして座ってる日があるんですね。"
+        },
+        {
+          "speaker": "risotto",
+          "text": "いつも何かしてるわけじゃない。そう見えるだけだ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "返事を急いで取り消したくなったけれど、先輩は怒っていなかった。目線は川にあり、口元だけがわずかに動く。知らなかった方の姿を見たまま、私はしばらく水の音を聞いた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "stay",
+          "text": "何もせず座る時間を、二人で少し残す",
+          "next": "swap",
+          "effect": "homeTogether",
+          "setFlags": [
+            "quietPlace"
+          ]
+        },
+        {
+          "id": "near",
+          "text": "「こういう時の先輩にも会いたいです」と言う",
+          "next": "swap",
+          "effect": "walkClose"
+        }
+      ]
+    },
+    {
+      "id": "swap",
+      "title": "手放さなかったもの",
+      "chapter": 1,
+      "location": "古道具の店",
+      "storyTime": {
+        "date": "6月14日",
+        "period": "昼"
+      },
+      "characterId": "risotto",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "この前の市に出せなかった本を、私は古道具店まで持っていった。先輩とは店の前で落ち合う。紙袋から一冊ずつ出していたら、一冊だけ指が止まった。読む予定はないのに、誰かへ渡すとなると中の折り目が急に気になった。先輩は店員さんが奥へ行った間も、その本には手を伸ばさなかった。"
+        },
+        {
+          "speaker": "risotto",
+          "text": "売らないなら戻せ。全部片づけなきゃならない理由はない。"
+        },
+        {
+          "speaker": "player",
+          "text": "一度持ってきたから、って思ってました。……これは、持って帰ります。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "鞄へ戻すと、先輩も棚から選んでいた金属の小さな箱を元の場所へ返した。必要なかったのかと訊くと、欲しいと思ったが持つ場所がない、と言った。欲しがらない人なのではない。諦める時にも、選んだことは隠さないのだと思った。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "店を出てから、私たちは路地のパン屋へ入った。先輩は最後の一つを私へ譲ろうとせず、食べたいかと訊いた。半分なら、と答えると、店の人に切れるか確かめている。その一言の方が、勝手に袋へ入れられるより嬉しかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "split",
+          "text": "同じものを半分ずつ選び、近くで食べる",
+          "next": "message",
+          "effect": "shiftHelp",
+          "setFlags": [
+            "askedShare"
+          ]
+        },
+        {
+          "id": "want",
+          "text": "「先輩と食べたかったので、半分がいいです」と話す",
+          "next": "message",
+          "effect": "honest"
+        }
+      ]
+    },
+    {
+      "id": "message",
+      "title": "空いている土曜日",
+      "chapter": 1,
+      "location": "自分の部屋",
+      "storyTime": {
+        "date": "6月14日",
+        "period": "夜"
+      },
+      "characterId": "risotto",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "持ち帰った本を棚へ戻すと、一冊ぶんの場所が前よりはっきり見えた。誰かと会った日なのに、部屋にはまだ自分の選んだ物がある。そのことが気楽で、紙袋を畳みながら先輩へ連絡しようと思った。届いた通知には、土曜という二文字があった。"
+        },
+        {
+          "speaker": "risotto",
+          "text": "来週の土曜、予定はあるか。川沿いの奥にも、座れる場所があった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "教えてもらった道を地図で開く。すぐ隣の街区なのに、一度も通ったことがない。道順を保存してから、私は返事の先に少しだけ自分の気持ちを置いた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "place",
+          "text": "一緒に見に行きたいです。今度は私も一つ、場所を探します",
+          "next": "rain",
+          "effect": "messageDaily",
+          "replyVariants": [
+            {
+              "text": "分かった。どちらから回るか、会ってから決めよう。"
+            }
+          ]
+        },
+        {
+          "id": "you",
+          "text": "空いてます。場所もですが、先輩と会えるのが嬉しいです",
+          "next": "rain",
+          "effect": "messageHeart",
+          "replyVariants": [
+            {
+              "when": {
+                "min": {
+                  "romanceChar": 15
+                }
+              },
+              "text": "オレも、会いたくて連絡した。土曜に。"
+            },
+            {
+              "text": "それなら、一緒に行こう。場所を送っておく。"
+            }
+          ]
+        }
+      ],
+      "message": true
+    },
+    {
+      "id": "rain",
+      "title": "二人分の変更",
+      "chapter": 2,
+      "location": "商店街のアーケード",
+      "storyTime": {
+        "date": "6月21日",
+        "period": "昼"
+      },
+      "characterId": "risotto",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "約束の日は朝から雨だった。川へ行くのはやめようと連絡が来たあと、私は別の店を一つ送った。会うことまで取り消したくなかった。アーケードの入口で先輩を見つけると、大きな傘の端から落ちた水が足元に小さな輪を作っていた。"
+        },
+        {
+          "speaker": "risotto",
+          "text": "ここでよかったのか。無理に予定を埋めなくてもよかった。"
+        },
+        {
+          "speaker": "player",
+          "text": "無理なら送りません。今日は、ここへ来たかったです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "言い切ると先輩は頷いた。入った店では、店先のひさしから落ちる雨が席の窓を打っていた。窓側へ座ろうとする先輩へ、今日は私がそこに座りたいと頼む。譲られた席から見る雨は、外で濡れた時よりずっと近くて静かだった。"
+        },
+        {
+          "speaker": "risotto",
+          "text": "よく見えるか。"
+        },
+        {
+          "speaker": "player",
+          "text": "はい。先輩からは？"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩は窓を見て、それから私の方を見た。よく見える、とだけ返った声が低く残る。何を、と訊こうとしてやめた。雨が弱くなるまで、その曖昧さのすぐ向かいに座っていたかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "window",
+          "text": "自分の好きな眺めを、先輩にも指して見せる",
+          "next": "supper",
+          "effect": "conferencePractical",
+          "setFlags": [
+            "ownView"
+          ]
+        },
+        {
+          "id": "look",
+          "text": "「今、何を見てました？」と目を合わせる",
+          "next": "supper",
+          "effect": "walkClose"
+        }
+      ]
+    },
+    {
+      "id": "supper",
+      "title": "誰にも呼ばれない夕食",
+      "chapter": 2,
+      "location": "リゾットの自宅",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "risotto",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "雨の日に約束し直した散歩は、思っていたより長くなった。帰りに食べていくかと誘われ、私は先輩の家へ寄った。廊下に椅子の袋を置くと、交換会で最後まで残っていた物がようやく落ち着く場所を見つけたようだった。先輩は台所へ入り、私に二人分の皿の場所を教えた。"
+        },
+        {
+          "speaker": "player",
+          "text": "この皿でいいですか。"
+        },
+        {
+          "speaker": "risotto",
+          "text": "どれでもいい。おまえが使いたいのを取れ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "迷って選んだ皿に、温かな食事が乗った。向かいへ座る先輩の端末が一度鳴った。画面を見て、明日返す、と小さく言い、伏せて置く。私が食べ始めるまで待っているわけでもなく、自分の一口を先に食べた。その姿が、外で人をまとめていた時よりずっと近かった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "食事の途中で、持ち帰った本の話をした。どこが好きだったかを話しているうち、私は箸を止めてしまった。先輩は続きを促さず、私が言葉を見つけるまで自分の皿を眺めている。やがて顔を上げた目へ、さっき言えなかった一文を渡せた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "easy",
+          "text": "食後はそれぞれの好きなものの話を、急がず続ける",
+          "next": "door",
+          "effect": "homeTogether",
+          "setFlags": [
+            "offDuty"
+          ]
+        },
+        {
+          "id": "close",
+          "text": "「今みたいな先輩と、また二人で会いたいです」と言う",
+          "next": "door",
+          "effect": "homeTalk"
+        }
+      ]
+    },
+    {
+      "id": "door",
+      "title": "しまわれた椅子",
+      "chapter": 3,
+      "location": "リゾットの自宅",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夜"
+      },
+      "characterId": "risotto",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "洗った皿を拭き終えると、先輩が廊下の椅子を部屋の端へ立て掛けた。帰り支度のために立った私は、空いた場所で一度止まる。椅子がなくなっただけで玄関までの道が広くなり、その分、ここに残る理由は自分で言わなければならなかった。"
+        },
+        {
+          "speaker": "risotto",
+          "text": "送るなら、今出られる。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私の鞄を取らずに、先輩はそう言った。帰るかどうかは聞いたままにしておける人だった。靴を履けばまた外の距離へ戻る。私は鞄の紐へ触れ、低い灯りに照らされた先輩の手を見た。近づきたいと思う時、その手は私の荷物のためには使いたくなかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "home",
+          "text": "「今日は帰ります。また散歩に付き合ってください」と言う",
+          "next": "weeks",
+          "effect": "walkTogether"
+        },
+        {
+          "id": "touch",
+          "text": "「帰る前に、私を抱きしめてほしいです」と伝える",
+          "next": "consent",
+          "effect": "hotelInvite",
+          "when": {
+            "min": {
+              "trust": 35,
+              "desire": 8
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "consent",
+      "title": "見上げて答える",
+      "chapter": 3,
+      "location": "リゾットの自宅",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夜"
+      },
+      "characterId": "risotto",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "鞄を自分で下ろすと、先輩が一歩近づいた。大きな体を見上げる角度で、私はその場に立っていたいと思った。先輩は腕を伸ばしかけて止め、私の顔を見た。短い沈黙の間に、台所の冷蔵庫が静かに動き出した。"
+        },
+        {
+          "speaker": "risotto",
+          "text": "オレも触れたい。今夜、一緒にいてほしい。"
+        },
+        {
+          "speaker": "player",
+          "text": "私もです。……恋人になる約束を、今決めるわけではなくても？"
+        },
+        {
+          "speaker": "risotto",
+          "text": "ああ。それは別に話せる。途中で止めたくなったら言え。オレも言う。帰るのも、おまえが選べる。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "背後には自分の鞄があった。帰り道をなくしてここへ来たのではないと思うと、残りたい気持ちの方がはっきりした。私は先輩の手の少し下へ、自分の手を上げた。答える前には、まだ指を重ねなかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「今夜はここにいたいです」と手を重ねる",
+          "next": "night",
+          "effect": "consent",
+          "setFlags": [
+            "mutualConsent",
+            "hadNight"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「やっぱり今日は帰ります」と鞄を持つ",
+          "next": "weeks",
+          "effect": "walkHome",
+          "setFlags": [
+            "contactDeclined"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "night",
+      "title": "荷物を置いたあと",
+      "chapter": 3,
+      "location": "リゾットの自宅",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夜"
+      },
+      "characterId": "risotto",
+      "rating": "fade",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先輩の腕が背中へ回ると、私は胸元へ額を寄せた。外で隣を歩いていた時には届かなかった、服の内側の温かさがあった。抱きしめられたまま見上げると、先輩は私が何か言うまで動かない。もっと近く、と口にしてから、そんな言い方が自分にできたことに驚いた。 先輩は身を屈め、吐息のかかるところまで顔を寄せた。"
+        },
+        {
+          "speaker": "risotto",
+          "text": "ここでいいか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "頷いた拍子に唇が触れた。驚いて少し離れると、先輩の手も緩む。私は袖をつかみ直し、嫌だったわけではないと伝えた。もう一度近づく時は、自分から目を閉じた。足元の鞄を二人で避け、つないだ手だけを持って、奥の部屋へ行った。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝、カーテンの隙間に明るい線があった。先輩は私が動くと目を開け、まだ眠いかと訊いた。私は少しだけと答えたけれど、その顔を見ていたくて目を閉じられなかった。",
+          "storyTime": {
+            "date": "6月29日",
+            "period": "朝"
+          }
+        },
+        {
+          "speaker": "risotto",
+          "text": "オレは急ぐ用事はない。おまえは、どうする。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "その言葉を聞いて、初めて体の力を抜いた。あとで二人で朝食を作り、私は自分の家へ帰る時間を決めた。玄関に並んだ靴は、昨日より少しだけ近くにあった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "return",
+          "text": "朝食のあと、自分の家へ戻る",
+          "next": "after_message"
+        }
+      ],
+      "when": {
+        "flags": [
+          "mutualConsent"
+        ]
+      }
+    },
+    {
+      "id": "after_message",
+      "title": "離れた場所から",
+      "chapter": 3,
+      "location": "自分の部屋",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "夜"
+      },
+      "characterId": "risotto",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "帰宅してから、私は本を棚から一冊抜いた。読むつもりで開いたのに、同じ行で目が止まる。昨夜のことを思い出すと、頁よりも自分の指先を見たくなった。先輩から届いた通知は短く、いつもどおりだった。"
+        },
+        {
+          "speaker": "risotto",
+          "text": "家には着いたか。椅子の袋に入ってた本は、おまえのじゃなかったな。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "自分の本だったと気づいた時の顔を想像して、笑ってしまった。いつでも間違えずに人の持ち物を仕分けられるわけではない。昨夜には知らなかったそんな顔も、次に会えば見つけられるかもしれない。私はどんなふうに、また会いたいのだろう。端末へ、言葉を少しずつ打った。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "again",
+          "text": "また夜も一緒にいたいです。先輩を、前より好きになりました",
+          "next": "weeks",
+          "effect": "messageAgain",
+          "setFlags": [
+            "fwbOngoing"
+          ],
+          "replyVariants": [
+            {
+              "text": "オレもまた会いたい。その気持ちのことは、次に会って話そう。"
+            }
+          ]
+        },
+        {
+          "id": "nights",
+          "text": "友達のまま、望む夜にまた会いたいです",
+          "next": "weeks",
+          "effect": "messageBoundaries",
+          "setFlags": [
+            "fwbOngoing"
+          ],
+          "replyVariants": [
+            {
+              "text": "ああ。オレもそうしたい。会うたびに、互いに確かめよう。"
+            }
+          ]
+        },
+        {
+          "id": "day",
+          "text": "次からは、昼に一緒に過ごす友達でいたいです",
+          "next": "weeks",
+          "effect": "messageDaily",
+          "setFlags": [
+            "endedIntimacy"
+          ],
+          "replyVariants": [
+            {
+              "text": "分かった。昼にしよう。行っていない場所がまだある。"
+            }
+          ]
+        }
+      ],
+      "message": true
+    },
+    {
+      "id": "weeks",
+      "title": "白いところを残す",
+      "chapter": 4,
+      "location": "川沿いの休憩所",
+      "storyTime": {
+        "date": "7月19日",
+        "period": "昼"
+      },
+      "characterId": "risotto",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "七月に入ってから、二人は望む夜にも会うようになった。私が誘う日もあれば、先輩から食事のついでではなく会いたいと連絡が来る日もあった。泊まった翌朝に予定があればそれぞれの家へ戻り、次に明るい道で会っても、隠すように離れることはなかった。",
+          "when": {
+            "flags": [
+              "fwbOngoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "七月に入っても、私たちは明るい時間に会い、それぞれの家へ帰った。会わない日には短い連絡だけで、次の約束がつながることもあった。いつも同じだけ話さなくていいと分かるほど、一緒にいる時には言いたいことが増えた。",
+          "when": {
+            "notFlags": [
+              "fwbOngoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩が持ってきた紙の地図には、二人で座った場所へ小さな印が付いていた。私は窓の見える店を一つ足す。どれも誰かへ教えるほど特別な場所ではない。けれど、予定を入れずにいられる場所を、二人で覚えているのが嬉しかった。"
+        },
+        {
+          "speaker": "risotto",
+          "text": "埋めるために回るなよ。行かないところが残っててもいい。"
+        },
+        {
+          "speaker": "player",
+          "text": "はい。今日は、ここだけでも。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩は頷き、地図を畳まないまま膝へ置いた。白いところに木の影が揺れる。その端を押さえる手へ、自分の指を近づけるかどうか、私は風がやむまで考えていた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "rest",
+          "text": "今日の場所だけ丸をつけ、二人で休む",
+          "next": "decision",
+          "effect": "conferencePractical",
+          "setFlags": [
+            "savedBlank"
+          ]
+        },
+        {
+          "id": "date",
+          "text": "「先輩と来た場所だから、覚えていたいです」と話す",
+          "next": "decision",
+          "effect": "gameDate"
+        }
+      ]
+    },
+    {
+      "id": "decision",
+      "title": "呼ぶ理由を選ぶ",
+      "chapter": 4,
+      "location": "川沿いの道",
+      "storyTime": {
+        "date": "7月19日",
+        "period": "夕方"
+      },
+      "characterId": "risotto",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "帰ろうと立った先輩へ、私は少し待ってくださいと言った。足がすぐ止まる。人が通り過ぎるまで横へ避けると、先輩も同じように道を空けた。二人の話す場所を、二人で少しずつ作れた気がした。"
+        },
+        {
+          "speaker": "risotto",
+          "text": "どうした。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "低い声は短くても、先を急いでいなかった。次に誘う時、同じ言葉の中へ何を込めたいのか。私は地図を鞄へしまい、目の前の人を見上げた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "tell",
+          "text": "恋人になりたい気持ちを、自分から伝える",
+          "next": "confess_player",
+          "when": {
+            "min": {
+              "trust": 48,
+              "romancePlayer": 35,
+              "romanceChar": 35
+            },
+            "notFlags": [
+              "fwbOngoing"
+            ]
+          }
+        },
+        {
+          "id": "hear",
+          "text": "先輩が私へ向き直った、その言葉を待つ",
+          "next": "confess_char",
+          "when": {
+            "min": {
+              "trust": 48,
+              "romancePlayer": 20,
+              "romanceChar": 40
+            },
+            "notFlags": [
+              "fwbOngoing"
+            ]
+          }
+        },
+        {
+          "id": "nights",
+          "text": "昼も夜も、今のように会う親密な友達でいたいと言う",
+          "next": "end_fwb",
+          "effect": "messageBoundaries",
+          "setFlags": [
+            "fwbConfirmed"
+          ],
+          "when": {
+            "flags": [
+              "fwbOngoing"
+            ],
+            "min": {
+              "trust": 50,
+              "intimacy": 35
+            }
+          }
+        },
+        {
+          "id": "change",
+          "text": "重ねた夜の先で、恋人になりたいと伝える",
+          "next": "change",
+          "when": {
+            "flags": [
+              "fwbOngoing"
+            ],
+            "min": {
+              "trust": 55,
+              "romancePlayer": 30,
+              "romanceChar": 30,
+              "intimacy": 35
+            }
+          }
+        },
+        {
+          "id": "partner",
+          "text": "誰の役目も持たない時間を、互いに誘い合いたいと言う",
+          "next": "pact",
+          "when": {
+            "flags": [
+              "ownLoad",
+              "quietPlace",
+              "askedShare",
+              "ownView",
+              "offDuty",
+              "savedBlank"
+            ],
+            "notFlags": [
+              "fwbOngoing"
+            ],
+            "min": {
+              "trust": 45,
+              "comfort": 65
+            }
+          }
+        },
+        {
+          "id": "friend",
+          "text": "これからも散歩や市へ誘える友達でいたいと言う",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "friendChosen",
+            "endedIntimacy"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_player",
+      "title": "目を逸らさずに",
+      "chapter": 4,
+      "location": "川沿いの道",
+      "storyTime": {
+        "date": "7月19日",
+        "period": "夕方"
+      },
+      "characterId": "risotto",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "player",
+          "text": "先輩が好きです。場所を増やしたかっただけじゃなくて、会う理由を増やしたかったんです。私と付き合ってください。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "最後の言葉のあと、川の音が急にはっきり聞こえた。先輩は私から目を逸らさず、少しだけ顎を引いた。返事を考えているのか、聞き損ねたのか、私には分からない。分からないまま待っていると、先輩の手が道の端の柵から離れた。"
+        },
+        {
+          "speaker": "risotto",
+          "text": "オレも好きだ。おまえと、恋人として会いたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "言葉が短いことを寂しいと思わなかった。私の言ったものが、同じ形で戻ってきた。まだ触れていない手を見てから、私は自分の指を開いた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「嬉しいです」と答えて手を差し出す",
+          "next": "end_love_a",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「今は、友達として会うことを選びたいです」と言う",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "friendChosen",
+            "endedIntimacy"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_char",
+      "title": "短い言葉の先",
+      "chapter": 4,
+      "location": "川沿いの道",
+      "storyTime": {
+        "date": "7月19日",
+        "period": "夕方"
+      },
+      "characterId": "risotto",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先輩は私を見てから、すぐには話さなかった。風で襟元が少し動き、その下の喉が上下する。人に次の動きを伝えていた時とは違う間だった。私は急いで質問を足さず、そのまま立っていた。"
+        },
+        {
+          "speaker": "risotto",
+          "text": "おまえが好きだ。会うたびに、帰す前に次の予定を訊きたくなっていた。恋人として、そばにいてほしい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "思わず息を吸うと、先輩の目が一度だけ動いた。まだ何も答えていないのに、それだけで届くものがある。けれど肝心なことは、自分の言葉で返したかった。私は鞄の紐を肩へ掛け直し、両手を空けた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「私も好きです。恋人として会いたいです」と答える",
+          "next": "end_love_b",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「恋人にはなれません。でも友達でいたいです」と答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "declinedConfession",
+            "friendChosen",
+            "endedIntimacy"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "change",
+      "title": "朝にも持っていく",
+      "chapter": 4,
+      "location": "川沿いの道",
+      "storyTime": {
+        "date": "7月19日",
+        "period": "夕方"
+      },
+      "characterId": "risotto",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "夜を一緒に過ごして帰る時、先輩はいつも玄関まで来た。次に会う予定が決まっている日でも、扉が閉まる瞬間に少しだけ振り返りたくなった。その気持ちを、今まではうまく言えずにいた。"
+        },
+        {
+          "speaker": "player",
+          "text": "親密な友達でいたかったことも、本当です。でも今は、恋人になりたいです。先輩が好きです。"
+        },
+        {
+          "speaker": "risotto",
+          "text": "オレもだ。今までをやめたいんじゃない。そこへ、恋人としての約束を足したい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩の手が私の近くへ来た。いつも触れられる場所を知っていても、今日は返事の代わりにはしたくなかった。私は一度頷き、それから声を出した。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「はい。先輩の恋人になりたいです」と伝える",
+          "next": "end_fwb_to_love",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "keep",
+          "text": "「まだ、親密な友達のままでいたいです」と答える",
+          "next": "end_fwb",
+          "effect": "messageBoundaries",
+          "setFlags": [
+            "fwbConfirmed"
+          ]
+        },
+        {
+          "id": "friend",
+          "text": "「これからは昼に会う友達でいたいです」と答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedIntimacy",
+            "friendChosen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pact",
+      "title": "地図の余白を半分ずつ",
+      "chapter": 4,
+      "location": "川沿いの道",
+      "storyTime": {
+        "date": "7月19日",
+        "period": "夕方"
+      },
+      "characterId": "risotto",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "誰かの都合をまとめたり、正しい段取りを決めたりするのではない時間。川辺の椅子や、雨の見える席で知った先輩を思い出した。私も何かの手伝いとしてではなく、何もしない自分で隣へ座りたかった。"
+        },
+        {
+          "speaker": "player",
+          "text": "休みたい日に、最初に先輩を誘いたいです。先輩からも、私を呼んでほしい。何かをしてもらうためじゃなくて。"
+        },
+        {
+          "speaker": "risotto",
+          "text": "オレも、それがいい。おまえとなら、何も決めずに行ける。恋人になる約束とは違う。それでいいか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私は地図をもう一度出し、白い余白を見せた。今日の場所の近くへ印を増やさず、その端に小さく次、と書く。先輩は私の手が動き終わると地図を受け取り、二人とも見られる角度に持ち直した。"
+        },
+        {
+          "speaker": "risotto",
+          "text": "持つのは交代だ。片方だけが道を覚えることはない。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「私も道を探します。次は、私から誘わせてください」と答える",
+          "next": "end_special",
+          "effect": "homeTogether",
+          "setFlags": [
+            "restPartners"
+          ]
+        },
+        {
+          "id": "friend",
+          "text": "「時々一緒に出かける友達のままでいたいです」と答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "friendChosen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "end_friend",
+      "title": "荷物はそれぞれの手に",
+      "chapter": 5,
+      "location": "小さな道具市",
+      "storyTime": {
+        "date": "7月27日",
+        "period": "昼"
+      },
+      "characterId": "risotto",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人にはなれないと答えたあと、先輩は分かったと言い、少し間を置いてからまた市へ誘ってくれた。私は行きたいと返した。今度は友人も一緒だと知らせると、入口は混むから脇で会おう、といつもの短い返事が来た。",
+          "when": {
+            "flags": [
+              "declinedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "友達として会いたいと伝え、次の道具市で落ち合うことにした。友人も誘い、それぞれ欲しい物を探すことになった。先輩からは、何も買わなくてもいいからな、と短い連絡が来た。",
+          "when": {
+            "notFlags": [
+              "declinedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "入口で手を振ると、先輩は私の空の袋を見た。今日は売る物がないのかと訊かれ、欲しい物を見つけるためですと答える。隣の友人が大きすぎる箱を選びかけ、私と先輩が同時に置き場所は、と訊いた。目が合い、先輩の口元が少し動いた。"
+        },
+        {
+          "speaker": "risotto",
+          "text": "覚えたな。"
+        },
+        {
+          "speaker": "player",
+          "text": "でも、今日は買いたくなるかもしれません。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "それは自分で決めろ、と返った声へ頷いた。各自の荷物を持ち、三人で店を覗く。誰か一人へ全部を預けずにいるから、私は気軽に隣の人を呼べた。"
+        }
+      ],
+      "choices": [],
+      "ending": "FRIEND"
+    },
+    {
+      "id": "end_love_a",
+      "title": "先に呼び止めた手",
+      "chapter": 5,
+      "location": "川沿いの道",
+      "storyTime": {
+        "date": "7月19日",
+        "period": "夕方"
+      },
+      "characterId": "risotto",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "差し出した手が、先輩の手の中へ収まった。指を握り返すと、顔を見るより先に小さな息が聞こえた。告白した言葉はもう言い直せない。言い直したくもなくて、私はつないだ方の腕を少しだけ揺らした。"
+        },
+        {
+          "speaker": "risotto",
+          "text": "どうした。"
+        },
+        {
+          "speaker": "player",
+          "text": "ちゃんと、先輩がここにいるなと思って。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩は足を止め、私が笑うまで顔を見ていた。ここにいる、と返る声を聞くと、胸の奥がまた熱くなる。言い出したのは私なのに、返ってくる一つ一つへ追いつくのに時間がかかった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "次に会った休日は、私が先に椅子を持って出た。先輩が来ると、日陰のある方へ手を振る。座る場所を空けるだけではなく、自分の好きな人を待っている。そのことを隠さずに呼べる声が、川の上へ軽く広がった。",
+          "storyTime": {
+            "date": "7月26日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_A"
+    },
+    {
+      "id": "end_love_b",
+      "title": "隣へ来るまで",
+      "chapter": 5,
+      "location": "川沿いの道",
+      "storyTime": {
+        "date": "7月19日",
+        "period": "夕方"
+      },
+      "characterId": "risotto",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "返事をすると、先輩の目がほんの少し和らいだ。大きく笑うのではない。それでも、待たせていたことが分かる変化だった。私は先輩へ一歩近づき、空いた手を見せた。取られるまでの短い間が、妙に長く感じられた。"
+        },
+        {
+          "speaker": "risotto",
+          "text": "歩けるか。"
+        },
+        {
+          "speaker": "player",
+          "text": "はい。でも、少しゆっくりがいいです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩は頷いた。歩幅が合ってしまうと、その気遣いをすぐ当たり前にしそうになる。私は手を握り直し、さっきの言葉が嬉しかったともう一度伝えた。返ってきたのは、言ってよかった、という低い声だった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌週の待ち合わせでは、先輩が椅子を二つ持っていた。私が一つ受け取ると、無理に持とうとせず任せてくれる。並べる場所は二人で選んだ。座ったあとも手が触れるくらい近くへ、私が椅子を寄せた。",
+          "storyTime": {
+            "date": "7月26日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_B"
+    },
+    {
+      "id": "end_fwb",
+      "title": "夜に選ぶ席",
+      "chapter": 5,
+      "location": "リゾットの自宅",
+      "storyTime": {
+        "date": "7月26日",
+        "period": "夜"
+      },
+      "characterId": "risotto",
+      "rating": "fade",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "今度も、親密な友人として会う。二人でそう確かめた次の週末、私は先輩の家へ食べたいものを持っていった。台所で袋を開くと、先輩も自分の買ったものを並べる。何も言わなくても分かる物が増えても、今夜一緒にいたいという言葉は、私から改めて渡した。"
+        },
+        {
+          "speaker": "risotto",
+          "text": "オレもだ。明日の予定はあるか。"
+        },
+        {
+          "speaker": "player",
+          "text": "昼からです。朝は、ゆっくりできます。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "食器を片づけ、二人でソファへ座った。私が肩を寄せると、先輩がこちらを見た。頷いて腕へ触れる。その手が背中へ回るまで、外の車の音を聞いていた。近い息へ名前を呼ぶと、先輩は返事をして、もう一度私の目を見た。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌朝、先輩が湯を沸かしている間に、私は折り畳み椅子の袋を直した。昼には友人と会うので、駅までの道を確かめる。先輩は自分の予定を話し、次の散歩はまた連絡すると言った。夜だけでなく、互いがいない一日も、その声の中にちゃんと残っていた。",
+          "storyTime": {
+            "date": "7月27日",
+            "period": "朝"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB"
+    },
+    {
+      "id": "end_fwb_to_love",
+      "title": "昼の待ち合わせ",
+      "chapter": 5,
+      "location": "川沿いの道",
+      "storyTime": {
+        "date": "7月19日",
+        "period": "夕方"
+      },
+      "characterId": "risotto",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先輩の手を握ると、これまで何度も触れた指がゆっくり返ってきた。急に知らない人になるわけではない。けれど恋人だと互いに呼べることが、手の甲の薄い影まで違って見せた。私は嬉しくて、今までの夜の話ではない予定を一つ口にした。"
+        },
+        {
+          "speaker": "player",
+          "text": "今度、少し遠くまで行きませんか。一日、先輩と出かけたいです。"
+        },
+        {
+          "speaker": "risotto",
+          "text": "ああ。オレも行きたい。帰り道は、二人で決めよう。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "次の休日、駅で会うと先輩は私の顔を確かめてから切符をしまった。私が近づくまで、先に改札へ行かない。その待ち方を、家の玄関以外でも知っていくのだと思った。",
+          "storyTime": {
+            "date": "7月26日",
+            "period": "昼"
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "窓側の席へ座り、知らない町の案内を二人で開く。帰る家は別々のままでも、今日を一緒に選んだことは変わらない。列車が動き出すと、私は紙の下で先輩の手へ指を重ねた。"
+        }
+      ],
+      "choices": [],
+      "ending": "FWB_TO_LOVE"
+    },
+    {
+      "id": "end_special",
+      "title": "誰の用事でもない場所",
+      "chapter": 5,
+      "location": "街外れの木陰",
+      "storyTime": {
+        "date": "7月27日",
+        "period": "昼"
+      },
+      "characterId": "risotto",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私が選んだ場所は、地図で見たよりずっと小さかった。木が三本と、古いベンチが一つ。先輩へつまらないかもしれませんと言いかけて、やめた。歩いてくる間の話も、この影の涼しさも、誰かへ提出する成果ではなかった。"
+        },
+        {
+          "speaker": "risotto",
+          "text": "いい場所だ。今日は、ここにしよう。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩が椅子を広げる間、私はベンチの乾いたところを確かめた。二人の座る向きが少し違うので、それぞれ別の道が見える。私は初めて見る店の看板を指し、先輩はそちらを一度見てからまた木の下へ目を戻した。今すぐ確かめに行かなくてもよかった。"
+        },
+        {
+          "speaker": "player",
+          "text": "次、先輩が見つけた場所も教えてください。"
+        },
+        {
+          "speaker": "risotto",
+          "text": "ああ。だが、同じところへ戻ってきてもいい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私は地図へ小さく日付を書いた。そこから先の空欄を、二人で埋める約束はしていない。休みたい日に最初に呼ぶ相手がいる。それだけの約束が、何もしない午後を、もう一度選びたくなる時間へ変えた。帰りには地図を私が預かり、次に会うまで自分の鞄へ入れておいた。"
+        }
+      ],
+      "choices": [],
+      "ending": "SPECIAL"
+    }
+  ]
+}

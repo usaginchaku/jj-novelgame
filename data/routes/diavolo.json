@@ -1,0 +1,1228 @@
+{
+  "id": "diavolo",
+  "title": "ディアボロ — 用件のない時間",
+  "intro": "同じ店で会い、違う曲を選ぶ。\n話さない一日を持ったまま、自分から作る約束が増えていく。",
+  "startEvent": "record",
+  "character": {
+    "name": "ディアボロ",
+    "adult": true,
+    "heightCm": 191,
+    "heightBasis": "二次資料JoJo Wikiの身長欄と出典注記を照合。黄金の風アニメ設定表CR200-20。書籍・設定表現物は未照合。AUで同値を採用。",
+    "profile": "身元と私生活への強い警戒。結果を求める。自負と焦燥が同居。",
+    "personality": [
+      "身元と私生活への強い警戒",
+      "結果を求める",
+      "自負と焦燥が同居"
+    ],
+    "speech": {
+      "firstPerson": "わたし／オレ",
+      "addressing": "主人公は姓＋さん/君。対外的な丁寧語から私的な常体へ。変化は場面で描く。",
+      "tone": "平静では整った断定。語尾は感情と相手に合わせる。",
+      "habits": [
+        "平静では整った断定",
+        "動揺や強い感情でオレと荒い語気",
+        "回答を慎重に選ぶ"
+      ],
+      "signaturePhrases": [],
+      "signatureNote": "日常の固定口癖は採用しない。象徴的な原作台詞と普段の話し方を混同せず、名台詞を貼り付けない。",
+      "avoid": [
+        "ドッピオを別攻略人物として追加",
+        "秘密を暴けば恋が成就する筋",
+        "権力で拒否を無効化"
+      ]
+    },
+    "referenceSection": "docs/CHARACTER_REFERENCE.md#cast-diavolo"
+  },
+  "au": {
+    "role": "企業共同研究先の責任者。主人公との雇用・評価・指導・取引上の上下関係なし",
+    "routeEnabled": true,
+    "addressing": [
+      {
+        "text": "{player.lastName}さん"
+      }
+    ]
+  },
+  "events": [
+    {
+      "id": "record",
+      "title": "名前だけで会う",
+      "chapter": 1,
+      "location": "街の中古レコード店",
+      "storyTime": {
+        "date": "5月3日",
+        "period": "昼"
+      },
+      "characterId": "diavolo",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "試聴席の番号札を受け取ったところで、前に並んでいた人が振り返った。ディアボロさんだった。大学の公開行事で、企業共同研究先の責任者として紹介されていた人だ。私はその研究にも会社にも関わっておらず、仕事や成績を頼む用事もなかった。今日はただ、同じ棚から一枚を選んでここにいる。"
+        },
+        {
+          "speaker": "player",
+          "text": "こんにちは。ここで会うとは思いませんでした。"
+        },
+        {
+          "speaker": "diavolo",
+          "text": "……こんにちは。今日は、あの会場の話ではありませんね。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "確認する目を見て、自分の声が少し大きかったと気づいた。私は頷き、手元のレコードの題を見せる。これを聴きに来ました、と言うと、彼の視線はようやくジャケットへ落ちた。私も肩書きを続けず、先に呼ばれた席へ座った。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "隣とは薄い仕切りがあり、同じ音を聴くわけでもない。それなのにヘッドホンを外す時、向こうが何を選んだか気になった。ディアボロさんは私の手元へ一度目をやり、曲は最後まで聴けましたかと訊いた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "own",
+          "text": "曲の好きだったところだけを話し、彼の選んだ盤も尋ねる",
+          "next": "seat",
+          "effect": "workTogether",
+          "setFlags": [
+            "privateTalk"
+          ],
+          "lockRoute": "diavolo"
+        },
+        {
+          "id": "invite",
+          "text": "「もう少しお話ししませんか」と店の外へ誘う",
+          "next": "seat",
+          "effect": "gameDate",
+          "lockRoute": "diavolo"
+        }
+      ]
+    },
+    {
+      "id": "seat",
+      "title": "窓から離れた席",
+      "chapter": 1,
+      "location": "街の喫茶店",
+      "storyTime": {
+        "date": "5月10日",
+        "period": "昼"
+      },
+      "characterId": "diavolo",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "店の外で話したあと、また音楽の話をしようと約束した。今度の喫茶店では、ディアボロさんが先に奥の席を選んだ。窓際へ行きかけた私が止まると、そちらは人の出入りが多いと言う。私は窓から見たかった植木を一度振り返り、向かいへ座った。"
+        },
+        {
+          "speaker": "diavolo",
+          "text": "落ち着いて話せる方がいい。君は、窓際がよかったのか。"
+        },
+        {
+          "speaker": "player",
+          "text": "はい。でも今日はここで。次は私が席を選んでもいいですか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼はすぐにいいとは言わなかった。カップを置く場所を確かめてから、見える場所なら、と返す。何が見えるか訊くと、入口だ、と短く答えた。私は理由を重ねて尋ねず、次に来る店の席を思い浮かべた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "曲の終わり方の話になると、彼は少し長く話した。途中まで好きでも最後が気に入らなければもう聴かない、と言う。私はその途中をまた聴きたくなると返した。同じ盤を持っていても、置いておく理由は違っていた。"
+        },
+        {
+          "speaker": "diavolo",
+          "text": "ずいぶん、惜しみなく時間を使うんだな。"
+        },
+        {
+          "speaker": "player",
+          "text": "好きなところには使いたいです。今日も。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "next",
+          "text": "次は自分で店を選び、席は二人で決めたいと伝える",
+          "next": "stop",
+          "effect": "shiftHelp",
+          "setFlags": [
+            "ownPlace"
+          ]
+        },
+        {
+          "id": "near",
+          "text": "「まだ、帰る時間を決めたくないです」と話す",
+          "next": "stop",
+          "effect": "walkClose"
+        }
+      ]
+    },
+    {
+      "id": "stop",
+      "title": "予定を消した日",
+      "chapter": 1,
+      "location": "駅前の軒下",
+      "storyTime": {
+        "date": "5月17日",
+        "period": "昼"
+      },
+      "characterId": "diavolo",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "待ち合わせの一時間前に、今日は行けないと短い連絡が来た。私はすでに家を出ていて、駅前の店を一人で覗いた。買おうか迷っていた盤を選び、雨のやむのを待っていると、もう一通届く。時間が取れた、今からなら会える、とあった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私は時計を見た。夕方には友人と会う約束がある。今から彼を待てば、その前の時間はなくなってしまう。残念なまま端末を持ち、今日は予定を変えずに帰ります、と返した。返事は少し遅れて、分かった、とだけ来た。"
+        },
+        {
+          "speaker": "diavolo",
+          "text": "次に会える日を教えてくれ。今日の埋め合わせとしてではなく、改めて誘いたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "言い直した連絡を読み、私は軒の下で少し息をついた。彼の都合が戻れば自分の予定も戻る、ということにはならなかった。鞄へ入れた盤の角を撫でる。まだ会いたい気持ちは消えていないので、その分だけを送った。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "reschedule",
+          "text": "自分の空いている日を一つ提案する",
+          "next": "message",
+          "effect": "homeTogether",
+          "setFlags": [
+            "keptDay"
+          ]
+        },
+        {
+          "id": "miss",
+          "text": "「今日は残念でした。また顔を見て話したいです」と送る",
+          "next": "message",
+          "effect": "walkClose"
+        }
+      ]
+    },
+    {
+      "id": "message",
+      "title": "用件のあとに",
+      "chapter": 1,
+      "location": "自分の部屋",
+      "storyTime": {
+        "date": "5月17日",
+        "period": "夜"
+      },
+      "characterId": "diavolo",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "友人と別れて家へ帰ると、ディアボロさんから次の候補日が来ていた。こちらの都合を尋ねる短い文の下に、買った盤は聴いたか、と続いている。今日の出来事を全部説明したわけではない。それでも鞄へ一枚増えたことは、駅前から知らせていた。"
+        },
+        {
+          "speaker": "diavolo",
+          "text": "聴いたら、君の感想を聞きたい。わたしは、あの最後の曲を選ばないと思う。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "結論だけは先に来る人へ、私は笑った。まだ針を下ろしていないのに、反論するための耳になりそうだった。棚から盤を出し、聴いてから返そうと端末を置く。最後まで終わると、会って言いたい言葉が一つ増えた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "music",
+          "text": "私は最後も好きでした。次に、理由を聞いてください",
+          "next": "change",
+          "effect": "messageDaily",
+          "replyVariants": [
+            {
+              "text": "そうか。では、聞こう。日時は先ほどのもので。"
+            }
+          ]
+        },
+        {
+          "id": "you",
+          "text": "曲の話もですが、あなたに会えるのを楽しみにしています",
+          "next": "change",
+          "effect": "messageHeart",
+          "replyVariants": [
+            {
+              "when": {
+                "min": {
+                  "romanceChar": 20
+                }
+              },
+              "text": "わたしも、君に会いたい。用件のついでに書くことではなかったな。"
+            },
+            {
+              "text": "わたしも楽しみにしている。次は会えるようにする。"
+            }
+          ]
+        }
+      ],
+      "message": true
+    },
+    {
+      "id": "change",
+      "title": "席を選び直す",
+      "chapter": 1,
+      "location": "主人公が選んだ喫茶店",
+      "storyTime": {
+        "date": "5月24日",
+        "period": "昼"
+      },
+      "characterId": "diavolo",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私が選んだ店には、窓が見えて入口も見える席があった。けれど着いた時には別の人が座っている。ディアボロさんは一目で気づき、違う店へ行こうとした。私はまだ一歩も入っていなかった店を見上げ、別の席ではだめですかと訊いた。"
+        },
+        {
+          "speaker": "diavolo",
+          "text": "ここでなくてもいい。今日は、落ち着けそうにない。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼の声は前より固かった。私の選んだものが全部だめだと言われたようで、少し腹が立つ。けれどその顔を見て、同じ店へ座るために押し切りたくもなかった。私は入口の横へ避け、自分もまだここへ来たかったと話した。"
+        },
+        {
+          "speaker": "player",
+          "text": "今日は別のところに行きましょう。でも、この店はまた私が来ます。一緒に来たい日があったら、そう言ってください。"
+        },
+        {
+          "speaker": "diavolo",
+          "text": "……君の楽しみまで、なくすつもりではない。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼は言ってから、通りを一度見た。何でもなかった顔には戻らないまま、次は自分が二つ候補を出すと言う。私はそのうち小さい方の店を選んだ。入って座るまで少し黙り、メニューを開いてから、さっきの曲の続きを話し始めた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "separate",
+          "text": "自分の行きたい場所は残し、今日の店を一緒に選ぶ",
+          "next": "home",
+          "effect": "conferencePractical",
+          "setFlags": [
+            "keptPlace"
+          ]
+        },
+        {
+          "id": "honest",
+          "text": "「来てくれたのは嬉しいです。そこは、ちゃんと言いたいです」と話す",
+          "next": "home",
+          "effect": "rehearse"
+        }
+      ]
+    },
+    {
+      "id": "home",
+      "title": "二人分の再生時間",
+      "chapter": 1,
+      "location": "ディアボロの自宅",
+      "storyTime": {
+        "date": "6月1日",
+        "period": "夕方"
+      },
+      "characterId": "diavolo",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "同じ盤を聴こうと誘われ、私は休日に、手持ちの一枚を持って彼の家を訪ねた。住所を知らされたのは、私が行きたいと答えたあとだった。玄関で靴を脱ぐと、ここで写真は撮らないでほしいと言われる。私は頷き、端末を鞄へ入れた。家の中より、迎えに出た顔を見たくて来ていた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "食事を済ませ、並んだ椅子で一曲ずつ聴いた。彼は気に入らないところで針を上げかけたが、私がまだ聴きたいと言うと手を止めた。最後まで流れる間、指が膝を一度叩く。私は聞こえた短い音まで覚えて、曲が終わってから好きだったところを話した。"
+        },
+        {
+          "speaker": "diavolo",
+          "text": "君は、その数秒のために最後まで待つんだな。"
+        },
+        {
+          "speaker": "player",
+          "text": "はい。今日は、途中でやめられなくてよかったです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼はまだ同意していなかった。それでも次の曲をかける前に、どうする、と私を見る。自分の聞きたい部分を話すと、彼も一曲だけ挙げた。どちらの順番も崩さず聴いていたら、帰るには惜しい時間になった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "leave",
+          "text": "また違う感想を持ってくると約束し、今日は帰る",
+          "next": "later",
+          "effect": "homeTogether",
+          "setFlags": [
+            "heardWhole"
+          ]
+        },
+        {
+          "id": "talk",
+          "text": "「また、二人で聴きたいです」と伝えて帰る",
+          "next": "later",
+          "effect": "homeTalk"
+        },
+        {
+          "id": "stay",
+          "text": "「今夜は、あなたの近くにいたいです」と伝える",
+          "next": "consent",
+          "effect": "hotelInvite",
+          "when": {
+            "min": {
+              "trust": 35,
+              "desire": 8
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "consent",
+      "title": "問いの前で止まる",
+      "chapter": 1,
+      "location": "ディアボロの自宅",
+      "storyTime": {
+        "date": "6月1日",
+        "period": "夜"
+      },
+      "characterId": "diavolo",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "レコードが終わり、針の戻る音だけがした。彼は私を見たまま立ち上がり、椅子一つぶんの距離で止まった。私も立つと、見上げる角度が変わる。ここへ招かれたことと、今から選ぶことは、同じ返事ではなかった。"
+        },
+        {
+          "speaker": "diavolo",
+          "text": "わたしも君に触れたい。今夜、一緒に過ごしたい。君がそれを望むなら。"
+        },
+        {
+          "speaker": "player",
+          "text": "私も、そうしたいです。恋人になるかどうかは、今とは別に話してもいいですか。途中でやめたくなったら言います。"
+        },
+        {
+          "speaker": "diavolo",
+          "text": "ああ。恋人になる約束とは別だ。どちらが止めても、そこでやめる。わたしも嫌なことは言う。帰ると言われても、引き留めない。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "最後まで聞いてから、私は肩に掛けていた鞄を床へ置いた。置いてもまだ、帰ることはできる。彼の手が動く前に、自分で近づくかどうかを決めたかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「今夜は、一緒にいたいです」と手を差し出す",
+          "next": "night",
+          "effect": "consent",
+          "setFlags": [
+            "mutualConsent",
+            "hadNight"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「やっぱり今日は帰ります」と伝える",
+          "next": "later",
+          "effect": "walkHome",
+          "setFlags": [
+            "declinedTouch"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "night",
+      "title": "針を上げたあと",
+      "chapter": 1,
+      "location": "ディアボロの自宅",
+      "storyTime": {
+        "date": "6月1日",
+        "period": "夜"
+      },
+      "characterId": "diavolo",
+      "rating": "fade",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "彼の手に触れると、指がしっかり返ってきた。近くで名前を呼ばれ、はいと答えた声が少し揺れる。彼は私の頬へ手を寄せ、そこで一度止まった。私はその手へ頬を寄せ、自分からもう半歩近づいた。"
+        },
+        {
+          "speaker": "diavolo",
+          "text": "……今は、君を見ていたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "何も聞き出すつもりはなかった。ただその声を、もっと近くで聞きたかった。彼が身を屈め、私の頬を支えたまま顔を近づけた。唇が触れたあとに顔を上げ、もう一度、と私から伝える。彼は頷き、私の動く速さに合わせて手を引いた。棚へ盤を戻したあと、二人で灯りの届かない奥へ移った。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝、カーテンの隙間から細い光が伸びていた。彼はもう目を開けていて、私が起きると何時に帰るか訊いた。まだ少しここにいたいと答えると、朝食を用意しよう、と声が返る。追い出すための時刻ではなかったのだと分かり、私は毛布の端から手を出した。",
+          "storyTime": {
+            "date": "6月2日",
+            "period": "朝"
+          }
+        }
+      ],
+      "choices": [
+        {
+          "id": "home",
+          "text": "朝食のあと、自分の家へ戻る",
+          "next": "after_message"
+        }
+      ],
+      "when": {
+        "flags": [
+          "mutualConsent"
+        ]
+      }
+    },
+    {
+      "id": "after_message",
+      "title": "次を訊く声",
+      "chapter": 1,
+      "location": "自分の部屋",
+      "storyTime": {
+        "date": "6月2日",
+        "period": "夜"
+      },
+      "characterId": "diavolo",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "家へ帰ると、いつもの時計の音がよく聞こえた。彼の部屋にはなかった音を聞きながら、私は持ち帰った盤を棚へ戻した。何を話そうか迷っていたところへ、帰れたか、と短い通知が来る。はいと返すと、次の文が少し遅れて届いた。"
+        },
+        {
+          "speaker": "diavolo",
+          "text": "また会いたい。今度の予定を決める前に、君がどうしたいか聞いておきたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "昨夜の続きを想像すると、手元が少し熱くなった。それとは別に、同じ店で話す日も欲しい。次にどんな約束をしたいか、私は自分の部屋で考えた。誰も見ていない画面へ、言いにくいところから打ち始める。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "again",
+          "text": "また夜も会いたいです。あなたのことを、もっと好きになりました",
+          "next": "later",
+          "effect": "messageAgain",
+          "setFlags": [
+            "ongoing"
+          ],
+          "replyVariants": [
+            {
+              "text": "わたしも会いたい。その気持ちは、次に会って聞かせてほしい。"
+            }
+          ]
+        },
+        {
+          "id": "nights",
+          "text": "恋人の約束はせず、望む夜に会う友人でいたいです",
+          "next": "later",
+          "effect": "messageBoundaries",
+          "setFlags": [
+            "ongoing"
+          ],
+          "replyVariants": [
+            {
+              "text": "分かった。わたしも、その形で会いたい。次も互いに確かめよう。"
+            }
+          ]
+        },
+        {
+          "id": "days",
+          "text": "次からは、昼に会う友人でいたいです",
+          "next": "later",
+          "effect": "messageDaily",
+          "setFlags": [
+            "endedNight"
+          ],
+          "replyVariants": [
+            {
+              "text": "分かった。昼の約束にしよう。空いている日を教えてくれ。"
+            }
+          ]
+        }
+      ],
+      "message": true
+    },
+    {
+      "id": "later",
+      "title": "まだ決まっていない日",
+      "chapter": 1,
+      "location": "川沿いの静かな店",
+      "storyTime": {
+        "date": "6月22日",
+        "period": "夕方"
+      },
+      "characterId": "diavolo",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "六月には何度か、食事のあとに互いの希望を確かめて泊まった。翌朝は自分の予定へ帰り、昼に会う日も変わらずあった。一度予定が合わなかった時、彼の方から別の日を二つ挙げてきた。私はその一つを選び、今日ここへ来た。",
+          "when": {
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "六月には昼に会い、それぞれの予定へ帰る日が続いた。私は来られない日をそのまま伝え、彼も詳しい理由を話さずに日付を変えることがあった。その代わり、次に会いたい日をどちらからも知らせた。私が選んだ店へ、今日は彼も来た。",
+          "when": {
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "席へ着く前に、彼は入口を一度見た。私は窓の外の川を眺め、座ってから自分の飲みたいものを頼む。どちらも相手と同じところを見ていたわけではない。それでも、メニューを閉じた時には目が合った。"
+        },
+        {
+          "speaker": "diavolo",
+          "text": "次の休みは、もう予定があるか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私はまだ、と答えた。埋められる空欄を差し出したくて来たのではない。何を一緒にしたいかを、今日は自分から話してみたかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "tell",
+          "text": "恋人になりたい気持ちを、自分から伝える",
+          "next": "confess_player",
+          "when": {
+            "min": {
+              "trust": 40,
+              "romancePlayer": 35,
+              "romanceChar": 35
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "listen",
+          "text": "彼が言おうとしている続きを待つ",
+          "next": "confess_char",
+          "when": {
+            "min": {
+              "trust": 40,
+              "romancePlayer": 20,
+              "romanceChar": 40
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "pact",
+          "text": "互いが自分で作る一時間に、会う約束を続けたいと言う",
+          "next": "pact",
+          "when": {
+            "min": {
+              "trust": 40,
+              "comfort": 60
+            },
+            "flags": [
+              "privateTalk",
+              "ownPlace",
+              "keptDay",
+              "keptPlace",
+              "heardWhole"
+            ],
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "nights",
+          "text": "昼にも夜にも会う、親密な友情を続けたいと話す",
+          "next": "fwb_choice",
+          "when": {
+            "min": {
+              "trust": 45,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "love",
+          "text": "重ねた夜のあと、今は恋人になりたいと伝える",
+          "next": "end_fwb_love",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 30,
+              "romanceChar": 30,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "friends",
+          "text": "これからも、音楽や食事に誘える友人でいたいと話す",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_player",
+      "title": "私の予定にある人",
+      "chapter": 4,
+      "location": "川沿いの静かな店",
+      "storyTime": {
+        "date": "6月22日",
+        "period": "夕方"
+      },
+      "characterId": "diavolo",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "ディアボロさん、と呼ぶと彼の目が上がった。何かを頼む時には使わなかった声だった。私はカップの取っ手から指を離し、机の上へ両手を置いた。相手の都合を先に考えると、言わない理由ばかり見つかりそうだった。"
+        },
+        {
+          "speaker": "player",
+          "text": "あなたが好きです。時間が空いたから会いたいんじゃなくて、会いたくて空ける日が増えました。私と、恋人として会ってほしいです。"
+        },
+        {
+          "speaker": "diavolo",
+          "text": "……わたしも、君と付き合いたい。予定を訊く前に、それを言うべきだったな。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "静かな返事を聞くと、急に手の置き場が気になった。思っていたより指に力が入っていたのだ。彼の手も机へ来て、まだ届かないところで止まる。私は近づける方の手を、自分で選んだ。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「嬉しいです。恋人になってください」と手を差し出す",
+          "next": "end_love_a",
+          "effect": "messageHeart"
+        },
+        {
+          "id": "no",
+          "text": "「今は、友人として会いたいです」と伝え直す",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_char",
+      "title": "結論を渡す",
+      "chapter": 4,
+      "location": "川沿いの静かな店",
+      "storyTime": {
+        "date": "6月22日",
+        "period": "夕方"
+      },
+      "characterId": "diavolo",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "彼はカップを置き直した。もう空いているものを、端へ寄せる必要はなかった。それでも二人の間から物を一つ減らし、私の方へ向く。いつも慎重に残している言葉が、今日は声になるまで見えた気がした。"
+        },
+        {
+          "speaker": "diavolo",
+          "text": "君が好きだ。わたしの恋人になってほしい。会える日を訊くだけでは、伝わらないことだと思った。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私はすぐには返せなかった。彼の顔へ目を上げると、もう言うことを決めた人の固さが残っていた。けれど私の答えは決まっていない。その短い間を、この人も埋めずに待っている。私は一度頷き、自分の言葉を選んだ。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「私も好きです。恋人として会いたいです」と答える",
+          "next": "end_love_b",
+          "effect": "messageHeart"
+        },
+        {
+          "id": "no",
+          "text": "「恋人にはなれません。友人でいたいです」と答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "refusedConfession",
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pact",
+      "title": "互いが持ってくる一時間",
+      "chapter": 4,
+      "location": "川沿いの静かな店",
+      "storyTime": {
+        "date": "6月22日",
+        "period": "夕方"
+      },
+      "characterId": "diavolo",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私も彼も、話さない一日を持ってここへ来ていた。そこを全部知る約束ではなく、会うための時間を自分で一つ作る。毎週ではなくても、取り消したまま消えない約束にしたかった。私は次の予定表を開き、空いている日ではなく、会いたい日を指した。"
+        },
+        {
+          "speaker": "player",
+          "text": "恋人になるのとは違うんです。でも、何かのついでではなく、あなたと話す一時間を作りたい。来られない時は、別の日をお互いから誘いたいです。"
+        },
+        {
+          "speaker": "diavolo",
+          "text": "一時間で、何をする。"
+        },
+        {
+          "speaker": "player",
+          "text": "一曲の話だけで終わってもいいです。途中まで好きな曲を、最後まで聴いても。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼は呆れたように小さく息をついた。それでも予定表をしまわず、自分の空いている日を二つ挙げる。私は片方を選んだ。今日はこの店を私が選んだから、次はそちらが、と伝えると、彼は顔を上げた。"
+        },
+        {
+          "speaker": "diavolo",
+          "text": "分かった。わたしも、その時間を作ろう。君が来られない時は、君の方から次を知らせてほしい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "はいと答えて、日付の隣に名前だけを書いた。肩書きも用件も付けない。こちらへ差し出された小さな予定を、私は同じように自分の手で持っていた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "恋人とは別に、互いが作る時間の相手になる",
+          "next": "end_special",
+          "effect": "homeTogether"
+        },
+        {
+          "id": "friends",
+          "text": "思いついた時に誘い合う友人のままでいたいと言う",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fwb_choice",
+      "title": "夜だけにしない",
+      "chapter": 4,
+      "location": "川沿いの静かな店",
+      "storyTime": {
+        "date": "6月22日",
+        "period": "夕方"
+      },
+      "characterId": "diavolo",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人になる約束は今しないけれど、これからも望む夜には会いたいと話した。彼は少し考えてから、自分もそれを望むと答えた。返事が短くても、私の言葉を聞いたあとの声だと分かる。私は今度は自分から、次の週末の都合を訊いた。"
+        },
+        {
+          "speaker": "diavolo",
+          "text": "予定だけで決めたくはない。当日も、泊まりたいかどうかは互いに聞こう。途中でやめたい時もだ。"
+        },
+        {
+          "speaker": "player",
+          "text": "はい。私もそうしたいです。昼の約束も、そのまま続けたいです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼は頷いた。今日はまだ食事をしていないと話すと、自分もだと返る。どちらの家にも行かず、この店で食べることにした。次の夜を選んだあとで、今ここに座る時間が、少し長くなった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "親密な友人として、次の約束をする",
+          "next": "end_fwb",
+          "effect": "messageBoundaries"
+        },
+        {
+          "id": "day",
+          "text": "これからは昼に会う友人でいたいと伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "end_friend",
+      "title": "違う曲を持ち寄る",
+      "chapter": 5,
+      "location": "街の中古レコード店",
+      "storyTime": {
+        "date": "7月5日",
+        "period": "昼"
+      },
+      "characterId": "diavolo",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人にはなれないと答えた日、彼はカップへ視線を落とし、分かったと言った。私の気持ちを変える説明は続かなかった。数日後、店の入荷案内が送られてきたので、私も見に行きたいと返した。",
+          "when": {
+            "flags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "友人として会いたいと話し、次はレコード店で待ち合わせた。入荷の案内を彼が送り、私は行ける時間を返す。何を買うかは決めずに、軽い鞄で家を出た。",
+          "when": {
+            "notFlags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "店では別々の棚を見た。私が選んだ盤を見せると、彼は裏の曲目へ目を走らせ、最後まで聴くつもりかと訊いた。好きなところを探したいので、と答えた。彼の方にも、私なら選ばない一枚があった。"
+        },
+        {
+          "speaker": "player",
+          "text": "今度、それも聞かせてください。"
+        },
+        {
+          "speaker": "diavolo",
+          "text": "いいだろう。君が気に入るとは限らないが。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "同じものを好きになる必要はなかった。今日はこのあと友人と食事ですと話し、私は先に会計を済ませる。彼は次に空いている日を訊き、別れ際には私の買った袋へ一度目を向けた。帰って聴いてから、また話すことができた。"
+        }
+      ],
+      "choices": [],
+      "ending": "FRIEND"
+    },
+    {
+      "id": "end_love_a",
+      "title": "空けておいた手",
+      "chapter": 5,
+      "location": "川沿いの静かな店",
+      "storyTime": {
+        "date": "6月22日",
+        "period": "夕方"
+      },
+      "characterId": "diavolo",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "差し出した手を取られた時、私は先に笑ってしまった。言えた安心より、返ってきた温かさが嬉しかった。彼は少し不思議そうに見たけれど、その手を離さない。私が落ち着いてから、外を歩こうと言った。"
+        },
+        {
+          "speaker": "diavolo",
+          "text": "君から言わせてしまった。次は、わたしから誘いたい。"
+        },
+        {
+          "speaker": "player",
+          "text": "はい。でも、私も誘います。今日みたいに。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "店を出ると、川から涼しい風が来た。彼は入口を一度振り返り、それから私へ向く。私も見ていたので目が合った。自分で選んだ人の隣へ、今度は言葉を探さずに並べた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "次の休みには、私が見たい店へ来てくれた。席は二人で選び、注文は別々にした。メニューを戻す時、机の下で手が近づく。私は指を重ね、先に会いたいと言った日の続きへ座った。",
+          "storyTime": {
+            "date": "6月29日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_A"
+    },
+    {
+      "id": "end_love_b",
+      "title": "待っていた返事",
+      "chapter": 5,
+      "location": "川沿いの静かな店",
+      "storyTime": {
+        "date": "6月22日",
+        "period": "夕方"
+      },
+      "characterId": "diavolo",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私も好きですと答えると、彼の肩がほんの少し下がった。きちんと置かれていた手が机の上で動き、こちらへ来る。私はその上に手を置いた。聞きたかった言葉を聞けたのは、私だけではなかったのだと思った。"
+        },
+        {
+          "speaker": "diavolo",
+          "text": "……嬉しい。そう答えてもらえて。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "いつもの結論より短い言葉が、ずっと近くで聞こえた。私は嬉しいですと返し、少しだけ強く指を握る。彼が目を上げたので、今の顔をもう少し見ていたくなった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "次の待ち合わせでは、私が角を曲がった時に彼が気づいた。名を呼ぶ声が届き、私は歩く速さを上げる。人前で大げさに抱き寄せる人ではない。それでも差し出された手を見つけ、私は自分の手をそこへ収めた。",
+          "storyTime": {
+            "date": "6月29日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_B"
+    },
+    {
+      "id": "end_fwb",
+      "title": "朝の時刻を話して",
+      "chapter": 5,
+      "location": "ディアボロの自宅",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "夜"
+      },
+      "characterId": "diavolo",
+      "rating": "fade",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私が食べたいものを持って訪ねると、彼は机を空けて待っていた。皿を並べる前に、今夜は泊まりたいと伝える。彼も同じ気持ちだと答え、翌朝は少し早く出ると言った。私もその時刻に帰れます、と返してから、食事の袋を開いた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "食べ終えても音楽はかけなかった。私が何を聴きますかと訊くと、今日は話していたいと返る。彼の隣へ座り、近づいてもいいですかと聞いた。頷きを見てから、自分の手を伸ばす。"
+        },
+        {
+          "speaker": "diavolo",
+          "text": "ああ。わたしも、そうしたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "触れた指を握り返され、私は顔を上げた。近い息を聞き、もう一度小さく頷く。机に残した二つのグラスから離れ、手をつないで部屋の奥へ行った。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝は約束した時刻に身支度をした。靴を履く前、彼が私の忘れた小さな袋を渡す。次に持ってきてもらう用事にはしない人へ、私は帰ってから連絡しますと言った。扉の外では違う方向へ歩く。それぞれの一日へ戻っても、次の誘いを送る先は変わらなかった。",
+          "storyTime": {
+            "date": "6月30日",
+            "period": "朝"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB"
+    },
+    {
+      "id": "end_fwb_love",
+      "title": "望みを隠さずに",
+      "chapter": 5,
+      "location": "川沿いの静かな店",
+      "storyTime": {
+        "date": "6月22日",
+        "period": "夕方"
+      },
+      "characterId": "diavolo",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "今は恋人になりたいと話した。彼が返事をするまでの間、私はつないでもいない指へ力を入れた。知っている体の温かさが、今日の答えを保証してくれるわけではない。それでも、伝えないまま次の夜へ行きたくはなかった。"
+        },
+        {
+          "speaker": "diavolo",
+          "text": "わたしも、君の恋人になりたい。これまでの約束では足りないと思うようになった。君の返事を変えさせるために、夜へ誘う気はなかったが。"
+        },
+        {
+          "speaker": "player",
+          "text": "はい。私が、今そうしたいんです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼は頷き、手を差し出した。私が取ると、その指が静かに閉じる。慣れたものだけではなかった。恋人と呼べる明日を、二人で新しく選んだことが嬉しかった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌週、街で会った彼へ私から近づいた。今日はどちらの家へも寄らず、一緒に一枚選びに行く。棚の前で意見が違い、私は自分の好きな方を指した。彼は相変わらず頑固な顔で、けれど離れずにその曲名を読んでいた。",
+          "storyTime": {
+            "date": "6月29日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB_TO_LOVE"
+    },
+    {
+      "id": "end_special",
+      "title": "用件のない一時間",
+      "chapter": 5,
+      "location": "街の静かな喫茶店",
+      "storyTime": {
+        "date": "7月12日",
+        "period": "昼"
+      },
+      "characterId": "diavolo",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "最初の約束は、彼の都合で一度変わった。来られないという文のあとに、別の日が二つ届く。私は片方を選び直し、今度は自分の都合で場所を変えたいと返した。すべてが予定どおりではなかったけれど、白紙に戻ることもなかった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "店に着くと、彼は入口が見える席にいた。窓も私の方から少し見える。何を話すつもりかと訊かれ、途中までしか聴いていない曲の話をした。最後はまだ知りません、と言うと、彼はいつものように眉を寄せた。"
+        },
+        {
+          "speaker": "diavolo",
+          "text": "それで、わたしに何を聞かせるつもりなんだ。"
+        },
+        {
+          "speaker": "player",
+          "text": "途中で好きだったところです。今日は、そこまで。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼は笑わなかった。けれど時計へ目をやらず、続きを待った。私も彼が持ってきた話を聞いた。話していない残りの一日を、どちらも差し出さないまま、カップの中身が減っていく。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "一時間が過ぎた時、今日はここまで、と私から言った。彼は頷き、次に会える日を訊く。私は今はまだ分からないと答え、決まったら自分から知らせますと続けた。店を出たあとも、誰かの予定を待つだけではない時間が、私の手元に残っていた。"
+        }
+      ],
+      "choices": [],
+      "ending": "SPECIAL"
+    }
+  ],
+  "endingDescriptions": {
+    "FRIEND": {
+      "title": "違う曲を持ち寄る",
+      "description": "同じものを好きになる必要はない。自分の感想と予定を持って、次も会う友人。"
+    },
+    "LOVE_A": {
+      "title": "空けておいた手",
+      "description": "私から会いたい理由を伝える。互いが作った時間で、恋人として隣へ座る。"
+    },
+    "LOVE_B": {
+      "title": "待っていた返事",
+      "description": "慎重に言葉を選ぶ人から告白され、自分の望みを返す。差し出された手を見つけに行く。"
+    },
+    "FWB": {
+      "title": "朝の時刻を話して",
+      "description": "望む夜も翌朝の予定も確かめて会う、親密な友人。それぞれの一日へ帰っていく。"
+    },
+    "FWB_TO_LOVE": {
+      "title": "望みを隠さずに",
+      "description": "重ねた夜に新しい望みを伝え、恋人として選び合う。頑固な横顔の隣へ、自分から近づく。"
+    },
+    "SPECIAL": {
+      "title": "用件のない一時間",
+      "description": "すべてを明かす約束ではなく、自分で作る時間を持ち寄る。恋人とは違う、用件のない相手になる。"
+    }
+  }
+}

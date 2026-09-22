@@ -1,0 +1,1208 @@
+{
+  "id": "bucciarati",
+  "title": "ブチャラティ — 向こう岸まで、二人で",
+  "intro": "片づけの最後まで残る先輩にも、行きたかった場所がある。\n誰かのための用事を終えて、今度は自分たちの行先を選ぶ。",
+  "startEvent": "chairs",
+  "character": {
+    "name": "ブチャラティ",
+    "adult": true,
+    "heightCm": 178,
+    "heightBasis": "二次資料JoJo Wikiの身長欄と出典注記を照合。原作590話プロフィール。アニメ185とは分離。書籍・設定表現物は未照合。AUで同値を採用。",
+    "profile": "判断力と責任感。相手の苦境を見過ごさない。必要なら立場に逆らう強さ。",
+    "personality": [
+      "判断力と責任感",
+      "相手の苦境を見過ごさない",
+      "必要なら立場に逆らう強さ"
+    ],
+    "speech": {
+      "firstPerson": "オレ",
+      "addressing": "主人公は姓/名前、おまえ。後輩にも判断を任せ、必要な場面だけ確認する。",
+      "tone": "簡潔な説明と確認。語尾は感情と相手に合わせる。",
+      "habits": [
+        "簡潔な説明と確認",
+        "決めた後は強い常体",
+        "任せる時は役割を具体的に渡す"
+      ],
+      "signaturePhrases": [],
+      "signatureNote": "日常の固定口癖は採用しない。象徴的な原作台詞と普段の話し方を混同せず、名台詞を貼り付けない。",
+      "avoid": [
+        "何でも許す母親役",
+        "主人公の進路を代わりに決める",
+        "全場面で覚悟と呼ぶ"
+      ]
+    },
+    "referenceSection": "docs/CHARACTER_REFERENCE.md#cast-bucciarati"
+  },
+  "au": {
+    "role": "大学院生。M2・情報システム/HCIは候補",
+    "routeEnabled": true,
+    "addressing": [
+      {
+        "text": "{player.lastName}"
+      }
+    ]
+  },
+  "endingDescriptions": {
+    "FRIEND": {
+      "title": "今度はこっちへ",
+      "description": "作業も行先も、互いに渡して頼れる友人。片づけのあとには、自分が見つけた店へ誘う。"
+    },
+    "LOVE_A": {
+      "title": "隣へ置く荷物",
+      "description": "用事や助けへのお礼ではなく、自分から好きを伝える。握った手と一緒に、新しい扉へ向かう。"
+    },
+    "LOVE_B": {
+      "title": "欲しかった返事",
+      "description": "頼られたいのでなく、一緒にいたいという告白へ答える。先輩の楽しみも、自分の望みも隣へ。"
+    },
+    "FWB": {
+      "title": "朝に渡す容器",
+      "description": "互いが望む夜に会い、朝には自分の予定へ帰る。次の誘いも自分から渡せる、親密な友人。"
+    },
+    "FWB_TO_LOVE": {
+      "title": "同じ岸から始める",
+      "description": "重ねた夜を消さず、今は恋人という名前を選ぶ。着いてからの用事より、今隣にいたい時間を。"
+    },
+    "SPECIAL": {
+      "title": "行先を一つずつ",
+      "description": "誰かの案内役になるだけでなく、互いの見たい場所へ連れ出す相棒。次は自分が誘う番になる。"
+    }
+  },
+  "events": [
+    {
+      "id": "chairs",
+      "chapter": 1,
+      "title": "数え終えるまで",
+      "location": "学生企画の会場",
+      "storyTime": {
+        "date": "4月26日",
+        "period": "夕方"
+      },
+      "characterId": "bucciarati",
+      "rating": "general",
+      "tags": [
+        "bucciarati"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "学生企画の撤収で、借りた椅子を数えていた。院生のブチャラティ先輩は出口に立ち、帰る人へ次々に声を掛けている。最後の一脚が見つからず私が数え直そうとすると、先輩もこちらへ戻ってきた。全部一緒に探すつもりの肩を見て、私は別の棚を指す。"
+        },
+        {
+          "speaker": "player",
+          "text": "私はこっちを確かめます。先輩は、受付で使った方を見てもらえますか。"
+        },
+        {
+          "speaker": "bucciarati",
+          "text": "分かった。見つけたら呼んでくれ。向こうになければ、オレも戻る。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "一脚は布の箱の陰にあった。声を掛けると先輩が引き返し、これで全部だなと椅子の背へ手を置く。私が返す役を引き受ける間、彼は時計を見た。まだ用事があるのかと尋ねると、今日はもう終わりだ、と少し遅れて答えた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "ask",
+          "text": "帰る前に、先輩自身の予定を聞く",
+          "next": "river",
+          "effect": "ask"
+        },
+        {
+          "id": "count",
+          "text": "片づけの確認を分担し、一緒に会場を出る",
+          "next": "river",
+          "effect": "workTogether"
+        }
+      ]
+    },
+    {
+      "id": "river",
+      "chapter": 1,
+      "title": "閉じた案内所",
+      "location": "川の渡し場",
+      "storyTime": {
+        "date": "5月3日",
+        "period": "夕方"
+      },
+      "characterId": "bucciarati",
+      "rating": "general",
+      "tags": [
+        "bucciarati"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "撤収の日、先輩が見ていた時計は、川を渡る小さな船の時刻のためだった。今日は間に合わなかったと聞いて、私も行ってみたいと言った。改めて誘われた休日、二人で着いた渡し場には、今日は運休と紙が出ていた。先輩は案内を読み、短く息を吐く。"
+        },
+        {
+          "speaker": "bucciarati",
+          "text": "確認したつもりだったんだが。悪かった。橋を渡れば、向こうへは行ける。"
+        },
+        {
+          "speaker": "player",
+          "text": "私は船にも乗ってみたかったです。先輩もそうだったなら、今日は橋へ急がなくてもいいんじゃないですか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "代わりの道を決めようとしていた足が止まった。そうだなと頷いたあと、先輩は川の方を見る。私は残念だったと言って隣へ立った。向こう岸へ着くことだけが目的でないと話せたので、今日はここで待たないことも二人で選べた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "boat",
+          "text": "自分も乗りたいから、別の日にまた来たいと話す",
+          "next": "lunch",
+          "effect": "honest",
+          "setFlags": [
+            "wantedBoat"
+          ]
+        },
+        {
+          "id": "bridge",
+          "text": "今日は川辺を歩き、次の運航を確かめる",
+          "next": "lunch",
+          "effect": "compareNotes"
+        }
+      ]
+    },
+    {
+      "id": "lunch",
+      "chapter": 1,
+      "title": "選ぶ側の人",
+      "location": "川辺の小さな食堂",
+      "storyTime": {
+        "date": "5月10日",
+        "period": "昼"
+      },
+      "characterId": "bucciarati",
+      "rating": "general",
+      "tags": [
+        "bucciarati"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "翌週は船に乗れた。短い間、先輩は岸から離れていく景色を見ていたが、どこが見やすいか私へ説明しようとはしなかった。向こう岸で食堂へ入ると、今度はメニューを差し出してくる。おまえの食べたい方でいいと言われ、私はすぐには取らなかった。"
+        },
+        {
+          "speaker": "player",
+          "text": "先輩は、何が食べたいですか。私の好きなものを選ぶだけなら、一人でもできるので。"
+        },
+        {
+          "speaker": "bucciarati",
+          "text": "……オレはこっちだ。少し時間が掛かるらしいが、今日は待てる。おまえは？"
+        },
+        {
+          "speaker": "narrator",
+          "text": "指した料理は、二人で取り分けるには向かないものだった。私は別の皿を選び、それが来るまで飲み物をゆっくり口にする。先輩が自分の注文を待つ顔を、初めて長く見る気がした。運ばれてきた皿へ目が動くと、私もつられて笑った。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "his_wish",
+          "text": "互いに選んだものを食べ、彼の感想を聞く",
+          "next": "message",
+          "effect": "homeTalk",
+          "setFlags": [
+            "heardHisWish"
+          ]
+        },
+        {
+          "id": "two",
+          "text": "「今みたいに、二人で過ごしたかったです」と伝える",
+          "next": "message",
+          "effect": "lunchTwo"
+        },
+        {
+          "id": "meal",
+          "text": "昼をゆっくり食べ、帰りの時刻を確かめる",
+          "next": "message",
+          "effect": "shiftRest"
+        }
+      ]
+    },
+    {
+      "id": "message",
+      "chapter": 2,
+      "title": "帰るだけではなく",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "5月13日",
+        "period": "夜"
+      },
+      "characterId": "bucciarati",
+      "rating": "general",
+      "tags": [
+        "bucciarati"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "ブチャラティ先輩から、船の上で撮った岸の写真が届いた。空も水も少し傾いていたが、私には乗っていた時の揺れが思い出せた。写真をまっすぐにする前に、そのまま保存する。"
+        },
+        {
+          "speaker": "bucciarati",
+          "text": "帰りの方が静かだったな。今度は、着いてすぐ戻らずに歩きたい。おまえも行くか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "誰かをまとめて連れていく案内ではなく、自分がしたいことへ誘う文だった。私は予定を開いてから、すぐには返さず写真をもう一度見る。そこへ写っていない隣の顔も、次はもっと覚えていたかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "glad",
+          "text": "行きたいです。先輩と、もっとゆっくり歩きたい",
+          "next": "call",
+          "effect": "messageHeart",
+          "replyVariants": [
+            {
+              "text": "オレもだ。次は向こうで、オレの行きたい店にも寄ろう。おまえの方も考えておいてくれ。",
+              "when": {
+                "flags": [
+                  "heardHisWish"
+                ]
+              }
+            },
+            {
+              "text": "分かった。急がずにいられる日を選ぼう。"
+            }
+          ],
+          "lockRoute": "bucciarati"
+        },
+        {
+          "id": "notice",
+          "text": "帰りの静かな時間、私も好きでした",
+          "next": "call",
+          "effect": "messageListen",
+          "replyVariants": [
+            {
+              "text": "そうか。おまえもそう思っていたなら、誘ってよかった。"
+            }
+          ],
+          "lockRoute": "bucciarati"
+        },
+        {
+          "id": "thanks",
+          "text": "写真、ありがとうございます。次も日程が合えば行きたいです",
+          "next": "call",
+          "effect": "messageDaily",
+          "replyVariants": [
+            {
+              "text": "また空いている日を知らせてくれ。こちらも確かめておく。"
+            }
+          ],
+          "lockRoute": "bucciarati"
+        }
+      ],
+      "message": true
+    },
+    {
+      "id": "call",
+      "chapter": 2,
+      "title": "折り返す前に",
+      "location": "川の対岸の通り",
+      "storyTime": {
+        "date": "5月18日",
+        "period": "昼"
+      },
+      "characterId": "bucciarati",
+      "rating": "general",
+      "tags": [
+        "bucciarati"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "二度目に渡った日は、先輩が行きたいと言っていた古い道具の店へ向かった。入口で端末が鳴り、学内の企画の片づけについて尋ねられる。先輩はその場で説明し始め、私も店へ入らずに待った。やがて電話を切ると、少し戻った方が早いかもしれないと言った。"
+        },
+        {
+          "speaker": "player",
+          "text": "今日、先輩がいなくてもできることなら、私はここを一緒に見たいです。戻る必要があるなら、今日は私は店に残ります。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "引き止めるために、向こうの用事を小さく言いたくはなかった。先輩はもう一度連絡を取り、残っている人でできる手順を確認した。終わったら知らせてくれと言って端末をしまう。私へ謝る前に、自分も今日は戻りたくなかったと話した。"
+        },
+        {
+          "speaker": "bucciarati",
+          "text": "オレが行けば早い、だけで決めるところだった。今日は、おまえとここに来たかったんだ。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "stay_day",
+          "text": "「私も」と答え、二人の予定で店へ入る",
+          "next": "home",
+          "effect": "conferencePractical",
+          "setFlags": [
+            "keptOurDay"
+          ]
+        },
+        {
+          "id": "beside",
+          "text": "その言葉が嬉しかったと、先輩の顔を見て伝える",
+          "next": "home",
+          "effect": "walkClose"
+        },
+        {
+          "id": "finish",
+          "text": "片づけの完了連絡を確かめてから、一緒に店を見る",
+          "next": "home",
+          "effect": "walkHome"
+        }
+      ]
+    },
+    {
+      "id": "home",
+      "chapter": 3,
+      "title": "持ち手を渡す",
+      "location": "ブチャラティの自宅",
+      "storyTime": {
+        "date": "6月1日",
+        "period": "夕方"
+      },
+      "characterId": "bucciarati",
+      "rating": "general",
+      "tags": [
+        "bucciarati"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "向こう岸で買った小さな道具立てを見せると誘われ、今日は先輩の家へ来た。使い道を決める前に買ってしまったと聞いて、私は少し驚いた。机の上に置いた彼は、意外かと笑う。私も、少し、と正直に答えた。"
+        },
+        {
+          "speaker": "bucciarati",
+          "text": "欲しかったんだ。置くものはあとで決めればいい。全部、役に立つから選ぶわけじゃない。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私はどこが好きか尋ね、先輩が木の色を指すのを隣で見た。食事の支度を始める時、手伝えることを訊くと、皿を頼まれる。戸棚の場所を教えてもらい、二人分を机へ運んだ。食べ終えるまで道具立ては空のままだった。"
+        },
+        {
+          "speaker": "player",
+          "text": "空っぽで置いてあるのも、好きです。先輩が選んだものだって、今日は分かるので。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "talk",
+          "text": "食事のあとも、先輩自身の好きなものを聞く",
+          "next": "evening",
+          "effect": "hotelTalk"
+        },
+        {
+          "id": "rest",
+          "text": "片づけを分け合い、そのあと少し休む",
+          "next": "evening",
+          "effect": "homeRest"
+        }
+      ]
+    },
+    {
+      "id": "evening",
+      "chapter": 3,
+      "title": "帰さない理由を、聞く",
+      "location": "ブチャラティの自宅",
+      "storyTime": {
+        "date": "6月1日",
+        "period": "夜"
+      },
+      "characterId": "bucciarati",
+      "rating": "general",
+      "tags": [
+        "bucciarati"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "帰る時刻を確かめようと鞄へ触れると、先輩がまだ急がなくてもいいと言った。送りましょうかではない言葉に、私は顔を上げる。先輩は私の手から鞄を取らず、向かいの椅子へ座って待った。"
+        },
+        {
+          "speaker": "bucciarati",
+          "text": "オレは、もう少し一緒にいたい。おまえに予定があるなら、またにする。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "頼れる人へ用事を渡すのとは逆に、彼の欲しい時間を聞かされた。私も残りたいと思っていた。鞄を膝へ戻し、今日は何をしてもらいたいのではなく、どんな近さにいたいかを話したかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "stay",
+          "text": "「私も。今夜は、先輩の近くにいたいです」と伝える",
+          "next": "consent",
+          "effect": "hotelInvite",
+          "when": {
+            "min": {
+              "trust": 45,
+              "desire": 8
+            }
+          }
+        },
+        {
+          "id": "next_time",
+          "text": "「また一緒に過ごしたいです」と答え、今日は帰る",
+          "next": "next",
+          "effect": "walkHome"
+        }
+      ]
+    },
+    {
+      "id": "consent",
+      "chapter": 3,
+      "title": "任せない答え",
+      "location": "ブチャラティの自宅",
+      "storyTime": {
+        "date": "6月1日",
+        "period": "夜"
+      },
+      "characterId": "bucciarati",
+      "rating": "general",
+      "tags": [
+        "bucciarati"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先輩は一度頷き、こちらを見た。大丈夫かと先に気遣われるかと思ったが、彼は自分の言葉を選ぶ方から始めた。私も鞄を足元へ置き、顔を上げる。"
+        },
+        {
+          "speaker": "bucciarati",
+          "text": "オレも、おまえに触れたい。今夜、一緒にいてほしいと思っている。おまえはどうだ。"
+        },
+        {
+          "speaker": "player",
+          "text": "私もそうしたいです。でも今夜のことと、恋人になる約束は別にして話したい。途中でやめたくなったら、私も言います。"
+        },
+        {
+          "speaker": "bucciarati",
+          "text": "ああ。オレも言う。どちらが止めたくなっても、その時に止めよう。今から帰りたいなら、それでもいい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩が決めてくれるのを待つ場所ではなかった。私は近づきたいと思っている自分の手を見て、それから彼を見る。任せるのではなく、一緒にいたいと自分の声で言いたかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「今夜は、一緒にいたいです」と答える",
+          "next": "night",
+          "effect": "consent",
+          "setFlags": [
+            "consented",
+            "hadNight"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「今日は帰ります」と伝える",
+          "next": "next",
+          "effect": "walkHome",
+          "setFlags": [
+            "declinedTouch"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "night",
+      "chapter": 3,
+      "title": "同じ側へ座る",
+      "location": "ブチャラティの自宅",
+      "storyTime": {
+        "date": "6月1日",
+        "period": "夜"
+      },
+      "characterId": "bucciarati",
+      "rating": "fade",
+      "tags": [
+        "bucciarati"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私は椅子を離れ、先輩の隣へ座り直した。彼が手を差し出すので、こちらから重ねる。顔へ触れてもいいかと聞かれ、はいと答えて向き直った。先輩が少し身を屈めるのを待ち、最後の距離は自分から近づいた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "唇が離れると、先輩が私を見る。私は頷く代わりにもう一度と声にした。頬へ寄せた指がゆっくり動き、彼も近づく。二人で席を立ち、灯りを落とした部屋の奥へ移るまで、私は自分からつないだ手を離さなかった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝、先輩は身を起こす前に一度こちらを見た。私も目を開けていたので、近くで挨拶をする。朝食を一緒に食べてから帰りたいと話すと、それならオレもそうしようと返った。次の予定を聞く前に、彼の手が布団の上で止まった。",
+          "storyTime": {
+            "date": "6月2日",
+            "period": "朝"
+          }
+        },
+        {
+          "speaker": "bucciarati",
+          "text": "オレは、またおまえとこうして会いたい。おまえが今どうしたいかも、聞かせてくれ。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "again",
+          "text": "「恋人の約束はせず、また望む夜に会いたいです」と答える",
+          "next": "next",
+          "effect": "messageBoundaries",
+          "setFlags": [
+            "ongoing"
+          ]
+        },
+        {
+          "id": "more",
+          "text": "「また夜も会いたいです。先輩をもっと好きになりました」と答える",
+          "next": "next",
+          "effect": "messageAgain",
+          "setFlags": [
+            "ongoing"
+          ]
+        },
+        {
+          "id": "day",
+          "text": "「これからは昼に会う友人でいたいです」と答える",
+          "next": "next",
+          "effect": "messageDaily",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ],
+      "when": {
+        "flags": [
+          "consented"
+        ]
+      }
+    },
+    {
+      "id": "next",
+      "chapter": 4,
+      "title": "渡る前に話すこと",
+      "location": "川の渡し場近く",
+      "storyTime": {
+        "date": "6月22日",
+        "period": "夕方"
+      },
+      "characterId": "bucciarati",
+      "rating": "general",
+      "tags": [
+        "bucciarati"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "六月は街へ出かけ、互いが望んだ夜には先輩の家でも会った。朝にはそれぞれの用事へ戻り、学内で顔を合わせても役目は別々だった。私も待つだけでなく、自分から会いたい日を伝えるようになっている。",
+          "when": {
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "昼に会う友人でいたいと答えてから、次は渡し場で会った。先輩は夜の気持ちを変えさせようとはしなかった。少し照れくさいまま、私は自分が見つけた店を地図へ指すところから話し始めた。",
+          "when": {
+            "flags": [
+              "hadNight",
+              "endedNight"
+            ],
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "六月にも街を歩き、用事が合わない日は別の日へ変えた。頼まれ事を一緒にする日もあったが、それだけで会うのを終えないことが増えた。私も見たい場所ができると、先に彼の予定を尋ねた。",
+          "when": {
+            "notFlags": [
+              "hadNight"
+            ]
+          }
+        },
+        {
+          "speaker": "bucciarati",
+          "text": "次の船までは、まだ時間がある。先に話すか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私が連絡に書いた、話したいこと、という一言を覚えていてくれた。先輩がベンチへ座り、私も隣へ荷物を置く。誰かを送り出すために出口へ立っていた人が、今日はここに留まっている。私は川を見ず、その顔へ向いた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "tell",
+          "text": "自分から、先輩が好きだと伝える",
+          "next": "confess_player",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 35,
+              "romanceChar": 25
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "listen",
+          "text": "先輩が言おうとしている言葉を聞く",
+          "next": "confess_bucciarati",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 20,
+              "romanceChar": 35
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "our_way",
+          "text": "二人が行きたいところへ連れ出し合う相棒になりたいと話す",
+          "next": "own_way",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 35,
+              "romanceChar": 30,
+              "comfort": 20
+            },
+            "flags": [
+              "wantedBoat",
+              "heardHisWish",
+              "keptOurDay"
+            ],
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "nights",
+          "text": "これからも、望む夜に会う友人でいたいと話す",
+          "next": "fwb_choice",
+          "when": {
+            "min": {
+              "trust": 50,
+              "desire": 25,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "love",
+          "text": "「今は、先輩の恋人になりたいです」と伝える",
+          "next": "end_fwb_love",
+          "when": {
+            "min": {
+              "trust": 60,
+              "romancePlayer": 50,
+              "romanceChar": 40,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          },
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "friends",
+          "text": "互いに頼り、気軽に出かける友人でいたいと伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_player",
+      "chapter": 4,
+      "title": "何も頼まないで",
+      "location": "川の渡し場近く",
+      "storyTime": {
+        "date": "6月22日",
+        "period": "夕方"
+      },
+      "characterId": "bucciarati",
+      "rating": "general",
+      "tags": [
+        "bucciarati"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "ブチャラティ先輩、と呼ぶと、彼が私を見る。何か頼みたい時の声になりそうで、私は一度息を吸い直した。助けてもらったことを並べれば言いやすいが、それだけでは今伝えたい気持ちへ届かなかった。"
+        },
+        {
+          "speaker": "player",
+          "text": "先輩が好きです。何も困っていなくても、会いたい。先輩が自分の行きたい場所の話をする時、その隣にいたいと思うんです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼が小さく頷いた。聞いてくれる人へ全部任せるのでなく、私は自分の続きを言いたかった。船の音が遠くから届いても、今だけはそちらを見なかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "like",
+          "text": "「私と付き合ってください」と伝える",
+          "next": "end_love_a",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "choose",
+          "text": "「先輩の恋人になりたいです。私を選んでもらえますか」",
+          "next": "end_love_a",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "wait",
+          "text": "「友人として、これからも会いたいです」と伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_bucciarati",
+      "chapter": 4,
+      "title": "欲しい、と言う声",
+      "location": "川の渡し場近く",
+      "storyTime": {
+        "date": "6月22日",
+        "period": "夕方"
+      },
+      "characterId": "bucciarati",
+      "rating": "general",
+      "tags": [
+        "bucciarati"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先輩は膝へ手を置き、自分にも話があると言った。いつも誰かへ行く先を示す指が、今日は何も指していない。私が頷くと、彼は少しだけ息を吐き、こちらを見たまま話した。"
+        },
+        {
+          "speaker": "bucciarati",
+          "text": "オレは、おまえが好きだ。友人として会うだけではなく、恋人になりたい。おまえと一緒にいる時間を、オレ自身が欲しいと思っている。付き合ってくれるか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "頼られることではなく、欲しいものを言われた。私はすぐ返せず、彼の手へ目を落とす。何も掴まないまま待っている指を見てから、自分も誰のためでない答えを選べると思った。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「私も好きです。先輩と付き合いたいです」と答える",
+          "next": "end_love_b",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「恋人にはなれません。友人でいたいです」と答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "refusedConfession",
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "own_way",
+      "chapter": 4,
+      "title": "誘う方も、交代で",
+      "location": "川の渡し場近く",
+      "storyTime": {
+        "date": "6月22日",
+        "period": "夕方"
+      },
+      "characterId": "bucciarati",
+      "rating": "general",
+      "tags": [
+        "bucciarati"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人という形ではなくても、自分たちが行きたい場所へ連れ出し合う相棒でいたい。私は向こう岸を見てからそう話した。先輩が誰かを案内する時のように頷きかけたので、行先も片方任せにはしたくないですと続ける。"
+        },
+        {
+          "speaker": "bucciarati",
+          "text": "分かった。オレも、自分が行きたいところを出す。おまえが喜びそうな場所だけでなくていいんだな。"
+        },
+        {
+          "speaker": "player",
+          "text": "はい。私も自分で選びます。うまくいかなかった日に、二人で別の道を考えられる相手でいたいです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼は初めて来て船が動いていなかった日を思い出したのか、少し笑った。次はこっちだと地図を開き、私はまだ行ったことのない通りを覗く。手伝いの予定表には書かれない、小さな行先だった。"
+        },
+        {
+          "speaker": "bucciarati",
+          "text": "途中で疲れたら座ろう。そこで帰りたくなったら帰る。オレも、その時の気持ちを言う。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "では次は先輩の番ですねと答えると、その次はおまえだ、と返る。片方が連れていき、もう片方がついていくだけではない約束へ、私は自分の行きたい場所も一つ重ねた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "partners",
+          "text": "互いに行先を選び、連れ出し合う相棒になる",
+          "next": "end_special",
+          "effect": "homeTogether",
+          "setFlags": [
+            "ourWay"
+          ]
+        },
+        {
+          "id": "friend",
+          "text": "今は気が向いた時に誘う友人でいたいと伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fwb_choice",
+      "chapter": 4,
+      "title": "その日にも聞く",
+      "location": "川の渡し場近く",
+      "storyTime": {
+        "date": "6月22日",
+        "period": "夕方"
+      },
+      "characterId": "bucciarati",
+      "rating": "general",
+      "tags": [
+        "bucciarati"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人の約束はせず、望む夜にも会いたいと話すと、先輩は頷く前に私の顔を見た。オレもそうしたい、と返る。その声を聞いてから、私は自分の肩へ入っていた力を抜いた。"
+        },
+        {
+          "speaker": "bucciarati",
+          "text": "会う日にも、泊まりたいかは互いに聞こう。途中でやめたい時もだ。前にそうしたからといって、次も決まるわけじゃない。"
+        },
+        {
+          "speaker": "player",
+          "text": "はい。私からも誘いますし、違うと思った時は言います。昼に一緒に出かけるのも、続けたいです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩が自分の予定を話し、私も来られる日を二つ挙げた。そのうちの一つを選んでから、今日は船に乗ろうと立つ。夜の約束のあとに残った夕方を、自分たちのために使いたかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "continue",
+          "text": "親密な友人として、次の夜を二人で選ぶ",
+          "next": "end_fwb",
+          "effect": "messageBoundaries"
+        },
+        {
+          "id": "daytime",
+          "text": "考え直し、昼に会う友人でいたいと伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "end_friend",
+      "chapter": 5,
+      "title": "今度はこっちへ",
+      "location": "学生企画の会場",
+      "storyTime": {
+        "date": "7月6日",
+        "period": "昼"
+      },
+      "characterId": "bucciarati",
+      "rating": "general",
+      "tags": [
+        "bucciarati"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人にはなれないと答えると、先輩は少し目を伏せ、分かったと言った。その場で何でもない話へ戻らずに別れた。次の企画へ私も参加すると知らせると、一緒に手を貸してくれるなら助かると返事が来た。",
+          "when": {
+            "flags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "昼に会う友人でいたいと答えてから、次は学内の企画で顔を合わせた。夜の返事を変えさせる話はなかった。少し照れくさい私も、自分からできる作業を取りに行くと、いつもの声で先輩へ話しかけられた。",
+          "when": {
+            "flags": [
+              "hadNight",
+              "endedNight"
+            ],
+            "notFlags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "友人としてまた出かけようと約束し、今日は学内の企画で顔を合わせた。会場にはほかの学生も集まり、先輩が一人で手を出す前に作業を分けている。私も自分の担当を選び、終わったら声を掛けると伝えた。",
+          "when": {
+            "notFlags": [
+              "hadNight",
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "bucciarati",
+          "text": "それなら、オレは向こうを片づける。終わったら、今日は何を食べたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私が見つけた店がありますと答えると、じゃあ案内してくれと返った。帰る人を見送る役も別の学生へ渡し、二人で会場を出る。今日は自分が先に曲がる角を知っている。その小さなことまで、気楽に嬉しかった。"
+        }
+      ],
+      "choices": [],
+      "ending": "FRIEND"
+    },
+    {
+      "id": "end_love_a",
+      "chapter": 5,
+      "title": "隣へ置く荷物",
+      "location": "川の渡し場近く",
+      "storyTime": {
+        "date": "6月22日",
+        "period": "夕方"
+      },
+      "characterId": "bucciarati",
+      "rating": "general",
+      "tags": [
+        "bucciarati"
+      ],
+      "body": [
+        {
+          "speaker": "bucciarati",
+          "text": "オレも好きだ。おまえと付き合いたい。言ってくれて、嬉しい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "返事を聞くと、用意していた次の言葉がいらなくなった。私は自分から手を出し、先輩が取ってくれるのを待つ。荷物を脇へ置いて差し出された手に触れ、ようやく笑うことができた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "次の休日、先輩を自分の見つけた店へ誘った。入口の前で迷う私へ、急がなくていいと声が来る。誰かを待たせている気持ちより、一緒に選んでいる気持ちで扉へ向かった。店に入る前、つないだ手を一度だけ握り直した。",
+          "storyTime": {
+            "date": "6月29日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_A"
+    },
+    {
+      "id": "end_love_b",
+      "chapter": 5,
+      "title": "欲しかった返事",
+      "location": "川の渡し場近く",
+      "storyTime": {
+        "date": "6月22日",
+        "period": "夕方"
+      },
+      "characterId": "bucciarati",
+      "rating": "general",
+      "tags": [
+        "bucciarati"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私も好きですと答えると、先輩は少し笑い、それから長く息を吐いた。普段ならすぐ次の話へ進む人が、今はまだ座っている。私はその横へ近づき、手をつないでいいですかと尋ねた。"
+        },
+        {
+          "speaker": "bucciarati",
+          "text": "ああ。オレも、そうしたかった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "握り返された手が温かく、私は顔を見上げた。何かしてもらうためではない距離で、先輩もこちらを見ている。船の案内が聞こえるまで、二人とも先に立ち上がらなかった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌週、待ち合わせへ来た彼が、今日は寄りたい店があると言った。私も行きたいですと答えて隣へ並ぶ。行先を決めてもらったのではなく、その人の楽しみを聞けたのが嬉しい。帰りには、自分の寄りたい場所も同じ声で頼んだ。",
+          "storyTime": {
+            "date": "6月29日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_B"
+    },
+    {
+      "id": "end_fwb",
+      "chapter": 5,
+      "title": "朝に渡す容器",
+      "location": "ブチャラティの自宅",
+      "storyTime": {
+        "date": "7月6日",
+        "period": "夜"
+      },
+      "characterId": "bucciarati",
+      "rating": "fade",
+      "tags": [
+        "bucciarati"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "互いに今夜会いたいと伝え、私は夕食の一品を持って先輩の家へ来た。今夜も一緒にいたいと口にすると、オレもだと返る。翌朝の予定を確かめてから、二人で食卓へ皿を並べた。机の端の道具立てには、今日は彼のペンが一本入っていた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "食後、隣へ座り直して手を取る。近づいてほしいと伝えると、先輩も顔を向けた。少し身を屈めた彼へ自分から唇を寄せ、離れたあとにもう一度目を合わせる。二人で灯りを落とし、奥の部屋へ移った。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝、洗った容器を自分の鞄へ入れた。先輩が忘れ物はないかと訊くので、大丈夫ですと答える。玄関を出る前に、次は私から誘いますと伝えた。ああ、待っていると返った声を聞いてから、自分の一日へ歩き出した。",
+          "storyTime": {
+            "date": "7月7日",
+            "period": "朝"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB"
+    },
+    {
+      "id": "end_fwb_love",
+      "chapter": 5,
+      "title": "同じ岸から始める",
+      "location": "川の渡し場近く",
+      "storyTime": {
+        "date": "6月22日",
+        "period": "夕方"
+      },
+      "characterId": "bucciarati",
+      "rating": "general",
+      "tags": [
+        "bucciarati"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "今は恋人になりたいと伝えると、先輩は私へ向き直った。夜に近くで過ごしたことを、返事の代わりにはしたくなかった。私は彼の目を見て、自分の言葉を引っ込めずに待った。"
+        },
+        {
+          "speaker": "bucciarati",
+          "text": "オレも、おまえの恋人になりたい。今までの時間をなくしたいんじゃない。その続きに、今はそういう名前を選びたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私もですと答え、手を出した。彼が同じところへ伸ばしてくれた指を握る。よく知っていた近さに新しい言葉が加わり、私は少し笑って、今日も一緒に渡りたいと伝えた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "次の休日、船の上で隣へ立った。先輩が向こう岸を指す前に、私はもう少しここから見ていたいと話す。彼は頷いて手を取り、自分も今はここがいいと答えた。着いてからの予定を、少しだけ後へ回した。",
+          "storyTime": {
+            "date": "6月29日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB_TO_LOVE"
+    },
+    {
+      "id": "end_special",
+      "chapter": 5,
+      "title": "行先を一つずつ",
+      "location": "川の対岸の通り",
+      "storyTime": {
+        "date": "7月13日",
+        "period": "昼"
+      },
+      "characterId": "bucciarati",
+      "rating": "general",
+      "tags": [
+        "bucciarati"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先輩が選んだ細い通りを歩き、古い看板の前で立ち止まった。店はまだ開いていない。前なら代わりをすぐ探しただろうかと思って見ると、彼は、待ってでも入りたいと自分から言った。私はそれなら近くを一回りしたいと答える。"
+        },
+        {
+          "speaker": "bucciarati",
+          "text": "オレも行く。だが、開く時間には戻ろう。今日はここを見たいんだ。"
+        },
+        {
+          "speaker": "player",
+          "text": "はい。じゃあ、途中の寄り道は私が選んでもいいですか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼が頷き、私は気になっていた路地を指した。恋人の約束ではないけれど、一人の案内へもう一人がついていく日でもなかった。見たいものを一つずつ持ち寄り、帰る頃にはどちらが誘ったのか思い出す必要がなくなる。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "開いた店へ戻ると、先輩が先に扉を押した。今日は欲しいものがある顔だったので、私は少し後ろからその横顔を見る。次は私が連れ出す番だと考えながら、同じ扉を自分の足でくぐった。"
+        }
+      ],
+      "choices": [],
+      "ending": "SPECIAL"
+    }
+  ]
+}

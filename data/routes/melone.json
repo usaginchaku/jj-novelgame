@@ -1,0 +1,1235 @@
+{
+  "id": "melone",
+  "title": "メローネ — まだ書かない頁",
+  "intro": "外れた予想も、答えの出ない一行も。\n見せるところを自分で選んで、次の頁を渡したくなる。",
+  "startEvent": "tea",
+  "character": {
+    "name": "メローネ",
+    "adult": true,
+    "heightCm": 174,
+    "heightBasis": "二次資料JoJo Wikiの身長欄と出典注記を照合。黄金の風アニメ設定表CR200-00。書籍・設定表現物は未照合。AUで同値を採用。",
+    "profile": "観察と分析に熱中。新しい反応への興味。独特の距離感。興奮すると説明が増える。",
+    "personality": [
+      "観察と分析に熱中",
+      "新しい反応への興味",
+      "独特の距離感",
+      "興奮すると説明が増える"
+    ],
+    "speech": {
+      "firstPerson": "おれ",
+      "addressing": "主人公は名前/きみ、相手によってあんた。分析や評価だけで会話を閉じない。",
+      "tone": "評価の語と質問が続く。語尾は感情と相手に合わせる。",
+      "habits": [
+        "評価の語と質問が続く",
+        "好結果にディ・モールト",
+        "平常は常体"
+      ],
+      "signaturePhrases": [
+        "ディ・モールト"
+      ],
+      "signatureNote": "公式アニメ紹介で確認できる評価時の口癖。反応が良い時だけ使い、人物の全台詞をこの語に寄せない。",
+      "avoid": [
+        "人を研究材料だけにする",
+        "無断接触や個人情報収集を色気にする",
+        "スタンドの台詞を本人の一人称と混同"
+      ]
+    },
+    "referenceSection": "docs/CHARACTER_REFERENCE.md#cast-melone"
+  },
+  "au": {
+    "role": "博士課程・バイオインフォマティクス系は候補",
+    "routeEnabled": true,
+    "addressing": [
+      {
+        "text": "{player.lastName}"
+      }
+    ]
+  },
+  "events": [
+    {
+      "id": "tea",
+      "title": "まだ飲んでいない一杯",
+      "chapter": 1,
+      "location": "街の茶葉市",
+      "storyTime": {
+        "date": "5月11日",
+        "period": "昼"
+      },
+      "characterId": "melone",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "小さな紙コップを持ったまま、私は匂いの説明を読んでいた。花のよう、と書かれた茶葉からは、雨の後の木に似た匂いがする。隣で同じ札を見ていたメローネ先輩が、私の止まった手に気づいた。学内の催しで何度か話したことはあったけれど、休みの日の服を近くで見るのは初めてだった。"
+        },
+        {
+          "speaker": "melone",
+          "text": "何か嫌いな匂いがした？　それとも、覚えのある匂いかな。飲む前に止まったのが面白いな。"
+        },
+        {
+          "speaker": "player",
+          "text": "面白がるの、少し待ってください。まだ、私も分かってないので。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "言いながら一口飲んだ。熱さのあとから甘みが来る。先輩は続きを聞きたそうに口を開き、私がもう一口飲むのを見て閉じた。待ってもらうと、案外ゆっくり考えられた。私は札へ目を戻し、花より雨の日の木が浮かんだ、と話した。"
+        },
+        {
+          "speaker": "melone",
+          "text": "雨か。おれはそう感じなかった。もう一度飲んでみる。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "自分のコップへ視線を落とす先輩のまつ毛が、湯気で一瞬霞んだ。私の中身を言い当てられたのではなく、聞いた人の顔が変わった。それなら、もう少し話してもよかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "compare",
+          "text": "自分に浮かんだ匂いを、言い直さず伝える",
+          "next": "bitter",
+          "effect": "workTogether",
+          "setFlags": [
+            "ownWords"
+          ],
+          "lockRoute": "melone"
+        },
+        {
+          "id": "invite",
+          "text": "「次の一杯も一緒に飲みませんか」と誘う",
+          "next": "bitter",
+          "effect": "gameDate",
+          "lockRoute": "melone"
+        }
+      ]
+    },
+    {
+      "id": "bitter",
+      "title": "外れた予想",
+      "chapter": 1,
+      "location": "茶葉店の試飲席",
+      "storyTime": {
+        "date": "5月18日",
+        "period": "昼"
+      },
+      "characterId": "melone",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先週の店が常設の試飲席を持っていると知り、二人で来てみた。先輩は私が前に買った茶葉を覚えていて、今日も同じ系統を選びかける。その手が袋へ届く前に、私は別の札を指した。苦いと書いてある方が、今日は気になった。"
+        },
+        {
+          "speaker": "melone",
+          "text": "前は甘みの残る方を選んだだろう。こっちは、かなり違うと思うよ。"
+        },
+        {
+          "speaker": "player",
+          "text": "はい。違うのを飲みたい日なんです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩は自分の予想を外した札を、少し不満そうに見た。私が受け取って口をつけると、苦さで眉が寄る。けれど嫌いではなかった。その顔だけで結論を出さないでほしくて、私はコップを置かずに笑った。"
+        },
+        {
+          "speaker": "player",
+          "text": "苦いです。でも、今日はこれがいいです。顔と答え、違いました？"
+        },
+        {
+          "speaker": "melone",
+          "text": "違ったね。……もう少し聞きたくなる答えだ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩も同じものを頼んだ。一口目では何も言わず、二口目で舌に残る、と呟く。私はその横顔を見る方に気を取られ、自分のコップを傾けすぎた。縁へ来た最後の一滴を飲んでから、少し冷めた方が好きだと付け足した。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "different",
+          "text": "その日の好みは、自分で選ばせてほしいと笑って言う",
+          "next": "book",
+          "effect": "shiftHelp",
+          "setFlags": [
+            "changedTaste"
+          ]
+        },
+        {
+          "id": "near",
+          "text": "先輩の感想も聞きたくて、隣へ椅子を寄せる",
+          "next": "book",
+          "effect": "walkClose"
+        }
+      ]
+    },
+    {
+      "id": "book",
+      "title": "書かない頁",
+      "chapter": 1,
+      "location": "小さな本の即売会",
+      "storyTime": {
+        "date": "5月25日",
+        "period": "昼"
+      },
+      "characterId": "melone",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "食べたものの記録を薄い本にした店を、私が先輩へ教えた。会場の机に並んだ冊子には、値段や点数だけではなく、帰りに見た犬の絵まで載っている。先輩は興味を持つと頁を戻る回数が増えた。私は隣で、味を忘れたとだけ書かれた一行に笑った。"
+        },
+        {
+          "speaker": "melone",
+          "text": "何も覚えていないのに、残したんだね。ここまで書くなら、何を頼んだかくらいは——。"
+        },
+        {
+          "speaker": "player",
+          "text": "忘れた日に読める頁が、私にも欲しいです。全部きちんと覚えてなくても。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩は言葉の途中で私を見た。それから同じ頁を開き直し、絵の下の余白へ指を置く。店の人に一冊ずつ代金を払い、外の段へ腰を下ろした。私も小さなノートへ書いてみたいと話すと、先輩はすぐ見たいと言った。"
+        },
+        {
+          "speaker": "player",
+          "text": "見せる頁は、私が選びますね。人には言いたくないことも、書くと思うので。"
+        },
+        {
+          "speaker": "melone",
+          "text": "そこまで言われると気になるけど。……分かった。見せたいところからでいい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "鞄へしまうまで視線が追ってきたので、私はわざと裏表紙を向けた。先輩は少し笑い、自分の買った本を開く。次に見せる一頁なら、帰り道でもう思いつきかけていた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "page",
+          "text": "先輩に見せたい、今日の一頁を自分で選ぶ",
+          "next": "message",
+          "effect": "homeTogether",
+          "setFlags": [
+            "chosenPage"
+          ]
+        },
+        {
+          "id": "smile",
+          "text": "「本より先輩の反応を書きたくなりました」と言う",
+          "next": "message",
+          "effect": "walkClose"
+        }
+      ]
+    },
+    {
+      "id": "message",
+      "title": "一行のつづき",
+      "chapter": 1,
+      "location": "自分の部屋",
+      "storyTime": {
+        "date": "5月25日",
+        "period": "夜"
+      },
+      "characterId": "melone",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "家で書いてみると、昼に話した時ほど上手にはまとまらなかった。先輩の前で言わなかったことまで、ペンの先に出てくる。一頁を閉じ、別の頁へ今日買った茶葉の袋を貼った。送る写真は、自分で切り取った小さな範囲だけにした。"
+        },
+        {
+          "speaker": "melone",
+          "text": "この最後の一行、どういう意味かな。「まだ分からないけど、また」。店のこと？"
+        },
+        {
+          "speaker": "narrator",
+          "text": "端末の向こうで、首を傾ける顔が浮かんだ。私の書いた言葉なのに、読まれると急に別の熱を持つ。店の名前を足すこともできた。私は画面の明るさを落とし、今なら伝えたい方を選んだ。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "shop",
+          "text": "また飲みに行きたい、です。次は先輩の好きな店へ",
+          "next": "weather",
+          "effect": "messageDaily",
+          "replyVariants": [
+            {
+              "text": "いいね。おれの好きなものを、きみがどう言うか聞きたい。"
+            }
+          ]
+        },
+        {
+          "id": "you",
+          "text": "店もですが、先輩にも、また会いたいです",
+          "next": "weather",
+          "effect": "messageHeart",
+          "replyVariants": [
+            {
+              "when": {
+                "min": {
+                  "romanceChar": 20
+                }
+              },
+              "text": "おれも、きみの続きを聞くためだけじゃなく会いたい。今、そう思った。"
+            },
+            {
+              "text": "また会おう。まだ話していないことがあるからね。"
+            }
+          ]
+        }
+      ],
+      "message": true
+    },
+    {
+      "id": "weather",
+      "title": "知らない出口",
+      "chapter": 1,
+      "location": "雨上がりの公園",
+      "storyTime": {
+        "date": "6月1日",
+        "period": "昼"
+      },
+      "characterId": "melone",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先輩が調べてきた店は、急な休みだった。貼り紙の前で端末を開き、近い店を順に挙げ始める。私は地図に載っていない細い入口を見つけ、そちらへ顔を向けた。公園の向こうから、濡れた葉の匂いがした。"
+        },
+        {
+          "speaker": "player",
+          "text": "先に、ここを歩いてみませんか。何があるかは、私も知りません。"
+        },
+        {
+          "speaker": "melone",
+          "text": "行き止まりだったら戻ることになる。別の入口まで、どれくらいあるか——。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "確かめる声を聞きながら、私は入口の案内板まで歩いた。私道ではないと読めたので振り返る。先輩はまだ画面を見ていたけれど、私が待っていると気づくと、少し早足で来た。"
+        },
+        {
+          "speaker": "melone",
+          "text": "じゃあ、まずこっちだ。戻ることになっても、きみが誘ったから、とは言わないよ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "曲がった先には何もなかった。長い塀と、落ちた花びらが一つ。先輩は拍子抜けした顔をし、私はその顔を見て笑った。無駄だったかと訊かれたので、今のところ好きです、と答える。出口が見えた頃、先輩が次はどこだったかな、と画面を開いた。私もすぐには店の名前が出てこなかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "unknown",
+          "text": "見つけた落ち葉を一枚描き、何もなかった道も残す",
+          "next": "home",
+          "effect": "conferencePractical",
+          "setFlags": [
+            "unplannedPath"
+          ]
+        },
+        {
+          "id": "together",
+          "text": "「先輩と来たから、覚えておきたいです」と伝える",
+          "next": "home",
+          "effect": "rehearse"
+        }
+      ]
+    },
+    {
+      "id": "home",
+      "title": "閉じた方のノート",
+      "chapter": 1,
+      "location": "メローネの自宅",
+      "storyTime": {
+        "date": "6月8日",
+        "period": "夕方"
+      },
+      "characterId": "melone",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "買った茶葉を淹れようと誘われ、私は先輩の家へ来た。食事のあとの机に、別々の小さなノートを開く。先輩の頁には短い言葉と矢印が詰まり、同じ茶葉なのに私の描いた窓の絵とはほとんど似ていない。なぜ窓なのかと訊かれ、冷めるのを待って見ていたから、と答えた。"
+        },
+        {
+          "speaker": "melone",
+          "text": "そこを覚えたのか。味の順番じゃなくて。ディ・モールト……きみの頁を読むと、おれの記録が急に狭く見える。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "褒められて嬉しくなり、次の頁も見せようとして手が止まった。先輩は気づいて身を寄せたけれど、私が閉じるとそこで止まる。知りたい、と率直に言われた。私も見せたい気持ちはあった。それでも今は違うと、表紙へ手を置いた。"
+        },
+        {
+          "speaker": "player",
+          "text": "今日は、ここまでです。次の頁は、また私が決めます。"
+        },
+        {
+          "speaker": "melone",
+          "text": "……そうか。おれの方は、こっちを見せたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "開かれた頁には、湯を入れすぎた日の大きな染みがあった。先輩が慌てて持ち上げたカップを想像し、今度は私から詳しく聞いた。笑って話す声を聞くうち、冷めたお茶を飲みきってしまうのが惜しくなる。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "leave",
+          "text": "次に見せる頁を楽しみにして、今日は帰る",
+          "next": "later",
+          "effect": "homeTogether",
+          "setFlags": [
+            "keptPrivate"
+          ]
+        },
+        {
+          "id": "talk",
+          "text": "「今みたいに笑ってる先輩も、もっと見たいです」と話して帰る",
+          "next": "later",
+          "effect": "homeTalk"
+        },
+        {
+          "id": "stay",
+          "text": "「今夜、先輩のそばにいたいです」と伝える",
+          "next": "consent",
+          "effect": "hotelInvite",
+          "when": {
+            "min": {
+              "trust": 35,
+              "desire": 8
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "consent",
+      "title": "聞いてから近づく",
+      "chapter": 1,
+      "location": "メローネの自宅",
+      "storyTime": {
+        "date": "6月8日",
+        "period": "夜"
+      },
+      "characterId": "melone",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先輩は開いていたノートを閉じ、机の端へ寄せた。近づいていいかと聞かれ、私は頷く。指がまだ届かない距離へ椅子が来ると、さっきまで見せていた頁より、自分の顔の方を隠したくなった。"
+        },
+        {
+          "speaker": "melone",
+          "text": "おれも、きみに触れたい。今夜、一緒にいたい。……今は顔を見て当てる話じゃないね。きみから聞きたい。"
+        },
+        {
+          "speaker": "player",
+          "text": "私も、触れてほしいです。恋人になるかは今決めなくても。でも、途中でやめたくなったら言います。"
+        },
+        {
+          "speaker": "melone",
+          "text": "分かった。恋人の約束とは別にしよう。途中でも帰りたくなっても、言ってくれ。おれも嫌なことは言うし、どちらかが止めたら止める。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩の手が膝の上で一度閉じた。すぐには動かさないことが、待っている人の緊張まで見せた。私は自分の手の冷たさに気づき、指をそっと開いた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「今夜は、一緒にいたいです」と自分から手を取る",
+          "next": "night",
+          "effect": "consent",
+          "setFlags": [
+            "mutualConsent",
+            "hadNight"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「やっぱり今日は帰ります」と伝える",
+          "next": "later",
+          "effect": "walkHome",
+          "setFlags": [
+            "declinedTouch"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "night",
+      "title": "まだ言葉にしない",
+      "chapter": 1,
+      "location": "メローネの自宅",
+      "storyTime": {
+        "date": "6月8日",
+        "period": "夜"
+      },
+      "characterId": "melone",
+      "rating": "fade",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先輩の指は、私の手より温かかった。名前を呼ばれて顔を上げると、いつも次の質問が浮かぶ目が、今は私を見たまま止まっている。私は肩へ手を添え、近くで話すならこれくらいかと思った。けれど声を出す前に、頬へ触れた指で息が揺れた。"
+        },
+        {
+          "speaker": "melone",
+          "text": "嫌じゃない？"
+        },
+        {
+          "speaker": "player",
+          "text": "はい。……もう少し、近くがいいです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "唇が触れたあと、離れたところで目が合った。私は照れて笑い、先輩の袖を引く。その意味は説明せず、もう一度自分から近づいた。立ち上がる時には椅子を机へ戻し、手をつないで奥の部屋へ向かった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌朝、枕の跡がついた頬を見られて、私は先に笑ってしまった。先輩は何か言いかけてやめ、代わりに水を飲むかと訊いた。はいと答えると、二つのコップが手元へ来る。今日は朝食のあとに帰る、と伝えながら、まだ眠そうな声を聞いていた。",
+          "storyTime": {
+            "date": "6月9日",
+            "period": "朝"
+          }
+        }
+      ],
+      "choices": [
+        {
+          "id": "home",
+          "text": "朝食を食べ、自分の家へ戻る",
+          "next": "after_message"
+        }
+      ],
+      "when": {
+        "flags": [
+          "mutualConsent"
+        ]
+      }
+    },
+    {
+      "id": "after_message",
+      "title": "余白から送る",
+      "chapter": 1,
+      "location": "自分の部屋",
+      "storyTime": {
+        "date": "6月9日",
+        "period": "夜"
+      },
+      "characterId": "melone",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "昨夜のことをノートへ書こうとして、私は先に窓を開けた。何を覚えているか数えるほど、まだ言葉にしたくないものが増える。白いまま閉じても、なくなるわけではない。端末に来た通知だけは、すぐに開いた。"
+        },
+        {
+          "speaker": "melone",
+          "text": "机にカップの輪が残っていた。拭いたけど、きみが置いた場所は覚えてる。また会いたいと思ったよ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私の方にも、しまいきれない場所があった。今度は机ではなく、その声の近くへ戻りたいのか。あるいは明るい店でまた話したいのか。私は次の頁を開く代わりに、返事を書いた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "again",
+          "text": "また夜も会いたいです。先輩を、もっと好きになりました",
+          "next": "later",
+          "effect": "messageAgain",
+          "setFlags": [
+            "ongoing"
+          ],
+          "replyVariants": [
+            {
+              "text": "おれも会いたい。その言葉は、次に顔を見てもう一度聞かせて。"
+            }
+          ]
+        },
+        {
+          "id": "nights",
+          "text": "恋人の約束はせず、望む夜に会う友達でいたいです",
+          "next": "later",
+          "effect": "messageBoundaries",
+          "setFlags": [
+            "ongoing"
+          ],
+          "replyVariants": [
+            {
+              "text": "おれもそれがいい。次の気持ちは、その時にまた聞こう。"
+            }
+          ]
+        },
+        {
+          "id": "days",
+          "text": "次からは昼に会う友達でいたいです",
+          "next": "later",
+          "effect": "messageDaily",
+          "setFlags": [
+            "endedNight"
+          ],
+          "replyVariants": [
+            {
+              "text": "分かった。昼にしよう。まだ飲んでいない茶葉もある。"
+            }
+          ]
+        }
+      ],
+      "message": true
+    },
+    {
+      "id": "later",
+      "title": "次の頁の前に",
+      "chapter": 1,
+      "location": "茶葉店の奥の席",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "melone",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "六月の間、私たちは食事のあとにも互いを誘った。どちらも泊まりたい夜を選び、翌朝は自分の用事へ帰る。ノートを持っていかない日もあった。私は次にいつ会うかを、記録の続きとは別に考えるようになった。",
+          "when": {
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "六月の間、私たちは昼に店を変えて会った。ノートを見せる日も、持っていかず話すだけの日もあった。帰る時にはそれぞれ別の方向へ歩き、ふと思い出した一言が夜の通知になった。",
+          "when": {
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "melone",
+          "text": "今日は、何も書いてないね。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "机の上の私のノートは閉じていた。先輩の方にも開く気配がない。窓際へずらしたカップの底が、小さな音を立てた。私はそこを見てから顔を上げ、今日話したかったことを切り出した。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "tell",
+          "text": "先輩に、自分の好きな気持ちを伝えたいと言う",
+          "next": "confess_player",
+          "when": {
+            "min": {
+              "trust": 40,
+              "romancePlayer": 35,
+              "romanceChar": 35
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "listen",
+          "text": "先輩が私へ向けた言葉を待つ",
+          "next": "confess_char",
+          "when": {
+            "min": {
+              "trust": 40,
+              "romancePlayer": 20,
+              "romanceChar": 40
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "pact",
+          "text": "分からないまま見せ合える、二人だけの読者になりたいと話す",
+          "next": "pact",
+          "when": {
+            "min": {
+              "trust": 40,
+              "comfort": 60
+            },
+            "flags": [
+              "ownWords",
+              "changedTaste",
+              "chosenPage",
+              "unplannedPath",
+              "keptPrivate"
+            ],
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "nights",
+          "text": "望む夜にも会う、今の親密な友情を続けたいと言う",
+          "next": "fwb_choice",
+          "when": {
+            "min": {
+              "trust": 45,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "love",
+          "text": "今は恋人になりたいと、重ねた夜のあとで伝える",
+          "next": "end_fwb_love",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 30,
+              "romanceChar": 30,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "friends",
+          "text": "これからも、一緒に好きなものを探す友達でいたいと言う",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_player",
+      "title": "私から続きを",
+      "chapter": 4,
+      "location": "茶葉店の奥の席",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "melone",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "好きなものを説明する時より、声が頼りなくなった。先輩は首を少し傾け、いつものように尋ねかけてから口を閉じる。聞き慣れた質問が来ないと、返事ではない自分の言葉を探すしかなかった。私はカップを両手から離した。"
+        },
+        {
+          "speaker": "player",
+          "text": "先輩が好きです。何を感じたか聞いてもらうだけじゃなくて、先輩がどうしてるかも気になって。会ってない日に、会いたくなります。"
+        },
+        {
+          "speaker": "melone",
+          "text": "おれも、きみがいない時に同じことを考えたよ。気になることがあったから呼ぼうとして、その話がなくても会いたいと気づいた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私は笑いかけて、途中で息を吸った。胸の内側にあったものを、同じ名前で呼んでもらえた気がした。先輩の手が机の上へ出る。その手を取りたくて、もう一度はっきり答えたかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「私と付き合ってください」と伝える",
+          "next": "end_love_a",
+          "effect": "messageHeart"
+        },
+        {
+          "id": "no",
+          "text": "「今は友達として会いたいです」と伝え直す",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_char",
+      "title": "答えを知らない問い",
+      "chapter": 4,
+      "location": "茶葉店の奥の席",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "melone",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先輩は窓を見るふりをして、それから私を見た。観察する時の速い目の動きではなかった。指先でカップの取っ手を一度触り、触っただけで離す。私は続きを急がず、先輩が口を開くのを待った。"
+        },
+        {
+          "speaker": "melone",
+          "text": "きみが好きだ。おれの恋人になってほしい。……何て答えるか、今は予想したくないな。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "その声を聞くと、自分の頬まで熱くなった。先輩が笑いかけ、けれど今度は質問を足さない。私は見つめ返したまま、テーブルの下で足を揃え直した。自分の返事がどこへ届くのかを、こんなに近くで見ていた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「私も好きです。恋人になりたいです」と答える",
+          "next": "end_love_b",
+          "effect": "messageHeart"
+        },
+        {
+          "id": "no",
+          "text": "「恋人にはなれません。友達でいたいです」と答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "refusedConfession",
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pact",
+      "title": "読む人を選ぶ",
+      "chapter": 4,
+      "location": "茶葉店の奥の席",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "melone",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "全部を見せる約束ではなく、見せたいところを最初に渡す相手でいたい。話しながら、自分でも少し変な願いだと思った。友達と呼ぶことはできる。けれど白い頁や、意味がまだない一行も、先輩には渡してみたかった。"
+        },
+        {
+          "speaker": "player",
+          "text": "答え合わせしなくても、読んでくれますか。私も先輩の頁を読みたいです。何で書いたのか、教えてもらえないところがあっても。"
+        },
+        {
+          "speaker": "melone",
+          "text": "気にはなるよ。たぶん聞く。……でも、分からないところを残したまま、次の頁を待つことはできる。おれも、きみに読んでほしい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩はノートを開き、短い一行を私へ向けた。帰り道の途中で見えた色のことだった。どこで、と訊きかけて、私はその色を思い浮かべた。場所はあとでもよかった。自分のノートを向こうへ回すと、先輩の指がめくる前に一度止まった。"
+        },
+        {
+          "speaker": "melone",
+          "text": "ここまで？"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私は頷いた。見せる分だけを差し出すことが、私には、ひどく私的な約束に思えた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "恋人とは別に、互いが最初に読んでほしい人になる",
+          "next": "end_special",
+          "effect": "homeTogether"
+        },
+        {
+          "id": "friends",
+          "text": "ときどき好きな話をする友達でいたいと言う",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fwb_choice",
+      "title": "読み替えない約束",
+      "chapter": 4,
+      "location": "茶葉店の奥の席",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "melone",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "夜に会いたい気持ちと、恋人になる約束は今しないことを、私は一つずつ話した。先輩は返事を探すようにカップへ目を落とし、それから頷いた。分かった、だけではなく、自分もそうしたいと聞こえて、私は肩を少し下げた。"
+        },
+        {
+          "speaker": "melone",
+          "text": "おれも、友達として昼も夜も会いたい。今日の返事で次まで決めない。その時にはまた聞く。"
+        },
+        {
+          "speaker": "player",
+          "text": "はい。私からも誘います。嫌になったことがあったら、先輩も教えてください。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "今夜は別の予定があると先輩が言い、私は次の週末を挙げた。埋まらない日があっても、約束は薄くならなかった。今日はもう一杯飲もうかと話し、二人とも前と違う茶葉を選んだ。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "親密な友達として、次に会う日を決める",
+          "next": "end_fwb",
+          "effect": "messageBoundaries"
+        },
+        {
+          "id": "day",
+          "text": "これからは昼に会う友達でいたいと言う",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "end_friend",
+      "title": "話の脇道",
+      "chapter": 5,
+      "location": "街の小さな市",
+      "storyTime": {
+        "date": "7月6日",
+        "period": "昼"
+      },
+      "characterId": "melone",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人にはなれないと返した日、先輩はしばらく黙った。それから、分かったと頷き、次は昼に話そうと言った。数日後に届いた市の案内へ、友人も誘って行きたいと返すと、会う場所の写真が来た。",
+          "when": {
+            "flags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "友達として会いたいと話し、次の市には友人も一緒に行くことにした。先輩から来た待ち合わせの写真には、新しい店の看板が小さく写っている。私はその店も見たいと返して家を出た。",
+          "when": {
+            "notFlags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "並んだ瓶の前で、先輩は友人の選んだものに次々と質問した。店の人に何を飲むか訊かれても、まだ話の途中で気づかない。私は先輩の袖の少し手前で手を振り、まず注文です、と言った。"
+        },
+        {
+          "speaker": "melone",
+          "text": "ああ、そうだった。きみは今日はどれにする？"
+        },
+        {
+          "speaker": "player",
+          "text": "まだ決めてません。先に飲んで、私にも教えてください。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩が迷う顔を、友人と二人で待った。自分の答えを出す人も、横で聞く人も、そのつど入れ替わる。気に入ったものを一つ買って歩き出すと、先輩の話はもう別の店へ曲がっていた。私はそっちも見たいと、並んで角を曲がった。"
+        }
+      ],
+      "choices": [],
+      "ending": "FRIEND"
+    },
+    {
+      "id": "end_love_a",
+      "title": "書くより先に呼ぶ",
+      "chapter": 5,
+      "location": "茶葉店の奥の席",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "melone",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "melone",
+          "text": "うん。おれも、きみと付き合いたい。言ってくれて嬉しいよ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "差し出された手に触れると、先輩が息をつくのが聞こえた。私はもう一度好きですと言いたくなり、さすがに照れて笑った。笑った理由を訊かれる前に、同じことをもう一度言いそうでした、と白状する。先輩はじゃあ聞きたい、と返した。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "店を出たところで、私はもう一度伝えた。歩き出すはずの先輩が止まり、それから指を握り直す。その反応を何と書くかは、帰ってからも決まらなかった。けれど次に会う約束だけは、手帳に早く書きたかった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "次の休日、見つけた店の写真を送る前に先輩へ電話した。もしもし、と返る声へ、今どこにいますかと聞く。記録にして渡すより先に、同じ場所で顔を見たくなる日が増えていた。",
+          "storyTime": {
+            "date": "7月6日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_A"
+    },
+    {
+      "id": "end_love_b",
+      "title": "予想の外の返事",
+      "chapter": 5,
+      "location": "茶葉店の奥の席",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "melone",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私も好きですと答えると、先輩は目を細め、今度こそ笑った。何か言いたそうなのに、すぐには言葉が出てこない。私はその短い間が嬉しくて、自分から手を伸ばした。近づいた指をつかむ手だけは迷わなかった。"
+        },
+        {
+          "speaker": "melone",
+          "text": "今、何から話そうか分からなくなった。こういうこともあるんだな。"
+        },
+        {
+          "speaker": "player",
+          "text": "私もです。今日は、少しずつでいいですか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩は頷き、私の手を握ったまま店の出口を見た。会計を済ませる間だけ離れた指を、外でもう一度探される。好きだと言われた耳に、通りのざわめきまで近く聞こえた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "次の休日、待ち合わせに早く着いた先輩が、珍しく端末を見ずに通りを見ていた。私が手を振るとすぐに気づく。何を見てたんですか、とわざと訊くと、きみだよ、と返ってきて、私の方が先に目を逸らした。",
+          "storyTime": {
+            "date": "7月6日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_B"
+    },
+    {
+      "id": "end_fwb",
+      "title": "白い頁も持ち帰る",
+      "chapter": 5,
+      "location": "メローネの自宅",
+      "storyTime": {
+        "date": "7月6日",
+        "period": "夜"
+      },
+      "characterId": "melone",
+      "rating": "fade",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "今日はノートを置いてきたと話すと、先輩は自分の分も棚へ戻した。食事のあと、今夜は泊まりたいと私から言う。先輩も一緒にいたいと答え、明日は何時に出るかと訊いた。朝はゆっくりできると伝えると、じゃあ冷たいお茶も用意しようと台所へ向かった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "戻ってきた先輩へ、私は座ったまま手を差し出した。その手を取って隣へ腰を下ろすまで、目が離れなかった。もう少し近くに、と伝える。頬に触れた指へ自分の手を重ね、頷いた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝、冷蔵庫から出したお茶は、昨夜と違う味がした。先輩がどう違うか訊くので、まだ眠くて分かりませんと返す。笑った声へ私も笑い、もう一口飲んだ。帰ったら友人へ連絡する予定と、次に二人で会う日を話した。持ち帰る夜は、言葉にしきれないところを残したままでよかった。",
+          "storyTime": {
+            "date": "7月7日",
+            "period": "朝"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB"
+    },
+    {
+      "id": "end_fwb_love",
+      "title": "名前を増やす日",
+      "chapter": 5,
+      "location": "茶葉店の奥の席",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "melone",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "夜を重ねてから変わった望みを伝えると、先輩の目が少し動いた。驚かせたかもしれないと思ったけれど、言い直さなかった。前の返事も本当だった。その続きに、今は恋人になりたいと書き足したかった。"
+        },
+        {
+          "speaker": "melone",
+          "text": "おれも、きみと付き合いたい。会いたいって言う時、前よりずっと多くのことを考えてた。自分の方の変化は、気づくのが遅くなるんだね。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "その言い方が先輩らしくて、私は笑いながら頷いた。恋人になってください、ともう一度言う。今度は説明が返る前に、机を挟んで手が伸びてきた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌週は少し遠い店で待ち合わせた。先輩の部屋以外でも何度も会っているのに、恋人として待っていると思うと改札を出る足が速くなる。見つけた顔へ手を振った。先輩は私の名を呼び、まだ知らない通りへ、一緒に歩き出した。",
+          "storyTime": {
+            "date": "7月6日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB_TO_LOVE"
+    },
+    {
+      "id": "end_special",
+      "title": "最初の読者",
+      "chapter": 5,
+      "location": "公園の木陰",
+      "storyTime": {
+        "date": "7月13日",
+        "period": "昼"
+      },
+      "characterId": "melone",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私が先輩へ向けた頁には、窓の絵だけがあった。言葉を付けなかった理由は自分でもよく分からない。先輩は長く眺め、いつ描いたのか訊いた。昨日です、と答えると、それ以上は訊かず、自分のノートを差し出してきた。"
+        },
+        {
+          "speaker": "melone",
+          "text": "おれの方は、字ばかりになった。きみには、どう見えるかな。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "読んでいると、先輩の説明より先に、知らない店の椅子が浮かんだ。私はそこを指し、座ってみたくなりましたと言った。先輩は意外そうに私を見たあと、今度行こうかと笑う。正しく読めたかどうかは訊かなかった。"
+        },
+        {
+          "speaker": "player",
+          "text": "次の頁は、まだ白いままです。"
+        },
+        {
+          "speaker": "melone",
+          "text": "見せたくなったら、最初に呼んでくれ。待ってるよ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "今、閉じているものまで開けなくていい。そのまま隣へ置くノートが二冊あった。帰る前、私は今日の先輩の声を一行だけ書く。今は見せずに閉じると、先輩も自分の表紙を閉じた。次に渡すものがあると思いながら、二人で木陰を出た。"
+        }
+      ],
+      "choices": [],
+      "ending": "SPECIAL"
+    }
+  ],
+  "endingDescriptions": {
+    "FRIEND": {
+      "title": "話の脇道",
+      "description": "自分の答えを持ち寄り、聞く人も話す人も入れ替わる。次の店へ一緒に曲がる友達。"
+    },
+    "LOVE_A": {
+      "title": "書くより先に呼ぶ",
+      "description": "言葉にまとめるより先に会いたい人へ、自分から好きだと伝える。"
+    },
+    "LOVE_B": {
+      "title": "予想の外の返事",
+      "description": "答えを知らないまま告白した人へ、私の気持ちを返す。次の待ち合わせが近くなる。"
+    },
+    "FWB": {
+      "title": "白い頁も持ち帰る",
+      "description": "望む夜を確かめて会う親密な友達。書ききらない余韻も、それぞれの暮らしへ持ち帰る。"
+    },
+    "FWB_TO_LOVE": {
+      "title": "名前を増やす日",
+      "description": "本当だった前の気持ちに、恋人になりたい今を重ねる。慣れた相手と新しい待ち合わせへ。"
+    },
+    "SPECIAL": {
+      "title": "最初の読者",
+      "description": "全部を知らなくても、最初に見せたい人でいる。恋人とは違う、二人だけの読み手になる。"
+    }
+  }
+}

@@ -1,0 +1,1214 @@
+{
+  "id": "anasui",
+  "title": "アナスイ — 外せるつづき",
+  "intro": "先へ組みたがる手の前で、自分の空間を残す。\n同じ図にならない二人が、次も隣で作りたくなる。",
+  "startEvent": "box",
+  "character": {
+    "name": "アナスイ",
+    "adult": true,
+    "heightCm": 178,
+    "heightBasis": "二次資料JoJo Wikiの身長欄と出典注記を照合。ストーンオーシャン59話p.18。アニメ183とは分離。書籍・設定表現物は未照合。AUで同値を採用。",
+    "profile": "一点へ集中する執着。分解して構造を知りたがる。激しい好意と自己中心性。",
+    "personality": [
+      "一点へ集中する執着",
+      "分解して構造を知りたがる",
+      "激しい好意と自己中心性"
+    ],
+    "speech": {
+      "firstPerson": "オレ",
+      "addressing": "主人公は名前/おまえ。好意は直接的に言うが許可を飛ばさない。",
+      "tone": "望みを直接言う。語尾は感情と相手に合わせる。",
+      "habits": [
+        "望みを直接言う",
+        "妙に具体的な提案",
+        "短い断定と熱のある説明"
+      ],
+      "signaturePhrases": [],
+      "signatureNote": "日常の固定口癖は採用しない。象徴的な原作台詞と普段の話し方を混同せず、名台詞を貼り付けない。",
+      "avoid": [
+        "徐倫への原作恋愛を残して主人公を代替にする",
+        "監禁や破壊を愛の証明にする",
+        "拒否を聞かない"
+      ]
+    },
+    "referenceSection": "docs/CHARACTER_REFERENCE.md#cast-anasui"
+  },
+  "au": {
+    "role": "学部4年・建築/構造設計系は候補",
+    "routeEnabled": true,
+    "addressing": [
+      {
+        "text": "{player.lastName}"
+      }
+    ]
+  },
+  "events": [
+    {
+      "id": "box",
+      "title": "開けたあとの形",
+      "chapter": 1,
+      "location": "街の小さな造形展",
+      "storyTime": {
+        "date": "5月10日",
+        "period": "昼"
+      },
+      "characterId": "anasui",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "歯車のついた木箱の前で、アナスイ先輩に会った。学内の展示で何度か話したことのある人だ。取っ手を回すと蓋の内側から階段が起き上がり、途中で止まる。私は上に何もないのが好きだと思ったが、先輩は隙間から軸の位置を覗き込んでいた。"
+        },
+        {
+          "speaker": "anasui",
+          "text": "ここを外せば、もう一段出せる。……触っていい展示じゃないか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "触れかけた手は説明札の前で止まった。私はもう一度取っ手だけを回し、階段が何もない空間へ出てくるところを見せる。増やさなくてもここが好きです、と話すと、先輩は私の指の先へ目を戻した。"
+        },
+        {
+          "speaker": "player",
+          "text": "どこにも着かないまま、登っていくみたいで。先輩は、その先が見たいんですね。"
+        },
+        {
+          "speaker": "anasui",
+          "text": "仕組みも知りたい。おまえが今言った、どこにも着かないってのも。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "売店に、接着せず組み替えられる小さな木片のキットがあった。私は一箱買い、先輩も同じ棚から別の組を取る。組み方の例より先に、出来上がらなかった階段の方を思い出していた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "space",
+          "text": "何も置かない上の空間を、自分の案に残す",
+          "next": "corner",
+          "effect": "workTogether",
+          "setFlags": [
+            "ownSpace"
+          ],
+          "lockRoute": "anasui"
+        },
+        {
+          "id": "invite",
+          "text": "「先輩が作るところも見たいです」と誘う",
+          "next": "corner",
+          "effect": "gameDate",
+          "lockRoute": "anasui"
+        }
+      ]
+    },
+    {
+      "id": "corner",
+      "title": "つながない角",
+      "chapter": 1,
+      "location": "大学の共有ラウンジ",
+      "storyTime": {
+        "date": "5月17日",
+        "period": "昼"
+      },
+      "characterId": "anasui",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "机へキットを広げると、先輩は部品を形ごとに分け始めた。私の階段を見てすぐ、隣へ壁を作り、曲がり角までつなげる案を出す。手際のよさに見とれているうち、私が空けたかったところへ柱が置かれた。"
+        },
+        {
+          "speaker": "player",
+          "text": "そこは、まだ置かないでください。私、上が空いてる方を作りたいんです。"
+        },
+        {
+          "speaker": "anasui",
+          "text": "支えを足せば高くできる。今のままだと、この大きさで終わるぞ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "小さいままでいいです、と私は柱を自分の方へ戻した。先輩は納得していない顔で階段を見たが、勝手には触らなかった。その代わり、自分の部品で高い方を作る。二つが並ぶと、どちらの形も前よりはっきりした。"
+        },
+        {
+          "speaker": "anasui",
+          "text": "……それはそれで、妙な空き方だな。おまえ、そこが見たかったのか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "はい、と答えて低い階段を回した。先輩は視線を外さず、反対側からも見たいと言う。自分の好きな形を残せたことと、その続きを尋ねられたことが、同じくらい嬉しかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "keep",
+          "text": "高くする案へ合わせず、自分の空間を残す",
+          "next": "stop",
+          "effect": "shiftHelp",
+          "setFlags": [
+            "keptShape"
+          ]
+        },
+        {
+          "id": "near",
+          "text": "二つの形を近くへ並べ、先輩の横へ座る",
+          "next": "stop",
+          "effect": "walkClose"
+        }
+      ]
+    },
+    {
+      "id": "stop",
+      "title": "手を止める時刻",
+      "chapter": 1,
+      "location": "大学の共有ラウンジ",
+      "storyTime": {
+        "date": "5月24日",
+        "period": "昼"
+      },
+      "characterId": "anasui",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先輩は自分の模型の角度を何度も変えていた。一か所が思うように噛み合わず、作った半分を外してやり直す。私が昼を食べようと声を掛けても、あと少し、と返った。少しの間に二度やり直したので、私は自分の箱を閉じた。"
+        },
+        {
+          "speaker": "player",
+          "text": "私は今、食べに行きます。先輩と一緒に食べたいけど、今日は待ち続けるつもりはないです。"
+        },
+        {
+          "speaker": "anasui",
+          "text": "……なら、これだけ試す。駄目なら持っていく。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "試したものは、やはり少し傾いた。先輩は悔しそうに部品を抜き、ばらして箱へ戻した。私は片づけを代わらず、自分の鞄を持って待つ。立ち上がった彼は、まだ頭の中で続きを組んでいるように指を動かしていた。"
+        },
+        {
+          "speaker": "anasui",
+          "text": "飯を食ったら、おまえの方を見せてくれ。オレのことばかりやってた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "見せたいです、と返すと、ようやく顔がこちらへ向いた。食堂までの道で、私は模型ではなく今日食べたいものを話す。先輩が途中で図の話へ戻しかけたので、食べてから、と笑った。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "pause",
+          "text": "待てる時間を自分で伝え、食後は自分の作品も見せる",
+          "next": "message",
+          "effect": "homeTogether",
+          "setFlags": [
+            "myPace"
+          ]
+        },
+        {
+          "id": "smile",
+          "text": "「作ってない時の先輩とも、一緒にいたいです」と言う",
+          "next": "message",
+          "effect": "walkClose"
+        }
+      ]
+    },
+    {
+      "id": "message",
+      "title": "閉じた箱の向こう",
+      "chapter": 1,
+      "location": "自分の部屋",
+      "storyTime": {
+        "date": "5月24日",
+        "period": "夜"
+      },
+      "characterId": "anasui",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "帰ってから先輩の模型がどうなったか気になった。聞くより先に、机に並べた部品の写真が届く。昼に傾いていた部分だけが平らになっていて、完成した全体像はまだなかった。"
+        },
+        {
+          "speaker": "anasui",
+          "text": "直った。だが、組み直すのは明日にする。おまえの階段の方が、今は気になる。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私の模型は箱にしまってあった。写真を撮るためだけに出そうか迷い、今日はまだ見せないと打つ。すぐに理由を説明したくなったが、会って見せたい、という方の言葉を先に選んだ。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "piece",
+          "text": "次に会った時、実物を見せます。私も先輩の続きを見たいです",
+          "next": "empty",
+          "effect": "messageDaily",
+          "replyVariants": [
+            {
+              "text": "分かった。横からも見せてくれ。おまえが回すところを見たい。"
+            }
+          ]
+        },
+        {
+          "id": "you",
+          "text": "模型を見せるだけじゃなく、先輩に会いたいです",
+          "next": "empty",
+          "effect": "messageHeart",
+          "replyVariants": [
+            {
+              "when": {
+                "min": {
+                  "romanceChar": 20
+                }
+              },
+              "text": "オレも会いたい。模型の予定がなくても呼んでくれ。オレからも誘う。"
+            },
+            {
+              "text": "会おう。次は、作らない時間も取る。"
+            }
+          ]
+        }
+      ],
+      "message": true
+    },
+    {
+      "id": "empty",
+      "title": "置かないものを選ぶ",
+      "chapter": 1,
+      "location": "街の模型用品店",
+      "storyTime": {
+        "date": "6月1日",
+        "period": "昼"
+      },
+      "characterId": "anasui",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先輩は小さな透明板を見つけ、私の階段の上へ屋根をつける案を出した。今度は直接置かず、袋のまま私へ見せる。私は光が変わるのは面白そうだと答えたが、今は買わないことにした。"
+        },
+        {
+          "speaker": "player",
+          "text": "ない方も、もう少し見ていたいです。あとで欲しくなったら、自分で買いに来ます。"
+        },
+        {
+          "speaker": "anasui",
+          "text": "今つければ、二つをつなぐ部分にもできる。……だが、今は違うんだな。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "頷くと、先輩は袋を棚へ戻した。自分の模型に使う別の板は買い、会計のあとも私の空いた手を一度見る。残念そうな顔まで消そうとはせず、私は端末を取り出し、先輩へ自分の箱の写真を見せた。昨日、新しく置いたのは屋根ではなく小さな踊り場だった。"
+        },
+        {
+          "speaker": "anasui",
+          "text": "そこを伸ばしたのか。オレが考えてた方と逆だ。……実物、早く見たい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩の予想から外れたところにも、見たいと思ってもらえる。私は画面を閉じ、次は自分の予定から一日を挙げた。彼はすぐ確かめ、空けられると言った。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "later",
+          "text": "今は買わず、自分が形を変えたくなる時を待つ",
+          "next": "home",
+          "effect": "conferencePractical",
+          "setFlags": [
+            "unfinishedChoice"
+          ]
+        },
+        {
+          "id": "together",
+          "text": "「予想と違っても、最初に先輩へ見せたいです」と伝える",
+          "next": "home",
+          "effect": "rehearse"
+        }
+      ]
+    },
+    {
+      "id": "home",
+      "title": "自分で差し込む",
+      "chapter": 1,
+      "location": "アナスイの自宅",
+      "storyTime": {
+        "date": "6月8日",
+        "period": "夕方"
+      },
+      "characterId": "anasui",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "箱を一つ持って先輩の家へ行った。彼の模型は机の半分を使い、私の分の場所も空けてある。低い階段を置くと、先輩は自分の壁を近づけかけて止め、つないでいいかと聞いた。私はまだ別にしておきたいと答えた。"
+        },
+        {
+          "speaker": "anasui",
+          "text": "分かった。じゃあ、まずおまえの続きを見せろ。どこを動かしたい？"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私は一片を抜き、向きを変えて自分で差し込んだ。途中で引っかかり、手伝おうとする彼の指が近づく。少し待ってください、と言うとその手は机へ下りた。うまく入るまでの長い数秒を、私は自分のものとして使った。"
+        },
+        {
+          "speaker": "player",
+          "text": "入りました。……今、手を出さずにいてくれて、嬉しかったです。"
+        },
+        {
+          "speaker": "anasui",
+          "text": "見てる方が落ち着かないな。だが、おまえがそこを通すのは見たかった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "後で二人で食事をし、片づけてからまた机へ戻った。並んだ模型はまだつながっていない。手を伸ばせば彼の肩には届く距離で、私は自分の箱へ部品を戻すのを少し遅らせた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "ownhand",
+          "text": "次も互いの手で作るところを見せ合おうと話して帰る",
+          "next": "later",
+          "effect": "homeTogether",
+          "setFlags": [
+            "ownHands"
+          ]
+        },
+        {
+          "id": "talk",
+          "text": "「隣にいるだけの時間も、好きになりました」と話して帰る",
+          "next": "later",
+          "effect": "homeTalk"
+        },
+        {
+          "id": "stay",
+          "text": "「今夜、先輩に近づきたいです」と伝える",
+          "next": "consent",
+          "effect": "hotelInvite",
+          "when": {
+            "min": {
+              "trust": 35,
+              "desire": 8
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "consent",
+      "title": "作らない返事",
+      "chapter": 1,
+      "location": "アナスイの自宅",
+      "storyTime": {
+        "date": "6月8日",
+        "period": "夜"
+      },
+      "characterId": "anasui",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先輩は机の上の部品を避け、私へ体を向けた。触れるために伸びかけた手を、自分の膝へ戻す。すぐ近くで顔を見られると、私は目を逸らしたくなったが、まだ自分の返事を言っていなかった。"
+        },
+        {
+          "speaker": "anasui",
+          "text": "オレも、おまえに触れたい。今夜、一緒にいたい。恋人になるかとは別に、今のおまえの答えを聞きたい。"
+        },
+        {
+          "speaker": "player",
+          "text": "私もそうしたいです。けれど途中でやめたい時は言います。先輩も、嫌なことは言ってください。"
+        },
+        {
+          "speaker": "anasui",
+          "text": "言う。どちらかが止めたらそこで止める。途中で帰ってもいい。オレが先に決めることじゃない。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "最後の言葉は、自分へも向けたように聞こえた。私は椅子の縁から手を離し、指を一度広げる。見せる模型のないまま差し出すものを、今度は自分で選んだ。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「今夜、一緒にいたいです」と答え、自分から手を伸ばす",
+          "next": "night",
+          "effect": "consent",
+          "setFlags": [
+            "mutualConsent",
+            "hadNight"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「今日は帰ります。また昼に会いたいです」と伝える",
+          "next": "later",
+          "effect": "walkHome",
+          "setFlags": [
+            "declinedTouch"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "night",
+      "title": "組み立てない近さ",
+      "chapter": 1,
+      "location": "アナスイの自宅",
+      "storyTime": {
+        "date": "6月8日",
+        "period": "夜"
+      },
+      "characterId": "anasui",
+      "rating": "fade",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "差し出した手を先輩が取り、私も椅子から立った。顔を上げると彼が少し屈み、近づいていいかと尋ねる。いいです、と答え終わるまで待たれているのが、いつも作業を先へ進める手を知っている分だけ落ち着かなかった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "唇が触れ、離れたあと、私は彼の袖をつかんだ。もう少し、と言うと、先輩がこちらを見る。急ぐのではなく近くにいたいのだと伝え、自分から頬へ触れた。彼も息を吐き、今度は私の動きへ合わせて口づけを返した。"
+        },
+        {
+          "speaker": "anasui",
+          "text": "……おまえが次にどうするか、ずっと見ていたくなる。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "今は見てるだけじゃ困ります、と小さく笑った。手を握り直し、二人で机から離れる。作りかけのものはそのまま置いて、灯りを落とした。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝、先輩は机へ戻りかけて、私が朝食のことを聞くと向きを変えた。食べたら帰りますと話し、自分の模型を箱へ収める。完成していない階段を持ち帰っても、昨日が途切れる気はしなかった。",
+          "storyTime": {
+            "date": "6月9日",
+            "period": "朝"
+          }
+        }
+      ],
+      "choices": [
+        {
+          "id": "home",
+          "text": "朝食を取り、自分の箱を持って帰る",
+          "next": "after_message"
+        }
+      ],
+      "when": {
+        "flags": [
+          "mutualConsent"
+        ]
+      }
+    },
+    {
+      "id": "after_message",
+      "title": "机に残した広さ",
+      "chapter": 1,
+      "location": "自分の部屋",
+      "storyTime": {
+        "date": "6月9日",
+        "period": "夜"
+      },
+      "characterId": "anasui",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "自分の机へ箱を置くと、先輩の模型が隣にないことに気づいた。つながないと決めたのは自分なのに、並んでいた広さは体が覚えている。端末へ届いた文にも、同じ机の話があった。"
+        },
+        {
+          "speaker": "anasui",
+          "text": "おまえの箱を置いたところ、空いたままだ。また来てほしい。模型がなくても。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "返事を打ちかけて、私は一度箱の蓋を閉めた。作る続きを決めることと、次にどんな距離で会うかを決めることは違う。今、彼へ送りたいのはどちらの話か、自分の胸へ聞いた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "again",
+          "text": "また夜も会いたいです。先輩をもっと好きになりました",
+          "next": "later",
+          "effect": "messageAgain",
+          "setFlags": [
+            "ongoing"
+          ],
+          "replyVariants": [
+            {
+              "text": "オレも会いたい。次は顔を見て、オレからも好きだと言いたい。"
+            }
+          ]
+        },
+        {
+          "id": "nights",
+          "text": "恋人とは決めず、望む夜にも会う友達でいたいです",
+          "next": "later",
+          "effect": "messageBoundaries",
+          "setFlags": [
+            "ongoing"
+          ],
+          "replyVariants": [
+            {
+              "text": "オレもそうしたい。会う時には、また互いに聞こう。"
+            }
+          ]
+        },
+        {
+          "id": "days",
+          "text": "次からは昼に会う友達でいたいです",
+          "next": "later",
+          "effect": "messageDaily",
+          "setFlags": [
+            "endedNight"
+          ],
+          "replyVariants": [
+            {
+              "text": "分かった。昼に会おう。おまえの箱の続きも、見せたい時に見せてくれ。"
+            }
+          ]
+        }
+      ],
+      "message": true
+    },
+    {
+      "id": "later",
+      "title": "予定から外れた言葉",
+      "chapter": 1,
+      "location": "街の喫茶店",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "anasui",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "六月の間、先輩と何度か望む夜を過ごした。私の都合が合わない日には別の日を選び、彼が作業を続けたい日には食事だけで帰った。昼に模型を見せる時間も残り、触れたいという言葉を用事の後ろへ隠さなくなった。",
+          "when": {
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "六月の間、先輩と模型を見せ合い、食事へ行った。作る予定を入れない日も何度かあり、彼の方から店の名だけを送ってくるようになった。私も会いたい日には自分の予定を開き、模型は持たずに出かけた。",
+          "when": {
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "今日は机の上に部品がない。先輩が次に試したい形を話し終えるのを待って、私は自分から名前を呼んだ。彼は私が持ってきた小さな箱へ目を向けたが、開けないと分かると顔を上げる。"
+        },
+        {
+          "speaker": "anasui",
+          "text": "模型じゃないのか。……聞く。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "tell",
+          "text": "アナスイ先輩を好きになったと、自分から話す",
+          "next": "confess_player",
+          "when": {
+            "min": {
+              "trust": 40,
+              "romancePlayer": 35,
+              "romanceChar": 35
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "listen",
+          "text": "先輩が私へ向けている言葉を待つ",
+          "next": "confess_char",
+          "when": {
+            "min": {
+              "trust": 40,
+              "romancePlayer": 20,
+              "romanceChar": 40
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "pact",
+          "text": "つながない部分も残して、二人で一つの作品を育てたい",
+          "next": "pact",
+          "when": {
+            "min": {
+              "trust": 40,
+              "comfort": 60
+            },
+            "flags": [
+              "ownSpace",
+              "keptShape",
+              "myPace",
+              "unfinishedChoice",
+              "ownHands"
+            ],
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "nights",
+          "text": "恋人とは決めず、望む夜に会う関係を続けたい",
+          "next": "fwb_choice",
+          "when": {
+            "min": {
+              "trust": 45,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "love",
+          "text": "夜を重ねた今、先輩の恋人になりたい",
+          "next": "end_fwb_love",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 30,
+              "romanceChar": 30,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "friends",
+          "text": "これからも、互いに誘う友達でいたい",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_player",
+      "title": "私が選ぶ近さ",
+      "chapter": 4,
+      "location": "街の喫茶店",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "anasui",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先輩が好きです、と言うと、彼の指が箱へ伸びかけた位置で止まった。私はその手を見ずに顔へ向かう。作りたい形を説明する時のように、先に図を置くことはできなかった。"
+        },
+        {
+          "speaker": "player",
+          "text": "予定どおりにならないところも、少し困るところも知って、まだ会いたいと思います。先輩の隣にいることを、私が選びたいです。"
+        },
+        {
+          "speaker": "anasui",
+          "text": "オレも、おまえに会いたい。自分の考えた通りに動かないおまえが、次に何を言うか聞きたい。……好きだ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "返事が真っ直ぐすぎて、私は笑いかけた口を一度閉じた。好きな人の望みの中にいても、自分の輪郭が消えるわけではない。私は机へ手を置き、もう一つ、自分から頼みたかったことを言った。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「私と付き合ってください」と伝える",
+          "next": "end_love_a",
+          "effect": "messageHeart"
+        },
+        {
+          "id": "no",
+          "text": "「今は友達として会いたいです」と伝え直す",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_char",
+      "title": "決めるのは二人で",
+      "chapter": 4,
+      "location": "街の喫茶店",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "anasui",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先輩は椅子を少し引き、私へ向き直った。説明する時のように道筋を作らず、先に私の名前を呼ぶ。その声で胸が詰まり、私は返事をしないまま彼を見た。"
+        },
+        {
+          "speaker": "anasui",
+          "text": "おまえが好きだ。恋人になりたい。会う日も、何をするかも、もっとおまえと考えたい。……だが、先に聞く。おまえも、そうしたいか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "言い切った顔を見ていると、きっと先のことまで考えているのだろうと思った。それを聞く前に、自分の望みを言える場所が今あった。私は箱の角から指を離し、彼の期待だけではない答えを探した。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「私も好きです。先輩と付き合いたいです」と答える",
+          "next": "end_love_b",
+          "effect": "messageHeart"
+        },
+        {
+          "id": "no",
+          "text": "「恋人ではなく、友達でいたいです」と答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "refusedConfession",
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pact",
+      "title": "外せるつづき",
+      "chapter": 4,
+      "location": "街の喫茶店",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "anasui",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私は箱から、自分で作った小さな踊り場を出した。先輩の壁へ接する部分だけ、外せる形にしてある。全部を一つの図へ描き直すのではなく、別々に作った続きをつなぎ、また離せるようにしたかった。"
+        },
+        {
+          "speaker": "player",
+          "text": "つなぐ場所は、一緒に決めたいです。でも、私の階段の上は空けておきます。先輩の壁にも、勝手には手を入れません。"
+        },
+        {
+          "speaker": "anasui",
+          "text": "なるほど。どちらかが変えたら、つなぎ方も変わる。……オレなら、もっと複雑にしたくなるな。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "それは相談してください、と笑うと、先輩も口元を緩めた。恋人になる約束ではなく、互いの形を残して一つを作る話だと確かめる。彼は私の部品をすぐ組み込まず、自分の方の案を紙へ描き始めた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "互いの形を残し、つなぐ部分を相談する制作相棒になる",
+          "next": "end_special",
+          "effect": "homeTogether"
+        },
+        {
+          "id": "friends",
+          "text": "共同制作は決めず、気軽に作品を見せる友達を選ぶ",
+          "next": "end_friend",
+          "effect": "friendPromise"
+        }
+      ]
+    },
+    {
+      "id": "fwb_choice",
+      "title": "次の予定は、今聞く",
+      "chapter": 4,
+      "location": "街の喫茶店",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "anasui",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "今の親密な関係を続けたいと話した。恋人と決めるつもりは今はないと伝えると、先輩は一度考え、オレもそれを望む、と答えた。決めたあとすぐ日付を埋めそうになる手が、端末の上で止まる。"
+        },
+        {
+          "speaker": "anasui",
+          "text": "次も望むなら誘う。前に会ったから同じとは決めない。途中でやめたい時も、言ってくれ。オレも言う。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私からも誘いますと返した。先輩はようやく予定を開き、いつがいいかと尋ねる。全部空けられるわけではないと話し、私は自分の一日から選んだ。彼がそこへ自分の予定を並べるまで、私も待った。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "その都度誘い合う、親密な友人として続ける",
+          "next": "end_fwb",
+          "effect": "messageBoundaries"
+        },
+        {
+          "id": "day",
+          "text": "次からは昼に会う友達に戻る",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "end_friend",
+      "title": "別の箱を持って",
+      "chapter": 5,
+      "location": "大学の共有ラウンジ",
+      "storyTime": {
+        "date": "7月13日",
+        "period": "昼"
+      },
+      "characterId": "anasui",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人にはならないと答えると、先輩はしばらく黙り、分かったと言った。私もその場で明るい返事を求めずに別れた。次に模型を見せたいと連絡すると、場所と時間を尋ねる文が返った。",
+          "when": {
+            "flags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "昼に会う友達へ戻ろうと話してから、先輩は夜の返事を変えさせようとはしなかった。模型を見せたいと私から連絡し、今日の午後を選んだ。互いの箱を開く手は、少しずつ普段の速さへ戻った。",
+          "when": {
+            "flags": [
+              "hadNight"
+            ],
+            "notFlags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "友達として次も作品を見せ合おうと話し、今日は箱を一つずつ持ってきた。先輩は私より早く机へ広げていたが、私の方を見つけると手を止めた。まだ開けていない箱の中を、早く見たいらしい。",
+          "when": {
+            "notFlags": [
+              "hadNight",
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "anasui",
+          "text": "今日は何を変えた？　……先におまえから話してくれ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私は箱を開き、今度は一つ減らしたところを見せた。先輩がすぐ増やす案を出すので、減らした話を先に、と笑う。彼は悔しそうに黙ってから、続きを聞いた。帰る時には、互いに違う箱を抱えていた。"
+        }
+      ],
+      "choices": [],
+      "ending": "FRIEND"
+    },
+    {
+      "id": "end_love_a",
+      "title": "私から置く手",
+      "chapter": 5,
+      "location": "街の喫茶店と歩道",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "anasui",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "付き合いたい、と先輩が返した。私が言ったことへ返事をもらうだけで、こんなに顔が熱くなるとは思わなかった。机の上へ伸びてきた手に、自分の手を重ねる。箱はその横に、開けないまま残っていた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌週の待ち合わせでは、先輩が先に行先を三つ挙げた。私はその一つだけを選び、あとは歩いてから決めたいと答える。彼はまだ言いたい顔をしたが、私が手を出すと、まずそれを取った。",
+          "storyTime": {
+            "date": "7月6日",
+            "period": "昼"
+          }
+        },
+        {
+          "speaker": "anasui",
+          "text": "分かった。歩きながら、もう一つは勧める。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "それなら聞きます、と笑った。先輩の計画の中へ収まるためではなく、自分の足で隣を選んだ。その手を引かれるだけにせず、見たい窓の前では私から立ち止まった。"
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_A"
+    },
+    {
+      "id": "end_love_b",
+      "title": "まだ知らない続き",
+      "chapter": 5,
+      "location": "街の喫茶店と街路",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "anasui",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私も好きですと答えると、先輩は息を吸い、すぐ何かを言いかけた。私はその前に、嬉しいので少し待ってください、と笑った。彼の口が止まり、今度は笑う方へ動いた。"
+        },
+        {
+          "speaker": "anasui",
+          "text": "待つ。だが、手はつなぎたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私もですと返し、店を出てから掌を重ねた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌週、恋人として初めて出かける朝にも、彼はたくさん行先を調べていた。私は自分が見つけた店を一つ加える。",
+          "storyTime": {
+            "date": "7月6日",
+            "period": "朝"
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩がその店の名前を読み、知らなかったと言った。連れて行きます、と私から歩き始める。何もかも先に見通せない一日を、二人で持つことになった。隣から来る声が、今日はいつもより近かった。"
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_B"
+    },
+    {
+      "id": "end_fwb",
+      "title": "作りかけのまま、夜へ",
+      "chapter": 5,
+      "location": "アナスイの自宅",
+      "storyTime": {
+        "date": "7月13日",
+        "period": "夜"
+      },
+      "characterId": "anasui",
+      "rating": "fade",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "今日は模型を持たずに会いに行った。夕食のあと、先輩が作業机を気にしかける。私は続けたいなら言ってくださいと話したが、彼は今夜はおまえといたい、とこちらへ戻った。私も泊まりたいと伝え、翌朝に帰る時刻を確かめた。"
+        },
+        {
+          "speaker": "anasui",
+          "text": "今は触れたい。おまえも？"
+        },
+        {
+          "speaker": "narrator",
+          "text": "はい、と答えて隣へ座る。近づいてからも、先輩は私が次に動くのを待っていた。私は自分から頬へ触れ、今日は急がずにいたいと伝える。彼が短く頷き、二人で灯りを落とした。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝、私は自分の鞄だけを持った。机の上の作りかけは、彼が自分で続きを決める。玄関で次の昼の予定を話し、夜も会いたくなったら連絡しますと付け足すと、オレからも、と返った。",
+          "storyTime": {
+            "date": "7月14日",
+            "period": "朝"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB"
+    },
+    {
+      "id": "end_fwb_love",
+      "title": "二人で選び直す",
+      "chapter": 5,
+      "location": "街の喫茶店と駅前",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "anasui",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "今は恋人になりたいと話す間、先輩の手が机の上で動かなかった。聞き終えると、彼は私の名前を呼び、自分もそうしたいと言った。夜を重ねたことを理由にせず、今の返事を自分で選んだ声だった。"
+        },
+        {
+          "speaker": "anasui",
+          "text": "オレも、おまえの恋人になりたい。今までの時間を消す気はない。その上で、今はそう呼びたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私は頷き、差し出された手を取った。来週の予定は一緒に考えたいですと話すと、先輩は端末を私の方へ向ける。私は全部埋めず、まず一日だけを選んだ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌週、駅前で会った。用事のない時間をどこまで歩くかは、その場で決める。先輩が私の手へ触れ、私も指を重ねた。恋人になっても予想と違う方へ行きたくなるだろう。その時にも自分の声を聞いてもらいたかった。",
+          "storyTime": {
+            "date": "7月6日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB_TO_LOVE"
+    },
+    {
+      "id": "end_special",
+      "title": "つながない場所も残る",
+      "chapter": 5,
+      "location": "アナスイの自宅",
+      "storyTime": {
+        "date": "7月13日",
+        "period": "昼"
+      },
+      "characterId": "anasui",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "低い階段と高い壁の間へ、二人で作った短い橋を置いた。私が一方を持ち、先輩が接続する位置を確かめる。少し動かすだけで景色が変わり、彼はもう一枚足したいと言った。私は今の隙間を見終わるまで待ってもらった。"
+        },
+        {
+          "speaker": "anasui",
+          "text": "……そこから見ると、橋の下も使えるな。"
+        },
+        {
+          "speaker": "player",
+          "text": "はい。あとで変えてもいいので、今日はこれを見たいです。先輩の案も、別に残しておいてください。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "恋人としてではなく、一つの作品に二つの手が入る。彼の形を私の好みへ直すのでも、私の形を彼の計画へ収めるのでもなかった。見終えたあと橋を外し、それぞれの部分を箱へ戻す。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "次に会うまで、片方だけで続けられる。つなぐ日にまた違っていても、その時の形を見せ合える。先輩が最後まで私の箱を見送るので、次も持ってきます、と自分から約束した。"
+        }
+      ],
+      "choices": [],
+      "ending": "SPECIAL"
+    }
+  ],
+  "endingDescriptions": {
+    "FRIEND": {
+      "title": "別の箱を持って",
+      "description": "作ったものも違う案も、遠慮なく見せ合う。互いの箱を持ち帰り、また続きを話す友人に。"
+    },
+    "LOVE_A": {
+      "title": "私から置く手",
+      "description": "自分から好きと伝え、恋人の手を取る。行先も近づく速さも、二人で話して選んでいく。"
+    },
+    "LOVE_B": {
+      "title": "まだ知らない続き",
+      "description": "先のことまで望む彼の告白へ、自分の好きも返す。互いに知らない行先を一つずつ足す休日。"
+    },
+    "FWB": {
+      "title": "作りかけのまま、夜へ",
+      "description": "恋人とは決めず、望む夜には会いに行く。作業も翌朝も本人のものとして残る親密な友情。"
+    },
+    "FWB_TO_LOVE": {
+      "title": "二人で選び直す",
+      "description": "重ねた夜を残し、今は恋人と呼びたいと話し合う。先の全部を決めず、まず一日を二人で選ぶ。"
+    },
+    "SPECIAL": {
+      "title": "つながない場所も残る",
+      "description": "自分の空間と速度、手順を保って、接続する部分を二人で作る。恋人とは別の、組み替えて続く制作相棒。"
+    }
+  }
+}

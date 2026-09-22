@@ -1,0 +1,1223 @@
+{
+  "id": "johnny",
+  "title": "ジョニィ — 自分の一投、そのとなり",
+  "intro": "うまくいった一回も、悔しい帰り道も。\n自分の点を追いかけながら、隣へ戻りたい相手ができる。",
+  "startEvent": "lane",
+  "character": {
+    "name": "ジョニィ",
+    "adult": true,
+    "heightCm": null,
+    "heightBasis": "4巻23話までの参照範囲で身長を確認できず",
+    "profile": "目の前の希望への強い執着。慎重さと観察。自分への苛立ちもある。",
+    "personality": [
+      "目の前の希望への強い執着",
+      "慎重さと観察",
+      "自分への苛立ちもある"
+    ],
+    "speech": {
+      "firstPerson": "ぼく",
+      "addressing": "主人公は姓＋先輩。必要な丁寧語を混ぜるが自分の意見は常体でも言える。",
+      "tone": "短い疑問と確認。語尾は感情と相手に合わせる。",
+      "habits": [
+        "短い疑問と確認",
+        "納得できなければ食い下がる",
+        "素直な弱音を美談に整えない"
+      ],
+      "signaturePhrases": [],
+      "signatureNote": "日常の固定口癖は採用しない。象徴的な原作台詞と普段の話し方を混同せず、名台詞を貼り付けない。",
+      "avoid": [
+        "歩行不能の原作設定を復活",
+        "後半の成長や能力",
+        "主人公が救うだけ"
+      ]
+    },
+    "referenceSection": "docs/CHARACTER_REFERENCE.md#cast-johnny"
+  },
+  "au": {
+    "role": "学部2年。歩行可能。スポーツ/生体情報/リハビリ系は候補",
+    "routeEnabled": true,
+    "addressing": [
+      {
+        "text": "{player.lastName}先輩"
+      }
+    ]
+  },
+  "events": [
+    {
+      "id": "lane",
+      "title": "最後の一本",
+      "chapter": 1,
+      "location": "街のボウリング場",
+      "storyTime": {
+        "date": "5月9日",
+        "period": "夕方"
+      },
+      "characterId": "johnny",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "ジョセフに誘われたボウリングで、後輩のジョニィくんと同じレーンになった。ジョセフは自分の点を確かめるたびに大きな声を出す。ジョニィくんはその横で投げ終えた手を見下ろし、戻ってきた球をすぐには取らなかった。一本だけ残ったピンを、まだ見ている。"
+        },
+        {
+          "speaker": "player",
+          "text": "次、私だよね。そこから見てて。今の一本、私もよく残すから。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "手前の線を踏まないように球を放した。狙っていた方へは行かず、真ん中から倒れていく音が響く。全部なくなったのを見て振り返ると、ジョニィくんは驚いた顔で私とレーンを見比べた。ジョセフが先に手を上げ、私も笑って打ち合わせる。"
+        },
+        {
+          "speaker": "johnny",
+          "text": "先輩、今、どこを見て投げました？　……いや、偶然なら、それでもいいんですけど。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "偶然、と口にした途端に悔しくなった。もう一度できるかは分からない。でも、初めて倒せた十本を、なかったことにはしたくない。私は目を向けたあたりを示し、次の自分の番を待った。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "again",
+          "text": "同じところを狙って、もう一度自分で試す",
+          "next": "spare",
+          "effect": "workTogether",
+          "setFlags": [
+            "ownTry"
+          ],
+          "lockRoute": "johnny"
+        },
+        {
+          "id": "invite",
+          "text": "「今度は二人でも来ようよ」とジョニィくんを誘う",
+          "next": "spare",
+          "effect": "gameDate",
+          "lockRoute": "johnny"
+        }
+      ]
+    },
+    {
+      "id": "spare",
+      "title": "靴紐を結び直す",
+      "chapter": 1,
+      "location": "街のボウリング場",
+      "storyTime": {
+        "date": "5月16日",
+        "period": "夕方"
+      },
+      "characterId": "johnny",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "次は二人で一つのレーンを借りた。靴を履き替えて席へ戻ると、ジョニィくんは前の点数の写真を開いている。もう一度同じ点を出せればいいと思っていた私へ、今日はそれより上を狙います、と言った。"
+        },
+        {
+          "speaker": "johnny",
+          "text": "先輩は、何点なら嬉しいですか。ぼくと同じじゃなくて、先輩の点で。"
+        },
+        {
+          "speaker": "player",
+          "text": "百点。まだ越えたことないから。最後の方で、いつも焦っちゃうんだよね。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼は分かりましたと頷き、自分の目標も短く言った。数字を聞くと少し遠く感じたが、同じレーンへ立てないわけではない。私は靴紐を結び直し、自分に合う重さの球を選ぶ。ジョニィくんの番には席から立たず、球を離したあとまで見た。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "mygoal",
+          "text": "自分の百点を狙い、互いの一投を最後まで見る",
+          "next": "score",
+          "effect": "gamePartners",
+          "setFlags": [
+            "myGoal"
+          ]
+        },
+        {
+          "id": "near",
+          "text": "隣の席で彼の目標を聞き、次も付き合いたいと伝える",
+          "next": "score",
+          "effect": "walkClose"
+        }
+      ]
+    },
+    {
+      "id": "score",
+      "title": "悔しいままの帰り道",
+      "chapter": 1,
+      "location": "ボウリング場の出口",
+      "storyTime": {
+        "date": "5月23日",
+        "period": "夕方"
+      },
+      "characterId": "johnny",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私は初めて百点を越えた。ジョニィくんはいつもより低く、最後の一投も狙ったところへ行かなかった。嬉しいと言いかけて隣を見ると、彼は結果の画面を睨んでいる。私は自分の点も写真に残し、借りた靴を返した。"
+        },
+        {
+          "speaker": "johnny",
+          "text": "今、慰めなくていいです。先輩が悪いわけじゃない。……ただ、悔しいんだ。"
+        },
+        {
+          "speaker": "player",
+          "text": "うん。私は、今日の自分の点は嬉しい。次も出したいと思ってる。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "ジョニィくんは私の端末を覗き、最後まで落とさなかったんですねと言った。私は頷いて、外へ歩き出す。後ろから呼ばれて足を止めると、彼は自分の靴の踵を踏み直し、追いついてきた。"
+        },
+        {
+          "speaker": "johnny",
+          "text": "次は負けませんから。点じゃなくて……今日みたいに、途中で自分の投げ方を崩すのはやめたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼の方がまだ点は高いのに、言い直す前の声も本気に聞こえた。私は次も勝手に頑張るね、と返す。曲がり角で別れる時まで、彼は上機嫌にはならなかった。それでも次に空いている日を、先に聞いてきた。写真も送ってくださいと言われ、別れてから自分の点数表を送った。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "keep",
+          "text": "互いの結果を写真に残し、次にも持ってくる",
+          "next": "message",
+          "effect": "homeTogether",
+          "setFlags": [
+            "keptScore"
+          ]
+        },
+        {
+          "id": "smile",
+          "text": "「悔しそうな顔も含めて、また会いたい」と伝える",
+          "next": "message",
+          "effect": "walkClose"
+        },
+        {
+          "id": "rest",
+          "text": "温かいものを食べて帰ろうと、近くの店へ誘う",
+          "next": "message",
+          "effect": "shiftRest"
+        }
+      ]
+    },
+    {
+      "id": "message",
+      "title": "見つけた線",
+      "chapter": 2,
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "5月26日",
+        "period": "夜"
+      },
+      "characterId": "johnny",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "ジョニィくんから、前に私が送った点数表が返ってきた。後半の欄へ丸がついている。私は夕食の皿を脇へ置き、何が違うのか自分でも数えた。"
+        },
+        {
+          "speaker": "johnny",
+          "text": "最後の三回、ずっと同じくらい倒せてます。ぼくはここで大きく変わってる。今度、この前と違う投げ方を試したいです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "前より少し言葉の多い文だった。私は彼の点も開き、どこが違うか指で辿る。早く返事をしたいと思うのに、適当な相槌にはしたくなくて、もう一度自分の表へ戻った。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "score",
+          "text": "私も、次の百点を出したい。一緒に試そう",
+          "next": "pause",
+          "effect": "messageDaily",
+          "replyVariants": [
+            {
+              "text": "はい。できた一回で終わらせたくないのは、ぼくも同じです。"
+            }
+          ]
+        },
+        {
+          "id": "you",
+          "text": "投げなくても、ジョニィくんに会いたい日が増えたよ",
+          "next": "pause",
+          "effect": "messageHeart",
+          "replyVariants": [
+            {
+              "text": "ぼくもです。会う理由を、点数だけにはしたくない。次の帰り、少し遠回りしませんか。",
+              "when": {
+                "min": {
+                  "romancePlayer": 15
+                }
+              }
+            },
+            {
+              "text": "じゃあ、次は帰りに何か食べませんか。投げた話をするかもしれませんけど。"
+            }
+          ]
+        }
+      ],
+      "message": true
+    },
+    {
+      "id": "pause",
+      "title": "球を置いたあとの顔",
+      "chapter": 2,
+      "location": "ボウリング場の休憩席",
+      "storyTime": {
+        "date": "6月2日",
+        "period": "夕方"
+      },
+      "characterId": "johnny",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "試そうと決めていたのに、ジョニィくんは一度外すとすぐ元の投げ方へ戻した。私は次の番を待ちながら、さっきと違うね、と言った。彼は球を抱えたまま口を結び、それからラックへ置いた。"
+        },
+        {
+          "speaker": "johnny",
+          "text": "分かってます。変えればすぐ良くなると思ってた。……分かってるつもりだっただけか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私は自分の飲み物を取り、彼の横へ腰を下ろす。励ましを探すより先に、私もさっきは数字ばかり見ていたと話した。自分の点を守りたくて、試すつもりだったことをしなかった。ジョニィくんがようやくこちらを見た。"
+        },
+        {
+          "speaker": "player",
+          "text": "次の一回だけ、新しい方でやってみる。点が減っても、それは今日の私の点ってことにする。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩からどうぞ、と彼が席を空けた。うまくはいかなかったが、戻った時に私が笑っていると、何を変えたんですかと訊いてくれた。彼の次の一投も、さっきとは違った。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "trynew",
+          "text": "一投だけの変化を互いに覚えて、次に確かめる",
+          "next": "home",
+          "effect": "conferencePractical",
+          "setFlags": [
+            "triedNew"
+          ]
+        },
+        {
+          "id": "together",
+          "text": "「こうやって二人で帰るのも好き」と話す",
+          "next": "home",
+          "effect": "rehearse"
+        },
+        {
+          "id": "finish",
+          "text": "結果を閉じ、今夜の夕食のことを話す",
+          "next": "home",
+          "effect": "walkHome"
+        }
+      ]
+    },
+    {
+      "id": "home",
+      "title": "まだ決めない順番",
+      "chapter": 3,
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "6月9日",
+        "period": "夕方"
+      },
+      "characterId": "johnny",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "次に行く日の相談も兼ねて、ジョニィくんを夕食へ誘った。机へ買ってきたものを並べると、彼が端へ寄せたノートに気づく。何の予定かと聞かれ、途中まで作った散歩の行先だと答えた。店の営業時間を調べたところで止まっていた。"
+        },
+        {
+          "speaker": "johnny",
+          "text": "ここからここって、けっこう離れてませんか。歩くなら先にこっちへ行った方が……いや、何を一番見たいんですか。"
+        },
+        {
+          "speaker": "player",
+          "text": "古い橋。そのあとで店にも寄れたらいいなって。ジョニィくんは、行ってみたいところある？"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼は少し迷ってから、道の途中の広場を指した。理由を聞くと、前に通り過ぎただけだから、と言う。私もまだ行ったことのない場所だった。ノートを二人の間へ戻し、食べながら思いついたことを余白へ足す。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "食後に皿を流しへ運ぶと、ジョニィくんが拭くのを手伝ってくれた。片づいた机へノートを戻しても、さっきより順番は決まっていない。帰る前にここだけ決めますかと訊かれて、私はその顔を見た。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "plan",
+          "text": "互いの行きたい場所を残し、二人で歩く日を選ぶ",
+          "next": "later",
+          "effect": "homeTogether",
+          "setFlags": [
+            "ourPlan"
+          ]
+        },
+        {
+          "id": "talk",
+          "text": "「今は、もう少しジョニィくんと話してたい」と伝える",
+          "next": "later",
+          "effect": "homeTalk"
+        },
+        {
+          "id": "stay",
+          "text": "「今夜は一緒にいたい。ジョニィくんに触れたい」と伝える",
+          "next": "consent",
+          "effect": "hotelInvite",
+          "when": {
+            "min": {
+              "trust": 35,
+              "desire": 8
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "consent",
+      "title": "勝ち負けのない返事",
+      "chapter": 3,
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "6月9日",
+        "period": "夜"
+      },
+      "characterId": "johnny",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "ジョニィくんはノートを閉じ、ゆっくり私へ顔を向けた。口にした自分の声がまだ耳へ残っている。取り消したくはなかったけれど、彼の返事を聞くのは少し怖かった。私は椅子の上で背を起こす。"
+        },
+        {
+          "speaker": "johnny",
+          "text": "ぼくも、先輩に触れたいです。今夜、ここにいたい。先輩が誘ってくれたから合わせてるわけじゃない。"
+        },
+        {
+          "speaker": "player",
+          "text": "うん。私も同じ。でも、今夜一緒にいることと、恋人になるかは別に考えたい。途中でやめたくなったら言うね。"
+        },
+        {
+          "speaker": "johnny",
+          "text": "ぼくも言います。どちらかが止めたい時には止めましょう。今から帰ってほしいって言われても、そうします。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先に返事を決められないまま待っていてくれる人へ、私は自分の手を見せるように机の端へ置いた。何かを教えたり、励ましたりするために出す手ではなかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「今夜は、ここにいてほしい」と答える",
+          "next": "night",
+          "effect": "consent",
+          "setFlags": [
+            "mutualConsent",
+            "hadNight"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「今日は見送るね。また会いたい」と伝える",
+          "next": "later",
+          "effect": "walkHome",
+          "setFlags": [
+            "declinedTouch"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "night",
+      "title": "指を重ねる距離",
+      "chapter": 3,
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "6月9日",
+        "period": "夜"
+      },
+      "characterId": "johnny",
+      "rating": "fade",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "ジョニィくんが椅子を私の隣へ寄せた。触ってもいいですかと尋ねる声に頷き、私も手を伸ばす。指が重なると、いつも結果を待っていた時とは違うところに力が入った。私は彼の方へ体を向け、近くでその目を見た。"
+        },
+        {
+          "speaker": "player",
+          "text": "キスしてもいい？"
+        },
+        {
+          "speaker": "narrator",
+          "text": "はい、と返ってから顔を寄せた。彼も少し前へ出て、短く触れた唇が離れる。私が息を整える間、ジョニィくんは何も言わず、握った手だけをそのままにしていた。もう一度近づきたいと自分から伝え、二人で席を立って奥へ移る。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝、カーテンの隙間が明るくなっていた。彼も目を開けていて、顔を合わせると少し照れたように笑う。朝ごはんはどうする、と訊くと一緒に食べたいですと返った。私は起き上がり、昨日のノートを脇へ移して二人分の場所を作った。",
+          "storyTime": {
+            "date": "6月10日",
+            "period": "朝"
+          }
+        }
+      ],
+      "choices": [
+        {
+          "id": "home",
+          "text": "朝食のあと玄関で見送り、自分の用事へ戻る",
+          "next": "after_message"
+        }
+      ]
+    },
+    {
+      "id": "after_message",
+      "title": "同じ朝のあとで",
+      "chapter": 3,
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "6月10日",
+        "period": "夜"
+      },
+      "characterId": "johnny",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "夜、ノートに書いた行先を眺めていると、ジョニィくんから連絡が来た。昨日決めなかったことを、今日の用件にするつもりでいた私は、最初の一行で手を止めた。"
+        },
+        {
+          "speaker": "johnny",
+          "text": "また夜にも会いたいです。次も同じ気持ちとは限らないから、先輩が今どう思ってるか聞きたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "遠回りせず届いた文を何度か読む。昨日の自分が答えたからではなく、今の自分でも選びたかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "nights",
+          "text": "恋人とは決めず、また望む夜に会いたいよ",
+          "next": "later",
+          "effect": "messageBoundaries",
+          "setFlags": [
+            "ongoing"
+          ],
+          "replyVariants": [
+            {
+              "text": "ぼくも、その形で会いたいです。次に会う時にも聞きます。"
+            }
+          ]
+        },
+        {
+          "id": "again",
+          "text": "また夜も会いたい。ジョニィくんをもっと好きになった",
+          "next": "later",
+          "effect": "messageAgain",
+          "setFlags": [
+            "ongoing"
+          ],
+          "replyVariants": [
+            {
+              "text": "ぼくも、先輩のことを考える時間が増えました。また会う日を決めたいです。"
+            }
+          ]
+        },
+        {
+          "id": "days",
+          "text": "これからは昼に会う友達でいたい",
+          "next": "later",
+          "effect": "messageDaily",
+          "setFlags": [
+            "endedNight"
+          ],
+          "replyVariants": [
+            {
+              "text": "分かりました。じゃあ次は昼に。散歩の続きの相談も、まだできますよね。"
+            }
+          ]
+        }
+      ],
+      "message": true
+    },
+    {
+      "id": "later",
+      "title": "一緒に歩いた先",
+      "chapter": 4,
+      "location": "街の広場",
+      "storyTime": {
+        "date": "6月30日",
+        "period": "夕方"
+      },
+      "characterId": "johnny",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "六月には二人で投げに行き、望む夜には私の家でも会った。朝はそれぞれの用事へ戻る。今日はノートに書いた道を歩き、橋を渡ってからジョニィくんが気になっていた広場へ着いた。",
+          "when": {
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "昼に会う友達でいたいと返したあとも、ジョニィくんとは二人で投げに行った。最初は少し照れたが、彼は夜の返事を変えさせようとはしなかった。今日はノートに書いた道を歩き、橋の次に彼が気になっていた広場へ来た。",
+          "when": {
+            "flags": [
+              "hadNight",
+              "endedNight"
+            ],
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "六月にも二人で投げに行き、帰りには食事をした。点数だけで話が終わらなくなり、今日はノートに書いた道を歩いてきた。私が見たかった橋を渡ってから、ジョニィくんが気になっていた広場へ座る。",
+          "when": {
+            "notFlags": [
+              "hadNight"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "ベンチに腰を下ろし、私は鞄を横へ置いた。広場を横切る人の足音が遠ざかる。あそこから見る方がいいかもしれないと言いかけたジョニィくんが、こちらを向いたまま口を閉じた。私も、もう少しここにいたかった。"
+        },
+        {
+          "speaker": "johnny",
+          "text": "先輩、疲れました？　……ぼくは、まだ帰りたくないんですけど。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "tell",
+          "text": "今の気持ちを、好きだと自分から伝える",
+          "next": "confess_player",
+          "when": {
+            "min": {
+              "trust": 40,
+              "romancePlayer": 35,
+              "romanceChar": 35
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "listen",
+          "text": "ジョニィくんが続けようとする言葉を待つ",
+          "next": "confess_char",
+          "when": {
+            "min": {
+              "trust": 40,
+              "romancePlayer": 20,
+              "romanceChar": 40
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "pact",
+          "text": "次は同じ側で投げる、二人の組になりたいと話す",
+          "next": "pact",
+          "when": {
+            "min": {
+              "trust": 40,
+              "comfort": 60
+            },
+            "flags": [
+              "ownTry",
+              "myGoal",
+              "keptScore",
+              "triedNew",
+              "ourPlan"
+            ],
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "nights",
+          "text": "これからも望む夜に会う友達でいたいと話す",
+          "next": "fwb_choice",
+          "when": {
+            "min": {
+              "trust": 45,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "love",
+          "text": "「今はジョニィくんの恋人になりたい」と伝える",
+          "next": "end_fwb_love",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 30,
+              "romanceChar": 30,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "friends",
+          "text": "互いに競い、気軽に誘う友達でいたいと話す",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_player",
+      "title": "点数を見ないで",
+      "chapter": 4,
+      "location": "街の広場",
+      "storyTime": {
+        "date": "6月30日",
+        "period": "夕方"
+      },
+      "characterId": "johnny",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私も帰りたくないと答えてから、彼の名を呼んだ。ジョニィくんがこちらへ体を向ける。投げ方を確かめてもらう時のように、できたかどうかすぐ分かればいいのにと思う。でも、言わなければ始まらないことだった。"
+        },
+        {
+          "speaker": "player",
+          "text": "ジョニィくんが好き。何か一緒にできる日だけじゃなくて、会えたらそれだけで嬉しい日が増えた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "途中で止まらず言うと、彼が一度息を吸った。返事の前に、私から頼みたいことがある。膝へ落としかけた目を上げ、そのまま顔を見て続けた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「私と付き合ってほしい」と伝える",
+          "next": "end_love_a",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「今は友達として、また会いたい」と伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_char",
+      "title": "欲しい方を言う",
+      "chapter": 4,
+      "location": "街の広場",
+      "storyTime": {
+        "date": "6月30日",
+        "period": "夕方"
+      },
+      "characterId": "johnny",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "ジョニィくんは口元へ上げかけた手を、膝へ戻した。言い直す前の言葉を探しているように見える。私はベンチの上で体ごと向き、帰る時刻を確かめるのをやめた。"
+        },
+        {
+          "speaker": "johnny",
+          "text": "{player.lastName}先輩。ぼくは、先輩が好きです。友達として誘うだけじゃなくて、恋人になりたい。ぼくと付き合ってくれますか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "相手が先輩だからと引っ込める声ではなかった。見返すと、彼はまだこちらを向いている。私がどんな返事をするか、分かってはいないはずだ。それでも言ってくれたことへ、自分の言葉で答えたかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「私も好き。ジョニィくんと付き合いたい」と答える",
+          "next": "end_love_b",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「恋人にはなれない。友達でいたい」と答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "refusedConfession",
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pact",
+      "title": "同じ側で待つ",
+      "chapter": 4,
+      "location": "街の広場",
+      "storyTime": {
+        "date": "6月30日",
+        "period": "夕方"
+      },
+      "characterId": "johnny",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "今度は同じ側で投げてみたい、と話した。個人の点を比べるばかりでなく、二人の合計を前の二人と比べる。そういう組になれたらと説明すると、ジョニィくんは黙って聞き、私の顔を見る。"
+        },
+        {
+          "speaker": "johnny",
+          "text": "ぼくの点が悪かったら、先輩の分にも響きますよ。前みたいに苛立つこともある。"
+        },
+        {
+          "speaker": "player",
+          "text": "私の点だって響くよ。いつも百点出せるわけじゃない。でも、ジョニィくんと組んで試したい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼が少しだけ笑った。いい返事をするための笑いには見えなかった。端末へ二人の前の点を並べ、合計を出す。思ったより高い数字になったので、私も簡単な目標を言いかけて口をつぐんだ。"
+        },
+        {
+          "speaker": "johnny",
+          "text": "これを越えたい。……一回でできなくても、次があるなら。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "次もある、と答えた。恋人の約束とは別に、隣で自分の番を待つ相棒がほしかった。彼が画面を閉じるまで、私は二人の数字を一緒に見ていた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「次も組もう」と、二人の記録を追う相棒になる",
+          "next": "end_special",
+          "effect": "homeTogether",
+          "setFlags": [
+            "partners"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "今はそれぞれの点で競う友達でいたいと伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fwb_choice",
+      "title": "また選んで会う夜",
+      "chapter": 4,
+      "location": "街の広場",
+      "storyTime": {
+        "date": "6月30日",
+        "period": "夕方"
+      },
+      "characterId": "johnny",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人とは決めず、望む夜にも会う友達でいたいと伝えると、ジョニィくんはゆっくり頷いた。ぼくもそうしたいです、と返る。二人で同じ返事になってから、ようやく私は鞄へ手を伸ばして予定を開いた。"
+        },
+        {
+          "speaker": "johnny",
+          "text": "会ったら必ず泊まる、とは思わないでほしいです。ぼくもその時に聞く。途中でやめたい時も、言ってください。"
+        },
+        {
+          "speaker": "player",
+          "text": "うん。私も聞くし、言うね。投げに行くだけの日も、散歩する日も、まだ一緒に過ごしたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼が次の空いている日を示し、私も一つを選んだ。今日の残りは広場を歩いて帰ろうと言うと、今度はこちらから出たいですと彼が別の出口を指す。私も立ち上がり、自分の鞄を肩へ掛けた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "親密な友達として、次に会う夜を二人で決める",
+          "next": "end_fwb",
+          "effect": "messageBoundaries"
+        },
+        {
+          "id": "no",
+          "text": "考え直し、昼に会う友達でいたいと伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "end_friend",
+      "title": "自分の球を選ぶ",
+      "chapter": 5,
+      "location": "街のボウリング場",
+      "storyTime": {
+        "date": "7月7日",
+        "period": "昼"
+      },
+      "characterId": "johnny",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人にはなれないと答えると、ジョニィくんは視線を落とした。分かりました、と返ってから、その日は別れた。数日後、私からまた投げに行こうと誘うと、次は自分が店を取りますという文が届いた。",
+          "when": {
+            "flags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "昼に会う友達でいようと話してから、次は二人で投げに来た。ジョニィくんは夜の気持ちを聞き直さず、靴を履き替える私へ自分の今日の目標を話す。私は少し照れたまま、自分の点も言った。",
+          "when": {
+            "flags": [
+              "hadNight",
+              "endedNight"
+            ],
+            "notFlags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "友達として次も競おうと話してから、二人で投げに来た。ジョニィくんは先に靴を履き替え、私が選ぶ球を見ている。今日の目標を訊かれ、百点をもう一度、と答えた。",
+          "when": {
+            "notFlags": [
+              "hadNight",
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "johnny",
+          "text": "それなら、最後まで見てます。ぼくの番も、ちゃんと見ててくださいね。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "うん、と答えて自分の球を持った。一本だけ残っても、今度はすぐ後ろを振り返らない。次の投げ方を考えて戻ると、ジョニィくんが席を空ける。終わったらジョセフとも飯を食べる約束だと話すと、まずはこれを終わらせましょう、と前を向いた。私も、そのつもりだった。"
+        }
+      ],
+      "choices": [],
+      "ending": "FRIEND"
+    },
+    {
+      "id": "end_love_a",
+      "title": "先に呼んだ名前",
+      "chapter": 5,
+      "location": "街の広場",
+      "storyTime": {
+        "date": "6月30日",
+        "period": "夕方"
+      },
+      "characterId": "johnny",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "johnny",
+          "text": "ぼくも好きです。先輩と付き合いたい。……先に言われたの、少し悔しいですけど。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "そこも悔しいんだ、と笑うと、彼もようやく笑った。私は手を差し出し、いいかなと訊く。頷いて重なった指を握ると、さっきまで言葉を探していた口から、嬉しい、と自然に出た。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "次の休日は先に食事をしてから出かけた。投げる予定は入れず、街を歩く。どこまで行こうかと話す途中で、彼の手が自分の隣にあるのを見て、自分から取った。目が合うと少し照れたが、今度は名前を呼んで笑えた。",
+          "storyTime": {
+            "date": "7月7日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_A"
+    },
+    {
+      "id": "end_love_b",
+      "title": "待っていた指",
+      "chapter": 5,
+      "location": "街の広場",
+      "storyTime": {
+        "date": "6月30日",
+        "period": "夕方"
+      },
+      "characterId": "johnny",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私も好き、と返したあと、ジョニィくんはすぐには話さなかった。こちらを見たまま、やがて長く息を吐く。その間に自分の胸まで少し楽になって、私はベンチの上で彼へ近づいた。"
+        },
+        {
+          "speaker": "player",
+          "text": "言ってくれて嬉しい。今、手をつないでもいい？"
+        },
+        {
+          "speaker": "johnny",
+          "text": "はい。ぼくも、そうしたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "膝から上げた彼の手を取り、自分の指を重ねる。小さな力が返ってきた。広場を出るまで同じ速さで歩こうとしたけれど、最初の二歩だけ足が合わず、二人で笑った。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌週、待ち合わせに来たジョニィくんへ私から手を振った。今日は何をしたいか訊かれ、少し考える。彼の顔を見てから、まず一緒に歩きたい、と答えた。つないだ手の温かさを覚えたまま、今日は私が一歩目を踏み出した。",
+          "storyTime": {
+            "date": "7月7日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_B"
+    },
+    {
+      "id": "end_fwb",
+      "title": "投げなかった日の朝",
+      "chapter": 5,
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "7月14日",
+        "period": "夜"
+      },
+      "characterId": "johnny",
+      "rating": "fade",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "今夜は会いたいと互いに連絡してから、ジョニィくんが家へ来た。今日は投げに行っていないと聞き、私も夕方まで別の用事をしていたと話す。泊まっていきたいですと言われ、私もそうしてほしいと答えてから、二人で夕食を食べた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "食後に隣へ座ると、彼が顔をこちらへ向けた。手に触れたいと自分から言い、返事を待って指を重ねる。唇が触れたあと、ジョニィくんももう一度と言った。私が頷くと少し笑い、二人で机から離れて奥の部屋へ移った。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝、彼は自分の鞄を持ち、玄関で靴を履いた。次は投げに行こうと私から誘うと、はい、と返って顔が上がる。昼の予定を一つ決めてから見送り、私は自分の朝食の皿を片づけた。何点だったか話さない夜にも、この人と会う理由があった。",
+          "storyTime": {
+            "date": "7月15日",
+            "period": "朝"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB"
+    },
+    {
+      "id": "end_fwb_love",
+      "title": "今の望みで",
+      "chapter": 5,
+      "location": "街の広場",
+      "storyTime": {
+        "date": "6月30日",
+        "period": "夕方"
+      },
+      "characterId": "johnny",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "今は恋人になりたいと話すと、ジョニィくんが私を見た。一緒にいた夜を、断れない理由にはしたくなかった。私は手を膝へ置いたまま待ち、彼も一度考えてから口を開いた。"
+        },
+        {
+          "speaker": "johnny",
+          "text": "ぼくも、先輩の恋人になりたいです。前の気持ちを間違いにしたいんじゃない。今、欲しい方を言うなら、そうです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私も、と返してから手を伸ばす。何度も触れた指なのに、取ってもらうまでは少し緊張した。握り返されると、私はそのまま肩が近くなるところまで寄った。彼も離れず、二人で広場を見た。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "次の休日、ゲームを終えて靴を履き替えた。私の点が前より落ちたので、今度は私が少し黙っている。ジョニィくんは無理に慰めず、外へ出てから手を差し出した。悔しいままその手を取ると、彼は自分も次こそもっと出したいと言った。",
+          "storyTime": {
+            "date": "7月7日",
+            "period": "夕方"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB_TO_LOVE"
+    },
+    {
+      "id": "end_special",
+      "title": "二人分の、次の点",
+      "chapter": 5,
+      "location": "街のボウリング場",
+      "storyTime": {
+        "date": "7月21日",
+        "period": "昼"
+      },
+      "characterId": "johnny",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "二人分の合計を、前回と比べる日になった。私は序盤で外し、ジョニィくんは後半で崩れた。どちらかが一人で取り返せばいいという数字ではなく、結果の画面を見上げたまま、しばらく二人とも黙る。"
+        },
+        {
+          "speaker": "johnny",
+          "text": "最後の方、また急ぎました。先輩の分まで取り返そうとした。……自分の一投を投げるって決めてたのに。"
+        },
+        {
+          "speaker": "player",
+          "text": "私も、早く次へ渡したくなってた。でも次は、ちゃんと自分の分を投げたい。ジョニィくんと、もう一回。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼は頷き、今日の点も写真に残した。私も自分の端末へ送ってもらう。恋人ではない相棒と、よくない記録を二人で持つ。帰るために球をラックへ戻したあと、彼は今日一番よかった私の一投のことを話し始めた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "何もよくなかった日にしなくて済んだ。私も、彼が最後まで狙い直した一投を覚えている。店を出ると次の日を決めようと言われたので、私はもう予定を開いていた。次は勝てる、とまでは、二人とも言わなかった。"
+        }
+      ],
+      "choices": [],
+      "ending": "SPECIAL"
+    }
+  ],
+  "endingDescriptions": {
+    "FRIEND": {
+      "title": "自分の球を選ぶ",
+      "description": "互いの点を追い、気軽に誘う友達。見ていてほしいと頼み、自分の一投を投げる。"
+    },
+    "LOVE_A": {
+      "title": "先に呼んだ名前",
+      "description": "自分から好きを伝える。投げる予定のない日にも、会いたい人の手を取って歩く。"
+    },
+    "LOVE_B": {
+      "title": "待っていた指",
+      "description": "欲しい関係を言う告白へ、自分の好きで答える。最初の足取りから、二人で合わせていく。"
+    },
+    "FWB": {
+      "title": "投げなかった日の朝",
+      "description": "互いが望む夜にも会う親密な友達。朝は自分の用事へ戻り、次の昼も誘い合う。"
+    },
+    "FWB_TO_LOVE": {
+      "title": "今の望みで",
+      "description": "重ねた夜の先で、今は恋人になりたいと選ぶ。悔しい日にも、差し出された手を取れる。"
+    },
+    "SPECIAL": {
+      "title": "二人分の、次の点",
+      "description": "自分の一投で同じ記録を追う相棒。互いの失敗もいい一投も残し、次も組もうと約束する。"
+    }
+  }
+}

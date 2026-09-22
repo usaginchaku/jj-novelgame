@@ -1,0 +1,1206 @@
+{
+  "id": "pucci",
+  "title": "プッチ — 最後の頁を、まだ知らない",
+  "intro": "卒業とすべての利害が終わったあと、古書店で再会する。\n同じ本を違う順で読み、答えを揃えずにまた会いたくなる。",
+  "startEvent": "lastpage",
+  "character": {
+    "name": "プッチ",
+    "adult": true,
+    "heightCm": 181,
+    "heightBasis": "二次資料JoJo Wikiの身長欄と出典注記を照合。ストーンオーシャン118話プロフィール。アニメ195とは分離。書籍・設定表現物は未照合。AUで同値を採用。",
+    "profile": "静かな観察。強固な信念。救済の名で自分の答えを押し通す危うさ。",
+    "personality": [
+      "静かな観察",
+      "強固な信念",
+      "救済の名で自分の答えを押し通す危うさ"
+    ],
+    "speech": {
+      "firstPerson": "わたし",
+      "addressing": "主人公は姓/君。公的には整った丁寧語、私的には落ち着いた常体。",
+      "tone": "整った説明と問いかけ。語尾は感情と相手に合わせる。",
+      "habits": [
+        "整った説明と問いかけ",
+        "君、〜だろう",
+        "動揺時の数え事は多用しない"
+      ],
+      "signaturePhrases": [],
+      "signatureNote": "日常の固定口癖は採用しない。象徴的な原作台詞と普段の話し方を混同せず、名台詞を貼り付けない。",
+      "avoid": [
+        "単なる優しい神父",
+        "素数を毎場面唱える",
+        "信仰を恋愛同意や評価に結びつける"
+      ]
+    },
+    "referenceSection": "docs/CHARACTER_REFERENCE.md#cast-pucci"
+  },
+  "au": {
+    "role": "39歳。教員。准教授/教授および倫理・哲学等の専攻は候補。恋愛は卒業後かつ全利害終了後",
+    "routeEnabled": true,
+    "addressing": [
+      {
+        "text": "{player.lastName}"
+      }
+    ]
+  },
+  "events": [
+    {
+      "id": "lastpage",
+      "title": "最後の頁を閉じて",
+      "chapter": 1,
+      "location": "街の古書店",
+      "storyTime": {
+        "date": "5月10日",
+        "period": "昼"
+      },
+      "characterId": "pucci",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "プッチ先生に再会したのは、大学を卒業してからの古書店だった。履修も評価も指導も研究も、推薦を受ける予定も、すべて終わっている。今後それが戻る関係でもない。三十九歳の教員である彼と、今日はそれぞれ私物の本を買いに来た客として同じ棚の前にいた。"
+        },
+        {
+          "speaker": "pucci",
+          "text": "君もこの本を。わたしは、最後を確かめてから買うことが多い。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "開かれかけた巻末を見て、私は思わず自分の本を閉じた。まだ読んでいないので、最後は聞きたくありません、と話す。先生の指が頁の上で止まり、こちらを見る。昔のように答えを待つ顔ではなく、少し意外だという顔だった。"
+        },
+        {
+          "speaker": "player",
+          "text": "分からないまま読みたいんです。外れたと思うかもしれないけど、それも自分で知りたくて。"
+        },
+        {
+          "speaker": "pucci",
+          "text": "そうか。では、言わずにおこう。わたしは知っている方が、その途中をよく見られると思うが。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "別々に同じ本を買った。店を出たあと、私はもう一度表紙を撫でる。どちらの読み方も変わらなかったけれど、読み終えたら話してみたい人ができた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "unknown",
+          "text": "結末は聞かず、自分の順で読むと伝える",
+          "next": "margin",
+          "effect": "workTogether",
+          "setFlags": [
+            "myReading"
+          ],
+          "lockRoute": "pucci"
+        },
+        {
+          "id": "invite",
+          "text": "「読み終えたら、先生と話したいです」と誘う",
+          "next": "margin",
+          "effect": "gameDate",
+          "lockRoute": "pucci"
+        }
+      ]
+    },
+    {
+      "id": "margin",
+      "title": "線を引かなかった場所",
+      "chapter": 1,
+      "location": "街の喫茶店",
+      "storyTime": {
+        "date": "5月17日",
+        "period": "昼"
+      },
+      "characterId": "pucci",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "読み終えた本を持ち寄ると、先生の一冊には小さな紙片が何枚も挟まっていた。私は何も挟まずに来た。途中の脇道のような場面が好きだったと話すと、彼は結末へ至る伏線としてその頁を開く。そこへつながるからではない、と私は言いかけた。"
+        },
+        {
+          "speaker": "pucci",
+          "text": "この選択があったから、最後の場所へ辿り着く。結末を知っていれば、迷い方にも意味が見えるだろう。"
+        },
+        {
+          "speaker": "player",
+          "text": "私は、違う方へ行ってもよかったと思ってました。この時の景色が好きだったので。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先生は続きを説明しかけ、私の指した一行へ目を落とした。納得してもらうために言い換えると、好きだったものがなくなりそうだった。私は本を回さず、自分の方からもう一度その文を読んだ。"
+        },
+        {
+          "speaker": "pucci",
+          "text": "君はそこへ留まりたいのか。わたしなら、早く先を知りたくなる。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "同じ本を置いた机に、違う道が二本残った。先生は紙片を抜かなかったし、私も印をつけなかった。それでも彼がもう一度頁を戻したことに、私は少し嬉しくなった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "view",
+          "text": "結論へ合わせず、途中の景色が好きだったと話す",
+          "next": "sunday",
+          "effect": "shiftHelp",
+          "setFlags": [
+            "differentEnd"
+          ]
+        },
+        {
+          "id": "near",
+          "text": "「先生の読み方も、もっと聞きたいです」と身を寄せる",
+          "next": "sunday",
+          "effect": "walkClose"
+        }
+      ]
+    },
+    {
+      "id": "sunday",
+      "title": "空けておく午後",
+      "chapter": 1,
+      "location": "駅前の広場",
+      "storyTime": {
+        "date": "5月24日",
+        "period": "昼"
+      },
+      "characterId": "pucci",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "本の店を二つ回ろうと約束した日、先生は食事の場所まで調べていた。次の店へ急げばどちらもゆっくり見られる、と説明する声は穏やかだった。私は最初の店の隣にある小さな展示が気になり、まだ歩き出さずにいた。"
+        },
+        {
+          "speaker": "player",
+          "text": "今日は、先にここを見たいです。二軒目に行けなくなっても、私はいいです。"
+        },
+        {
+          "speaker": "pucci",
+          "text": "後で行けばいいだろう。そうすれば、どちらも逃さずに済む。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼の言う方が効率はよさそうだった。それでも今足を止めた自分を、あとへ回したくなかった。今日は私はこちらを選びたいです、と伝える。先生は腕時計を見てから、では予定を一つ外そう、と言った。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "譲ってもらったから急いで見終えるのではなく、私は気になったところで立ち止まった。先生も隣から展示を見ていたが、後で、二軒目も見たかった、と率直に言う。次は先生の選ぶ一軒へ、と私は自分から別の日を提案した。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "time",
+          "text": "今見たいものを選び、彼の行きたかった店は別の日へ誘う",
+          "next": "message",
+          "effect": "homeTogether",
+          "setFlags": [
+            "ownAfternoon"
+          ]
+        },
+        {
+          "id": "smile",
+          "text": "「予定が変わっても、先生と来られて嬉しいです」と話す",
+          "next": "message",
+          "effect": "walkClose"
+        }
+      ]
+    },
+    {
+      "id": "message",
+      "title": "答えを足す前に",
+      "chapter": 1,
+      "location": "自分の部屋",
+      "storyTime": {
+        "date": "5月24日",
+        "period": "夜"
+      },
+      "characterId": "pucci",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "帰ってから展示でもらった案内を開いていると、先生から文が来た。今日は何が残ったかという問いに、私は小さな絵の色と、予定を変える時に少し緊張したことを書いた。しばらくして、短い返事が届く。"
+        },
+        {
+          "speaker": "pucci",
+          "text": "わたしは、君が同じものを何度も見に戻ったことを覚えている。見終える時刻までは、決められなかった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "その一文を読むと、予定からはみ出した時間が、こちらだけのものではなくなる。感想へ採点がつくわけではない。私は今返したい言葉を、昔の癖で整えすぎないように打った。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "book",
+          "text": "次は先生が見たかった店へ。今度は私から日時を送ります",
+          "next": "wait",
+          "effect": "messageDaily",
+          "replyVariants": [
+            {
+              "text": "待っている。君が空けたい時間を知らせてくれ。"
+            }
+          ]
+        },
+        {
+          "id": "you",
+          "text": "展示のことより、また先生に会いたいと思ってます",
+          "next": "wait",
+          "effect": "messageHeart",
+          "replyVariants": [
+            {
+              "when": {
+                "min": {
+                  "romanceChar": 20
+                }
+              },
+              "text": "わたしも会いたい。次の本を決める前に、君の顔を思い浮かべていた。"
+            },
+            {
+              "text": "また会おう。用意しておく話がなくても、構わない。"
+            }
+          ]
+        }
+      ],
+      "message": true
+    },
+    {
+      "id": "wait",
+      "title": "読まない一頁",
+      "chapter": 1,
+      "location": "古書店に併設された休憩席",
+      "storyTime": {
+        "date": "6月1日",
+        "period": "昼"
+      },
+      "characterId": "pucci",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "次の店で、私は結末を知らない短編集を選んだ。先生は既に読んだことがあるらしく、最後の一編について話し始める。先にそこだけ知れば安心して読める、と言いかけたところで、私は首を振った。"
+        },
+        {
+          "speaker": "player",
+          "text": "まだ、言わないでください。安心するより先に、自分で驚きたいです。"
+        },
+        {
+          "speaker": "pucci",
+          "text": "……前にも、そう言っていたな。分かった。わたしは、知っている方が楽だと思ってしまう。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先生は閉じた本へ手を戻した。相手のためと言われても、自分の読みたい順番まで渡さなくていい。私はそこまで言葉にせず、代わりに読み終えたら自分から話すと約束した。彼は頷き、内容ではなく装丁の紙へ話を移した。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "触れてみると、表紙のざらつきが指に残った。まだ知らない頁を持ち帰ることが、今日は少し誇らしい。先生は店を出る時にも結末を言わず、また聞かせてくれ、とだけ言った。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "keep",
+          "text": "読み終えた時に、自分から話すと決める",
+          "next": "home",
+          "effect": "conferencePractical",
+          "setFlags": [
+            "keptUnknown"
+          ]
+        },
+        {
+          "id": "together",
+          "text": "「先を言わずに待ってくれる先生とも、会いたいです」と伝える",
+          "next": "home",
+          "effect": "rehearse"
+        }
+      ]
+    },
+    {
+      "id": "home",
+      "title": "二冊を重ねない",
+      "chapter": 1,
+      "location": "プッチの自宅",
+      "storyTime": {
+        "date": "6月8日",
+        "period": "夕方"
+      },
+      "characterId": "pucci",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "短編集を読み終えたので、約束して先生の家を訪ねた。食事のあと、互いの本を机へ置く。予想していた終わりではなかったと話すと、先生はそれがいいのだろう、と言いかけ、私の顔を見て続きを待った。"
+        },
+        {
+          "speaker": "player",
+          "text": "好きとは、まだ言えません。でも、途中で読むのをやめなくてよかったです。最後を先に知っていたら、違う読み方になったと思います。"
+        },
+        {
+          "speaker": "pucci",
+          "text": "わたしは、あの終わりを知っていたから途中を読めた。君は、知らなかったからそこまで来たのか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "本を一つの答えに重ねずに並べたまま、私は頷いた。先生は自分の考えを引っ込めなかったが、私の感想へ結論を足しもしなかった。食器を二人で片づけ、戻ると机には二冊分の場所が残っている。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼が次に貸したい本を一つ挙げたので、私も自分の好きな一冊を思い浮かべた。貸してもいいですかと訊くと、ぜひ、と返る。何を選べば好まれるかを考えるより先に、自分の一冊が浮かんだ。今は、ただ読んでほしいから渡せる。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "lend",
+          "text": "互いに一冊ずつ選んで渡す約束をして帰る",
+          "next": "later",
+          "effect": "homeTogether",
+          "setFlags": [
+            "bothBooks"
+          ]
+        },
+        {
+          "id": "talk",
+          "text": "「本を閉じてからも、お話ししたいです」と伝えて帰る",
+          "next": "later",
+          "effect": "homeTalk"
+        },
+        {
+          "id": "stay",
+          "text": "「今夜は、先生のそばにいたいです」と伝える",
+          "next": "consent",
+          "effect": "hotelInvite",
+          "when": {
+            "min": {
+              "trust": 35,
+              "desire": 8
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "consent",
+      "title": "先を決めない夜",
+      "chapter": 1,
+      "location": "プッチの自宅",
+      "storyTime": {
+        "date": "6月8日",
+        "period": "夜"
+      },
+      "characterId": "pucci",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先生は開いていた本を閉じた。私へ向き直った顔は、言葉の意味を考えているようだったが、私の代わりに答えを作る声は来なかった。少しの間のあと、彼は自分の望みを言った。"
+        },
+        {
+          "speaker": "pucci",
+          "text": "わたしも君に触れたい。今夜、一緒にいたいと思っている。恋人になる約束とは別に、君もそう望んでいるだろうか。"
+        },
+        {
+          "speaker": "player",
+          "text": "はい。でも、途中でやめたくなったら言います。先生も言ってください。今の返事で、その先まで決めたくはないです。"
+        },
+        {
+          "speaker": "pucci",
+          "text": "分かった。どちらかが止めたら止めよう。今から帰ることもできる。わたしの答えに合わせる必要はない。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "聞き慣れた声の人へ、それでも自分の望みを言うのは緊張した。私は膝に置いた手を開き、彼の方へ体を向ける。正しい言葉ではなく、今の私が望む言葉を選びたかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「今夜は、一緒にいたいです」と答える",
+          "next": "night",
+          "effect": "consent",
+          "setFlags": [
+            "mutualConsent",
+            "hadNight"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「今日は帰ります。次はまた昼に」と伝える",
+          "next": "later",
+          "effect": "walkHome",
+          "setFlags": [
+            "declinedTouch"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "night",
+      "title": "頁の外で",
+      "chapter": 1,
+      "location": "プッチの自宅",
+      "storyTime": {
+        "date": "6月8日",
+        "period": "夜"
+      },
+      "characterId": "pucci",
+      "rating": "fade",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "彼が近づいていいかと尋ね、私は頷いてから手を伸ばした。立ち上がると顔の位置が変わり、彼が少し身を屈める。机の本は背中の方へ遠ざかった。頬へ触れる指を受けながら、私は自分からも彼の袖をつかんだ。"
+        },
+        {
+          "speaker": "player",
+          "text": "今、先生も緊張してますか。"
+        },
+        {
+          "speaker": "pucci",
+          "text": "している。君の返事を、次の言葉まで知っているわけではないから。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私もです、と笑った。唇が触れ、離れたあとにもう一度近づく。知っている話の結末へ進むのではなく、今の小さな返事を二人で重ねていた。手を取ったまま机から離れ、奥の灯りを落とした。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝、先生が飲み物を用意する間に、私は本を鞄へ戻した。朝食を食べたら帰りますと伝え、窓の外の明るさを見る。彼は頷き、空いていた席の前へ皿を置く。その日の始まり方まで決まっていなかったことが、私には嬉しかった。",
+          "storyTime": {
+            "date": "6月9日",
+            "period": "朝"
+          }
+        }
+      ],
+      "choices": [
+        {
+          "id": "home",
+          "text": "朝食のあと、自分の本を持って帰る",
+          "next": "after_message"
+        }
+      ],
+      "when": {
+        "flags": [
+          "mutualConsent"
+        ]
+      }
+    },
+    {
+      "id": "after_message",
+      "title": "閉じて持ち帰ったもの",
+      "chapter": 1,
+      "location": "自分の部屋",
+      "storyTime": {
+        "date": "6月9日",
+        "period": "夜"
+      },
+      "characterId": "pucci",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "本を棚へ戻すと、昨夜のことをそこへしまえたわけではないと分かった。座る場所も、近くで聞く声も、紙の外側に残っている。先生から帰り道を気遣う文が来たので、大丈夫でしたと返した。そのあとにも、もう一文あった。"
+        },
+        {
+          "speaker": "pucci",
+          "text": "また君と会いたい。次の本を理由にしなくても。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私は画面の文末をしばらく見た。次にどう会いたいかを、穏当な返事で隠したくはない。彼が知っているはずの答えも、私が先に用意すべき答えもなかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "again",
+          "text": "また夜も会いたいです。先生を、前より好きになりました",
+          "next": "later",
+          "effect": "messageAgain",
+          "setFlags": [
+            "ongoing"
+          ],
+          "replyVariants": [
+            {
+              "text": "わたしも会いたい。次に会った時、自分の言葉でも伝えたい。"
+            }
+          ]
+        },
+        {
+          "id": "nights",
+          "text": "恋人とは決めず、望む夜にも会う友達でいたいです",
+          "next": "later",
+          "effect": "messageBoundaries",
+          "setFlags": [
+            "ongoing"
+          ],
+          "replyVariants": [
+            {
+              "text": "わたしも、それを望む。その時々の気持ちは、改めて聞こう。"
+            }
+          ]
+        },
+        {
+          "id": "days",
+          "text": "次からは昼に会う友達でいたいです",
+          "next": "later",
+          "effect": "messageDaily",
+          "setFlags": [
+            "endedNight"
+          ],
+          "replyVariants": [
+            {
+              "text": "分かった。昼に会おう。君が会いたい時に、都合を聞かせてくれ。"
+            }
+          ]
+        }
+      ],
+      "message": true
+    },
+    {
+      "id": "later",
+      "title": "栞を挟む場所",
+      "chapter": 1,
+      "location": "街の喫茶店",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "pucci",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "六月の間、互いに望んだ夜を先生の家で過ごした。食事だけの日もあり、朝は自分の用事へ帰った。本の感想を送ることと、会いたいと伝えることは、少しずつ別の文になっている。今日は夜の約束ではなく、昼に話したいことがあった。",
+          "when": {
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "六月の間、先生と本の店や展示を訪ね、昼を一緒に食べた。行きたい場所が違う日は別の日を作り、読む順番もそれぞれのままだった。話すたびに同じ答えへ近づくわけではない。それでも次に会いたいと思う自分を、私は知った。",
+          "when": {
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "先生が本へ栞を挟んだので、私も自分の一冊を閉じた。机が急に、二人の手を置く場所になる。話し始めるために私は彼の名前を呼び、問い返されるより先に顔を上げた。"
+        },
+        {
+          "speaker": "pucci",
+          "text": "聞こう。今日は、君から。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "tell",
+          "text": "先生を好きになったことを、自分から伝える",
+          "next": "confess_player",
+          "when": {
+            "min": {
+              "trust": 40,
+              "romancePlayer": 35,
+              "romanceChar": 35
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "listen",
+          "text": "先生が私へ向けている言葉を待つ",
+          "next": "confess_char",
+          "when": {
+            "min": {
+              "trust": 40,
+              "romancePlayer": 20,
+              "romanceChar": 40
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "pact",
+          "text": "読み方を揃えず、互いの一冊を渡し合う相手でいたい",
+          "next": "pact",
+          "when": {
+            "min": {
+              "trust": 40,
+              "comfort": 60
+            },
+            "flags": [
+              "myReading",
+              "differentEnd",
+              "ownAfternoon",
+              "keptUnknown",
+              "bothBooks"
+            ],
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "nights",
+          "text": "恋人とは決めず、望む夜に会う友情を続けたい",
+          "next": "fwb_choice",
+          "when": {
+            "min": {
+              "trust": 45,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "love",
+          "text": "夜を重ねた今、先生の恋人になりたい",
+          "next": "end_fwb_love",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 30,
+              "romanceChar": 30,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "friends",
+          "text": "これからも自分の感想を話す友達でいたい",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_player",
+      "title": "答えより先に",
+      "chapter": 4,
+      "location": "街の喫茶店",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "pucci",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "好きです、と言うと、先生は何も尋ねずに私を見た。その静けさに、理由をきちんと並べたくなる。けれど今日は評価される説明を持ってきたのではなかった。私はグラスの縁から手を離した。"
+        },
+        {
+          "speaker": "player",
+          "text": "意見が合うからだけじゃありません。会ったあと、違ったままでも、また会いたくなります。先生の隣に、私の気持ちでいたいです。"
+        },
+        {
+          "speaker": "pucci",
+          "text": "わたしも、君に会いたい。君の答えを聞いたあとも、まだ君自身のことを考えている。好きだ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "その言い方を聞くと、次の説明はいらなくなった。頬が熱く、自分がどんな顔をしているかは分からない。分からないまま彼を見返し、私は自分から関係の名前を望んだ。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「私と付き合ってください」と伝える",
+          "next": "end_love_a",
+          "effect": "messageHeart"
+        },
+        {
+          "id": "no",
+          "text": "「今は友達として会いたいです」と伝え直す",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_char",
+      "title": "結論にしない返事",
+      "chapter": 4,
+      "location": "街の喫茶店",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "pucci",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先生は重ねかけた本を別々に置き直した。話す前の手つきまで整っているのに、指先だけが一度栞へ戻る。私はその小さな迷いを見て、黙って待っていた。"
+        },
+        {
+          "speaker": "pucci",
+          "text": "わたしは君が好きだ。恋人として、これからの時間を一緒に過ごしたい。君の望みも聞かせてほしい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "いつもの問いに似た語順でも、向けられた声は違った。私が答えを変えれば、この人もそれを受け取る側になる。胸の奥が落ち着かないまま、私は自分の本を鞄へしまい、顔を隠す物を一つ減らした。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「私も好きです。恋人になりたいです」と答える",
+          "next": "end_love_b",
+          "effect": "messageHeart"
+        },
+        {
+          "id": "no",
+          "text": "「恋人ではなく、友達でいたいです」と答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "refusedConfession",
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pact",
+      "title": "最後を渡さずに",
+      "chapter": 4,
+      "location": "街の喫茶店",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "pucci",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私は今日持ってきた本を、彼の方へ差し出した。自分では選ばない一冊を互いに渡し、読む順番までは決めない。そういう相手でいたいと話すと、先生は表紙を確かめ、どこがよかったのかと尋ねた。"
+        },
+        {
+          "speaker": "player",
+          "text": "そこは、読んだあとで。先生が最後から読むのは止めません。でも私に貸す時は、最後を言わずに渡してください。"
+        },
+        {
+          "speaker": "pucci",
+          "text": "同じ渡し方ではないのだな。……分かった。わたしも、君が何を残すかは読んだあとに聞こう。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "恋人の約束とは別だと二人で確かめた。先生の一冊がこちらへ来て、私はその重さを膝で受ける。どちらの読み方が正しいかを決める棚ではなく、違う人が選んだものを持ち帰れる場所ができた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "読む順番を揃えず、一冊ずつ渡し合う相手になる",
+          "next": "end_special",
+          "effect": "homeTogether"
+        },
+        {
+          "id": "friends",
+          "text": "貸し合う約束はせず、気軽に話す友達を選ぶ",
+          "next": "end_friend",
+          "effect": "friendPromise"
+        }
+      ]
+    },
+    {
+      "id": "fwb_choice",
+      "title": "その夜の望みを",
+      "chapter": 4,
+      "location": "街の喫茶店",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "pucci",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人と決めず、望む夜にまた会いたいと話した。先生は一度頷き、自分もそうしたいと答える。先の形が決まっていないことを、足りないものとして説明されなかったので、私はもう少し自分の言葉を続けられた。"
+        },
+        {
+          "speaker": "player",
+          "text": "会ったから必ず泊まる、にはしたくないです。私からも誘うし、違う時は言います。"
+        },
+        {
+          "speaker": "pucci",
+          "text": "わたしもそうしよう。途中でやめたくなったら止める。前の返事を、次の返事にはしない。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "閉じた本の横で、私たちは自分の予定を開いた。昼に会う日も残し、夜は望む時に改めて誘う。その話を終えてから、先生がまだ飲み終えていないグラスを持ち上げた。今日はそれを待って、一緒に店を出たかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "その都度望みを聞く、親密な友人として続ける",
+          "next": "end_fwb",
+          "effect": "messageBoundaries"
+        },
+        {
+          "id": "day",
+          "text": "次からは昼に会う友達に戻る",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "end_friend",
+      "title": "違う頁から話す",
+      "chapter": 5,
+      "location": "街の喫茶店",
+      "storyTime": {
+        "date": "7月13日",
+        "period": "昼"
+      },
+      "characterId": "pucci",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人にはならないと答えた時、先生は静かに頷いた。すぐに別の話を足さず、その日は互いに帰った。数日後、私から本の感想を送ると、会って聞きたい、と返ってきた。今日の昼は二人で選んだ。",
+          "when": {
+            "flags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "昼に会う友達でいようと話してから、先生とは店で待ち合わせるようになった。夜をなかったことにはせず、今の望みに合う場所を自分でも選ぶ。今日は読み終えた本を持ってきた。",
+          "when": {
+            "flags": [
+              "hadNight"
+            ],
+            "notFlags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "友達として次も感想を話そうと約束し、今日は違う本を一冊ずつ持ってきた。先生が自分の結論を言い、私はその前に好きだった場面を話す。最初の古書店から変わらない違いが、もう気まずさにはならなかった。",
+          "when": {
+            "notFlags": [
+              "hadNight",
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "pucci",
+          "text": "わたしは、やはり終わりを知って読みたい。だが君のその場面も、もう一度読んでみる。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私は自分の本を閉じ、感想を変えずに笑った。相手を説得できた日だけ会うのではない。次に寄りたい展示を話すと、先生も自分が見たかった店を挙げた。どちらを先にするかは、今日の二人で決めた。"
+        }
+      ],
+      "choices": [],
+      "ending": "FRIEND"
+    },
+    {
+      "id": "end_love_a",
+      "title": "私からひらく",
+      "chapter": 5,
+      "location": "街の喫茶店と歩道",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "pucci",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "付き合いたい、と先生が返した。返事を受けたあとの自分の顔まで、先には考えていなかった。私は笑いかけて、少し俯き、それからもう一度彼を見た。手をつないでいいか尋ねると、彼が掌をこちらへ向けた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌週、街で会った私たちは先に散歩へ出た。読み終えていない本の話をしかけ、私は途中で止める。先生も先を尋ねず、今日はどこまで歩きたいかと聞いた。",
+          "storyTime": {
+            "date": "7月6日",
+            "period": "昼"
+          }
+        },
+        {
+          "speaker": "player",
+          "text": "まだ決めてません。今、先生の隣で歩きたいです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼は頷き、私の歩幅へ速度を落とした。道の先が見えなくなる角で、私は自分から手を握り直す。隣にいてほしい理由を、今日はそれ以上説明しなかった。"
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_A"
+    },
+    {
+      "id": "end_love_b",
+      "title": "言い終えた顔",
+      "chapter": 5,
+      "location": "街の喫茶店と駅前",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "pucci",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私も好きですと答えると、先生の口元がゆっくり緩んだ。いつも誰かの話を聞く顔とは少し違う。今、嬉しいですかと尋ねたら、嬉しい、と返る。私はその短い声を聞いて、ようやく自分も笑えた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌週の待ち合わせでは、彼が先に私を見つけた。名前を呼ばれ、近づくと、手をつなぎたいと言われる。私は頷いて鞄を持ち替え、空いた方を差し出した。",
+          "storyTime": {
+            "date": "7月6日",
+            "period": "昼"
+          }
+        },
+        {
+          "speaker": "pucci",
+          "text": "今日は君の選んだ店へ行こう。わたしは、着いてから中を知りたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "珍しい言い方に顔を上げたが、先生はいつもの落ち着いた顔へ戻っていた。私は店までの道を案内する。まだ見せていないものがあることが、教わるためではない二人の休日を少し明るくした。"
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_B"
+    },
+    {
+      "id": "end_fwb",
+      "title": "朝に閉じる扉",
+      "chapter": 5,
+      "location": "プッチの自宅",
+      "storyTime": {
+        "date": "7月13日",
+        "period": "夜"
+      },
+      "characterId": "pucci",
+      "rating": "fade",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "会いたいと互いに伝え、私は先生の家へ来た。夕食のあと、自分の本を鞄へしまう。今夜も泊まりたいですと話すと、彼も一緒にいてほしいと答えた。翌朝は帰る用事があることも、先に自分から伝えた。"
+        },
+        {
+          "speaker": "pucci",
+          "text": "分かった。今夜、近づいてもいいだろうか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私も近づきたいですと返し、隣へ座った。触れる手へ自分の手を重ねると、彼が少し身を屈める。今の返事だけを持って近づく距離が、今日は心地よかった。口づけのあともう一度目を合わせ、二人で灯りを落とす。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝食のあと、私は自分の本を持って玄関へ向かった。次の感想は昼に話しましょうと言うと、彼も頷く。夜の約束だけを持って帰るのではなく、自分の一日へ戻ったあとに送る言葉を、私はまだ選ばずにいた。",
+          "storyTime": {
+            "date": "7月14日",
+            "period": "朝"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB"
+    },
+    {
+      "id": "end_fwb_love",
+      "title": "今日の答えを選ぶ",
+      "chapter": 5,
+      "location": "街の喫茶店と古書店",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "pucci",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "今は恋人になりたい、と話した。先生は私を見て、一度息を吐く。知っていたと返されるのではなく、わたしも、と今の声で言われた。その一言で、私は自分の返事を今日渡せたと思った。"
+        },
+        {
+          "speaker": "pucci",
+          "text": "わたしも、君の恋人になりたい。今までの夜を否定せず、その先を今の二人で選びたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "差し出された手を取ると、指の温かさは知っているのに少し照れた。翌週は私が見つけた古書店へ行く。二人でそう決めてから、私は閉じていた本を鞄へ戻した。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "次の休日、棚の間で別々の本を選んだ。先生はやはり巻末を確かめ、私は表紙から開く。目が合うと、どちらも読み方を変えずに笑った。店を出てから手をつなぐ理由だけが、新しくなっていた。",
+          "storyTime": {
+            "date": "7月6日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB_TO_LOVE"
+    },
+    {
+      "id": "end_special",
+      "title": "同じ順では読まない",
+      "chapter": 5,
+      "location": "街の喫茶店",
+      "storyTime": {
+        "date": "7月13日",
+        "period": "昼"
+      },
+      "characterId": "pucci",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "貸し合った本を返す日、私は結末より途中の一場面から話し始めた。先生は意外だという顔をしたが、どこへつながるかを先には言わなかった。自分が線を引いた頁とは違うところを、彼も開いて確かめる。"
+        },
+        {
+          "speaker": "pucci",
+          "text": "わたしはここを通り過ぎた。君の読み方なら、長く残るのだな。"
+        },
+        {
+          "speaker": "player",
+          "text": "はい。先生が選んだ本じゃなかったら、私は読まなかったと思います。でも感想は、私のままでした。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先生の感想も、私が予想したものとは違った。恋人ではなく、一冊を渡したあとも自分の答えを持てる相手として向かい合う。次に貸す本はそれぞれに選び、最後の頁を口にするかどうかだけを、相手に合わせて確かめた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "帰りに私の鞄へ入った本には、まだ知らない終わりがある。先生の一冊は、もう最後を開かれたかもしれない。どちらから話し始めても、次の机には二人分の場所があった。"
+        }
+      ],
+      "choices": [],
+      "ending": "SPECIAL"
+    }
+  ],
+  "endingDescriptions": {
+    "FRIEND": {
+      "title": "違う頁から話す",
+      "description": "違う結論を残したまま、次の感想を持ち寄る。説得できた日だけでなく会える友人として。"
+    },
+    "LOVE_A": {
+      "title": "私からひらく",
+      "description": "自分から好きと伝え、答えを受け取る。正解を返す関係を離れ、自分の望みで恋人の隣へ。"
+    },
+    "LOVE_B": {
+      "title": "言い終えた顔",
+      "description": "彼が言葉にした望みへ、自分の好きも返す。まだ見せていない店へ、恋人を案内する休日。"
+    },
+    "FWB": {
+      "title": "朝に閉じる扉",
+      "description": "その夜の望みを確かめ、朝は自分の予定へ帰る。昼の会話も残した親密な友人関係。"
+    },
+    "FWB_TO_LOVE": {
+      "title": "今日の答えを選ぶ",
+      "description": "重ねた夜を否定せず、今の答えで恋人になる。読み方は違うまま、店を出てから手をつなぐ。"
+    },
+    "SPECIAL": {
+      "title": "同じ順では読まない",
+      "description": "読む順、好きな途中、自分の午後を保って、一冊ずつ渡し合う。恋人とは別の、違う読後を聞く相手。"
+    }
+  },
+  "playerContext": {
+    "role": "情報系を卒業した成人。プッチとの履修・評価・指導・研究・採用推薦等の全利害終了後",
+    "profile": "卒業後の私的な再会。現在も将来もプッチから評価・指導・研究上の利益や採用推薦を受ける関係ではない。"
+  }
+}

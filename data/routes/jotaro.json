@@ -1,0 +1,1228 @@
+{
+  "id": "jotaro",
+  "title": "承太郎 — 潮が引くまで",
+  "intro": "海辺で拾った、短い返事と小さな記録。\n話さない時間にも、あなたのために空いた場所がある。",
+  "startEvent": "shore",
+  "character": {
+    "name": "承太郎",
+    "adult": true,
+    "heightCm": 195,
+    "heightBasis": "二次資料JoJo Wikiの身長欄と出典注記を照合。原作129話プロフィール。書籍・設定表現物は未照合。AUで同値を採用。",
+    "profile": "冷静な観察と判断。強い正義感。口の悪さと熱さを内に持つ。",
+    "personality": [
+      "冷静な観察と判断",
+      "強い正義感",
+      "口の悪さと熱さを内に持つ"
+    ],
+    "speech": {
+      "firstPerson": "おれ",
+      "addressing": "主人公は姓/おまえ。乱暴な罵倒を好意の代用にしない。",
+      "tone": "短い常体。語尾は感情と相手に合わせる。",
+      "habits": [
+        "短い常体",
+        "必要な事実と一言で答える",
+        "本気のとき視線と行動が先に出る"
+      ],
+      "signaturePhrases": [
+        "やれやれだぜ"
+      ],
+      "signatureNote": "ASBR台詞二次転記にある短い反応の型。面倒を引き受ける等の文脈がある時だけ。",
+      "avoid": [
+        "全台詞をやれやれだぜにする",
+        "終始無言で意思確認を省く",
+        "4・6部の父親役を混ぜる"
+      ]
+    },
+    "referenceSection": "docs/CHARACTER_REFERENCE.md#cast-jotaro"
+  },
+  "au": {
+    "role": "海洋工学／海洋生命系4年。ジョセフの遠縁はAU設定",
+    "routeEnabled": true,
+    "addressing": [
+      {
+        "text": "{player.lastName}"
+      }
+    ]
+  },
+  "endingDescriptions": {
+    "FRIEND": {
+      "title": "見せたいものができたら",
+      "description": "同じ海を見て、違う発見を送り合う友人。次の潮の時刻にも、それぞれの目がある。"
+    },
+    "LOVE_A": {
+      "title": "隣へ届く言葉",
+      "description": "写真の外にいた人へ、自分から好きだと伝える。次の朝は、隣で手を取る。"
+    },
+    "LOVE_B": {
+      "title": "帽子の陰から",
+      "description": "短い言葉で、彼から恋人にと望まれる。聞かれていないと思った話が、次の約束になる。"
+    },
+    "FWB": {
+      "title": "海へ行かない夜にも",
+      "description": "昼にも夜にも、互いに望んで会う友人。雨の翌朝には、それぞれの予定へ帰っていく。"
+    },
+    "FWB_TO_LOVE": {
+      "title": "知っている手を、外で",
+      "description": "重ねた夜の先で、恋人として会いたいと伝え合う。知っている手を取って、明るい街へ歩く。"
+    },
+    "SPECIAL": {
+      "title": "何も撮れない朝も",
+      "description": "写らなかったものも残す、二人だけの観察帳。恋人として訪ねる朝には、来たという一行も増えていく。"
+    }
+  },
+  "events": [
+    {
+      "id": "shore",
+      "chapter": 1,
+      "title": "波の届かない線",
+      "location": "海辺の遊歩道",
+      "storyTime": {
+        "date": "5月11日",
+        "period": "朝"
+      },
+      "characterId": "jotaro",
+      "rating": "general",
+      "tags": [
+        "jotaro"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "海の写真を見やすく並べる学内展示を手伝うことになり、撮影に同行した。待ち合わせの階段には、もう承太郎先輩がいた。海洋系四年の先輩とはジョセフを通じて何度か話したことがあるが、二人で出掛けるのは初めてだった。階段を下りようとすると、先輩の手が低い段を指す。濡れた石の方へ踏み出しかけていた足を、私は戻した。"
+        },
+        {
+          "speaker": "jotaro",
+          "text": "そっちは滑る。上から撮れ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩はそれだけ言って、遊歩道の柵へ向かった。私も隣へ立つ。広い海を撮るつもりだったのに、先輩の視線は足元近くの潮だまりにあった。水が引くたび、岩の下で小さなものが動いている。"
+        },
+        {
+          "speaker": "player",
+          "text": "……今、動きました。先輩は、これを待ってたんですか。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "watch",
+          "text": "撮れた位置と時刻を、一緒に記録する",
+          "next": "photo",
+          "effect": "workTogether"
+        },
+        {
+          "id": "curious",
+          "text": "先輩が何を待っていたのか、隣で聞く",
+          "next": "photo",
+          "effect": "ask"
+        }
+      ]
+    },
+    {
+      "id": "photo",
+      "chapter": 1,
+      "title": "映らなかったもの",
+      "location": "大学の作業室",
+      "storyTime": {
+        "date": "5月14日",
+        "period": "夕方"
+      },
+      "characterId": "jotaro",
+      "rating": "general",
+      "tags": [
+        "jotaro"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "写真を並べると、海の青い一枚が一番目を引いた。潮だまりの写真は暗く、待っていた生き物もほとんど写っていない。私は画面を明るくしてみて、元へ戻す。あの日の色を変えすぎたくなかった。承太郎先輩は椅子に浅く座り、私の操作を見ていた。"
+        },
+        {
+          "speaker": "jotaro",
+          "text": "見えねえなら、見えねえと書けばいい。見たことまで消すな。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "ぶっきらぼうな声が、消しかけていた注記を止めた。私は観察した時刻をもう一度入力する。写らなかった、と書くのが失敗の報告でなくなった。先輩が画面へ身を寄せたので、帽子の陰が私の手元に落ちる。"
+        },
+        {
+          "speaker": "player",
+          "text": "じゃあ、もう一回見に行きたいです。今度は、この一枚だけでも。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "record",
+          "text": "写らなかったことも残し、自分から再訪を提案する",
+          "next": "lunch",
+          "effect": "honest",
+          "setFlags": [
+            "honestRecord"
+          ]
+        },
+        {
+          "id": "layout",
+          "text": "見える写真を中心に、読みやすく並べ直す",
+          "next": "lunch",
+          "effect": "compareNotes"
+        }
+      ]
+    },
+    {
+      "id": "lunch",
+      "chapter": 1,
+      "title": "置かれたままの椅子",
+      "location": "学内の食堂",
+      "storyTime": {
+        "date": "5月19日",
+        "period": "昼"
+      },
+      "characterId": "jotaro",
+      "rating": "general",
+      "tags": [
+        "jotaro"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "ジョセフに呼ばれて食堂へ行くと、承太郎先輩が向かいに座っていた。ジョセフは用事で席を立つ前に、こいつ返事しなくても聞いてるから、と余計なことを言う。先輩の顔を見てから、私は笑いを飲み込むのに失敗した。"
+        },
+        {
+          "speaker": "joseph",
+          "text": "おっと、聞こえてた？　じゃ、あとでなァ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "ジョセフを見送った先輩は、うるせえ、と一言落として箸を取った。駅前にできたカレーの店の話をすると、先輩は黙ったまま箸を動かしていた。行ってみたいと店の名前まで言ったけれど、返事はなかった。私は海へ行く日を相談し、土曜は別の用事があると話す。日曜の朝なら、と先輩が言う。嫌ではないかを何度も尋ねる代わりに、その日の自分の予定を開いた。"
+        },
+        {
+          "speaker": "player",
+          "text": "日曜、行きたいです。先輩が来られない日も、私だけで写真を撮ってみようかな。"
+        },
+        {
+          "speaker": "jotaro",
+          "text": "遊歩道からにしろよ。潮の時間は、ここで見られる。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "own_visit",
+          "text": "自分でも見に行くつもりで、潮の時刻を教わる",
+          "next": "message",
+          "effect": "homeTalk",
+          "setFlags": [
+            "ownObservation"
+          ]
+        },
+        {
+          "id": "two",
+          "text": "まずは二人で行く朝を、楽しみにすると伝える",
+          "next": "message",
+          "effect": "lunchTwo"
+        },
+        {
+          "id": "schedule",
+          "text": "撮影に必要な時間だけ、具体的に確認する",
+          "next": "message",
+          "effect": "shiftRest"
+        }
+      ]
+    },
+    {
+      "id": "message",
+      "chapter": 2,
+      "title": "言葉より先の写真",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "5月23日",
+        "period": "夜"
+      },
+      "characterId": "jotaro",
+      "rating": "general",
+      "tags": [
+        "jotaro"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先輩から、週末の潮の時刻が届いた。文章は一行で、その下に前とは違う角度の潮だまりが写っている。私は画面を横にして、何が変わったか探した。岩の端の白い線に気づくまで、先輩に訊かずに見ていた。"
+        },
+        {
+          "speaker": "jotaro",
+          "text": "日曜は七時でいいか。前より水が引く。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "早起きは得意ではない。それでも、日曜の朝をもう少し先へ延ばしたくないと思った。返信の文字を選んでいる間、前に聞いた海の音を思い出していた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "glad",
+          "text": "行きます。先輩と、もう一度見られるのが楽しみです",
+          "next": "waiting",
+          "effect": "messageHeart",
+          "replyVariants": [
+            {
+              "text": "おれもだ。今度は、あの場所から見る。",
+              "when": {
+                "flags": [
+                  "honestRecord"
+                ]
+              }
+            },
+            {
+              "text": "ああ。七時に階段で待つ。"
+            }
+          ],
+          "lockRoute": "jotaro"
+        },
+        {
+          "id": "notice",
+          "text": "写真の端、前に見えなかったところですね",
+          "next": "waiting",
+          "effect": "messageListen",
+          "replyVariants": [
+            {
+              "text": "気づいたか。そこも見せる。"
+            }
+          ],
+          "lockRoute": "jotaro"
+        },
+        {
+          "id": "ready",
+          "text": "七時ですね。充電して、準備しておきます",
+          "next": "waiting",
+          "effect": "messageDaily",
+          "replyVariants": [
+            {
+              "text": "靴は前と同じのでいい。雨ならやめる。"
+            }
+          ],
+          "lockRoute": "jotaro"
+        }
+      ],
+      "message": true
+    },
+    {
+      "id": "waiting",
+      "chapter": 2,
+      "title": "待っている間",
+      "location": "海辺の遊歩道",
+      "storyTime": {
+        "date": "5月25日",
+        "period": "朝"
+      },
+      "characterId": "jotaro",
+      "rating": "general",
+      "tags": [
+        "jotaro"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "日曜の朝、海には細かな波が残っていた。柵の内側から潮だまりを見ていると、小さな生き物が岩の陰へ隠れる。撮ろうとした私の手が止まり、先輩も端末を下ろした。何分経ったのか、同じ場所を見続けているうちに分からなくなる。"
+        },
+        {
+          "speaker": "jotaro",
+          "text": "出てこねえ時もある。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "帰れと言われたのかと思って横を見ると、先輩はまだそこにいた。私も端末をしまう。急いで何かを見せてもらわなくても、二人で待っている時間があった。風で髪が前へ来たので結び直すと、先輩が少し場所を詰め、柵の見やすいところを空けてくれた。"
+        },
+        {
+          "speaker": "player",
+          "text": "もう少し、ここにいたいです。先輩は？"
+        },
+        {
+          "speaker": "jotaro",
+          "text": "……ああ。もう少しな。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "stay",
+          "text": "写真を急がず、先輩の隣で待つ",
+          "next": "empty",
+          "effect": "walkClose",
+          "setFlags": [
+            "waitedTogether"
+          ]
+        },
+        {
+          "id": "finish",
+          "text": "撮れた分を確認し、今日は切り上げる",
+          "next": "empty",
+          "effect": "walkHome"
+        }
+      ]
+    },
+    {
+      "id": "empty",
+      "chapter": 2,
+      "title": "一人で見つけた線",
+      "location": "海辺と大学の作業室",
+      "storyTime": {
+        "date": "6月1日",
+        "period": "夕方"
+      },
+      "characterId": "jotaro",
+      "rating": "general",
+      "tags": [
+        "jotaro"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "次の休日、先輩は用事があって来られなかった。私は一人で遊歩道へ行き、同じ柵の前で写真を撮った。新しく気づいたものがあって顔を上げ、その先に誰もいないのを見た。帰ってからの作業室で写真を開くと、先輩は、ここまで水が引いたのか、と身を寄せた。"
+        },
+        {
+          "speaker": "player",
+          "text": "ここです。この岩の割れ目。前の写真だと、水の下でした。"
+        },
+        {
+          "speaker": "jotaro",
+          "text": "よく見てたな。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "短い言葉が、写真の中の朝へ届く。一人で見つけたものを見てもらうために、こんなに説明を考えていたのかと気づく。先輩はまだ画面を見ていて、私は横顔へ向けかけた視線を戻した。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "missed",
+          "text": "「その場で、先輩にも見せたかったです」と話す",
+          "next": "room",
+          "effect": "conferenceClose"
+        },
+        {
+          "id": "share",
+          "text": "新しく撮れた写真を、一緒に整理する",
+          "next": "room",
+          "effect": "conferencePractical"
+        }
+      ]
+    },
+    {
+      "id": "room",
+      "chapter": 3,
+      "title": "音のない海",
+      "location": "承太郎の自宅",
+      "storyTime": {
+        "date": "6月7日",
+        "period": "夜"
+      },
+      "characterId": "jotaro",
+      "rating": "general",
+      "tags": [
+        "jotaro"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "展示用の写真を仕上げるため、先輩の家で最後の確認をした。大きな画面に海が映り、部屋には波の音だけがない。夕食の容器を片づけると、先輩が私の撮った一枚で操作を止めた。広く写した海の端に、あの日先輩が立っていた柵が入っている。"
+        },
+        {
+          "speaker": "jotaro",
+          "text": "ここ、よく撮ってんな。"
+        },
+        {
+          "speaker": "player",
+          "text": "最初に先輩が立ってた場所だから、覚えちゃって。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "言ってから、写真へ理由を押しつけたようで恥ずかしくなった。先輩は笑わず、もう一度画面を見る。その横顔を見ていると、今日は海にいなくても同じ場所で待てる気がした。帰る時間まで、まだ少しあった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "stay",
+          "text": "「今夜は、そばにいたいです」と伝える",
+          "next": "consent",
+          "effect": "hotelInvite",
+          "when": {
+            "min": {
+              "trust": 45,
+              "desire": 12
+            }
+          }
+        },
+        {
+          "id": "talk",
+          "text": "時間まで二人で過ごし、また会う約束をする",
+          "next": "next",
+          "effect": "hotelTalk"
+        },
+        {
+          "id": "home",
+          "text": "完成した写真を保存して帰る",
+          "next": "next",
+          "effect": "homeRest"
+        }
+      ]
+    },
+    {
+      "id": "consent",
+      "chapter": 3,
+      "title": "黙ったままにしない",
+      "location": "承太郎の自宅",
+      "storyTime": {
+        "date": "6月7日",
+        "period": "夜"
+      },
+      "characterId": "jotaro",
+      "rating": "general",
+      "tags": [
+        "jotaro"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先輩は画面を閉じ、私へ向き直った。返事を待つ沈黙を、都合のいい意味に取りたくない。膝の上で指を組んでいると、先輩の方から口を開いた。"
+        },
+        {
+          "speaker": "jotaro",
+          "text": "おれも、おまえといたい。触れたいと思ってる。だが、今夜一緒にいるのと、付き合う約束は別だ。"
+        },
+        {
+          "speaker": "player",
+          "text": "はい。私も触れてほしいです。でも、途中でやめたくなったら、止めてください。先輩も言ってください。"
+        },
+        {
+          "speaker": "jotaro",
+          "text": "分かった。どっちが止めても、そこで終わりだ。帰るなら送る。どうする。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩の手はまだ自分の膝にあった。私はその手を見てから顔を上げた。短くても、言ってもらわなければ分からなかったことを聞けた。次は自分が返す番だった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「一緒にいたいです」と答え、先輩の手に触れる",
+          "next": "night",
+          "effect": "consent",
+          "setFlags": [
+            "consented",
+            "hadNight"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「今日は帰りたいです」と答える",
+          "next": "next",
+          "effect": "walkHome",
+          "setFlags": [
+            "declinedTouch"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "night",
+      "chapter": 3,
+      "title": "手の置き場所",
+      "location": "承太郎の自宅",
+      "storyTime": {
+        "date": "6月7日",
+        "period": "夜"
+      },
+      "characterId": "jotaro",
+      "rating": "fade",
+      "tags": [
+        "jotaro"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "手に触れると、先輩の指が私の指を包んだ。近くへ座り直し、もう片方の手を肩に置く。顔を上げる私へ先輩が屈み、触れる前に一度止まった。私は目を閉じる前に頷いた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "離れたあと、つないだ手だけがまだ熱かった。もう一度近づきたいと言うと、先輩は私の手を握り直した。二人で立ち上がって寝室へ移り、部屋の灯りが消えた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌朝、起きて身支度をすると、先輩が窓を少し開けていた。海のない街の音が入ってくる。昨夜と同じ場所に座って朝食を取り、帰る支度をしてから、私は次に会う日のことを考えた。",
+          "storyTime": {
+            "date": "6月8日",
+            "period": "朝"
+          }
+        },
+        {
+          "speaker": "jotaro",
+          "text": "また、こうして会いたい。おまえはどうだ。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "again",
+          "text": "「友達のまま、また夜も会いたいです」と答える",
+          "next": "next",
+          "effect": "messageBoundaries",
+          "setFlags": [
+            "ongoing"
+          ]
+        },
+        {
+          "id": "more",
+          "text": "「また夜も会いたいです。前より、好きになってます」と答える",
+          "next": "next",
+          "effect": "messageAgain",
+          "setFlags": [
+            "ongoing"
+          ]
+        },
+        {
+          "id": "day",
+          "text": "「これからは、昼に会う友達でいたいです」と答える",
+          "next": "next",
+          "effect": "messageDaily",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ],
+      "when": {
+        "flags": [
+          "consented"
+        ]
+      }
+    },
+    {
+      "id": "next",
+      "chapter": 4,
+      "title": "展示が終わっても",
+      "location": "大学の中庭",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "jotaro",
+      "rating": "general",
+      "tags": [
+        "jotaro"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "展示を終えたあとも海へ行き、互いに望んだ夜には先輩の家で過ごした。朝に帰る日も、昼に待ち合わせ直す日もあった。私が見つけたものを送ると、短い返事が来る。その文字を待つ時間が、以前よりはっきり自分の中にあった。",
+          "when": {
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "これからは昼に会いたいと伝えたあとも、海の写真は送り合った。夜の誘いはなくなり、次の撮影の予定を普通に話せるまで、先輩は距離を詰めなかった。今日は展示の片づけを終え、中庭まで二人で歩いてきた。",
+          "when": {
+            "flags": [
+              "hadNight",
+              "endedNight"
+            ],
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "展示を終えたあとも、海の写真は送り合った。次に見たいものがあれば時間を合わせ、別々に撮った日には見せ合う。今日は片づけを済ませ、用件のなくなった鞄を持って中庭まで歩いてきた。",
+          "when": {
+            "notFlags": [
+              "hadNight"
+            ]
+          }
+        },
+        {
+          "speaker": "jotaro",
+          "text": "次は、展示に出すためじゃねえな。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "そうですね、と答えて先輩を見る。近くのベンチに空いた場所があり、先輩が座ってから私も腰を下ろした。帰る前の時間を、もう少しだけ自分のために使いたかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "tell",
+          "text": "自分から、好きだと伝える時間を取る",
+          "next": "confess_player",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 35,
+              "romanceChar": 25
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "listen",
+          "text": "先輩がこちらを向くまで待つ",
+          "next": "confess_jotaro",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 20,
+              "romanceChar": 35
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "notebook",
+          "text": "二人だけの観察帳を、これからも続けたいと伝える",
+          "next": "our_record",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 35,
+              "romanceChar": 30,
+              "comfort": 20
+            },
+            "flags": [
+              "honestRecord",
+              "ownObservation",
+              "waitedTogether"
+            ],
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "nights",
+          "text": "恋人の約束をせず、親密な友人として会いたいと話す",
+          "next": "fwb_choice",
+          "when": {
+            "min": {
+              "trust": 50,
+              "desire": 25,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "love",
+          "text": "「今は、先輩と付き合いたいです」と伝える",
+          "next": "end_fwb_love",
+          "when": {
+            "min": {
+              "trust": 60,
+              "romancePlayer": 50,
+              "romanceChar": 40,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          },
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "friends",
+          "text": "これからも、一緒に海を見る友人でいたいと伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_player",
+      "chapter": 4,
+      "title": "写真の外側",
+      "location": "大学の中庭",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "jotaro",
+      "rating": "general",
+      "tags": [
+        "jotaro"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私から話したいと言うと、先輩が鞄を足元へ置いた。その一つの動作に時間をもらい、言葉を探す。写真には残せなかったことが、幾つもあった。風の中で空けてもらった場所も、私の話を聞く横顔も。"
+        },
+        {
+          "speaker": "player",
+          "text": "一人で見つけたものを、先輩に見せたくなります。でも、写真を送るだけじゃ、会いたいのはなくならなくて。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "ここまで言ったら顔を見られないと思っていたのに、先輩が私から目を逸らさないので、私も逸らせなかった。返事の前に、まだ自分の言葉が必要だった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "like",
+          "text": "「好きです。私と付き合ってください」",
+          "next": "end_love_a",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "beside",
+          "text": "「友達より近くで、先輩の隣にいたいです。恋人になりたいです」",
+          "next": "end_love_a",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "wait",
+          "text": "今日は友人として、また会いたいと伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_jotaro",
+      "chapter": 4,
+      "title": "短い言葉の、全部",
+      "location": "大学の中庭",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "jotaro",
+      "rating": "general",
+      "tags": [
+        "jotaro"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先輩は帽子のつばへ手をやり、触れただけで下ろした。私が目を合わせると、逃げずにこちらを見ている。用件を訊く言葉が口まで出かかったけれど、今は聞く方へ回りたかった。"
+        },
+        {
+          "speaker": "jotaro",
+          "text": "おまえが好きだ。写真の用がなくても、会いたい。おれと付き合ってくれ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "いつもの短い声で、全部言われた。頬が熱くなる間も、先輩は言い直さない。聞き取れなかったふりもできず、私は膝の上の手をほどいて顔を上げた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「私も好きです。付き合いたいです」と答える",
+          "next": "end_love_b",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「恋人にはなれません。友人でいたいです」と答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "refusedConfession",
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "our_record",
+      "chapter": 4,
+      "title": "空白の頁も持っていく",
+      "location": "大学の中庭",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "jotaro",
+      "rating": "general",
+      "tags": [
+        "jotaro"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "展示のためにまとめた記録とは別に、二人で見たものを残したいと言った。撮れなかった日も、何も現れなかった朝も。先輩は私の小さな手帳を受け取り、まだ何も書いていない頁を開いた。"
+        },
+        {
+          "speaker": "player",
+          "text": "一人の日は、一人で見たものを。二人の日は、二人で。……でも、先輩が隣にいる朝を、増やしたいです。"
+        },
+        {
+          "speaker": "jotaro",
+          "text": "おれもそう思ってる。おまえと付き合って、その続きを見たい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "記録の話から、自分の望みへ一段ずつ降りたつもりだった。先輩の言葉はまっすぐそこへ届いた。私は白い頁を見つめ、それから何も書く前に先輩を見た。"
+        },
+        {
+          "speaker": "jotaro",
+          "text": "書くのは、返事をしてからでいい。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "together",
+          "text": "恋人として、二人の朝を重ねたいと答える",
+          "next": "end_special",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating",
+            "privateRecord"
+          ]
+        },
+        {
+          "id": "friend",
+          "text": "観察を楽しむ友人として続けたいと答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "refusedConfession",
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fwb_choice",
+      "chapter": 4,
+      "title": "帰る時刻を話して",
+      "location": "大学の中庭",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "jotaro",
+      "rating": "general",
+      "tags": [
+        "jotaro"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "友人として夜にも会いたいと伝えると、先輩は頷いた。恋人になる約束は今は望んでいない、と続けても、勝手に手を取られることはなかった。"
+        },
+        {
+          "speaker": "jotaro",
+          "text": "おれも、そのまま会いたい。嫌な時は断れ。途中でもだ。おれも言う。"
+        },
+        {
+          "speaker": "player",
+          "text": "はい。会いたい時は、私からも誘います。朝の海も、また一緒に。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩は端末を取り出し、次の潮の時刻を見た。私は予定表を開き、泊まるつもりの日と、朝の海へ行ける日を別々に探す。先輩も自分の予定を確かめ、こちらを指した。まだ白いままの日曜へ、二人で一つ予定を置いた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "continue",
+          "text": "親密な友人として、次に会う日を決める",
+          "next": "end_fwb",
+          "effect": "messageBoundaries"
+        },
+        {
+          "id": "daytime",
+          "text": "考え直し、昼に会う友人でいたいと答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "end_friend",
+      "chapter": 5,
+      "title": "見せたいものができたら",
+      "location": "海辺の遊歩道",
+      "storyTime": {
+        "date": "7月12日",
+        "period": "朝"
+      },
+      "characterId": "jotaro",
+      "rating": "general",
+      "tags": [
+        "jotaro"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人にはなれないと答えると、先輩は分かったと言った。次の海の予定は私から送った。無理に以前の調子を作らなくても、会えば目の前に一緒に見るものがあった。",
+          "when": {
+            "flags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "昼に会う友人でいたいと話してから、夜の誘いはなくなった。海へ行く予定を送ると、先輩から短い返事が来た。今日は自分からあの柵へ向かった。",
+          "when": {
+            "flags": [
+              "hadNight",
+              "endedNight"
+            ],
+            "notFlags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "また見せたいものができたら連絡する、と約束した。ジョセフにも誘いを送ったけれど、その日は用事があると返ってきた。代わりに面白い写真を送れ、と続く文字を見て、私は少し笑った。",
+          "when": {
+            "notFlags": [
+              "hadNight",
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "遊歩道で先輩に会い、前と違う場所を指す。今日は少し先まで歩きたいと伝えると、先輩は空を見てから頷いた。帰ったらジョセフにも写真を送ろう。私の端末には、まだ見せていないものが幾つも残っていた。"
+        },
+        {
+          "speaker": "jotaro",
+          "text": "行くぞ。潮が変わる。"
+        }
+      ],
+      "choices": [],
+      "ending": "FRIEND"
+    },
+    {
+      "id": "end_love_a",
+      "chapter": 5,
+      "title": "隣へ届く言葉",
+      "location": "大学の中庭と海辺",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "jotaro",
+      "rating": "general",
+      "tags": [
+        "jotaro"
+      ],
+      "body": [
+        {
+          "speaker": "jotaro",
+          "text": "おれも好きだ。付き合おう。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "それだけで十分なはずなのに、もう一度聞きたくなった。先輩が手を差し出すのを見て、言葉の代わりに私も手を伸ばす。握り返す力が伝わると、さっき言えた自分を少しだけ誇らしく思えた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "次に海へ行った朝、待ち合わせの階段で先輩を見つけた。手を振ると、先輩は私が下りるまでそこにいた。並んで歩きながら、今日は何が見えるでしょう、と訊く。分からねえな、と返る声に笑い、自分から手を取った。",
+          "storyTime": {
+            "date": "7月6日",
+            "period": "朝"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_A"
+    },
+    {
+      "id": "end_love_b",
+      "chapter": 5,
+      "title": "帽子の陰から",
+      "location": "大学の中庭と駅前",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "jotaro",
+      "rating": "general",
+      "tags": [
+        "jotaro"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私の返事を聞くと、先輩は短く息を吐いた。初めて、その返事を待っていた人の顔に見えた。近づきたいと小さく言ってから肩を寄せると、先輩の手が私の手に重なる。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "次の約束は海ではなかった。駅前で待つ先輩に、今日はどこへ行くんですかと訊くと、私が前に話した店の名が返った。言った方が忘れかけていた話を、先輩は覚えていた。",
+          "storyTime": {
+            "date": "7月5日",
+            "period": "昼"
+          }
+        },
+        {
+          "speaker": "player",
+          "text": "聞いてないと思ってました。あの時、何も言わなかったから。"
+        },
+        {
+          "speaker": "jotaro",
+          "text": "聞いてた。……今度は返事する。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "真面目な声に、笑いがこぼれた。先輩が少し眉を動かす前に手を取る。言葉も聞きたいし、その顔ももっと見たかった。"
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_B"
+    },
+    {
+      "id": "end_fwb",
+      "chapter": 5,
+      "title": "海へ行かない夜にも",
+      "location": "承太郎の自宅",
+      "storyTime": {
+        "date": "7月12日",
+        "period": "夜"
+      },
+      "characterId": "jotaro",
+      "rating": "fade",
+      "tags": [
+        "jotaro"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "雨の日、海へは行かず先輩の家で夕食を取った。濡れた傘は玄関に置き、写真の話から別の話へ移る。今夜は泊まりたいです、と私から言うと、先輩は自分も一緒にいたいと返した。翌朝に帰る時間だけ、二人で確かめた。"
+        },
+        {
+          "speaker": "jotaro",
+          "text": "眠くなる前に、片づけるか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "皿を運ぶ横顔があまりに普段どおりで、私は少し笑ってしまう。片づけ終えて隣へ座り、私から手に触れた。返ってきた温かさを確かめ、二人で灯りを消した。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝、雨は止んでいた。玄関で傘を受け取り、次に晴れたら海へ行きましょうと話す。先輩は頷き、また連絡しろ、と言った。私もそうしてください、と返して、自分の予定へ歩き出した。",
+          "storyTime": {
+            "date": "7月13日",
+            "period": "朝"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB"
+    },
+    {
+      "id": "end_fwb_love",
+      "chapter": 5,
+      "title": "知っている手を、外で",
+      "location": "大学の中庭",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "jotaro",
+      "rating": "general",
+      "tags": [
+        "jotaro"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人になりたいと伝えたあと、先輩の返事を待った。夜の部屋で何度も知った顔が、夕方の光の中では少し遠く見える。先輩は私へ体を向け直した。"
+        },
+        {
+          "speaker": "jotaro",
+          "text": "おれも、おまえと付き合いたい。今度は、そう言って会いたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "はい、と答えると、先輩が手を差し出した。いつもと同じ手なのに、外で取るまでに少しためらう。指が触れれば、その先はもう知っていた。私はしっかり握り直して、並んで立ち上がった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌週、写真を撮らない散歩へ出た。先輩の隣で歩きながら、夜には言いそびれた話をする。途中で立ち止まっても、手が離れない。海へ向かう曲がり角を今日は通り過ぎ、二人で昼を食べに行った。",
+          "storyTime": {
+            "date": "7月5日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB_TO_LOVE"
+    },
+    {
+      "id": "end_special",
+      "chapter": 5,
+      "title": "何も撮れない朝も",
+      "location": "大学の中庭と海辺",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "jotaro",
+      "rating": "general",
+      "tags": [
+        "jotaro"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人として一緒にいたいと答えてから、手帳を開いた。先輩の書く日付は大きく、私の細かなメモと並ぶと不揃いだった。何も見えなかったら何を書こう、と訊くと、先輩は私を見た。"
+        },
+        {
+          "speaker": "jotaro",
+          "text": "来たって書けばいい。二人で。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "七月の朝、潮だまりには結局何も現れなかった。私は端末をしまい、柵から離れて手帳を出す。日付の下へ二人で来たと書くと、先輩が覗き込んだ。笑って見せてから、その隣に帰りに食べたいものを書き足した。",
+          "storyTime": {
+            "date": "7月6日",
+            "period": "朝"
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "観察のためには余分な一行を、先輩は消さなかった。代わりに店のある方へ顎を向ける。私は手帳を鞄へ戻し、歩き出す先輩の手を取った。何も撮れなかった朝を、また増やしてもよかった。"
+        }
+      ],
+      "choices": [],
+      "ending": "SPECIAL"
+    }
+  ]
+}

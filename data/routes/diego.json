@@ -1,0 +1,1240 @@
+{
+  "id": "diego",
+  "title": "ディエゴ — 値札のない午後",
+  "intro": "先を読んだつもりの品も、欲しくて選んだ一冊も。\n違う値を持つ二人が、買う予定のない日にも会いに行く。",
+  "startEvent": "stall",
+  "character": {
+    "name": "ディエゴ",
+    "adult": true,
+    "heightCm": null,
+    "heightBasis": "4巻23話までの参照範囲で身長を確認できず",
+    "profile": "高い競争心。技術への自負。他人の癖を読む。上昇志向。",
+    "personality": [
+      "高い競争心",
+      "技術への自負",
+      "他人の癖を読む",
+      "上昇志向"
+    ],
+    "speech": {
+      "firstPerson": "未確定（通常は主語を省略）",
+      "addressing": "主人公は姓＋先輩。序列への迎合より力量を重視するため、丁寧さと挑戦的な常体が混ざるのはAU解釈。",
+      "tone": "相手の力量を試す短い言葉。語尾は感情と相手に合わせる。",
+      "habits": [
+        "相手の力量を試す短い言葉",
+        "君や名前",
+        "負けを簡単に認めない"
+      ],
+      "signaturePhrases": [],
+      "signatureNote": "日常の固定口癖は採用しない。象徴的な原作台詞と普段の話し方を混同せず、名台詞を貼り付けない。",
+      "avoid": [
+        "1部ディオと同一人格",
+        "後半の正体・能力・経歴",
+        "勝者への服従を恋愛にする"
+      ]
+    },
+    "referenceSection": "docs/CHARACTER_REFERENCE.md#cast-diego"
+  },
+  "au": {
+    "role": "学部2年。生物/スポーツ系は候補。ディオとの血縁は設定しない",
+    "routeEnabled": true,
+    "addressing": [
+      {
+        "text": "{player.lastName}先輩"
+      }
+    ]
+  },
+  "events": [
+    {
+      "id": "stall",
+      "title": "値札の向こう",
+      "chapter": 1,
+      "location": "学内のフリーマーケット",
+      "storyTime": {
+        "date": "5月10日",
+        "period": "昼"
+      },
+      "characterId": "diego",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "使わなくなった本を並べた机の隣に、ディエゴの出店があった。大学で何度か話した後輩は、来た人の手元を見ながら自分の品を勧めている。私が本を平積みにし直すと、こちらへ目だけを向けた。"
+        },
+        {
+          "speaker": "diego",
+          "text": "下の表紙、見えませんよ。売る気があるなら、見せるところから変えたらどうですか。"
+        },
+        {
+          "speaker": "player",
+          "text": "あるよ。でも全部立てると、手に取りにくくならない？"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼は一番上の本を指した。これだけ、と言われ、自分で台を作って立ててみる。通りかかった人が足を止め、下の本も開いた。すぐに売れたわけではなかったが、私の前にも会話ができた。隣を見ると、ディエゴはもう自分の客へ顔を戻している。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "昼の人波が切れた時、彼の机では空いた場所へ別の品が動いた。誰より先に気づいているつもりの顔を、少し崩してみたくなる。私は自分の本の置き方をもう一度変え、次に来る人を待った。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "display",
+          "text": "自分で並べ方を試し、何が変わったか彼にも話す",
+          "next": "offer",
+          "effect": "workTogether",
+          "setFlags": [
+            "ownDisplay"
+          ],
+          "lockRoute": "diego"
+        },
+        {
+          "id": "invite",
+          "text": "「片づけたら、一緒に食べない？」と誘う",
+          "next": "offer",
+          "effect": "gameDate",
+          "lockRoute": "diego"
+        }
+      ]
+    },
+    {
+      "id": "offer",
+      "title": "その値段で渡したい",
+      "chapter": 1,
+      "location": "街の小さな市",
+      "storyTime": {
+        "date": "5月17日",
+        "period": "昼"
+      },
+      "characterId": "diego",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "別の市でも出店ができると聞いて、それぞれの区画へ申し込んだ。隣り合った机に荷物を広げると、ディエゴが私の本と自分の小物入れを見比べる。まとめれば売れそうだと言われたが、私の付けた値では高く見えるらしい。"
+        },
+        {
+          "speaker": "diego",
+          "text": "先輩の方を少し下げたら、動きますよ。残して持ち帰るよりいいと思いますけどね。"
+        },
+        {
+          "speaker": "player",
+          "text": "これは、その値段なら持って帰りたい。別々のまま置いておくよ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼が少し鼻で息を吐いた。私は値札を戻し、欲しそうに見ていた人へ中の状態を説明する。買わずに離れていく背中を見てからも、値を下げたいとは思わなかった。午後、別の人がその本を選ぶと、ディエゴがこちらを一度見た。"
+        },
+        {
+          "speaker": "diego",
+          "text": "……待つ方を選んだわけか。いつもそうなるとは限りませんよ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "うん、と頷いて受け取った代金をしまう。それでも今日は、自分で決めたまま渡せた。撤収の時、彼が残った小物入れを包む手を、私は黙って手伝った。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "price",
+          "text": "自分で決めた値と結果を残し、彼の売り方も聞く",
+          "next": "miss",
+          "effect": "gamePartners",
+          "setFlags": [
+            "ownPrice"
+          ]
+        },
+        {
+          "id": "near",
+          "text": "片づけたあとも、隣で彼の話を聞いていたいと伝える",
+          "next": "miss",
+          "effect": "walkClose"
+        }
+      ]
+    },
+    {
+      "id": "miss",
+      "title": "待たなかった品",
+      "chapter": 1,
+      "location": "古道具市",
+      "storyTime": {
+        "date": "5月24日",
+        "period": "昼"
+      },
+      "characterId": "diego",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "今日は買う側で市を歩いた。ディエゴが立ち止まったのは、木の縁が細い小さな額の前だった。古いわりに傷が少ないと言い、値札を見てから一度離れる。閉場前ならもう少し下がるかもしれないらしい。私は別の棚で気になった本を見つけ、その場で買った。"
+        },
+        {
+          "speaker": "player",
+          "text": "あとでなくなったら、たぶん覚えてると思って。高かったけど、今日はこれが欲しかった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼は袋を見て、満足そうですね、と言った。その時は少しからかう調子だった。けれど帰りに額の店へ戻ると、置いてあった場所が空いている。売れましたという店主の声を聞いても、ディエゴはしばらく棚を見ていた。"
+        },
+        {
+          "speaker": "diego",
+          "text": "あの値で買った人がいたのか。……戻ってくるつもりだったんですけどね。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "似たものは隣にもある、と私は言いかけたが、彼はもう自分で見比べていた。それではなかったらしい。何も買わずに出口へ向かうので、私も横へ並ぶ。袋の中の本が重く、買ってよかったと思うたびに、今日は口にせずにいた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "keep",
+          "text": "欲しくて買った理由を話し、彼が選んだ額のことも聞く",
+          "next": "message",
+          "effect": "homeTogether",
+          "setFlags": [
+            "boughtWish"
+          ]
+        },
+        {
+          "id": "smile",
+          "text": "「欲しいものを見てるディエゴも、もっと知りたい」と伝える",
+          "next": "message",
+          "effect": "walkClose"
+        },
+        {
+          "id": "rest",
+          "text": "帰りに昼食へ誘い、今日は何を食べたいか聞く",
+          "next": "message",
+          "effect": "shiftRest"
+        }
+      ]
+    },
+    {
+      "id": "message",
+      "title": "今度は、持っている",
+      "chapter": 2,
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "5月27日",
+        "period": "夜"
+      },
+      "characterId": "diego",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "ディエゴから小さな額の写真が届いた。前の品とは縁の色が違い、角に浅い傷がある。私は市で見たものと比べてから、写真の机まで目を移した。もう彼の部屋にあるらしい。"
+        },
+        {
+          "speaker": "diego",
+          "text": "見つけました。こっちはその場で買った。先輩に、また取り逃したと思われるのも癪ですから。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "思ってなかったよ、と打ちかけてやめた。少しは気にしていた。私は買った本を開き、間に挟んでいた市の案内を脇へ置く。あの日は話さなかった本の中身も、今なら伝えたかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "frame",
+          "text": "選んだところ、今度見せて。私の本の話もするね",
+          "next": "rain",
+          "effect": "messageDaily",
+          "replyVariants": [
+            {
+              "text": "角の傷まで見てくれて構いませんよ。気づかず買ったわけじゃないので。"
+            }
+          ]
+        },
+        {
+          "id": "you",
+          "text": "額も気になるけど、ディエゴに会いたくなった",
+          "next": "rain",
+          "effect": "messageHeart",
+          "replyVariants": [
+            {
+              "text": "会いたいと思っていたところです。額を見るだけで帰る予定には、しないでほしいですね。",
+              "when": {
+                "min": {
+                  "romancePlayer": 15
+                }
+              }
+            },
+            {
+              "text": "なら、次の休みに。写真だけでは分からないでしょうから。"
+            }
+          ]
+        }
+      ],
+      "message": true
+    },
+    {
+      "id": "rain",
+      "title": "儲からない午後",
+      "chapter": 2,
+      "location": "市の近くの喫茶店",
+      "storyTime": {
+        "date": "6月3日",
+        "period": "昼"
+      },
+      "characterId": "diego",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "雨で屋外の市が中止になり、入口で合流した私たちは近くの喫茶店へ入った。ディエゴは濡れた袖口を確かめ、席へ座ってからも別の店の情報を見ている。今日は来た意味が薄いと言われ、私は買ったばかりの飲み物を一口飲んだ。"
+        },
+        {
+          "speaker": "player",
+          "text": "私は、この店を見つけたのは嬉しい。雨が弱くなるまで、ここにいたいな。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼は端末から目を上げ、窓の向こうを見た。通りの店に大きな傘が並び、店員が一つずつ向きを変えている。どれが先に売れるかという話になり、私は黄色を選んだ。ディエゴは地味な色を指す。結局、店から出てきた人が持ったのはどちらでもなかった。"
+        },
+        {
+          "speaker": "diego",
+          "text": "ここからじゃ、値段が見えませんからね。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "理由はそれ、と笑うと、彼も口の端を上げた。雨脚が細くなっても、飲み物はまだ残っている。私は先に店を出る支度をせず、今日読んだ本の話を続けた。ディエゴの端末は、いつの間にか画面を伏せていた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "walk",
+          "text": "何も買わない午後も面白かったと、雨上がりを一緒に歩く",
+          "next": "home",
+          "effect": "conferencePractical",
+          "setFlags": [
+            "offMarket"
+          ]
+        },
+        {
+          "id": "together",
+          "text": "「また二人で、用事のない日にも会いたい」と伝える",
+          "next": "home",
+          "effect": "rehearse"
+        },
+        {
+          "id": "finish",
+          "text": "飲み物を飲み終え、また市で会おうと笑う",
+          "next": "home",
+          "effect": "walkHome"
+        }
+      ]
+    },
+    {
+      "id": "home",
+      "title": "箱の中身は別々に",
+      "chapter": 3,
+      "location": "ディエゴの自宅",
+      "storyTime": {
+        "date": "6月10日",
+        "period": "夕方"
+      },
+      "characterId": "diego",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "約束していた額を見せてもらうため、夕食を買って彼の部屋へ来た。額には古道具市の小さな案内カードが入っている。絵を買うまで空けておくのではなかったんだ、と言うと、ディエゴは今はこれでいいんですと返した。窓からの光で、角の傷がよく見えた。"
+        },
+        {
+          "speaker": "diego",
+          "text": "売るつもりなら、この傷は困りますけどね。部屋に置くなら、見える角度を選べる。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私は机へ持ってきた本を置き、好きだった頁を開いた。挿絵を覗くために彼が隣へ立つ。値札のないものを二人で見ていると、いつもの声も少し近く聞こえた。夕食の袋を開く時には、本を閉じて自分の鞄へ戻す。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "食べながら、次に出店するならという話になった。私は家で使わなくなったものをもう少し整理したい。ディエゴも次を考えているらしく、空いた紙へ机の並べ方を描いた。彼の線の隣に、自分の品を置く場所を書き加える。"
+        },
+        {
+          "speaker": "player",
+          "text": "同じ机でも、一緒くたにはしたくないな。どこが誰のものか、見て分かるようにしたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "ディエゴが私の書いた線を見て、これなら客も迷わないと言った。まだ何も決まっていない紙を脇へ寄せ、食器を片づける。戻ってきた時には、向かいよりも隣の椅子へ座りたくなっていた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "next",
+          "text": "それぞれの箱を隣へ出す案を、一緒に考える",
+          "next": "later",
+          "effect": "homeTogether",
+          "setFlags": [
+            "twoBoxes"
+          ]
+        },
+        {
+          "id": "talk",
+          "text": "「今は、ディエゴの話をもう少し聞きたい」と伝える",
+          "next": "later",
+          "effect": "homeTalk"
+        },
+        {
+          "id": "stay",
+          "text": "「今夜はここにいたい。ディエゴに触れたい」と伝える",
+          "next": "consent",
+          "effect": "hotelInvite",
+          "when": {
+            "min": {
+              "trust": 35,
+              "desire": 8
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "consent",
+      "title": "値をつけない言葉",
+      "chapter": 3,
+      "location": "ディエゴの自宅",
+      "storyTime": {
+        "date": "6月10日",
+        "period": "夜"
+      },
+      "characterId": "diego",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "近くにいたいと伝えると、ディエゴは椅子へ座ったままこちらを見た。試されるような目に見えて、言葉を足したくなる。でも、帰りたくない理由をほかへ逃がすのはやめた。"
+        },
+        {
+          "speaker": "diego",
+          "text": "触れたいのは同じです。今夜、先輩と一緒にいたい。先輩に誘われたから、適当に合わせていると思わないでください。"
+        },
+        {
+          "speaker": "player",
+          "text": "私も、一緒にいたい。でも今夜のことと、恋人になる約束は別にしたい。途中でやめたくなったら、そう言うね。"
+        },
+        {
+          "speaker": "diego",
+          "text": "ええ。その時は止める。こちらも、気持ちが変わったら言います。今から帰るなら、それでも構いません。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼の手はまだ椅子の肘掛けにあった。私はその指から目を上げ、自分の返事を口にしようとする。言ってからどうなるか知りたいという気持ちが、怖さより少しだけ前へ出た。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「今夜は一緒にいたい」と、改めて答える",
+          "next": "night",
+          "effect": "consent",
+          "setFlags": [
+            "mutualConsent",
+            "hadNight"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「今日は帰るね。また会いたい」と伝える",
+          "next": "later",
+          "effect": "walkHome",
+          "setFlags": [
+            "declinedTouch"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "night",
+      "title": "近づいた方の手",
+      "chapter": 3,
+      "location": "ディエゴの自宅",
+      "storyTime": {
+        "date": "6月10日",
+        "period": "夜"
+      },
+      "characterId": "diego",
+      "rating": "fade",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私は隣の椅子へ移った。ディエゴが体をこちらへ向け、手を差し出す。触れた指に力が返ってきて、近づいてもいいかと訊かれた。うん、と答え、私も彼の方へ顔を向ける。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "唇が触れたあと、ディエゴはすぐ次へ進まず、近いまま私を見た。何か言うのかと思って待つと、先輩はどうしたいんです、と声が来る。もう一度、と私から答えた。彼の口元が少し緩み、今度は私が先に近づく。二人で椅子を離れ、奥へ移って灯りを消した。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝、ディエゴがカーテンを少し開けた。私は起き上がって顔を洗い、二人で簡単な朝食を用意する。机の上に残っていた出店の図を彼が棚へ移し、皿の場所を空けた。今日は何か買いに行く予定もないのに、帰る前にもう少し話したかった。",
+          "storyTime": {
+            "date": "6月11日",
+            "period": "朝"
+          }
+        }
+      ],
+      "choices": [
+        {
+          "id": "home",
+          "text": "朝食を食べ、自分の予定へ帰る",
+          "next": "after_message"
+        }
+      ]
+    },
+    {
+      "id": "after_message",
+      "title": "持ち帰った本のそばで",
+      "chapter": 3,
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "6月11日",
+        "period": "夜"
+      },
+      "characterId": "diego",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "家で持ち帰った本を開いていると、ディエゴから連絡が来た。鞄に入れっぱなしだった頁の角を直し、端末を手に取る。忘れ物の話でも、次の市の話でもなかった。"
+        },
+        {
+          "speaker": "diego",
+          "text": "また夜にも会いたいです。先輩が今どう思っているか、聞いておきたい。昨日の返事だけでは分かりませんから。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "短い文を読んで、私も自分の望みを考える。前と同じでなければならない理由はなかった。今、伝えたい方を選んだ。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "nights",
+          "text": "恋人とは決めず、また望む夜に会いたい",
+          "next": "later",
+          "effect": "messageBoundaries",
+          "setFlags": [
+            "ongoing"
+          ],
+          "replyVariants": [
+            {
+              "text": "ええ。その形で会いましょう。次の日は、互いの都合を見て決めたい。"
+            }
+          ]
+        },
+        {
+          "id": "again",
+          "text": "また夜も会いたい。ディエゴをもっと好きになった",
+          "next": "later",
+          "effect": "messageAgain",
+          "setFlags": [
+            "ongoing"
+          ],
+          "replyVariants": [
+            {
+              "text": "その言葉は、会った時にも聞きたいですね。次に空いている日を教えてください。"
+            }
+          ]
+        },
+        {
+          "id": "days",
+          "text": "これからは昼に会う友達でいたい",
+          "next": "later",
+          "effect": "messageDaily",
+          "setFlags": [
+            "endedNight"
+          ],
+          "replyVariants": [
+            {
+              "text": "分かりました。次は昼に。市へ行くなら、前の日までに連絡してください。"
+            }
+          ]
+        }
+      ],
+      "message": true
+    },
+    {
+      "id": "later",
+      "title": "買う予定のない午後",
+      "chapter": 4,
+      "location": "市の近くの公園",
+      "storyTime": {
+        "date": "7月1日",
+        "period": "昼"
+      },
+      "characterId": "diego",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "六月の後半も二人で市や店へ出かけ、望む夜には彼の部屋で会った。朝にはそれぞれの用事へ戻る。今日は買い物を済ませ、公園のベンチへ座った。私が何も買わなかったのを見ると、珍しいですねとディエゴが言う。",
+          "when": {
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "昼に会う友達でいたいと返してから、次も二人で市へ出かけた。ディエゴは夜の返事を変えさせるような話をしなかった。少し照れくさいままでも品物の前ではいつもの調子になり、今日は買い物のあと、公園へ座った。",
+          "when": {
+            "flags": [
+              "hadNight",
+              "endedNight"
+            ],
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "六月の後半も二人で市や店へ出かけた。何も買わずに食事だけで帰る日もできた。今日は買い物のあと、公園のベンチへ座る。ディエゴが選んだ袋の中を覗いてから、何も買わなかった私は、自分の鞄だけを脇へ置いた。",
+          "when": {
+            "notFlags": [
+              "hadNight"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼が袋を足元へ置く。通りへ戻ればまだ開いている店があるのに、すぐ立つ気配はなかった。私はそれが嬉しくて、次の用事を出さないまま顔を向けた。"
+        },
+        {
+          "speaker": "diego",
+          "text": "今日は、先輩から話があるんでしょう。聞きますよ。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "tell",
+          "text": "自分から、ディエゴが好きだと伝える",
+          "next": "confess_player",
+          "when": {
+            "min": {
+              "trust": 40,
+              "romancePlayer": 35,
+              "romanceChar": 35
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "listen",
+          "text": "ディエゴが続けようとする言葉を待つ",
+          "next": "confess_char",
+          "when": {
+            "min": {
+              "trust": 40,
+              "romancePlayer": 20,
+              "romanceChar": 40
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "pact",
+          "text": "二人の判断を持ったまま、次は組んで出店したいと話す",
+          "next": "pact",
+          "when": {
+            "min": {
+              "trust": 40,
+              "comfort": 60
+            },
+            "flags": [
+              "ownDisplay",
+              "ownPrice",
+              "boughtWish",
+              "offMarket",
+              "twoBoxes"
+            ],
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "nights",
+          "text": "これからも望む夜に会う友達でいたいと話す",
+          "next": "fwb_choice",
+          "when": {
+            "min": {
+              "trust": 45,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "love",
+          "text": "「今はディエゴの恋人になりたい」と伝える",
+          "next": "end_fwb_love",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 30,
+              "romanceChar": 30,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "friends",
+          "text": "違う好みも言い合える友達でいたいと話す",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_player",
+      "title": "欲しいものを先に",
+      "chapter": 4,
+      "location": "市の近くの公園",
+      "storyTime": {
+        "date": "7月1日",
+        "period": "昼"
+      },
+      "characterId": "diego",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "ディエゴ、と呼んだ。名前だけを言うと、相手が後輩であることまで少し遠ざかる。彼がこちらを見たまま待つので、私は笑ってごまかすのをやめた。欲しいものを見つけた時より、ずっと言い出しにくかった。"
+        },
+        {
+          "speaker": "player",
+          "text": "ディエゴが好き。何か買いたい日だけじゃなくて、顔を見たくて出かけるようになってた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼の目が少し細くなった。どんな返事が来るか、そこから読もうとした自分に気づく。今だけは予想を先に置かず、頼みたいことを最後まで言った。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「私と付き合ってほしい」と伝える",
+          "next": "end_love_a",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「今は友達として、また一緒に出かけたい」と伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_char",
+      "title": "返事を待つ側",
+      "chapter": 4,
+      "location": "市の近くの公園",
+      "storyTime": {
+        "date": "7月1日",
+        "period": "昼"
+      },
+      "characterId": "diego",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "ディエゴは少し顎を上げ、先に話してもいいかと言った。私は頷く。足元の袋も通りの店も見ず、こちらだけを見る目へ、私も顔を向けた。"
+        },
+        {
+          "speaker": "diego",
+          "text": "{player.lastName}先輩。好きです。先輩の恋人になりたい。友達として誘うだけで満足していると、思われたくありません。付き合ってくれますか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "自分が選ぶ側にいることの多い人が、言い終えてこちらを待つ。私は手を膝で組み直した。急いで答えれば楽になれる気がしたが、楽になるためだけには言いたくなかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「私も好き。ディエゴと付き合いたい」と答える",
+          "next": "end_love_b",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「恋人にはなれない。友達でいたい」と答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "refusedConfession",
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pact",
+      "title": "隣へ出す二つの箱",
+      "chapter": 4,
+      "location": "市の近くの公園",
+      "storyTime": {
+        "date": "7月1日",
+        "period": "昼"
+      },
+      "characterId": "diego",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "次は組んで出店したい、と話した。私の品を彼の売り方へ合わせるのでなく、違う見せ方のまま同じ机へ置く。あの図を続けたいと付け足すと、ディエゴは少し考えてから端末を出した。"
+        },
+        {
+          "speaker": "diego",
+          "text": "同じ机なら、一人が席を外しても店を閉めずに済む。だけど値を下げる時は、持ち主が決める。先輩も勝手には決めないでください。"
+        },
+        {
+          "speaker": "player",
+          "text": "うん。私もそこは自分で決める。相談して、違うと思ったらそのまま言うよ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼は次の募集の条件を開いた。一つの区画へ二人で申し込めることを確かめ、私は机の幅を見て自分の箱の大きさを思い出す。売れなければ自分のものを持ち帰る。うまくいった分も、どちらか一人の手柄にはしない。"
+        },
+        {
+          "speaker": "diego",
+          "text": "客を呼ぶ方では、負ける気はありませんけどね。先輩も、ちゃんと売るつもりで来てください。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "そのつもり、と答えた。恋人とは違う相棒がほしかった。二つの箱を隣へ出す日を、自分の予定から選んで彼へ見せた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「一緒に出そう」と、違う判断を持つ出店の相棒になる",
+          "next": "end_special",
+          "effect": "homeTogether",
+          "setFlags": [
+            "partners"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "今は気軽に市を歩く友達でいたいと伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fwb_choice",
+      "title": "次の日を選ぶ",
+      "chapter": 4,
+      "location": "市の近くの公園",
+      "storyTime": {
+        "date": "7月1日",
+        "period": "昼"
+      },
+      "characterId": "diego",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人とは決めず、望む夜にも会う友達でいたいと話した。ディエゴは一度頷き、同じ気持ちですと言う。条件を有利にする話ではなく、二人が今望む方を確かめたかった。"
+        },
+        {
+          "speaker": "diego",
+          "text": "会ったから泊まると決まるわけじゃない。その時にも聞きます。途中でやめたい時も、お互いに言う。それでいいですか。"
+        },
+        {
+          "speaker": "player",
+          "text": "うん。私も聞くし、言う。夜も昼も、会いたいと思ったら自分から誘いたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼が次の都合を話し、私も予定を開く。最初に出した日は合わず、別の日を選んだ。決め終えるとディエゴが袋を持って立つので、私も鞄を肩へ掛けた。今日はここから別の道を帰る。それでも次に自分で選んだ時間が残った。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "親密な友達として、互いに望む夜の約束を続ける",
+          "next": "end_fwb",
+          "effect": "messageBoundaries"
+        },
+        {
+          "id": "no",
+          "text": "考え直し、昼に会う友達でいたいと伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "end_friend",
+      "title": "違う品を選ぶ午後",
+      "chapter": 5,
+      "location": "古道具市",
+      "storyTime": {
+        "date": "7月8日",
+        "period": "昼"
+      },
+      "characterId": "diego",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人にはなれないと答えると、ディエゴは唇を結んだ。分かりました、と返ってからその日は別れた。数日後、次の市へ行くか私から尋ねると、昼には着くつもりですという返事が来た。",
+          "when": {
+            "flags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "昼に会う友達でいようと話してから、次も市で待ち合わせた。ディエゴは夜の気持ちを変えさせようとはしなかった。少し照れた私へ、今日は何を探すんですといつもの調子で訊いた。",
+          "when": {
+            "flags": [
+              "hadNight",
+              "endedNight"
+            ],
+            "notFlags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "友達としてまた市へ行こうと話し、入口で待ち合わせた。ディエゴは先に来て、気になる店を一つ見つけていた。私は別の棚を指し、まずこっちへ寄りたいと話す。",
+          "when": {
+            "notFlags": [
+              "hadNight",
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "私は小さな本を選び、ディエゴは何も買わなかった。あっちにもっと状態のいいものがあったと言われたが、私はこの表紙が好きだと見せる。彼が少し肩を上げるので、次も意見は合わないかもね、と笑った。"
+        },
+        {
+          "speaker": "diego",
+          "text": "合わせるために来たわけじゃないですから。それで、次はどこを見るんですか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "袋を持ち直し、まだ歩いていない通路へ向かった。夕方にはシーザーとも別の用事で会う、と話すと、それまでに回れる店を二人で数える。全部へ行けなくても、今日はこの本を買えてよかった。隣の人にも、そう言えた。"
+        }
+      ],
+      "choices": [],
+      "ending": "FRIEND"
+    },
+    {
+      "id": "end_love_a",
+      "title": "自分で選んだ声",
+      "chapter": 5,
+      "location": "市の近くの公園",
+      "storyTime": {
+        "date": "7月1日",
+        "period": "昼"
+      },
+      "characterId": "diego",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "diego",
+          "text": "好きです。先輩と付き合いたい。……言われる方へ回るとは、思っていませんでした。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "少し悔しそうに聞こえて、私は笑った。先に言ってよかった、と返すと、そこは譲ったつもりじゃないと目を細められる。でも返事はもう聞けた。手を差し出すと、彼は一度見てから取ってくれた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "次の休日は待ち合わせから手をつないだ。店の前でディエゴが立ち止まり、私も横から覗く。何が欲しいんだろうと思いながら、その顔を見ていた。気づかれても目を逸らさないと、今日はそっちばかりですか、と言われる。うん、と答え、指を少し握り直した。",
+          "storyTime": {
+            "date": "7月8日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_A"
+    },
+    {
+      "id": "end_love_b",
+      "title": "離さずに歩く",
+      "chapter": 5,
+      "location": "市の近くの公園",
+      "storyTime": {
+        "date": "7月1日",
+        "period": "昼"
+      },
+      "characterId": "diego",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私も好き、と答えると、ディエゴは一度だけ大きく息をした。こちらを見たまま笑う顔に、いつもの少し得意げなところが戻る。私はそれを見てから、自分も嬉しいともう一度思った。"
+        },
+        {
+          "speaker": "player",
+          "text": "今、手をつないでもいい？"
+        },
+        {
+          "speaker": "diego",
+          "text": "ええ。そうしたいです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "手が重なると、私は隣へ少し寄った。彼も離れず、足元の袋を空いた手で持ち上げる。立ち上がるために一度ほどいても、歩き出す時には私から取り直した。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌週、買い物のあとに二人で公園へ寄った。手を離す用事がなくなったので、私はそのまま歩く。ディエゴがどこへ行きたいかと訊く。もう少し遠い方、と答えると、短く笑って同じ道を選んだ。",
+          "storyTime": {
+            "date": "7月8日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_B"
+    },
+    {
+      "id": "end_fwb",
+      "title": "額の下の朝",
+      "chapter": 5,
+      "location": "ディエゴの自宅",
+      "storyTime": {
+        "date": "7月15日",
+        "period": "夜"
+      },
+      "characterId": "diego",
+      "rating": "fade",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "互いに今夜会いたいと連絡してから、彼の部屋へ来た。持ってきた夕食を並べ、今日は泊まりたいと自分から伝える。ディエゴも一緒にいたいと答え、翌朝は早めに出る用事があると話した。私もその時間に帰れると確かめてから食べ始めた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "食後、私は隣へ椅子を寄せた。触れたいと言うと彼がこちらを向き、手を出す。握った指を一度緩めて顔を近づけ、唇が触れたところでまた少し力を入れた。もう一度は私から頼み、返事を聞いて近づく。やがて二人で奥の部屋へ移り、灯りを落とした。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝、身支度を終えて机を見ると、小さな額が光の中にあった。今度は別の紙を入れるつもりだと聞き、変えたら見せてと頼む。ディエゴは先に玄関へ立ち、私が鞄を持って来るのを待った。外で別々の方へ歩く前、また昼にも会おうと自分から伝えた。",
+          "storyTime": {
+            "date": "7月16日",
+            "period": "朝"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB"
+    },
+    {
+      "id": "end_fwb_love",
+      "title": "今、欲しい返事",
+      "chapter": 5,
+      "location": "市の近くの公園",
+      "storyTime": {
+        "date": "7月1日",
+        "period": "昼"
+      },
+      "characterId": "diego",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "今は恋人になりたいと話した。ディエゴは少し目を細め、それから頷く。私は前の夜を思い出して先に安心するのをやめ、彼の言葉が続くまで待った。"
+        },
+        {
+          "speaker": "diego",
+          "text": "同じ気持ちです。今までの夜を取り消す必要はない。けど、今は先輩の恋人になりたい。そう呼ばれたいと思っています。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私も、と答えて手を出した。彼が取ると、知っていた指の形まで新しく感じる。何を変えれば恋人になるのか、すぐには分からなかった。ただ、今は顔を見ていたくて、私は隣へ寄った。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "次の休日、市で彼が立ち止まった。欲しいものを見つけたらしい。買うかどうか考える顔を隣から見て、私は自分の予定を急がせなかった。店を離れたあと、待たせましたねと言われたので、一緒に見たかっただけ、と手を取った。",
+          "storyTime": {
+            "date": "7月8日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB_TO_LOVE"
+    },
+    {
+      "id": "end_special",
+      "title": "二つの箱で店を開く",
+      "chapter": 5,
+      "location": "街の小さな市",
+      "storyTime": {
+        "date": "7月22日",
+        "period": "昼"
+      },
+      "characterId": "diego",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "二人で申し込んだ机に、それぞれの箱を置いた。ディエゴが先に品を広げる間、私は値札を確かめる。通る人の目へ入る位置を言い合ってから、互いの場所を少しずつ譲った。全部を同じ並べ方にはしなかった。"
+        },
+        {
+          "speaker": "diego",
+          "text": "こっちの客が、先輩の本も気にしていますよ。説明は自分でどうぞ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私は隣へ移り、自分の本の状態を話した。値を下げてほしいと言われ、少し考えてから今日はこのままと答える。相手が別の品を選んでも、ディエゴは私の返事を変えなかった。次の人が来る前に、二人で空いた場所を埋め直した。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "終わると売れた数は彼の方が多かった。得意そうな顔へ、私は今日いちばん話して渡せた本のことを返す。恋人ではない相棒と、同じ机で別々の手応えを持つ。売れ残りはそれぞれ自分の箱へ戻した。"
+        },
+        {
+          "speaker": "player",
+          "text": "次も、隣に出したい。今日の置き方、変えたいところもあるから。"
+        },
+        {
+          "speaker": "diego",
+          "text": "いいですよ。次はその箱、もう少し軽くして帰りましょうか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "そうしたい、と答えて自分の箱を持ち上げた。彼の売り方をそのまま借りるつもりではなかった。帰りに何を食べるか訊くと、ディエゴが先に店を一つ挙げる。私は別の一つを出し、並んで歩き始めた。"
+        }
+      ],
+      "choices": [],
+      "ending": "SPECIAL"
+    }
+  ],
+  "endingDescriptions": {
+    "FRIEND": {
+      "title": "違う品を選ぶ午後",
+      "description": "同じ市で違う品を選び、遠慮なく好みを言う友達。次も意見が合うとは限らない楽しさを持って。"
+    },
+    "LOVE_A": {
+      "title": "自分で選んだ声",
+      "description": "自分から好きだと伝える。返ってきた少し悔しそうな声まで嬉しくて、隣で手を取る。"
+    },
+    "LOVE_B": {
+      "title": "離さずに歩く",
+      "description": "選ばれたいという告白へ、自分の好きで答える。用事のない道でも、つないだ手を離さずに。"
+    },
+    "FWB": {
+      "title": "額の下の朝",
+      "description": "互いが望む夜を重ねる親密な友達。朝は別々の予定へ帰り、昼にもまた会おうと誘う。"
+    },
+    "FWB_TO_LOVE": {
+      "title": "今、欲しい返事",
+      "description": "過ごした夜の先で、今は恋人になりたいと選ぶ。隣で選ぶ顔も、待っている時間も知っていく。"
+    },
+    "SPECIAL": {
+      "title": "二つの箱で店を開く",
+      "description": "互いの判断を持ったまま、同じ机へ出す相棒。違う手応えと自分の箱を持ち、次の店を考える。"
+    }
+  }
+}

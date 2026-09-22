@@ -1,0 +1,1212 @@
+{
+  "id": "kira",
+  "title": "吉良 — いつもの時刻、そのとなり",
+  "intro": "同じ店、同じ包み、折り目の揃った紙。\n決まっていた昼の中に、自分で選んだ時間を置く。",
+  "startEvent": "bread",
+  "character": {
+    "name": "吉良",
+    "adult": true,
+    "heightCm": 175,
+    "heightBasis": "二次資料JoJo Wikiの身長欄と出典注記を照合。原作365話プロフィール。人物設計表178・アニメ約180とは分離。書籍・設定表現物は未照合。AUで同値を採用。",
+    "profile": "目立たない生活への執着。細かい自己管理。平静の下の自己中心性と支配欲。",
+    "personality": [
+      "目立たない生活への執着",
+      "細かい自己管理",
+      "平静の下の自己中心性と支配欲"
+    ],
+    "speech": {
+      "firstPerson": "わたし",
+      "addressing": "主人公への呼称はAUのaddressingを使用。親しさだけで呼び捨てや敬語を一律変更しない。",
+      "tone": "低い調子で長さを抑えた説明。語尾は感情と相手に合わせる。",
+      "habits": [
+        "低い調子で長さを抑えた説明",
+        "君、〜だよ",
+        "乱れを嫌う言い直し"
+      ],
+      "signaturePhrases": [],
+      "signatureNote": "日常の固定口癖は採用しない。象徴的な原作台詞と普段の話し方を混同せず、名台詞を貼り付けない。",
+      "avoid": [
+        "ただの優しい会社員",
+        "原作の殺人・手の収集を恋愛の嗜好として肯定",
+        "相手を監視して安心させる"
+      ]
+    },
+    "referenceSection": "docs/CHARACTER_REFERENCE.md#cast-kira"
+  },
+  "au": {
+    "role": "博士課程・職員・研究員のいずれか未確定。権限を断定しない",
+    "routeEnabled": true,
+    "addressing": [
+      {
+        "text": "{player.lastName}"
+      }
+    ]
+  },
+  "endingDescriptions": {
+    "FRIEND": {
+      "title": "違う包みを持って",
+      "description": "同じ昼に、違う好みを持って会う友人。食べ終えたら、それぞれの寄り道へ。"
+    },
+    "LOVE_A": {
+      "title": "約束の方へ歩く",
+      "description": "店へ寄るついでではない好きを、自分から伝える。自分で選んだ昼に、恋人を誘って。"
+    },
+    "LOVE_B": {
+      "title": "折り目を忘れた紙",
+      "description": "いつもの相手にしておけないという告白へ答える。揃わない角をそのままに、手が伸びる。"
+    },
+    "FWB": {
+      "title": "朝には、それぞれの道へ",
+      "description": "互いが望む夜を重ねる、親密な友人。翌朝の予定を持って帰り、次の昼も自分から選ぶ。"
+    },
+    "FWB_TO_LOVE": {
+      "title": "いつもの先に、呼ぶ人",
+      "description": "親密な夜の先で、今の望みを恋人という名で伝える。次の時間も、互いの予定から選び直す。"
+    },
+    "SPECIAL": {
+      "title": "二つの予定が重なるところ",
+      "description": "どちらかの習慣に従うのでなく、会うための昼を二人で作る。恋人とは別の、選び続ける日常の相手。"
+    }
+  },
+  "events": [
+    {
+      "id": "bread",
+      "chapter": 1,
+      "title": "いつもの包み",
+      "location": "街のパン店",
+      "storyTime": {
+        "date": "5月7日",
+        "period": "昼"
+      },
+      "characterId": "kira",
+      "rating": "general",
+      "tags": [
+        "kira"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "大学から少し離れたパン店で、吉良さんと顔を合わせた。何度か会ううちに名乗り合った人で、大学でも見かけるが、授業や仕事を頼む間柄ではない。彼はいつもの二つを選び、私が棚の前で迷う間に、包みの端を丁寧に折っていた。"
+        },
+        {
+          "speaker": "kira",
+          "text": "それは見た目ほど甘くないよ。君が甘いものを探しているなら、隣の方がいい。"
+        },
+        {
+          "speaker": "player",
+          "text": "今日は、甘くない方が気になるんです。吉良さんは、いつも同じものですね。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼は手元を見て、変える必要がないからねと答えた。私は勧められなかった方を買い、一口食べてから選んでよかったと思う。店の外で包装紙を開くと、彼はまだ歩き出さず、自分の包みを持ち直していた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "my_taste",
+          "text": "選んだ味が好きだと話し、彼の好みも聞く",
+          "next": "bench",
+          "effect": "ask"
+        },
+        {
+          "id": "usual",
+          "text": "いつもの二つが何かを聞き、昼の挨拶を続ける",
+          "next": "bench",
+          "effect": "workTogether"
+        }
+      ]
+    },
+    {
+      "id": "bench",
+      "chapter": 1,
+      "title": "十五分の外側",
+      "location": "店近くの小さな公園",
+      "storyTime": {
+        "date": "5月14日",
+        "period": "昼"
+      },
+      "characterId": "kira",
+      "rating": "general",
+      "tags": [
+        "kira"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "同じ店を出て、今日は公園で食べることになった。吉良さんは時計を見てから、十五分ならと言う。私は頷いて隣へ座り、包みを開いた。食べ終えた紙を畳む速さが揃い始めた頃、向こうの花壇にまだ咲いている花を見つけた。"
+        },
+        {
+          "speaker": "player",
+          "text": "もう少し、あれを見てから帰ろうかな。吉良さんは先にどうぞ。"
+        },
+        {
+          "speaker": "kira",
+          "text": "一緒に帰るつもりだったんだが。……そうか。君はまだ時間があるんだね。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "言い方の終わりが少し硬かった。それでも立ち上がるのを待つために、私まで花壇から目を離したくはなかった。彼は包みを鞄へしまい、次もこの時間かいと尋ねる。私は自分の予定を思い浮かべ、会えそうな日を一つ答えた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "my_time",
+          "text": "自分の寄り道を残して、次に会える時間を伝える",
+          "next": "soldout",
+          "effect": "honest",
+          "setFlags": [
+            "ownMinutes"
+          ]
+        },
+        {
+          "id": "route",
+          "text": "今日は別々に帰り、道の話を続ける",
+          "next": "soldout",
+          "effect": "compareNotes"
+        }
+      ]
+    },
+    {
+      "id": "soldout",
+      "chapter": 1,
+      "title": "選び直す指",
+      "location": "街のパン店",
+      "storyTime": {
+        "date": "5月21日",
+        "period": "昼"
+      },
+      "characterId": "kira",
+      "rating": "general",
+      "tags": [
+        "kira"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "吉良さんのいつもの品は、私が来た時には売り切れていた。棚の前で彼の指が一度止まる。焼き上がりを待つと昼の時間がずれるらしく、隣の品を取ってから戻した。私は自分の分を選び、会計へ進んだ。"
+        },
+        {
+          "speaker": "kira",
+          "text": "君の方は、今日は早いんだね。わたしが決めるまで待ってもらうつもりだった。"
+        },
+        {
+          "speaker": "player",
+          "text": "私はこれが食べたいので、先に買っておきます。外では待てますけど、食べるものまで一緒には決められません。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "少しきつく聞こえただろうか。振り返ると、彼は顔色を変えず、そうだねとだけ返した。結局、普段と違う品を買って出てくる。食べながら、これは悪くないが次は元の方にする、と言われたので、私は変えなくてもいいと思いますと笑った。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "my_lunch",
+          "text": "違うものを食べたまま、次の昼にも誘う",
+          "next": "message",
+          "effect": "homeTalk",
+          "setFlags": [
+            "ownLunch"
+          ]
+        },
+        {
+          "id": "two",
+          "text": "「何を選んでも、吉良さんと食べたいです」と伝える",
+          "next": "message",
+          "effect": "lunchTwo"
+        },
+        {
+          "id": "simple",
+          "text": "今日の味の感想を話し、店の外で別れる",
+          "next": "message",
+          "effect": "shiftRest"
+        }
+      ]
+    },
+    {
+      "id": "message",
+      "chapter": 2,
+      "title": "会わなかった昼",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "5月24日",
+        "period": "夜"
+      },
+      "characterId": "kira",
+      "rating": "general",
+      "tags": [
+        "kira"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "今週は用事が重なり、店へ寄らない日が続いた。吉良さんには会えないと先に伝えてある。それでも夜に届いた文を読むと、知らないところで自分の席だけ空いていたような気がした。"
+        },
+        {
+          "speaker": "kira",
+          "text": "今日は、いつもの品があったよ。君の好きな方も。買ってはおかなかった。来ると聞いたわけではないから。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "用件はそれだけだった。私は自分の夕食を片づけ、次に空く昼の予定を見る。取り置きされていないことが、なぜか誘いに似て聞こえた。行くかどうかを自分で決められるまま、会いたい気持ちが少し増えた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "glad",
+          "text": "また吉良さんに会いたいです。次の昼、行けます",
+          "next": "change",
+          "effect": "messageHeart",
+          "replyVariants": [
+            {
+              "text": "では、その時に。君が何を選ぶかは、聞いてからにしよう。",
+              "when": {
+                "flags": [
+                  "ownLunch"
+                ]
+              }
+            },
+            {
+              "text": "分かった。わたしも、その時間に行くつもりだ。"
+            }
+          ],
+          "lockRoute": "kira"
+        },
+        {
+          "id": "notice",
+          "text": "今度は、今日選んだものの話も聞かせてください",
+          "next": "change",
+          "effect": "messageListen",
+          "replyVariants": [
+            {
+              "text": "変わり映えはしないよ。それでも聞きたいなら、話そう。"
+            }
+          ],
+          "lockRoute": "kira"
+        },
+        {
+          "id": "thanks",
+          "text": "教えてくれてありがとうございます。次は寄れそうです",
+          "next": "change",
+          "effect": "messageDaily",
+          "replyVariants": [
+            {
+              "text": "そうか。都合が変わったら、分かった時に知らせてくれればいい。"
+            }
+          ],
+          "lockRoute": "kira"
+        }
+      ],
+      "message": true
+    },
+    {
+      "id": "change",
+      "chapter": 2,
+      "title": "動かせない約束",
+      "location": "公園の入口",
+      "storyTime": {
+        "date": "5月28日",
+        "period": "昼"
+      },
+      "characterId": "kira",
+      "rating": "general",
+      "tags": [
+        "kira"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "次の休日は少し遠い店へ行こうと、吉良さんから誘われた。時刻も道も決めた調子で話すので、私は途中で止めた。その時間には友人との約束がある。後へずらせないのかと訊かれ、できませんと答えた。"
+        },
+        {
+          "speaker": "kira",
+          "text": "昼を少し動かすだけだと思ったんだが。……先に聞くべきだったね。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "謝る言葉より、目が一度時計へ落ちたのが気になった。私の予定まで手順に収めたいように見えて、少し腹が立つ。それでも誘われたことは嬉しかったから、別の日なら行きたいと自分から話した。"
+        },
+        {
+          "speaker": "player",
+          "text": "私は、こっちの日なら空けられます。吉良さんも無理なら、今回はやめて、またにしましょう。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼はすぐ頷かず、予定を確認してからその日を選んだ。何でもない顔で端末をしまうと、元の予定より遅い昼になると言う。私はそれでも行きたい、と答えた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "new_day",
+          "text": "互いに選べる別の日を決め、約束を残す",
+          "next": "home",
+          "effect": "conferencePractical",
+          "setFlags": [
+            "chosenHour"
+          ]
+        },
+        {
+          "id": "want",
+          "text": "「都合が合えば、二人で出かけたいです」と伝える",
+          "next": "home",
+          "effect": "walkClose"
+        },
+        {
+          "id": "later",
+          "text": "無理のない日を確かめ、当日にまた連絡すると話す",
+          "next": "home",
+          "effect": "walkHome"
+        }
+      ]
+    },
+    {
+      "id": "home",
+      "chapter": 3,
+      "title": "折り目のない時間",
+      "location": "吉良の自宅",
+      "storyTime": {
+        "date": "6月8日",
+        "period": "夕方"
+      },
+      "characterId": "kira",
+      "rating": "general",
+      "tags": [
+        "kira"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "遠い店で買ったものを持って、彼の家で夕食を取ることになった。誘われて、私も行きたいと答えたのだ。机の上はよく片づいていて、置いた袋が一つだけ目立つ。吉良さんは端を揃えかけ、私が開けるのを見ると手を戻した。"
+        },
+        {
+          "speaker": "kira",
+          "text": "こちらの皿を使ってくれ。……そのまま食べるのかい。"
+        },
+        {
+          "speaker": "player",
+          "text": "はい。これだけは、包みを持って食べたいんです。こぼしたら自分で片づけます。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼は少し眉を寄せ、紙ナプキンを私の前へ置いた。ありがとうと受け取ってから食べる。食後、私が机を拭く間に、彼は皿を洗った。いつも通りの置き方へ戻った机を見て、彼がようやく椅子へ深く座る。私は帰るために鞄を持ち上げようとして、まだ話せそうだと思った。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "talk",
+          "text": "「もう少し、ここで話したいです」と座り直す",
+          "next": "evening",
+          "effect": "hotelTalk"
+        },
+        {
+          "id": "rest",
+          "text": "片づいた机で、次に食べたいものを話す",
+          "next": "evening",
+          "effect": "homeRest"
+        }
+      ]
+    },
+    {
+      "id": "evening",
+      "chapter": 3,
+      "title": "時計を見る、その前に",
+      "location": "吉良の自宅",
+      "storyTime": {
+        "date": "6月8日",
+        "period": "夜"
+      },
+      "characterId": "kira",
+      "rating": "general",
+      "tags": [
+        "kira"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "食事の話を終えると、吉良さんは一度時計へ目をやった。帰る時刻だろうかと思い、私は鞄へ手を伸ばす。けれど彼は立たず、急いで帰る必要があるのかいと聞いた。自分から見た時計の意味を、こちらに決められたくなかったようにも聞こえた。"
+        },
+        {
+          "speaker": "kira",
+          "text": "わたしは、もう少し君と話していてもいいと思っている。君の方に予定がなければ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "用事はありませんと答えたあと、私は自分の言葉を足した。予定がないからここにいるのと、この人の近くにいたいのは同じではない。指を掛けた鞄は膝へ置き、口を開く前に彼を見た。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "stay",
+          "text": "「今夜は、あなたの近くにいたいです」と伝える",
+          "next": "consent",
+          "effect": "hotelInvite",
+          "when": {
+            "min": {
+              "trust": 45,
+              "desire": 8
+            }
+          }
+        },
+        {
+          "id": "next_time",
+          "text": "「また会いたいです」と伝え、今日は帰る",
+          "next": "next",
+          "effect": "walkHome"
+        }
+      ]
+    },
+    {
+      "id": "consent",
+      "chapter": 3,
+      "title": "揃えないままの答え",
+      "location": "吉良の自宅",
+      "storyTime": {
+        "date": "6月8日",
+        "period": "夜"
+      },
+      "characterId": "kira",
+      "rating": "general",
+      "tags": [
+        "kira"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "吉良さんは時計を見なくなった。鞄を膝へ置いたままの私へ、顔を向ける。彼の整った話し方が、今は少しだけゆっくりだった。"
+        },
+        {
+          "speaker": "kira",
+          "text": "わたしも、君に触れたい。今夜は一緒にいてほしいと思っている。君も同じなら。"
+        },
+        {
+          "speaker": "player",
+          "text": "私もそうしたいです。恋人になるかは別にして、今夜は一緒にいたい。でも、途中でやめたいと思ったら言います。"
+        },
+        {
+          "speaker": "kira",
+          "text": "わたしも言う。どちらが止めたいと言っても、そこでやめよう。今から帰ると言われても、引き留めない。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "頷いてから、私は鞄を足元へ下ろした。置いただけで返事にせず、一緒にいたいともう一度言うために顔を上げる。いつもの順番へ収まらない自分の声を、今日はそのまま聞いてほしかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「今夜は、一緒にいたいです」と答える",
+          "next": "night",
+          "effect": "consent",
+          "setFlags": [
+            "consented",
+            "hadNight"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「今日は帰ります」と伝える",
+          "next": "next",
+          "effect": "walkHome",
+          "setFlags": [
+            "declinedTouch"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "night",
+      "chapter": 3,
+      "title": "手を止めたまま",
+      "location": "吉良の自宅",
+      "storyTime": {
+        "date": "6月8日",
+        "period": "夜"
+      },
+      "characterId": "kira",
+      "rating": "fade",
+      "tags": [
+        "kira"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "彼が椅子を寄せるのを待ち、私から手を出した。触れた指が少し冷たく、握り返されると自分の手の温かさにも気づく。彼は頬へ触れていいかと尋ね、私の返事を聞いてから近づいた。顔を上げた私へ少し屈み、唇が触れる。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "離れたあと、私はもう一度、と言った。彼がこちらを見たまま頷き、私も隣へ寄る。机へ手をつかなくても立てるように椅子を引き、二人で部屋の奥へ移った。消した灯りの下では、揃えた皿の位置まで見えなくなった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝、私が目を開けると、吉良さんはもう起きていた。いつもの時刻なのだろうか。眠そうな私を見て、朝食は少し後でもいいよと言う。私は顔を洗ってから一緒に食べたいと答え、毛布を畳む前に起き上がった。",
+          "storyTime": {
+            "date": "6月9日",
+            "period": "朝"
+          }
+        },
+        {
+          "speaker": "kira",
+          "text": "わたしは、またこうして君と会いたい。次も同じだとは思わないから、今の気持ちを聞かせてくれないか。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "again",
+          "text": "「恋人の約束はせず、また望む夜に会いたいです」と答える",
+          "next": "next",
+          "effect": "messageBoundaries",
+          "setFlags": [
+            "ongoing"
+          ]
+        },
+        {
+          "id": "more",
+          "text": "「また夜も会いたいです。あなたをもっと好きになりました」と答える",
+          "next": "next",
+          "effect": "messageAgain",
+          "setFlags": [
+            "ongoing"
+          ]
+        },
+        {
+          "id": "day",
+          "text": "「これからは昼に会う友人でいたいです」と答える",
+          "next": "next",
+          "effect": "messageDaily",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ],
+      "when": {
+        "flags": [
+          "consented"
+        ]
+      }
+    },
+    {
+      "id": "next",
+      "chapter": 4,
+      "title": "先に空けた昼",
+      "location": "いつもの公園",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "kira",
+      "rating": "general",
+      "tags": [
+        "kira"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "六月は昼を一緒に食べ、互いに望んだ夜には彼の家でも会った。朝にはそれぞれの用事へ戻り、私の予定が合わない日は変えた。空いた時間を全部知らせるのではなく、会いたいと思った日を、自分から伝えるようになっている。",
+          "when": {
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "昼に会う友人でいたいと答えてから、次の約束は店の前になった。吉良さんは夜の返事を変えさせようとはしなかった。少しぎこちない昼も、自分の選んだパンを開いて感想を話すうちに、また次の日を尋ねられるようになった。",
+          "when": {
+            "flags": [
+              "hadNight",
+              "endedNight"
+            ],
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "六月も店や公園で会い、来られない日は先に知らせた。私が別の店へ寄ったと話すと、吉良さんはそちらを勧められたと思って少し眉を寄せる。今日は違うものが食べたかっただけです、と答えると、自分も元の包みを開いた。",
+          "when": {
+            "notFlags": [
+              "hadNight"
+            ]
+          }
+        },
+        {
+          "speaker": "kira",
+          "text": "今日は、このあと急がない。君はどうかな。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "時計を確かめずに聞かれたので、私も鞄へ手を入れずに答えた。まだ少しここにいられます、と言ってから、話したいことがあると続ける。彼は畳みかけた紙を止め、そのままこちらへ向いた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "tell",
+          "text": "自分から、吉良さんが好きだと伝える",
+          "next": "confess_player",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 35,
+              "romanceChar": 25
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "listen",
+          "text": "彼が続けようとした言葉を聞く",
+          "next": "confess_kira",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 20,
+              "romanceChar": 35
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "our_hour",
+          "text": "互いに選んで空ける昼を、二人の習慣にしたいと話す",
+          "next": "own_hour",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 35,
+              "romanceChar": 30,
+              "comfort": 20
+            },
+            "flags": [
+              "ownMinutes",
+              "ownLunch",
+              "chosenHour"
+            ],
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "nights",
+          "text": "望む夜にも会う、親密な友人でいたいと話す",
+          "next": "fwb_choice",
+          "when": {
+            "min": {
+              "trust": 50,
+              "desire": 25,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "love",
+          "text": "「今は、あなたの恋人になりたいです」と伝える",
+          "next": "end_fwb_love",
+          "when": {
+            "min": {
+              "trust": 60,
+              "romancePlayer": 50,
+              "romanceChar": 40,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          },
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "friends",
+          "text": "これからも、気軽に昼へ誘える友人でいたいと伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_player",
+      "chapter": 4,
+      "title": "用事ではない名前",
+      "location": "いつもの公園",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "kira",
+      "rating": "general",
+      "tags": [
+        "kira"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "吉良さん、と呼ぶと、彼の手が包装紙から離れた。いつも同じ時間に会う人のはずなのに、言おうとした途端に知らない相手のように見える。私は膝の上で指を組むのをやめ、彼の顔を見た。"
+        },
+        {
+          "speaker": "player",
+          "text": "あなたに会いたくて、先に時間を空けるようになりました。パンを買いに行くついでだって、自分に言い訳するのも、やめたいです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼は小さく息をついたが、それがどういう意味かは分からなかった。返事を待つ前に、自分から言っておきたいことがまだある。私は店の袋ではなく、隣の人へ声を向けた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "like",
+          "text": "「好きです。私と付き合ってください」と伝える",
+          "next": "end_love_a",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "choose",
+          "text": "「あなたの恋人になりたいです。私のことは、どう思いますか」",
+          "next": "end_love_a",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "wait",
+          "text": "「今は友人として、また会いたいです」と伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_kira",
+      "chapter": 4,
+      "title": "いつもでは足りない",
+      "location": "いつもの公園",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "kira",
+      "rating": "general",
+      "tags": [
+        "kira"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "彼は紙の折り目を一度揃えかけ、途中で手を止めた。そのまま捨てればいいだけの紙が、膝に広がっている。吉良さんは私へ体を向け、最初に姓を呼んだ。"
+        },
+        {
+          "speaker": "kira",
+          "text": "{player.lastName}、わたしは君が好きだ。いつもの昼に会う人、というだけにしておく気がなくなった。わたしと、付き合ってほしい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "静かな声が届いたあとで、私は彼の手を見た。折り終えていない紙へ戻らず、こちらの答えを待っている。私が来ることを自分の習慣へ決めてしまう人ではなく、今だけは、来てほしいと言う人が隣にいた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「私も好きです。あなたと付き合いたいです」と答える",
+          "next": "end_love_b",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「恋人にはなれません。友人でいたいです」と答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "refusedConfession",
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "own_hour",
+      "chapter": 4,
+      "title": "二人で決める例外",
+      "location": "いつもの公園",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "kira",
+      "rating": "general",
+      "tags": [
+        "kira"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人になる約束とは別に、会うために空ける昼を持ちたい。そう話すと、吉良さんは決まった時間のことかいと尋ねた。私は頷いてから、どちらの都合も同じように聞いて決めたいと続ける。"
+        },
+        {
+          "speaker": "player",
+          "text": "偶然いたら一緒に食べるだけじゃなくて、私は、あなたに会うために来たいんです。でも、来られない日は別の日を自分から言いたい。"
+        },
+        {
+          "speaker": "kira",
+          "text": "決まった方が、わたしは落ち着く。ただ、君の予定まで同じにはできないね。……次は、どの日がいい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼が先に時刻を置かなかったので、私は自分の空けたい日を示した。吉良さんはいつもより遅いと顔をしかめる。それでも今回はその日を選び、帰る時刻は自分から告げた。私はそのあとに寄りたい場所があると話す。"
+        },
+        {
+          "speaker": "kira",
+          "text": "では、そこで別れよう。君の寄り道まで、わたしが決める話ではないからね。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "少し不満の残る言い方に、私も曖昧に笑って済ませなかった。はい、と答えて予定を閉じる。二人の時間が終わったところからも、それぞれの昼が続いていた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "partners",
+          "text": "「次はその昼に」と、互いに選ぶ習慣を約束する",
+          "next": "end_special",
+          "effect": "homeTogether",
+          "setFlags": [
+            "ourHour"
+          ]
+        },
+        {
+          "id": "friend",
+          "text": "今は気が向いた時に誘う友人でいたいと伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fwb_choice",
+      "chapter": 4,
+      "title": "戻す予定を持って",
+      "location": "いつもの公園",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "kira",
+      "rating": "general",
+      "tags": [
+        "kira"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人と決めるのではなく、望む夜にも会う友人でいたいと話した。吉良さんは少し考え、わたしもその形で会いたいと答える。昼の包みを片づける手が止まったまま、言葉は私の方へ向いていた。"
+        },
+        {
+          "speaker": "kira",
+          "text": "会ったから必ず泊まる、とは決めない。その時の気持ちを聞こう。途中で止めたい時も、互いに言う。それでいいかな。"
+        },
+        {
+          "speaker": "player",
+          "text": "はい。私もそうしたいです。次の朝に用事がある時は、それも言います。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼が頷き、次の夜を二人で選んだ。私の出した日には彼が予定を変えられず、もう一つの日になった。ずらせなかった方は、そのまま自分のために使うつもりで残す。彼も同じように、予定を一つだけ書き足した。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "continue",
+          "text": "親密な友人として、次に会う夜を選ぶ",
+          "next": "end_fwb",
+          "effect": "messageBoundaries"
+        },
+        {
+          "id": "daytime",
+          "text": "考え直し、昼に会う友人でいたいと伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "end_friend",
+      "chapter": 5,
+      "title": "違う包みを持って",
+      "location": "街の公園",
+      "storyTime": {
+        "date": "7月13日",
+        "period": "昼"
+      },
+      "characterId": "kira",
+      "rating": "general",
+      "tags": [
+        "kira"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人にはなれないと答えると、吉良さんは目を伏せ、分かったと言った。次の約束はその場で決めずに別れた。数日後、店に新しい品があると私から知らせると、まだ食べていないという返事が来た。",
+          "when": {
+            "flags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "昼に会う友人でいたいと答えてから、次は公園で待ち合わせた。吉良さんは夜の返事を繰り返し聞かなかった。私は少し照れくさいまま、今度は別の店のものを買って来たと包みを見せた。",
+          "when": {
+            "flags": [
+              "hadNight",
+              "endedNight"
+            ],
+            "notFlags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "友人としてまた昼に会おうと話し、今日は公園へ来た。私の手にはいつもとは違う店の包みがある。吉良さんは先に座って、自分の選んだものを広げていた。",
+          "when": {
+            "notFlags": [
+              "hadNight",
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "kira",
+          "text": "今日はそちらか。わたしは、やはりいつもの方にしたよ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "そうだと思いました、と笑い、隣へ座る。味が気になれば尋ねるだけで、相手の分を選び直すことはしない。彼が帰る時刻に立つと、私は友人との約束があると別の道を指した。また店で、と言ってから、どちらも自分の行きたい方へ歩いた。"
+        }
+      ],
+      "choices": [],
+      "ending": "FRIEND"
+    },
+    {
+      "id": "end_love_a",
+      "chapter": 5,
+      "title": "約束の方へ歩く",
+      "location": "いつもの公園",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "kira",
+      "rating": "general",
+      "tags": [
+        "kira"
+      ],
+      "body": [
+        {
+          "speaker": "kira",
+          "text": "わたしも君が好きだ。付き合いたい。いつもと同じ昼だと思って来たのに、そうはならなかったね。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "嫌でしたかと尋ねると、そうではないよ、と返った。私はその返事を聞いてから笑い、自分から手を差し出す。包みを片づけた彼の指が、空いた場所へ触れた。帰る時間を確かめる前に、もう少しこうしていたくなった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "次の休日は、私が選んだ店へ行った。吉良さんは慣れないメニューをゆっくり読み、私は自分の飲みたいものを先に決める。注文を終えてから手を伸ばすと、彼は机の上の物を一つ脇へ寄せ、こちらへ掌を向けた。",
+          "storyTime": {
+            "date": "7月6日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_A"
+    },
+    {
+      "id": "end_love_b",
+      "chapter": 5,
+      "title": "折り目を忘れた紙",
+      "location": "いつもの公園",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "kira",
+      "rating": "general",
+      "tags": [
+        "kira"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私も好きですと答えると、吉良さんはようやく紙を畳んだ。けれど角が揃っていない。私がそこを見ると、今はこれでいいと小さく言った。指摘する代わりに手を差し出すと、彼は少し驚いてから取ってくれた。"
+        },
+        {
+          "speaker": "player",
+          "text": "嬉しいです。言ってもらえたことも、自分で答えられたことも。"
+        },
+        {
+          "speaker": "kira",
+          "text": "わたしも、聞けてよかった。君が来るものだと思っているだけでは、足りなかった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌週、待ち合わせへ向かうと、彼は店の外に立っていた。私の分はまだ買っていないよと言われ、自分で選びますと笑う。並んで店へ入るまでの短い道だけ、私は自分から手をつないだ。",
+          "storyTime": {
+            "date": "7月6日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_B"
+    },
+    {
+      "id": "end_fwb",
+      "chapter": 5,
+      "title": "朝には、それぞれの道へ",
+      "location": "吉良の自宅",
+      "storyTime": {
+        "date": "7月13日",
+        "period": "夜"
+      },
+      "characterId": "kira",
+      "rating": "fade",
+      "tags": [
+        "kira"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "今夜は会いたいと互いに伝え、私は彼の家へ来た。持参した食事を皿へ分けたあと、泊まりたいと自分の口でも言う。吉良さんも一緒にいたいと答え、翌朝は早く出る予定だと話した。私もその時間に帰れます、と答えてから食べ始める。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "片づけを済ませ、彼の隣へ座り直した。手に触れると、こちらを見て指が返ってくる。近づきたいと伝え、頷きを見てから顔を寄せた。彼も少し屈み、触れた唇が離れたあと、私がもう一度手を取る。二人で奥の部屋へ移り、灯りを落とした。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝、約束した時刻に支度を終えた。彼は玄関の小さな時計を確かめてから、私へ忘れ物がないか尋ねる。大丈夫ですと鞄を持ち、二人で外へ出た。違う方向へ歩く前、次は昼にも会いたいと自分から伝えた。彼はその日を尋ね、私も選んで答えた。",
+          "storyTime": {
+            "date": "7月14日",
+            "period": "朝"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB"
+    },
+    {
+      "id": "end_fwb_love",
+      "chapter": 5,
+      "title": "いつもの先に、呼ぶ人",
+      "location": "いつもの公園",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "kira",
+      "rating": "general",
+      "tags": [
+        "kira"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "今は恋人になりたいと言うと、吉良さんは私の顔を見た。夜を一緒に過ごしたことを、返事の代わりにはしたくなかった。私は彼の言葉を待ち、膝の上で指を組み直した。"
+        },
+        {
+          "speaker": "kira",
+          "text": "わたしも、君の恋人になりたい。今までの夜が嫌になったわけではないよ。ただ、次に会う時には、そう呼びたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私もです、と答えた。手を伸ばすと、彼は紙を畳むのを後にしてこちらを取る。慣れた温かさへ新しい返事が重なり、私は少しだけ近くへ座り直した。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "次の休日、出かける店を二人で選んだ。彼が先に時刻を決めかけたので、今日はもう少し遅い方がいいと伝える。少し迷ったあと、ならその時間にと返った。私は自分で空けた昼へ、彼の名前を一つ書いた。",
+          "storyTime": {
+            "date": "7月6日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB_TO_LOVE"
+    },
+    {
+      "id": "end_special",
+      "chapter": 5,
+      "title": "二つの予定が重なるところ",
+      "location": "街のパン店と公園",
+      "storyTime": {
+        "date": "7月13日",
+        "period": "昼"
+      },
+      "characterId": "kira",
+      "rating": "general",
+      "tags": [
+        "kira"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "決めた昼に店へ行くと、吉良さんはちょうど包みを受け取るところだった。私の方を見ても、先に買っておいたとは言わない。私は自分の食べたい品を選び、二人で公園へ歩いた。いつもより遅い時間の光が、同じベンチへ違う角度で落ちている。"
+        },
+        {
+          "speaker": "kira",
+          "text": "この時間は、少し眩しいね。次はもう少し早い方がいい。"
+        },
+        {
+          "speaker": "player",
+          "text": "次なら、私も早く来られます。でも今日は、花壇の方にも寄って帰りたいです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼は時計を確かめ、自分は先に帰るよと言った。私は頷き、残りの一口を食べる。恋人と決めなくても、会うために時間を空けたことは二人とも知っていた。どちらかの予定へもう一人が付け足されるのではなく、ここでだけ二つの昼が重なる。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "別れる前に次の日を確かめた。吉良さんがいつもの折り目で紙を畳み、私は包みを少し広げて最後の匂いを吸う。帰る人を見送ってから花壇へ歩いた。次も自分でここへ来るつもりの足取りは、思っていたより軽かった。"
+        }
+      ],
+      "choices": [],
+      "ending": "SPECIAL"
+    }
+  ]
+}

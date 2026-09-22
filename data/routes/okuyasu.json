@@ -1,0 +1,1220 @@
+{
+  "id": "okuyasu",
+  "title": "億泰 — もう一球、そのあとも",
+  "intro": "学食で向かいに座るだけだった後輩が、隣の台を指さした。\n負けた日も、笑った日も。帰り道まで一緒にいたくなる。",
+  "startEvent": "lunch",
+  "character": {
+    "name": "億泰",
+    "adult": true,
+    "heightCm": 178,
+    "heightBasis": "二次資料JoJo Wikiの身長欄と出典注記を照合。JOJO 6251。書籍・設定表現物は未照合。AUで同値を採用。",
+    "profile": "率直で人情深い。即断と直感。複雑な理屈は苦手でも大事なことは考える。",
+    "personality": [
+      "率直で人情深い",
+      "即断と直感",
+      "複雑な理屈は苦手でも大事なことは考える"
+    ],
+    "speech": {
+      "firstPerson": "おれ",
+      "addressing": "主人公は姓＋先輩。敬意は呼び方と行動に残し、話し言葉は砕ける。",
+      "tone": "勢いのある感想。語尾は感情と相手に合わせる。",
+      "habits": [
+        "勢いのある感想",
+        "〜だぜ、〜じゃねえか",
+        "言い間違いを毎回の笑いにしない"
+      ],
+      "signaturePhrases": [],
+      "signatureNote": "日常の固定口癖は採用しない。象徴的な原作台詞と普段の話し方を混同せず、名台詞を貼り付けない。",
+      "avoid": [
+        "知性のない道化",
+        "食事だけの人物",
+        "主人公の命令に従う後輩"
+      ]
+    },
+    "referenceSection": "docs/CHARACTER_REFERENCE.md#cast-okuyasu"
+  },
+  "au": {
+    "role": "機械工学系候補の1年。学食で親しくなる飯友",
+    "routeEnabled": true,
+    "addressing": [
+      {
+        "text": "{player.lastName}先輩"
+      }
+    ]
+  },
+  "endingDescriptions": {
+    "FRIEND": {
+      "title": "向かいが空いてる",
+      "description": "食事も遊びも、遠慮なく誘い合う友達。自分で選んだ皿と、今日の話を持って向かいへ。"
+    },
+    "LOVE_A": {
+      "title": "先に呼んだ名前",
+      "description": "自分から好きだと伝え、照れた返事を受け取る。いつもの食堂で、今日は隣の席を選ぶ。"
+    },
+    "LOVE_B": {
+      "title": "その手が開くまで",
+      "description": "言い切ってくれた告白へ、自分の好きも返す。開いた手を取り、言葉の続きを歩きながら。"
+    },
+    "FWB": {
+      "title": "明日の分も残して",
+      "description": "望む夜にも会う、親密な友人。朝の食事を分けたあとは、それぞれの予定と次の誘いへ。"
+    },
+    "FWB_TO_LOVE": {
+      "title": "今度は、この名前で",
+      "description": "重ねた夜のあと、今の望みで恋人になる。帰る方向が違っても、もう少し隣を歩きたい。"
+    },
+    "SPECIAL": {
+      "title": "隣から返す一球",
+      "description": "勝つ日も負ける日も、最初に誘う相棒。向かい合っても隣へ並んでも、もう一球を望める。"
+    }
+  },
+  "events": [
+    {
+      "id": "lunch",
+      "chapter": 1,
+      "title": "半分じゃ足りない",
+      "location": "学内の食堂",
+      "storyTime": {
+        "date": "5月7日",
+        "period": "昼"
+      },
+      "characterId": "okuyasu",
+      "rating": "general",
+      "tags": [
+        "okuyasu"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "億泰くんが向かいへ座る時は、いつも先に声が来る。今日も、空いてますかと言いながら盆を持って立っていた。一年生の彼とは、食堂で何度か顔を合わせるうちに昼を共にするようになった。私の小さな皿を見ると、目を丸くする。"
+        },
+        {
+          "speaker": "okuyasu",
+          "text": "先輩、それだけ？　……あ、あとで食うんすか。じゃあ、これは？　半分、食いません？"
+        },
+        {
+          "speaker": "narrator",
+          "text": "指していたのは、今日だけのデザートだった。私が昼に食べ切れないのを聞いて、勝手に皿を増やそうとはしない。味だけ知りたい、と答えると、取り分け用の皿を探しに行った。戻る間に私は課題の紙を畳み、食事の場所を空けた。"
+        },
+        {
+          "speaker": "player",
+          "text": "じゃあ、私は次のを半分。気になるのがあったら教えて。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "taste",
+          "text": "半分もらい、自分の感想をそのまま話す",
+          "next": "table",
+          "effect": "workTogether"
+        },
+        {
+          "id": "ask",
+          "text": "億泰くんが好きなものを、もっと聞く",
+          "next": "table",
+          "effect": "ask"
+        }
+      ]
+    },
+    {
+      "id": "table",
+      "chapter": 1,
+      "title": "今の、もう一回",
+      "location": "市民体育館の卓球場",
+      "storyTime": {
+        "date": "5月11日",
+        "period": "昼"
+      },
+      "characterId": "okuyasu",
+      "rating": "general",
+      "tags": [
+        "okuyasu"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "食堂の掲示で見つけた一般利用の時間に、二人で卓球へ来た。所属する部活の練習ではなく、空いている台を借りるだけの午後だ。私は昔やったことがあると少し得意になり、軽く返すつもりの球を台の外へ飛ばした。億泰くんが跳ねた球を拾って戻る。"
+        },
+        {
+          "speaker": "okuyasu",
+          "text": "先輩、今のは負けっすよ。練習って言ってなかったじゃねえか。"
+        },
+        {
+          "speaker": "player",
+          "text": "言ってないね。じゃあ、もう一回。今度はちゃんと返す。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "負けを笑いにしてくれなかったことが、かえって楽しかった。彼も勢いで打ちすぎて外し、悔しそうな顔を隠さない。交代で拾いに行くうち、どちらが先輩だったか思い出す暇がなくなった。私が返した一球が続くと、億泰くんの顔がぱっと明るくなった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "rally",
+          "text": "勝つだけでなく、次の球を二人で続けてみる",
+          "next": "pause",
+          "effect": "honest",
+          "setFlags": [
+            "keptRally"
+          ]
+        },
+        {
+          "id": "score",
+          "text": "最後まで点を数え、勝負を楽しむ",
+          "next": "pause",
+          "effect": "compareNotes"
+        }
+      ]
+    },
+    {
+      "id": "pause",
+      "chapter": 1,
+      "title": "まだやれる、の前に",
+      "location": "体育館のロビー",
+      "storyTime": {
+        "date": "5月18日",
+        "period": "夕方"
+      },
+      "characterId": "okuyasu",
+      "rating": "general",
+      "tags": [
+        "okuyasu"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "二度目は私が一度勝ち、次から急に勝てなくなった。取り返したくて台を離れずにいると、億泰くんが先にラケットを置く。休憩だぜと言われ、私はまだ大丈夫と返した。けれど指先は汗で滑り、次に何を変えるかも考えていなかった。"
+        },
+        {
+          "speaker": "okuyasu",
+          "text": "おれが休みてえんすよ。先輩が続けるって言っても、いったん水飲みます。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "そう言われると追いかけて打つことはできない。ロビーで隣へ座り、私も飲み物を開けた。負けっぱなしは嫌だなと言うと、おれだって嫌ですよ、とすぐ返る。同じように悔しい人が、自分の方から台を離れたのだと思った。"
+        },
+        {
+          "speaker": "player",
+          "text": "もう少し休んだら、今度は私から誘う。さっきの返し方、もう一回試したい。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "my_pace",
+          "text": "休みたい時は言い合い、もう一度誘えるようにする",
+          "next": "message",
+          "effect": "homeTalk",
+          "setFlags": [
+            "ownPace"
+          ]
+        },
+        {
+          "id": "close",
+          "text": "休憩中も、彼と二人で話したいと伝える",
+          "next": "message",
+          "effect": "lunchTwo"
+        },
+        {
+          "id": "break",
+          "text": "しっかり休んでから、道具を片づける",
+          "next": "message",
+          "effect": "shiftRest"
+        }
+      ]
+    },
+    {
+      "id": "message",
+      "chapter": 2,
+      "title": "点数だけじゃなく",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "5月21日",
+        "period": "夜"
+      },
+      "characterId": "okuyasu",
+      "rating": "general",
+      "tags": [
+        "okuyasu"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "億泰くんから届いた通知には、今日の学食で新しい品を食べたと書いてあった。自分が先に味を見てしまったことを報告する文が、途中で訂正されている。私の分を勝手に取り置きしたわけではないらしく、写真の皿はもう空だった。"
+        },
+        {
+          "speaker": "okuyasu",
+          "text": "次は先輩も食ってみてください。おれ、これ好きだわ。あと日曜、また球打ちません？　今度は先に休憩の時間決めとこうぜ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "食事の感想と次の誘いが、同じ勢いで届く。端末を持ったまま私は笑い、それから日曜の予定を開いた。彼の声を思い出すと、一つだけ空けてあった午後へ先に名前を書きたくなった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "glad",
+          "text": "また会いたい。日曜、楽しみにしてるね",
+          "next": "closed",
+          "effect": "messageHeart",
+          "replyVariants": [
+            {
+              "text": "おれもっす！　次は先輩の打ちたいの、打ってくださいよ。おれも言うんで。",
+              "when": {
+                "flags": [
+                  "ownPace"
+                ]
+              }
+            },
+            {
+              "text": "じゃ、決まりっすね。次はおれも、もっと返しますよ。"
+            }
+          ],
+          "lockRoute": "okuyasu"
+        },
+        {
+          "id": "notice",
+          "text": "前より球が続いたの、嬉しかった。次もやろう",
+          "next": "closed",
+          "effect": "messageListen",
+          "replyVariants": [
+            {
+              "text": "そうなんすよ！　あれ、気持ちよかったよな。もうちょいやりてえ。"
+            }
+          ],
+          "lockRoute": "okuyasu"
+        },
+        {
+          "id": "thanks",
+          "text": "日曜行けるよ。時間を決めよう",
+          "next": "closed",
+          "effect": "messageDaily",
+          "replyVariants": [
+            {
+              "text": "了解っす。空いてる時間、調べて送ります。"
+            }
+          ],
+          "lockRoute": "okuyasu"
+        }
+      ],
+      "message": true
+    },
+    {
+      "id": "closed",
+      "chapter": 2,
+      "title": "台のない午後",
+      "location": "体育館前の広場",
+      "storyTime": {
+        "date": "5月25日",
+        "period": "昼"
+      },
+      "characterId": "okuyasu",
+      "rating": "general",
+      "tags": [
+        "okuyasu"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "借りる予定だった台は、点検で使えなくなっていた。連絡を確認できたのは着いてからで、私たちは入口の案内を見て立ち止まる。億泰くんは何だよ、と一度大きく息を吐き、それから端末をしまった。誰かに怒鳴る代わりに、楽しみにしてたのにな、とこちらを見る。"
+        },
+        {
+          "speaker": "okuyasu",
+          "text": "……で、どうします？　帰るのは、なんか、まだ早え気がするんすけど。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私も帰りたくなかった。用事がなくなったら会う理由までなくなるのは嫌だ。広場の向こうに、屋外の小さな古本市が見えた。球を打つ服のまま二人で歩き、本の背を覗き込む。億泰くんは昔の遊びが載った一冊を開き、これやったことありますか、と私を呼んだ。 私がその本を買い、次は続きを一緒に見ようと鞄へ入れた。"
+        },
+        {
+          "speaker": "player",
+          "text": "あるよ。でも今やったら、たぶん下手。……今日は、ここに来られてよかったね。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "stay_day",
+          "text": "予定がなくなっても、二人で午後を過ごしたいと話す",
+          "next": "home",
+          "effect": "conferencePractical",
+          "setFlags": [
+            "keptAfternoon"
+          ]
+        },
+        {
+          "id": "beside",
+          "text": "一冊を並んで読み、近くで笑う",
+          "next": "home",
+          "effect": "walkClose"
+        },
+        {
+          "id": "finish",
+          "text": "市を一緒に見てから、今日は別れる",
+          "next": "home",
+          "effect": "walkHome"
+        }
+      ]
+    },
+    {
+      "id": "home",
+      "chapter": 3,
+      "title": "何も打たない手",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "6月8日",
+        "period": "夕方"
+      },
+      "characterId": "okuyasu",
+      "rating": "general",
+      "tags": [
+        "okuyasu"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "体育館の帰り、家で一緒に食べようと誘った。億泰くんはいいんすかと聞き返し、私が頷くと、じゃあ買い物も一緒に行こうと店を指した。二人で選んだ食事を持ち帰り、玄関で靴を脱ぐ。彼が部屋へ入る前に少し姿勢を正したのが見えた。"
+        },
+        {
+          "speaker": "okuyasu",
+          "text": "お邪魔します。……先輩、どこ座っていいんすか。"
+        },
+        {
+          "speaker": "player",
+          "text": "好きな方でいいよ。今日は台がないから、向かいでも隣でも。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "言ってから少し照れたが、億泰くんは真面目に椅子を見比べた。食事は向かいに座り、片づけてから隣へ来る。古本市で買った遊びの本を二人で開き、子どもの頃ならできたかもしれない動きを眺めた。今やるなら準備がいるな、と彼が笑った。私は机に置かれた手の大きさへ、ふと目を止めた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "talk",
+          "text": "隣で、「また来てね。二人で話したい」と伝える",
+          "next": "evening",
+          "effect": "hotelTalk"
+        },
+        {
+          "id": "rest",
+          "text": "食後もしばらく、本を一緒に眺める",
+          "next": "evening",
+          "effect": "homeRest"
+        }
+      ]
+    },
+    {
+      "id": "evening",
+      "chapter": 3,
+      "title": "帰るのが惜しい",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "6月8日",
+        "period": "夜"
+      },
+      "characterId": "okuyasu",
+      "rating": "general",
+      "tags": [
+        "okuyasu"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "ページを閉じると、部屋が急に静かになった。億泰くんが時計を見て、もうこんな時間かと言う。私も見上げたが、そこへ付け足す用事を思いつかなかった。食器は片づいていて、貸し借りする道具もない。"
+        },
+        {
+          "speaker": "okuyasu",
+          "text": "楽しかったっす。先輩、また誘ってください。おれからも、誘うけど。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "うんと答えてから、今も誘っていいのだと思った。次の卓球でも、昼ご飯でもない誘いを、彼がどう受け取るのかは分からない。私は本の角を指で押さえるのをやめ、隣の顔を見た。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "stay",
+          "text": "「今夜は、億泰くんともっと近くにいたい」と伝える",
+          "next": "consent",
+          "effect": "hotelInvite",
+          "when": {
+            "min": {
+              "trust": 45,
+              "desire": 8
+            }
+          }
+        },
+        {
+          "id": "next_time",
+          "text": "また会おうと約束して、玄関で見送る",
+          "next": "next",
+          "effect": "walkHome"
+        }
+      ]
+    },
+    {
+      "id": "consent",
+      "chapter": 3,
+      "title": "おれが、いたい",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "6月8日",
+        "period": "夜"
+      },
+      "characterId": "okuyasu",
+      "rating": "general",
+      "tags": [
+        "okuyasu"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "億泰くんはすぐには立たなかった。聞き間違いではないかというように私を見てから、喉を一度動かす。からかう言葉が来なかったので、私も顔を隠せなくなった。"
+        },
+        {
+          "speaker": "okuyasu",
+          "text": "おれも、先輩に触りたい。今夜、一緒にいてえです。……いいっすか。"
+        },
+        {
+          "speaker": "player",
+          "text": "私もそうしたい。でも今夜一緒にいることと、恋人になる約束は別にして話したい。途中でやめたくなったら、私も言うね。"
+        },
+        {
+          "speaker": "okuyasu",
+          "text": "分かりました。どっちかがやめるって言ったら、そこでやめましょう。おれも嫌な時は言う。先輩が今日は帰ってって言っても、ちゃんと帰ります。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "こちらが頼めば何でも聞く、という返事ではなかった。自分もそうしたいと言った顔を見て、私は近づきたいと思った。椅子の間にはまだ少し隙間がある。その分を、今度は私が選ぶ番だった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「一緒にいてほしい」と答え、彼の手を取る",
+          "next": "night",
+          "effect": "consent",
+          "setFlags": [
+            "consented",
+            "hadNight"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「今日はここまでにしよう」と伝える",
+          "next": "next",
+          "effect": "walkHome",
+          "setFlags": [
+            "declinedTouch"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "night",
+      "chapter": 3,
+      "title": "笑うより先に",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "6月8日",
+        "period": "夜"
+      },
+      "characterId": "okuyasu",
+      "rating": "fade",
+      "tags": [
+        "okuyasu"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私が手を取ると、億泰くんの手が包むように返った。椅子を寄せ、顔を上げる。彼が少し身を屈めたところで目が合い、私は近づいてほしいと声にした。唇が触れるまで、いつもの冗談を一つも思いつかなかった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "離れたあと、彼が照れたように笑う。私も笑い、それでも手は離さずにいた。もう一度は自分から頬へ触れ、近づく。二人で立ち上がって奥の部屋へ移る時、億泰くんが机の角へぶつからないよう椅子を戻した。灯りを消す手にも、まだつないだ指の感触が残っていた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝、先に目を開けると、億泰くんはまだ眠っていた。少ししてこちらを向き、私の顔を見るなり、おはよう、と声が出る。その近さに自分の方が照れて、私も挨拶を返した。朝食を用意しようと起き上がる前に、彼が次の言葉を続けた。",
+          "storyTime": {
+            "date": "6月9日",
+            "period": "朝"
+          }
+        },
+        {
+          "speaker": "okuyasu",
+          "text": "おれ、また先輩とこうして会いてえな。でも、先輩がどうしたいかも、聞いてからにします。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "again",
+          "text": "「恋人の約束はせず、また望む夜に会いたい」と答える",
+          "next": "next",
+          "effect": "messageBoundaries",
+          "setFlags": [
+            "ongoing"
+          ]
+        },
+        {
+          "id": "more",
+          "text": "「また夜も会いたい。億泰くんをもっと好きになった」と伝える",
+          "next": "next",
+          "effect": "messageAgain",
+          "setFlags": [
+            "ongoing"
+          ]
+        },
+        {
+          "id": "day",
+          "text": "「これからは、昼に会う友達でいたい」と答える",
+          "next": "next",
+          "effect": "messageDaily",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ],
+      "when": {
+        "flags": [
+          "consented"
+        ]
+      }
+    },
+    {
+      "id": "next",
+      "chapter": 4,
+      "title": "ラケットを置いて",
+      "location": "体育館のロビー",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "夕方"
+      },
+      "characterId": "okuyasu",
+      "rating": "general",
+      "tags": [
+        "okuyasu"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "六月は卓球へ行き、食事をし、二人が望んだ夜には私の家でも会った。朝早く別れた日も、学食で顔を合わせれば普通に声が飛んでくる。近い時間が増えても、相手の予定まで自分のものにはならない。私は誘われるのを待つだけでなく、自分から空いている日を聞くようになった。",
+          "when": {
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "昼に会う友達でいたいと答えてから、億泰くんは体育館や食事へ誘ってくれた。夜の返事を蒸し返されることはなかった。少し照れくさかった次の対戦も、一本強く返すと、今のずりい、と笑う声が戻った。",
+          "when": {
+            "flags": [
+              "hadNight",
+              "endedNight"
+            ],
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "六月は卓球へ行き、食事をし、予定が合わない週には端末へ短い感想を送った。勝った日の話だけではない。何もできず疲れた日にも、あの声が聞きたいと思うことがあった。会えばいつも明るくしなければならない、という相手ではなくなっている。",
+          "when": {
+            "notFlags": [
+              "hadNight"
+            ]
+          }
+        },
+        {
+          "speaker": "okuyasu",
+          "text": "今日、先輩、何か話あるって言ってましたよね。ここでいいっすか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "億泰くんが二人分のラケットを返して戻ってきた。私はロビーの椅子へ座り、自分の荷物を足元へ置く。ゲームが終わったあとの手は、何を握るかまだ決まっていなかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "tell",
+          "text": "自分から、億泰くんが好きだと伝えたいと言う",
+          "next": "confess_player",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 35,
+              "romanceChar": 25
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "listen",
+          "text": "彼が言いかけた言葉を、先に聞く",
+          "next": "confess_okuyasu",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 20,
+              "romanceChar": 35
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "our_table",
+          "text": "勝つ日も負ける日も、最初に誘う相棒でいたいと話す",
+          "next": "own_table",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 35,
+              "romanceChar": 30,
+              "comfort": 20
+            },
+            "flags": [
+              "keptRally",
+              "ownPace",
+              "keptAfternoon"
+            ],
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "nights",
+          "text": "これからも、望む夜に会う友人でいたいと話す",
+          "next": "fwb_choice",
+          "when": {
+            "min": {
+              "trust": 50,
+              "desire": 25,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "love",
+          "text": "「今は、億泰くんの恋人になりたい」と伝える",
+          "next": "end_fwb_love",
+          "when": {
+            "min": {
+              "trust": 60,
+              "romancePlayer": 50,
+              "romanceChar": 40,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          },
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "friends",
+          "text": "これからも、遠慮なく誘い合う友達でいたいと話す",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_player",
+      "chapter": 4,
+      "title": "声の届く方へ",
+      "location": "体育館のロビー",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "夕方"
+      },
+      "characterId": "okuyasu",
+      "rating": "general",
+      "tags": [
+        "okuyasu"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "億泰くんの名を呼んでから、何から言おうか迷った。彼は私の顔を覗き込み、待っている。さっきまで球を追っていた目に自分だけが映ると、急に言葉の順番が分からなくなった。"
+        },
+        {
+          "speaker": "player",
+          "text": "会ったら何をしようって考えるより、先に億泰くんに会いたくなるの。楽しい日だけじゃなくて、あんまり元気じゃない日も。"
+        },
+        {
+          "speaker": "okuyasu",
+          "text": "そういう日は、無理して卓球しなくてもいいっすよ。おれ、先輩となら、座って話すだけでも……。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "途中で言葉が止まった。私が頷くだけで済ませなかったので、続きがあると分かったのかもしれない。私は目を上げ、まだ一度も言っていない言葉を、彼の名前のあとへ続けた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "like",
+          "text": "「好き。私と付き合ってほしい」と伝える",
+          "next": "end_love_a",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "choose",
+          "text": "「億泰くんの恋人になりたい。私のこと、どう思う？」",
+          "next": "end_love_a",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "wait",
+          "text": "「友達として、これからも一緒にいたい」と伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_okuyasu",
+      "chapter": 4,
+      "title": "遠回りをやめた声",
+      "location": "体育館のロビー",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "夕方"
+      },
+      "characterId": "okuyasu",
+      "rating": "general",
+      "tags": [
+        "okuyasu"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "億泰くんは足元の鞄を一度動かし、それから私へ向き直った。話を聞く前に、自分も言いたいことがあるらしい。口を開いては閉じるので、私は急がなくていいよと言いかけた。彼が先に息を吸った。"
+        },
+        {
+          "speaker": "okuyasu",
+          "text": "おれ、先輩が好きです。友達としても好きだけど、それだけじゃなくて。先輩の恋人になりてえ。おれと、付き合ってくれませんか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "最後だけ少し丁寧になった声が、ロビーのざわめきの中ではっきり届いた。いつも思ったことをそのまま言う人が、この一言だけは何度も選んだのかもしれない。私はそう思って彼の手を見る。握った拳は、こちらへ伸びずに膝の上で待っていた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「私も好き。億泰くんと付き合いたい」と答える",
+          "next": "end_love_b",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「恋人にはなれない。友達でいたい」と答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "refusedConfession",
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "own_table",
+      "chapter": 4,
+      "title": "勝ち越さなくても",
+      "location": "体育館のロビー",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "夕方"
+      },
+      "characterId": "okuyasu",
+      "rating": "general",
+      "tags": [
+        "okuyasu"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人になるのとは違うけれど、最初に誘う相棒でいたいと言った。勝ちたいだけなら、もっと上手な人を探してもいい。それでも球が続いたあと振り返りたいのは、いつも同じ顔だった。億泰くんは少し黙り、頬を指で掻いた。"
+        },
+        {
+          "speaker": "okuyasu",
+          "text": "おれも、先輩とやりてえです。負けても次、もう一回って言えるし。台がなくても、何かして帰れるしな。"
+        },
+        {
+          "speaker": "player",
+          "text": "うん。次は、二人で組むのもやってみたい。一緒に誰かと打ったら、どうなるんだろう。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼の顔が明るくなった。体育館で見かけた交流の日なら、初心者でも交代で組めると案内にあった。勝てる気がします、と勢いよく言うから、まだ一度も組んでないよと私も笑う。"
+        },
+        {
+          "speaker": "okuyasu",
+          "text": "じゃあ、まずは二人でぶつからねえようにしないとな。……先輩、これからも、もう一回って誘っていいっすか。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "partners",
+          "text": "「私からも誘う」と答え、隣でも打てる相棒になる",
+          "next": "end_special",
+          "effect": "homeTogether",
+          "setFlags": [
+            "ourTable"
+          ]
+        },
+        {
+          "id": "friend",
+          "text": "今は気が向いた時に遊ぶ友達でいたいと答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fwb_choice",
+      "chapter": 4,
+      "title": "うまく言わなくても",
+      "location": "体育館のロビー",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "夕方"
+      },
+      "characterId": "okuyasu",
+      "rating": "general",
+      "tags": [
+        "okuyasu"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人の約束はせず、望む夜にまた会いたいと話すと、億泰くんは頷いた。おれもそうしたい、と短く返る。簡単に言ったようでいて、こちらの顔から目を外していなかった。"
+        },
+        {
+          "speaker": "okuyasu",
+          "text": "でも、前がよかったから次も絶対ってのは、なしで。おれも先輩も、その時に決めましょう。途中でやめる時も言う。"
+        },
+        {
+          "speaker": "player",
+          "text": "うん。誘いたい時は誘うし、今日は違うって時はそう言う。昼に遊ぶ日も続けたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "もちろん、と返る声に笑ってから、私が次の週末を提案した。彼はその日は夕方まで予定があると言う。じゃあ夜からと決め、今日の夕食は外で食べることにした。先に二人で歩く道を選んでから、椅子を離れた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "continue",
+          "text": "親密な友人として、次の夜を約束する",
+          "next": "end_fwb",
+          "effect": "messageBoundaries"
+        },
+        {
+          "id": "daytime",
+          "text": "考え直し、昼に会う友達でいたいと答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "end_friend",
+      "chapter": 5,
+      "title": "向かいが空いてる",
+      "location": "学内の食堂",
+      "storyTime": {
+        "date": "7月14日",
+        "period": "昼"
+      },
+      "characterId": "okuyasu",
+      "rating": "general",
+      "tags": [
+        "okuyasu"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人にはなれないと答えた時、億泰くんはそうっすか、と目を落とした。すぐに明るく返すのを求めず、私はその日は別れた。次に自分から昼食へ誘うと、空いてますよと短い返事が来た。",
+          "when": {
+            "flags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "昼に会う友達でいたいと伝えてから、約束は学食や体育館になった。最初は少し照れくさかったが、億泰くんは夜のことを持ち出さずに隣の台を指した。今度こそ勝つと私が言うと、おれもっす、と笑った。",
+          "when": {
+            "flags": [
+              "hadNight",
+              "endedNight"
+            ],
+            "notFlags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "友達としてまた遊ぼうと話し、今日は学食で待ち合わせた。億泰くんは先に食事を受け取り、向かいを空けている。私が来ると、ここ、といつもの大きさで声が届いた。",
+          "when": {
+            "notFlags": [
+              "hadNight",
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "okuyasu",
+          "text": "先輩、今日のこれ、うめえっすよ。でも、こっちはちょっと辛い。"
+        },
+        {
+          "speaker": "player",
+          "text": "じゃあ、私はこっちにしようかな。あとで一口、感想聞かせて。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "自分で選んだ皿を置き、今日は別の友人とも遊ぶ予定だと話した。億泰くんが羨ましそうに聞くので、今度みんなで行こうと誘う。次の卓球の勝ち負けも、午後に会う人のことも、同じ机で気軽に話せた。"
+        }
+      ],
+      "choices": [],
+      "ending": "FRIEND"
+    },
+    {
+      "id": "end_love_a",
+      "chapter": 5,
+      "title": "先に呼んだ名前",
+      "location": "体育館から駅まで",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "夕方"
+      },
+      "characterId": "okuyasu",
+      "rating": "general",
+      "tags": [
+        "okuyasu"
+      ],
+      "body": [
+        {
+          "speaker": "okuyasu",
+          "text": "おれも好きです。付き合いてえっす。……ああ、くそ、先に言われた。おれ、今日こそって思ってたんすよ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "悔しそうなのに笑っていて、私までつられた。今日は私の勝ち、と言うと、それは違うだろ、と返る。違うねと頷き、自分から手を差し出した。彼が取ってくれるまでの短い間に、もう一度その顔を見たくなった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌週、食堂で見つけた彼を私から呼んだ。向かいへ来ようとするので、今日は隣がいいと言う。億泰くんは少し驚き、それから椅子を引いた。食事の味を話す距離が変わって、私は同じ皿なのにゆっくり食べた。",
+          "storyTime": {
+            "date": "7月6日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_A"
+    },
+    {
+      "id": "end_love_b",
+      "chapter": 5,
+      "title": "その手が開くまで",
+      "location": "体育館から駅まで",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "夕方"
+      },
+      "characterId": "okuyasu",
+      "rating": "general",
+      "tags": [
+        "okuyasu"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私も好きと答えると、億泰くんは一瞬黙り、それから本当に、と聞いた。もう一度頷くと、大きく息を吐いて笑う。握っていた手がようやく開いたので、私はそこへ自分の手を重ねた。"
+        },
+        {
+          "speaker": "okuyasu",
+          "text": "……やべえな。嬉しくて、次、何言うか忘れた。"
+        },
+        {
+          "speaker": "player",
+          "text": "じゃあ、歩こうか。私も、今はそんなに話せない。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "次に会った日は、駅から並んで歩いた。億泰くんが自分の見つけた看板を指し、それから私の歩幅へ戻る。手が触れたので、こちらから握った。話の続きが一度途切れ、二人とも笑ってから、また同じ看板を見た。",
+          "storyTime": {
+            "date": "7月6日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_B"
+    },
+    {
+      "id": "end_fwb",
+      "chapter": 5,
+      "title": "明日の分も残して",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "7月12日",
+        "period": "夜"
+      },
+      "characterId": "okuyasu",
+      "rating": "fade",
+      "tags": [
+        "okuyasu"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "夕方の用事を終えた億泰くんが、食事を持って来た。私は飲み物を冷やし、部屋の灯りをつけて待っていた。今夜も泊まりたいかと尋ねると、いたいですと返る。私も一緒にいたいと伝えてから、机へ料理を並べた。"
+        },
+        {
+          "speaker": "okuyasu",
+          "text": "これ、二人じゃ多かったか。明日も食えるやつだから、残ったら分けましょう。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "食べきれない分を先に容器へ移し、食事のあとで彼の隣へ座った。今日はまだ眠くないと伝えると、億泰くんがこちらを見る。私からその手へ触れ、近づきたいと言った。彼も頷き、少し身を屈める。唇を重ねてから、二人で部屋の奥へ移った。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝、残しておいた料理を少し温めた。彼が自分の分を持ち帰る容器へ分け、私は食卓を整える。今日の予定を話しながら食べ終え、玄関で見送った。次に遊ぶ日を聞く連絡は、私の昼の用事が終わってから送ろうと思った。",
+          "storyTime": {
+            "date": "7月13日",
+            "period": "朝"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB"
+    },
+    {
+      "id": "end_fwb_love",
+      "chapter": 5,
+      "title": "今度は、この名前で",
+      "location": "体育館のロビー",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "夕方"
+      },
+      "characterId": "okuyasu",
+      "rating": "general",
+      "tags": [
+        "okuyasu"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "今は恋人になりたい、と伝えた。億泰くんは頷きかけて、ちゃんと顔を上げる。私の家で近くにいたことは、今の答えの代わりにならない。それでも、私が言い終えるまで待ってくれる人だとは知っていた。"
+        },
+        {
+          "speaker": "okuyasu",
+          "text": "おれも、先輩と付き合いてえです。今までが嫌だったんじゃないっすよ。でも、今は、恋人になりたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "うん、と答えると、彼の手が伸びてきた。私は指を重ね、今度からそう呼んでいいんだねと確かめる。いいっすよと言った顔が照れたので、自分まで照れて、握った手へ目を落とした。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌週、体育館を出てから少し遠回りをした。今日は家へ寄らず、それぞれの予定へ帰る。それでも二人で歩く距離をもう少し欲しくて、私が別の道を指した。億泰くんが、いいっすね、と迷わず隣へ来た。",
+          "storyTime": {
+            "date": "7月6日",
+            "period": "夕方"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB_TO_LOVE"
+    },
+    {
+      "id": "end_special",
+      "chapter": 5,
+      "title": "隣から返す一球",
+      "location": "市民体育館の卓球場",
+      "storyTime": {
+        "date": "7月20日",
+        "period": "昼"
+      },
+      "characterId": "okuyasu",
+      "rating": "general",
+      "tags": [
+        "okuyasu"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "交流の日、初めて二人で組むと、思ったよりうまくいかなかった。交互に打つために動く場所が分からず、互いに道を譲って球を見送る。億泰くんが悔しそうに笑い、私ももう一回と声を出した。相手の二人が、ゆっくりでいいですよと待ってくれる。"
+        },
+        {
+          "speaker": "okuyasu",
+          "text": "先輩、次、おれがこっちへどきます。そしたら打ってください。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "頷いて構え直す。彼の返した球が向こうで跳ね、戻ってきたところを私が打った。一往復増えただけなのに、隣から大きな声が上がる。私も笑いそうになりながら次の場所へ動いた。"
+        },
+        {
+          "speaker": "player",
+          "text": "今の、もう一回できるかな。"
+        },
+        {
+          "speaker": "okuyasu",
+          "text": "やりましょうよ。できなくても、またやればいいし。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "恋人の約束とは違う形で、隣へ呼びたい人ができた。終わればそれぞれの友人とも話し、帰りには今日の一球を二人で思い出す。勝ち越せなかった点数より、次にあの声を隣で聞くための日付を、私は先に手帳へ書いた。"
+        }
+      ],
+      "choices": [],
+      "ending": "SPECIAL"
+    }
+  ]
+}

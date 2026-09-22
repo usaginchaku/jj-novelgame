@@ -1,0 +1,1195 @@
+{
+  "id": "mista",
+  "title": "ミスタ — まだ終わらない上映",
+  "intro": "観たかった映画は、もう満席だった。\n文句を言い合った帰り道の方を、あとで何度も思い出す。",
+  "startEvent": "soldout",
+  "character": {
+    "name": "ミスタ",
+    "adult": true,
+    "heightCm": 179,
+    "heightBasis": "二次資料JoJo Wikiの身長欄と出典注記を照合。原作575話プロフィール。アニメ182とは分離。書籍・設定表現物は未照合。AUで同値を採用。",
+    "profile": "楽観的で立て直しが早い。仲間思い。独特の縁起へのこだわり。",
+    "personality": [
+      "楽観的で立て直しが早い",
+      "仲間思い",
+      "独特の縁起へのこだわり"
+    ],
+    "speech": {
+      "firstPerson": "オレ",
+      "addressing": "主人公は名前/おまえ。くだけた同輩の会話を基本とするAU解釈。",
+      "tone": "脱線する雑談。語尾は感情と相手に合わせる。",
+      "habits": [
+        "脱線する雑談",
+        "〜だろ、〜じゃねえか",
+        "嫌な数字への反応は場面に一度で足りる"
+      ],
+      "signaturePhrases": [],
+      "signatureNote": "日常の固定口癖は採用しない。象徴的な原作台詞と普段の話し方を混同せず、名台詞を貼り付けない。",
+      "avoid": [
+        "数字4の拒絶だけ",
+        "無神経な性的軽口の連発",
+        "全てを笑って済ます"
+      ]
+    },
+    "referenceSection": "docs/CHARACTER_REFERENCE.md#cast-mista"
+  },
+  "au": {
+    "role": "学部3年・機械制御系は候補",
+    "routeEnabled": true,
+    "addressing": [
+      {
+        "text": "{player.lastName}"
+      }
+    ]
+  },
+  "endingDescriptions": {
+    "FRIEND": {
+      "title": "帰りに何食べる？",
+      "description": "映画の当たり外れも笑って持ち寄る友達。ほかの友人との雑談の先にも、また二人で出かける日がある。"
+    },
+    "LOVE_A": {
+      "title": "言えた口元で",
+      "description": "自分から好きを伝えると、軽口の上手な彼も少し言葉につまずく。暗くなる前に取った手を、そのままに。"
+    },
+    "LOVE_B": {
+      "title": "帰り道を長くする",
+      "description": "冗談に戻さなかった告白へ、自分の好きも返す。映画の前も後も、二人で歩く時間を増やしていく。"
+    },
+    "FWB": {
+      "title": "もう一本は、朝に",
+      "description": "望む夜を一緒に過ごし、帰る朝にも笑える親密な友人。映画の続きも、次の誘いも残して別れる。"
+    },
+    "FWB_TO_LOVE": {
+      "title": "今なら、その名前で",
+      "description": "過ごした夜の続きを恋人として選ぶ。何でもない会話の中で、その呼び名をもう一度聞きたくなる。"
+    },
+    "SPECIAL": {
+      "title": "上映後の待ち合わせ",
+      "description": "一本ずつ薦め、違った感想ごと持ち帰る映画の相棒。作品が終わっても、二人の上映後は続く。"
+    }
+  },
+  "events": [
+    {
+      "id": "soldout",
+      "chapter": 1,
+      "title": "予告より長い寄り道",
+      "location": "街の映画館前",
+      "storyTime": {
+        "date": "4月26日",
+        "period": "昼"
+      },
+      "characterId": "mista",
+      "rating": "general",
+      "tags": [
+        "mista"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "学内の映画の話で顔を合わせるようになったミスタと、初めて二人で出かけた。窓口には満席の札が出ている。彼が上映時刻を確かめ直す横で、私は売り切れた券の代わりに、手の中の小銭を数えた。楽しみにしていたと言うほど、今日が駄目になってしまいそうだった。"
+        },
+        {
+          "speaker": "mista",
+          "text": "見事に一枚もねえな。……腹は減ってるか？　映画には入れなくても、飯屋からまで追い出されるってことはねえだろ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私は笑って頷いた。がっかりしていないふりまでしなくていいらしく、彼は歩き出してからも、あの席で観たかったとぼやく。私も一番楽しみにしていた場面の予告を話した。隣の人がまだ聞いてくれるので、今日はもう話せないと思ったことが口から出た。"
+        },
+        {
+          "speaker": "player",
+          "text": "じゃあ、食べながら予告の続きを考えよう。映画より面白くなったら困るけど。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "ask",
+          "text": "「ミスタはどんな終わりがいい？」と隣から聞く",
+          "next": "counter",
+          "effect": "ask"
+        },
+        {
+          "id": "eat",
+          "text": "二人で空いている店を探し、昼食にする",
+          "next": "counter",
+          "effect": "workTogether"
+        }
+      ]
+    },
+    {
+      "id": "counter",
+      "chapter": 1,
+      "title": "一枚足した理由",
+      "location": "街の軽食店",
+      "storyTime": {
+        "date": "5月3日",
+        "period": "昼"
+      },
+      "characterId": "mista",
+      "rating": "general",
+      "tags": [
+        "mista"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "今度は券を予約してから、上映前に軽食を買った。小さな焼き菓子を四枚、紙皿へ取ると、ミスタがもう一枚足そうと言う。一枚多く欲しいだけかと思ったが、四つだけは嫌なんだと妙に真剣だった。理由を聞きかけ、私は自分の分の飲み物を先に頼んだ。"
+        },
+        {
+          "speaker": "mista",
+          "text": "食えば減るとか言うなよ。そういう話じゃねえんだ。余るならオレが食うし。"
+        },
+        {
+          "speaker": "player",
+          "text": "余らないと思う。私もお腹すいてる。一本の映画で、そんなにいろいろ起きるのかな。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "一枚足して精算し、窓際の席へ座った。彼は紙袋の口を折り、今度こそあの続きが観られるなと笑う。私は映画の筋より先に、予約したと届いた短い連絡を思い出していた。私の分があるというだけで、その日が来るのを早くしたくなった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "remember",
+          "text": "席を取ってくれた礼を言い、観終わってからも話したいと誘う",
+          "next": "credits",
+          "effect": "honest",
+          "setFlags": [
+            "afterFilm"
+          ]
+        },
+        {
+          "id": "snack",
+          "text": "菓子を分け、上映前の雑談を楽しむ",
+          "next": "credits",
+          "effect": "compareNotes"
+        }
+      ]
+    },
+    {
+      "id": "credits",
+      "chapter": 1,
+      "title": "同じところで笑わない",
+      "location": "映画館近くの歩道",
+      "storyTime": {
+        "date": "5月3日",
+        "period": "夕方"
+      },
+      "characterId": "mista",
+      "rating": "general",
+      "tags": [
+        "mista"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "念願の映画は、思っていたより妙なところで終わった。私は最後の場面が好きだったのに、ミスタは階段を下りながら、そこで終わるかよ、と大きく息を吐く。つられて笑いかけたが、惜しいところを聞いているうち、自分が好きだった理由も話したくなった。"
+        },
+        {
+          "speaker": "player",
+          "text": "私は、あそこで帰ってこない方が好き。待ってる人の顔を、最後まで見せてくれたから。"
+        },
+        {
+          "speaker": "mista",
+          "text": "オレは帰ってきてほしかったね。あんだけ走ったんだぞ。……待て、おまえ、あの窓んとこで泣いてたのか？"
+        },
+        {
+          "speaker": "narrator",
+          "text": "泣いてないと答えるには遅く、私はハンカチを鞄へしまい直した。彼は茶化しかけた口を閉じ、あの顔はよかったなと言った。全部同じ感想にならないまま、駅を一つ通り越した。ミスタが何か言うたび、私はもう少し歩ける気がした。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "different",
+          "text": "好きだった場面をもう一つ話し、彼の不満も最後まで聞く",
+          "next": "message",
+          "effect": "homeTalk",
+          "setFlags": [
+            "twoOpinions"
+          ]
+        },
+        {
+          "id": "two",
+          "text": "「映画より、今こうしてるのが楽しい」と笑う",
+          "next": "message",
+          "effect": "lunchTwo"
+        },
+        {
+          "id": "home",
+          "text": "上映の話をしながら駅へ戻る",
+          "next": "message",
+          "effect": "shiftRest"
+        }
+      ]
+    },
+    {
+      "id": "message",
+      "chapter": 2,
+      "title": "観てない続きを",
+      "location": "自分の部屋",
+      "storyTime": {
+        "date": "5月6日",
+        "period": "夜"
+      },
+      "characterId": "mista",
+      "rating": "general",
+      "tags": [
+        "mista"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "ミスタから、別の映画の予告が届いた。派手な場面が次々に切り替わるわりに、何の話かはよく分からない。最後まで見て端末を持ち直すと、彼の文がその下にあった。"
+        },
+        {
+          "speaker": "mista",
+          "text": "これ、絶対どっかおかしい。見たか？　オレ一人で観たら帰りに文句言う相手がいねえんだけど。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "誘い文句としてはひどいと思いながら、私はもう一度再生した。あの歩道の声が今度は自分の部屋へ来ている。まともな作品を探して送り返すより、隣で彼がどんな顔をするかを想像してしまった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "glad",
+          "text": "ミスタと観たい。帰りの文句も、楽しみにしてる",
+          "next": "matinee",
+          "effect": "messageHeart",
+          "replyVariants": [
+            {
+              "text": "じゃあ決まりだ。今度はおまえが褒める方に賭ける。外れても飯は食おうぜ。",
+              "when": {
+                "flags": [
+                  "twoOpinions"
+                ]
+              }
+            },
+            {
+              "text": "任せろ。いや、映画の出来は任せられても困るけどよ。日、決めようぜ。"
+            }
+          ],
+          "lockRoute": "mista"
+        },
+        {
+          "id": "notice",
+          "text": "そんな誘い方、断りにくいね。私も気になってきた",
+          "next": "matinee",
+          "effect": "messageListen",
+          "replyVariants": [
+            {
+              "text": "断りにくいって言うなよ。来たい方だったら、オレは嬉しいけど。"
+            }
+          ],
+          "lockRoute": "mista"
+        },
+        {
+          "id": "thanks",
+          "text": "見たよ。日程が合う日に行こう",
+          "next": "matinee",
+          "effect": "messageDaily",
+          "replyVariants": [
+            {
+              "text": "おう。今度も席は先に押さえような。"
+            }
+          ],
+          "lockRoute": "mista"
+        }
+      ],
+      "message": true
+    },
+    {
+      "id": "matinee",
+      "chapter": 2,
+      "title": "笑い終わったあと",
+      "location": "映画館のロビー",
+      "storyTime": {
+        "date": "5月18日",
+        "period": "夕方"
+      },
+      "characterId": "mista",
+      "rating": "general",
+      "tags": [
+        "mista"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "映画は予想以上に辻褄が合わず、二人で顔を見合わせるのを何度もこらえた。上映室を出るとミスタがまず一か所を挙げ、私はそこじゃない、と別の場面を持ち出す。笑いすぎて歩けなくなり、ロビーの端の椅子へ座った。"
+        },
+        {
+          "speaker": "mista",
+          "text": "ひでえ映画だったな。なのに、今こんだけ楽しいって、どういうことだよ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼の笑い声が落ち着いても、私はすぐには立たなかった。予約した席の時間は終わったのに、隣にはまだ空きがない。ミスタが、次はまともなの選ぼうぜと言いかけたので、私はあの監督の別の作品もあるよと返した。"
+        },
+        {
+          "speaker": "player",
+          "text": "また一緒に外しても、いいかもしれないね。ちゃんと面白いのも観たいけど。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "double",
+          "text": "互いに一本ずつ選ぶ次の映画の日を提案する",
+          "next": "home",
+          "effect": "conferencePractical",
+          "setFlags": [
+            "ourScreen"
+          ]
+        },
+        {
+          "id": "closer",
+          "text": "「次もミスタの隣がいい」と、笑いが収まってから言う",
+          "next": "home",
+          "effect": "walkClose"
+        },
+        {
+          "id": "walk",
+          "text": "好き勝手な感想を言いながら一緒に帰る",
+          "next": "home",
+          "effect": "walkHome"
+        }
+      ]
+    },
+    {
+      "id": "home",
+      "chapter": 3,
+      "title": "予告の流れる部屋",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "6月1日",
+        "period": "夕方"
+      },
+      "characterId": "mista",
+      "rating": "general",
+      "tags": [
+        "mista"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "配信で見つけた短い映画を一緒に観ようと、ミスタを家へ呼んだ。買ってきた夕食を先に食べ、皿を流しへ運んでから低い机を少しずらす。画面がよく見える席を指したのに、彼は私も座ってからでいいと言って、床のクッションを持ったまま待った。"
+        },
+        {
+          "speaker": "mista",
+          "text": "おまえんちの画面なんだから、おまえだけ斜めから見るのは変だろ。ここ、もうちょい寄せられるか？"
+        },
+        {
+          "speaker": "narrator",
+          "text": "二つを並べて座ると、肩の距離は映画館より近かった。再生してからすぐ、彼がつまらない冗談を言う。笑った拍子に腕が触れ、その先を聞き逃した。私は少し戻してもいいと尋ね、彼の腕を見ないよう画面へ向き直った。"
+        },
+        {
+          "speaker": "player",
+          "text": "今の台詞、もう一回聞きたい。……ミスタが話すからだよ。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "talk",
+          "text": "映画が終わっても隣で余韻を話す",
+          "next": "evening",
+          "effect": "hotelTalk"
+        },
+        {
+          "id": "rest",
+          "text": "見終えた画面を止め、食器を洗ってひと休みする",
+          "next": "evening",
+          "effect": "homeRest"
+        }
+      ]
+    },
+    {
+      "id": "evening",
+      "chapter": 3,
+      "title": "帰る話をしない",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "6月1日",
+        "period": "夜"
+      },
+      "characterId": "mista",
+      "rating": "general",
+      "tags": [
+        "mista"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "画面の消えた部屋では、外を走る車の音がよく聞こえた。ミスタが立ちかけて伸ばした足を、またクッションの前へ戻す。私は次の映画を探すふりで画面を動かし、どれも選ばずに閉じた。"
+        },
+        {
+          "speaker": "mista",
+          "text": "もう一本いけるけどな。……映画、見たいだけなら一人でも見られるか。オレ、まだここにいたいんだよ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "冗談へ続くはずの間に、何も足されなかった。私はリモコンを机へ置く。いつも彼の話を聞く時より近いところに座っているのに、答えるためにはもう少しだけ近づかなければならない気がした。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "stay",
+          "text": "「私も。今夜は一緒にいたい」と伝える",
+          "next": "consent",
+          "effect": "hotelInvite",
+          "when": {
+            "min": {
+              "trust": 45,
+              "desire": 8
+            }
+          }
+        },
+        {
+          "id": "next_time",
+          "text": "「また来て。次の映画も二人で観たい」と、今日は見送る",
+          "next": "next",
+          "effect": "walkHome"
+        }
+      ]
+    },
+    {
+      "id": "consent",
+      "chapter": 3,
+      "title": "言い直さない声",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "6月1日",
+        "period": "夜"
+      },
+      "characterId": "mista",
+      "rating": "general",
+      "tags": [
+        "mista"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "ミスタが体をこちらへ向けた。ふざけたことを言われたら笑ってしまえると思ったのに、彼は私の手へ目を落としてから、顔を見た。"
+        },
+        {
+          "speaker": "mista",
+          "text": "オレも、おまえに触れたい。一緒に泊まりたいって意味で言ってる。おまえも、そうなら。"
+        },
+        {
+          "speaker": "player",
+          "text": "うん、私も触れたい。でも、恋人になる約束は今夜のことと別に話したい。途中でやめたくなったら、言っていい？"
+        },
+        {
+          "speaker": "mista",
+          "text": "そりゃ言えよ。オレも言う。どっちかが止めたいなら止めるし、今日は帰ってくれって言ってもいい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "答えてもらうと、隣の布地の皺が妙にはっきり見えた。私はそこへ置かれた手にまだ触れず、彼を見て頷いた。逃げるために使う笑いは、今は出てこなかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「今夜、一緒にいてほしい」と答える",
+          "next": "night",
+          "effect": "consent",
+          "setFlags": [
+            "consented",
+            "hadNight"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「今日はここまで。また会いたい」と伝える",
+          "next": "next",
+          "effect": "walkHome",
+          "setFlags": [
+            "declinedTouch"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "night",
+      "chapter": 3,
+      "title": "画面の灯りが消えて",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "6月1日",
+        "period": "夜"
+      },
+      "characterId": "mista",
+      "rating": "fade",
+      "tags": [
+        "mista"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私が手を伸ばすと、ミスタの指が受け止めた。クッションの上で膝を寄せ、顔を上げる。彼が少し屈んで、近づいていいかと尋ねた。うん、と答えたあとも、最後のわずかな距離は自分から埋めたくて、私は背を伸ばした。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "唇が離れると、彼が何か言いかけた。今は感想じゃなくていい、と私が笑うと、じゃあもう一回、と返る。私も頷き、彼の肩へ空いた手を置いた。二度目の近さを知ってから、つないだ手のまま二人で立ち、部屋の奥へ移った。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝、横から空腹を訴える声がして、私は毛布の中で笑った。朝ご飯ならあるよと答えると、よかった、と彼も笑う。まだ起き出さずに顔を合わせたまま、昨日の映画の話が一つ出た。覚えていたんだねと言うと、あれは忘れねえよ、と返った。",
+          "storyTime": {
+            "date": "6月2日",
+            "period": "朝"
+          }
+        },
+        {
+          "speaker": "mista",
+          "text": "映画のためじゃなくても、また来たい。おまえは、どうしたい？"
+        }
+      ],
+      "choices": [
+        {
+          "id": "again",
+          "text": "「恋人の約束はせず、また望む夜に会いたい」と答える",
+          "next": "next",
+          "effect": "messageBoundaries",
+          "setFlags": [
+            "ongoing"
+          ]
+        },
+        {
+          "id": "more",
+          "text": "「また夜も会いたい。ミスタをもっと好きになった」と答える",
+          "next": "next",
+          "effect": "messageAgain",
+          "setFlags": [
+            "ongoing"
+          ]
+        },
+        {
+          "id": "day",
+          "text": "「これからは昼に会う友達でいたい」と答える",
+          "next": "next",
+          "effect": "messageDaily",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "chapter": 4,
+      "title": "次の一本の前に",
+      "location": "映画館近くの軽食店",
+      "storyTime": {
+        "date": "6月22日",
+        "period": "昼"
+      },
+      "characterId": "mista",
+      "rating": "general",
+      "tags": [
+        "mista"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "六月には映画を観に行き、互いに望んだ夜は私の家でも過ごした。泊まらず帰る日もあり、朝はそれぞれの用事へ出る。彼の冗談へ笑いながら、会いたいと送る一文にはもう映画の題名がいらなくなっていた。",
+          "when": {
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "昼に会う友達でいたいと答えてから、次の映画は館内で観た。最初は隣へ座るのが少し照れくさかったが、彼が予告へ小声で文句を言うので、私は始まる前から笑ってしまった。",
+          "when": {
+            "flags": [
+              "hadNight",
+              "endedNight"
+            ],
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "六月にも一緒に映画を観た。友人たちが加わる日もあれば、二人で妙な作品を引き当てる日もある。今日は上映前に食事だけを済ませる予定だったが、私は飲み終わったグラスをすぐには脇へ寄せなかった。",
+          "when": {
+            "notFlags": [
+              "hadNight"
+            ]
+          }
+        },
+        {
+          "speaker": "mista",
+          "text": "何だよ、上映中じゃ話せねえからな。今なら、いくらでも聞くけど。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼が券をポケットへ戻した。通路を人が行き交い、その向こうのポスターが見えたり隠れたりする。私は題名を目で追うのをやめ、今日はミスタに言いたいことがある、と自分から切り出した。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "tell",
+          "text": "自分からミスタが好きだと伝える",
+          "next": "confess_player",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 35,
+              "romanceChar": 25
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "listen",
+          "text": "ミスタが言いかけたことを、続きを急がず聞く",
+          "next": "confess_mista",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 20,
+              "romanceChar": 35
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "double_bill",
+          "text": "互いに一本ずつ選ぶ映画の日を、二人の習慣にしたいと話す",
+          "next": "own_screen",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 35,
+              "romanceChar": 30,
+              "comfort": 20
+            },
+            "flags": [
+              "afterFilm",
+              "twoOpinions",
+              "ourScreen"
+            ],
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "nights",
+          "text": "望む夜にも会う親密な友情を続けたいと話す",
+          "next": "fwb_choice",
+          "when": {
+            "min": {
+              "trust": 50,
+              "desire": 25,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "love",
+          "text": "「今は、ミスタの恋人になりたい」と伝える",
+          "next": "end_fwb_love",
+          "when": {
+            "min": {
+              "trust": 60,
+              "romancePlayer": 50,
+              "romanceChar": 40,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          },
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "friends",
+          "text": "これからも気軽に誘い、遠慮なく笑い合う友達でいたい",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_player",
+      "chapter": 4,
+      "title": "冗談にはしない",
+      "location": "映画館近くの軽食店",
+      "storyTime": {
+        "date": "6月22日",
+        "period": "昼"
+      },
+      "characterId": "mista",
+      "rating": "general",
+      "tags": [
+        "mista"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "ミスタの名前を呼ぶと、彼は身を乗り出した。そこで好きだと言ってしまったので、返事を待つ私の方が驚いている。うまい言い出し方を何通りも考えたのに、一つも使えなかった。"
+        },
+        {
+          "speaker": "player",
+          "text": "ミスタが好き。映画が終わるのは楽しみなのに、帰り道が終わるのは、最近ちょっと嫌なんだ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼が何も言わないので、私は紙ナプキンの角をつまんだ。軽く言い直しかけて、やめる。隣で笑っただけの日も、今日はそのままここへ連れてきたかった。彼の口元が少し動き、私はその先を聞く前に自分の願いを足した。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "like",
+          "text": "「私と付き合ってほしい」と伝える",
+          "next": "end_love_a",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "choose",
+          "text": "「ミスタの恋人になりたい。どうかな」と尋ねる",
+          "next": "end_love_a",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "wait",
+          "text": "「今は友達として、また会いたい」と伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_mista",
+      "chapter": 4,
+      "title": "言いかけた、その先",
+      "location": "映画館近くの軽食店",
+      "storyTime": {
+        "date": "6月22日",
+        "period": "昼"
+      },
+      "characterId": "mista",
+      "rating": "general",
+      "tags": [
+        "mista"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "ミスタは、おまえとなら何見ても、まで言って止まった。いつもの調子なら、その先にひどい映画の題名が来る。私は待っていたが、彼はポケットの券へ一度触れただけで、別の言葉から始めた。"
+        },
+        {
+          "speaker": "mista",
+          "text": "いや、映画の話にすんのはやめる。オレ、おまえが好きだ。一緒に笑ってりゃ充分って顔してたけど、恋人になりたいと思ってる。付き合ってくれねえか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "言い終えた彼は、少し困ったように笑った。私までつられそうになって、唇を閉じる。この返事だけは、いつもの掛け合いの速さに乗せたくなかった。彼の手は券を出さず、ポケットから空のまま戻った。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「私も好き。ミスタと付き合いたい」と答える",
+          "next": "end_love_b",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「恋人にはなれない。友達でいたい」と答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "refusedConfession",
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "own_screen",
+      "chapter": 4,
+      "title": "二本立ては終わらない",
+      "location": "映画館近くの軽食店",
+      "storyTime": {
+        "date": "6月22日",
+        "period": "昼"
+      },
+      "characterId": "mista",
+      "rating": "general",
+      "tags": [
+        "mista"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人という約束ではなく、二人の映画の日を続けたいと話した。交代で一本ずつ選んで、一方の感想をもう一方が聞く。私は次に観たい、派手なことの起きない作品の題名を告げた。ミスタはあからさまに考える顔になった。"
+        },
+        {
+          "speaker": "mista",
+          "text": "静かなのを二時間かあ。……その次はオレの番だぞ。途中で爆発するかもしれねえやつ。"
+        },
+        {
+          "speaker": "player",
+          "text": "それはそれで観る。でも面白くなかったら、面白くなかったって言うよ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "そりゃこっちもだ、と笑い声が返った。彼はもう候補を探し始め、私は画面の隅へ顔を寄せる。観てくれるなら何でもいいわけではないから、薦めたい方を決めるのにも時間が掛かった。今日の券とは別に、まだ買っていない次の一本が二人の間に残る。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "partners",
+          "text": "互いの一本と帰り道を持ち寄る、映画の相棒になる",
+          "next": "end_special",
+          "effect": "homeTogether",
+          "setFlags": [
+            "ourDoubleBill"
+          ]
+        },
+        {
+          "id": "friend",
+          "text": "定期的な約束はせず、気軽に誘う友達でいたいと答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fwb_choice",
+      "chapter": 4,
+      "title": "今夜の予定表",
+      "location": "映画館近くの軽食店",
+      "storyTime": {
+        "date": "6月22日",
+        "period": "昼"
+      },
+      "characterId": "mista",
+      "rating": "general",
+      "tags": [
+        "mista"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人と決めず、望む夜にも会いたいと言うと、ミスタが頷いた。オレも、と返るのを聞いてから、私は自分の予定を開く。映画の上映時間より、翌朝どこへ行くかを二人で先に確かめた。"
+        },
+        {
+          "speaker": "mista",
+          "text": "毎回泊まるってことじゃなくてさ、会いたくなったら誘おうぜ。途中でやめたくなった時も言えよ。オレもちゃんと言う。"
+        },
+        {
+          "speaker": "player",
+          "text": "うん。昼の映画も誘うし、夜に会いたい時はそう言う。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼が、今度は晩飯をオレが選ぶと言った。私が何を買うつもりか聞くと、まだ内緒だと笑う。大した秘密でないことは分かっていたが、その一つを次に会う日まで持っていたかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "continue",
+          "text": "親密な友人として、次に会いたい夜を決める",
+          "next": "end_fwb",
+          "effect": "messageBoundaries"
+        },
+        {
+          "id": "daytime",
+          "text": "考え直し、昼に会う友達でいたいと伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "end_friend",
+      "chapter": 5,
+      "title": "みんなの文句と、二人の続き",
+      "location": "大学のラウンジ",
+      "storyTime": {
+        "date": "7月6日",
+        "period": "昼"
+      },
+      "characterId": "mista",
+      "rating": "general",
+      "tags": [
+        "mista"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人にはなれないと答えると、ミスタは笑いかけて、途中で口を閉じた。分かった、と聞いてその日は別れた。数日後に私から映画の題名を送ると、今度はそれかよ、と返ってきた。その先に、空いている日も書いてあった。",
+          "when": {
+            "flags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "これからは昼に会う友達で、と話してから、私は次の映画を自分から誘った。ミスタは夜の返事を蒸し返さず、鑑賞後の食事の店を訊いてきた。少し照れくさいままでも、空腹の話ならいつもの速さで返せた。",
+          "when": {
+            "flags": [
+              "hadNight",
+              "endedNight"
+            ],
+            "notFlags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "友達として次も観に行こうと話して、今日は学内で待ち合わせた。少し遅れるシーザーの分も席を空け、私はミスタの向かいへ座る。彼は次に観たい一本があると、端末を取り出していた。",
+          "when": {
+            "notFlags": [
+              "hadNight",
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "ラウンジの机にはジョセフもいて、少ししてシーザーが加わった。それぞれが次に観たい一本を挙げる中で、私はミスタがいちばん観たい一本を尋ねた。"
+        },
+        {
+          "speaker": "mista",
+          "text": "で、次はどうする？　オレ、一本見つけたんだよ。今度こそ当たる気がする。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "それ、前も聞いたと返すと、彼は前よりすごそうだと胸を張った。私は信じたふりをせず、題名だけ聞く。友人たちの声が重なる中で自分の端末へ日を入れ、帰りの食事は私が選ぶからねと付け足した。"
+        }
+      ],
+      "choices": [],
+      "ending": "FRIEND"
+    },
+    {
+      "id": "end_love_a",
+      "chapter": 5,
+      "title": "言えた口元で",
+      "location": "映画館近くの軽食店",
+      "storyTime": {
+        "date": "6月22日",
+        "period": "昼"
+      },
+      "characterId": "mista",
+      "rating": "general",
+      "tags": [
+        "mista"
+      ],
+      "body": [
+        {
+          "speaker": "mista",
+          "text": "オレも好きだ。付き合いたい。……くそ、もっと格好よく言えるつもりだったんだけどな。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "今のがよかったと答えたら、彼はちょっと待てよと顔を逸らした。いつも私を笑わせる口元が、こちらを向くまでに時間を掛ける。私は机の上へ自分の手を置き、彼が指へ触れてから握り返した。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌週、映画が始まる前に彼が手を出した。私は何も言わず取って、暗くなってからその方へ少し寄った。どんな場面で笑うかは、もう少し知っている。今日は何も起きない予告の間にも、つないだ指を思い出していた。",
+          "storyTime": {
+            "date": "6月29日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_A"
+    },
+    {
+      "id": "end_love_b",
+      "chapter": 5,
+      "title": "帰り道を長くする",
+      "location": "映画館近くの軽食店",
+      "storyTime": {
+        "date": "6月22日",
+        "period": "昼"
+      },
+      "characterId": "mista",
+      "rating": "general",
+      "tags": [
+        "mista"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私も好きと返したあと、ミスタが大きく息を吐いた。よかった、と言ってから、彼はようやく券を出す。私はその手へ自分の指を重ね、映画が終わってからも一緒にいて、と頼んだ。"
+        },
+        {
+          "speaker": "mista",
+          "text": "当たり前みたいに言いたいけど、嬉しいな、それ。どこまででも付き合う。まずは飯だな。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "食べたばかりだよ、と笑った。彼も笑い、券をしまってから私の手を取り直す。その雑な順番が、今日はいつもよりずっと大切なものに思えた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "次の休日には、駅を一つ手前で降りた。二人で歩いて映画館へ向かう間、くだらない話のどこでも手を離さずにいられた。帰りも歩くか、と尋ねられ、私は映画を観る前から頷いた。",
+          "storyTime": {
+            "date": "6月29日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_B"
+    },
+    {
+      "id": "end_fwb",
+      "chapter": 5,
+      "title": "もう一本は、朝に",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "7月6日",
+        "period": "夜"
+      },
+      "characterId": "mista",
+      "rating": "fade",
+      "tags": [
+        "mista"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "ミスタは夕食の袋を持って来た。秘密にしていた中身は、二種類の惣菜だった。どっちもうまそうで選べなかったという彼に笑って、今夜も一緒にいたいと私から言う。彼も泊まりたいと答え、明日の朝には帰ると自分の予定を話した。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "食後、映画を流す前に私が隣へ座ると、今日はこっちが先か、と彼が少し笑った。触れたいと答えて手を取る。ミスタが体を向け、少し屈んだ顔へ私も近づいた。口づけのあとも画面はつけず、二人で部屋の奥へ移った。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝食のあと、短い予告を一つだけ観た。帰る時刻になったので端末を閉じ、私は玄関まで彼を送る。続きはまたな、と言われ、映画の方、とわざと聞いた。そっちも、と返る声に笑って、次は自分から夜を誘おうと思った。",
+          "storyTime": {
+            "date": "7月7日",
+            "period": "朝"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB"
+    },
+    {
+      "id": "end_fwb_love",
+      "chapter": 5,
+      "title": "今なら、その名前で",
+      "location": "映画館近くの軽食店",
+      "storyTime": {
+        "date": "6月22日",
+        "period": "昼"
+      },
+      "characterId": "mista",
+      "rating": "general",
+      "tags": [
+        "mista"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "今は恋人になりたいと言うと、ミスタは券を持った手を止めた。からかわれることより、軽い返事で済んでしまうのが怖かった。けれど彼は券を机へ置き、私の方へ向き直った。"
+        },
+        {
+          "speaker": "mista",
+          "text": "オレもそうしたい。前の夜がまずかったとかじゃねえよ。今、恋人になりたいと思ってる。おまえと。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "うん、と言ってから私の方が笑ってしまった。彼も少し笑い、何で笑うんだよと訊く。嬉しいから、とそのまま答えると、つなぎ慣れた手が机の上で一度強く握り返された。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌週は映画を観ず、街を歩いた。恋人と呼ばれたのは店を出たあとの何でもない会話の中だった。その言葉だけ私の耳に残り、先に歩きかけた彼の袖をつかむ。もう一回言って、と頼むと、今度は彼の方が照れた。",
+          "storyTime": {
+            "date": "6月29日",
+            "period": "夕方"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB_TO_LOVE"
+    },
+    {
+      "id": "end_special",
+      "chapter": 5,
+      "title": "上映後の待ち合わせ",
+      "location": "映画館のロビー",
+      "storyTime": {
+        "date": "7月13日",
+        "period": "夕方"
+      },
+      "characterId": "mista",
+      "rating": "general",
+      "tags": [
+        "mista"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私が選んだ一本を観終え、ミスタは椅子へ深く座った。静かすぎた、と言うわりに、途中の細かい動作を覚えている。私はそこが好きだったと話し、彼が見落とした別の場面も付け加えた。"
+        },
+        {
+          "speaker": "mista",
+          "text": "面白かったってことには、まだしねえぞ。でも、あの終わり方なら最初の階段も変に見えるな。……おまえ、そこでも泣いた？"
+        },
+        {
+          "speaker": "player",
+          "text": "それは内緒。次はミスタの一本だから、何を選ぶか考えてきて。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "もう決まってる、と彼が題名を出した。私は思わず眉を寄せ、彼はそれだよと笑った。恋人と呼ばない二人の予定には、観ていない作品がまだいくつも残っている。感想が合うか確かめる前に、私は次の帰り道で食べたいものを話した。"
+        }
+      ],
+      "choices": [],
+      "ending": "SPECIAL"
+    }
+  ]
+}

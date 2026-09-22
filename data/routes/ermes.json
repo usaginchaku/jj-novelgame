@@ -1,0 +1,1206 @@
+{
+  "id": "ermes",
+  "title": "エルメェス — 一皿ずつ、持ってきて",
+  "intro": "朝市で買いすぎる前に、二人の手を数える。\n違う好みも失敗した味も、次に会う楽しみになる。",
+  "startEvent": "market",
+  "character": {
+    "name": "エルメェス",
+    "adult": true,
+    "heightCm": 175,
+    "heightBasis": "二次資料JoJo Wikiの身長欄と出典注記を照合。ストーンオーシャン25話プロフィール。書籍・設定表現物は未照合。AUで同値を採用。",
+    "profile": "明るく現実的。義理堅い。痛みや怒りを行動に変える。",
+    "personality": [
+      "明るく現実的",
+      "義理堅い",
+      "痛みや怒りを行動に変える"
+    ],
+    "speech": {
+      "firstPerson": "あたし",
+      "addressing": "主人公は名前/あんた。同期の砕けた常体。",
+      "tone": "実用的な一言と気安い冗談。語尾は感情と相手に合わせる。",
+      "habits": [
+        "実用的な一言と気安い冗談",
+        "あんた、名前",
+        "深刻な時は言葉を絞る"
+      ],
+      "signaturePhrases": [],
+      "signatureNote": "日常の固定口癖は採用しない。象徴的な原作台詞と普段の話し方を混同せず、名台詞を貼り付けない。",
+      "avoid": [
+        "姉御として世話だけする",
+        "復讐台詞を恋愛へ流用",
+        "傷を全て主人公が癒す筋"
+      ]
+    },
+    "referenceSection": "docs/CHARACTER_REFERENCE.md#cast-ermes"
+  },
+  "au": {
+    "role": "学部3年・同期。機械/生産系は候補",
+    "routeEnabled": true,
+    "addressing": [
+      {
+        "text": "{player.lastName}"
+      }
+    ]
+  },
+  "events": [
+    {
+      "id": "market",
+      "title": "袋に入るだけ",
+      "chapter": 1,
+      "location": "街の朝市",
+      "storyTime": {
+        "date": "5月11日",
+        "period": "朝"
+      },
+      "characterId": "ermes",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "朝市の果物の前で、エルメェスが箱を抱えかけていた。同じ三年になってからも昼食はよく一緒に取るけれど、休日の朝に誘われたのは初めてだった。まとめた方が安い、と彼女が言い、私は箱と二人の手を見比べる。"
+        },
+        {
+          "speaker": "player",
+          "text": "安いけど、今日これ全部持って帰る？　私、半分でも食べきれるか分からない。"
+        },
+        {
+          "speaker": "ermes",
+          "text": "……そうだな。安く買って腐らせたら、ただの重い買い物か。半分の袋、ない？"
+        },
+        {
+          "speaker": "narrator",
+          "text": "店の人へ尋ねる声は、迷っていた時より大きかった。袋売りの柑橘を選び直すと、エルメェスは一つずつ持ち上げて傷を見た。私は少し形の悪いものを手に取り、匂いを嗅ぐ。爪へついた青い匂いを、顔の近くへ残しておきたくなった。"
+        },
+        {
+          "speaker": "ermes",
+          "text": "そっちがいいの？　見た目で損してるやつ、当たりだと嬉しいんだよな。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "試食は思ったより酸っぱかった。二人で同時に顔をしかめ、店の人まで笑う。買うのをやめるほど嫌ではなくて、私はそのままの味で食べる分を選んだ。エルメェスは甘くしてもいい、ともう帰ってからのことを考えていた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "amount",
+          "text": "食べたい分を自分で決めて買う",
+          "next": "carry",
+          "effect": "workTogether",
+          "setFlags": [
+            "chosenAmount"
+          ],
+          "lockRoute": "ermes"
+        },
+        {
+          "id": "invite",
+          "text": "「次の朝市も、一緒に来たい」と誘う",
+          "next": "carry",
+          "effect": "gameDate",
+          "lockRoute": "ermes"
+        }
+      ]
+    },
+    {
+      "id": "carry",
+      "title": "軽くなる方へ",
+      "chapter": 1,
+      "location": "朝市からの帰り道",
+      "storyTime": {
+        "date": "5月11日",
+        "period": "昼"
+      },
+      "characterId": "ermes",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "買い足したパンを上へ乗せた途端、エルメェスの紙袋の持ち手が切れた。底はまだ抜けていない。彼女が胸へ抱えて短く悪態をつく間に、私は自分の布袋を開いた。全部もらうのではなく、軽いものからこちらへ移す。"
+        },
+        {
+          "speaker": "ermes",
+          "text": "パン、潰さないでよ。そこだけは今日、一番楽しみにしてる。"
+        },
+        {
+          "speaker": "player",
+          "text": "知ってる。さっきから三回言ってる。果物を下へ入れるから、少し待って。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "荷物を分け直すと、二人とも片手が空いた。エルメェスは切れた持ち手を見て、箱で買わなくてよかったな、と笑った。私はつられて笑い、笑った拍子にパンを傾けかける。今度は彼女の手が袋の底を受けた。"
+        },
+        {
+          "speaker": "ermes",
+          "text": "おっと。今落としたら、あたし、かなり悲しい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "冗談めかした声の近さに、私は腕の力を抜いた。何でも持ってくれる人ではなく、食べたいパンを潰されたくない人が横を歩いている。駅まで行くつもりだったけれど、先に公園で少し食べようと私から言った。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "split",
+          "text": "互いに持てる重さへ分け、パンの休憩を提案する",
+          "next": "taste",
+          "effect": "shiftHelp",
+          "setFlags": [
+            "splitLoad"
+          ]
+        },
+        {
+          "id": "near",
+          "text": "「一緒に帰ると、失敗しても楽しい」と笑う",
+          "next": "taste",
+          "effect": "walkClose"
+        }
+      ]
+    },
+    {
+      "id": "taste",
+      "title": "酸っぱい方の皿",
+      "chapter": 1,
+      "location": "エルメェスの自宅",
+      "storyTime": {
+        "date": "5月18日",
+        "period": "昼"
+      },
+      "characterId": "ermes",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先週買った果物を甘く煮てみた、とエルメェスから連絡が来た。私は食べ比べ用に新しい果物を買い、彼女の家へ持っていく。二つの皿を並べると、煮た方は思いのほか色が濃かった。エルメェスは匙を差し出す前に、少し苦いぞ、と言った。"
+        },
+        {
+          "speaker": "ermes",
+          "text": "もうちょっとうまくいく予定だったんだけどね。笑うなら食べてからにして。"
+        },
+        {
+          "speaker": "player",
+          "text": "笑ってない。……あ、苦い。でもパンと一緒なら、私こっち好き。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "一口目の顔を見られたのが可笑しくて、後から笑いが来た。エルメェスは私の皿を覗き、自分でもパンへ薄くのせる。窓から来る風で紙の包みが鳴り、二人とも咀嚼している間だけ話が途切れた。"
+        },
+        {
+          "speaker": "ermes",
+          "text": "へえ。さっきそのまま食べた時より、うまい。あんたの酸っぱいやつも、別に残しといて。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "同じ味に整えなくてよかったら、次も持ってくるものを選びやすい。私は自分の皿を引き寄せ、今度は塩気のあるものも食べたいと話した。彼女はもう一口分のパンを切り、今日は足りるかなと机の上を数えた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "taste",
+          "text": "違う好みのまま、次に持ち寄る味を提案する",
+          "next": "message",
+          "effect": "homeTogether",
+          "setFlags": [
+            "ownTaste"
+          ]
+        },
+        {
+          "id": "smile",
+          "text": "「また、ここで二人で食べたい」と伝える",
+          "next": "message",
+          "effect": "walkClose"
+        }
+      ]
+    },
+    {
+      "id": "message",
+      "title": "空になった皿",
+      "chapter": 1,
+      "location": "自分の部屋",
+      "storyTime": {
+        "date": "5月18日",
+        "period": "夜"
+      },
+      "characterId": "ermes",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "持ち帰った空の容器を洗っていると、端末が鳴った。エルメェスから、今日のパンの名前を忘れた、と来ていた。買った店の札を撮っておいてよかった。写真を送ると、すぐにもう一つ文が届く。"
+        },
+        {
+          "speaker": "ermes",
+          "text": "ありがと。あれ、あんたが来る前は失敗だったのに、食べ終わったらもう一回やりたくなった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "水を止め、手を拭いた。自分の感想が誰かの次の食卓まで残るのは、少し落ち着かない嬉しさだった。私は容器の蓋を閉めず、乾くのを待ちながら返事を書いた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "food",
+          "text": "次は私も一品作っていく。味見してほしい",
+          "next": "outing",
+          "effect": "messageDaily",
+          "replyVariants": [
+            {
+              "text": "いいね。腹空かせて待ってる。失敗したら笑いながら食べよう。"
+            }
+          ]
+        },
+        {
+          "id": "you",
+          "text": "食べ終わっても帰りたくなかった。またエルメェスに会いたい",
+          "next": "outing",
+          "effect": "messageHeart",
+          "replyVariants": [
+            {
+              "when": {
+                "min": {
+                  "romanceChar": 20
+                }
+              },
+              "text": "あたしも、椅子を戻す時ちょっと寂しかった。次はもう少し長くいよう。"
+            },
+            {
+              "text": "また来なよ。今度は食べるだけじゃなくて、あんたの話ももっと聞く。"
+            }
+          ]
+        }
+      ],
+      "message": true
+    },
+    {
+      "id": "outing",
+      "title": "食べたいものは譲らない",
+      "chapter": 1,
+      "location": "屋外の飲食市",
+      "storyTime": {
+        "date": "6月1日",
+        "period": "昼"
+      },
+      "characterId": "ermes",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "エルメェスが楽しみにしていた屋台には長い列ができていた。ほかならすぐ食べられる、と私が言いかけると、彼女は列の先を見たまま、今日はあれがいい、と答えた。行列に並ぶのは嫌いだと思っていたので、私は少し意外に感じた。"
+        },
+        {
+          "speaker": "ermes",
+          "text": "あたしが食べたくて来たんだ。ここで適当に済ませたら、帰ってからずっと言うよ。"
+        },
+        {
+          "speaker": "player",
+          "text": "それは聞きたくないな。じゃあ並ぼう。私の買いたい方は、あとでもいいから。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "待っている間、エルメェスは私の予定まで同じにしようとはせず、どこの何を食べたいか聞いた。次はそちらへ行くと決めると、列も少し短くなった気がした。受け取った熱い包みを彼女が開く瞬間、私は食べ物よりその顔を見ていた。"
+        },
+        {
+          "speaker": "ermes",
+          "text": "これ。……ああ、並んでよかった。ほら、あんたも一口いる？"
+        },
+        {
+          "speaker": "narrator",
+          "text": "分けてもらってから、私の選んだ店へ回った。そちらの味は彼女には少し薄かったらしい。正直な感想に笑い、私は残りを自分で食べる。二人で来たからといって、全部を半分にしなくてもよかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "wish",
+          "text": "彼女が食べたかった理由を聞き、自分の好みも話す",
+          "next": "home",
+          "effect": "conferencePractical",
+          "setFlags": [
+            "herWish"
+          ]
+        },
+        {
+          "id": "together",
+          "text": "「そんな顔を見るなら、また一緒に並びたい」と言う",
+          "next": "home",
+          "effect": "rehearse"
+        }
+      ]
+    },
+    {
+      "id": "home",
+      "title": "二つの鍋のあいだ",
+      "chapter": 1,
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "6月8日",
+        "period": "夕方"
+      },
+      "characterId": "ermes",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "今日は私の台所にエルメェスが来た。互いに一品ずつ作ると約束し、彼女は材料を容器に詰めて持ってきている。狭い流しの前で何度かぶつかりそうになり、私がまな板を机へ移すと、彼女も鍋の取っ手の向きを変えた。"
+        },
+        {
+          "speaker": "ermes",
+          "text": "あたし、こっち使っていい？　調味料は勝手に決めないから、場所だけ教えて。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "戸棚を開けて見せ、必要なものを自分の手元にも出した。教えてもらう料理教室ではないので、私は私の味を作る。彼女の方から匂いが立つと気になって覗いたが、まだ食べるな、と匙のない手で追い払われた。"
+        },
+        {
+          "speaker": "player",
+          "text": "じゃあ、こっちも出来上がってから。先に片方だけ味見したら、私が落ち着かない。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "食卓へ並べてから一口ずつ食べた。私の皿は少し塩気が強く、彼女はパンと一緒に口へ運ぶ。それでも好きなところは自分の言葉で言ってくれた。皿が空き、二人で流しを片づけ終えると、急に部屋が広くなったように感じた。"
+        },
+        {
+          "speaker": "ermes",
+          "text": "腹いっぱい。帰るの、ちょっと面倒になったな。……今のは、靴履くのがって意味もある。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "share",
+          "text": "次も互いに一品作る約束をして、玄関まで送る",
+          "next": "later",
+          "effect": "homeTogether",
+          "setFlags": [
+            "sharedKitchen"
+          ]
+        },
+        {
+          "id": "talk",
+          "text": "「食べる用事がなくても来て」と伝えて見送る",
+          "next": "later",
+          "effect": "homeTalk"
+        },
+        {
+          "id": "stay",
+          "text": "「私もまだ一緒にいたい。今夜、泊まらない？」と誘う",
+          "next": "consent",
+          "effect": "hotelInvite",
+          "when": {
+            "min": {
+              "trust": 35,
+              "desire": 8
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "consent",
+      "title": "冗談を置く場所",
+      "chapter": 1,
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "6月8日",
+        "period": "夜"
+      },
+      "characterId": "ermes",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "エルメェスは鞄へ伸ばした手を止め、私を見た。泊まっていって、ともう一度言うと、ゆっくり椅子へ戻る。いつもの勢いで笑われなかったことに、私はかえって息を詰めた。彼女は机の上の布巾を畳み、横へ置いた。"
+        },
+        {
+          "speaker": "ermes",
+          "text": "あたしも、今夜あんたといたい。触れたいと思ってる。ただ寝る場所を借りるって話じゃなくて。それ、同じ？"
+        },
+        {
+          "speaker": "player",
+          "text": "同じ。私も触れてほしい。恋人になるかは別にして、今夜は一緒にいたいと思った。"
+        },
+        {
+          "speaker": "ermes",
+          "text": "分かった。途中で違うと思ったら言って。あたしも言う。どっちかがやめたくなったら、そこでやめよう。帰るのも、別々に休むのもいい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "言い終えた彼女の手が机から下りた。私はその動きを目で追い、まだ自分の手が握り込まれていることに気づいた。家へ招いた時からこうなると決めていたわけではない。だから今、自分の口で答えたかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「今夜は一緒にいたい」と答えて、隣へ座る",
+          "next": "night",
+          "effect": "consent",
+          "setFlags": [
+            "mutualConsent",
+            "hadNight"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「今日はここで。次はまた昼に会おう」と伝える",
+          "next": "later",
+          "effect": "walkHome",
+          "setFlags": [
+            "declinedTouch"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "night",
+      "title": "まだ片づけない声",
+      "chapter": 1,
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "6月8日",
+        "period": "夜"
+      },
+      "characterId": "ermes",
+      "rating": "fade",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "隣へ座ると、エルメェスが肩を少しこちらへ向けた。手に触れていいか聞かれ、私は頷いて掌を差し出す。荷物の底を受けてくれた時と同じ手なのに、何も持たない指が重なるだけで、足元が落ち着かなくなった。"
+        },
+        {
+          "speaker": "player",
+          "text": "さっきまで、塩が多いとか話してたのに。"
+        },
+        {
+          "speaker": "ermes",
+          "text": "それはそれ。今は、あんたを見てる。……近づいていい？"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私はうん、と答えて彼女の方へ顔を向けた。唇が触れ、少し離れると、笑い出したいような息が漏れる。エルメェスまでつられそうになったので、もう一度、と私から頼んだ。今度は肩へ手を置いて近づき、言葉にならないままの声を二人の間へ残した。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝、冷蔵庫を開ける私の後ろで、エルメェスがパンを皿へ出した。昨日の残りも少しある。彼女は食べたら帰ると話し、私は自分の用事の前に洗濯をすると答えた。並べる皿の数が二つであることを、いつもよりゆっくり確かめた。",
+          "storyTime": {
+            "date": "6月9日",
+            "period": "朝"
+          }
+        }
+      ],
+      "choices": [
+        {
+          "id": "home",
+          "text": "朝食を食べ、エルメェスを玄関まで見送る",
+          "next": "after_message"
+        }
+      ],
+      "when": {
+        "flags": [
+          "mutualConsent"
+        ]
+      }
+    },
+    {
+      "id": "after_message",
+      "title": "持ち帰った容器",
+      "chapter": 1,
+      "location": "自分の部屋",
+      "storyTime": {
+        "date": "6月9日",
+        "period": "夜"
+      },
+      "characterId": "ermes",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "彼女が持ってきた材料の袋を畳むと、買った店の名前が内側へ隠れた。昨夜の部屋はもう片づいているのに、椅子へ座ると体が隣を思い出す。届いた通知には、無事に持ち帰った空の容器が写っていた。"
+        },
+        {
+          "speaker": "ermes",
+          "text": "忘れ物なし。……たぶん。何か忘れたことにして、戻ろうかと思った。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私は端末を置きかけて、また持ち直した。その冗談に同じ調子で返すこともできたけれど、次に会いたい自分まで笑いに混ぜたくはなかった。窓を閉め、今の気持ちを文にした。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "again",
+          "text": "また夜も来てほしい。前よりエルメェスが好きになった",
+          "next": "later",
+          "effect": "messageAgain",
+          "setFlags": [
+            "ongoing"
+          ],
+          "replyVariants": [
+            {
+              "text": "あたしも会いたい。忘れ物の口実は、もういらないね。"
+            }
+          ]
+        },
+        {
+          "id": "nights",
+          "text": "恋人とは決めずに、望む夜も会う友達でいたい",
+          "next": "later",
+          "effect": "messageBoundaries",
+          "setFlags": [
+            "ongoing"
+          ],
+          "replyVariants": [
+            {
+              "text": "いいよ。あたしもそうしたい。誘うのも断るのも、その時に言おう。"
+            }
+          ]
+        },
+        {
+          "id": "days",
+          "text": "次からは昼に会う友達でいたい",
+          "next": "later",
+          "effect": "messageDaily",
+          "setFlags": [
+            "endedNight"
+          ],
+          "replyVariants": [
+            {
+              "text": "了解。次は昼だな。お互い、食べたいものを一つ持ってこよう。"
+            }
+          ]
+        }
+      ],
+      "message": true
+    },
+    {
+      "id": "later",
+      "title": "腹が減る前に",
+      "chapter": 1,
+      "location": "公園のベンチ",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "ermes",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "六月は、二人の家を行き来して何度か夜を過ごした。食事だけで帰る日もあれば、互いに泊まりたいと話す日もある。翌朝の用事を消さずに続けているうち、私の戸棚にはエルメェスが好きだと言った茶が残るようになった。",
+          "when": {
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "六月は、互いの家や外の店で昼を食べた。料理を作る日ばかりではなく、帰り道で買ったものを公園で開くこともある。何も持たないまま会い、食べたいものをその場で選ぶ休日も好きになった。",
+          "when": {
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "今日も紙袋を二人の間へ置いた。エルメェスが開けようとしたところで私が名前を呼ぶと、指が止まる。袋の上を風が撫で、揚げたものの匂いが少し漏れた。"
+        },
+        {
+          "speaker": "ermes",
+          "text": "先に話す？　聞くよ。腹が鳴ったら、そこだけ聞かなかったことにして。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "tell",
+          "text": "エルメェスを好きになったと、自分から話す",
+          "next": "confess_player",
+          "when": {
+            "min": {
+              "trust": 40,
+              "romancePlayer": 35,
+              "romanceChar": 35
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "listen",
+          "text": "エルメェスの、冗談ではない言葉を待つ",
+          "next": "confess_char",
+          "when": {
+            "min": {
+              "trust": 40,
+              "romancePlayer": 20,
+              "romanceChar": 40
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "pact",
+          "text": "互いの一品を持ち寄る、二人の食卓を続けたい",
+          "next": "pact",
+          "when": {
+            "min": {
+              "trust": 40,
+              "comfort": 60
+            },
+            "flags": [
+              "chosenAmount",
+              "splitLoad",
+              "ownTaste",
+              "herWish",
+              "sharedKitchen"
+            ],
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "nights",
+          "text": "恋人とは決めず、望む夜にも会う友情を続けたい",
+          "next": "fwb_choice",
+          "when": {
+            "min": {
+              "trust": 45,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "love",
+          "text": "夜を重ねた今、エルメェスの恋人になりたい",
+          "next": "end_fwb_love",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 30,
+              "romanceChar": 30,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "friends",
+          "text": "これからも食べたいものを選ぶ友達でいたい",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_player",
+      "title": "用事のない招待",
+      "chapter": 4,
+      "location": "公園のベンチ",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "ermes",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "何か作ったから来て、と言う時より、何もないまま呼ぶ方が難しかった。私は二人の間の紙袋を足元へ移して、隣を見た。エルメェスが私の手の空いたことに気づき、自分の手も袋から離した。"
+        },
+        {
+          "speaker": "player",
+          "text": "好き。食べるものが何もなくても、エルメェスに会いたい。隣で笑ってる顔を、私が一番近くで見ていたくなる。"
+        },
+        {
+          "speaker": "ermes",
+          "text": "……そんなふうに言われると、笑う場所、間違えそうだ。あたしも好きだよ。あんたが帰ったあとの椅子、つい見ちゃうくらい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私が笑ったので、彼女もようやく笑った。いつもの大きな声より少し掠れていた。その違いを聞き取れたことが嬉しくて、私はもっとはっきり言おうと息を吸い直した。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「私と付き合って」と伝える",
+          "next": "end_love_a",
+          "effect": "messageHeart"
+        },
+        {
+          "id": "no",
+          "text": "「今は友達として会いたい」と伝え直す",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_char",
+      "title": "笑わせる前に",
+      "chapter": 4,
+      "location": "公園のベンチ",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "ermes",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "エルメェスは一度口を開き、何かを飲み込むように閉じた。いつもなら私を笑わせる一言が来るところで、今日は風の音が入る。彼女が座り直したので、私も体をそちらへ向けた。"
+        },
+        {
+          "speaker": "ermes",
+          "text": "あたし、あんたと付き合いたい。飯を一緒に食べる友達としても好きだけど、それだけじゃなくなった。返事、今聞いてもいい？"
+        },
+        {
+          "speaker": "narrator",
+          "text": "うん、と答えたあとに、自分の返事がまだ残っていることに気づいた。彼女は急かさず私を見ていた。強く笑う人の、何も言わない口元がこんなに近くにある。私は紙袋の音へ紛れさせず、自分の声を出した。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「私も好き。恋人として会いたい」と答える",
+          "next": "end_love_b",
+          "effect": "messageHeart"
+        },
+        {
+          "id": "no",
+          "text": "「恋人ではなく、友達でいたい」と答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "refusedConfession",
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pact",
+      "title": "それぞれの一皿",
+      "chapter": 4,
+      "location": "公園のベンチ",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "ermes",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "毎回どちらかが全部用意するのではなく、自分が食べたいものを一品ずつ持ってくる。私はそんな日を、これからも作りたいと話した。エルメェスは紙袋の中を見て、今日は買ったものだけどいいのか、と訊く。"
+        },
+        {
+          "speaker": "player",
+          "text": "いい。手間の多さじゃなくて、自分で選んだ一皿。うまくいかなかったのも、私には持ってきて。私もそうするから。"
+        },
+        {
+          "speaker": "ermes",
+          "text": "じゃあ、遠慮してうまいって言わないでね。残ったら別の食べ方考えよう。あたし、一回苦かったくらいで終わりにするの嫌なんだ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "あの濃い色の果物を思い出し、私は頷いた。誰かを養う約束でも、恋人になる話でもなく、二人の空腹を二人で持ってくる。彼女は袋を開き、今日の分を私の方へ一つ寄せた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「次も一皿ずつ。私の失敗も味見して」と約束する",
+          "next": "end_special",
+          "effect": "homeTogether"
+        },
+        {
+          "id": "friends",
+          "text": "決まった食卓は作らず、気軽に誘う友達を選ぶ",
+          "next": "end_friend",
+          "effect": "friendPromise"
+        }
+      ]
+    },
+    {
+      "id": "fwb_choice",
+      "title": "別々の明日がある",
+      "chapter": 4,
+      "location": "公園のベンチ",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "ermes",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "今のように夜も会いたいと伝えた。エルメェスは黙って聞き、恋人と決めたいのかと確かめる。今はそうではない、と自分の言葉で答えると、彼女も同じ気持ちだと言った。私は肩から少し力が抜けるのを感じた。"
+        },
+        {
+          "speaker": "ermes",
+          "text": "会いたい時はあたしからも誘う。今日は帰るって言われても、それで終わりにはしないよ。あたしも翌朝、早い日あるしね。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "予定の話に戻っても、さっきの言葉は消えなかった。昼に会う楽しさも、望んで触れる夜も、自分で選んで持っていたい。冷める前に食べようと紙袋を開き、私は次の一口を自分の方へ取った。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "互いに望む夜を選ぶ、親密な友情を続ける",
+          "next": "end_fwb",
+          "effect": "messageBoundaries"
+        },
+        {
+          "id": "day",
+          "text": "次からは昼に会う友達に戻る",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "end_friend",
+      "title": "買いすぎる、その前に",
+      "chapter": 5,
+      "location": "街の朝市",
+      "storyTime": {
+        "date": "7月13日",
+        "period": "朝"
+      },
+      "characterId": "ermes",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人にはならないと返すと、エルメェスは唇を結び、分かったと頷いた。数日して、朝市はどうする、と連絡が来た。私は行きたいと返し、今日、空の布袋を持って待ち合わせた。",
+          "when": {
+            "flags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "夜を重ねるのはここまでにして、次は朝市で会おうと決めた。エルメェスは大きな布袋を持ってきたけれど、買う量まで増やすつもりはないと言う。私はそれを聞いて笑い、自分の袋を開いた。",
+          "when": {
+            "flags": [
+              "hadNight"
+            ],
+            "notFlags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "二度目の朝市には、大きな布袋を一つずつ持ってきた。エルメェスは前より慎重に果物を選び、私は新しいパンを見つける。ジョセフから頼まれた分も買うので、今日は先に個数を数えた。",
+          "when": {
+            "notFlags": [
+              "hadNight",
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "ermes",
+          "text": "安いからって全部はいかない。……と言いつつ、これ一個なら増やしていいかな。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "食べたいなら一個、と私が答えると、エルメェスは嬉しそうに選んだ。帰りにはまた公園で袋を開く。友達の欲しいものを知っていても、勝手に決めずに聞く楽しみがある。私は自分のパンを取り出し、今日も一口いる、と尋ねた。"
+        }
+      ],
+      "choices": [],
+      "ending": "FRIEND"
+    },
+    {
+      "id": "end_love_a",
+      "title": "空いた椅子へ",
+      "chapter": 5,
+      "location": "公園と主人公の自宅",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "ermes",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "付き合おう、とエルメェスが言った。私が差し出した手を彼女が握り、私は笑った拍子に足元の紙袋へ靴を当てかけた。食べ物、と二人で同時に言って、慌てて袋を持ち上げる。照れたまま笑えることが、今はありがたかった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌週、私は何も作らずに彼女を呼んだ。二人で近くの店へ買いに行き、帰ってから皿へ移す。これでよかったのかとエルメェスが聞くので、私は食べ物ではなく空いた椅子を指した。",
+          "storyTime": {
+            "date": "7月6日",
+            "period": "昼"
+          }
+        },
+        {
+          "speaker": "player",
+          "text": "ここに来てほしかった。今日の用事、それだけ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼女が椅子を引く音を聞き、私は隣へ座った。皿の縁に重なりかけた指が、今度は袋を支えるためではなく私へ向く。短く触れてから食べ始めると、味を言う前に笑いがこぼれた。"
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_A"
+    },
+    {
+      "id": "end_love_b",
+      "title": "いつもの笑いの近くで",
+      "chapter": 5,
+      "location": "公園と街の食堂",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "ermes",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私の返事を聞くと、エルメェスは顔を片手で覆った。笑っているのが指の隙間から分かる。私はその手を無理に退けず、自分も笑いながら隣で待った。戻ってきた目が、今度は真っ直ぐに私を捉えた。"
+        },
+        {
+          "speaker": "ermes",
+          "text": "よかった。今なら、さっきよりずっと腹が減ってる。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "次の休日、彼女が選んだ店へ行った。向かいではなく隣の席が空いていて、座っていいかと目を合わせる。私は鞄を反対側へ置き、彼女の肩が来る場所を空けた。",
+          "storyTime": {
+            "date": "7月6日",
+            "period": "昼"
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "メニューを同じ方から覗くと、顔を上げる時に思ったより近い。エルメェスが声を落として、何、と聞く。何でもないと逃げず、近いのが嬉しいと伝えたら、今度こそ彼女も笑うしかなくなった。"
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_B"
+    },
+    {
+      "id": "end_fwb",
+      "title": "二人分の、今夜",
+      "chapter": 5,
+      "location": "エルメェスの自宅",
+      "storyTime": {
+        "date": "7月13日",
+        "period": "夜"
+      },
+      "characterId": "ermes",
+      "rating": "fade",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "今夜は会いたい、と互いに連絡して、私はエルメェスの家へ来た。自分で用意した一皿を容器に入れて持っていく。大げさな料理はなく、温め直した皿を並べて食べる。明日の朝には帰ると伝えると、彼女も予定があると言い、空いた皿を一緒に流しへ運んだ。"
+        },
+        {
+          "speaker": "ermes",
+          "text": "片づけ終わったら、もう用事なし。あんたと、ゆっくりしたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "布巾を掛け、私は彼女の手を取った。触れたかった、と言えば同じ言葉が返る。今夜の望みを確かめてから近づく距離は、何度知っても少し照れた。互いの声が小さくなり、灯りを落とした部屋へ歩いた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝は別々の行先へ向かった。玄関で靴を履く私へ、容器忘れるなよ、と声が飛ぶ。次に渡せばいいかと笑うと、それでもいいね、と彼女も笑った。口実がなくても誘えることを知ったまま、今日は忘れずに持ち帰った。",
+          "storyTime": {
+            "date": "7月14日",
+            "period": "朝"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB"
+    },
+    {
+      "id": "end_fwb_love",
+      "title": "席を、もう一つ近く",
+      "chapter": 5,
+      "location": "公園と主人公の自宅",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "ermes",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "重ねた夜の先で、今は恋人になりたいと話した。エルメェスは一度うつむき、それからあたしも、と私を見る。今までの関係を恥ずかしがるような声ではなかった。私もあの日々を消さずに、次を言いたかった。"
+        },
+        {
+          "speaker": "ermes",
+          "text": "あんたの恋人として、次は会いに行きたい。夜じゃなくても。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌週、彼女は昼に来た。私が用意していた皿を運び、二人で机の位置を少し動かす。前にも何度もしたことなのに、椅子へ座るまでの手が触れると、お互いにすぐ気づく。",
+          "storyTime": {
+            "date": "7月6日",
+            "period": "昼"
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "私は椅子を少しだけ寄せた。狭いかと聞いたら、ちょうどいい、と彼女が答える。窓からの風が二人の間を通らなくなったことに気づき、食べ始める前に一度だけ肩を触れ合わせた。"
+        }
+      ],
+      "choices": [],
+      "ending": "FWB_TO_LOVE"
+    },
+    {
+      "id": "end_special",
+      "title": "失敗も、一皿にする",
+      "chapter": 5,
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "7月13日",
+        "period": "昼"
+      },
+      "characterId": "ermes",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "エルメェスの持ってきた一皿は、前より甘さの控えめな果物だった。私の方は、形の揃わない焼いた野菜を並べる。二人とも見た目の言い訳をしかけてやめ、先に食べた。彼女が好きだと言ったところと、私が気に入ったところは違った。"
+        },
+        {
+          "speaker": "ermes",
+          "text": "こっちの焦げ目、あたしは好き。でも全部これだと強いな。次は半分だけ、こんがりにしない？"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私は彼女の皿へパンを添え、こう食べるのが好きだと返した。恋人として一つの暮らしを始めるわけではない。互いの台所から来た味を持ち寄って、違う口で続きを考える。この食卓へなら、失敗したものも隠さず置けた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "帰る前に次の一皿を決めかけ、まだ決めなくていいかと笑った。朝市で見つけるかもしれないし、その日に食べたくなるかもしれない。エルメェスが空の容器を鞄へ入れ、私は次に開く場所を机の上へ残した。"
+        }
+      ],
+      "choices": [],
+      "ending": "SPECIAL"
+    }
+  ],
+  "endingDescriptions": {
+    "FRIEND": {
+      "title": "買いすぎる、その前に",
+      "description": "食べたい分を選び、帰りに袋を開く。互いの欲しいものを聞き合える友人として、次の朝市へ。"
+    },
+    "LOVE_A": {
+      "title": "空いた椅子へ",
+      "description": "用事がなくても会いたいと、自分から伝える。隣の椅子へ恋人を迎え、いつもの食事が少し変わる。"
+    },
+    "LOVE_B": {
+      "title": "いつもの笑いの近くで",
+      "description": "冗談を置いたエルメェスの告白に答える。隣の席から見る笑顔を、これからもっと知っていく。"
+    },
+    "FWB": {
+      "title": "二人分の、今夜",
+      "description": "それぞれの翌朝を持ったまま、望む夜には会いに行く。食事も笑いも残る、親密な友人関係。"
+    },
+    "FWB_TO_LOVE": {
+      "title": "席を、もう一つ近く",
+      "description": "過ごしてきた夜を否定せず、今の願いを恋人として伝える。昼の食卓でも、椅子を少し寄せる。"
+    },
+    "SPECIAL": {
+      "title": "失敗も、一皿にする",
+      "description": "量を選び、荷物を分け、違う好みと作る手を重ねる。互いの一品を持ち寄る、恋人とは別の食卓の相棒。"
+    }
+  }
+}

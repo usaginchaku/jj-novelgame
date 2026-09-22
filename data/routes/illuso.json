@@ -1,0 +1,1252 @@
+{
+  "id": "illuso",
+  "title": "イルーゾォ — 先に選んだ一枚",
+  "intro": "きれいに撮れる場所を教わって、わざと一歩ずれる。\n余裕のある顔を崩したくなる人と、違う一枚を残していく。",
+  "startEvent": "frame",
+  "character": {
+    "name": "イルーゾォ",
+    "adult": true,
+    "heightCm": 188,
+    "heightBasis": "二次資料JoJo Wikiの身長欄と出典注記を照合。黄金の風アニメ設定表CR200-00。書籍・設定表現物は未照合。AUで同値を採用。",
+    "profile": "優位を確かめたがる。皮肉と自負。余裕が崩れると焦る。",
+    "personality": [
+      "優位を確かめたがる",
+      "皮肉と自負",
+      "余裕が崩れると焦る"
+    ],
+    "speech": {
+      "firstPerson": "オレ",
+      "addressing": "主人公は姓/おまえ。余裕を見せる常体、冗談めいた問い返し。",
+      "tone": "相手の言葉を拾ってからかう。語尾は感情と相手に合わせる。",
+      "habits": [
+        "相手の言葉を拾ってからかう",
+        "〜だろ、〜ってことさ",
+        "自分の段取りを誇る"
+      ],
+      "signaturePhrases": [],
+      "signatureNote": "日常の固定口癖は採用しない。象徴的な原作台詞と普段の話し方を混同せず、名台詞を貼り付けない。",
+      "avoid": [
+        "常に完璧な策士",
+        "嫌がる相手を囲い込む",
+        "鏡の超能力を比喩以上に使う"
+      ]
+    },
+    "referenceSection": "docs/CHARACTER_REFERENCE.md#cast-illuso"
+  },
+  "au": {
+    "role": "修士課程候補。専攻未確定",
+    "routeEnabled": true,
+    "addressing": [
+      {
+        "text": "{player.lastName}"
+      }
+    ]
+  },
+  "events": [
+    {
+      "id": "frame",
+      "title": "一歩ずれたところ",
+      "chapter": 1,
+      "location": "街の写真散歩の集合場所",
+      "storyTime": {
+        "date": "4月27日",
+        "period": "昼"
+      },
+      "characterId": "illuso",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "休日の写真散歩には、思ったより人が集まっていた。大学で顔を見たことのあるイルーゾォ先輩が、集合の看板より先に私を見つける。遅れていないのに、やっと来た、と言われた。私は腕時計を見せ、まだ五分前ですと返した。"
+        },
+        {
+          "speaker": "illuso",
+          "text": "遅いとは言ってないだろ。いい場所は先に埋まるってことさ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩の示した位置からは、古い時計台が隣の屋根に重ならず見えた。確かにきれいだった。けれど私は一歩横へずれ、屋根の下から出てきた店の人を入れて撮った。顔が分からないくらい遠い背中に、小さな箒が揺れている。"
+        },
+        {
+          "speaker": "illuso",
+          "text": "そこへずれたら、時計が欠けるぜ。せっかく教えたのに。"
+        },
+        {
+          "speaker": "player",
+          "text": "はい。でも、こっちの朝が撮りたかったので。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "昼前の道で朝と言ったことを、自分でも少し照れた。先輩はその一枚を見て、余計なものが多い、と口の端を上げる。私は消さずに保存した。見せられた場所へそのまま立つより、先輩がもう一度こちらを見る方が面白かった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "own",
+          "text": "先輩の位置も試し、自分の一枚も残す",
+          "next": "shade",
+          "effect": "workTogether",
+          "setFlags": [
+            "ownFrame"
+          ],
+          "lockRoute": "illuso"
+        },
+        {
+          "id": "follow",
+          "text": "「次はどこから撮るんですか」と隣へ並ぶ",
+          "next": "shade",
+          "effect": "gameDate",
+          "lockRoute": "illuso"
+        }
+      ]
+    },
+    {
+      "id": "shade",
+      "title": "先に着いたのに",
+      "chapter": 1,
+      "location": "路地の喫茶店前",
+      "storyTime": {
+        "date": "5月4日",
+        "period": "昼"
+      },
+      "characterId": "illuso",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先輩が、もっとよく撮れる場所があると言って誘ってきた。着いてみると、通りに長い影が落ちている。先輩は建物を見上げ、時計を見た。聞かなくても、思っていた光ではないらしいと分かった。私は鞄を下ろさず、閉まっている店の窓を覗いた。"
+        },
+        {
+          "speaker": "illuso",
+          "text": "向こうの建物が邪魔だな。前はこんなに早く陰らなかった。"
+        },
+        {
+          "speaker": "player",
+          "text": "じゃあ、今日は影を撮りませんか。私はこの形、好きです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩は何か返しかけて、私が構えるのを見た。窓の中の椅子は空で、外の影だけが机まで続いている。一枚撮ると、横から画面を覗かれた。私は先輩へ端末を傾ける。"
+        },
+        {
+          "speaker": "illuso",
+          "text": "おまえ、こういう時だけ切り替えが早いんだな。"
+        },
+        {
+          "speaker": "player",
+          "text": "こういう時だけじゃないですよ。……先輩の予定が外れた時は、少し楽しいです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩は笑わずに私を見た。その目が細くなったので、私も引かずに笑い返す。やがて先輩は自分の端末を上げ、私と違う角度で影を切り取った。二人とも撮り終えてから、開いている方の店を探した。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "shade",
+          "text": "予想と違った光の一枚も、先輩へ見せる",
+          "next": "print",
+          "effect": "shiftHelp",
+          "setFlags": [
+            "keptShade"
+          ]
+        },
+        {
+          "id": "near",
+          "text": "画面を比べたくて、先輩の隣へ肩を寄せる",
+          "next": "print",
+          "effect": "walkClose"
+        }
+      ]
+    },
+    {
+      "id": "print",
+      "title": "自分で選ぶ表紙",
+      "chapter": 1,
+      "location": "写真を印刷できる店",
+      "storyTime": {
+        "date": "5月11日",
+        "period": "昼"
+      },
+      "characterId": "illuso",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "数枚を小さく印刷しようと、二人で店へ来た。私は最初の時計台の写真を表紙にしたかった。先輩は出来のいい順に並べた方が見栄えがすると言い、自分の選んだ写真を上へ持ってくる。私はその手が離れるのを待ち、もう一度最初の一枚を戻した。"
+        },
+        {
+          "speaker": "illuso",
+          "text": "分かってて戻しただろ。そこは二枚目の方がいいって。"
+        },
+        {
+          "speaker": "player",
+          "text": "先輩の分は、そうしてください。私のは、ここから開きたいです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩は並べた写真の端を揃えた。それ以上は動かさない。しばらく黙っていたので気まずくなりかけたが、こっちはどうだと自分の並びを差し出され、私は顔を上げた。順番が変わるだけで、同じ通りが遠い町みたいに見えた。"
+        },
+        {
+          "speaker": "player",
+          "text": "悔しいですけど、きれいです。でも、私のも変えません。"
+        },
+        {
+          "speaker": "illuso",
+          "text": "悔しいって言うまでが長かったな。……好きにしろよ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "声ほど投げやりな手つきではなかった。先輩は二組が混ざらないよう、小さな封筒を一つずつ取った。私へ渡された方には、表紙にした写真が一番上に入っていた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "cover",
+          "text": "自分の順番のまま冊子にし、先輩の分と交換して読む",
+          "next": "message",
+          "effect": "homeTogether",
+          "setFlags": [
+            "ownSequence"
+          ]
+        },
+        {
+          "id": "face",
+          "text": "「私の分、ちゃんと覚えてたんですね」と顔を見る",
+          "next": "message",
+          "effect": "walkClose"
+        }
+      ]
+    },
+    {
+      "id": "message",
+      "title": "返ってきた一枚",
+      "chapter": 1,
+      "location": "自分の部屋",
+      "storyTime": {
+        "date": "5月11日",
+        "period": "夜"
+      },
+      "characterId": "illuso",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "机へ冊子を置いたあとも、先輩の選んだ順番が少し気になった。読み直そうと手を伸ばすと、端末に画像が届く。昼に私が見ていたものとは、違う写真が先頭になっていた。私の案へ合わせたわけではなく、また別の一枚だった。"
+        },
+        {
+          "speaker": "illuso",
+          "text": "こっちの方がいいな。変えたのはおまえに言われたからじゃないぜ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "何も言う前から釘を刺され、私は笑ってしまった。自分でも選び直したくなったのなら、その続きを聞きたい。返事を急いで打ち、送りかけたところで少しだけ書き換えた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "change",
+          "text": "どうして変えたのか、次に会った時に聞かせてください",
+          "next": "rain",
+          "effect": "messageDaily",
+          "replyVariants": [
+            {
+              "text": "見るとこは見てるな。話してやるよ。おまえの次のも持ってこい。"
+            }
+          ]
+        },
+        {
+          "id": "you",
+          "text": "写真もですが、先輩がそうやって送ってくれるのが嬉しいです",
+          "next": "rain",
+          "effect": "messageHeart",
+          "replyVariants": [
+            {
+              "when": {
+                "min": {
+                  "romanceChar": 20
+                }
+              },
+              "text": "……見せるなら、おまえがいいと思っただけさ。次も空けとけよ。いや、いつ空いてる。"
+            },
+            {
+              "text": "届いてるならいい。次に会ったら、そっちのも見せろよ。"
+            }
+          ]
+        }
+      ],
+      "message": true
+    },
+    {
+      "id": "rain",
+      "title": "撮れない場所",
+      "chapter": 1,
+      "location": "駅の近くの喫茶店",
+      "storyTime": {
+        "date": "5月18日",
+        "period": "昼"
+      },
+      "characterId": "illuso",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "外で撮る予定の日は、雨になった。先輩が、こうなると思っていたと喫茶店を指す。窓際の席へ座ると、外の傘が次々にガラスを横切った。私は端末を出しかけたが、店内の撮影禁止の札を見て鞄へ戻した。先輩も札に気づき、口を曲げる。"
+        },
+        {
+          "speaker": "illuso",
+          "text": "ま、目で見りゃ同じか。"
+        },
+        {
+          "speaker": "player",
+          "text": "同じではないです。私、後で忘れると思います。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩が笑ったので、何を見たか話しておいてください、と付け足した。忘れた時に訊けばいい。それが気に入らなかったのか、先輩はまず私に言わせた。私は傘の縁から落ちた水を話し、先輩はガラスの手前の光を話した。"
+        },
+        {
+          "speaker": "illuso",
+          "text": "そこまで見てたなら、忘れないんじゃあないか。"
+        },
+        {
+          "speaker": "player",
+          "text": "忘れたら、先輩の覚えてる方を聞きます。違っても、勝った顔しないでくださいね。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "それは約束できないな、と返ってきた。私は困った顔をして見せ、笑ってしまった。撮れない席にいた分だけ、向かいの人の顔を見た。店を出る時、先輩が先に傘を開き、私の傘が開くまで軒下に残っていた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "remember",
+          "text": "写真のない日も、二人で覚えておきたいと話す",
+          "next": "home",
+          "effect": "conferencePractical",
+          "setFlags": [
+            "unpictured"
+          ]
+        },
+        {
+          "id": "want",
+          "text": "「先輩の顔は、たぶん忘れません」と目を合わせる",
+          "next": "home",
+          "effect": "rehearse"
+        }
+      ]
+    },
+    {
+      "id": "home",
+      "title": "端に写った手",
+      "chapter": 1,
+      "location": "イルーゾォの自宅",
+      "storyTime": {
+        "date": "5月25日",
+        "period": "夕方"
+      },
+      "characterId": "illuso",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "次の写真を広い机で選ぼうと誘われ、私は先輩の家へ行った。買ってきた食事を先に済ませ、別々の封筒を開く。新しい写真の一枚には、私の手が端に写っていた。看板を指したところを、先輩が撮っていたらしい。私は指先だけの自分を不思議に眺めた。"
+        },
+        {
+          "speaker": "player",
+          "text": "これ、いつ撮ったんですか。"
+        },
+        {
+          "speaker": "illuso",
+          "text": "この前、看板を撮っていいかって聞いただろ。……手まで入ってるのは今気づいた。嫌なら消す。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "最後の言葉が少し遅れた。私はこの一枚は残していいと答え、次に私が入る時は、撮る前に聞いてほしいと伝えた。先輩は頷いて写真を戻す。指だけで私と分かる人が、その紙を持っていることへ、あとから照れてしまった。"
+        },
+        {
+          "speaker": "illuso",
+          "text": "おまえの方には、オレがいないな。"
+        },
+        {
+          "speaker": "player",
+          "text": "撮る前に聞きますから。……今、撮ってもいいですか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩はすぐに姿勢を決めた。私は端末を上げ、少し待ってくださいと言う。余裕のある顔が長くは続かず、まだかよとこちらを見たところで、もう一度いいですかと訊いた。今のでいい、と返った声まで覚えて、一枚だけ撮った。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "keep",
+          "text": "決め顔ではない一枚を見せ、許可をもらって残して帰る",
+          "next": "later",
+          "effect": "homeTogether",
+          "setFlags": [
+            "unposed"
+          ]
+        },
+        {
+          "id": "talk",
+          "text": "「今の先輩、好きです」と伝え、写真を見せて帰る",
+          "next": "later",
+          "effect": "homeTalk"
+        },
+        {
+          "id": "stay",
+          "text": "端末を置き、「今夜は先輩の近くにいたいです」と言う",
+          "next": "consent",
+          "effect": "hotelInvite",
+          "when": {
+            "min": {
+              "trust": 35,
+              "desire": 8
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "consent",
+      "title": "隙を見せる返事",
+      "chapter": 1,
+      "location": "イルーゾォの自宅",
+      "storyTime": {
+        "date": "5月25日",
+        "period": "夜"
+      },
+      "characterId": "illuso",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先輩は私の言葉を聞いて、写真を揃える手を止めた。いつもなら、やっと言ったかと笑いそうなのに、今はすぐ返してこない。私が端末を鞄へしまう間も、その視線が動かなかった。"
+        },
+        {
+          "speaker": "illuso",
+          "text": "オレも、おまえに触れたい。今夜、ここにいてほしい。からかってるんじゃあないぜ。"
+        },
+        {
+          "speaker": "player",
+          "text": "私も、そうしたいです。恋人になる約束は、今とは別に考えてもいいですか。途中でやめたくなったら、言います。"
+        },
+        {
+          "speaker": "illuso",
+          "text": "ああ。今夜の返事と恋人の約束は別だ。どっちが止めても止める。オレも嫌なことは言うし、帰りたいなら言え。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "言い切った口元が、少しだけ固かった。余裕を崩しても私の返事を取ろうとしない人を見て、私は息を吸った。ここに残るなら、先輩の見込みどおりだからではなく、自分でそうしたかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「今夜は、一緒にいたいです」と手を差し出す",
+          "next": "night",
+          "effect": "consent",
+          "setFlags": [
+            "mutualConsent",
+            "hadNight"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「やっぱり今日は帰ります」と鞄を取る",
+          "next": "later",
+          "effect": "walkHome",
+          "setFlags": [
+            "declinedTouch"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "night",
+      "title": "画面を閉じたあと",
+      "chapter": 1,
+      "location": "イルーゾォの自宅",
+      "storyTime": {
+        "date": "5月25日",
+        "period": "夜"
+      },
+      "characterId": "illuso",
+      "rating": "fade",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先輩が私の手を取ると、指先が思ったより強く触れた。顔を上げるとこちらを見ていたので、近づいてもいいですかと訊く。聞かなくても分かるだろ、と言いかけた口が止まり、いい、と短く返った。私はその言い直しが嬉しくて、一歩近づいた。"
+        },
+        {
+          "speaker": "player",
+          "text": "今、撮りませんよ。"
+        },
+        {
+          "speaker": "illuso",
+          "text": "分かってる。……見すぎなんだよ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "けれど先輩も目を逸らさなかった。私から頬へ触れ、唇が近づくのを待つ。離れたあとに息をつくと、もう一度目が合った。頷き、今度は私から袖を引いた。机に残した写真の向こうで灯りを落とし、手をつないで奥へ行った。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝、私が動くと先輩も目を開けた。起きてた、と言われたけれど、声はまだ眠そうだった。私は頬の跡を指ささず、おはようございますと言った。先輩は私をしばらく見てから同じ挨拶を返し、朝食に何を食べるか訊いた。",
+          "storyTime": {
+            "date": "5月26日",
+            "period": "朝"
+          }
+        }
+      ],
+      "choices": [
+        {
+          "id": "home",
+          "text": "朝食のあと、自分の家へ帰る",
+          "next": "after_message"
+        }
+      ],
+      "when": {
+        "flags": [
+          "mutualConsent"
+        ]
+      }
+    },
+    {
+      "id": "after_message",
+      "title": "送らずに残す",
+      "chapter": 1,
+      "location": "自分の部屋",
+      "storyTime": {
+        "date": "5月26日",
+        "period": "夜"
+      },
+      "characterId": "illuso",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "家で封筒を開くと、机に並べた写真が前とは違って見えた。私の手が端に写った一枚も、先輩が持たせてくれた。すぐには貼らず、ノートの間へ挟む。端末には、忘れ物はないだろうな、という連絡が来ていた。"
+        },
+        {
+          "speaker": "illuso",
+          "text": "写真は数えた。おまえの分、全部そっちにあるはずだ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私のことより写真の話を先にしたくなる人へ、ちゃんと帰りました、と打った。そのあとで手が止まる。昨日の近さを次にも欲しいのか、それとは違う昼の顔を見たいのか。送る前に、自分の言葉を読み直した。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "again",
+          "text": "また夜も会いたいです。先輩をもっと好きになりました",
+          "next": "later",
+          "effect": "messageAgain",
+          "setFlags": [
+            "ongoing"
+          ],
+          "replyVariants": [
+            {
+              "text": "オレも会いたい。……その続きは、会った時に聞かせろよ。"
+            }
+          ]
+        },
+        {
+          "id": "nights",
+          "text": "恋人の約束はせず、望む夜にも会う友達でいたいです",
+          "next": "later",
+          "effect": "messageBoundaries",
+          "setFlags": [
+            "ongoing"
+          ],
+          "replyVariants": [
+            {
+              "text": "分かった。オレもそれでいい。次も勝手には決めねえよ。"
+            }
+          ]
+        },
+        {
+          "id": "days",
+          "text": "次からは昼に遊ぶ友達でいたいです",
+          "next": "later",
+          "effect": "messageDaily",
+          "setFlags": [
+            "endedNight"
+          ],
+          "replyVariants": [
+            {
+              "text": "分かった。次は昼にしよう。撮ってない場所もまだある。"
+            }
+          ]
+        }
+      ],
+      "message": true
+    },
+    {
+      "id": "later",
+      "title": "二枚を持って",
+      "chapter": 1,
+      "location": "川沿いの階段",
+      "storyTime": {
+        "date": "6月15日",
+        "period": "夕方"
+      },
+      "characterId": "illuso",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "六月には、二人とも望んで泊まる夜が何度かあった。朝に帰る時も、先輩は次の返事を決めつけなくなった。昼に撮った写真を、夜には一枚も見ない日もある。私から誘う文を送ると、次はいつだと短い返事が来た。",
+          "when": {
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "六月にも、私たちは昼に街へ出た。どちらが先に場所を選ぶかで言い合いながら、撮れない日には店を探して座る。それぞれの家へ帰ってからも、変な看板を見つけると、先にあの人へ知らせたくなった。",
+          "when": {
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "今日は二人で撮った写真を、川沿いの段へ並べていた。同じ場所なのに、先輩の空は私のものよりずっと狭い。何を残したいかが違う。そのことを知るほど、一緒に撮る理由が増えていた。先輩が最後の一枚を封筒へ戻し、私の方を見た。"
+        },
+        {
+          "speaker": "illuso",
+          "text": "次は、おまえが場所を決めるんだったな。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私は頷いた。それから、その前に話しておきたいことがある、と呼び止めた。先輩は立ち上がりかけた膝を戻す。夕方の影が二人の足元へ伸びていた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "tell",
+          "text": "恋人になりたい気持ちを、自分から話す",
+          "next": "confess_player",
+          "when": {
+            "min": {
+              "trust": 40,
+              "romancePlayer": 35,
+              "romanceChar": 35
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "listen",
+          "text": "こちらを見た先輩の言葉を待つ",
+          "next": "confess_char",
+          "when": {
+            "min": {
+              "trust": 40,
+              "romancePlayer": 20,
+              "romanceChar": 40
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "pact",
+          "text": "相手の一枚を選び合う、二人の写真帖を作りたいと話す",
+          "next": "pact",
+          "when": {
+            "min": {
+              "trust": 40,
+              "comfort": 60
+            },
+            "flags": [
+              "ownFrame",
+              "keptShade",
+              "ownSequence",
+              "unpictured",
+              "unposed"
+            ],
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "nights",
+          "text": "昼にも夜にも、親密な友達として会いたいと伝える",
+          "next": "fwb_choice",
+          "when": {
+            "min": {
+              "trust": 45,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "love",
+          "text": "夜を重ねたあと、今は恋人になりたいと話す",
+          "next": "end_fwb_love",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 30,
+              "romanceChar": 30,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "friends",
+          "text": "これからも、気軽に言い合える友達でいたいと伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_player",
+      "title": "先を越す言葉",
+      "chapter": 4,
+      "location": "川沿いの階段",
+      "storyTime": {
+        "date": "6月15日",
+        "period": "夕方"
+      },
+      "characterId": "illuso",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "player",
+          "text": "先輩が好きです。一緒に撮るのが楽しいだけなら、会わない日までこんなに考えてないと思います。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩は笑いかけ、途中で止まった。聞くつもりのなかった言葉だったのかもしれない。私はその顔を見て少し勇気が出た。いつも先回りしているように見える人へ、今だけは、自分の方から続きを渡せた。"
+        },
+        {
+          "speaker": "illuso",
+          "text": "……言うなら、ちゃんとこっちを見て言えよ。オレも、おまえが好きなんだ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私は顔を上げていたつもりだったのに、視線が先輩の口元で止まっていた。今度は目を見る。強く見返されると息が浅くなり、それでも自分の返事を引っ込めたくはならなかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「私と付き合ってください」と目を見て伝える",
+          "next": "end_love_a",
+          "effect": "messageHeart"
+        },
+        {
+          "id": "no",
+          "text": "「今は、友達でいたいです」と伝え直す",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_char",
+      "title": "余裕のない誘い",
+      "chapter": 4,
+      "location": "川沿いの階段",
+      "storyTime": {
+        "date": "6月15日",
+        "period": "夕方"
+      },
+      "characterId": "illuso",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先輩は封筒を机のように膝へ置き、端を何度も揃えた。もう揃ってますよ、と言いかけてやめる。先輩が私へ向き直り、いつもの薄い笑いを消したからだった。"
+        },
+        {
+          "speaker": "illuso",
+          "text": "オレは、おまえが好きだ。友達だから誘ってる、で済ませる気がなくなった。オレと付き合え……付き合ってほしい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "言い直したところへ、私は息を止めた。先輩は嫌そうに自分の口元へ手をやり、すぐ離す。私を急かす言葉は来なかった。言ってしまった人の耳が赤いのを見つけ、私は自分の膝を一度見てから答えようとした。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「私も好きです。恋人になりたいです」と答える",
+          "next": "end_love_b",
+          "effect": "messageHeart"
+        },
+        {
+          "id": "no",
+          "text": "「恋人にはなれません。友達でいたいです」と答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "refusedConfession",
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pact",
+      "title": "選ばれる方にもなる",
+      "chapter": 4,
+      "location": "川沿いの階段",
+      "storyTime": {
+        "date": "6月15日",
+        "period": "夕方"
+      },
+      "characterId": "illuso",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "同じ写真帖へ、自分の写真ではなく相手の一枚を選んで入れたい。そう話すと、先輩はすぐ難しい顔をした。自分がよく撮れたと思ったものと、私が好きなものは、たぶん違う。私はその違いを、直さず並べてみたかった。"
+        },
+        {
+          "speaker": "illuso",
+          "text": "オレの写真をおまえが選ぶのか。変なのを入れるなよ。"
+        },
+        {
+          "speaker": "player",
+          "text": "私が好きなのを入れます。先輩も、そうしてください。嫌な一枚は言い合いますけど、上手さの採点ではないので。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩は私の写真を手に取り、最初に撮った時計台を出した。そこなんですかと驚くと、だから自分で選ばせろよ、と返る。私のやり方へ言い返す時の声が、少しだけ弾んでいた。"
+        },
+        {
+          "speaker": "illuso",
+          "text": "やってみるか。片方だけ格好つけてても、すぐばれるだろうしな。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私は先輩が影を撮った一枚を選んだ。思いどおりでなかった日を渡すと、先輩は文句を言い、けれど返してこなかった。二人分の封筒の間に、一冊ぶんの場所ができた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "恋人とは違う、互いの一枚を選ぶ相棒になる",
+          "next": "end_special",
+          "effect": "homeTogether"
+        },
+        {
+          "id": "friends",
+          "text": "それぞれの写真を時々見せ合う友達でいたいと言う",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fwb_choice",
+      "title": "勝手には決めない",
+      "chapter": 4,
+      "location": "川沿いの階段",
+      "storyTime": {
+        "date": "6月15日",
+        "period": "夕方"
+      },
+      "characterId": "illuso",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人という約束をせず、望む夜にはこれからも会いたい。私が言い終えると、先輩は一度唇を結んだ。返事がすぐ来ない間も、私の方から言葉を取り消さなかった。先輩が封筒を鞄へ入れ、それからこちらを向く。"
+        },
+        {
+          "speaker": "illuso",
+          "text": "オレも、その形で会いたい。前がそうだったから次もいい、とは言わねえよ。おまえも、嫌なら言え。オレも言う。"
+        },
+        {
+          "speaker": "player",
+          "text": "はい。会いたい時は、私からも言います。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "じゃあ次はそっちの番か、と先輩が少し笑った。私は週末の予定を聞き、今日はどこで食べるかを先に決めた。立ち上がった先輩が手を差し出す。段を上がるために借り、上がったところで一度離した。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "親密な友達として、次の予定を話す",
+          "next": "end_fwb",
+          "effect": "messageBoundaries"
+        },
+        {
+          "id": "day",
+          "text": "次からは昼に遊ぶ友達でいたいと言う",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "end_friend",
+      "title": "写らない三人目",
+      "chapter": 5,
+      "location": "街の広場",
+      "storyTime": {
+        "date": "6月22日",
+        "period": "昼"
+      },
+      "characterId": "illuso",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人にはなれないと答えた日、先輩はすぐにはこちらを見なかった。やがて分かったと言い、その話を無理に笑いへ変えずに別れた。数日後、次の写真散歩へ行くかと連絡が来た。私は友人も一緒に行きたいと返し、集合場所を決めた。",
+          "when": {
+            "flags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "友達としてまた歩こうと話し、次の写真散歩には友人も誘った。先輩から来た集合時刻は少し早かったので、私は十分あとを提案した。いい場所が埋まる、と返ってきても、今度は笑って、間に合いますよと打てた。",
+          "when": {
+            "notFlags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "広場で三人になると、先輩はもう撮る場所を決めていた。友人は別の角へ行き、私はその間へ立つ。一番よく見える場所はどこかと訊かれ、私はまだ探してますと答えた。先輩は遅いな、と笑ったけれど、自分の場所を空けろとは言わなかった。"
+        },
+        {
+          "speaker": "illuso",
+          "text": "その一枚、あとで見せろよ。"
+        },
+        {
+          "speaker": "player",
+          "text": "はい。先輩のも。選ぶのは自分でやりますからね。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "三枚の写真を並べるために、小さな店へ入った。撮る側にいた私たちの顔は、一枚にも写っていない。その代わり、画面のまわりには三人の声があった。私は自分の選んだ一枚を、いちばん手前へ置いた。"
+        }
+      ],
+      "choices": [],
+      "ending": "FRIEND"
+    },
+    {
+      "id": "end_love_a",
+      "title": "先に差し出す",
+      "chapter": 5,
+      "location": "川沿いの階段",
+      "storyTime": {
+        "date": "6月15日",
+        "period": "夕方"
+      },
+      "characterId": "illuso",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "illuso",
+          "text": "ああ。オレも付き合いたい。先に言われるとは思ってなかったけどな。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩の返事を聞いて、私はようやく笑った。次も先に言ってみます、と返すと、調子に乗るなよと声が来る。その言い方に戻ったのが嬉しくて、自分から手を差し出した。今度は先輩が返す番だった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "指が絡むと、先輩は封筒を片手へまとめた。私の分も持とうとしたので、写真は自分で持ちますと言う。じゃあ手はこっちだ、と握り直され、返す言葉を一つ忘れた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "次の休日、先輩が決めた場所で、私は先に待っていた。早いなと驚いた顔を見て、いい場所は埋まるんでしょう、と笑う。私の隣へ来た人が、そこを離れずに景色を見る。撮る前に、一度だけ肩を寄せた。",
+          "storyTime": {
+            "date": "6月22日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_A"
+    },
+    {
+      "id": "end_love_b",
+      "title": "こちらから近づく",
+      "chapter": 5,
+      "location": "川沿いの階段",
+      "storyTime": {
+        "date": "6月15日",
+        "period": "夕方"
+      },
+      "characterId": "illuso",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私も好きですと伝えると、先輩は短く息を吐いた。余裕のある顔へ戻ろうとしたのが分かり、私はその前に一歩近づいた。戻す必要ないです、と言うと、何をだよと返る。私は答える代わりに、その手を取った。"
+        },
+        {
+          "speaker": "illuso",
+          "text": "……分かってたみたいな顔すんなよ。"
+        },
+        {
+          "speaker": "player",
+          "text": "してません。今、初めて聞けて嬉しいんです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩は私を見て、それから少しだけ笑った。段を上がる時、手が引かれる。立ち止まれば先輩も止まったので、私は写真を鞄へしまうまで待ってくださいと頼んだ。待つ人を見上げることまで、さっきとは違っていた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌週、先輩が端末を自分へ向けて試し撮りをしていた。私も画面に入っていいかと聞くと、一度端末が下りる。いい、と返事をもらってから隣に収まった。一枚を撮り終えた先輩の方へ、自分から頬を向けた。",
+          "storyTime": {
+            "date": "6月22日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_B"
+    },
+    {
+      "id": "end_fwb",
+      "title": "封筒を持たない夜",
+      "chapter": 5,
+      "location": "イルーゾォの自宅",
+      "storyTime": {
+        "date": "6月22日",
+        "period": "夜"
+      },
+      "characterId": "illuso",
+      "rating": "fade",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "今日は写真を持たずに来た、と言うと、先輩は見れば分かると笑った。食事を置いた机の上は空いている。私は今夜も一緒にいたいと伝え、先輩もそうしたいと答えた。明日は昼に用事があると話すと、じゃあ朝は慌てなくていいなと返った。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "食事のあと、私から先輩の隣へ座った。何か言いかけた顔を見て、今日はどんな話をしますかと訊く。話すのかよ、と少し笑われたので、触れたいのも本当です、と続けた。先輩は笑うのをやめ、私の手を取った。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "近づいた顔を見て頷き、私から頬へ触れた。手をつないだまま立つと、先輩も一緒に立つ。机の灯りを落とした後まで、その指を離さずにいた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌朝、先輩は焼いたパンの色を見て少し顔をしかめた。私が一枚受け取り、これくらいが好きですと言うと、最初からそのつもりだと返る。そうですか、と笑って食べ始めた。昼にはそれぞれの用事へ出る。その前に、次の散歩の日を一つ確かめた。",
+          "storyTime": {
+            "date": "6月23日",
+            "period": "朝"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB"
+    },
+    {
+      "id": "end_fwb_love",
+      "title": "言い換えるのは今",
+      "chapter": 5,
+      "location": "川沿いの階段",
+      "storyTime": {
+        "date": "6月15日",
+        "period": "夕方"
+      },
+      "characterId": "illuso",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "親密な友達でいたいと選んだ頃より、会わない日にも相手を思い出すことが増えた。好きだと伝え、今は恋人になりたいと言った。先輩は私の顔を見たまま、すぐには笑わなかった。"
+        },
+        {
+          "speaker": "illuso",
+          "text": "オレもそうしたい。こっちから言うつもりだったんだぜ。……今のは、負け惜しみに聞こえるか。"
+        },
+        {
+          "speaker": "player",
+          "text": "少し。でも、言ってくれたことが嬉しいです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩が顔をしかめ、私も少し笑った。手を取ると、向こうから強く握り返される。何度も触れた指なのに、言葉のあとでは違うところまで届いた。私は肩を寄せ、これからも会いたいですと、もう一度伝えた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌週は家ではなく駅で会った。先輩が私の小さな鞄を見て、今日は写真が少ないなと言う。一緒にいる方へ手を空けてきました、と答えると、先輩は何も言わずその手を取った。私は今度こそ、少し得意な顔をして見上げた。",
+          "storyTime": {
+            "date": "6月22日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB_TO_LOVE"
+    },
+    {
+      "id": "end_special",
+      "title": "相手が残した一枚",
+      "chapter": 5,
+      "location": "写真を印刷できる店",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "illuso",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "二人用の写真帖は、思っていたよりまとまりがなかった。先輩の整った写真の次に、私の傾いた道が来る。私が好きだった陰の一枚を貼ると、先輩はやっぱりそこかよと顔をしかめた。やめますかと訊いても、別に、と返るだけだった。"
+        },
+        {
+          "speaker": "illuso",
+          "text": "おまえが選んだ方だ。オレはもう、自分の分を決めた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩は私の写真を差し込み、二頁を並べて見せた。どちらも一人で作ったものなのに、隣に来た色で急に違って見えた。いいですねと言うと、だろ、と先輩が笑う。そこだけ自分の手柄のように言うので、私も半分は私ですと返した。"
+        },
+        {
+          "speaker": "player",
+          "text": "次、先輩が選びたくないような一枚ができるかもしれません。"
+        },
+        {
+          "speaker": "illuso",
+          "text": "そしたら持ってこいよ。何でそんなのを撮ったか、聞いてやる。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私も聞きます、と答えた。上手に撮れた時だけ呼ぶのでは、二人の本はもう続かなかった。帰りには写真帖を先輩が持ち、次に会う日は私が決めた。私が選んだ一枚を、あの人が家でまた開く。その想像が、思ったより長く残った。"
+        }
+      ],
+      "choices": [],
+      "ending": "SPECIAL"
+    }
+  ],
+  "endingDescriptions": {
+    "FRIEND": {
+      "title": "写らない三人目",
+      "description": "同じ場所を違って撮り、遠慮なく言い合う。三人の声が集まる机へ。"
+    },
+    "LOVE_A": {
+      "title": "先に差し出す",
+      "description": "いつも先を取る人へ、私から恋を渡す。次の待ち合わせでは、私が先に待っている。"
+    },
+    "LOVE_B": {
+      "title": "こちらから近づく",
+      "description": "余裕のない告白を聞いて、自分からその手を取る。待つ人の顔まで近くなる。"
+    },
+    "FWB": {
+      "title": "封筒を持たない夜",
+      "description": "昼にも夜にも、望む近さを確かめて会う友達。それぞれの用事へ帰る前に、次を選ぶ。"
+    },
+    "FWB_TO_LOVE": {
+      "title": "言い換えるのは今",
+      "description": "重ねた夜に、恋人という今の望みを足す。言い合う声も知っている手も、そのまま一緒に。"
+    },
+    "SPECIAL": {
+      "title": "相手が残した一枚",
+      "description": "自分の写真を相手に選ばせる、恋人とは違う相棒。一人なら作らない写真帖を、二人で開く。"
+    }
+  }
+}

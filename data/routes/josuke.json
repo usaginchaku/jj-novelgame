@@ -1,0 +1,1255 @@
+{
+  "id": "josuke",
+  "title": "仗助 — 継ぎ目の向こうに",
+  "intro": "入学前に渡した目印を、彼は覚えていた。\n先輩と後輩、その言葉だけでは足りない時間を重ねる。",
+  "startEvent": "flag",
+  "character": {
+    "name": "仗助",
+    "adult": true,
+    "heightCm": 180,
+    "heightBasis": "二次資料JoJo Wikiの身長欄と出典注記を照合。JOJO 6251。初期269話185cmとの異同を記録し180を採用。書籍・設定表現物は未照合。AUで同値を採用。",
+    "profile": "穏やかで情に厚い。身なりへの誇り。頭の回転と悪戯心。侮辱には短気。",
+    "personality": [
+      "穏やかで情に厚い",
+      "身なりへの誇り",
+      "頭の回転と悪戯心",
+      "侮辱には短気"
+    ],
+    "speech": {
+      "firstPerson": "おれ",
+      "addressing": "主人公は姓＋先輩。砕けた敬語が基本。",
+      "tone": "先輩にはくだけた敬語の〜っす。語尾は感情と相手に合わせる。",
+      "habits": [
+        "先輩にはくだけた敬語の〜っす",
+        "親しい相手には常体",
+        "驚きや評価を率直に言う"
+      ],
+      "signaturePhrases": [],
+      "signatureNote": "日常の固定口癖は採用しない。象徴的な原作台詞と普段の話し方を混同せず、名台詞を貼り付けない。",
+      "avoid": [
+        "何でもっすで終える",
+        "髪型の話だけ",
+        "従順な子犬後輩",
+        "東北方言を捏造"
+      ]
+    },
+    "referenceSection": "docs/CHARACTER_REFERENCE.md#cast-josuke"
+  },
+  "au": {
+    "role": "生命工学系1年。オープンキャンパスで主人公と知り合い、入学後は同じロボット教室のバイト",
+    "routeEnabled": true,
+    "addressing": [
+      {
+        "text": "{player.lastName}先輩"
+      }
+    ]
+  },
+  "endingDescriptions": {
+    "FRIEND": {
+      "title": "先輩、こっちです",
+      "description": "互いに頼み、遠慮なく意見を言える友達。呼べば隣に、もう一人分の手が増える。"
+    },
+    "LOVE_A": {
+      "title": "自分から伸ばす手",
+      "description": "先輩という立場を離れ、自分から好きだと伝える。受け取った返事を握って、街へ歩き出す。"
+    },
+    "LOVE_B": {
+      "title": "その人の恋人として",
+      "description": "後輩ではなく恋人として望まれ、自分の好きも返す。呼び方は同じでも、隣へ寄る理由が変わる。"
+    },
+    "FWB": {
+      "title": "帰る袋を忘れずに",
+      "description": "互いが望む夜に会う、親密な友人。翌朝には、それぞれの約束と自分の荷物を持っていく。"
+    },
+    "FWB_TO_LOVE": {
+      "title": "知っている近さの先",
+      "description": "重ねた夜の先で、恋人として呼び合いたいと選ぶ。家の外にも、二人で寄りたい場所が増える。"
+    },
+    "SPECIAL": {
+      "title": "使いながら、変わる形",
+      "description": "残したいところも好きな色も譲らず、一緒に作る相棒。使い込んだ続きを、最初に見せる相手へ。"
+    }
+  },
+  "events": [
+    {
+      "id": "flag",
+      "chapter": 1,
+      "title": "捨てる前の一枚",
+      "location": "ロボット教室の片づけ室",
+      "storyTime": {
+        "date": "5月8日",
+        "period": "夕方"
+      },
+      "characterId": "josuke",
+      "rating": "general",
+      "tags": [
+        "josuke"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "教材の棚を整理していると、箱の底から小さな紙の旗が出てきた。入学前のオープンキャンパスで案内に使ったもので、折れた棒から端が垂れている。処分する束へ重ねかけたところで、仗助くんが、それ、と指を止めた。今は生命工学系の一年生で、同じ教室のバイトにも来ている。入学前から端末にあった名前が、春から急に身近になった。"
+        },
+        {
+          "speaker": "josuke",
+          "text": "それ、先輩が持ってたやつっすよね。おれ、向こうの建物からでも分かりましたよ。"
+        },
+        {
+          "speaker": "player",
+          "text": "よく覚えてるね。もう使わないと思ってたけど……。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "そう言われると、丸めるつもりだった紙を平らに戻したくなった。仗助くんは勝手に取らず、破れた端だけを見る。派手な色だったから、と笑う顔には、初めて道を訊かれた時より余裕があった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "keep",
+          "text": "処分せず、旗の傷んだところを一緒に広げて見る",
+          "next": "seam",
+          "effect": "workTogether"
+        },
+        {
+          "id": "remember",
+          "text": "案内した日のことを、仗助くんから聞く",
+          "next": "seam",
+          "effect": "ask"
+        }
+      ]
+    },
+    {
+      "id": "seam",
+      "chapter": 1,
+      "title": "元どおりでなくても",
+      "location": "バイト先の作業机",
+      "storyTime": {
+        "date": "5月11日",
+        "period": "昼"
+      },
+      "characterId": "josuke",
+      "rating": "general",
+      "tags": [
+        "josuke"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "休憩時間、仗助くんが細い紙と接着用の道具を机へ並べた。旗は教室の見学案内に転用できるか、担当の人へ聞いてある。破れを隠すように上から貼る案を見て、私は古い色を残したいと話した。仗助くんは新しい紙を少しだけずらす。"
+        },
+        {
+          "speaker": "josuke",
+          "text": "じゃ、ここは消さないで、裏から支えましょう。全部新品みたいにするのがいいってわけでもないし。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼が押さえ、私が紙を重ねる。指が近づいた時に、丁寧に整えられた爪へ目がいった。身なりに気を配る人だとは知っていたけれど、今はその手が自分の大事なものへ触れている。私は上から押さえる紙を持ち直した。"
+        },
+        {
+          "speaker": "player",
+          "text": "この折り目は残しておきたい。何度も道を曲がる時、ここを握ってたから。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "old_color",
+          "text": "折り目と色を残し、自分でも裏の補強を手伝う",
+          "next": "lunch",
+          "effect": "honest",
+          "setFlags": [
+            "keptSeam"
+          ]
+        },
+        {
+          "id": "strong",
+          "text": "使いやすさを優先し、握るところを補強する",
+          "next": "lunch",
+          "effect": "compareNotes"
+        }
+      ]
+    },
+    {
+      "id": "lunch",
+      "chapter": 1,
+      "title": "一年生にしては",
+      "location": "学内の食堂",
+      "storyTime": {
+        "date": "5月16日",
+        "period": "昼"
+      },
+      "characterId": "josuke",
+      "rating": "general",
+      "tags": [
+        "josuke"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "食堂で旗の写真を見せると、仗助くんは少し得意そうに笑った。私はつられて、一年生なのに器用だね、と言ってしまった。彼の笑顔が消えたわけではない。ただ、それって学年関係あります、と返された声が、いつもより平らだった。"
+        },
+        {
+          "speaker": "josuke",
+          "text": "先輩だから何でもできるってわけでもないし、おれだって、できることはありますよ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "言い返そうとしたのではなく、褒めたつもりだったと言い訳しそうになった。それでは、彼が止めた言葉を聞かなかったことになる。私は写真を閉じ、向かいの顔を見た。仗助くんは箸を置き、こちらの次の言葉を待っていた。"
+        },
+        {
+          "speaker": "player",
+          "text": "ごめん。仗助くんが器用だって言いたかった。学年は、いらなかったね。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "ask_him",
+          "text": "どう覚えたのか、彼自身の話を聞かせてもらう",
+          "next": "message",
+          "effect": "homeTalk",
+          "setFlags": [
+            "sawHim"
+          ]
+        },
+        {
+          "id": "two",
+          "text": "謝ってから、また二人で昼を食べたいと誘う",
+          "next": "message",
+          "effect": "lunchTwo"
+        },
+        {
+          "id": "work",
+          "text": "謝ってから、次の作業を対等に分担する",
+          "next": "message",
+          "effect": "shiftRest"
+        }
+      ]
+    },
+    {
+      "id": "message",
+      "chapter": 2,
+      "title": "乾くまで待って",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "5月18日",
+        "period": "夜"
+      },
+      "characterId": "josuke",
+      "rating": "general",
+      "tags": [
+        "josuke"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "仗助くんから、乾いた旗の写真が届いた。端の小さな継ぎ目は、隠す代わりに目立たないよう揃えられている。机の上へ置かれた角度がきれいで、本人の得意な顔を思い出した。"
+        },
+        {
+          "speaker": "josuke",
+          "text": "ちゃんと持てるようになりましたよ。明日見てください。写真だけじゃ、分かんないとこもあるんで。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "返事を打とうとして、先に画像を保存した。物だけなら明日見られる。でも、今日見せてくれたことにも返事をしたかった。私は一度笑ってから、文字を選んだ。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "glad",
+          "text": "仗助くんと直せて嬉しかった。明日会うのが楽しみ",
+          "next": "shift",
+          "effect": "messageHeart",
+          "replyVariants": [
+            {
+              "text": "おれもっす。先輩が残したいって言ったとこ、ちゃんと残ってますよ。",
+              "when": {
+                "flags": [
+                  "keptSeam"
+                ]
+              }
+            },
+            {
+              "text": "楽しみにしててください。今度は握っただけで折れたりしませんから。"
+            }
+          ],
+          "lockRoute": "josuke"
+        },
+        {
+          "id": "notice",
+          "text": "継ぎ目、きれいだね。手に取って見たいな",
+          "next": "shift",
+          "effect": "messageListen",
+          "replyVariants": [
+            {
+              "text": "気づきました？　そこ、ちょっとこだわったんですよ。"
+            }
+          ],
+          "lockRoute": "josuke"
+        },
+        {
+          "id": "thanks",
+          "text": "ありがとう。明日の片づけのあとで確認するね",
+          "next": "shift",
+          "effect": "messageDaily",
+          "replyVariants": [
+            {
+              "text": "了解っす。机の端に置いときます。"
+            }
+          ],
+          "lockRoute": "josuke"
+        }
+      ],
+      "message": true
+    },
+    {
+      "id": "shift",
+      "chapter": 2,
+      "title": "任せる方の手",
+      "location": "ロボット教室",
+      "storyTime": {
+        "date": "5月19日",
+        "period": "夕方"
+      },
+      "characterId": "josuke",
+      "rating": "general",
+      "tags": [
+        "josuke"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "見学用の旗を試す日、私は入口を、仗助くんは教室の机を受け持った。終了間際、見本の紙模型の一部が外れる。私が工具箱へ手を伸ばすより先に、仗助くんが、これなら接着じゃなく差し直せますよ、と形を見せた。彼へ任せて、自分の案内へ戻った。"
+        },
+        {
+          "speaker": "josuke",
+          "text": "ほら、こっちが先だったんすよ。……先輩、そこの箱、開けてもらっていいですか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "手伝ってと呼ばれる方になって、私は箱の蓋を押さえた。仗助くんは直した見本を置き、余った部品を二人で数えた。うまくできたと教える立場で褒めるより、助かった、と自分のことを言いたかった。"
+        },
+        {
+          "speaker": "player",
+          "text": "ありがとう。仗助くんがいてくれて、助かった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "equal",
+          "text": "次も困ったら互いに頼ろうと、自分から言う",
+          "next": "shop",
+          "effect": "walkClose",
+          "setFlags": [
+            "askedEachOther"
+          ]
+        },
+        {
+          "id": "finish",
+          "text": "二人で片づけと記録を終える",
+          "next": "shop",
+          "effect": "walkHome"
+        }
+      ]
+    },
+    {
+      "id": "shop",
+      "chapter": 2,
+      "title": "選ぶ時の横顔",
+      "location": "街の文具店",
+      "storyTime": {
+        "date": "5月31日",
+        "period": "昼"
+      },
+      "characterId": "josuke",
+      "rating": "general",
+      "tags": [
+        "josuke"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "次の案内カードを買いに、二人で文具店へ行った。必要な物を揃えたあと、仗助くんは光沢のある紙の前で足を止める。新しい見本に使いたいと言うので、私は似た色の安い方を指した。彼は値段を見てから、それでも最初の一枚へ戻る。"
+        },
+        {
+          "speaker": "josuke",
+          "text": "こっちがいいんすよ。似てるけど、光る感じが違う。無駄遣いだと思います？"
+        },
+        {
+          "speaker": "player",
+          "text": "ううん。仗助くんがそっちを好きなのは、見てたら分かる。私も、それで作ったところを見たい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "そう返すと、彼の眉が少し上がった。自分の分として一枚だけ買い、袋へ入れる手が丁寧だった。店を出たあとも、私は時々その袋を見る。選んだものを大事にする人と、もう少し歩いていたかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "beside",
+          "text": "「次の買い物も、一緒に来たいな」と伝える",
+          "next": "home",
+          "effect": "conferenceClose"
+        },
+        {
+          "id": "prepare",
+          "text": "使う予定を確かめ、二人で必要な物を揃える",
+          "next": "home",
+          "effect": "conferencePractical"
+        }
+      ]
+    },
+    {
+      "id": "home",
+      "chapter": 3,
+      "title": "差し込む午後",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "6月7日",
+        "period": "夕方"
+      },
+      "characterId": "josuke",
+      "rating": "general",
+      "tags": [
+        "josuke"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "見学の日に配る小さなカードを作るため、仗助くんを家へ誘った。彼は机の端へ買った紙を置き、部屋を見回してから椅子へ座る。いつもより丁寧に揃えた靴が、玄関にまだ見えていた。私は冷たい飲み物を持って戻り、彼の隣へ作業道具を並べた。"
+        },
+        {
+          "speaker": "josuke",
+          "text": "先輩の部屋って、こうなってるんすね。……いや、変って言ってないですよ。"
+        },
+        {
+          "speaker": "player",
+          "text": "まだ何も聞いてないよ。そっちの引き出しは、開けなくて大丈夫だからね。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "慌てた顔を見て笑うと、仗助くんも笑った。切った紙を重ねるうち、窓からの光が机の向こうへずれる。彼が選んだ一枚は、傾けた時だけ光る飾りになった。次は私が好きな色を選ぶと、彼がそれを手元へ寄せた。 作業のメモを取った私の手帳を見て、彼は角の擦れたカバーへ指を止めた。次はこれも直したい、と私が言うと、自分のカード入れも傷んできたんですよ、と見せてくれた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "dinner",
+          "text": "できたカードを片づけ、二人で夕食も食べようと誘う",
+          "next": "evening",
+          "effect": "hotelTalk"
+        },
+        {
+          "id": "snack",
+          "text": "軽い食事を用意して、完成したものを並べる",
+          "next": "evening",
+          "effect": "homeRest"
+        }
+      ]
+    },
+    {
+      "id": "evening",
+      "chapter": 3,
+      "title": "帰り支度の途中",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "6月7日",
+        "period": "夜"
+      },
+      "characterId": "josuke",
+      "rating": "general",
+      "tags": [
+        "josuke"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "食事を終え、二人で机を拭いた。仗助くんが道具を鞄へしまい、カードを持ち帰るための袋を探している。私は新しい袋を渡した。受け取った指が一瞬触れただけなのに、すぐ別の話へ戻れなかった。"
+        },
+        {
+          "speaker": "josuke",
+          "text": "今日は、ありがとうございました。次の分、おれの方で持っていきますよ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩へ挨拶する声になって、もう玄関へ向かわれるのかと思った。待って、と言うほど用事はない。私の家へ来てくれた人を、作業だけで帰したくないと思っている自分に気づいた。彼がこちらを見るまで、私は袋の残りを畳んでいた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "stay",
+          "text": "「今夜は、仗助くんともっと近くにいたい」と伝える",
+          "next": "consent",
+          "effect": "hotelInvite",
+          "when": {
+            "min": {
+              "trust": 45,
+              "desire": 12
+            }
+          }
+        },
+        {
+          "id": "next_time",
+          "text": "また二人で会う日を決めて、今日は見送る",
+          "next": "next",
+          "effect": "walkHome"
+        }
+      ]
+    },
+    {
+      "id": "consent",
+      "chapter": 3,
+      "title": "先輩だから、ではなく",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "6月7日",
+        "period": "夜"
+      },
+      "characterId": "josuke",
+      "rating": "general",
+      "tags": [
+        "josuke"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "仗助くんは持ち上げた鞄を下ろした。けれど近づかず、まず私の顔を見た。先輩にそう言われたから、と返されるのだけは嫌だった。私が何か足すより早く、彼が口を開く。"
+        },
+        {
+          "speaker": "josuke",
+          "text": "おれも、先輩に触れたいです。今夜、一緒にいたい。先輩に頼まれたからじゃなくて、おれが。"
+        },
+        {
+          "speaker": "player",
+          "text": "私もそうしたい。でも、今夜のことを恋人になる約束にはしないで話したい。途中でやめたくなったら、止めてね。仗助くんも言って。"
+        },
+        {
+          "speaker": "josuke",
+          "text": "分かりました。どっちが止めても、そこで止めましょう。おれ、今から帰ることもできます。……今、先輩はどうしたいですか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "その問いには、先輩らしい返事をする必要がなかった。二人が立っている間を見てから、私は自分の手を開いた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「一緒にいてほしい」と答え、自分から手を取る",
+          "next": "night",
+          "effect": "consent",
+          "setFlags": [
+            "consented",
+            "hadNight"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「今日はここまでにしよう」と答え、見送る",
+          "next": "next",
+          "effect": "walkHome",
+          "setFlags": [
+            "declinedTouch"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "night",
+      "chapter": 3,
+      "title": "触れる場所",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "6月7日",
+        "period": "夜"
+      },
+      "characterId": "josuke",
+      "rating": "fade",
+      "tags": [
+        "josuke"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "手を取ると、仗助くんの指が少し強く握り返した。近くへ寄って顔を上げ、肩へもう片方の手を置く。彼が身を屈める途中、整えた髪に触れそうになって手を止めた。仗助くんは小さく笑い、そこじゃなくていいんで、と頬を近づける。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "頬へ触れてから唇が重なった。離れると、彼も少し照れた顔をしていた。もう一度、と自分から言い、つないだ手を引く。二人で寝室へ移り、灯りを消した。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌朝、仗助くんが身支度を終えて戻ってきた。髪はいつもの形へ戻っている。私は先に用意した朝食を机へ運び、彼が帰る時刻を聞いた。カードの袋は忘れないように玄関へ置き、そのあとで二人分の皿を並べた。",
+          "storyTime": {
+            "date": "6月8日",
+            "period": "朝"
+          }
+        },
+        {
+          "speaker": "josuke",
+          "text": "おれ、また先輩と会いたいっす。こういう夜も。でも、先輩がどうしたいか聞いてからにしたいです。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "again",
+          "text": "「友達のまま、また二人で夜を過ごしたい」と答える",
+          "next": "next",
+          "effect": "messageBoundaries",
+          "setFlags": [
+            "ongoing"
+          ]
+        },
+        {
+          "id": "more",
+          "text": "「また夜も会いたい。前より、仗助くんが好き」と答える",
+          "next": "next",
+          "effect": "messageAgain",
+          "setFlags": [
+            "ongoing"
+          ]
+        },
+        {
+          "id": "day",
+          "text": "「これからは、昼に会う友達でいたい」と答える",
+          "next": "next",
+          "effect": "messageDaily",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ],
+      "when": {
+        "flags": [
+          "consented"
+        ]
+      }
+    },
+    {
+      "id": "next",
+      "chapter": 4,
+      "title": "印刷されない続き",
+      "location": "大学の中庭",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "josuke",
+      "rating": "general",
+      "tags": [
+        "josuke"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "見学の日を終えたあとも食事をし、二人が望んだ夜には私の家で過ごした。彼が朝早く帰る日も、昼まで話す日もあった。バイトではそれぞれの仕事へ戻り、誰かの前だけ特別な呼び方をしようとはしなかった。会いたい気持ちは、用事のない連絡に出るようになった。",
+          "when": {
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "昼に会う友人でいたいと伝えてから、仗助くんは買い物や食事へ誘ってくれた。夜のことを持ち出して返事を変えさせようとはしない。少しぎこちなかった日も、次の紙を選ぶ話なら自然に続いた。",
+          "when": {
+            "flags": [
+              "hadNight",
+              "endedNight"
+            ],
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "見学の日には、直した旗と新しいカードを二人で使った。終わったあとも食事をし、文具店で会って、何度か用事のない寄り道をした。先輩と後輩の話だけではない時間が、少しずつ増えている。",
+          "when": {
+            "notFlags": [
+              "hadNight"
+            ]
+          }
+        },
+        {
+          "speaker": "josuke",
+          "text": "次、どうします？　また何か作るのもいいけど、何もなくても会いたいっす。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "仗助くんが袋から残った紙を出した。光沢のある端切れを見て、私は自分の買った色を思い出す。好きなものが同じでなくても並べてみた日から、まだ話せていないことがあった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "tell",
+          "text": "自分から、仗助くんが好きだと伝えたいと言う",
+          "next": "confess_player",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 35,
+              "romanceChar": 25
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "listen",
+          "text": "仗助くんの言おうとしていることを聞く",
+          "next": "confess_josuke",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 20,
+              "romanceChar": 35
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "make_ours",
+          "text": "今度は互いのためのものを、一緒に作りたいと話す",
+          "next": "own_shape",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 35,
+              "romanceChar": 30,
+              "comfort": 20
+            },
+            "flags": [
+              "keptSeam",
+              "sawHim",
+              "askedEachOther"
+            ],
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "nights",
+          "text": "親密な友人として、これからも会いたいと話す",
+          "next": "fwb_choice",
+          "when": {
+            "min": {
+              "trust": 50,
+              "desire": 25,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "love",
+          "text": "「今は、仗助くんの恋人になりたい」と伝える",
+          "next": "end_fwb_love",
+          "when": {
+            "min": {
+              "trust": 60,
+              "romancePlayer": 50,
+              "romanceChar": 40,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          },
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "friends",
+          "text": "気軽に頼り、誘い合う友達でいたいと伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_player",
+      "chapter": 4,
+      "title": "言い換えない名前",
+      "location": "大学の中庭",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "josuke",
+      "rating": "general",
+      "tags": [
+        "josuke"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "自分から伝えたいと言うと、仗助くんは紙を袋へ戻した。私が話しやすいように先に笑ってくれるのを待たず、今日は自分から顔を上げる。先輩なのに、と言いかけたのは自分の方だった。その余計な一言を飲み込み、彼の名前を呼んだ。"
+        },
+        {
+          "speaker": "player",
+          "text": "仗助くんに、また会いたくなる。何か手伝ってほしいんじゃなくて、会って話して、隣にいたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼は頷くだけでは済ませず、こちらをまっすぐ見た。私の言葉を待っている目だった。次に何を言うか、後輩へ教えるようには決められなかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "like",
+          "text": "「好き。私と付き合ってほしい」と伝える",
+          "next": "end_love_a",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "choose",
+          "text": "「仗助くんを恋人として選びたい。私のことも選んでもらえる？」",
+          "next": "end_love_a",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "wait",
+          "text": "今日は友人として、また会いたいと伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_josuke",
+      "chapter": 4,
+      "title": "笑って逃がさない",
+      "location": "大学の中庭",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "josuke",
+      "rating": "general",
+      "tags": [
+        "josuke"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "仗助くんは一度口元を緩め、それから真面目な顔へ戻った。軽く言えば私が楽に返せると考えたのかもしれない。私は先に笑わず、その人が言いたい形を待っていた。"
+        },
+        {
+          "speaker": "josuke",
+          "text": "先輩が好きです。後輩として可愛がってほしいんじゃなくて、恋人になりたい。おれと、付き合ってくれませんか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "耳が熱くなり、持っていた袋の端を握った。仗助くんは私の表情を見たが、いい返事だと決めつけて近づかなかった。私は袋を膝へ置き、自分の顔を隠すものを一つ減らした。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「私も好き。仗助くんと付き合いたい」と答える",
+          "next": "end_love_b",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「恋人にはなれない。友達でいたい」と答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "refusedConfession",
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "own_shape",
+      "chapter": 4,
+      "title": "二人の好きな色",
+      "location": "大学の中庭",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "josuke",
+      "rating": "general",
+      "tags": [
+        "josuke"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "教室で使うものではなく、互いのためのものを作りたいと言った。仗助くんは少し考えて、先輩が持ってる古い手帳、と指す。角の擦れたカバーを直したいと前に話したのを覚えていたらしい。私は頷いてから、彼の使い込んだカード入れを見た。"
+        },
+        {
+          "speaker": "player",
+          "text": "私のだけじゃなくて、仗助くんのも一緒に。私が作る方も、任せてもらいたい。"
+        },
+        {
+          "speaker": "josuke",
+          "text": "じゃ、おれのもお願いします。でも、好きな色は譲りませんよ。先輩も、こっちに合わせなくていいんで。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "分かってる、と笑うと、彼も笑った。直してあげる人と直してもらう人に分かれたままではなく、同じ机の両側へ座る約束ができた。私は差し出されたカード入れを受け取り、縁を指で確かめた。"
+        },
+        {
+          "speaker": "josuke",
+          "text": "恋人になるのとは違うけど、こういうの、最初に先輩に見せたいっす。作るところも、使ってくところも。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "partners",
+          "text": "「私も。お互いの好きなものを、一緒に作ろう」と答える",
+          "next": "end_special",
+          "effect": "homeTogether",
+          "setFlags": [
+            "ourMaking"
+          ]
+        },
+        {
+          "id": "friend",
+          "text": "今は教室でも気軽に助け合う友達でいたいと答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fwb_choice",
+      "chapter": 4,
+      "title": "頼み事ではない誘い",
+      "location": "大学の中庭",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "josuke",
+      "rating": "general",
+      "tags": [
+        "josuke"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人の約束はせず、望む夜にも会いたいと話すと、仗助くんは、同じです、と返した。先輩に合わせたのでなく、と付け足す前に、私は顔を見て頷いた。彼の方から届いた誘いも、ちゃんと覚えていた。"
+        },
+        {
+          "speaker": "josuke",
+          "text": "おれからも誘います。無理なら断ってください。途中でやめたい時も。おれも、そういう時は言いますから。"
+        },
+        {
+          "speaker": "player",
+          "text": "うん。昼に遊ぶのも、夜に会うのも、会いたい時に誘おう。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "次の日付を選びながら、帰る時間も話した。仗助くんが端末へ入力する間に、彼のカード入れが少し開く。好きな色だと分かる中身を見て、私は今度寄りたい店の話を始めた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "continue",
+          "text": "親密な友人として、次に会う日を決める",
+          "next": "end_fwb",
+          "effect": "messageBoundaries"
+        },
+        {
+          "id": "daytime",
+          "text": "考え直し、昼に会う友達でいたいと伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "end_friend",
+      "chapter": 5,
+      "title": "先輩、こっちです",
+      "location": "バイト先の教室",
+      "storyTime": {
+        "date": "7月12日",
+        "period": "昼"
+      },
+      "characterId": "josuke",
+      "rating": "general",
+      "tags": [
+        "josuke"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人にはなれないと答えた日は、仗助くんもすぐ笑うことはなかった。分かりましたと返ってから、私も頷いた。次の買い物の連絡をした時には、見たい紙があると返事が来た。",
+          "when": {
+            "flags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "昼に会う友達でいたいと伝えてから、夜の誘いはなくなった。次の教室で顔を合わせると、仗助くんは私がいつもの声で話せるまで、普通に自分の作業をしていた。",
+          "when": {
+            "flags": [
+              "hadNight",
+              "endedNight"
+            ],
+            "notFlags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "友達としてまた一緒に作ろうと約束し、今日は教室へ来た。花京院先輩が机の配置を見直している横で、仗助くんが新しい案内カードを並べている。",
+          "when": {
+            "notFlags": [
+              "hadNight",
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "josuke",
+          "text": "先輩、こっち見てください。前の、ちょっとだけ変えてみたんすよ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "呼ばれた方へ行くと、古い旗もまだ立っていた。今日も使えるね、と私が笑う。仗助くんは当然です、と胸を張り、それから自分では決めかねた配置を訊いてきた。私も隣に座って紙を動かす。どちらから呼んでも、作業の手が増える机だった。"
+        }
+      ],
+      "choices": [],
+      "ending": "FRIEND"
+    },
+    {
+      "id": "end_love_a",
+      "chapter": 5,
+      "title": "自分から伸ばす手",
+      "location": "大学の中庭と街路",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "josuke",
+      "rating": "general",
+      "tags": [
+        "josuke"
+      ],
+      "body": [
+        {
+          "speaker": "josuke",
+          "text": "おれも好きです。付き合いたい。……まいったな、先に言おうと思ってたのに。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "少し悔しそうな顔に笑いかけ、私もすぐには言葉が出なかった。先に言えたことを誇るより、その返事を聞けたことが嬉しい。彼の手へ自分の手を重ねると、今度はしっかり握り返された。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "次に街で会った時、仗助くんはいつもより少し遠くから私を見つけた。先輩、と呼ばれるだけなのに、返す声が明るくなる。隣へ並んでから手を取り、今日は私の見たいものにも付き合ってねと言った。彼は任せてください、と笑い、同じ方向へ歩き出した。",
+          "storyTime": {
+            "date": "7月5日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_A"
+    },
+    {
+      "id": "end_love_b",
+      "chapter": 5,
+      "title": "その人の恋人として",
+      "location": "大学の中庭と街路",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "josuke",
+      "rating": "general",
+      "tags": [
+        "josuke"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "付き合いたいと答えると、仗助くんの表情がほどけた。大きく笑う少し手前の顔が見えて、私まで照れてしまう。彼が近づけた手を、こちらから取った。"
+        },
+        {
+          "speaker": "josuke",
+          "text": "もう、弟みたいとか言わないでくださいよ。……言われてないけど、先に言っときます。"
+        },
+        {
+          "speaker": "player",
+          "text": "言ってないよ。仗助くんの恋人になりたいって、今言ったところ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "次の待ち合わせでは、私から隣へ寄った。ショーウィンドウで髪を確かめる彼を待ちながら、似合ってる、と一言だけ伝える。振り向いた顔がまた少し照れたので、私は自分の方から手を取って歩き出した。",
+          "storyTime": {
+            "date": "7月5日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_B"
+    },
+    {
+      "id": "end_fwb",
+      "chapter": 5,
+      "title": "帰る袋を忘れずに",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "7月12日",
+        "period": "夜"
+      },
+      "characterId": "josuke",
+      "rating": "fade",
+      "tags": [
+        "josuke"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "仗助くんが夕食を買って来た。私は飲み物を用意し、机の上を空ける。今夜も泊まりたいか訊くと、彼は私を見て、泊まりたいです、と答えた。私も一緒にいてほしいと伝えてから、袋を開いた。"
+        },
+        {
+          "speaker": "josuke",
+          "text": "明日は早めに帰りますね。昼、友達と約束してるんで。"
+        },
+        {
+          "speaker": "player",
+          "text": "分かった。じゃあ、今日は先に食べよう。冷めちゃう。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "食後、食べきれなかった分は彼が明日持ち帰ることにした。私は残りを包んで冷蔵庫へしまい、彼の隣へ座り直した。手を伸ばすと、仗助くんの指が触れる。今夜の返事を目でもう一度確かめるように顔を見て、二人で近づいた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌朝、彼は身支度を済ませ、自分の鞄を持った。残しておいた食事の袋も手渡すと、帰ってから食べるのも楽しみっす、と笑う。私は玄関で見送り、そのあと自分の一日を始めた。次に誘う時の言葉を、まだ決めずに。",
+          "storyTime": {
+            "date": "7月13日",
+            "period": "朝"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB"
+    },
+    {
+      "id": "end_fwb_love",
+      "chapter": 5,
+      "title": "知っている近さの先",
+      "location": "大学の中庭",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "josuke",
+      "rating": "general",
+      "tags": [
+        "josuke"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "今は恋人になりたいと伝えると、仗助くんは袋を脇へ置いた。私の家で何度も一緒にいた人へ、外で返事を待つ。知っていることが多いほど、まだ知らなかった顔も見つかる気がした。"
+        },
+        {
+          "speaker": "josuke",
+          "text": "おれも、先輩と付き合いたいです。今までが嫌だったんじゃないけど、今は、恋人として呼んでほしい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "うん、と答えてから手を伸ばした。彼も同じように伸ばしてきたので、途中で指が重なった。どちらかが全部決めたのでない、その近づき方が嬉しかった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "次の休日、用事のない買い物へ行った。彼が自分の気に入ったものを見せ、私も別のものを選ぶ。袋を持ち替えて、空いた方の手を差し出すと、彼が持ち替えて取ってくれた。家へ向かう前にも、二人で寄りたい場所があった。",
+          "storyTime": {
+            "date": "7月5日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB_TO_LOVE"
+    },
+    {
+      "id": "end_special",
+      "chapter": 5,
+      "title": "使いながら、変わる形",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "7月12日",
+        "period": "昼"
+      },
+      "characterId": "josuke",
+      "rating": "general",
+      "tags": [
+        "josuke"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "机へ二人分の小物を並べると、仗助くんが最初に手帳の角を見た。私は彼のカード入れへ合う紙を選び、これでどう、と見せる。彼は惜しい、と別の色を隣へ置いた。自分も好きなものを譲らずに言えるから、その返事を嫌だと思わなかった。"
+        },
+        {
+          "speaker": "josuke",
+          "text": "先輩の方も言ってくださいよ。そこ、全部隠すんじゃなかったですよね。"
+        },
+        {
+          "speaker": "player",
+          "text": "うん。この傷は残したい。でも、次に使う時は引っかからないようにしたくて。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "二人で手を止め、どう重ねるか試した。完成したものは揃いではない。机の端で並べた時だけ、片方の色がもう片方の継ぎ目に少し入っていた。仗助くんがそれに気づき、悪くないっすね、と笑った。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "恋人になる約束はしていない。それでも、次にどこが擦れてくるかを見せ合う相手がいる。私は使うために手帳を鞄へ入れ、彼もカード入れを元のポケットへ戻した。きれいなまま置いておくより、次に会うまで持ち歩きたかった。"
+        }
+      ],
+      "choices": [],
+      "ending": "SPECIAL"
+    }
+  ]
+}

@@ -1,0 +1,1208 @@
+{
+  "id": "abbacchio",
+  "title": "アバッキオ — 空白も、そのまま",
+  "intro": "残っていない時間を、あったことにはできない。\n欠けた記録を挟んで向かい合い、まだ話していないことを少しずつ渡す。",
+  "startEvent": "record",
+  "character": {
+    "name": "アバッキオ",
+    "adult": true,
+    "heightCm": 188,
+    "heightBasis": "二次資料JoJo Wikiの身長欄と出典注記を照合。原作574話プロフィール。書籍・設定表現物は未照合。AUで同値を採用。",
+    "profile": "他人への強い警戒。一度得た信頼への義理。自分への厳しさと後悔。",
+    "personality": [
+      "他人への強い警戒",
+      "一度得た信頼への義理",
+      "自分への厳しさと後悔"
+    ],
+    "speech": {
+      "firstPerson": "オレ",
+      "addressing": "主人公は姓/おまえ、相手によってあんた。距離を詰めても皮肉は消えない。",
+      "tone": "短い皮肉やぶっきらぼうな指摘。語尾は感情と相手に合わせる。",
+      "habits": [
+        "短い皮肉やぶっきらぼうな指摘",
+        "おまえ、あんた",
+        "賛成を大げさに褒めない"
+      ],
+      "signaturePhrases": [],
+      "signatureNote": "日常の固定口癖は採用しない。象徴的な原作台詞と普段の話し方を混同せず、名台詞を貼り付けない。",
+      "avoid": [
+        "初回から世話好き",
+        "侮辱・嫌がらせを受け入れれば愛される筋",
+        "警察歴のAU断定"
+      ]
+    },
+    "referenceSection": "docs/CHARACTER_REFERENCE.md#cast-abbacchio"
+  },
+  "au": {
+    "role": "大学院生。ブチャラティと近い学年。セキュリティ等の専攻は候補",
+    "routeEnabled": true,
+    "addressing": [
+      {
+        "text": "{player.lastName}"
+      }
+    ]
+  },
+  "endingDescriptions": {
+    "FRIEND": {
+      "title": "用件はあとで",
+      "description": "何も頼まない日にも、自分から誘える友人。辛口の返事へ笑って返し、次の店を選ぶ。"
+    },
+    "LOVE_A": {
+      "title": "言われたままの返事",
+      "description": "ぼかさず伝えた好きを、彼の言葉で受け取る。聴きたい曲と近くにいたい気持ちを、自分から持っていく。"
+    },
+    "LOVE_B": {
+      "title": "黙った手を取る",
+      "description": "皮肉へ逃がさず言った告白に、自分の好きを返す。短い返事のあと、差し出した手がつながる。"
+    },
+    "FWB": {
+      "title": "帰る前の一曲",
+      "description": "互いに望む夜に会い、朝には自分の予定へ。用事を足さず次も誘う、親密な友人。"
+    },
+    "FWB_TO_LOVE": {
+      "title": "書き換えない続き",
+      "description": "過ごした夜を間違いにせず、今は恋人になりたいと選ぶ。いつもの店でも、椅子を少し近くへ。"
+    },
+    "SPECIAL": {
+      "title": "空いた欄を閉じない",
+      "description": "互いが選んだ不完全な途中を、確かめ合う相棒。欠けたところを消さず、次はそこから始められる。"
+    }
+  },
+  "events": [
+    {
+      "id": "record",
+      "chapter": 1,
+      "title": "映っていない十二分",
+      "location": "大学の作業室",
+      "storyTime": {
+        "date": "4月25日",
+        "period": "夕方"
+      },
+      "characterId": "abbacchio",
+      "rating": "general",
+      "tags": [
+        "abbacchio"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "学生企画の記録をまとめていて、冒頭の映像がないことに気づいた。撮影と記録用の共有に同意を得た素材だけを開き、技術の相談に乗ると聞いた院生のアバッキオ先輩へ見せる。先輩は座る前に、元のファイルはどれだと訊いた。"
+        },
+        {
+          "speaker": "abbacchio",
+          "text": "編集したやつを見せられても分からねえ。何を触ったか、先に言え。何もしてないって答える前に思い出せよ。"
+        },
+        {
+          "speaker": "player",
+          "text": "名前を変えました。中身はまだ切ってません。元の名前の一覧は、こっちに残してあります。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "疑われた気がして、少し身構えた。それでも説明する順番は分かったので、記録した紙を渡す。先輩は目を走らせ、残してあるなら先に出せ、と椅子を引いた。安心させる言葉ではなかったが、こちらを見ずに追い返す背中でもなかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "show",
+          "text": "自分が変更したところを、紙の記録と一緒に見せる",
+          "next": "missing",
+          "effect": "ask"
+        },
+        {
+          "id": "files",
+          "text": "元のファイルを分け、確認できる順に並べる",
+          "next": "missing",
+          "effect": "workTogether"
+        }
+      ]
+    },
+    {
+      "id": "missing",
+      "chapter": 1,
+      "title": "ないものは、ない",
+      "location": "大学の作業室",
+      "storyTime": {
+        "date": "5月2日",
+        "period": "夕方"
+      },
+      "characterId": "abbacchio",
+      "rating": "general",
+      "tags": [
+        "abbacchio"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "別の撮影係にも確かめたが、冒頭を撮った素材は残っていなかった。先輩とファイルを開き直し、始まる位置が同じだと確認する。私が思い出して説明を書けばつなげられるかもしれないと言うと、それは記録と混ぜるな、と返った。"
+        },
+        {
+          "speaker": "abbacchio",
+          "text": "覚えてることを書くのは勝手だ。だが、映ってたみたいに並べるな。あとで見たやつには区別がつかねえだろ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "完成させたいばかりで、空いているところを隠そうとしていた。私は画面を閉じず、冒頭の映像はない、と別の欄へ書く。先輩は頷きもせずその文を読んだが、消せとは言わなかった。"
+        },
+        {
+          "speaker": "player",
+          "text": "自分が覚えてることは、確認できたものと分けます。埋まらなくても、これで出したいです。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "gap",
+          "text": "欠けた部分を明示し、思い出は別の欄へ書く",
+          "next": "mistake",
+          "effect": "honest",
+          "setFlags": [
+            "keptGap"
+          ]
+        },
+        {
+          "id": "check",
+          "text": "残っている範囲だけを、二人で確かめ直す",
+          "next": "mistake",
+          "effect": "compareNotes"
+        }
+      ]
+    },
+    {
+      "id": "mistake",
+      "chapter": 1,
+      "title": "違っていたのは",
+      "location": "大学の作業室",
+      "storyTime": {
+        "date": "5月9日",
+        "period": "夕方"
+      },
+      "characterId": "abbacchio",
+      "rating": "general",
+      "tags": [
+        "abbacchio"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "別の機器の映像を時刻で並べると、同じ場面が前後に分かれた。私が自分の一覧を疑って書き直しかけた時、先輩が手を止める。二台の時計の設定がずれていた。最初に同じ時刻だと思って並べたのは、先輩の方だった。"
+        },
+        {
+          "speaker": "abbacchio",
+          "text": "そこはオレが見落とした。消して書き直せば済む。……おまえの方まで、直す必要はねえ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "低く言ったあと、先輩は紙を引き寄せた。私が大丈夫ですと軽く言えば、かえって触れられたくないところへ届きそうだった。私は一致する場面を画面で開き、ここを基準に並べませんかと示す。"
+        },
+        {
+          "speaker": "player",
+          "text": "間違えたところは、訂正したと残しましょう。次に見る時、どうして順番が変わったか私も分かるので。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "correct",
+          "text": "誰の見落としも消さず、訂正した順番を一緒に残す",
+          "next": "message",
+          "effect": "homeTalk",
+          "setFlags": [
+            "markedCorrection"
+          ]
+        },
+        {
+          "id": "two",
+          "text": "「このあと、一緒に食べて帰りませんか」と誘う",
+          "next": "message",
+          "effect": "lunchTwo"
+        },
+        {
+          "id": "sort",
+          "text": "映像の一致するところから、並べ直す作業を分担する",
+          "next": "message",
+          "effect": "shiftRest"
+        }
+      ]
+    },
+    {
+      "id": "message",
+      "chapter": 2,
+      "title": "一行だけの返事",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "5月12日",
+        "period": "夜"
+      },
+      "characterId": "abbacchio",
+      "rating": "general",
+      "tags": [
+        "abbacchio"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "アバッキオ先輩から、確認用の短い文が届いた。見せてもらう範囲を決めた記録を読み終えたらしく、直す箇所が一つだけ書かれている。褒め言葉はなかったが、最後まで見なければ気づかない場所だった。"
+        },
+        {
+          "speaker": "abbacchio",
+          "text": "最後の注記、日付が一日ずれてる。ほかは今のところ見つからねえ。提出する前に、自分でももう一度見ろよ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私は日付を直し、それから全文を読み返した。もう一度見ろという文が残っているのに、ひとりで放り出された感じはしなかった。画面の脇へ返事を開き、自分が伝えたい方から打った。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "glad",
+          "text": "最後まで見てくれて、嬉しかったです。また一緒に話したいです",
+          "next": "after",
+          "effect": "messageHeart",
+          "replyVariants": [
+            {
+              "text": "あの訂正を残したなら、次も自分で見返せるだろ。話があるなら、会った時にしろ。",
+              "when": {
+                "flags": [
+                  "markedCorrection"
+                ]
+              }
+            },
+            {
+              "text": "用があるなら先に言え。空いてる時なら聞く。"
+            }
+          ],
+          "lockRoute": "abbacchio"
+        },
+        {
+          "id": "notice",
+          "text": "最後のところまで見てくれたんですね。ありがとうございます",
+          "next": "after",
+          "effect": "messageListen",
+          "replyVariants": [
+            {
+              "text": "途中でやめたら、見たことにならねえだろ。直したらもう出していい。"
+            }
+          ],
+          "lockRoute": "abbacchio"
+        },
+        {
+          "id": "thanks",
+          "text": "日付、直しました。自分でも確認して提出します",
+          "next": "after",
+          "effect": "messageDaily",
+          "replyVariants": [
+            {
+              "text": "そうしろ。元の方は、消さずに置いとけ。"
+            }
+          ],
+          "lockRoute": "abbacchio"
+        }
+      ],
+      "message": true
+    },
+    {
+      "id": "after",
+      "chapter": 2,
+      "title": "用事が終わっても",
+      "location": "大学近くの喫茶店",
+      "storyTime": {
+        "date": "5月19日",
+        "period": "夕方"
+      },
+      "characterId": "abbacchio",
+      "rating": "general",
+      "tags": [
+        "abbacchio"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "記録を提出し終えて、先輩を喫茶店へ誘った。礼ならもう聞いたと言われ、それだけではありませんと答える。向かいへ座っても、先輩は私が何か頼むのを待っているようだった。私は自分の飲み物を決め、次は失敗を持ってこなかったと少し笑う。"
+        },
+        {
+          "speaker": "abbacchio",
+          "text": "それなら、何だ。何もねえのに呼んだのか。"
+        },
+        {
+          "speaker": "player",
+          "text": "はい。先輩と話したかったので。用事がないと、だめですか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼はすぐに答えず、メニューを閉じた。だめとは言ってねえ、と返ってきたので、私は肩の力を抜く。何を話せばよいか少し迷ったが、店で流れる曲を知っているかと尋ねると、先輩は曲の途中を聞いてから短く答えた。今日は画面を挟まず、その声を聞いていたかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "no_task",
+          "text": "用事を足さず、互いの好きなものを聞く時間を残す",
+          "next": "home",
+          "effect": "conferencePractical",
+          "setFlags": [
+            "withoutTask"
+          ]
+        },
+        {
+          "id": "near",
+          "text": "「今みたいに、二人でいるのが好きです」と伝える",
+          "next": "home",
+          "effect": "walkClose"
+        },
+        {
+          "id": "talk",
+          "text": "飲み物を楽しみ、帰る道を一緒に歩く",
+          "next": "home",
+          "effect": "walkHome"
+        }
+      ]
+    },
+    {
+      "id": "home",
+      "chapter": 3,
+      "title": "閉じた画面の横で",
+      "location": "アバッキオの自宅",
+      "storyTime": {
+        "date": "6月2日",
+        "period": "夕方"
+      },
+      "characterId": "abbacchio",
+      "rating": "general",
+      "tags": [
+        "abbacchio"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先輩が喫茶店で挙げた曲を、今度は落ち着いて聴きたいと話した。家へ来るなら余計な記録を持ち込むなと言われ、今日は音楽の話だけを持って訪ねる。食事を買っていくと、量を見た先輩が二人分でそれかと笑った。私は足りないと思いますかと問い返す。"
+        },
+        {
+          "speaker": "abbacchio",
+          "text": "多い方だ。余ったら、おまえも持って帰れよ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "食べる前に取り分けておき、二人で曲を聴いた。好きなところが同じではなく、私が途中の音を指すと、先輩はそっちかと言う。間違いを探す声ではないと分かって、私はもう少し自分の感想を続けた。"
+        },
+        {
+          "speaker": "player",
+          "text": "先輩は、どこが好きなんですか。私、もう一回そこを聴きたいです。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "stay_talk",
+          "text": "彼の選んだ箇所を一緒に聴き、隣で話す",
+          "next": "evening",
+          "effect": "hotelTalk"
+        },
+        {
+          "id": "rest",
+          "text": "食後に片づけを手伝い、少し休む",
+          "next": "evening",
+          "effect": "homeRest"
+        }
+      ]
+    },
+    {
+      "id": "evening",
+      "chapter": 3,
+      "title": "持ち帰れない一言",
+      "location": "アバッキオの自宅",
+      "storyTime": {
+        "date": "6月2日",
+        "period": "夜"
+      },
+      "characterId": "abbacchio",
+      "rating": "general",
+      "tags": [
+        "abbacchio"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "曲が終わり、先輩が再生を止めた。持ち帰る食事の容器を受け取ると、帰る用意はできたはずだった。私は鞄へしまい、まだ座ったままでいる。先輩が何か言うより早く、今日は楽しかったですと口にした。"
+        },
+        {
+          "speaker": "abbacchio",
+          "text": "……なら、よかったんじゃねえの。まだ何かある顔だが。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "読まれたようで少し悔しかった。けれど、ないと言って立ち上がる方がもっと嫌だった。私は机から手を離し、先輩の顔を見る。記録にも礼にもできない気持ちを、自分で引き受けて伝えたかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "stay",
+          "text": "「今夜は、先輩の近くにいたいです」と伝える",
+          "next": "consent",
+          "effect": "hotelInvite",
+          "when": {
+            "min": {
+              "trust": 45,
+              "desire": 8
+            }
+          }
+        },
+        {
+          "id": "next_time",
+          "text": "「また会いたいです」と伝え、今日は帰る",
+          "next": "next",
+          "effect": "walkHome"
+        }
+      ]
+    },
+    {
+      "id": "consent",
+      "chapter": 3,
+      "title": "見落とさないで聞く",
+      "location": "アバッキオの自宅",
+      "storyTime": {
+        "date": "6月2日",
+        "period": "夜"
+      },
+      "characterId": "abbacchio",
+      "rating": "general",
+      "tags": [
+        "abbacchio"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先輩は私を見たまま、手元の物へ触れなくなった。冗談だと受け取られたくなくて、私は顔を逸らさない。やがて彼が口を開く。からかう時よりも、言葉が少なかった。"
+        },
+        {
+          "speaker": "abbacchio",
+          "text": "オレも、おまえに触れたい。今夜、一緒にいたいと思ってる。おまえがそうしたいなら。"
+        },
+        {
+          "speaker": "player",
+          "text": "私もそうしたいです。でも今夜のことと、恋人になる約束は別にして話したい。途中でやめたくなったら、私も言います。"
+        },
+        {
+          "speaker": "abbacchio",
+          "text": "分かった。オレも言う。どっちかが止めたいなら、そこでやめる。今から帰るって言っても、それでいい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私は頷き、足元へ置いた鞄を椅子から少し離した。片づけただけで返事にせず、まだ残っている自分の声を出そうとする。怖いのはこの人ではなく、望んだことがそのまま届く近さだった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「今夜は、一緒にいたいです」と答える",
+          "next": "night",
+          "effect": "consent",
+          "setFlags": [
+            "consented",
+            "hadNight"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「今日は帰ります」と伝える",
+          "next": "next",
+          "effect": "walkHome",
+          "setFlags": [
+            "declinedTouch"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "night",
+      "chapter": 3,
+      "title": "言葉を置いたあとの手",
+      "location": "アバッキオの自宅",
+      "storyTime": {
+        "date": "6月2日",
+        "period": "夜"
+      },
+      "characterId": "abbacchio",
+      "rating": "fade",
+      "tags": [
+        "abbacchio"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "持ち帰るはずだった食事を冷蔵庫へ移してから、先輩の隣へ椅子を寄せた。私は手を出した。触れた指が握り返され、近づいていいかと訊かれる。はいと答えて顔を上げると、彼が身を屈めた。自分も少し前へ出て、唇が触れる直前に目を閉じる。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "離れたあと、私はもう一度と頼んだ。先輩は少しだけ目を細め、黙って顔を寄せる。今度は自分から頬へ触れ、近さを確かめた。二人で椅子を離れて部屋の奥へ移り、灯りを消したあとも、つないだ手は離さなかった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝、目を開けると、先輩もこちらを見ていた。おはようございますと小さく言うと、起きたか、と声が返る。朝食を食べてから帰りたいと話し、私は毛布の端を持ち直した。彼は起き上がる前に、今の気持ちを聞いておきたいと言った。",
+          "storyTime": {
+            "date": "6月3日",
+            "period": "朝"
+          }
+        },
+        {
+          "speaker": "abbacchio",
+          "text": "オレは、またおまえとこうして会いたい。おまえはどうなんだ。今の話を聞かせろ。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "again",
+          "text": "「恋人の約束はせず、また望む夜に会いたいです」と答える",
+          "next": "next",
+          "effect": "messageBoundaries",
+          "setFlags": [
+            "ongoing"
+          ]
+        },
+        {
+          "id": "more",
+          "text": "「また夜も会いたいです。先輩をもっと好きになりました」と答える",
+          "next": "next",
+          "effect": "messageAgain",
+          "setFlags": [
+            "ongoing"
+          ]
+        },
+        {
+          "id": "day",
+          "text": "「これからは昼に会う友人でいたいです」と答える",
+          "next": "next",
+          "effect": "messageDaily",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ],
+      "when": {
+        "flags": [
+          "consented"
+        ]
+      }
+    },
+    {
+      "id": "next",
+      "chapter": 4,
+      "title": "何も開かずに",
+      "location": "大学近くの喫茶店",
+      "storyTime": {
+        "date": "6月23日",
+        "period": "夕方"
+      },
+      "characterId": "abbacchio",
+      "rating": "general",
+      "tags": [
+        "abbacchio"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "六月は食事や音楽の話で会い、互いが望んだ夜には先輩の家でも過ごした。朝にはそれぞれの用事へ戻り、泊まらず帰る日もある。会いたい気持ちを用件へ紛れさせず、自分から短く連絡することが増えた。",
+          "when": {
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "昼に会う友人でいたいと答えてから、次の約束は喫茶店になった。先輩は夜の返事を変えさせようとはしなかった。私も少し照れながら、今度は自分の好きな曲を持ってきたと話すところから始めた。",
+          "when": {
+            "flags": [
+              "hadNight",
+              "endedNight"
+            ],
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "六月にも喫茶店で会い、学内ではそれぞれの作業へ戻った。相談を持っていく日もあったが、何も頼まない日も続いた。先輩は相変わらず辛口で、私も嫌な言い方にはその場で返した。次に会う約束まで、それで消えることはなかった。",
+          "when": {
+            "notFlags": [
+              "hadNight"
+            ]
+          }
+        },
+        {
+          "speaker": "abbacchio",
+          "text": "話があるんだろ。今日は、何も開かねえのか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩の目が鞄へ落ちたので、今日は入っていませんと答えた。記録を見てもらう時より少し緊張している自分がおかしい。それでも持ってきたのは、自分で言わなければ残らない言葉だった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "tell",
+          "text": "自分から、先輩が好きだと伝える",
+          "next": "confess_player",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 35,
+              "romanceChar": 25
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "listen",
+          "text": "先輩が言おうとしている言葉を聞く",
+          "next": "confess_abbacchio",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 20,
+              "romanceChar": 35
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "our_record",
+          "text": "不完全な途中も互いに預けられる相棒でいたいと話す",
+          "next": "own_record",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 35,
+              "romanceChar": 30,
+              "comfort": 20
+            },
+            "flags": [
+              "keptGap",
+              "markedCorrection",
+              "withoutTask"
+            ],
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "nights",
+          "text": "これからも、望む夜に会う友人でいたいと話す",
+          "next": "fwb_choice",
+          "when": {
+            "min": {
+              "trust": 50,
+              "desire": 25,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "love",
+          "text": "「今は、先輩の恋人になりたいです」と伝える",
+          "next": "end_fwb_love",
+          "when": {
+            "min": {
+              "trust": 60,
+              "romancePlayer": 50,
+              "romanceChar": 40,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          },
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "friends",
+          "text": "遠慮なく話し、気軽に誘う友人でいたいと伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_player",
+      "chapter": 4,
+      "title": "理由を隠さない",
+      "location": "大学近くの喫茶店",
+      "storyTime": {
+        "date": "6月23日",
+        "period": "夕方"
+      },
+      "characterId": "abbacchio",
+      "rating": "general",
+      "tags": [
+        "abbacchio"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先輩が好きですと言うと、彼はすぐには返さなかった。冗談を言ったつもりにしてしまえば、この沈黙を短くできるかもしれない。でも私は、自分の気持ちまで確認できない記録のようにぼかしたくなかった。"
+        },
+        {
+          "speaker": "player",
+          "text": "言い方がきついなと思うこともあります。でも、一緒にいたいです。うまくできた日だけじゃなくて、何もできなかった日に、会いたくなる。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩は目を伏せ、やがてこちらを見る。変わったやつだと言われそうで少し身構えたが、その言葉は来なかった。私は自分の手を膝で握るのをやめ、続きを渡した。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "like",
+          "text": "「私と付き合ってください」と伝える",
+          "next": "end_love_a",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "choose",
+          "text": "「先輩の恋人になりたいです。私のことは、どう思いますか」",
+          "next": "end_love_a",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "wait",
+          "text": "「今は友人として、これからも会いたいです」と伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_abbacchio",
+      "chapter": 4,
+      "title": "疑うより先に言う",
+      "location": "大学近くの喫茶店",
+      "storyTime": {
+        "date": "6月23日",
+        "period": "夕方"
+      },
+      "characterId": "abbacchio",
+      "rating": "general",
+      "tags": [
+        "abbacchio"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先輩は机の端へ置いた手を引き、膝へ戻した。何か言いかけて、いつもの皮肉に変えるのをやめたように見える。私は笑って逃がさず、目を上げて待った。彼が私の姓を呼ぶ。"
+        },
+        {
+          "speaker": "abbacchio",
+          "text": "{player.lastName}、オレはおまえが好きだ。友達として会うだけじゃ、済まなくなった。おまえの恋人になりたい。……返事は、おまえが決めろ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "最後だけ少しぶっきらぼうで、私はその声まで聞きたかったのだと思った。唇を結んだ先輩が、まっすぐこちらを見ている。私はまず息を整え、自分の言葉を選んだ。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「私も好きです。先輩と付き合いたいです」と答える",
+          "next": "end_love_b",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「恋人にはなれません。友人でいたいです」と答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "refusedConfession",
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "own_record",
+      "chapter": 4,
+      "title": "確かめる側も、交代で",
+      "location": "大学近くの喫茶店",
+      "storyTime": {
+        "date": "6月23日",
+        "period": "夕方"
+      },
+      "characterId": "abbacchio",
+      "rating": "general",
+      "tags": [
+        "abbacchio"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人になるのとは違う形で、不完全な途中を見せ合える相棒でいたいと話した。私が確かめてもらうだけでなく、先輩が迷っているものも見たい。そう言うと、彼は少し目を細めた。"
+        },
+        {
+          "speaker": "abbacchio",
+          "text": "見りゃ何でも分かると思うなよ。オレの方にも、おまえに見られたくねえものはある。"
+        },
+        {
+          "speaker": "player",
+          "text": "全部とは言ってません。見せるって選んだものを、途中から受け取りたいです。私の方も、自分で選びます。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩はしばらく黙り、端末を出した。個人で作っていた記録の見せ方を、まだ決めかねているらしい。今度見せるならこの部分だけだと言って、内容のない目次を開く。私も、ここなら自分が見た時の分かりにくさを話せると思った。"
+        },
+        {
+          "speaker": "abbacchio",
+          "text": "褒めるために見なくていい。分からねえところは、そのまま言え。オレもそうする。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "分かりましたと答えると、彼は目次を閉じた。今はその先まで見せてもらわない。預けられた範囲から始める次の約束を、私は自分の予定へ入れた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "partners",
+          "text": "互いが選んだ途中を、確かめ合う相棒になる",
+          "next": "end_special",
+          "effect": "homeTogether",
+          "setFlags": [
+            "ourRecord"
+          ]
+        },
+        {
+          "id": "friend",
+          "text": "今は必要な時に相談する友人でいたいと伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fwb_choice",
+      "chapter": 4,
+      "title": "その夜にも、聞く",
+      "location": "大学近くの喫茶店",
+      "storyTime": {
+        "date": "6月23日",
+        "period": "夕方"
+      },
+      "characterId": "abbacchio",
+      "rating": "general",
+      "tags": [
+        "abbacchio"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人の約束はせず、望む夜にも会いたいと話した。先輩は私を見たまま少し黙り、オレもそうしたいと答える。私はその短い返事を聞いてから頷いた。"
+        },
+        {
+          "speaker": "abbacchio",
+          "text": "前にいいって言ったから次も、とは思わねえ。その時に聞く。途中でやめたい時も言え。オレも言う。"
+        },
+        {
+          "speaker": "player",
+          "text": "はい。会いたい時は私からも誘います。昼に会って話すのも、そのまま続けたいです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩が次の空いている日を挙げ、私は自分の予定を確かめた。翌朝早い日ではなく、少し余裕のある日を二人で選ぶ。決めてから飲み物へ手を伸ばすと、さっきより味がよく分かった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "continue",
+          "text": "親密な友人として、次の夜を二人で決める",
+          "next": "end_fwb",
+          "effect": "messageBoundaries"
+        },
+        {
+          "id": "daytime",
+          "text": "考え直し、昼に会う友人でいたいと伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "end_friend",
+      "chapter": 5,
+      "title": "用件はあとで",
+      "location": "大学近くの喫茶店",
+      "storyTime": {
+        "date": "7月7日",
+        "period": "昼"
+      },
+      "characterId": "abbacchio",
+      "rating": "general",
+      "tags": [
+        "abbacchio"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人にはなれないと答えると、先輩は視線を落とし、分かったとだけ言った。その日はそこで別れ、少しあとに私から店へ誘った。空いてる、と返ってきた短い文を見て、自分の予定へ時刻を書いた。",
+          "when": {
+            "flags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "昼に会う友人でいたいと答えてから、次の約束は喫茶店になった。先輩は夜の返事を変えさせるような話をしなかった。私も無理に何でもないふりをせず、今日はこれを聴いてきたと曲の話から始めた。",
+          "when": {
+            "flags": [
+              "hadNight",
+              "endedNight"
+            ],
+            "notFlags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "友人としてまた会おうと約束し、今日は先に店へ着いた。先輩が入ってくると、自分から手を上げる。画面も資料も持ってこなかったので、席へ座るまで何を頼むのかと聞かれることはなかった。",
+          "when": {
+            "notFlags": [
+              "hadNight",
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "abbacchio",
+          "text": "今日は何もねえんだな。だったら、飲み物くらい先に決めとけ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "もう決めました、と笑って答えた。相変わらずの言い方へ、こちらも気兼ねなく返せる。別の友人と行った店の話をすると、先輩が少しだけ顔を上げた。今度はそこへ行きませんかと、自分から次の場所を渡した。"
+        }
+      ],
+      "choices": [],
+      "ending": "FRIEND"
+    },
+    {
+      "id": "end_love_a",
+      "chapter": 5,
+      "title": "言われたままの返事",
+      "location": "大学近くの喫茶店",
+      "storyTime": {
+        "date": "6月23日",
+        "period": "夕方"
+      },
+      "characterId": "abbacchio",
+      "rating": "general",
+      "tags": [
+        "abbacchio"
+      ],
+      "body": [
+        {
+          "speaker": "abbacchio",
+          "text": "オレも好きだ。おまえと付き合いたい。……ここまで言わせて、聞こえなかったとは言うなよ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "聞こえました、と答えてから笑った。安心したからだけではなく、返ってきた声が嬉しかった。店を出てから手をつないでいいかと尋ねると、彼は黙って掌を向けた。私が取るまで引っ込めずにいてくれた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "次の休日、私は自分の好きな曲を持って先輩の家へ行った。評価してほしいのでなく、一緒に聴きたかった。隣へ座ると近いなと言われ、今日は近くにいたいですと返す。先輩は何も言わず、こちらのためにもう少し場所を空けた。",
+          "storyTime": {
+            "date": "6月30日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_A"
+    },
+    {
+      "id": "end_love_b",
+      "chapter": 5,
+      "title": "黙った手を取る",
+      "location": "大学近くの喫茶店",
+      "storyTime": {
+        "date": "6月23日",
+        "period": "夕方"
+      },
+      "characterId": "abbacchio",
+      "rating": "general",
+      "tags": [
+        "abbacchio"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私も好きですと答えると、先輩は一度目を伏せた。それからこちらを見て、そうか、と短く言う。いつもの返事に似ていたが、そのあとの言葉が続かなかった。私は笑ってごまかさず、聞けて嬉しかったですと伝えた。"
+        },
+        {
+          "speaker": "abbacchio",
+          "text": "……分かった。何度も言わなくていい。オレも、同じだ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "店を出てから私が手を差し出すと、先輩は指先を見て、それから取った。歩き始めるまでの短い間に、自分の手がいつもより温かいと気づく。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌週、待ち合わせに来た彼の隣へ、自分から並んだ。今日は何を聴くのかと訊かれ、先に少し歩きたいですと答える。先輩は遠回りになる道を見たが、そのまま私と同じ方へ曲がった。",
+          "storyTime": {
+            "date": "6月30日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_B"
+    },
+    {
+      "id": "end_fwb",
+      "chapter": 5,
+      "title": "帰る前の一曲",
+      "location": "アバッキオの自宅",
+      "storyTime": {
+        "date": "7月7日",
+        "period": "夜"
+      },
+      "characterId": "abbacchio",
+      "rating": "fade",
+      "tags": [
+        "abbacchio"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "互いに今夜会いたいと伝え、先輩の家へ来た。夕食を並べる前に、今夜も一緒にいたいと口にする。オレもだと返ってから、翌朝は昼までに帰ると話した。今日は持ち帰るほど買いすぎなかったので、二人で皿を空けた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "食後、私が先に隣へ座る。手へ触れたいと話すと、先輩もこちらを向いた。彼が顔を寄せ、身を屈めたところへ自分から近づく。唇が離れたあとも手は握ったままで、二人で部屋の奥へ移った。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝、食事を終えてから短い曲を一つ聴いた。帰る時刻までまだ少しあったので、自分から頼んだのだ。先輩は途中で止めず、終わってから端末を置いた。玄関でまた誘いますと伝えると、用事を作るなよ、と返る。分かってますと笑い、自分の鞄を持って外へ出た。",
+          "storyTime": {
+            "date": "7月8日",
+            "period": "朝"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB"
+    },
+    {
+      "id": "end_fwb_love",
+      "chapter": 5,
+      "title": "書き換えない続き",
+      "location": "大学近くの喫茶店",
+      "storyTime": {
+        "date": "6月23日",
+        "period": "夕方"
+      },
+      "characterId": "abbacchio",
+      "rating": "general",
+      "tags": [
+        "abbacchio"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "今は恋人になりたいと伝えると、先輩は私を見る。夜に近くで過ごしたことを、返事の代わりにはしなかった。私は自分の声を引っ込めず、次の言葉を待った。"
+        },
+        {
+          "speaker": "abbacchio",
+          "text": "オレも、おまえの恋人になりたい。今までが間違いだったって話じゃねえ。今、そうしたいってことだ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私もです、と答えた。机の上へ伸ばしかけた手を、彼が同じように伸ばして取る。知っている指なのに、その先にまだ知らない顔があった。私は少し笑い、次は昼にも会いたいと話した。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌週、街を歩いてから店へ入った。何も頼まず隣へ座れることは前から知っていたはずなのに、今は少し近くへ寄りたかった。狭いですかと訊くと、それくらいでいい、と返る。私はそこから動かず、自分の選んだ飲み物を待った。",
+          "storyTime": {
+            "date": "6月30日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB_TO_LOVE"
+    },
+    {
+      "id": "end_special",
+      "chapter": 5,
+      "title": "空いた欄を閉じない",
+      "location": "大学の作業室",
+      "storyTime": {
+        "date": "7月14日",
+        "period": "昼"
+      },
+      "characterId": "abbacchio",
+      "rating": "general",
+      "tags": [
+        "abbacchio"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先輩が見せると決めた範囲だけを開き、私は分からなくなった場所へ印をつけた。できていないところまで褒めるつもりはなかったが、辛口に言えば対等になるわけでもない。自分が見た順に話すと、彼は途中で止めずに聞いた。"
+        },
+        {
+          "speaker": "abbacchio",
+          "text": "そこが引っかかるのか。オレは、前から知ってるつもりで飛ばしてた。……印は、そのまま残しとけ。"
+        },
+        {
+          "speaker": "player",
+          "text": "はい。私の方も、まだ埋まってないところがあります。今日はそこまで見てもらいたいです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "画面を替え、今度は自分が途中を渡す側になる。恋人になる約束ではなく、全部を隠さず差し出す約束でもない。選んで預けた範囲にある空白を、見なかったことにしない相手がいた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "片づける時、先輩が次もここからだなと印を指した。私は頷き、元の記録を消さずに閉じる。今日はもう何も直さず、帰りにあの店へ寄りませんかと誘った。彼が自分の荷物を持ち、先に扉を開けた。"
+        }
+      ],
+      "choices": [],
+      "ending": "SPECIAL"
+    }
+  ]
+}

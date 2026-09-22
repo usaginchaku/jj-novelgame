@@ -1,0 +1,1206 @@
+{
+  "id": "jolyne",
+  "title": "徐倫 — 着たい色で、外へ",
+  "intro": "ほどいた袖を、同じ形には戻さない。\n自分で選んだ色を着て、隣を歩く人に見せたくなる。",
+  "startEvent": "cloth",
+  "character": {
+    "name": "徐倫",
+    "adult": true,
+    "heightCm": 174.5,
+    "heightBasis": "二次資料JoJo Wikiの身長欄と出典注記を照合。ストーンオーシャン63話。初期10話174cmからの修正。書籍・設定表現物は未照合。AUで同値を採用。",
+    "profile": "強い意志と行動力。傷つきやすさと回復力。仲間のために踏み出す。",
+    "personality": [
+      "強い意志と行動力",
+      "傷つきやすさと回復力",
+      "仲間のために踏み出す"
+    ],
+    "speech": {
+      "firstPerson": "あたし",
+      "addressing": "主人公は名前/あんた。同期の自然な常体。",
+      "tone": "短く率直な常体。語尾は感情と相手に合わせる。",
+      "habits": [
+        "短く率直な常体",
+        "怒りも照れも言葉に出る",
+        "時には大きく言ってから動く"
+      ],
+      "signaturePhrases": [],
+      "signatureNote": "日常の固定口癖は採用しない。象徴的な原作台詞と普段の話し方を混同せず、名台詞を貼り付けない。",
+      "avoid": [
+        "男口調の記号だけ",
+        "父との確執だけで全てを説明",
+        "原作相手との恋愛固定"
+      ]
+    },
+    "referenceSection": "docs/CHARACTER_REFERENCE.md#cast-jolyne"
+  },
+  "au": {
+    "role": "学部3年・同期。デザイン/材料系は候補",
+    "routeEnabled": true,
+    "addressing": [
+      {
+        "text": "{player.lastName}"
+      }
+    ]
+  },
+  "events": [
+    {
+      "id": "cloth",
+      "title": "切る前の色",
+      "chapter": 1,
+      "location": "街の布地店",
+      "storyTime": {
+        "date": "5月10日",
+        "period": "昼"
+      },
+      "characterId": "jolyne",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "同じ三年の徐倫と、店先の端切れを掘り出していた。先週、食堂で古い上着の袖をどうにかしたいと話したら、捨てる前に見せて、と言われたのだ。徐倫も自分の上着を持ってきていて、私の淡い色の候補へ、目の覚めるような青を並べた。"
+        },
+        {
+          "speaker": "jolyne",
+          "text": "これ。少ししか使わないなら、これくらい出た方がいい。あたしは袖、全部やるけど。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "青を腕に当てると、鏡の中で服より先にそこが見えた。私は笑って、隣に積んであった細かい縞を拾う。徐倫はそっちか、と眉を上げたが、私が手放さずにいると自分の青と重ねてみた。合うかどうかではなく、並ぶとどう見えるかを二人で確かめた。"
+        },
+        {
+          "speaker": "player",
+          "text": "直したところ、隠さなくていいんだね。私、この縞を外へ出したい。"
+        },
+        {
+          "speaker": "jolyne",
+          "text": "じゃあ出そう。元に戻すだけなら、つまんない。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "店の人に必要な長さを切ってもらう間、徐倫は自分の袖を大きくまくった。腕に当てていた青がなくなっても、あの強い色はまだ目に残る。私は買った縞を畳まずにもう一度広げ、来週着る自分を少しだけ先に見た。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "own",
+          "text": "自分の選んだ縞を、見える側へ使う",
+          "next": "redo",
+          "effect": "workTogether",
+          "setFlags": [
+            "ownPattern"
+          ],
+          "lockRoute": "jolyne"
+        },
+        {
+          "id": "invite",
+          "text": "「完成したら徐倫と出かけたい」と誘う",
+          "next": "redo",
+          "effect": "gameDate",
+          "lockRoute": "jolyne"
+        }
+      ]
+    },
+    {
+      "id": "redo",
+      "title": "ほどくのは、ここだけ",
+      "chapter": 1,
+      "location": "徐倫の自宅",
+      "storyTime": {
+        "date": "5月17日",
+        "period": "昼"
+      },
+      "characterId": "jolyne",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "机には私の上着と徐倫の上着が並んでいた。試し縫いをした徐倫の袖は、着て腕を曲げると変なところで突っ張る。鏡から戻ってきた彼女は、悪態をついて糸を切りかけ、刃先を止めた。私は横から、ずれた印を指す。"
+        },
+        {
+          "speaker": "player",
+          "text": "全部じゃなくて、ここからじゃない？　私、押さえてるから。"
+        },
+        {
+          "speaker": "jolyne",
+          "text": "分かってる。……いや、今は全部切りたかった。そこ、動かないように持ってて。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "針をしまってから布を受け取った。彼女がほどくにつれて、固く引かれていた縫い目が緩む。手を出す場所を決めてもらうと、私も余計なことをせずにいられた。徐倫は最後の糸を抜き、椅子の背へ体を預けて息を吐いた。"
+        },
+        {
+          "speaker": "jolyne",
+          "text": "助かった。あたしの、先に直しちゃっていい？　今やらないと腹立ったままになる。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "もちろん、と返すとすぐ身を起こした。その速さが可笑しくて笑ったら、何、とこちらを見る。何でもないと言いかけ、また腕を通すところが見たい、と話した。徐倫の指が、布の端で少し止まった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "hold",
+          "text": "必要なところを尋ねて、布を押さえる役を引き受ける",
+          "next": "wear",
+          "effect": "shiftHelp",
+          "setFlags": [
+            "askedHelp"
+          ]
+        },
+        {
+          "id": "near",
+          "text": "徐倫の手元を一緒に見たくて、椅子を寄せる",
+          "next": "wear",
+          "effect": "walkClose"
+        }
+      ]
+    },
+    {
+      "id": "wear",
+      "title": "外の明るさ",
+      "chapter": 1,
+      "location": "駅前の歩道",
+      "storyTime": {
+        "date": "5月24日",
+        "period": "昼"
+      },
+      "characterId": "jolyne",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "お互いに直した上着を着て待ち合わせた。徐倫の青い袖が人波の向こうで上がる。私の縞は、部屋の鏡で見るよりずっとはっきりしていた。肩が落ち着かず袖口を引いていると、彼女はすぐそこへ目を留めた。"
+        },
+        {
+          "speaker": "jolyne",
+          "text": "変じゃない。……って言われたい顔？　それとも、どこか引っかかる？"
+        },
+        {
+          "speaker": "player",
+          "text": "引っかからない。見えるようにしたのに、外に出ると気になるんだなと思って。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "徐倫は笑い、私の正面から半歩ずれた。通行人の視線まで消してくれるわけではなかったけれど、隣に同じくらい派手な袖があると、腕を縮めている方が窮屈になる。私は鞄を掛け直し、前に見つけた小さな映画館へ行ってみたいと話した。"
+        },
+        {
+          "speaker": "jolyne",
+          "text": "今のあんたの服で行こうよ。せっかく着てきたんだし。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "上映まで少し時間があった。看板の前で二人分の時刻を確かめながら、私は縞の出た手で次の作品を指す。徐倫も同じところを指しかけて、指先が触れる前に笑った。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choose",
+          "text": "見たい作品を自分から選び、徐倫の好みも聞く",
+          "next": "message",
+          "effect": "homeTogether",
+          "setFlags": [
+            "ownOuting"
+          ]
+        },
+        {
+          "id": "smile",
+          "text": "「今日、隣に徐倫がいてよかった」と伝える",
+          "next": "message",
+          "effect": "walkClose"
+        }
+      ]
+    },
+    {
+      "id": "message",
+      "title": "畳む前に",
+      "chapter": 1,
+      "location": "自分の部屋",
+      "storyTime": {
+        "date": "5月24日",
+        "period": "夜"
+      },
+      "characterId": "jolyne",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "帰って上着を脱いだら、袖に映画館の座席の小さな毛羽がついていた。取りながら、隣で先に笑った徐倫の声を思い出す。端末に届いた写真では、青い袖が椅子の背に掛かっていた。"
+        },
+        {
+          "speaker": "jolyne",
+          "text": "着て歩くと違うね。今日の袖、ちゃんと好きだった。あんたの縞も。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "何度も触っていた袖口が、写真を見た途端に静かになる。好きだった、と過去形にしない言い方を探し、私は畳みかけていた上着を膝へ広げた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "film",
+          "text": "私も。次は映画のあとに寄る店も決めたい",
+          "next": "window",
+          "effect": "messageDaily",
+          "replyVariants": [
+            {
+              "text": "いいね。今度は上映時間も一緒に見て、ゆっくり選ぼう。"
+            }
+          ]
+        },
+        {
+          "id": "you",
+          "text": "服もだけど、徐倫と一日歩けたのが嬉しかった",
+          "next": "window",
+          "effect": "messageHeart",
+          "replyVariants": [
+            {
+              "when": {
+                "min": {
+                  "romanceChar": 20
+                }
+              },
+              "text": "あたしも。帰ってから、まだ隣を見そうになった。もう少し一緒にいたかった。"
+            },
+            {
+              "text": "また行こう。あんたとなら、途中で予定が変わっても面白いし。"
+            }
+          ]
+        }
+      ],
+      "message": true
+    },
+    {
+      "id": "window",
+      "title": "似合わないと言われても",
+      "chapter": 1,
+      "location": "古着店の試着室前",
+      "storyTime": {
+        "date": "6月1日",
+        "period": "昼"
+      },
+      "characterId": "jolyne",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "徐倫が試した上着を、店員はもっと無難な色へ替えるよう勧めた。本人が何も聞く前だったので、彼女の口元が固くなったのが分かった。店員が離れると、徐倫は鏡へ向き直り、自分の肩の線を見た。"
+        },
+        {
+          "speaker": "jolyne",
+          "text": "頼んでないんだけど。……腹立つと、意地で買いそうになる。それも嫌だな。"
+        },
+        {
+          "speaker": "player",
+          "text": "私は、袖の形が好き。色は徐倫が着たいなら見たいけど、買わなくても、さっきの顔は忘れない。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "どんな顔、と振り向かれ、照れずに済むほどすぐには答えられなかった。最初に着た時、腕を広げたのがよかった。そう伝えると徐倫はもう一度腕を伸ばし、今度は自分で肩の窮屈さを確かめた。結局、上着は買わなかった。"
+        },
+        {
+          "speaker": "jolyne",
+          "text": "ここがきつい。悔しいけど、それは変わんない。別の探そう。あたしが着たい形のやつ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "店を出る時、彼女は空いた手を大きく振った。私はその横へ追いつき、今度の休みに行きたい店を一つ挙げる。何も買わなかった袋の軽さが、今日は不思議と惜しくなかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "shape",
+          "text": "徐倫が選び直した形を覚え、次の店を一緒に探す",
+          "next": "home",
+          "effect": "conferencePractical",
+          "setFlags": [
+            "herShape"
+          ]
+        },
+        {
+          "id": "together",
+          "text": "「買い物がなくても、もう少し一緒にいたい」と言う",
+          "next": "home",
+          "effect": "rehearse"
+        }
+      ]
+    },
+    {
+      "id": "home",
+      "title": "背中の印",
+      "chapter": 1,
+      "location": "徐倫の自宅",
+      "storyTime": {
+        "date": "6月8日",
+        "period": "夕方"
+      },
+      "characterId": "jolyne",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "別の店で買った上着の背中に、徐倫が小さな布を当てた。今日は着た時の位置を見てほしいと呼ばれたのだ。鏡に映る彼女が少し体をひねるたび、仮留めの布も逃げる。私は触っていいか聞き、頷きを見て肩の近くを押さえた。"
+        },
+        {
+          "speaker": "jolyne",
+          "text": "そこなら見える？　あたし、自分じゃ後ろまで分かんない。"
+        },
+        {
+          "speaker": "player",
+          "text": "うん。少し左がいいと思う。……ここ。徐倫も写真で見てみて。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "頼まれた範囲だけ写真に撮り、画面を渡した。彼女は迷わずその位置に決めた。上着を脱いで机に置いてから印をつけ、針を箱へ戻す。その手順が終わると、私たちは買ってきた夕食を広げた。"
+        },
+        {
+          "speaker": "jolyne",
+          "text": "今日、来てもらってよかった。背中だけじゃなくて。ひとりでやってたら、また途中で腹立ってたと思う。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "食事のあとの皿を重ねながら、私はあの背中を思い出した。触れていいか聞いた時には、ただ布を押さえるつもりだったのに、もう一度と考えると意味が変わる。徐倫は机の端を空け、私が飲み終わるまで座っていた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "leave",
+          "text": "「次は私の服も見て」と頼んで、今日は帰る",
+          "next": "later",
+          "effect": "homeTogether",
+          "setFlags": [
+            "tradeHelp"
+          ]
+        },
+        {
+          "id": "talk",
+          "text": "「今みたいに二人でいるの、好き」と話して帰る",
+          "next": "later",
+          "effect": "homeTalk"
+        },
+        {
+          "id": "stay",
+          "text": "「今夜、まだ徐倫のそばにいたい」と伝える",
+          "next": "consent",
+          "effect": "hotelInvite",
+          "when": {
+            "min": {
+              "trust": 35,
+              "desire": 8
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "consent",
+      "title": "袖を離して",
+      "chapter": 1,
+      "location": "徐倫の自宅",
+      "storyTime": {
+        "date": "6月8日",
+        "period": "夜"
+      },
+      "characterId": "jolyne",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "徐倫は食器を流しへ運び、手を拭いて戻ってきた。隣に座っても、今度は布の位置を確かめる用事がない。私が自分の袖をつまんでいるのを見ると、彼女は笑いかけてから、笑ったまま話すのをやめた。"
+        },
+        {
+          "speaker": "jolyne",
+          "text": "あたしも、あんたに触れたい。今夜、一緒にいたいと思ってる。恋人になるって話は、別にして。"
+        },
+        {
+          "speaker": "player",
+          "text": "私もそうしたい。でも、途中でやめたくなったら言う。徐倫も言って。"
+        },
+        {
+          "speaker": "jolyne",
+          "text": "うん。途中でも帰りたくなっても、止める。勢いで決めたことにしたくないから、もう一度聞くね。今夜、あたしといたい？"
+        },
+        {
+          "speaker": "narrator",
+          "text": "まっすぐ向けられた目を見返すと、私の指から袖が滑り落ちた。彼女の手はまだ自分の膝にあった。先に動くか、今日は立つか、そのどちらも選べる距離で息を吸った。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「いたい」と答え、自分から手を差し出す",
+          "next": "night",
+          "effect": "consent",
+          "setFlags": [
+            "mutualConsent",
+            "hadNight"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「今日は帰る。昼にまた会いたい」と伝える",
+          "next": "later",
+          "effect": "walkHome",
+          "setFlags": [
+            "declinedTouch"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "night",
+      "title": "針のない手",
+      "chapter": 1,
+      "location": "徐倫の自宅",
+      "storyTime": {
+        "date": "6月8日",
+        "period": "夜"
+      },
+      "characterId": "jolyne",
+      "rating": "fade",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "徐倫は差し出した私の手を取り、近づいていいかと小さく尋ねた。頷いて体を向けると、いつも大きく笑う口が、今は何か言う前に止まっている。私からもう少し寄った。唇が触れたのは、その動きを彼女が待ったあとだった。"
+        },
+        {
+          "speaker": "jolyne",
+          "text": "……変に緊張する。さっきまで、普通にご飯食べてたのに。"
+        },
+        {
+          "speaker": "player",
+          "text": "私も。だから、笑わないで。笑ったら私も笑うから。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "結局、二人とも少し笑った。その間も手は離れず、私は彼女の肩へ顔を寄せる。押さえる布も、見せる鏡もないまま、触れたところだけが返事になる。もう一度顔を上げて口づけし、灯りを落としてから奥へ移った。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝、先に起きた徐倫が、机に残る上着を見て肩を揺らしていた。何と聞くと、縫い終わってない、と布を指す。私は朝食のあとに帰るつもりだと話し、今日はもう針を持たずに食べようと彼女を呼んだ。皿を置く音に、まだ掠れた声が混ざった。",
+          "storyTime": {
+            "date": "6月9日",
+            "period": "朝"
+          }
+        }
+      ],
+      "choices": [
+        {
+          "id": "home",
+          "text": "朝食を一緒に食べ、家へ戻る",
+          "next": "after_message"
+        }
+      ],
+      "when": {
+        "flags": [
+          "mutualConsent"
+        ]
+      }
+    },
+    {
+      "id": "after_message",
+      "title": "一針ぶんの通知",
+      "chapter": 1,
+      "location": "自分の部屋",
+      "storyTime": {
+        "date": "6月9日",
+        "period": "夜"
+      },
+      "characterId": "jolyne",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "自分の上着をハンガーへ掛けた頃、徐倫から縫い終えた背中の写真が来た。机に平らに置かれていて、昨日押さえた場所がよく見える。写真の下に続く文を読む間、私はまだハンガーから手を離せずにいた。"
+        },
+        {
+          "speaker": "jolyne",
+          "text": "できた。あんたの言った位置、やっぱりいい。……今、それだけ送って終わるの、惜しくなった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "服の写真へ返すなら簡単だった。けれど私も、昨日の続きを何も言わずに片づけたくはない。窓に映る自分の顔を見ないように、画面を少し傾けて打った。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "again",
+          "text": "また夜も会いたい。徐倫のこと、前より好きになった",
+          "next": "later",
+          "effect": "messageAgain",
+          "setFlags": [
+            "ongoing"
+          ],
+          "replyVariants": [
+            {
+              "text": "あたしも会いたい。次は、顔見てそれ言って。あたしからも言いたい。"
+            }
+          ]
+        },
+        {
+          "id": "nights",
+          "text": "恋人とは決めずに、お互い望む夜も会う友達でいたい",
+          "next": "later",
+          "effect": "messageBoundaries",
+          "setFlags": [
+            "ongoing"
+          ],
+          "replyVariants": [
+            {
+              "text": "うん、あたしも。その時の気持ちは、その時また聞こう。"
+            }
+          ]
+        },
+        {
+          "id": "days",
+          "text": "次からは昼に会う友達でいたい",
+          "next": "later",
+          "effect": "messageDaily",
+          "setFlags": [
+            "endedNight"
+          ],
+          "replyVariants": [
+            {
+              "text": "分かった。昼にしよう。今度はあんたの服、見る番ね。"
+            }
+          ]
+        }
+      ],
+      "message": true
+    },
+    {
+      "id": "later",
+      "title": "出かける前の窓",
+      "chapter": 1,
+      "location": "駅前の喫茶店",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "jolyne",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "六月の間、徐倫と何度か夜を過ごした。誘う方も泊まる家も一方には決めず、どちらも望んだ時だけ近づいた。朝には自分の予定へ戻り、昼に映画を見る日もある。次の約束を考えるたび、私は縫い直した袖より先に彼女の手を思い浮かべた。",
+          "when": {
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "六月の間、徐倫と服を見たり映画へ行ったりした。手持ちの上着を着回す日も、何も見せずに昼だけ食べる日もある。彼女に教わった店へ一人で寄ってから、面白いものがあったと連絡することも増えた。",
+          "when": {
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "今日はどこへ行くか、まだ決めていなかった。窓の外を通る人の袖を追っていた徐倫が、私の視線に気づいて顔を向ける。頼んだ飲み物が来ても、二人ともすぐには立たなかった。"
+        },
+        {
+          "speaker": "jolyne",
+          "text": "何か言おうとした？　あたし、今ならちゃんと聞ける。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "tell",
+          "text": "徐倫を好きになったことを、自分から話す",
+          "next": "confess_player",
+          "when": {
+            "min": {
+              "trust": 40,
+              "romancePlayer": 35,
+              "romanceChar": 35
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "listen",
+          "text": "徐倫が話したそうにしている言葉を待つ",
+          "next": "confess_char",
+          "when": {
+            "min": {
+              "trust": 40,
+              "romancePlayer": 20,
+              "romanceChar": 40
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "pact",
+          "text": "互いに着たい自分を作り、最初に見せ合う相棒になりたい",
+          "next": "pact",
+          "when": {
+            "min": {
+              "trust": 40,
+              "comfort": 60
+            },
+            "flags": [
+              "ownPattern",
+              "askedHelp",
+              "ownOuting",
+              "herShape",
+              "tradeHelp"
+            ],
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "nights",
+          "text": "望む夜にも会う、今の親密な友情を続けたい",
+          "next": "fwb_choice",
+          "when": {
+            "min": {
+              "trust": 45,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "love",
+          "text": "夜を重ねた今、徐倫の恋人になりたい",
+          "next": "end_fwb_love",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 30,
+              "romanceChar": 30,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "friends",
+          "text": "これからも一緒に出かける友達でいたい",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_player",
+      "title": "私が着てきた気持ち",
+      "chapter": 4,
+      "location": "駅前の喫茶店",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "jolyne",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "飲み物の水滴へ指を置くと、冷たくて言葉が少し戻った。何から話そうか考えていたはずなのに、出たのは徐倫が好き、という短い形だった。彼女が姿勢を変えたので、私はその先を急がず続けた。"
+        },
+        {
+          "speaker": "player",
+          "text": "何を着るか決める時、会う日の顔が浮かぶ。徐倫に見せたいって思う。服を褒めてほしいだけじゃなくて、私を見てほしい。"
+        },
+        {
+          "speaker": "jolyne",
+          "text": "見てる。……今も、ちゃんと見てる。あたしも、あんたに会う日はそうなる。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "すぐに笑えなくなった。彼女がこちらへ向けた手には青い袖があって、最初に店で並べた色が、今はひどく近い。私はグラスから手を離し、冷えた指を自分の膝で温めてから顔を上げた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「私と付き合って」と伝える",
+          "next": "end_love_a",
+          "effect": "messageHeart"
+        },
+        {
+          "id": "no",
+          "text": "「今は友達として一緒にいたい」と伝え直す",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_char",
+      "title": "言い切ったあとで",
+      "chapter": 4,
+      "location": "駅前の喫茶店",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "jolyne",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "徐倫は私を見て、唇を一度結んだ。苛立って何かを言う時とは違う間だった。ストローの袋を細く折りかけ、その必要に気づいたように机へ戻す。私が名前を呼ぶより先に、彼女は口を開いた。"
+        },
+        {
+          "speaker": "jolyne",
+          "text": "あたし、あんたが好き。友達として会うのも好きだったけど、今は恋人になりたい。あんたは、どう？"
+        },
+        {
+          "speaker": "narrator",
+          "text": "言い切った顔を見つめると、その頬にも赤みがあった。強く言えることと、返事を待つ間に平気でいられることは違うのだと、私は彼女の動かない手から知った。机のこちら側で息を整え、自分の望みを確かめた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「私も好き。付き合いたい」と答える",
+          "next": "end_love_b",
+          "effect": "messageHeart"
+        },
+        {
+          "id": "no",
+          "text": "「恋人にはならず、友達でいたい」と答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "refusedConfession",
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pact",
+      "title": "最初に見せたい姿",
+      "chapter": 4,
+      "location": "駅前の喫茶店",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "jolyne",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私は次に直したい服の写真を見せた。今の形を嫌いになったわけではなく、別の自分で外へ出てみたい。そう話すと、徐倫は画面の端から手を引き、まず私が指すところを見た。"
+        },
+        {
+          "speaker": "player",
+          "text": "お互いに作りたいものを作って、困ったら手を貸して、できたら最初に見せ合いたい。私も、徐倫の背中を見る役、好きだった。"
+        },
+        {
+          "speaker": "jolyne",
+          "text": "じゃああたしも、あんたの最初の観客。あたしが似合うって言わなくても、着たいもの着なよ。その代わり、あたしにも遠慮しないで。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "恋人という名前を置かないまま、次の服だけが二人の間に広がった。彼女の言う遠慮しないで、には手助けだけでなく異論も入っている。私はその方が続けたいと思い、写真の袖をもう少し大きくした。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「うん。次は私の案も、ちゃんと聞いて」と約束する",
+          "next": "end_special",
+          "effect": "homeTogether"
+        },
+        {
+          "id": "friends",
+          "text": "制作の約束はせず、気軽に出かける友達を選ぶ",
+          "next": "end_friend",
+          "effect": "friendPromise"
+        }
+      ]
+    },
+    {
+      "id": "fwb_choice",
+      "title": "名前を急がない夜",
+      "chapter": 4,
+      "location": "駅前の喫茶店",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "jolyne",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "今までの夜を続けたいと話すと、徐倫は頷く前に私の顔を見た。冗談へ逃がさずに聞いてくれていることが、少し照れくさい。私は机の上へ手を置き、恋人と決めるつもりは今はないと付け足した。"
+        },
+        {
+          "speaker": "jolyne",
+          "text": "あたしも、今はそれでいい。会いたい夜は誘うし、今日は違うって時は言う。あんたも、どっちも言って。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "うん、と返すと徐倫はようやく息を抜いた。次はどこへ出かけるかという昼の話も、そのまま残っている。私は予定を開いたが、今日泊まるかどうかまで一度に決めようとはしなかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "昼も夜も、その都度望みを伝える友達として続ける",
+          "next": "end_fwb",
+          "effect": "messageBoundaries"
+        },
+        {
+          "id": "day",
+          "text": "これからは昼に会う友達に戻る",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "end_friend",
+      "title": "その服で来て",
+      "chapter": 5,
+      "location": "映画館前",
+      "storyTime": {
+        "date": "7月13日",
+        "period": "昼"
+      },
+      "characterId": "jolyne",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人にはならないと答えた時、徐倫は少し目を伏せ、それから分かったと言った。次に映画の題名を送ってきたのは彼女だった。今日、待ち合わせへ向かう私も、友達として続きを見たいと思っていた。",
+          "when": {
+            "flags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "昼に会う友達でいようと決めてから、徐倫とは映画の題名を送り合っていた。触れた夜を言い直したり、なかったことにしたりせず、今日は観たいものを選んでここへ来た。",
+          "when": {
+            "flags": [
+              "hadNight"
+            ],
+            "notFlags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "次の映画は私が選び、上映時間は徐倫が調べた。二人分の席を取ったという通知を見て、私は縞の上着を出した。外で着るたびに気になっていた袖は、もう鞄を掛ける動作を邪魔しない。",
+          "when": {
+            "notFlags": [
+              "hadNight",
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "jolyne",
+          "text": "その縞、だいぶ馴染んだね。あたしの青も、今日はここ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "徐倫が腕を振るので、私も自分の袖を見せた。映画のあとにはジョセフと食事をする約束もある。ジョセフにうっかり結末を喋らないよう念を押し合いながら、二人で暗い入口へ入った。"
+        }
+      ],
+      "choices": [],
+      "ending": "FRIEND"
+    },
+    {
+      "id": "end_love_a",
+      "title": "並べた色のあいだ",
+      "chapter": 5,
+      "location": "駅前の喫茶店と街",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "jolyne",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "徐倫が、付き合おう、と言った。私から言った言葉が彼女の声になって返ると、ようやく頬が緩む。店を出て、手をつないでいいかと聞いたら、聞き終えるのを待って掌がこちらを向いた。私はその手を取った。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌週、二人でまた布地店へ寄った。私が探していた縞はもうなく、徐倫は別の棚を見に行く。離れたところから名前を呼ばれ、振り向くと、彼女が胸の前へ二つの色を並べていた。",
+          "storyTime": {
+            "date": "7月6日",
+            "period": "昼"
+          }
+        },
+        {
+          "speaker": "jolyne",
+          "text": "あたしにはこっち。あんたは？　一緒じゃなくていいから。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私は自分の色を選び、隣へ戻った。会計を済ませた袋は片手ずつに持つ。空いた手を私から伸ばすと、徐倫の指がすぐそこにあった。違う色の布が袋の中で揺れ、今日は袖を引っ張り直す必要がなかった。"
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_A"
+    },
+    {
+      "id": "end_love_b",
+      "title": "強い声の、そのあと",
+      "chapter": 5,
+      "location": "駅前の喫茶店と歩道",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "jolyne",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私も好き、と答えると、徐倫は机へ額をつけそうなくらい俯いた。びっくりして名前を呼んだら、ちょっと待って、と笑う声がした。顔が戻ってくるまで、私はグラスの水滴を拭きながら待った。"
+        },
+        {
+          "speaker": "jolyne",
+          "text": "言う方が緊張すると思ってた。返事、こんなに来るんだね。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌週の待ち合わせで、私は人波の向こうに青い袖を見つけた。今度は徐倫が呼ぶ前に私から手を上げる。駆け寄りはしなかったけれど、最後の数歩だけ少し速くなった。",
+          "storyTime": {
+            "date": "7月6日",
+            "period": "昼"
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "隣まで行くと彼女が手を差し出した。取りながら今日は何を見る、と聞くと、あんたが着てきたのを先に、と私を一度見渡す。その視線を逃げずに受けるために、私は肩をまっすぐにした。"
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_B"
+    },
+    {
+      "id": "end_fwb",
+      "title": "ほどかずに持ち帰る",
+      "chapter": 5,
+      "location": "徐倫の自宅",
+      "storyTime": {
+        "date": "7月13日",
+        "period": "夜"
+      },
+      "characterId": "jolyne",
+      "rating": "fade",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "服を直す道具は今日は持ってこなかった。二人で夕食を食べ、映画の感想が割れたまま笑い合う。そろそろ帰る時間かと時計を見る前に、私は今夜泊まりたいと伝えた。徐倫も一緒にいたいと答え、翌朝の予定だけを聞いた。"
+        },
+        {
+          "speaker": "jolyne",
+          "text": "朝はあたしも出る。だから今は、こっち来て。来たいなら。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私は自分から隣へ座った。肩が触れてから、彼女が顔を向けるまでの短い時間が好きだった。急がないで、と笑って言うと、あんたも、と返る。どちらからともなく近づく前に、もう一度目を合わせた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝、それぞれの靴を履いて同じ玄関を出た。駅までの道で、次の映画をどちらが選ぶか揉める。別れる角で徐倫が腕を振り、私はその袖へ振り返した。夜を持って帰る鞄には、特別な印をつけなかった。",
+          "storyTime": {
+            "date": "7月14日",
+            "period": "朝"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB"
+    },
+    {
+      "id": "end_fwb_love",
+      "title": "次は、この名前で",
+      "chapter": 5,
+      "location": "駅前の喫茶店と街",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "jolyne",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "今は恋人になりたいと伝える間、徐倫の手を見ていた。よく知る指を、今日は机の向こうから見る。顔を上げて続きを待つと、彼女は困ったように少し笑い、同じことを言おうとしてた、と答えた。"
+        },
+        {
+          "speaker": "jolyne",
+          "text": "あたしも、あんたの恋人になりたい。今までが足りなかったってことじゃなくて、今、そうしたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "うん、と頷いた声が震えた。徐倫が急に照れた顔をするので、私まで笑ってしまう。店の外へ出てから手を取り、今夜の予定ではなく、来週の休みに行きたい場所を話した。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "次の休日、用事のない道を歩いた。触れるたびに何かを決め直すわけではないのに、恋人、と口にしてみると徐倫がこちらを見る。その顔を見たくて二度呼んだら、三度目は彼女の方から私の名前が返ってきた。",
+          "storyTime": {
+            "date": "7月6日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB_TO_LOVE"
+    },
+    {
+      "id": "end_special",
+      "title": "出ていくための背中",
+      "chapter": 5,
+      "location": "徐倫の自宅と街",
+      "storyTime": {
+        "date": "7月13日",
+        "period": "昼"
+      },
+      "characterId": "jolyne",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私が作り直した上着を着ると、徐倫は私の後ろへ回った。頼んだ位置の写真を撮ってもらい、二人で画面を見る。私が気にしていた線を彼女は好きだと言ったけれど、私は少しだけ位置を変えたいと話した。"
+        },
+        {
+          "speaker": "jolyne",
+          "text": "じゃあ直そう。外でずっとそこ気にするより、今やっちゃおうよ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "上着を脱いで机へ置き、私が印をつける間、徐倫が布を押さえた。前とは逆の手が並んでいた。直し終えてから今度は彼女の新しい袖を見せてもらう。似合う、だけでは足りず、歩く時の色が好きだと伝えた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "着たいものを着た二人で外へ出た。恋人の約束はないけれど、次にどんな形を選ぶかは最初に見たい。横断歩道を先に渡った徐倫が振り返り、どう、と腕を広げる。私はよく見えるところまで歩いてから、答えた。"
+        }
+      ],
+      "choices": [],
+      "ending": "SPECIAL"
+    }
+  ],
+  "endingDescriptions": {
+    "FRIEND": {
+      "title": "その服で来て",
+      "description": "直した服で映画へ出かけ、次も自分の感想を言い合う。気の置けない友人として続く日々。"
+    },
+    "LOVE_A": {
+      "title": "並べた色のあいだ",
+      "description": "自分から好きと伝え、違う色を選ぶ隣で手をつなぐ。徐倫の恋人として迎える休日。"
+    },
+    "LOVE_B": {
+      "title": "強い声の、そのあと",
+      "description": "徐倫のまっすぐな告白へ、自分の望みを返す。強い声のあとの照れも、近くで見ていく。"
+    },
+    "FWB": {
+      "title": "ほどかずに持ち帰る",
+      "description": "恋人とは決めず、二人が望む夜を重ねる。昼の冗談もそれぞれの朝も残る、親密な友情。"
+    },
+    "FWB_TO_LOVE": {
+      "title": "次は、この名前で",
+      "description": "重ねてきた夜を大切にしたまま、今の願いを恋人という名前にする。外を歩く休日も増えていく。"
+    },
+    "SPECIAL": {
+      "title": "出ていくための背中",
+      "description": "選んだ柄、ほどく手、見せたい背中を重ね、互いの最初の観客になる。恋人とは別の、作って出かける相棒。"
+    }
+  }
+}

@@ -1,0 +1,1209 @@
+{
+  "id": "rohan",
+  "title": "露伴 — 君がめくる前の頁",
+  "intro": "描かれた線より、その外に残ったものが気になった。\n何でも知りたがる先輩へ、まだ見せていない続きを渡す。",
+  "startEvent": "page",
+  "character": {
+    "name": "露伴",
+    "adult": true,
+    "heightCm": 175,
+    "heightBasis": "二次資料JoJo Wikiの身長欄と出典注記を照合。岸辺露伴は動かないOVA設定表CR懺悔_09A。漫画の確定値とは区別。書籍・設定表現物は未照合。AUで同値を採用。",
+    "profile": "制作への執念。好奇心と高い自負。無遠慮で頑固。安易に迎合しない。",
+    "personality": [
+      "制作への執念",
+      "好奇心と高い自負",
+      "無遠慮で頑固",
+      "安易に迎合しない"
+    ],
+    "speech": {
+      "firstPerson": "ぼく",
+      "addressing": "主人公への呼称はAUのaddressingを使用。親しさだけで呼び捨てや敬語を一律変更しない。",
+      "tone": "具体的な観察に踏み込む。語尾は感情と相手に合わせる。",
+      "habits": [
+        "具体的な観察に踏み込む",
+        "君、〜じゃあないか",
+        "皮肉と理屈に熱が入る"
+      ],
+      "signaturePhrases": [],
+      "signatureNote": "日常の固定口癖は採用しない。象徴的な原作台詞と普段の話し方を混同せず、名台詞を貼り付けない。",
+      "avoid": [
+        "毎回だが断る",
+        "常識人の先生役",
+        "無断取材や私物閲覧を親密さの証明にする"
+      ]
+    },
+    "referenceSection": "docs/CHARACTER_REFERENCE.md#cast-rohan"
+  },
+  "au": {
+    "role": "デザイン工学・メディア系大学院生。修士は候補。商業クリエイター",
+    "routeEnabled": true,
+    "addressing": [
+      {
+        "text": "{player.lastName}"
+      }
+    ]
+  },
+  "endingDescriptions": {
+    "FRIEND": {
+      "title": "感想は一つじゃない",
+      "description": "作品の前でも、食事の席でも、自分の言葉を返せる友達。見終わったあとに話すことが増えていく。"
+    },
+    "LOVE_A": {
+      "title": "先に渡した言葉",
+      "description": "読み取られるのを待たず、自分から好きを伝える。描く前に、隣で同じ景色を見る時間を。"
+    },
+    "LOVE_B": {
+      "title": "見られる方の横顔",
+      "description": "自分の望みを口にした先輩へ、好きだと返す。今度はこちらから見つめると、返事が少し遅れる。"
+    },
+    "FWB": {
+      "title": "描かない夜の場所",
+      "description": "互いが望む夜に会い、翌朝はそれぞれの予定へ。原稿でも用事でもない理由で、次の誘いを送る。"
+    },
+    "FWB_TO_LOVE": {
+      "title": "書き足すのは今",
+      "description": "親密な夜を重ねたあと、今の気持ちで恋人になる。違う感想を持つ人と、同じ帰り道を歩く。"
+    },
+    "SPECIAL": {
+      "title": "君が開く一冊",
+      "description": "売るためではない頁を、自分の時間で最初に読む相手へ。揃わない感想の先に、まだ開いていない二枚がある。"
+    }
+  },
+  "events": [
+    {
+      "id": "page",
+      "chapter": 1,
+      "title": "出口にいない人",
+      "location": "大学の公開制作展",
+      "storyTime": {
+        "date": "4月24日",
+        "period": "昼"
+      },
+      "characterId": "rohan",
+      "rating": "general",
+      "tags": [
+        "rohan"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "公開制作展の隅で、一枚の絵の前から動けなくなった。古い店の出口が描かれているのに、見ていると入口のように思える。描いたのは、大学院に在籍しながら商業の仕事もしている露伴先輩だ。立ち止まる私へ、背後から何が気になるんだい、と声が来た。"
+        },
+        {
+          "speaker": "player",
+          "text": "帰るところなのか、入るところなのか、分からなくて。ドアは開いてるのに、誰もいないから。"
+        },
+        {
+          "speaker": "rohan",
+          "text": "靴跡は外へ向かっているだろう。……いや、君はどこを見たんだ？"
+        },
+        {
+          "speaker": "narrator",
+          "text": "説明を終えかけた人が、私の目線を追って展示へ戻る。足元ではなく、店の奥に残った明るい四角を指した。先輩はすぐ納得せず、同じ絵を少し斜めから見た。その横顔を、私は絵より長く見てしまった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "light",
+          "text": "奥の明るい場所へ戻りたくなった、と自分の見方を話す",
+          "next": "walk",
+          "effect": "ask"
+        },
+        {
+          "id": "line",
+          "text": "先輩の引いた線を、もう一度自分の目でたどる",
+          "next": "walk",
+          "effect": "workTogether"
+        }
+      ]
+    },
+    {
+      "id": "walk",
+      "chapter": 1,
+      "title": "見つけた順番",
+      "location": "街の古い通り",
+      "storyTime": {
+        "date": "4月29日",
+        "period": "昼"
+      },
+      "characterId": "rohan",
+      "rating": "general",
+      "tags": [
+        "rohan"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "展覧会で話した店の通りを見に行く、と連絡をもらい、私は自分も歩きたいと答えた。店主に許可を取ったスケッチの横で待つうち、風が軒の短い布を裏返す。先輩は布を押さえて元へ戻したが、私はさっきの裏もきれいでした、と言った。"
+        },
+        {
+          "speaker": "rohan",
+          "text": "表を見るために掛けてあるんだ。裏が見えたというだけで、珍しがるものじゃあない。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "そうかもしれない。それでも色の薄くなった縫い目の方を見ていたいと思い、私は元へ戻った布を眺めた。先輩は私を見、それからもう一度風を待つ。今度はひっくり返っても、すぐに直さなかった。"
+        },
+        {
+          "speaker": "player",
+          "text": "新しいところより、使って薄くなったところが好きなのかもしれません。先輩が描きたい方とは、違いますね。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "my_view",
+          "text": "同じ景色の違う部分を、譲らずに指す",
+          "next": "lunch",
+          "effect": "honest",
+          "setFlags": [
+            "ownView"
+          ]
+        },
+        {
+          "id": "shape",
+          "text": "形の見え方を、位置を変えて一緒に確かめる",
+          "next": "lunch",
+          "effect": "compareNotes"
+        }
+      ]
+    },
+    {
+      "id": "lunch",
+      "chapter": 1,
+      "title": "そこから先は言わない",
+      "location": "街の小さな食堂",
+      "storyTime": {
+        "date": "5月6日",
+        "period": "昼"
+      },
+      "characterId": "rohan",
+      "rating": "general",
+      "tags": [
+        "rohan"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先輩が選んだ席からは、あの日の軒が少し見えた。どうして擦れたものが好きなんだと聞かれ、私が昔使った小物の話をすると、質問が次々に増えていく。誰にも話していない思い出のところへ触れかけ、私は箸を置いた。"
+        },
+        {
+          "speaker": "player",
+          "text": "そこまでは、今日は話したくないです。取材じゃなくて、一緒に昼を食べに来たので。"
+        },
+        {
+          "speaker": "rohan",
+          "text": "……ぼくは、理由が気になったんだ。君が曖昧に言うから。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "不満そうな顔をされたが、私も言い直さなかった。先輩は開きかけたノートを閉じ、では今日の味の方はどうなんだいと聞いた。ずいぶん急な話の変え方だった。私は少し笑って、自分の皿から言える感想を選んだ。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "today",
+          "text": "今日ここで分かったことだけを、自分の言葉で話す",
+          "next": "message",
+          "effect": "homeTalk",
+          "setFlags": [
+            "chosenWords"
+          ]
+        },
+        {
+          "id": "two",
+          "text": "「次も、取材抜きで一緒に食べたいです」と誘う",
+          "next": "message",
+          "effect": "lunchTwo"
+        },
+        {
+          "id": "food",
+          "text": "互いの皿の感想を話し、食事を楽しむ",
+          "next": "message",
+          "effect": "shiftRest"
+        }
+      ]
+    },
+    {
+      "id": "message",
+      "chapter": 2,
+      "title": "まだ消していない線",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "5月9日",
+        "period": "夜"
+      },
+      "characterId": "rohan",
+      "rating": "general",
+      "tags": [
+        "rohan"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "露伴先輩から、軒の絵を一枚送られた。裏返った布は小さく、見なければ通り過ぎるほどの線だった。私の説明がそのまま写されたのではない。それでも風を待った時間を思い出し、画面を拡大した。"
+        },
+        {
+          "speaker": "rohan",
+          "text": "君が見たものと同じだと思わないことだね。気になったから、ぼくが描いた。感想があるなら、聞くよ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "釘を刺す文を読みながら、私は笑った。先に褒めてほしいのかと思ったが、返事を読み上げる時の声を想像すると、安い褒め言葉ではかえって止まりそうだった。画面の端へ戻り、好きだった線をもう一度見た。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "glad",
+          "text": "その線、好きです。描いた時の話を、会って聞きたいです",
+          "next": "waiting",
+          "effect": "messageHeart",
+          "replyVariants": [
+            {
+              "text": "なら、会った時に話そう。君は君で、なぜそこを見たのか考えておいてくれ。言いたいところまででいい。",
+              "when": {
+                "flags": [
+                  "chosenWords"
+                ]
+              }
+            },
+            {
+              "text": "構わないよ。画面より原稿で見た方がいい。次に持っていこう。"
+            }
+          ],
+          "lockRoute": "rohan"
+        },
+        {
+          "id": "notice",
+          "text": "表だけより、風が通っている感じがします",
+          "next": "waiting",
+          "effect": "messageListen",
+          "replyVariants": [
+            {
+              "text": "へえ。そこまで見たなら、次の一枚も見せよう。"
+            }
+          ],
+          "lockRoute": "rohan"
+        },
+        {
+          "id": "thanks",
+          "text": "送ってくれてありがとうございます。今度、原稿でも見たいです",
+          "next": "waiting",
+          "effect": "messageDaily",
+          "replyVariants": [
+            {
+              "text": "持っていくよ。折り目をつけずに見てくれればいい。"
+            }
+          ],
+          "lockRoute": "rohan"
+        }
+      ],
+      "message": true
+    },
+    {
+      "id": "waiting",
+      "chapter": 2,
+      "title": "先に帰る足音",
+      "location": "大学の展示室前",
+      "storyTime": {
+        "date": "5月17日",
+        "period": "夕方"
+      },
+      "characterId": "rohan",
+      "rating": "general",
+      "tags": [
+        "rohan"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "待ち合わせに行くと、先輩は展示の照明を見上げていた。ほんの少し影が気に入らないらしく、担当の人へ許可を取って位置を変えている。私は三十分なら待てると伝えた。けれどその時刻を過ぎても、先輩はまだ同じ壁を見ていた。"
+        },
+        {
+          "speaker": "rohan",
+          "text": "あと少しだ。ここでやめたら、気になって何もできない。"
+        },
+        {
+          "speaker": "player",
+          "text": "私は、今日は帰ります。先輩が続きをやりたいのは分かったので。私も、自分の用事を済ませたいです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩がようやくこちらを向いた。怒ったのかと聞かれ、待ちたかったけれど残念です、と答える。自分の予定を片づけて戻る約束まではしなかった。靴音が展示室から遠ざかる途中で、端末が一度鳴った。次は作業のない日に、とだけ書かれていた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "free_day",
+          "text": "自分も空けられる、作業のない日を一つ返す",
+          "next": "home",
+          "effect": "conferencePractical",
+          "setFlags": [
+            "separateTime"
+          ]
+        },
+        {
+          "id": "want",
+          "text": "「次は先輩と話す時間がほしいです」と返す",
+          "next": "home",
+          "effect": "walkClose"
+        },
+        {
+          "id": "finish",
+          "text": "今日の用事を終え、会える日をあとで知らせる",
+          "next": "home",
+          "effect": "walkHome"
+        }
+      ]
+    },
+    {
+      "id": "home",
+      "chapter": 3,
+      "title": "描かれていない椅子",
+      "location": "露伴の自宅",
+      "storyTime": {
+        "date": "5月31日",
+        "period": "夕方"
+      },
+      "characterId": "rohan",
+      "rating": "general",
+      "tags": [
+        "rohan"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "作業のない日に原稿を見せるという約束で、先輩の家を訪ねた。机の一方には紙が積まれ、もう一方にだけ私が座る場所がある。ここに触るなと言われた束は避け、渡された短い作品を読んだ。先輩は向かいで待ち、私が頁を戻すたびに目を上げる。"
+        },
+        {
+          "speaker": "rohan",
+          "text": "まだかい。……いや、急がせているわけじゃあない。どこへ戻ったんだ？"
+        },
+        {
+          "speaker": "player",
+          "text": "最後から二枚目に。ここ、言葉がない方が私は好きかもしれません。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩は眉を寄せ、私が返した頁を自分でも見た。直してほしいのではなく読んだ感じを言っただけですと付け足すと、分かっているよと返る。原稿はそのまま束へ戻された。食事を取ったあとも、どちらの見方が正しいかは決まらない。なのに、まだここで話していたかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "talk",
+          "text": "「また、一番に読ませてほしいです」と伝える",
+          "next": "evening",
+          "effect": "hotelTalk"
+        },
+        {
+          "id": "rest",
+          "text": "食後、好きだった頁をもう一度見せてもらう",
+          "next": "evening",
+          "effect": "homeRest"
+        }
+      ]
+    },
+    {
+      "id": "evening",
+      "chapter": 3,
+      "title": "聞きたいことは別に",
+      "location": "露伴の自宅",
+      "storyTime": {
+        "date": "5月31日",
+        "period": "夜"
+      },
+      "characterId": "rohan",
+      "rating": "general",
+      "tags": [
+        "rohan"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "原稿を閉じると、先輩が紙を揃えて机の奥へ置いた。もう読むものはないのに、私は座ったままでいる。何か聞きたいことがあるのかいと訊かれ、はい、と答えたものの、それは作品についての質問ではなかった。"
+        },
+        {
+          "speaker": "rohan",
+          "text": "言いかけてやめる方が気になるんだが。……ぼくの話なら、答えるかどうかは聞いてから決めるよ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "いつもこちらへ向く好奇心が、今は自分にも返っている。私は原稿を持つためではない手を膝の上で開いた。帰ることも、話してから帰ることもできた。それでも、帰りたくない理由を、この人へ聞いてほしくなっていた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "stay",
+          "text": "「今夜は先輩の近くにいたいです」と伝える",
+          "next": "consent",
+          "effect": "hotelInvite",
+          "when": {
+            "min": {
+              "trust": 45,
+              "desire": 8
+            }
+          }
+        },
+        {
+          "id": "next_time",
+          "text": "次に話したいことを残して、今日は帰る",
+          "next": "next",
+          "effect": "walkHome"
+        }
+      ]
+    },
+    {
+      "id": "consent",
+      "chapter": 3,
+      "title": "確かめるものが違う",
+      "location": "露伴の自宅",
+      "storyTime": {
+        "date": "5月31日",
+        "period": "夜"
+      },
+      "characterId": "rohan",
+      "rating": "general",
+      "tags": [
+        "rohan"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "露伴先輩は私の顔を見たまま、すぐに返事をしなかった。言い方を直されるかと思って待つ。けれど口を開いた時には、いつもの問いかけではなく、自分の望みから話した。"
+        },
+        {
+          "speaker": "rohan",
+          "text": "ぼくも、君に触れたい。今夜は一緒にいてほしい。取材のつもりで言ってるんじゃあないよ。"
+        },
+        {
+          "speaker": "player",
+          "text": "私もそうしたいです。でも、今夜のことと、恋人になる約束は別にして話したい。途中でやめたくなったら、私も言います。"
+        },
+        {
+          "speaker": "rohan",
+          "text": "分かった。どちらがやめると言っても、そこで止める。ぼくも嫌なことは言う。今から帰りたいなら、それでも構わない。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私は頷き、椅子の背へ掛けていた鞄を足元へ下ろした。先輩はその動きだけで答えを決めずにいる。作品の感想を返す時より、自分の声が頼りなくなりそうだった。それでも、選んだ言葉は小さくしなかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「今夜は、一緒にいたいです」と答える",
+          "next": "night",
+          "effect": "consent",
+          "setFlags": [
+            "consented",
+            "hadNight"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「今日は帰ります」と伝える",
+          "next": "next",
+          "effect": "walkHome",
+          "setFlags": [
+            "declinedTouch"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "night",
+      "chapter": 3,
+      "title": "頁を閉じた手",
+      "location": "露伴の自宅",
+      "storyTime": {
+        "date": "5月31日",
+        "period": "夜"
+      },
+      "characterId": "rohan",
+      "rating": "fade",
+      "tags": [
+        "rohan"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先輩が椅子を寄せ、私の頬へ触れていいかと聞いた。はい、と答えて顔を上げると、指先が静かに触れる。彼が身を寄せた分だけ私も近づき、唇を重ねた。目を閉じる直前、あれほど細かい線を見る目が、自分だけを見ていた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "離れると、私は息をつき、もう一度近づいてほしいと伝えた。先輩は小さく頷く。描写に使うためではない沈黙の中で、二人で椅子を離れた。私から手を取り、灯りを落とした部屋の奥へ進んだ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌朝、起きた先輩が窓の方を見た。光が違うと呟くので、描きますかと訊く。今は描かないと返ってきて、私は毛布から手を出した。朝食をどうするか決める前に、彼がこちらへ向き直る。",
+          "storyTime": {
+            "date": "6月1日",
+            "period": "朝"
+          }
+        },
+        {
+          "speaker": "rohan",
+          "text": "ぼくは、また君とこうして会いたい。君が今、どうしたいと思っているかも聞いておきたいね。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "again",
+          "text": "「恋人の約束はせず、また望む夜に会いたいです」と答える",
+          "next": "next",
+          "effect": "messageBoundaries",
+          "setFlags": [
+            "ongoing"
+          ]
+        },
+        {
+          "id": "more",
+          "text": "「また夜も会いたいです。先輩をもっと好きになりました」と答える",
+          "next": "next",
+          "effect": "messageAgain",
+          "setFlags": [
+            "ongoing"
+          ]
+        },
+        {
+          "id": "day",
+          "text": "「次からは、昼に会う友達でいたいです」と答える",
+          "next": "next",
+          "effect": "messageDaily",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ],
+      "when": {
+        "flags": [
+          "consented"
+        ]
+      }
+    },
+    {
+      "id": "next",
+      "chapter": 4,
+      "title": "余白へ置く言葉",
+      "location": "街の広場",
+      "storyTime": {
+        "date": "6月21日",
+        "period": "夕方"
+      },
+      "characterId": "rohan",
+      "rating": "general",
+      "tags": [
+        "rohan"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "六月には食事をし、互いが望んだ夜には先輩の家へ泊まった。制作の予定が詰まっている日は会わず、私の都合が悪い日も変えた。原稿を読まずに過ごす夜があっても、次に昼の街を歩く約束は残った。",
+          "when": {
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "昼に会う友達でいたいと答えてから、先輩の連絡は展示や街歩きへの誘いになった。少し照れくさかった最初の食事でも、絵の話になると意見は食い違う。その続きなら、私は自分の声で返すことができた。",
+          "when": {
+            "flags": [
+              "hadNight",
+              "endedNight"
+            ],
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "六月にも街を歩き、作品を読ませてもらい、時には別の用事で断った。先輩が制作のために来られない日もあった。次に会った時、何をしていたか全部聞き出そうとせず、私が話し始める方へ顔を向けた。",
+          "when": {
+            "notFlags": [
+              "hadNight"
+            ]
+          }
+        },
+        {
+          "speaker": "rohan",
+          "text": "今日はずいぶん静かだね。ぼくの方は、君に言っておきたいことがあるんだが。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩が鞄の口を閉じた。いつもなら次に見せるものをそこから出すのに、今日は何も持っていない手が膝に置かれた。私は作品の続きを尋ねる代わりに、その手から顔へ目を上げた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "tell",
+          "text": "自分から、先輩が好きだと伝えたいと言う",
+          "next": "confess_player",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 35,
+              "romanceChar": 25
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "listen",
+          "text": "先輩が話す続きを待つ",
+          "next": "confess_rohan",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 20,
+              "romanceChar": 35
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "first_reader",
+          "text": "売るためではない頁を、最初に読む相手でいたいと話す",
+          "next": "first_reader",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 35,
+              "romanceChar": 30,
+              "comfort": 20
+            },
+            "flags": [
+              "ownView",
+              "chosenWords",
+              "separateTime"
+            ],
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "nights",
+          "text": "望む夜にも会う、親密な友人でいたいと話す",
+          "next": "fwb_choice",
+          "when": {
+            "min": {
+              "trust": 50,
+              "desire": 25,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "love",
+          "text": "「今は、先輩の恋人になりたいです」と伝える",
+          "next": "end_fwb_love",
+          "when": {
+            "min": {
+              "trust": 60,
+              "romancePlayer": 50,
+              "romanceChar": 40,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          },
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "friends",
+          "text": "率直に話し、気軽に誘える友達でいたいと伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_player",
+      "chapter": 4,
+      "title": "読まれる前に言う",
+      "location": "街の広場",
+      "storyTime": {
+        "date": "6月21日",
+        "period": "夕方"
+      },
+      "characterId": "rohan",
+      "rating": "general",
+      "tags": [
+        "rohan"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先輩が何かを言う前に、私から話したいと頼んだ。自分で口にしないうちから見抜かれた気になって、諦めたくなかった。相手は何も分かっていないかもしれない。それでも、鞄を閉じて待っている人へなら言えそうだった。"
+        },
+        {
+          "speaker": "player",
+          "text": "作品を見せてもらえない日でも、先輩に会いたいです。見たい景色ができると、一緒に来てくれないかなって考えるようになりました。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩は少し目を細めた。作品についてなら容赦なく問い返す口が、今日は閉じたまま待っている。私は自分の指を膝へ押しつけるのをやめ、続きを言うために顔を上げた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "like",
+          "text": "「先輩が好きです。私と付き合ってください」と伝える",
+          "next": "end_love_a",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "choose",
+          "text": "「先輩の恋人になりたいです。選んでもらえますか」と伝える",
+          "next": "end_love_a",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "wait",
+          "text": "「友達として、これからも誘いたいです」と伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_rohan",
+      "chapter": 4,
+      "title": "推測ではなく",
+      "location": "街の広場",
+      "storyTime": {
+        "date": "6月21日",
+        "period": "夕方"
+      },
+      "characterId": "rohan",
+      "rating": "general",
+      "tags": [
+        "rohan"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "露伴先輩は膝に置いた手を一度ほどき、組み直した。いつもの長い前置きが来るかと思っていたら、最初に私の姓を呼んだ。語尾が少しだけ短くなり、作品の評価を言う声ではないと分かった。"
+        },
+        {
+          "speaker": "rohan",
+          "text": "{player.lastName}、ぼくは君が好きだ。君の見方が面白い、というだけじゃあない。一緒にいる時間を、ぼくのためにも欲しい。付き合ってほしいんだ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私をどう観察したかではなく、自分が何を欲しいかを聞かされた。返事の前に笑いそうになり、でもうまく笑えなかった。先輩は不審そうにこちらを見たが、私の表情を答えだと決めて話を進めなかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「私も好きです。先輩と付き合いたいです」と答える",
+          "next": "end_love_b",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「恋人にはなれません。友達でいたいです」と答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "refusedConfession",
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "first_reader",
+      "chapter": 4,
+      "title": "売り物ではない一冊",
+      "location": "街の広場",
+      "storyTime": {
+        "date": "6月21日",
+        "period": "夕方"
+      },
+      "characterId": "rohan",
+      "rating": "general",
+      "tags": [
+        "rohan"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人になるのとは違うけれど、先輩がまだ誰にも見せていないものを、最初に読む相手でいたい。そう言うと、それは仕事の手伝いをしたいという意味かと訊かれた。違います、と私は答えた。直すためではなく、自分が読みたいのだと。"
+        },
+        {
+          "speaker": "rohan",
+          "text": "君の意見どおりに描く気はないよ。褒めてもらうために描くのも御免だ。"
+        },
+        {
+          "speaker": "player",
+          "text": "私も、頼まれた感想は言えません。でも、見たことのない頁を読んで、自分で考えて、先輩に話したいです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩は少し黙ってから、小さな製本前の束を出した。街を歩いた時の断片を、売る予定もなく描いていたらしい。まだ途中だと言って、表を伏せたまま私へ差し出す。"
+        },
+        {
+          "speaker": "rohan",
+          "text": "だったら、これは君が読むつもりで続きを描こう。いつ読めるかは君が決めてくれ。ぼくも、いつ見せるかは自分で決める。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "急かす人の顔を見て、それは守ってくださいねと言うと、努力はするよ、と不満そうに返った。私は束を受け取り、まだ開かずに角を揃えた。先輩の目が、その指の動きを追っていた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "partners",
+          "text": "「読める日に、自分から連絡します」と最初の読者になる",
+          "next": "end_special",
+          "effect": "homeTogether",
+          "setFlags": [
+            "privatePages"
+          ]
+        },
+        {
+          "id": "friend",
+          "text": "今は作品ができた時に見せてもらう友達でいたいと答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fwb_choice",
+      "chapter": 4,
+      "title": "次の夜を尋ねる",
+      "location": "街の広場",
+      "storyTime": {
+        "date": "6月21日",
+        "period": "夕方"
+      },
+      "characterId": "rohan",
+      "rating": "general",
+      "tags": [
+        "rohan"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人という約束はせず、望む夜にも会いたいと話した。先輩は少し考え、ぼくもそうしたいと答える。二人で過ごした夜の数を理由にせず、今日の言葉へ返事をくれた。私は鞄から予定を取り出した。"
+        },
+        {
+          "speaker": "rohan",
+          "text": "前がそうだったからといって、次も同じとは限らない。会う時にも互いに聞こう。途中で止めたい時も、言ってくれ。ぼくも言う。"
+        },
+        {
+          "speaker": "player",
+          "text": "はい。私からも誘います。先輩が描いていたい日は、そう言ってください。私も自分の用事を残します。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "それは助かる、と返った声には遠慮がなかった。少し笑ってから、私は会いたい日を二つ挙げる。先輩は片方を選び、もう一方は仕事をすると言った。選ばれなかった日を消さず、自分の予定へ戻した。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "continue",
+          "text": "親密な友人として、互いに選んだ夜の約束をする",
+          "next": "end_fwb",
+          "effect": "messageBoundaries"
+        },
+        {
+          "id": "daytime",
+          "text": "考え直し、昼に会う友達でいたいと伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "end_friend",
+      "chapter": 5,
+      "title": "感想は一つじゃない",
+      "location": "大学の展示室",
+      "storyTime": {
+        "date": "7月5日",
+        "period": "昼"
+      },
+      "characterId": "rohan",
+      "rating": "general",
+      "tags": [
+        "rohan"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人にはなれないと答えると、先輩は顎を少し上げ、分かったと言った。その場で明るい話へ変えずに別れた。数日後、展示の案内が来たので、ジョセフと見に行ってもいいですかと返した。構わないよ、という返事には会場の時間も添えられていた。",
+          "when": {
+            "flags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "昼に会う友達でいたいと話してから、次の約束は展示室になった。親密な夜を持ち出されることはなく、会場の入口でいつもの顔がこちらを見た。私は少し照れながらも、自分の足で作品の前へ歩いた。",
+          "when": {
+            "flags": [
+              "hadNight",
+              "endedNight"
+            ],
+            "notFlags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "友達として率直に話そうと約束し、今日はジョセフと展示へ来た。露伴先輩は会場の隅で腕を組み、私たちが何を見ているかを気にしている。ジョセフが私とは違う頁を選ぶと、先輩の顔が少し得意げになった。",
+          "when": {
+            "notFlags": [
+              "hadNight",
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "rohan",
+          "text": "君は、また最後から二枚目かい。ほかにも見るところはあるだろう。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "あります、と答えてから、それでもここが好きですと付け足した。先輩が何か言い返す前に、私は次の頁へ進む。あとで話すために残した言葉が、展示を出るまでにいくつも増えた。"
+        }
+      ],
+      "choices": [],
+      "ending": "FRIEND"
+    },
+    {
+      "id": "end_love_a",
+      "chapter": 5,
+      "title": "先に渡した言葉",
+      "location": "街の広場",
+      "storyTime": {
+        "date": "6月21日",
+        "period": "夕方"
+      },
+      "characterId": "rohan",
+      "rating": "general",
+      "tags": [
+        "rohan"
+      ],
+      "body": [
+        {
+          "speaker": "rohan",
+          "text": "ぼくも君が好きだ。付き合いたい。……先に言われるのは、考えていなかったな。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "いつも答えを用意していそうな人が、私の言葉のあとへ返事を置いた。私は少し笑い、今はそれが嬉しいと伝える。先輩は不満そうに眉を動かしたが、近づけた手を引かなかった。私から指を重ねた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "次の休日、見たい景色があると私から連れ出した。先輩が描く道具を出しかけたので、先に少し一緒に見ませんかと頼む。面倒な注文だねと言いながら、鞄は閉じられた。並んで立つ肩へ、自分から触れるくらい近づいた。",
+          "storyTime": {
+            "date": "6月28日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_A"
+    },
+    {
+      "id": "end_love_b",
+      "chapter": 5,
+      "title": "見られる方の横顔",
+      "location": "街の広場",
+      "storyTime": {
+        "date": "6月21日",
+        "period": "夕方"
+      },
+      "characterId": "rohan",
+      "rating": "general",
+      "tags": [
+        "rohan"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私も好きですと答えると、先輩は一度頷き、それからやっと手をほどいた。膝の上に跡が残りそうなくらい組んでいたのだと分かる。私はそこへ目を落として笑いそうになったが、言葉にする代わりに手を差し出した。"
+        },
+        {
+          "speaker": "player",
+          "text": "今度は、私も先輩を見ていていいですか。作品じゃなくて。"
+        },
+        {
+          "speaker": "rohan",
+          "text": "……今までは見ていなかったのかい。まあ、構わないよ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌週、食事を待つ間に先輩が窓の方を向いた。横顔を見ていると気づかれ、何だいと訊かれる。好きだなと思ってました、と答えたら、返事が少し遅れた。私はメニューへ逃げず、先輩の方を向いたまま待った。",
+          "storyTime": {
+            "date": "6月28日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_B"
+    },
+    {
+      "id": "end_fwb",
+      "chapter": 5,
+      "title": "描かない夜の場所",
+      "location": "露伴の自宅",
+      "storyTime": {
+        "date": "7月5日",
+        "period": "夜"
+      },
+      "characterId": "rohan",
+      "rating": "fade",
+      "tags": [
+        "rohan"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "訪ねると、仕事の原稿は片づけられていた。終わったんですかと訊くと、今日はここまでにしただけだと返る。私は持ってきた食事を置き、今夜も一緒にいたいと伝えた。先輩もそうしたいと答えてから、皿を出した。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "食後、隣に座って私から手を取った。先輩は握り返し、顔を近づける前にこちらを見る。頷いた私の頬へ指が触れ、二人で距離を縮めた。机の紙へ触れないように立ち上がり、手をつないで奥の部屋へ移った。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝、先輩は起きると仕事の予定を確かめた。私は帰る時間を話し、支度をする。玄関で昨日の食事の容器を受け取ると、次もこれを持ってくる必要はないよと言われた。分かってます、と笑う。会いたくなったら別の理由を足さず、自分から連絡するつもりだった。",
+          "storyTime": {
+            "date": "7月6日",
+            "period": "朝"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB"
+    },
+    {
+      "id": "end_fwb_love",
+      "chapter": 5,
+      "title": "書き足すのは今",
+      "location": "街の広場",
+      "storyTime": {
+        "date": "6月21日",
+        "period": "夕方"
+      },
+      "characterId": "rohan",
+      "rating": "general",
+      "tags": [
+        "rohan"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "今は恋人になりたいと伝えると、先輩は私をじっと見た。夜に近くで過ごした時とは違う沈黙だった。私はそれを埋めるために言葉を足さず、膝の上で手を開いた。"
+        },
+        {
+          "speaker": "rohan",
+          "text": "ぼくも、君と付き合いたい。今までの形が嫌になったわけじゃあないが、次に会う時には、そう呼びたいと思っていた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私もです、と答えて手を伸ばす。先輩の指が重なった時、慣れた近さの中に知らない嬉しさがあった。彼はもう一度私を見て、今度は握った手を離さず立ち上がった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "次の休日は外で待ち合わせ、二人とも見たことのない展示へ行った。先輩が厳しい感想を言い始める横で、私は自分の好きな作品を指す。意見が合わなくても、帰り道では手がつながった。まだ話したいことが、いつもより少し残っていた。",
+          "storyTime": {
+            "date": "6月28日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB_TO_LOVE"
+    },
+    {
+      "id": "end_special",
+      "chapter": 5,
+      "title": "君が開く一冊",
+      "location": "露伴の自宅",
+      "storyTime": {
+        "date": "7月12日",
+        "period": "昼"
+      },
+      "characterId": "rohan",
+      "rating": "general",
+      "tags": [
+        "rohan"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "売る予定のない束を読み終えて返しに行くと、机の端に、借りた束とは別の頁が二枚伏せてあった。私は膝の上で持ってきた束を開く。あの日、裏返った布を見るために待った風が、別の場面へ紛れ込んでいる。先輩の線が作った路地を、もう一度最初から辿った。"
+        },
+        {
+          "speaker": "rohan",
+          "text": "君は本当に、読んだところへ戻るのが好きだね。……そこに置いてある方は、まだ開くな。順番が決まっていない。"
+        },
+        {
+          "speaker": "player",
+          "text": "分かりました。こっちを読んでからにします。先輩、最後の言葉は、私はまだない方が好きです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩は顔をしかめた。ぼくは必要だと思う、と言うので、私もそのまま頷いた。揃わない感想を直すためではなく、次の頁を読むためにここへ来ている。仕事の締切にも評価にも入らない場所へ、自分で選んだ時間を持って座った。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "恋人とは違う、最初の読者という席ができた。私が束を閉じると、先輩はまだ伏せてあった二枚を揃え、これなら順番が決まったと言う。帰る支度をしかけた私へ差し出されたので、今日はもう少し読めます、と椅子を戻した。"
+        }
+      ],
+      "choices": [],
+      "ending": "SPECIAL"
+    }
+  ]
+}

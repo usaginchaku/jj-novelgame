@@ -1,0 +1,1253 @@
+{
+  "id": "jonathan",
+  "title": "ジョナサン — ふたりで持つ箱",
+  "intro": "動かなくなった翼を、もう一度。\n立派にやり遂げたい先輩と、不格好な途中を分け合う。",
+  "startEvent": "box",
+  "character": {
+    "name": "ジョナサン",
+    "adult": true,
+    "heightCm": 195,
+    "heightBasis": "二次資料JoJo Wikiの身長欄と出典注記を照合。JOJO 6251 p.148。書籍・設定表現物は未照合。AUで同値を採用。",
+    "profile": "紳士としての誇りと正義感。誠実で努力を惜しまない。大切な相手のためには感情的にもなる。",
+    "personality": [
+      "紳士としての誇りと正義感",
+      "誠実で努力を惜しまない",
+      "大切な相手のためには感情的にもなる"
+    ],
+    "speech": {
+      "firstPerson": "ぼく",
+      "addressing": "主人公は名前/君。目上には礼儀を保つ。",
+      "tone": "君や名前でまっすぐ話す。語尾は感情と相手に合わせる。",
+      "habits": [
+        "君や名前でまっすぐ話す",
+        "〜だよ、〜だろうか",
+        "困っても自分の責任として言葉を選ぶ"
+      ],
+      "signaturePhrases": [],
+      "signatureNote": "日常の固定口癖は採用しない。象徴的な原作台詞と普段の話し方を混同せず、名台詞を貼り付けない。",
+      "avoid": [
+        "何でも見抜く恋愛の達人",
+        "自己犠牲だけの無欲な聖人",
+        "古風な敬語の連発"
+      ]
+    },
+    "referenceSection": "docs/CHARACTER_REFERENCE.md#cast-jonathan"
+  },
+  "au": {
+    "role": "機械工学系4年。ラグビーは候補",
+    "routeEnabled": true,
+    "addressing": [
+      {
+        "text": "{player.lastName}"
+      }
+    ]
+  },
+  "endingDescriptions": {
+    "FRIEND": {
+      "title": "持つ場所を知っている",
+      "description": "友人として手を貸し、時には頼る。三人分の食事の話をしながら、次の箱を運ぶ。"
+    },
+    "LOVE_A": {
+      "title": "隣から見上げる",
+      "description": "助けてもらったお礼ではなく、私の恋を伝える。先輩の嬉しい顔を、隣から見上げる。"
+    },
+    "LOVE_B": {
+      "title": "嬉しい日に呼ぶ名前",
+      "description": "先輩自身の望みとして、好きだと言われる。嬉しい日に最初に聞く声が、二人の約束になる。"
+    },
+    "FWB": {
+      "title": "朝ご飯の分まで",
+      "description": "互いに望む夜と、気安い昼を分け合う友人。朝の食卓で、次の予定をそれぞれ開く。"
+    },
+    "FWB_TO_LOVE": {
+      "title": "持ち帰らずに伝える",
+      "description": "重ねた夜の先で、恋人として約束する。慣れた手を取って、新しい待ち合わせへ。"
+    },
+    "SPECIAL": {
+      "title": "まだできていないもの",
+      "description": "立派にできたものだけでなく、途中も見せ合う制作の相棒。誰かのためではない二人の願いを、同じ箱に入れる。"
+    }
+  },
+  "events": [
+    {
+      "id": "box",
+      "chapter": 1,
+      "title": "片側を持つ",
+      "location": "大学の倉庫前",
+      "storyTime": {
+        "date": "5月9日",
+        "period": "夕方"
+      },
+      "characterId": "jonathan",
+      "rating": "general",
+      "tags": [
+        "jonathan"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "倉庫の前で、ジョナサン先輩が大きな箱と格闘していた。重くて持てないのではなく、開いた扉と箱の幅が合わないらしい。私が通りかかると先輩は照れたように笑い、扉だけ押さえてくれるだろうかと訊いた。私は持っていた端末を鞄へしまい、箱の空いている取っ手へ手を伸ばした。"
+        },
+        {
+          "speaker": "player",
+          "text": "こっち、私も持てます。先輩だけで斜めにしようとするから、引っかかってますよ。"
+        },
+        {
+          "speaker": "jonathan",
+          "text": "そうか。……頼むよ。君の方から動いてくれるかい。ぼくが合わせる。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "中に入っていたのは、手でハンドルを回すと鳥の翼が動く古い模型だった。公開展示で使おうと借りたものの、片翼だけが動かないらしい。箱を下ろすと、先輩は自分の膝についた埃より先に模型を覗き込んだ。私も隣でしゃがみ、その大きな手が小さな翼をそっと支えるのを見た。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "carry",
+          "text": "翼を支えながら、動かない場所を一緒に探す",
+          "next": "fault",
+          "effect": "workTogether"
+        },
+        {
+          "id": "curious",
+          "text": "先輩がこの模型を選んだ理由を聞く",
+          "next": "fault",
+          "effect": "ask"
+        }
+      ]
+    },
+    {
+      "id": "fault",
+      "chapter": 1,
+      "title": "言い訳より先に",
+      "location": "学内の作業室",
+      "storyTime": {
+        "date": "5月12日",
+        "period": "昼"
+      },
+      "characterId": "jonathan",
+      "rating": "general",
+      "tags": [
+        "jonathan"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "借りた作業室で、外した部品に番号をつけた。私が写真を撮り、先輩が留め具を確かめる。いったん動いたと思った翼が、組み直すとまた途中で止まった。自分のつけた番号を見直して、二つが逆だったと気づく。"
+        },
+        {
+          "speaker": "player",
+          "text": "私が、番号を逆につけました。ごめんなさい。ここから戻してください。"
+        },
+        {
+          "speaker": "jonathan",
+          "text": "確認せずに組んだのはぼくも同じだ。君だけのせいじゃない。……もう一度やろう。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩は声を荒らげなかったけれど、外した部品を置く手に力が入っていた。うまくできなかったことが悔しいのだと分かり、安心だけでは済まなくなる。私は謝る代わりに新しい紙を出し、どこで間違えたかを先輩の隣で書いた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "own_part",
+          "text": "自分の間違いを記録し、やり直す作業も受け持つ",
+          "next": "wish",
+          "effect": "honest",
+          "setFlags": [
+            "ownedMistake"
+          ]
+        },
+        {
+          "id": "check_list",
+          "text": "二人で番号を読み上げ、次の手順を確認する",
+          "next": "wish",
+          "effect": "compareNotes"
+        }
+      ]
+    },
+    {
+      "id": "wish",
+      "chapter": 1,
+      "title": "先輩のためにも",
+      "location": "学食の外のベンチ",
+      "storyTime": {
+        "date": "5月15日",
+        "period": "昼"
+      },
+      "characterId": "jonathan",
+      "rating": "general",
+      "tags": [
+        "jonathan"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "昼食のあと、先輩は模型の写真を見ていた。最初の展示に間に合わせるには難しいと言われた、と聞く。古いものだから仕方ない、と返しかけて、私は口を閉じた。先輩は写真をしまわず、止まった翼の角度を指でなぞっている。"
+        },
+        {
+          "speaker": "jonathan",
+          "text": "別のものを出せば済むのは分かっている。でも、ぼくはこれを動かしたい。引き受けたからだけじゃないんだ。動いたところを、見たい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "最後だけ、普段より強い言い方だった。誰かのために頑張る人だと思っていたけれど、写真を見る目には、もっと個人的な熱があった。私はその隣で、昨日一瞬だけ動いた翼を思い出した。"
+        },
+        {
+          "speaker": "player",
+          "text": "だったら、先輩が見たいところまでやりましょう。私も、最後まで見たいです。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "your_wish",
+          "text": "「先輩自身がやりたいなら、付き合いたいです」と伝える",
+          "next": "message",
+          "effect": "homeTalk",
+          "setFlags": [
+            "heardWish"
+          ]
+        },
+        {
+          "id": "two_lunches",
+          "text": "次の作業の日も、二人で昼を食べようと誘う",
+          "next": "message",
+          "effect": "lunchTwo"
+        },
+        {
+          "id": "set_schedule",
+          "text": "無理のない作業日を二人で決める",
+          "next": "message",
+          "effect": "shiftRest"
+        }
+      ]
+    },
+    {
+      "id": "message",
+      "chapter": 2,
+      "title": "届いた失敗",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "5月19日",
+        "period": "夜"
+      },
+      "characterId": "jonathan",
+      "rating": "general",
+      "tags": [
+        "jonathan"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先輩から届いた写真には、小さな部品と、失敗したらしい紙の型が写っていた。立派にできたものだけ見せてくれると思っていたので、捨てられずに並ぶ切れ端に少し笑った。"
+        },
+        {
+          "speaker": "jonathan",
+          "text": "今日はここまでだった。作り直すところが多いけれど、君が書いた記録が役に立ったよ。次は一緒に確かめたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "写真の端には大きな手の影があった。その手で細かいものを作っているところを想像すると、失敗した部品まで取っておいてほしくなった。返信を書きながら、私も机の上へ作業のノートを開いた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "together",
+          "text": "先輩とやっていると、うまくいかない日も帰るのが惜しいです",
+          "next": "trial",
+          "effect": "messageHeart",
+          "replyVariants": [
+            {
+              "text": "ぼくも、君が帰ったあとは静かだと思っていた。次は、少し早く昼を食べて始めよう。",
+              "when": {
+                "min": {
+                  "romanceChar": 15
+                }
+              }
+            },
+            {
+              "text": "ありがとう。次はうまくいくところも一緒に見たいね。"
+            }
+          ],
+          "lockRoute": "jonathan"
+        },
+        {
+          "id": "show_me",
+          "text": "その失敗も見せてください。先輩だけで片づけないでほしいです",
+          "next": "trial",
+          "effect": "messageListen",
+          "replyVariants": [
+            {
+              "text": "分かった。全部取っておく。少し格好悪いところもあるけれどね。"
+            }
+          ],
+          "lockRoute": "jonathan"
+        },
+        {
+          "id": "notes",
+          "text": "次の作業日に記録を持っていきます",
+          "next": "trial",
+          "effect": "messageDaily",
+          "replyVariants": [
+            {
+              "text": "助かるよ。部屋の予約は取れたから、いつもの時間に。"
+            }
+          ],
+          "lockRoute": "jonathan"
+        }
+      ],
+      "message": true
+    },
+    {
+      "id": "trial",
+      "chapter": 2,
+      "title": "止まったところで",
+      "location": "学内の作業室",
+      "storyTime": {
+        "date": "5月23日",
+        "period": "夕方"
+      },
+      "characterId": "jonathan",
+      "rating": "general",
+      "tags": [
+        "jonathan"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "試運転で翼が止まった時、先輩はすぐに工具へ手を伸ばした。窓の外はもう夕方で、昼に開けた飲み物もそのまま残っている。私が時計を見ると、先輩は気づいて、帰っていいよと先に言った。"
+        },
+        {
+          "speaker": "player",
+          "text": "帰るかどうかより、先輩がまた全部一人でやろうとしてる方が気になります。"
+        },
+        {
+          "speaker": "jonathan",
+          "text": "……そうだね。頼んでおいて、自分だけで取り返そうとしていた。だけど今、止めて帰るのは悔しいんだ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "手の中の工具が下ろされた。大きな背中を見ていると何でもできそうに思えるのに、先輩自身もここで足を止めていた。私は立ったままでは届かないその顔を見上げ、次に何をするかを言った。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "take_turn",
+          "text": "私が手元を確かめるので、隣で見ていてほしいと頼む",
+          "next": "bench",
+          "effect": "walkClose",
+          "setFlags": [
+            "sharedBurden"
+          ]
+        },
+        {
+          "id": "rest",
+          "text": "今日は二人とも片づけ、次の予約日にやり直す",
+          "next": "bench",
+          "effect": "walkHome"
+        }
+      ]
+    },
+    {
+      "id": "bench",
+      "chapter": 2,
+      "title": "もう片方の手",
+      "location": "作業室前のベンチ",
+      "storyTime": {
+        "date": "5月23日",
+        "period": "夕方"
+      },
+      "characterId": "jonathan",
+      "rating": "general",
+      "tags": [
+        "jonathan"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私が順序を確かめる間、先輩は隣で記録を読み、手を出さずに待ってくれた。今日は直しきれない、と二人で決めてから道具をしまった。次にやることを私の字で書いておくと、先輩もその下に小さく確認の印をつけた。",
+          "when": {
+            "flags": [
+              "sharedBurden"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "道具をしまって外へ出ると、風が思ったより冷たかった。先輩はベンチへ腰を下ろし、指先に残った接着剤を眺めている。私は鞄からハンカチを探しかけたが、乾いたものをこすっても仕方ないと気づき、代わりに隣へ座った。"
+        },
+        {
+          "speaker": "jonathan",
+          "text": "見せたいものがあると、周りが見えなくなることがあるね。君が言ってくれて助かった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "自分が助けたと言われるのは少し照れくさかった。先輩の腕は私の横にあって、触れようと思えば触れられる。しばらくそうして座ってから、私は自分の失敗の方も、次に気づいたら止めてくださいと頼んだ。先輩は笑って、その時は遠慮しないと答えた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "promise",
+          "text": "うまくいかない時ほど、二人で話すと約束する",
+          "next": "finished",
+          "effect": "friendPromise"
+        },
+        {
+          "id": "closer",
+          "text": "「こうして先輩と話す時間も、好きです」と伝える",
+          "next": "finished",
+          "effect": "hotelTalk"
+        }
+      ]
+    },
+    {
+      "id": "finished",
+      "chapter": 2,
+      "title": "少し違う羽音",
+      "location": "大学の公開展示",
+      "storyTime": {
+        "date": "6月1日",
+        "period": "昼"
+      },
+      "characterId": "jonathan",
+      "rating": "general",
+      "tags": [
+        "jonathan"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "間に合わせるつもりだった最初の日から、展示の予定を一度ずらした。そのぶん試す時間を取り、今日ようやく箱を開けた。ジョセフが台を押さえ、私は手順の札を置く。ジョナサン先輩がハンドルを回すと、両方の翼が、同じ速さではないけれど確かに動いた。"
+        },
+        {
+          "speaker": "joseph",
+          "text": "おお、飛びそうじゃねえか。先輩、そいつより嬉しそうな顔してるぜ。"
+        },
+        {
+          "speaker": "jonathan",
+          "text": "嬉しいよ。ここまで、何度もやり直したんだから。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "あまりにまっすぐな返事で、私まで笑ってしまった。来場者が途切れた時、先輩は私にハンドルを譲った。大きな手が台を支えている。私はその手が見える位置から、一周ずつゆっくり回した。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "our_result",
+          "text": "「先輩と見られて嬉しいです」と、隣に立つ",
+          "next": "supper",
+          "effect": "conferenceClose"
+        },
+        {
+          "id": "record",
+          "text": "動いたところを撮り、記録を二人で仕上げる",
+          "next": "supper",
+          "effect": "conferencePractical"
+        }
+      ]
+    },
+    {
+      "id": "supper",
+      "chapter": 3,
+      "title": "空の箱の帰り道",
+      "location": "ジョナサンの自宅",
+      "storyTime": {
+        "date": "6月1日",
+        "period": "夜"
+      },
+      "characterId": "jonathan",
+      "rating": "general",
+      "tags": [
+        "jonathan"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "模型を返し、空の箱を片づけた帰りに、先輩の家で夕食を取った。二人とも昼を軽く済ませていたので、買ったパンを並べるだけでも賑やかな机になった。先輩は一つ余った皿を見て、量を考えすぎたかなと笑った。"
+        },
+        {
+          "speaker": "player",
+          "text": "今日は私もお腹すいてます。食べきれなかったら、明日の楽しみにしましょう。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "部屋には、作り直した部品の写真がまだ机の端に残っていた。成功した写真だけでなく、間違えた番号の紙もある。捨てなかったんですねと言うと、先輩はどこを直したか忘れたくないからと答えた。食事が終わっても、私の椅子はすぐには引かれなかった。"
+        },
+        {
+          "speaker": "jonathan",
+          "text": "来てくれてありがとう。今日は、君とここまで過ごせてよかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "stay",
+          "text": "「もう少し近くで、一緒にいたいです」と伝える",
+          "next": "consent",
+          "effect": "hotelInvite",
+          "when": {
+            "min": {
+              "trust": 50,
+              "desire": 12
+            }
+          }
+        },
+        {
+          "id": "talk",
+          "text": "片づけながら、これからも会いたいと話して帰る",
+          "next": "returning",
+          "effect": "hotelTalk"
+        },
+        {
+          "id": "home",
+          "text": "次の昼食を約束して帰る",
+          "next": "returning",
+          "effect": "homeRest"
+        }
+      ]
+    },
+    {
+      "id": "consent",
+      "chapter": 3,
+      "title": "急がない手",
+      "location": "ジョナサンの自宅",
+      "storyTime": {
+        "date": "6月1日",
+        "period": "夜"
+      },
+      "characterId": "jonathan",
+      "rating": "general",
+      "tags": [
+        "jonathan"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先輩は食器を流しへ置いてから、私の前へ戻ってきた。座っている私を見下ろしたままにはせず、少し離れた椅子へ腰を下ろす。顔の高さが近くなって、言おうとしていたことが余計にはっきりした。"
+        },
+        {
+          "speaker": "jonathan",
+          "text": "ぼくも君に触れたい。今夜、一緒に過ごしたいと思っている。でも、これを恋人になる約束にはしない。君は、どうしたいだろう。"
+        },
+        {
+          "speaker": "player",
+          "text": "私も、先輩と一緒にいたいです。途中でやめたくなったら言います。先輩も、そうしてください。"
+        },
+        {
+          "speaker": "jonathan",
+          "text": "うん。どちらが止めても、そこでやめよう。帰りたくなったら、それも言ってほしい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩の手が机の上で開いた。私が望むのを待っているその手を見て、嬉しさと少しの怖さが一緒に来た。私は自分の手を膝から持ち上げた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「今夜は、ここにいたいです」と手を重ねる",
+          "next": "night",
+          "effect": "consent",
+          "setFlags": [
+            "consented",
+            "hadNight"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「今日は帰ります」と伝える",
+          "next": "returning",
+          "effect": "walkHome"
+        }
+      ]
+    },
+    {
+      "id": "night",
+      "chapter": 3,
+      "title": "箱を持たない腕",
+      "location": "ジョナサンの自宅",
+      "storyTime": {
+        "date": "6月1日",
+        "period": "夜"
+      },
+      "characterId": "jonathan",
+      "rating": "fade",
+      "tags": [
+        "jonathan"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "手を取ると、先輩は私が立つのに合わせて立ち上がった。見上げるには近すぎて少し笑うと、先輩も笑い、身を屈めてくれた。私から肩へ手を添える。あの箱を支えていた腕が今は私へ回り、強すぎない力で背中を抱いた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "キスのあとで顔を離すと、先輩は私の目を見た。もう少し、と私が伝える。頷いた先輩の手を引き、二人で寝室へ移った。道具も模型もない場所で、今日は互いの小さな動きを確かめた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌朝、先輩が台所でパンの袋を開けていた。昨日残したものがちょうど二人分ある。私は身支度を済ませてから皿を出し、先輩の向かいへ座った。寝癖で跳ねた髪を指で直すところを見て、そっと笑った。",
+          "storyTime": {
+            "date": "6月2日",
+            "period": "朝"
+          }
+        },
+        {
+          "speaker": "jonathan",
+          "text": "また君と会いたい。昼も、こうして過ごす夜も。君がそう思う時に、誘ってくれたら嬉しい。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "again",
+          "text": "友達のまま、また望む夜には一緒にいたいと答える",
+          "next": "returning",
+          "effect": "messageBoundaries",
+          "setFlags": [
+            "ongoing"
+          ]
+        },
+        {
+          "id": "more",
+          "text": "また会いたいし、前より好きになったと伝える",
+          "next": "returning",
+          "effect": "messageAgain",
+          "setFlags": [
+            "ongoing"
+          ]
+        },
+        {
+          "id": "daytime",
+          "text": "今後は、昼に会う友人でいたいと伝える",
+          "next": "returning",
+          "effect": "messageDaily",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ],
+      "when": {
+        "flags": [
+          "consented"
+        ]
+      }
+    },
+    {
+      "id": "returning",
+      "chapter": 4,
+      "title": "何も頼まれていなくても",
+      "location": "大学の庭",
+      "storyTime": {
+        "date": "6月20日",
+        "period": "夕方"
+      },
+      "characterId": "jonathan",
+      "rating": "general",
+      "tags": [
+        "jonathan"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "その後も昼に会い、互いに望んだ夜には先輩の家で過ごした。何かを直す約束ではなく、会いたいから連絡を取る。先輩は忙しい日にはそう言い、私も無理に時間を空けなかった。会えた夜の数だけ、帰ったあとに話したいことが増えていった。",
+          "when": {
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "昼に会う友人でいたいと伝えたあと、先輩は夕方には帰れる予定で誘ってくれた。最初は挨拶を考えてから顔を合わせたけれど、模型の記録を渡す頃には、以前と同じ調子で笑えた。",
+          "when": {
+            "flags": [
+              "hadNight",
+              "endedNight"
+            ],
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "模型を返したあとも、先輩とは昼に会った。あの作業の続きを話す日も、全然別の失敗を笑い合う日もある。大きな箱を持っていない先輩を見つけると、今度は私から近づいた。",
+          "when": {
+            "notFlags": [
+              "hadNight"
+            ]
+          }
+        },
+        {
+          "speaker": "jonathan",
+          "text": "何も頼むことがなくても、君と会いたいと思うんだ。今日は、その話をしたかった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩が両手を空けて立っている。その前へ私も鞄を下ろした。してもらったことへのお礼ではなく、今の私が望むことを答えたかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "tell",
+          "text": "「私から、伝えたいことがあります」と切り出す",
+          "next": "confess_player",
+          "when": {
+            "min": {
+              "trust": 55,
+              "romancePlayer": 35,
+              "romanceChar": 25
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "listen",
+          "text": "先輩の言葉の続きを聞く",
+          "next": "confess_jonathan",
+          "when": {
+            "min": {
+              "trust": 55,
+              "romancePlayer": 20,
+              "romanceChar": 35
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "make_next",
+          "text": "「今度は二人が作りたいものを、一緒に作りませんか」と誘う",
+          "next": "shared_promise",
+          "when": {
+            "min": {
+              "trust": 55,
+              "comfort": 30,
+              "intimacy": 10
+            },
+            "flags": [
+              "ownedMistake",
+              "heardWish",
+              "sharedBurden"
+            ],
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "nights",
+          "text": "親密な友人として、これからも会いたいと話す",
+          "next": "fwb_choice",
+          "when": {
+            "min": {
+              "trust": 55,
+              "desire": 25,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "love",
+          "text": "「今は、恋人になりたいです」と伝える",
+          "next": "end_fwb_love",
+          "when": {
+            "min": {
+              "trust": 60,
+              "romancePlayer": 50,
+              "romanceChar": 40,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "friends",
+          "text": "「これからも、友人として会いたいです」と伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_player",
+      "chapter": 4,
+      "title": "頼み事ではなく",
+      "location": "大学の庭",
+      "storyTime": {
+        "date": "6月20日",
+        "period": "夕方"
+      },
+      "characterId": "jonathan",
+      "rating": "general",
+      "tags": [
+        "jonathan"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "好きだと伝えたい、と口にしかけて、私は一度言葉を止めた。先輩は何も急かさず、こちらへ向き直る。いつも手を貸してくれる人だから、その優しさへ甘えて言うのではないと、伝わってほしかった。"
+        },
+        {
+          "speaker": "player",
+          "text": "助けてもらったからだけじゃないんです。悔しそうなところも、うまくできて嬉しそうなところも、もっと近くで見たいと思いました。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩の目が少し見開かれた。その顔を見て、私の方も怖くなる。けれど、箱の取っ手を片側から持った時と同じように、今度も私から手を出したかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "like",
+          "text": "「好きです。私と付き合ってください」と伝える",
+          "next": "end_love_a",
+          "effect": "messageHeart"
+        },
+        {
+          "id": "beside",
+          "text": "「先輩の恋人として、嬉しい日も悔しい日も隣にいたいです」と伝える",
+          "next": "end_love_a",
+          "effect": "messageHeart"
+        },
+        {
+          "id": "friends",
+          "text": "「今は、友達として会いたいです」と伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_jonathan",
+      "chapter": 4,
+      "title": "自分の望みを言う",
+      "location": "大学の庭",
+      "storyTime": {
+        "date": "6月20日",
+        "period": "夕方"
+      },
+      "characterId": "jonathan",
+      "rating": "general",
+      "tags": [
+        "jonathan"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先輩は一度胸の前で手を握り、それからほどいた。何かを引き受ける時のように頷くのではなく、自分から言葉を選んでいる。その間を見ていたら、私まで背筋を伸ばしていた。"
+        },
+        {
+          "speaker": "jonathan",
+          "text": "君が好きだ。君が嬉しい時に会いたいし、ぼくが嬉しい時にも、最初に君へ話したい。ぼくと付き合ってくれないだろうか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "大きな声ではなかったけれど、逃げるところのないまっすぐさだった。先輩の手はまだ自分の体の脇にある。返事を待ってくれていると分かると、私は自分の足元から、ゆっくり視線を上げた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「私も好きです。恋人になりたいです」と答える",
+          "next": "end_love_b",
+          "effect": "messageHeart"
+        },
+        {
+          "id": "no",
+          "text": "「恋人にはなれません。友達でいたいです」と答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "refusedConfession",
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "shared_promise",
+      "chapter": 4,
+      "title": "半分ずつでは足りなくても",
+      "location": "大学の庭",
+      "storyTime": {
+        "date": "6月20日",
+        "period": "夕方"
+      },
+      "characterId": "jonathan",
+      "rating": "general",
+      "tags": [
+        "jonathan"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "次に作るものは誰かに頼まれたものではなく、私たちが見たいものにしたい。そう言うと、先輩は驚いてから、少し子どもっぽく笑った。直す仕事ならすぐ浮かぶのに、好きに作るとなると迷うんだ、と打ち明けられる。"
+        },
+        {
+          "speaker": "player",
+          "text": "迷うところから、一緒にやりたいです。途中で失敗しても、先輩だけで引き受けないでください。私も、格好悪いところを持ってきます。"
+        },
+        {
+          "speaker": "jonathan",
+          "text": "それなら、ぼくからも頼みたい。できたものだけでなく、できない途中も見せる。君にもそうしてほしい。二人で作る相棒になってくれるかい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "誰かを助ける手ではなく、一緒に欲しがる手が差し出された。私はその手を取り、何を作ろうかと聞いた。先輩の返事はまだまとまらず、私の案も途中で変わる。立派な約束にする前の、その賑やかな迷いをもう少し聞いていたかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "partners",
+          "text": "恋人の約束とは別に、互いに頼れる制作の相棒になりたいと答える",
+          "next": "end_special",
+          "effect": "homeTogether"
+        },
+        {
+          "id": "friends",
+          "text": "時々手を貸し合う友人として続けたいと答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fwb_choice",
+      "chapter": 4,
+      "title": "帰れる場所から誘う",
+      "location": "大学の庭",
+      "storyTime": {
+        "date": "6月20日",
+        "period": "夕方"
+      },
+      "characterId": "jonathan",
+      "rating": "general",
+      "tags": [
+        "jonathan"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "昼に遊ぶことも、夜に触れ合うことも続けたいと伝えた。恋人になる約束は今は望んでいない、と続けると、先輩は少し考えて頷いた。先に正しい言葉を用意してくれる人ではない。その間も、私の言葉を聞いていてくれた。"
+        },
+        {
+          "speaker": "jonathan",
+          "text": "ぼくも、その形で会いたい。会う日も、泊まるかどうかも、その時に二人で決めよう。やめたい時には言ってほしいし、ぼくもそうする。"
+        },
+        {
+          "speaker": "player",
+          "text": "はい。私からも誘います。今日は、その前に一緒にご飯を食べたいです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩が笑って、自分もお腹が空いていたと言った。私は先に学食の方を指し、歩き出す。追いついた先輩に、今日は何が食べたいですかと聞くと、迷いながら三つも挙げられた。私もまだ決めていないので、着くまで一緒に迷うことにした。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "continue",
+          "text": "親密な友人として、次に会う日を決める",
+          "next": "end_fwb",
+          "effect": "messageBoundaries"
+        },
+        {
+          "id": "daytime",
+          "text": "これからは昼に遊ぶ友人でいたいと伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "end_friend",
+      "chapter": 5,
+      "title": "持つ場所を知っている",
+      "location": "大学の倉庫前",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "jonathan",
+      "rating": "general",
+      "tags": [
+        "jonathan"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人にはなれないと答えた時、先輩は寂しそうな顔を隠さなかった。けれど私の返事を聞き、少し落ち着いたらまた話したいと言った。今日は数日後に届いた連絡に、私も会いたいと答えて来た。",
+          "when": {
+            "flags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "昼に会う友人へ戻りたいと話してから、初めて一緒に倉庫へ来た。先輩は近づきすぎず、私が模型の話を始めるのを聞いてから笑った。",
+          "when": {
+            "flags": [
+              "hadNight",
+              "endedNight"
+            ],
+            "notFlags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "友人としてまた手を貸してほしい、と先輩から連絡が来た。大きな箱なら片側を空けておいてくださいと返すと、任せるよ、と返ってきた。",
+          "when": {
+            "notFlags": [
+              "hadNight",
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "倉庫の前にはジョセフもいて、今度こそ楽に運ぶと台車を押してきた。先輩が箱を持ち上げ、私は扉を押さえる。最初に会った時より、どこに立てばいいかが分かっていた。"
+        },
+        {
+          "speaker": "jonathan",
+          "text": "帰りに食事をしよう。今度はぼくが、ご飯の場所を探しておく。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "三人で行けるところ、と私が付け足すと、ジョセフが量の多い店を挙げた。先輩も乗り気になり、箱が片づくより先に献立の話が始まった。私は開いた扉の向こうへ、その声と一緒に入っていった。"
+        }
+      ],
+      "choices": [],
+      "ending": "FRIEND"
+    },
+    {
+      "id": "end_love_a",
+      "chapter": 5,
+      "title": "隣から見上げる",
+      "location": "大学の庭と街路",
+      "storyTime": {
+        "date": "6月20日",
+        "period": "夕方"
+      },
+      "characterId": "jonathan",
+      "rating": "general",
+      "tags": [
+        "jonathan"
+      ],
+      "body": [
+        {
+          "speaker": "jonathan",
+          "text": "ぼくも君が好きだ。付き合ってほしい。……君から言ってもらって、今、すごく嬉しい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩が笑うと、自分まで笑っているのが分かった。私が手を出すより少し遅れて、先輩の手が伸びてくる。大きな手の中で指の置き場所を探し、ようやく握り返した。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "次の休み、二人で街を歩いた。先輩が店先に立ち止まるたびに、私は何を見つけたのかと隣から覗く。模型や道具の店ばかりではなく、おいしそうなパンにも同じくらい真剣な顔をするので、少し笑ってしまった。",
+          "storyTime": {
+            "date": "6月28日",
+            "period": "昼"
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "どれにしようか、と訊かれて、一つずつ選んで分けませんかと答えた。先輩の顔が明るくなる。頼まれて隣にいるのではなく、私がここにいたい。受け取った袋を二人の間に提げ、次の店までゆっくり歩いた。"
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_A"
+    },
+    {
+      "id": "end_love_b",
+      "chapter": 5,
+      "title": "嬉しい日に呼ぶ名前",
+      "location": "大学の庭と情報棟前",
+      "storyTime": {
+        "date": "6月20日",
+        "period": "夕方"
+      },
+      "characterId": "jonathan",
+      "rating": "general",
+      "tags": [
+        "jonathan"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人になりたいと返すと、先輩は少し顔を伏せて笑った。握っていた自分の手を開き、私の前へ差し出す。私はその手に触れ、今なら一緒に歩きたいと伝えた。"
+        },
+        {
+          "speaker": "jonathan",
+          "text": "もちろん。……ぼくも、すぐに別れるのは惜しいと思っていたんだ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "数日後、講義を終えて外へ出ると、先輩が待っていた。何かあったのかと近づくと、うまくいったことがあって話したかった、と聞かされる。声に明るさがあって、私も歩く速さが上がった。",
+          "storyTime": {
+            "date": "6月25日",
+            "period": "夕方"
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩は話しながら何度も手を動かし、途中で私と手をつないでいたことに気づいて笑った。聞き終えてから、お祝いに寄り道しましょうと誘う。嬉しい日に最初に呼ぶと言った名前が、今日は私の耳に届いていた。"
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_B"
+    },
+    {
+      "id": "end_fwb",
+      "chapter": 5,
+      "title": "朝ご飯の分まで",
+      "location": "ジョナサンの自宅",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夜"
+      },
+      "characterId": "jonathan",
+      "rating": "fade",
+      "tags": [
+        "jonathan"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "自分から誘った夜、先輩の家で夕食を作った。大げさな料理ではないけれど、二人で台所へ立つと少し狭い。私が皿を持って抜ける間、先輩が横を向いて道を空ける。その近さに、作業室とは違う照れ方をした。"
+        },
+        {
+          "speaker": "player",
+          "text": "今日は泊まりたいです。先輩も、そう思ってくれますか。"
+        },
+        {
+          "speaker": "jonathan",
+          "text": "うん。ぼくも一緒にいたい。明日の朝ご飯の分まで、買ってきてよかった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "食器を片づけてから、私が先輩の手を取った。親密な友人として会うと話した時の声を思い出しながら、今日は今の顔を見て近づく。先輩は身を屈め、私が背伸びをするのを待った。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝、二人分の皿を並べていると、先輩が大きめのパンを私へ渡しかけた。そんなに入りません、と笑うと、じゃあ半分、と食べる前から分けてくれる。次に会いたい日を聞きながら、私は自分の予定も広げた。",
+          "storyTime": {
+            "date": "6月29日",
+            "period": "朝"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB"
+    },
+    {
+      "id": "end_fwb_love",
+      "chapter": 5,
+      "title": "持ち帰らずに伝える",
+      "location": "大学の庭と駅前",
+      "storyTime": {
+        "date": "6月20日",
+        "period": "夕方"
+      },
+      "characterId": "jonathan",
+      "rating": "general",
+      "tags": [
+        "jonathan"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人になりたいと伝えると、先輩は私の方へ一歩近づいて止まった。何度も泊まった夜にも見た、返事を確かめる間だった。私はその距離へ自分から入り、先輩を見上げた。"
+        },
+        {
+          "speaker": "jonathan",
+          "text": "ぼくも、君と付き合いたい。会ったあとに、次はいつだろうと考えるようになった。君の恋人として、約束したい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "はい、と答えて手を重ねる。よく知っている腕の中でも、初めて聞く言葉があった。先輩が嬉しそうに笑ったので、私も今まで言わなかった小さな望みを一つずつ話した。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "次の待ち合わせは駅前にした。先輩の部屋へ向かうのではなく、二人とも行ったことのない場所へ出かける。改札を通る前に先輩が振り返り、私の手を探した。私も差し出して、並んで向こう側へ出た。",
+          "storyTime": {
+            "date": "6月28日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB_TO_LOVE"
+    },
+    {
+      "id": "end_special",
+      "chapter": 5,
+      "title": "まだできていないもの",
+      "location": "学内の作業室",
+      "storyTime": {
+        "date": "7月3日",
+        "period": "昼"
+      },
+      "characterId": "jonathan",
+      "rating": "general",
+      "tags": [
+        "jonathan"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "次に借りた作業室には、まだ完成したものが何もなかった。誰かから直してほしいと頼まれたのでもなく、先輩と私が作りたい案を持ち寄っただけだ。私は自分の紙を見せる前に少し迷い、先輩はその間に、形の崩れた小さな試作を机へ置いた。"
+        },
+        {
+          "speaker": "jonathan",
+          "text": "昨日はここまでだった。うまくできなかったところも、見てほしい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私も紙を広げた。自信のある部分と、途中で分からなくなった部分を並べる。先輩は全部引き受けず、自分がやりたいところを指し、私にも同じように訊いた。机の上に並んだ二人分の案を見て、私は少し欲張った場所を選んだ。"
+        },
+        {
+          "speaker": "player",
+          "text": "ここは、私が試したいです。難しかったら、先輩に手を貸してほしいです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "頼んでほしい、と先輩が笑った。最初の線を二人で引き、まだ何にも似ていない形を眺める。今度の箱も一人では運びにくくなるかもしれない。それなら、初めから取っ手を二つ付けようと、私から言った。"
+        }
+      ],
+      "choices": [],
+      "ending": "SPECIAL"
+    }
+  ]
+}

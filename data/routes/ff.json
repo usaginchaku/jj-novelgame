@@ -1,0 +1,1206 @@
+{
+  "id": "ff",
+  "title": "F・F — 同じところで、違う音",
+  "intro": "水辺でも街でも、先に聞こえるものは同じではない。\n知らない音を探した日から、知っている声に会いたくなる日へ。",
+  "startEvent": "pond",
+  "character": {
+    "name": "F・F",
+    "adult": true,
+    "heightCm": 165,
+    "heightBasis": "二次資料JoJo Wikiの身長欄と出典注記を照合。ストーンオーシャン34話プロフィール／アニメSO-TL000-00。書籍・設定表現物は未照合。AUで同値を採用。",
+    "profile": "新しい経験への好奇心。友人との繋がりを大切にする。自分で選ぶ意志。",
+    "personality": [
+      "新しい経験への好奇心",
+      "友人との繋がりを大切にする",
+      "自分で選ぶ意志"
+    ],
+    "speech": {
+      "firstPerson": "あたし",
+      "addressing": "主人公は名前/あんた。同期の直接的な常体。",
+      "tone": "素朴な質問と直球の感想。語尾は感情と相手に合わせる。",
+      "habits": [
+        "素朴な質問と直球の感想",
+        "仲間への気安さ",
+        "発見を楽しむ勢い"
+      ],
+      "signaturePhrases": [],
+      "signatureNote": "日常の固定口癖は採用しない。象徴的な原作台詞と普段の話し方を混同せず、名台詞を貼り付けない。",
+      "avoid": [
+        "プランクトンのまま恋愛させる",
+        "無知な幼児化",
+        "水の要求だけ"
+      ]
+    },
+    "referenceSection": "docs/CHARACTER_REFERENCE.md#cast-ff"
+  },
+  "au": {
+    "role": "生命科学／微生物・バイオ系候補の学部3年・同期。このAUでは成人の人間",
+    "routeEnabled": true,
+    "addressing": [
+      {
+        "text": "{player.lastName}"
+      }
+    ]
+  },
+  "events": [
+    {
+      "id": "pond",
+      "title": "聞こえていたのに",
+      "chapter": 1,
+      "location": "公園の池沿い",
+      "storyTime": {
+        "date": "5月10日",
+        "period": "昼"
+      },
+      "characterId": "ff",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "同じ三年のF・Fに誘われて、公園の池へ来た。水辺の生き物の話を聞くつもりだったのに、彼女は遊歩道の途中で立ち止まり、私へ耳を向けてみせた。柵の向こうで葉が擦れ、その下を低い音が通っている。"
+        },
+        {
+          "speaker": "ff",
+          "text": "今の、聞こえた？　鳥だと思ったんだけど、向こうの車輪かもしれない。もう一回来ないかな。"
+        },
+        {
+          "speaker": "player",
+          "text": "私は水の音だと思った。下の方で、ずっと鳴ってるの。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "F・Fはすぐに答えを決めず、私の指した方へ顔を向けた。排水口の近くで水が落ちている。そこへ気づくと、さっきまで池全体だと思っていた音に、細い場所ができた。彼女も柵へ寄りすぎないところで立ち止まり、そうか、これもあった、と笑った。"
+        },
+        {
+          "speaker": "ff",
+          "text": "あたし、上ばっかり聞いてた。同じ場所にいたのに、あんたには先にそっちが来たんだ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私には言葉を探すほどの発見ではなかった。でもF・Fがもう一度聞くので、私ももう一度耳を澄ます。何も増えていないはずの池が、立ち止まった分だけ少し広くなった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "hear",
+          "text": "自分が先に聞いた音を、F・Fへ伝える",
+          "next": "noise",
+          "effect": "workTogether",
+          "setFlags": [
+            "ownHearing"
+          ],
+          "lockRoute": "ff"
+        },
+        {
+          "id": "invite",
+          "text": "「F・Fと、またここへ来たい」と誘う",
+          "next": "noise",
+          "effect": "gameDate",
+          "lockRoute": "ff"
+        }
+      ]
+    },
+    {
+      "id": "noise",
+      "title": "分からないまま再生する",
+      "chapter": 1,
+      "location": "公園の休憩所",
+      "storyTime": {
+        "date": "5月17日",
+        "period": "昼"
+      },
+      "characterId": "ff",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "F・Fが先週の音を短く録っていた。けれど再生すると、水より先に風がざらざらと鳴る。彼女は端末を耳から離し、こんな音じゃなかった、と口を尖らせた。私はもう一度だけ聞かせてもらい、途中の小さな足音に気づいた。"
+        },
+        {
+          "speaker": "player",
+          "text": "ここ、私たちが向きを変えたところじゃない？　靴が二回鳴ってる。"
+        },
+        {
+          "speaker": "ff",
+          "text": "あ、ほんとだ。こっちの音、残すつもりじゃなかったのに。どっちがあたし？"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私にも分からなかった。二人で再生しては同じところで首を傾げるうち、録音が失敗だったことを忘れかけた。F・Fは名前をつけようとして指を止め、風、と打ってから足音、と足した。決められない方は決められないまま残った。"
+        },
+        {
+          "speaker": "ff",
+          "text": "録ると全部同じに戻れると思ったけど、違うね。あたし、こっちは覚えてなかった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼女の横で、自分にも別の記憶があることを確かめた。少し遠くから売店の音楽が流れてくる。今日は端末を向けず、聞いたまま持って帰ってもいいと思った。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "unknown",
+          "text": "どちらの足音かは決めず、二人で聞いた記録にする",
+          "next": "song",
+          "effect": "shiftHelp",
+          "setFlags": [
+            "leftUnknown"
+          ]
+        },
+        {
+          "id": "near",
+          "text": "F・Fの隣へ寄って、もう一度同じ録音を聞く",
+          "next": "song",
+          "effect": "walkClose"
+        }
+      ]
+    },
+    {
+      "id": "song",
+      "title": "好きなところは違う",
+      "chapter": 1,
+      "location": "街の試聴コーナー",
+      "storyTime": {
+        "date": "5月24日",
+        "period": "昼"
+      },
+      "characterId": "ff",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "今度は私がF・Fを連れ出した。先週、売店で聞こえた曲が気になって調べ、試聴できる店を見つけたのだ。彼女も曲を聴くのは好きだと言い、棚の前では私より先に別の一枚を手に取った。"
+        },
+        {
+          "speaker": "ff",
+          "text": "あたし、途中で急に静かになる曲、好きなんだ。音が増える方も面白いけど、なくなったところで耳が動く。"
+        },
+        {
+          "speaker": "player",
+          "text": "私は同じ音が戻ってくるところが好き。先に分かってても、来ると嬉しい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "同じ試聴用の曲を一人ずつ聞いて、機器を戻してから感想を話した。F・Fが指で刻んだところは私が好きな箇所より少し前で、互いの声が重なりかける。私は笑って先を譲り、そのあと自分の好きな続きを口ずさみかけてやめた。音程が怪しかった。"
+        },
+        {
+          "speaker": "ff",
+          "text": "そこか。あたし、次はそこまで待って聞いてみる。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼女は私の好みに合わせて自分の答えを消さなかった。一人ずつ買うものを選び、店を出る。駅へ向かう短い通路で、靴音が思いがけず響いた。私は壁から返る音に立ち止まり、先へ出たF・Fへここ、と床を指す。彼女が戻ってきて並ぶと、さっきの違う指の拍子まで足元に残っているようだった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "taste",
+          "text": "自分の好きな箇所を変えず、F・Fの続きを聞く",
+          "next": "message",
+          "effect": "homeTogether",
+          "setFlags": [
+            "differentTaste"
+          ]
+        },
+        {
+          "id": "smile",
+          "text": "「F・Fの話す声も、もっと聞きたい」と伝える",
+          "next": "message",
+          "effect": "walkClose"
+        }
+      ]
+    },
+    {
+      "id": "message",
+      "title": "まだ鳴っているところ",
+      "chapter": 1,
+      "location": "自分の部屋",
+      "storyTime": {
+        "date": "5月24日",
+        "period": "夜"
+      },
+      "characterId": "ff",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "買った曲を自分の部屋で聴くと、店では気づかなかった音があった。F・Fからも、帰ってからもう一度聞いた、と通知が来る。私は再生を止め、文の続きを開いた。"
+        },
+        {
+          "speaker": "ff",
+          "text": "あんたが好きだって言ったところ、分かった。あたしはやっぱり、その前が好き。でも今日は、そのあとまで待つのが楽しかった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "好きな場所が変わらなかったと聞いて、私は安心した。それでも聞き直してくれたことが、画面の小さな文字をいつもより近くする。音を止めた部屋で、返信の文字だけを打った。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "sound",
+          "text": "次は外の音も、別々に気づいたところを話そう",
+          "next": "return",
+          "effect": "messageDaily",
+          "replyVariants": [
+            {
+              "text": "いいね。あたし、先に答えを言わないようにする。あんたの最初の音も聞きたい。"
+            }
+          ]
+        },
+        {
+          "id": "you",
+          "text": "F・Fと話したあとだから、同じ曲が前より好きになった",
+          "next": "return",
+          "effect": "messageHeart",
+          "replyVariants": [
+            {
+              "when": {
+                "min": {
+                  "romanceChar": 20
+                }
+              },
+              "text": "あたしも、曲を聞くとあんたの顔が来る。また会いたい。音の話がない日も。"
+            },
+            {
+              "text": "また一緒に聞こう。あんたの話すところ、もう一回聞きたくなった。"
+            }
+          ]
+        }
+      ],
+      "message": true
+    },
+    {
+      "id": "return",
+      "title": "同じ池の、今日",
+      "chapter": 1,
+      "location": "公園の池沿い",
+      "storyTime": {
+        "date": "6月1日",
+        "period": "昼"
+      },
+      "characterId": "ff",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "新しい場所へ行こうかとF・Fが地図を開いたが、私は最初の池へ戻ってみたいと話した。何か面白いものを見つけたのかと聞かれ、そうではないと首を振る。もう一度聞いたら何が先に来るのか、自分でも知りたかった。"
+        },
+        {
+          "speaker": "ff",
+          "text": "分かった。あたし、まだ行ってない方ばっかり探してた。あそこなら道、覚えてる。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "池に着くと、排水口の音は前より小さかった。代わりに橋を渡る人の足音が続く。F・Fはすぐ新しい音の方へ顔を向けたが、私が柵の手前で立ち止まると隣へ戻ってきた。今日は、水の音を聞きにくい日だった。"
+        },
+        {
+          "speaker": "player",
+          "text": "何も変わってないと思ってたけど、同じには聞こえないね。私、前の音を待ってた。"
+        },
+        {
+          "speaker": "ff",
+          "text": "あたしも。ここ、知ってる場所になったのに、知らない音がする。来てよかった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼女が端末を出す前に、私はもう少しこのまま聞こうと頼んだ。F・Fは端末を鞄へ戻し、空いた手を柵から離す。何も残さない時間のあいだ、隣の呼吸まで聞き分けられるような気がした。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "again",
+          "text": "記録しない時間を二人で取り、同じ場所へまた来ると話す",
+          "next": "home",
+          "effect": "conferencePractical",
+          "setFlags": [
+            "returnedPlace"
+          ]
+        },
+        {
+          "id": "together",
+          "text": "「今日はF・Fが隣にいる音も、覚えていたい」と言う",
+          "next": "home",
+          "effect": "rehearse"
+        }
+      ]
+    },
+    {
+      "id": "home",
+      "title": "再生しない夕方",
+      "chapter": 1,
+      "location": "F・Fの自宅",
+      "storyTime": {
+        "date": "6月8日",
+        "period": "夕方"
+      },
+      "characterId": "ff",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "F・Fの部屋で、互いに持ってきた曲を聴いた。私の方を先に流し、次は彼女が選ぶ。台所で簡単な夕食を用意する間も音楽は続いていたが、食べ終わる頃、彼女が自分で再生を止めた。音の途切れた部屋に、皿を置く音だけが残った。"
+        },
+        {
+          "speaker": "ff",
+          "text": "今日は、この続きは今度にしよう。あんたが何か言いかけたの、さっき聞こえなかった。"
+        },
+        {
+          "speaker": "player",
+          "text": "たいした話じゃないよ。帰りに寄りたい店を思い出しただけ。でも、聞いてくれて嬉しい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "店の場所を話すと、F・Fも知っていた。先週通った時に窓の飾りが変わっていた、と彼女が言う。私は音の話以外もしたかったのだと、その時初めて気づいた。机の上の端末へ触れずに、今度は私から今日の授業の小さな失敗を話した。"
+        },
+        {
+          "speaker": "ff",
+          "text": "あたしも、それ似たことした。そっちはどうなった？"
+        },
+        {
+          "speaker": "narrator",
+          "text": "身を乗り出す顔が、何か珍しい音を見つけた時と同じくらい真剣だった。私は続きを話し、彼女の失敗も聞いた。窓の明るさが薄くなっても、まだ聞きたいことは減らなかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "listen",
+          "text": "互いの普段の話も聞きたいと伝え、今日は帰る",
+          "next": "later",
+          "effect": "homeTogether",
+          "setFlags": [
+            "ordinaryVoice"
+          ]
+        },
+        {
+          "id": "talk",
+          "text": "「音楽が止まっても、一緒にいるのが好き」と話して帰る",
+          "next": "later",
+          "effect": "homeTalk"
+        },
+        {
+          "id": "stay",
+          "text": "「今夜、F・Fのそばにいたい」と伝える",
+          "next": "consent",
+          "effect": "hotelInvite",
+          "when": {
+            "min": {
+              "trust": 35,
+              "desire": 8
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "consent",
+      "title": "今、聞きたい返事",
+      "chapter": 1,
+      "location": "F・Fの自宅",
+      "storyTime": {
+        "date": "6月8日",
+        "period": "夜"
+      },
+      "characterId": "ff",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "泊まりたい、と言うとF・Fは私の顔を見た。驚いたあと、嬉しそうに口元が動く。けれどそのまま手を伸ばすのではなく、膝の上で掌を開いた。私は椅子を少し彼女の方へ向けた。"
+        },
+        {
+          "speaker": "ff",
+          "text": "あたしも、一緒にいたい。あんたに触れたいと思ってる。恋人になるかは別の話として、今夜、そうしたい。あんたは？"
+        },
+        {
+          "speaker": "player",
+          "text": "私も触れてほしい。途中で気持ちが変わったら言うし、F・Fも言ってほしい。"
+        },
+        {
+          "speaker": "ff",
+          "text": "言う。どっちかがやめたくなったら、途中でも止めよう。帰ってもいいし、ただ話すだけにしてもいい。今の返事を聞いてから、近づきたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼女は私の方へ開いた手を、その場所に留めていた。何を感じるのか知りたいからではなく、この人へ触れたいと思っている。その違いを自分の中で確かめ、私は顔を上げた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「今夜、一緒にいたい」と答えて手を取る",
+          "next": "night",
+          "effect": "consent",
+          "setFlags": [
+            "mutualConsent",
+            "hadNight"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「今日は帰る。また昼に会おう」と伝える",
+          "next": "later",
+          "effect": "walkHome",
+          "setFlags": [
+            "declinedTouch"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "night",
+      "title": "声の届く距離",
+      "chapter": 1,
+      "location": "F・Fの自宅",
+      "storyTime": {
+        "date": "6月8日",
+        "period": "夜"
+      },
+      "characterId": "ff",
+      "rating": "fade",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "手を取ると、F・Fは指を少し曲げて握り返した。椅子から立ち、二人で窓際の長椅子へ移る。隣に座って顔を向けると、いつもは最後まで聞こうとする目が、今日は私の口元から戻ってくる。私も同じところを見ていた。"
+        },
+        {
+          "speaker": "ff",
+          "text": "キスしていい？"
+        },
+        {
+          "speaker": "player",
+          "text": "うん。私も、したい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "近づく間にF・Fが少し首を傾けた。触れたあと、すぐには言葉が戻らなかった。彼女が私の名前を呼ぶので、聞こえてる、と小さく答える。笑った息まで近くにあることが嬉しく、もう一度自分から肩へ寄った。録っておきたいとは思わなかった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝、窓の外を走る車の音で目が覚めた。F・Fも起きていて、今の大きかった、と私を見る。私は頷き、朝食を食べたら帰ると話した。隣から離れて台所へ向かう彼女の足音を、今日は探さずに聞けた。",
+          "storyTime": {
+            "date": "6月9日",
+            "period": "朝"
+          }
+        }
+      ],
+      "choices": [
+        {
+          "id": "home",
+          "text": "朝食のあと、自分の家へ戻る",
+          "next": "after_message"
+        }
+      ],
+      "when": {
+        "flags": [
+          "mutualConsent"
+        ]
+      }
+    },
+    {
+      "id": "after_message",
+      "title": "何も録らなかった日",
+      "chapter": 1,
+      "location": "自分の部屋",
+      "storyTime": {
+        "date": "6月9日",
+        "period": "夜"
+      },
+      "characterId": "ff",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "夜、自分の部屋で曲を流しかけてやめた。静かにしても昨夜と同じにはならないのに、しばらく何も足したくなかった。F・Fから、帰り道は混んでなかったかと文が来る。大丈夫だった、と返すと、続けてもう一つ届いた。"
+        },
+        {
+          "speaker": "ff",
+          "text": "昨日、何も録らなかったね。でも、あんたの声、今日は何度も思い出した。また会いたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私は同じ文を二度読んだ。思い出すだけなら一人でもできるけれど、次にどう会いたいかは相手へ渡す言葉になる。画面の明るさを下げ、ゆっくり返事を選んだ。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "again",
+          "text": "また夜も会いたい。F・Fのことが、前より好きになった",
+          "next": "later",
+          "effect": "messageAgain",
+          "setFlags": [
+            "ongoing"
+          ],
+          "replyVariants": [
+            {
+              "text": "あたしも。次に会ったら、その顔を見て好きって言いたい。"
+            }
+          ]
+        },
+        {
+          "id": "nights",
+          "text": "恋人とは決めず、お互い望む夜も会う友達でいたい",
+          "next": "later",
+          "effect": "messageBoundaries",
+          "setFlags": [
+            "ongoing"
+          ],
+          "replyVariants": [
+            {
+              "text": "うん、あたしもそうしたい。次も、その時の気持ちを聞こう。"
+            }
+          ]
+        },
+        {
+          "id": "days",
+          "text": "次からは昼に会う友達でいたい",
+          "next": "later",
+          "effect": "messageDaily",
+          "setFlags": [
+            "endedNight"
+          ],
+          "replyVariants": [
+            {
+              "text": "分かった。昼に会おう。次の散歩、あんたが行きたい方から歩きたい。"
+            }
+          ]
+        }
+      ],
+      "message": true
+    },
+    {
+      "id": "later",
+      "title": "聞き分ける前に",
+      "chapter": 1,
+      "location": "公園の休憩所",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "ff",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "六月の間、F・Fと何度か夜を過ごした。音楽をかける日も、ただ話す日も、泊まりたいかは二人で確かめた。朝にはそれぞれの予定へ帰り、昼の散歩も続いた。会う理由を探す時、私は新しい曲より先に彼女の名前を思い浮かべるようになった。",
+          "when": {
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "六月の間、F・Fと昼の散歩を重ねた。新しい道へ出ることも、同じ池を一周するだけのこともある。音の話をしないで食事をする日も増え、今度聞こうと思っていたことを、会ってから思い出すようになった。",
+          "when": {
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "今日は休憩所で腰を下ろした。F・Fは鞄から端末を出しかけたが、私が話し始めると膝へ置く。遠くの音より近い声を選んでくれた、その小さな動きに背中を押された。"
+        },
+        {
+          "speaker": "ff",
+          "text": "うん。あたし、今あんたの方を聞いてる。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "tell",
+          "text": "F・Fを好きになったことを、自分から伝える",
+          "next": "confess_player",
+          "when": {
+            "min": {
+              "trust": 40,
+              "romancePlayer": 35,
+              "romanceChar": 35
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "listen",
+          "text": "F・Fが私へ向けている言葉を待つ",
+          "next": "confess_char",
+          "when": {
+            "min": {
+              "trust": 40,
+              "romancePlayer": 20,
+              "romanceChar": 40
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "pact",
+          "text": "違う聞こえ方を持ち寄り、二人の音の道を作りたい",
+          "next": "pact",
+          "when": {
+            "min": {
+              "trust": 40,
+              "comfort": 60
+            },
+            "flags": [
+              "ownHearing",
+              "leftUnknown",
+              "differentTaste",
+              "returnedPlace",
+              "ordinaryVoice"
+            ],
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "nights",
+          "text": "恋人とは決めず、望む夜にも会う友情を続けたい",
+          "next": "fwb_choice",
+          "when": {
+            "min": {
+              "trust": 45,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "love",
+          "text": "夜を重ねた今、F・Fの恋人になりたい",
+          "next": "end_fwb_love",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 30,
+              "romanceChar": 30,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "friends",
+          "text": "これからも一緒に散歩する友達でいたい",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_player",
+      "title": "私の方から呼ぶ",
+      "chapter": 4,
+      "location": "公園の休憩所",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "ff",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私はF・Fの名前を呼び、好きだと伝えた。彼女が聞き返さなかったので、その言葉が届いたことをすぐに知った。けれど頷く前に続けたくなり、膝の上で握っていた手を緩めた。"
+        },
+        {
+          "speaker": "player",
+          "text": "何か見つけたから呼ぶんじゃなくて、F・Fに会いたいから探してた。今は、何も見つからなくても一緒にいたい。恋人として。"
+        },
+        {
+          "speaker": "ff",
+          "text": "あたしも、あんたがいない日に、この音を聞いたら何て言うかなって考える。音がやんでも、あんたのことが残る。……好きだよ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "風が木を揺らしていた。何の音か分ける余裕はなく、今は彼女の声だけをもう一度聞きたかった。私は隣へ少し体を向け、自分から始めた話の続きを差し出した。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「私と付き合って」と伝える",
+          "next": "end_love_a",
+          "effect": "messageHeart"
+        },
+        {
+          "id": "no",
+          "text": "「今は友達として一緒にいたい」と伝え直す",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_char",
+      "title": "先に、好きと言う",
+      "chapter": 4,
+      "location": "公園の休憩所",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "ff",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "F・Fは膝の上の端末を鞄へ戻した。それから私を見て、途中で視線を外しかけ、また戻す。知らないものを確かめる時にはすぐ動く人が、今日は座ったまま息を整えていた。"
+        },
+        {
+          "speaker": "ff",
+          "text": "あたし、あんたが好き。恋人になりたい。何か見つけた時だけじゃなく、何もない日にあんたの隣へ行きたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私は頬に触れかけて手を止めた。返事を待っている目へ、困っていると思わせたくはなかった。嬉しさも迷いも一度に来たけれど、どれを答えにするかは自分で決められる。F・Fは続きを足さず、私が顔を上げるのを待った。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「私も好き。恋人になりたい」と答える",
+          "next": "end_love_b",
+          "effect": "messageHeart"
+        },
+        {
+          "id": "no",
+          "text": "「恋人にはならず、友達でいたい」と答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "refusedConfession",
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pact",
+      "title": "二つの耳で残す道",
+      "chapter": 4,
+      "location": "公園の休憩所",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "ff",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "同じ場所で違う音を聞いていたことを、私は何かに残したくなった。一つの正しい記録へ揃えるのではなく、私にはこう聞こえた、と二つ並べて。小さな地図を画面に出すと、F・Fが身を寄せた。"
+        },
+        {
+          "speaker": "player",
+          "text": "音を録れた日は付けてもいいし、言葉だけでもいい。何も分からなかった日も、別々に書こう。二人で通った道として。"
+        },
+        {
+          "speaker": "ff",
+          "text": "いい。それ、あたしだけじゃできないね。同じのを聞いても、あんたの最初の音は聞けないから。歩く場所も交代で決めよう。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼女は最初の池へ印をつけ、私にも一つ場所を選ばせた。恋人の約束とは別に、二人分の聞こえ方を置く道が始まりかけている。私は音楽を聞いた店ではなく、その帰りに靴音が響いた短い通路を指した。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "二人で歩き、別々の聞こえ方を残すと約束する",
+          "next": "end_special",
+          "effect": "homeTogether"
+        },
+        {
+          "id": "friends",
+          "text": "記録の約束はせず、気軽に散歩する友達を選ぶ",
+          "next": "end_friend",
+          "effect": "friendPromise"
+        }
+      ]
+    },
+    {
+      "id": "fwb_choice",
+      "title": "その日の声で",
+      "chapter": 4,
+      "location": "公園の休憩所",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "ff",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "これからも夜に会いたいと伝えると、F・Fは頷き、自分も望んでいると言った。私は恋人と決めるつもりは今はないと続ける。彼女は聞き終えてから、その方が今の気持ちに合う、と自分の言葉を返した。"
+        },
+        {
+          "speaker": "ff",
+          "text": "次の夜も、前に言ったから同じだとは思わない。会いたかったら誘う。あんたも、今日は違うって時はその声で言って。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私も聞きたい、と答えた。普段の散歩まで改めて意味をつけ直す必要はなかった。彼女が鞄を肩へ掛け、そろそろ歩こうかと言う。私は隣へ立ち、今日の行先を一緒に選んだ。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "その都度誘い合う、親密な友人として続ける",
+          "next": "end_fwb",
+          "effect": "messageBoundaries"
+        },
+        {
+          "id": "day",
+          "text": "次からは昼に会う友達を選ぶ",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "end_friend",
+      "title": "また同じところへ",
+      "chapter": 5,
+      "location": "公園の池沿い",
+      "storyTime": {
+        "date": "7月13日",
+        "period": "昼"
+      },
+      "characterId": "ff",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人にはならないと伝えると、F・Fは俯いてから、聞かせてくれてありがとうと言った。少し日を置いて、また散歩したいと私から連絡した。彼女も行きたいと返し、今日は最初の池へ来た。",
+          "when": {
+            "flags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "昼に会う友達でいようと決めてから、F・Fとは散歩の行先を送り合っていた。触れた夜を消すように急いで別の話をする必要もなく、今日は水辺の道を選んだ。",
+          "when": {
+            "flags": [
+              "hadNight"
+            ],
+            "notFlags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "また池へ行こうと誘ったのは私だった。F・Fは別の新しい道も見つけていたけれど、まずはここを一周すると決めた。変わらない場所を選べるほど、二人の行先が増えていた。",
+          "when": {
+            "notFlags": [
+              "hadNight",
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "ff",
+          "text": "今日、先に聞こえたのは？　あたしは向こうの足音。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私は売店の袋の音を挙げた。お腹が空いたのだと気づいて笑うと、F・Fも買いに行こうと歩き出す。午後はジョセフたちと落ち合う約束がある。そこで話すかもしれない小さな音を、今日は二人で持っていった。"
+        }
+      ],
+      "choices": [],
+      "ending": "FRIEND"
+    },
+    {
+      "id": "end_love_a",
+      "title": "音がやんだあとも",
+      "chapter": 5,
+      "location": "公園の休憩所と池沿い",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "ff",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "付き合いたい、とF・Fが答えた。顔を見て言ってくれたので、私は自分の言葉がもう一人の声になったところを聞けた。手をつないでいいか尋ね、頷きを待ってから指を重ねる。彼女も掌の向きを変えて握り返した。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "次の休日、いつもの池へ歩いた。何も新しいものを見つけなくても呼びたいと言ったことを、私はちゃんと覚えていた。今日は音の話を途中でやめ、今週会えなかった日のことを話す。",
+          "storyTime": {
+            "date": "7月6日",
+            "period": "昼"
+          }
+        },
+        {
+          "speaker": "ff",
+          "text": "それ、今度は会った日に聞きたい。あたしも話すこと、取っておく。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "取っておかなくても送っていい、と笑って返すと、じゃあ両方、とF・Fも笑った。柵の近くで手を離し、水を覗く。立ち上がってまた手を探した時、彼女の方から同じ距離が縮まった。"
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_A"
+    },
+    {
+      "id": "end_love_b",
+      "title": "返ってきた名前",
+      "chapter": 5,
+      "location": "公園の休憩所と街",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "ff",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私も好き、と答えると、F・Fは嬉しい、とそのまま声にした。隠そうとしないので、私まで頬が熱くなる。名前を呼ばれ、なに、と聞けば、もう一度呼びたかっただけだと言う。私は笑い、自分からも彼女の名前を返した。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌週、曲を探しに行く途中で、F・Fが手をつなぎたいと言った。私が頷いて手を出すと、彼女は歩幅を少し緩める。隣に収まった肩の位置が、いつもの散歩と少しだけ違った。",
+          "storyTime": {
+            "date": "7月6日",
+            "period": "昼"
+          }
+        },
+        {
+          "speaker": "ff",
+          "text": "これだと、あんたが立ち止まるの、すぐ分かるね。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "止まりたい時は言うよ、と答えた。彼女はうんと笑い、私もつないだ指へ少し力を込める。どこを見るかを先に知るのではなく、立ち止まってから同じ方を向いてもらえる。その遅れが、今日は嬉しかった。"
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_B"
+    },
+    {
+      "id": "end_fwb",
+      "title": "録音には残さない",
+      "chapter": 5,
+      "location": "F・Fの自宅",
+      "storyTime": {
+        "date": "7月13日",
+        "period": "夜"
+      },
+      "characterId": "ff",
+      "rating": "fade",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "互いに今夜会いたいと伝えて、F・Fの家へ来た。曲を一つずつ選んで聴き、食事を済ませると、私は端末を鞄へしまった。泊まりたいと言うと、彼女も頷き、朝は何時に出るかと尋ねた。"
+        },
+        {
+          "speaker": "ff",
+          "text": "あたしも朝には用事がある。今は、あんたといたい。触れていい？"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私も、と答えて手を出した。窓の外にはまだ車の音があったが、探して聞く余裕はなくなっていく。彼女が近づくのを待ち、最後の少しは私から寄った。名前を呼び合った声が部屋へ落ち、それを残す端末は鞄の中にあった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝、二人で窓を開けた。空気が替わると、私は自分の服を着直し、F・Fも出かける準備を始める。夜の続きだけに一日を使わず、次は昼の散歩もしたいと話した。玄関でまたねと言えば、同じ声がちゃんと返った。",
+          "storyTime": {
+            "date": "7月14日",
+            "period": "朝"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB"
+    },
+    {
+      "id": "end_fwb_love",
+      "title": "今の声で、恋人に",
+      "chapter": 5,
+      "location": "公園の休憩所と街",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "ff",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "今は恋人になりたいと伝えると、F・Fは私の顔を長く見た。考える時間を取ってくれることが、少し怖く、嬉しかった。私の望みは前に言ったものと変わっている。それを、そのまま聞いてほしかった。"
+        },
+        {
+          "speaker": "ff",
+          "text": "あたしも、今はあんたの恋人になりたい。今までの夜も好きだし、その先に、こうして会う日を増やしたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "手を差し出すと、F・Fは握ってから笑った。よく知っている温かさに新しい名前を置くと、どちらもなくならずに残った。私は今日の散歩を少し長くしたいと話し、彼女も行きたいと立ち上がる。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌週、人の多い道で彼女の名前を呼んだ。振り向いた顔へ追いつき、恋人として迎えた最初の休日だね、と小さく言う。F・Fは照れずに嬉しいと返し、私はそのまっすぐさへ、もう一度好きだと答えたくなった。",
+          "storyTime": {
+            "date": "7月6日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB_TO_LOVE"
+    },
+    {
+      "id": "end_special",
+      "title": "同じ場所に、二つ残す",
+      "chapter": 5,
+      "location": "駅から続く短い通路",
+      "storyTime": {
+        "date": "7月13日",
+        "period": "昼"
+      },
+      "characterId": "ff",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私が選んだ通路で、F・Fと別々に足を止めた。今日は急いで音の名前を言わない。帰りに腰を下ろしてから、私は靴音の響きを、彼女は外から入ってくる風の鳴り方を短く書いた。同じ場所の印の下に、二つの文が並んだ。"
+        },
+        {
+          "speaker": "ff",
+          "text": "あたし、そっちは気づかなかった。次に通ったら、先に言わないで。自分で探してみたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私は頷き、自分の文を消さずに彼女の文を読んだ。録った音のない日でも、違いは残せる。恋人の約束はなくても、この道を一人分の正解にしない相手がいる。次の場所はF・Fに選んでもらった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "地図を閉じ、もう一度通路を歩いた。足音が重なったところで二人とも少し笑う。どちらの音か分からないまま出口へ出ると、街は相変わらず騒がしかった。私は隣へ何かを教える前に、まず自分の耳で聞いた。"
+        }
+      ],
+      "choices": [],
+      "ending": "SPECIAL"
+    }
+  ],
+  "endingDescriptions": {
+    "FRIEND": {
+      "title": "また同じところへ",
+      "description": "何度でも同じ池を選び、新しい道も話し合う。互いの聞こえ方を面白がれる友人として歩く。"
+    },
+    "LOVE_A": {
+      "title": "音がやんだあとも",
+      "description": "何も見つからなくても会いたいと、自分から伝える。話すことのある日もない日も、F・Fの恋人として隣へ。"
+    },
+    "LOVE_B": {
+      "title": "返ってきた名前",
+      "description": "F・Fのまっすぐな告白に答え、嬉しいと呼び合う。立ち止まるたび、同じ方を向ける恋人になる。"
+    },
+    "FWB": {
+      "title": "録音には残さない",
+      "description": "二人が望む夜を選び、それぞれの朝へ帰る。昼の散歩も残した、親密な友人関係。"
+    },
+    "FWB_TO_LOVE": {
+      "title": "今の声で、恋人に",
+      "description": "重ねた夜を残したまま、変わった願いを声にする。互いに今望む名前で、新しい休日を迎える。"
+    },
+    "SPECIAL": {
+      "title": "同じ場所に、二つ残す",
+      "description": "違う音、分からない足音、戻った池、普段の声を重ねる。二人分の聞こえ方を残す、恋人とは別の散歩と記録の相棒。"
+    }
+  }
+}

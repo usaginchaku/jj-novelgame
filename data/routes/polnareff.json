@@ -1,0 +1,1212 @@
+{
+  "id": "polnareff",
+  "title": "ポルナレフ — 拍手が終わったあとで",
+  "intro": "明るい先輩と作る、小さな舞台。\n片づけの済んだ床に、二人の足音が残っている。",
+  "startEvent": "screen",
+  "character": {
+    "name": "ポルナレフ",
+    "adult": true,
+    "heightCm": 185,
+    "heightBasis": "二次資料JoJo Wikiの身長欄と出典注記を照合。原作144話プロフィール。髪込み193とは区別。書籍・設定表現物は未照合。AUで同値を採用。",
+    "profile": "人懐こく感情豊か。仲間への義理。せっかちで熱くなりやすい。",
+    "personality": [
+      "人懐こく感情豊か",
+      "仲間への義理",
+      "せっかちで熱くなりやすい"
+    ],
+    "speech": {
+      "firstPerson": "おれ",
+      "addressing": "主人公は名前/きみ/おまえを関係と場面に合わせる。",
+      "tone": "くだけた呼びかけ。語尾は感情と相手に合わせる。",
+      "habits": [
+        "くだけた呼びかけ",
+        "喜怒哀楽が声に出る",
+        "冗談から急に真剣な短文へ"
+      ],
+      "signaturePhrases": [],
+      "signatureNote": "日常の固定口癖は採用しない。象徴的な原作台詞と普段の話し方を混同せず、名台詞を貼り付けない。",
+      "avoid": [
+        "道化だけにする",
+        "誰にでも同じ口説き文句",
+        "失敗を主人公の世話役化で片付ける"
+      ]
+    },
+    "referenceSection": "docs/CHARACTER_REFERENCE.md#cast-polnareff"
+  },
+  "au": {
+    "role": "機械工学系4年",
+    "routeEnabled": true,
+    "addressing": [
+      {
+        "text": "{player.lastName}"
+      }
+    ]
+  },
+  "endingDescriptions": {
+    "FRIEND": {
+      "title": "一緒に笑う場所",
+      "description": "遠慮のない感想と笑いを持ち寄る友達。次の本番にも、自分のノートを持っていく。"
+    },
+    "LOVE_A": {
+      "title": "笑う前に届いた声",
+      "description": "楽しくない日も会いたいと、自分から恋を伝える。いつも笑わせる人の、照れた顔を知る。"
+    },
+    "LOVE_B": {
+      "title": "大げさでない迎え方",
+      "description": "飾らない告白へ、自分の好きも返す。次の待ち合わせは、隣で静かに迎えてくれる。"
+    },
+    "FWB": {
+      "title": "カーテンの向こうに朝",
+      "description": "望む夜にも会う友人同士。食事の笑いと、翌朝それぞれの予定を持ったまま。"
+    },
+    "FWB_TO_LOVE": {
+      "title": "その呼び方でも会いたい",
+      "description": "重ねた夜の先で、互いを恋人と呼びたいと選ぶ。今度は客席で、二人並んで幕を待つ。"
+    },
+    "SPECIAL": {
+      "title": "最初の一人へ",
+      "description": "互いの最初の観客であり、作りかけを持ち寄る相棒へ。恋人とは違う、拍手の前から続く約束。"
+    }
+  },
+  "events": [
+    {
+      "id": "screen",
+      "chapter": 1,
+      "title": "まだ上がらない幕",
+      "location": "大学の小ホール",
+      "storyTime": {
+        "date": "5月12日",
+        "period": "夕方"
+      },
+      "characterId": "polnareff",
+      "rating": "general",
+      "tags": [
+        "polnareff"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "小ホールの舞台に、白い幕だけが広がっていた。学生の短い発表会で投影を手伝うことになり、機材を確認しに来たところだった。幕の向こうからポルナレフ先輩が顔を出す。機械工学系四年の先輩は、以前の教室バイトでも、子供より先に新しい工作を動かしてみたがる人だった。"
+        },
+        {
+          "speaker": "polnareff",
+          "text": "どうだ、立派だろ。まだ何も映してねえけどな。ちょっと待ってろ、今こっちを片づける。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩が空箱を抱えて脇へ運ぶ間に、私は投影の設定を開いた。映った最初の一枚が幕からはみ出すと、先輩は思いきり手を広げて、ここまであったら大した海だ、と笑った。恥ずかしかったのに、一緒に笑ってからやり直せた。"
+        },
+        {
+          "speaker": "player",
+          "text": "先輩、そこだと顔に波が映ってます。少し右にいてください。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "adjust",
+          "text": "幕と映像を、一緒に少しずつ合わせる",
+          "next": "cue",
+          "effect": "workTogether"
+        },
+        {
+          "id": "show",
+          "text": "先輩が見せたい場面を、先に聞かせてもらう",
+          "next": "cue",
+          "effect": "ask"
+        }
+      ]
+    },
+    {
+      "id": "cue",
+      "chapter": 1,
+      "title": "合図が一つ早い",
+      "location": "小ホール",
+      "storyTime": {
+        "date": "5月16日",
+        "period": "夕方"
+      },
+      "characterId": "polnareff",
+      "rating": "general",
+      "tags": [
+        "polnareff"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "試しに通すと、先輩が幕を動かす合図を早く出した。私は迷って操作を止め、二つの動きが別々になった。先輩は勢いで押し切ろうとして、あ、と声を漏らす。映像だけが取り残された白い幕を見て、私はノートへ印をつけた。"
+        },
+        {
+          "speaker": "polnareff",
+          "text": "今のは、おれが待てばよかったな。もう一回やろうぜ。次は合わせる。"
+        },
+        {
+          "speaker": "player",
+          "text": "合図も、私から出していいですか。映像の切り替わりが分かるの、こっちなので。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "言うと、先輩は自分の手にしていた進行表を下ろした。任せる、とこちらを見てから、舞台の端へ戻る。私は息を整えて手を上げた。合図を受けて動く幕が、初めて自分の呼吸と同じ速さになった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "my_cue",
+          "text": "自分の合図で通し、先輩の動きも確かめる",
+          "next": "lunch",
+          "effect": "honest",
+          "setFlags": [
+            "sharedCue"
+          ]
+        },
+        {
+          "id": "count",
+          "text": "二人で秒数を数え、手順を細かく確認する",
+          "next": "lunch",
+          "effect": "compareNotes"
+        }
+      ]
+    },
+    {
+      "id": "lunch",
+      "chapter": 1,
+      "title": "大げさな予告",
+      "location": "学内の食堂",
+      "storyTime": {
+        "date": "5月22日",
+        "period": "昼"
+      },
+      "characterId": "polnareff",
+      "rating": "general",
+      "tags": [
+        "polnareff"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "昼食中、ジョセフが発表会のチラシをひらひらさせて来た。ポルナレフ先輩は、本番はもっと派手だぜ、と胸を張る。私は派手にする予算が増えた覚えはないと言い、手元の水を飲んだ。"
+        },
+        {
+          "speaker": "joseph",
+          "text": "派手なのは声の方じゃねえの？　遠くからでも宣伝になってるぜ。"
+        },
+        {
+          "speaker": "polnareff",
+          "text": "おいおい、おまえも見に来るんだろ。いい席は残しておかねえからな。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "笑って別れたあと、先輩はチラシをきれいに畳んだ。明るい声のあとに、指先だけが丁寧になる。本番のどこを一番見てほしいのか訊くと、映像と幕が切り替わるところだと言った。目立たない一瞬が答えだったので、私はもう少し聞きたくなった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "listen",
+          "text": "その一瞬をどう見せたいか、食べ終わるまで聞く",
+          "next": "message",
+          "effect": "homeTalk",
+          "setFlags": [
+            "heardWish"
+          ]
+        },
+        {
+          "id": "date",
+          "text": "本番が終わったら、二人でも食べに来たいと誘う",
+          "next": "message",
+          "effect": "lunchTwo"
+        },
+        {
+          "id": "practical",
+          "text": "必要な作業を整理し、次の練習時間を決める",
+          "next": "message",
+          "effect": "shiftRest"
+        }
+      ]
+    },
+    {
+      "id": "message",
+      "chapter": 2,
+      "title": "幕の向こうの声",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "5月24日",
+        "period": "夜"
+      },
+      "characterId": "polnareff",
+      "rating": "general",
+      "tags": [
+        "polnareff"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先輩から届いた動画は十秒もなかった。幕が動き、映像が消える。最後に先輩自身が映り込んで笑い、そこで終わる。私は巻き戻して、同じ一瞬をもう一度見た。"
+        },
+        {
+          "speaker": "polnareff",
+          "text": "ここ、合うようになったぜ。次は二人でやってみよう。おれだけうまくなってもしょうがねえしな。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "画面の向こうの笑顔を止めてしまい、慌てて再生へ戻した。動画なら何度見ても気づかれない。だからこそ、返事には何を見ていたのか少しだけ書きたかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "glad",
+          "text": "先輩と合わせるのが楽しみです。動画、何度も見ました",
+          "next": "rehearsal",
+          "effect": "messageHeart",
+          "replyVariants": [
+            {
+              "text": "あの一瞬、絶対決めような。きみに一番先に見てほしかったんだ。",
+              "when": {
+                "flags": [
+                  "heardWish"
+                ]
+              }
+            },
+            {
+              "text": "そんなに？　最後の変な顔は忘れてくれよ。じゃ、次の練習でな。"
+            }
+          ],
+          "lockRoute": "polnareff"
+        },
+        {
+          "id": "detail",
+          "text": "切り替わるところ、きれいでした。次は私も合わせます",
+          "next": "rehearsal",
+          "effect": "messageListen",
+          "replyVariants": [
+            {
+              "text": "だろ？　でも本番はきみの合図でいく。頼んだぜ。"
+            }
+          ],
+          "lockRoute": "polnareff"
+        },
+        {
+          "id": "ready",
+          "text": "確認しました。次の練習にデータを持っていきます",
+          "next": "rehearsal",
+          "effect": "messageDaily",
+          "replyVariants": [
+            {
+              "text": "ありがとな。先に幕の位置を決めとく。"
+            }
+          ],
+          "lockRoute": "polnareff"
+        }
+      ],
+      "message": true
+    },
+    {
+      "id": "rehearsal",
+      "chapter": 2,
+      "title": "客席の一人",
+      "location": "小ホール",
+      "storyTime": {
+        "date": "5月29日",
+        "period": "夕方"
+      },
+      "characterId": "polnareff",
+      "rating": "general",
+      "tags": [
+        "polnareff"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "練習を終えると、先輩は誰もいない客席へお辞儀をした。私は操作席から拍手を送り、先輩が顔を上げたところで手を止めた。大げさに胸へ手を当てているのに、こちらを見る目だけが妙に真面目だった。"
+        },
+        {
+          "speaker": "polnareff",
+          "text": "どうだった。本当に。ここじゃ、お世辞は役に立たねえからな。"
+        },
+        {
+          "speaker": "player",
+          "text": "最後、急ぎすぎたと思います。でも途中は、もう一回見たいです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩は口を開きかけ、そうか、と進行表を見直した。笑ってごまかせる相手にだけはなりたくなかった。私が客席の前へ降りると、先輩も舞台から下りてきた。段差をなくして向かい合うと、さっきより返事を待たせている気がした。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "honest",
+          "text": "気になった点を言い、それでももう一度見たいと伝える",
+          "next": "show",
+          "effect": "walkClose",
+          "setFlags": [
+            "trueAudience"
+          ]
+        },
+        {
+          "id": "timing",
+          "text": "最後の秒数を一緒に測り直す",
+          "next": "show",
+          "effect": "walkHome"
+        }
+      ]
+    },
+    {
+      "id": "show",
+      "chapter": 2,
+      "title": "灯りの戻るころ",
+      "location": "小ホール",
+      "storyTime": {
+        "date": "6月7日",
+        "period": "夕方"
+      },
+      "characterId": "polnareff",
+      "rating": "general",
+      "tags": [
+        "polnareff"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "本番、幕の脇で先輩がこちらを見た。私は合図を返し、映像を送った。あの一瞬が揃った時、拍手より先に先輩の笑顔が見えた。客席が明るくなり、最後の人が出ていくまで、先輩は張りのある声で挨拶していた。"
+        },
+        {
+          "speaker": "polnareff",
+          "text": "やったな！　……いやあ、腹減った。笑うのにも腹の力って使うんだな。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "二人で幕を外すと、先輩の声が普通の大きさになった。重いものは別の担当が運び終え、私たちは小物と紙を箱へ戻す。誰もいない床を見下ろして、先輩がもう一度ここでやりてえな、と呟いた。私は箱の蓋を閉めず、その横へ座った。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "stay_beside",
+          "text": "「私も、先輩とまたやりたいです」と隣で話す",
+          "next": "room",
+          "effect": "conferenceClose"
+        },
+        {
+          "id": "finish",
+          "text": "二人で撤収を終え、次に残す記録をまとめる",
+          "next": "room",
+          "effect": "conferencePractical"
+        }
+      ]
+    },
+    {
+      "id": "room",
+      "chapter": 3,
+      "title": "拍手のいらない食卓",
+      "location": "ポルナレフの自宅",
+      "storyTime": {
+        "date": "6月7日",
+        "period": "夜"
+      },
+      "characterId": "polnareff",
+      "rating": "general",
+      "tags": [
+        "polnareff"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "打ち上げの店は混んでいたので、夕食を買って先輩の家で食べた。机にはまだ本番の進行表があり、先輩が端へ寄せる。いつもの調子で今日の成功を話していた声が、食べ進めるうちに少し落ち着いた。"
+        },
+        {
+          "speaker": "polnareff",
+          "text": "さっきの顔、見えてたぜ。うまくいった時。おれ、あれ見て気が抜けそうになった。"
+        },
+        {
+          "speaker": "player",
+          "text": "私も、先輩が笑ったの見ました。まだ本番中だったのに。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "二人で笑ったあと、先輩は今日いちばん静かな顔で私を見た。片づけるものがなくなっても帰りたくないのかもしれない、と私は自分の鞄を見た。楽しませてもらう理由ならいくらでも言えた。今は、何もしない先輩の近くにいたかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "stay",
+          "text": "「今日は、先輩のそばに残りたいです」と伝える",
+          "next": "consent",
+          "effect": "hotelInvite",
+          "when": {
+            "min": {
+              "trust": 45,
+              "desire": 12
+            }
+          }
+        },
+        {
+          "id": "talk",
+          "text": "帰る時間まで、二人で今日の話をする",
+          "next": "next",
+          "effect": "hotelTalk"
+        },
+        {
+          "id": "home",
+          "text": "今日は帰って休み、また会おうと約束する",
+          "next": "next",
+          "effect": "homeRest"
+        }
+      ]
+    },
+    {
+      "id": "consent",
+      "chapter": 3,
+      "title": "冗談にしない返事",
+      "location": "ポルナレフの自宅",
+      "storyTime": {
+        "date": "6月7日",
+        "period": "夜"
+      },
+      "characterId": "polnareff",
+      "rating": "general",
+      "tags": [
+        "polnareff"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "そばにいたいと言うと、先輩はからかうように何か言いかけた。けれど私の顔を見て、口を閉じる。いつもならその間に笑っていた私も、今日は目を逸らさなかった。"
+        },
+        {
+          "speaker": "polnareff",
+          "text": "おれも一緒にいたい。きみに触れたい。冗談じゃなくて、そう思ってる。"
+        },
+        {
+          "speaker": "player",
+          "text": "私も触れてほしいです。でも、今夜のことと恋人になる約束は、別に考えたいです。途中でやめたくなったら、止めてもらえますか。"
+        },
+        {
+          "speaker": "polnareff",
+          "text": "もちろんだ。おれも嫌な時は言う。どっちかがやめたいなら止めるし、今から帰ってもいい。きみは、どうしたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "大きな手が膝の上で一度開いて、また置かれた。拍手を待っていた時の手とは違った。私は返事を間違えないようにではなく、自分の望みを相手へ届けるために息を吸った。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「先輩と一緒にいたいです」と手を取る",
+          "next": "night",
+          "effect": "consent",
+          "setFlags": [
+            "consented",
+            "hadNight"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「今日は帰ります」と伝える",
+          "next": "next",
+          "effect": "walkHome",
+          "setFlags": [
+            "declinedTouch"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "night",
+      "chapter": 3,
+      "title": "舞台を下りた人",
+      "location": "ポルナレフの自宅",
+      "storyTime": {
+        "date": "6月7日",
+        "period": "夜"
+      },
+      "characterId": "polnareff",
+      "rating": "fade",
+      "tags": [
+        "polnareff"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "手を取ると、先輩が近くへ座り直した。私の肩へ腕を回す前に目が合い、私は自分から距離を詰めた。先輩が顔を傾けて屈む。軽く触れた唇から離れると、二人で少し笑ってしまった。"
+        },
+        {
+          "speaker": "polnareff",
+          "text": "……こういう時まで、何か気の利いたこと言おうとしてた。今、全然出てこねえ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "言わなくても、ここにいてほしいです、と答えて袖に触れた。その手を握り直され、もう一度近づく。急がないまま二人で立ち上がり、寝室へ向かった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝、身支度を終えた先輩が食卓へ皿を置いた。寝癖を直したつもりらしい髪の一箇所がまだ跳ねていて、私が指すと慌てて触る。その顔がおかしくて、起きたばかりなのにまた笑っていた。",
+          "storyTime": {
+            "date": "6月8日",
+            "period": "朝"
+          }
+        },
+        {
+          "speaker": "polnareff",
+          "text": "また来てくれよ。昼も、こういう夜も。おれは、会いたい。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "again",
+          "text": "「恋人の約束はせず、また夜も一緒にいたいです」と答える",
+          "next": "next",
+          "effect": "messageBoundaries",
+          "setFlags": [
+            "ongoing"
+          ]
+        },
+        {
+          "id": "more",
+          "text": "「また夜も会いたいです。先輩をもっと好きになりました」と答える",
+          "next": "next",
+          "effect": "messageAgain",
+          "setFlags": [
+            "ongoing"
+          ]
+        },
+        {
+          "id": "day",
+          "text": "「これからは、昼に会う友達でいたいです」と答える",
+          "next": "next",
+          "effect": "messageDaily",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ],
+      "when": {
+        "flags": [
+          "consented"
+        ]
+      }
+    },
+    {
+      "id": "next",
+      "chapter": 4,
+      "title": "本番のない土曜日",
+      "location": "大学の中庭",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "polnareff",
+      "rating": "general",
+      "tags": [
+        "polnareff"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "発表会が終わっても昼に会い、互いに望む夜には先輩の家へ寄った。泊まった翌朝に急いで帰る日も、昼まで話す日もあった。先輩の大きな声と、眠い時の短い返事が、どちらも同じ人のものになっていく。",
+          "when": {
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "昼に会う友人でいたいと話すと、先輩は次から外で遊ぶ予定を送ってきた。少しだけ探るような間があった日も、自分から笑えたところで一緒に笑ってくれた。今はまた、楽しそうな催しを見つけては教え合っている。",
+          "when": {
+            "flags": [
+              "hadNight",
+              "endedNight"
+            ],
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "発表会が終わると練習の日はなくなった。それでも食事へ誘われ、私から別の催しを知らせて、何度か二人で出掛けた。本番がない日に先輩と会うのも、だんだん普通になってきた。",
+          "when": {
+            "notFlags": [
+              "hadNight"
+            ]
+          }
+        },
+        {
+          "speaker": "polnareff",
+          "text": "次は客として見に行こうぜ。片づけなしで帰れるやつ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "そう言いながら、先輩は私が鞄を持つまで待っていた。今日はまだ帰る前に話せることがある。私は立ち上がらず、隣の人へ顔を向けた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "tell",
+          "text": "自分から好きだと伝えたいと言う",
+          "next": "confess_player",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 35,
+              "romanceChar": 25
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "listen",
+          "text": "先輩が言いかけた、その続きを聞く",
+          "next": "confess_polnareff",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 20,
+              "romanceChar": 35
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "again_stage",
+          "text": "客のいない時間にも、二人で舞台を作りたいと話す",
+          "next": "encore",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 35,
+              "romanceChar": 30,
+              "comfort": 20
+            },
+            "flags": [
+              "sharedCue",
+              "heardWish",
+              "trueAudience"
+            ],
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "nights",
+          "text": "親密な友人として、これからも会いたいと話す",
+          "next": "fwb_choice",
+          "when": {
+            "min": {
+              "trust": 50,
+              "desire": 25,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "love",
+          "text": "「今は、先輩の恋人になりたいです」と伝える",
+          "next": "end_fwb_love",
+          "when": {
+            "min": {
+              "trust": 60,
+              "romancePlayer": 50,
+              "romanceChar": 40,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          },
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "friends",
+          "text": "気軽に誘い合う友達でいたいと伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_player",
+      "chapter": 4,
+      "title": "私の合図から",
+      "location": "大学の中庭",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "polnareff",
+      "rating": "general",
+      "tags": [
+        "polnareff"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私から言いたいことがあると話すと、先輩は真面目に座り直した。そんなに構えられると余計に緊張します、と言いたくなって、やめる。きちんと聞こうとしてくれる相手へ、笑いで逃がしたくない言葉があった。"
+        },
+        {
+          "speaker": "player",
+          "text": "一緒にいると楽しいです。でも、先輩がずっと楽しくしてくれなくても、会いたいと思ってます。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩の眉が少し上がった。私は本番のあとに静かになった声を思い出し、膝の上の手をほどいた。楽しさだけなら言いやすかった、その先へ進みたかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "like",
+          "text": "「先輩が好きです。私と付き合ってください」",
+          "next": "end_love_a",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "quiet",
+          "text": "「静かな時もそばにいたいです。先輩の恋人になりたいです」",
+          "next": "end_love_a",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "wait",
+          "text": "今日は友人として、また会いたいと伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_polnareff",
+      "chapter": 4,
+      "title": "飾らない一言",
+      "location": "大学の中庭",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "polnareff",
+      "rating": "general",
+      "tags": [
+        "polnareff"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先輩は鞄を持ちかけ、置き直した。大きな声で始めるのかと思ったら、私の名前を呼ぶ声は近くにしか届かなかった。私はそれを聞き逃さないように顔を向ける。"
+        },
+        {
+          "speaker": "polnareff",
+          "text": "きみが好きだ。次に会う時は、恋人として誘いたい。……本当は、もっと格好よく言うつもりだったんだけどよ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "困ったように笑う先輩を見て、私まで笑いそうになった。けれど笑いだけでは返せなかった。今ほしい言葉を選ぶ人の顔を、もう少しだけ見ていたかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「私も好きです。先輩と付き合いたいです」と答える",
+          "next": "end_love_b",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「恋人にはなれません。友達でいたいです」と答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "refusedConfession",
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "encore",
+      "chapter": 4,
+      "title": "一人ぶんの客席",
+      "location": "大学の中庭",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "polnareff",
+      "rating": "general",
+      "tags": [
+        "polnareff"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "客のいない時間にも、先輩と舞台を作りたいと話した。うまくいかないところを試す時間も、終わって座り込む時間も。先輩は目を丸くし、まだあれをやる気か、と笑った。"
+        },
+        {
+          "speaker": "player",
+          "text": "はい。でも今度は、私もそっちへ立ってみたいです。先輩に見てもらう方も、やってみたいので。"
+        },
+        {
+          "speaker": "polnareff",
+          "text": "いいぜ。おれが客席に座る。きみが見せたいもの、最初に見せてくれよ。失敗したって途中で帰らねえから。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "そこで冗談を続けず、先輩は少しだけ私の方へ身を乗り出した。役に立つから呼ばれるのでなく、見てほしいから呼ばれるなら、私はまだ知らない自分の話もできるかもしれない。"
+        },
+        {
+          "speaker": "polnareff",
+          "text": "恋人って呼び方じゃなくてさ。お互いが最初の客で、相棒でいるのはどうだ。おれも、きみに見せたいものがまだある。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "partners",
+          "text": "「私も見せたいです。先輩の相棒になりたい」と答える",
+          "next": "end_special",
+          "effect": "homeTogether",
+          "setFlags": [
+            "firstAudience"
+          ]
+        },
+        {
+          "id": "friend",
+          "text": "「またみんなで作る友達でいたいです」と答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fwb_choice",
+      "chapter": 4,
+      "title": "いつもの笑い、その先",
+      "location": "大学の中庭",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "polnareff",
+      "rating": "general",
+      "tags": [
+        "polnareff"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "友達のまま、望む夜にも会いたいと話すと、先輩は頷いた。恋人の約束は今は望まない、と私が付け足す前に笑って茶化されることはなかった。"
+        },
+        {
+          "speaker": "polnareff",
+          "text": "おれもそうしたい。会いたくなったら誘う。断られたら、そりゃ残念だけど、それはそれだ。途中でやめたい時も言ってくれ。おれも言うから。"
+        },
+        {
+          "speaker": "player",
+          "text": "はい。私からも誘います。昼に遊ぶのも、楽しみにしてます。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "ようやく笑うと、先輩も笑った。じゃあ今日は腹ごしらえだ、と立ち上がりかけた人へ、まだ店を決めてません、と手を上げる。二人で端末を覗き込み、今夜ではなく今食べたいものから選んだ。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "continue",
+          "text": "親密な友人として、これからも会うと答える",
+          "next": "end_fwb",
+          "effect": "messageBoundaries"
+        },
+        {
+          "id": "daytime",
+          "text": "考え直し、昼に会う友達でいたいと伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "end_friend",
+      "chapter": 5,
+      "title": "一緒に笑う場所",
+      "location": "大学の小ホール",
+      "storyTime": {
+        "date": "7月12日",
+        "period": "昼"
+      },
+      "characterId": "polnareff",
+      "rating": "general",
+      "tags": [
+        "polnareff"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人にはなれないと伝えた日は、先輩もすぐには笑わなかった。分かった、と聞いてから別れ、何日かして次の発表会の話が届く。友達としてまた作りたいと、私から返事を送った。",
+          "when": {
+            "flags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "昼に会う友人でいたいと話したあと、先輩は次の発表会の準備へ誘ってくれた。夜の誘いはなくなり、今日は自分で選んで小ホールの扉を開いた。",
+          "when": {
+            "flags": [
+              "hadNight",
+              "endedNight"
+            ],
+            "notFlags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "次も一緒に作ろうと約束して、小ホールへ集まった。今日はジョセフも手伝うので、先輩は張り切って役割を説明している。私は機材の置き場所を確かめ、二人の声の方へ戻った。",
+          "when": {
+            "notFlags": [
+              "hadNight",
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "polnareff",
+          "text": "今度も、最後まで決めるぜ。おれが調子に乗ってたら、合図しろよ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "合図だけで分かりますか、と返すと、先輩が胸を張った。私が半分だけ手を上げると、もうかよ、と笑う。次の本番までに直すところはまだあった。その話を遠慮なくできる机へ、私は自分のノートを置いた。"
+        }
+      ],
+      "choices": [],
+      "ending": "FRIEND"
+    },
+    {
+      "id": "end_love_a",
+      "chapter": 5,
+      "title": "笑う前に届いた声",
+      "location": "大学の中庭と街路",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "polnareff",
+      "rating": "general",
+      "tags": [
+        "polnareff"
+      ],
+      "body": [
+        {
+          "speaker": "polnareff",
+          "text": "おれも好きだ。きみと付き合いたい。……先に言わせちまったな。嬉しくて、今、格好つけられねえ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩の笑顔を見た途端、言えたはずの自分の声が遠くなった。差し出された手を取ると、温かさだけがはっきりする。立ち上がる時も急がずに待ってもらい、私はもう一度好きですと小さく言った。今度は先輩の方が目を逸らした。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "次に街で会うと、先輩が少し離れたところから大きく手を振った。恥ずかしいけれど嬉しい。私も手を上げ、駆け寄る代わりに歩いて近づいた。隣へ着いてから手を取ると、先輩はそのまま同じ速さで歩き出した。",
+          "storyTime": {
+            "date": "7月5日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_A"
+    },
+    {
+      "id": "end_love_b",
+      "chapter": 5,
+      "title": "大げさでない迎え方",
+      "location": "大学の中庭と駅前",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "polnareff",
+      "rating": "general",
+      "tags": [
+        "polnareff"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私も好きです、と返すと、先輩は口元を手で押さえた。笑っているのを隠しきれなくて、私まで笑う。やっと手が下り、今度は私へ差し出された。私は鞄を持ち替えてから、その手を取った。"
+        },
+        {
+          "speaker": "polnareff",
+          "text": "次は、二人で出掛けような。今度こそ、片づけの用事なしだ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "休日、改札を出た先輩は人の間から私を見つけ、まっすぐ来た。大声で呼ばれると思っていたら、隣に着いてから会いたかったと言われる。こちらも同じことを返すだけなのに、駅前でしばらく立ち止まってしまった。",
+          "storyTime": {
+            "date": "7月5日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_B"
+    },
+    {
+      "id": "end_fwb",
+      "chapter": 5,
+      "title": "カーテンの向こうに朝",
+      "location": "ポルナレフの自宅",
+      "storyTime": {
+        "date": "7月12日",
+        "period": "夜"
+      },
+      "characterId": "polnareff",
+      "rating": "fade",
+      "tags": [
+        "polnareff"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "夕食を持ち寄ると、先輩も同じおかずを買っていた。相談すればよかったと笑い、半分は明日の分にする。今夜は泊まりたい、と自分から伝えると、先輩は嬉しそうに頷き、自分も一緒にいたいと言った。"
+        },
+        {
+          "speaker": "polnareff",
+          "text": "明日は昼に出るんだったな。目覚まし、二つかけとくか。"
+        },
+        {
+          "speaker": "player",
+          "text": "その前に、今日はゆっくり食べましょう。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "片づけを終えて隣へ座ると、先輩の肩が近づいた。私から手を取って顔を見る。二人で笑ったあと、今度は静かなまま近づいた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝、最初の目覚ましで二人とも起きた。先輩が得意そうな顔をするので、まだ何もしてませんよ、と笑って皿を出す。昼にはそれぞれの用事がある。残しておいたおかずを分けながら、次は違うものを持ってきます、と私から言った。",
+          "storyTime": {
+            "date": "7月13日",
+            "period": "朝"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB"
+    },
+    {
+      "id": "end_fwb_love",
+      "chapter": 5,
+      "title": "その呼び方でも会いたい",
+      "location": "大学の中庭",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "polnareff",
+      "rating": "general",
+      "tags": [
+        "polnareff"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人になりたいと伝えると、先輩はいつものように大きく返事をせず、一度目を伏せた。私が待っている間に顔が上がる。何度も夜に見た顔なのに、今の表情は初めてだった。"
+        },
+        {
+          "speaker": "polnareff",
+          "text": "おれも、付き合いたい。会うのが楽しいだけって言おうとしても、もう足りねえんだ。きみが好きだ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私もです、と答えて手を取った。先輩はその手を握り、嬉しいな、と今度は声にした。こちらまで笑ってしまい、さっきまでの緊張を二人で少しずつほどいた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "次の週末、二人で舞台を見に行った。客席で肩が並び、幕が上がる前に手が触れる。先輩が先に私の顔を見た。今日は何も合図しなくていい。それでも私は小さく頷き、つないだ手をそのままにした。",
+          "storyTime": {
+            "date": "7月5日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB_TO_LOVE"
+    },
+    {
+      "id": "end_special",
+      "chapter": 5,
+      "title": "最初の一人へ",
+      "location": "大学の小ホール",
+      "storyTime": {
+        "date": "7月12日",
+        "period": "昼"
+      },
+      "characterId": "polnareff",
+      "rating": "general",
+      "tags": [
+        "polnareff"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "使用の手続きを済ませた小ホールで、今日は先輩が客席に座った。私は自分で選んだ短い映像を流し、映す順番について話す。説明に詰まって画面を戻しても、先輩は急がせなかった。最初に観客へ向けていた顔を、今は私一人へ向けている。"
+        },
+        {
+          "speaker": "polnareff",
+          "text": "そこ、もう一回見せてくれ。さっきより間が長い方、おれは好きだ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "もう一度試すと、自分でも違いが分かった。次は交代して先輩の案を見る。失敗したところで二人とも笑ったが、やめようとは言わなかった。"
+        },
+        {
+          "speaker": "player",
+          "text": "まだ途中でも、最初に見せてください。私も、また持ってきます。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩は進行表を畳み、任せたぜ、相棒、とこちらを見た。恋人になる約束とは別に、自分のまだ下手なところを持って来られる場所ができた。帰りは二人で椅子を元に戻し、誰もいない舞台へ一度だけ振り返った。次に最初の拍手をするのは、どちらになるだろう。"
+        }
+      ],
+      "choices": [],
+      "ending": "SPECIAL"
+    }
+  ]
+}

@@ -1,0 +1,517 @@
+{
+  "scenarioVersion": "0.1.0",
+  "title": "となりの、いつもの席",
+  "playerDefault": {
+    "lastName": "名字",
+    "firstName": "なまえ",
+    "displayName": "名字　なまえ"
+  },
+  "startEvent": "lecture",
+  "characters": {
+    "player": {
+      "name": "あなた",
+      "adult": true,
+      "heightCm": 160,
+      "heightBasis": "今回のユーザー指定による既定値。名前入力と独立したAU設定。",
+      "profile": "同じ情報系の仲間と自然に打ち解ける、面倒見のよい3年生。軽口には言い返せるが、好意が絡むと照れや迷いが顔に出る。",
+      "personality": [
+        "親しみやすく、男子学生とも対等に友人付き合いをする",
+        "人の困りごとに気づき手を貸すが、自分の都合や望みも言える",
+        "好意を隠すのは得意ではなく、照れや喜びが反応に出る"
+      ],
+      "speech": {
+        "firstPerson": "私",
+        "addressing": "ジョセフ/シーザーは名前で呼ぶ。花京院には「花京院先輩」「先輩」。",
+        "tone": "同期には自然なため口、先輩には親しみのある敬語。地の文は主人公の目に映る動作と感情を中心にする。",
+        "habits": [
+          "短いツッコミや聞き返しができる",
+          "恥ずかしいことは少し言いよどんでも、最後は自分の気持ちを言う"
+        ],
+        "signaturePhrases": [],
+        "signatureNote": "固有の決め台詞は未指定。新しい口癖を固定しない。",
+        "avoid": [
+          "普段から関係の種類を分析・解説する口調",
+          "常に完璧に境界線を説明する相談員のような話し方",
+          "意思がなく相手に従うだけ、または毎回叱るだけの人物化",
+          "ジョセフ相手に「あなた」を繰り返す不自然な距離感"
+        ]
+      },
+      "referenceSection": "docs/CHARACTER_REFERENCE.md#主人公"
+    },
+    "joseph": {
+      "name": "ジョセフ",
+      "adult": true,
+      "part": "2部・若ジョセフ",
+      "profile": "機転とハッタリで場を動かす、負けず嫌いの同期。調子に乗り、見栄も張る。親しい相手への気遣いは軽口や手助けに混じり、本気を伝えるときほど少し格好がつかない。",
+      "heightCm": 195,
+      "heightBasis": "原作プロフィールを参照する二次資料で確認。一次書籍現物は未照合。出典は人物参考資料。AUでは同値を採用。",
+      "personality": [
+        "観察と先読みが得意で、相手の反応を見るのが好き",
+        "陽気で距離が近く、冗談・挑発・ハッタリを楽しむ",
+        "短気で負けず嫌い。ずるい理屈や見栄も出る",
+        "大切な相手を放っておけず、土壇場では頭を働かせて動く"
+      ],
+      "speech": {
+        "firstPerson": "オレ",
+        "addressing": "同期は名前か「おまえ」。主人公の姓→名は既存の呼称ルールに従う。花京院はこのAUでは先輩。",
+        "tone": "勢いのある短文と大げさな断言。先読みが外れたら言い訳や切り返し。本気のときは短く言い切り、軽口で照れを隠すこともある。",
+        "habits": [
+          "〜だぜ、〜じゃねえの、〜だろ、〜なのよを場面に応じて使う",
+          "相手の次の言葉を予想する、先に勝ったつもりになる",
+          "都合が悪いと自分に有利な理屈を素早く作る"
+        ],
+        "signaturePhrases": [
+          "次におまえは〜と言う"
+        ],
+        "signatureNote": "特徴的な先読みの型。実際に観察した根拠やオチがある場面だけに使い、毎場面は繰り返さない。",
+        "avoid": [
+          "老ジョセフの口癖や祖父役を持ち込む",
+          "全台詞をだぜで閉じる",
+          "不器用さのない理想的な恋人・相談員にする",
+          "軽率さを子どもへの危険な指導や機械への無能さで表す",
+          "拒否をからかったり、ゲームの勝敗で親密さを迫る"
+        ]
+      },
+      "referenceSection": "docs/CHARACTER_REFERENCE.md#ジョセフ"
+    },
+    "caesar": {
+      "name": "シーザー",
+      "adult": true,
+      "profile": "自負が強く、身なりや仕事の仕上がりにも気を配る同期。女性への気遣いは自然だが、気障さも短気さもある。ジョセフには容赦なく言い返す。",
+      "heightCm": 186,
+      "heightBasis": "原作プロフィール/公式設定本を参照する二次資料で確認。一次書籍現物は未照合。出典は人物参考資料。AUでは同値を採用。",
+      "personality": [
+        "誇りが高く、自分の技量や美意識に自信がある",
+        "女性への気遣いと気障さが自然に同居する",
+        "仲間思いだが意地っ張りで、ジョセフの挑発には熱くなる",
+        "面倒見がよくても誰にでも無条件に穏やかな人物ではない"
+      ],
+      "speech": {
+        "firstPerson": "おれ",
+        "addressing": "ジョセフには名前/おまえ。主人公には名前/きみ。花京院はAUの学年関係に従って先輩。",
+        "tone": "日常は整った言い方だが、悪友には鋭く短く言い返す。気遣いは講釈より手を貸す動作と一言で見せる。",
+        "habits": [
+          "〜だろう、〜じゃないか、〜するななどを相手に合わせる",
+          "ジョセフの大げさな言い分の穴を突く",
+          "自分の段取りや出来に自信を見せる"
+        ],
+        "signaturePhrases": [],
+        "signatureNote": "日常の固定口癖は今回採用しない。戦闘や死に関わる名台詞を毎日の口癖に転用しない。",
+        "avoid": [
+          "無欠点の執事や常時敬語の世話係",
+          "主人公を常に子ども扱いする",
+          "本ルートで主人公に失恋した恋敵として扱う",
+          "イタリア語やレディ呼びを根拠なく連発する"
+        ]
+      },
+      "referenceSection": "docs/CHARACTER_REFERENCE.md#シーザー"
+    },
+    "kakyoin": {
+      "name": "花京院",
+      "adult": true,
+      "profile": "落ち着いて周りを見ている情報系の先輩。ゲームでは腕にも勝ち方にも自負があり、涼しい顔でからかう。大学とサークルとバイトで、付き合いが自然に重なっている。",
+      "heightCm": 178,
+      "heightBasis": "原作プロフィールを参照する二次資料で確認。一次書籍現物は未照合。出典は人物参考資料。AUでは同値を採用。",
+      "personality": [
+        "落ち着いた観察と分析が得意",
+        "仲間への信頼や誇りを大事にする",
+        "負けず嫌いで、ゲームや得意分野では手加減ばかりしない",
+        "冗談や皮肉を淡々と言い、相手の反応を見る面がある"
+      ],
+      "speech": {
+        "firstPerson": "僕",
+        "addressing": "主人公の姓/名＋さんは既存ルール。ジョセフは名前/きみ。後輩との親しさを無視して全員に敬語にはしない。",
+        "tone": "普段は落ち着いた常体に必要な丁寧語が混ざる。バイトや研究会での説明は簡潔で具体的。ゲームでは自信や皮肉をにじませる。",
+        "habits": [
+          "〜だね、〜かな、〜だろうを文脈に応じて使う",
+          "感情を大声にせず、一言の指摘で冗談を返す",
+          "勝負では遠慮なく自分の読みを通す"
+        ],
+        "signaturePhrases": [],
+        "signatureNote": "日常の固定口癖は今回採用しない。「レロレロ」等を本物の恒常的な癖として貼り付けず、戦闘の名乗りや能力名も持ち込まない。",
+        "avoid": [
+          "全員にですますだけで話す説明装置",
+          "いつも穏やかで勝負欲や皮肉がない人物化",
+          "後輩の行動を常に管理する保護者役",
+          "淡々としていることを感情がないことと取り違える"
+        ]
+      },
+      "referenceSection": "docs/CHARACTER_REFERENCE.md#花京院"
+    }
+  },
+  "initialRelationship": {
+    "friendship": 12,
+    "trust": 10,
+    "romancePlayer": 0,
+    "romanceChar": 0,
+    "desire": 0,
+    "intimacy": 0,
+    "comfort": 8
+  },
+  "effects": {
+    "workTogether": {
+      "joseph": {
+        "friendship": 5,
+        "trust": 7,
+        "comfort": 3
+      }
+    },
+    "compareNotes": {
+      "joseph": {
+        "friendship": 3,
+        "trust": 5,
+        "comfort": 2
+      }
+    },
+    "lunchJoke": {
+      "joseph": {
+        "friendship": 7,
+        "comfort": 6
+      },
+      "caesar": {
+        "friendship": 3,
+        "trust": 2
+      }
+    },
+    "lunchTalk": {
+      "joseph": {
+        "friendship": 3,
+        "trust": 5,
+        "comfort": 4
+      },
+      "caesar": {
+        "friendship": 4
+      }
+    },
+    "gamePartners": {
+      "joseph": {
+        "friendship": 6,
+        "trust": 4,
+        "comfort": 6
+      },
+      "kakyoin": {
+        "friendship": 3
+      }
+    },
+    "gamePractice": {
+      "joseph": {
+        "friendship": 4,
+        "trust": 5,
+        "comfort": 3
+      },
+      "kakyoin": {
+        "friendship": 4,
+        "trust": 2
+      }
+    },
+    "shiftHelp": {
+      "joseph": {
+        "friendship": 3,
+        "trust": 7,
+        "comfort": 5
+      },
+      "kakyoin": {
+        "friendship": 3,
+        "trust": 3
+      }
+    },
+    "shiftRest": {
+      "joseph": {
+        "friendship": 5,
+        "trust": 5,
+        "comfort": 6
+      }
+    },
+    "walkTogether": {
+      "joseph": {
+        "friendship": 5,
+        "trust": 3,
+        "comfort": 6
+      }
+    },
+    "walkHome": {
+      "joseph": {
+        "trust": 5,
+        "comfort": 3
+      }
+    },
+    "friendPromise": {
+      "joseph": {
+        "friendship": 7,
+        "trust": 5,
+        "comfort": 5
+      }
+    },
+    "ask": {
+      "joseph": {
+        "trust": 6,
+        "romancePlayer": 6,
+        "romanceChar": 8,
+        "comfort": 3
+      }
+    },
+    "lunchTwo": {
+      "joseph": {
+        "friendship": 4,
+        "romancePlayer": 10,
+        "romanceChar": 6,
+        "desire": 5,
+        "comfort": 4
+      }
+    },
+    "gameDate": {
+      "joseph": {
+        "friendship": 5,
+        "trust": 4,
+        "romancePlayer": 8,
+        "romanceChar": 10,
+        "comfort": 5
+      }
+    },
+    "honest": {
+      "joseph": {
+        "trust": 10,
+        "romancePlayer": 6,
+        "romanceChar": 8,
+        "intimacy": 5
+      }
+    },
+    "walkClose": {
+      "joseph": {
+        "trust": 3,
+        "romancePlayer": 8,
+        "romanceChar": 8,
+        "desire": 8,
+        "intimacy": 5,
+        "comfort": 5
+      }
+    },
+    "chance": {
+      "joseph": {
+        "friendship": 3,
+        "comfort": 5
+      }
+    },
+    "rehearse": {
+      "joseph": {
+        "trust": 10,
+        "romanceChar": 8,
+        "comfort": 5
+      },
+      "kakyoin": {
+        "friendship": 3,
+        "trust": 3
+      }
+    },
+    "conferenceClose": {
+      "joseph": {
+        "trust": 7,
+        "romancePlayer": 8,
+        "desire": 6,
+        "intimacy": 5
+      },
+      "kakyoin": {
+        "friendship": 3
+      }
+    },
+    "conferencePractical": {
+      "joseph": {
+        "trust": 8,
+        "comfort": 8
+      },
+      "kakyoin": {
+        "friendship": 4
+      }
+    },
+    "messageHeart": {
+      "joseph": {
+        "trust": 5,
+        "romancePlayer": 10,
+        "romanceChar": 10
+      }
+    },
+    "messageListen": {
+      "joseph": {
+        "trust": 7,
+        "romanceChar": 12
+      }
+    },
+    "messageJoke": {
+      "joseph": {
+        "friendship": 5,
+        "comfort": 7
+      }
+    },
+    "hotelTalk": {
+      "joseph": {
+        "trust": 5,
+        "romancePlayer": 5,
+        "romanceChar": 10,
+        "intimacy": 6,
+        "comfort": 5
+      }
+    },
+    "hotelInvite": {
+      "joseph": {
+        "trust": 5,
+        "desire": 15,
+        "intimacy": 10
+      }
+    },
+    "hotelGame": {
+      "joseph": {
+        "friendship": 8,
+        "trust": 5,
+        "comfort": 10
+      },
+      "kakyoin": {
+        "friendship": 3
+      }
+    },
+    "consent": {
+      "joseph": {
+        "trust": 7,
+        "desire": 5,
+        "intimacy": 18
+      }
+    },
+    "homeTogether": {
+      "joseph": {
+        "trust": 6,
+        "comfort": 16,
+        "intimacy": 7
+      }
+    },
+    "homeTalk": {
+      "joseph": {
+        "trust": 8,
+        "romancePlayer": 10,
+        "romanceChar": 8,
+        "comfort": 6
+      }
+    },
+    "homeRest": {
+      "joseph": {
+        "trust": 5,
+        "comfort": 10
+      }
+    },
+    "messageAgain": {
+      "joseph": {
+        "trust": 6,
+        "romancePlayer": 18,
+        "romanceChar": 15,
+        "intimacy": 5
+      }
+    },
+    "messageBoundaries": {
+      "joseph": {
+        "trust": 8,
+        "intimacy": 5,
+        "comfort": 6
+      }
+    },
+    "messageFuture": {
+      "joseph": {
+        "trust": 5,
+        "romancePlayer": 10,
+        "romanceChar": 8,
+        "comfort": 5
+      }
+    },
+    "messageDaily": {
+      "joseph": {
+        "friendship": 5,
+        "comfort": 9
+      }
+    }
+  },
+  "auCharacters": {
+    "player": {
+      "role": "情報系3年",
+      "routeEnabled": false,
+      "addressing": [
+        {
+          "when": {
+            "min": {
+              "friendship": 30
+            }
+          },
+          "text": "{player.firstName}"
+        },
+        {
+          "text": "{player.lastName}"
+        }
+      ]
+    },
+    "joseph": {
+      "role": "情報系3年・同期",
+      "routeEnabled": true,
+      "addressing": [
+        {
+          "when": {
+            "min": {
+              "friendship": 30
+            }
+          },
+          "text": "{player.firstName}"
+        },
+        {
+          "text": "{player.lastName}"
+        }
+      ]
+    },
+    "caesar": {
+      "role": "建築・デザイン系3年・同期",
+      "routeEnabled": false,
+      "addressing": [
+        {
+          "text": "{player.firstName}"
+        }
+      ]
+    },
+    "kakyoin": {
+      "role": "情報系4年・先輩",
+      "routeEnabled": false,
+      "addressing": [
+        {
+          "when": {
+            "min": {
+              "friendship": 40
+            }
+          },
+          "text": "{player.firstName}さん"
+        },
+        {
+          "text": "{player.lastName}さん"
+        }
+      ]
+    }
+  },
+  "endingDescriptions": {
+    "FRIEND": {
+      "title": "となりの、いつもの席",
+      "description": "午後も、いつもの場所で。話の続きは、隣の席へ。"
+    },
+    "LOVE_A": {
+      "title": "言葉にするのは、私から",
+      "description": "先に好きだと言えた日。次の誘いは、彼が少し悔しそうに引き受けた。"
+    },
+    "LOVE_B": {
+      "title": "冗談じゃないほうの話",
+      "description": "言葉を先回りする彼が待っていた、私の返事。その翌日も、隣に。"
+    },
+    "FWB": {
+      "title": "ふたりで決める距離",
+      "description": "友達のまま、二人で望む夜を重ねる。朝には、いつもの昼食の約束が届く。"
+    },
+    "FWB_TO_LOVE": {
+      "title": "約束をひとつ、増やして",
+      "description": "知っている手を握って、今日は恋人として出かける。行きたい場所は、まだ増えていく。"
+    },
+    "SPECIAL": {
+      "title": "このままでいい",
+      "description": "別々の家に帰る二人の、同じテーブルで過ごす休日。来週も、二人分を。"
+    }
+  }
+}

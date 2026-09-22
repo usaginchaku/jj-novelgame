@@ -1,0 +1,1179 @@
+{
+  "id": "weather",
+  "title": "ウェザー — 二つの窓の、今",
+  "intro": "同じ日に買った苗を、違う窓辺へ置いた。\nまだ咲かない朝も、今そこにいる人へ会いたくなる。",
+  "startEvent": "seedling",
+  "character": {
+    "name": "ウェザー・リポート",
+    "adult": true,
+    "heightCm": 192,
+    "heightBasis": "二次資料JoJo Wikiの身長欄と出典注記を照合。ストーンオーシャンアニメ設定表CR007-01。書籍・設定表現物は未照合。AUで同値を採用。",
+    "profile": "記憶喪失後の寡黙さ。冷静な洞察。必要な場面での支援。掴みどころのなさ。",
+    "personality": [
+      "記憶喪失後の寡黙さ",
+      "冷静な洞察",
+      "必要な場面での支援",
+      "掴みどころのなさ"
+    ],
+    "speech": {
+      "firstPerson": "オレ",
+      "addressing": "主人公は名前/おまえ。短い常体。年齢差を教員の上下関係にしない。",
+      "tone": "小さな声で短い常体。語尾は感情と相手に合わせる。",
+      "habits": [
+        "小さな声で短い常体",
+        "距離の近い話し方を描く時も相手の反応を見る",
+        "感情を解説しすぎない"
+      ],
+      "signaturePhrases": [],
+      "signatureNote": "日常の固定口癖は採用しない。象徴的な原作台詞と普段の話し方を混同せず、名台詞を貼り付けない。",
+      "avoid": [
+        "記憶回復後の憎悪や復讐人格",
+        "教員扱い",
+        "主人公が記憶を治療する筋"
+      ]
+    },
+    "referenceSection": "docs/CHARACTER_REFERENCE.md#cast-weather"
+  },
+  "au": {
+    "role": "39歳。環境・大気・気象・流体系の博士後期課程、社会人院生/復学組",
+    "routeEnabled": true,
+    "addressing": [
+      {
+        "text": "{player.lastName}"
+      }
+    ]
+  },
+  "events": [
+    {
+      "id": "seedling",
+      "title": "まだ咲いていない",
+      "chapter": 1,
+      "location": "公園の園芸市",
+      "storyTime": {
+        "date": "5月10日",
+        "period": "昼"
+      },
+      "characterId": "weather",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "朝顔の苗の前で、ウェザー先輩が長く立ち止まっていた。環境や大気を学ぶ博士課程へ戻った、三十九歳の先輩。学内で何度か話した時も静かな人だったが、今日は声を掛けるまで、私が隣へ来たことを知らないようだった。名札の花の写真ではなく、まだ小さな葉へ指を近づける。"
+        },
+        {
+          "speaker": "weather",
+          "text": "これにする。まだ、どんなふうに咲くか分からない。"
+        },
+        {
+          "speaker": "player",
+          "text": "写真と違っても、ですか。私は、つい咲いてる方を選びそうです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩は少し考え、違ったらその花を見る、と答えた。店の人に世話の仕方を聞き、小さな鉢を受け取る。私も窓辺へ一つ置きたくなり、葉が重ならないよう棚を覗いた。先輩が場所を空けると、さっきまで隠れていた苗が見えた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私は自分で一鉢選んだ。同じ朝顔でも葉の向きが違い、二つ並べて袋へ入れると、別々の方を向く。持って帰る時には袋を分けた。その小さな手間まで、何かが始まった日のこととして覚えそうだった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choose",
+          "text": "自分の窓辺へ置きたい苗を、自分で選ぶ",
+          "next": "pot",
+          "effect": "workTogether",
+          "setFlags": [
+            "myWindow"
+          ],
+          "lockRoute": "weather"
+        },
+        {
+          "id": "invite",
+          "text": "「花が咲く頃も、先輩と会いたいです」と誘う",
+          "next": "pot",
+          "effect": "gameDate",
+          "lockRoute": "weather"
+        }
+      ]
+    },
+    {
+      "id": "pot",
+      "title": "鉢の外側",
+      "chapter": 1,
+      "location": "街の園芸店",
+      "storyTime": {
+        "date": "5月17日",
+        "period": "昼"
+      },
+      "characterId": "weather",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "苗を植え替える鉢を買いに来た。ウェザー先輩は飾りの少ないものを選び、私は淡い黄色の縁へ手を止める。植物に必要な大きさを店で確かめたあとも、どちらの色にするか決まらなかった。先輩が早く選ぶ人だからと、私まで急ぐことはなかった。"
+        },
+        {
+          "speaker": "weather",
+          "text": "おまえは、そっちを何度も持った。"
+        },
+        {
+          "speaker": "player",
+          "text": "はい。朝、カーテンを開けた時に見たい気がして。でも、先輩のは落ち着きますね。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "オレはこれがいい、と先輩は自分の鉢を持ち直した。勧められていないと分かると、私も黄色を戻さずに済んだ。会計を待つ間、二人の鉢を店の台へ置く。先輩の手の大きさと鉢の小ささが、そこで初めて同じ画面に入った。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "包んでもらった鉢は、それぞれの鞄へ収まった。帰りの分かれ道で先輩は私の袋を一度確かめ、大丈夫かと聞く。持てますと答えたら、頷いて自分の方へ歩いた。手が空いたらまた話せる、と思って私は名前を呼び、来週の昼を尋ねた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "own",
+          "text": "先輩へ合わせず、自分の好きな鉢を選んだと話す",
+          "next": "growth",
+          "effect": "shiftHelp",
+          "setFlags": [
+            "ownPot"
+          ]
+        },
+        {
+          "id": "near",
+          "text": "「買い物のあとも、もう少し話したいです」と伝える",
+          "next": "growth",
+          "effect": "walkClose"
+        }
+      ]
+    },
+    {
+      "id": "growth",
+      "title": "同じ日から",
+      "chapter": 1,
+      "location": "大学の中庭",
+      "storyTime": {
+        "date": "5月24日",
+        "period": "昼"
+      },
+      "characterId": "weather",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "昼の中庭で、互いの朝顔の写真を見せた。先輩の方はつるがもう長く伸びていて、私の鉢はまだ葉が近いところへ固まっている。同じ日に買ったのに、と言うと、彼は私の画面を自分の横へ並べた。"
+        },
+        {
+          "speaker": "weather",
+          "text": "窓の向きが違う。日の入り方も。遅れてるかは、これだけじゃ分からない。"
+        },
+        {
+          "speaker": "player",
+          "text": "つい、先に咲いた方を考えてました。私の部屋の朝も、見てみます。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩は写真を拡大しすぎず、そのまま戻した。私が撮った鉢の縁には、黄色いところが少しだけ入っている。葉以外にも目を向けられると、私の部屋を一緒に見ている気がした。窓辺に置く物の話へ移り、先輩は空いたところを広くしていると言った。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私の窓辺には読みかけの本もある。片づけなければと思ったが、先輩はそれがある朝を聞きたがった。私は植物の育ち具合を比べるのをやめ、今朝、ページが風でめくれたことを話した。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "morning",
+          "text": "育ちの速さではなく、自分の窓辺の朝を伝える",
+          "next": "message",
+          "effect": "homeTogether",
+          "setFlags": [
+            "ownMorning"
+          ]
+        },
+        {
+          "id": "smile",
+          "text": "「先輩の朝の話を、もっと聞きたいです」と言う",
+          "next": "message",
+          "effect": "walkClose"
+        }
+      ]
+    },
+    {
+      "id": "message",
+      "title": "窓の明るさ",
+      "chapter": 1,
+      "location": "自分の部屋",
+      "storyTime": {
+        "date": "5月24日",
+        "period": "夜"
+      },
+      "characterId": "weather",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "本を棚へ戻す前に、窓辺の写真を一枚撮った。昼の続きとして送ると、しばらくして先輩の部屋の窓も届く。花はまだない。ガラスへ映る室内の灯りが、鉢の向こうに淡く重なっていた。"
+        },
+        {
+          "speaker": "weather",
+          "text": "今はこうだ。朝とは違う。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "短い文を読むと、知らない部屋の夜が急に遠いものではなくなる。そこへどんな時間を重ねてきたかを尋ねるより、今、その窓のそばにいる人へ話したかった。私は送信した写真を開き、自分の灯りも写っていることに気づいた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "plant",
+          "text": "次の朝も撮ってみます。違ったら、また見せたいです",
+          "next": "rain",
+          "effect": "messageDaily",
+          "replyVariants": [
+            {
+              "text": "見たい。オレも、気づいた時に送る。"
+            }
+          ]
+        },
+        {
+          "id": "you",
+          "text": "窓の写真を見たら、先輩にもまた会いたくなりました",
+          "next": "rain",
+          "effect": "messageHeart",
+          "replyVariants": [
+            {
+              "when": {
+                "min": {
+                  "romanceChar": 20
+                }
+              },
+              "text": "オレも会いたい。写真を送る前から、そう思ってた。"
+            },
+            {
+              "text": "また会おう。今度は、昼に。"
+            }
+          ]
+        }
+      ],
+      "message": true
+    },
+    {
+      "id": "rain",
+      "title": "予報のあとで",
+      "chapter": 1,
+      "location": "公園の屋根のある休憩所",
+      "storyTime": {
+        "date": "6月1日",
+        "period": "昼"
+      },
+      "characterId": "weather",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "散歩の途中で雨が降り出し、二人で屋根へ入った。先輩は端末の予報を確かめ、少し待つと言った。いつやむか聞きかけて、私も空を見る。雲の下は明るかったが、道へ落ちる粒は減らない。"
+        },
+        {
+          "speaker": "weather",
+          "text": "すぐとは言えない。オレは、もう少しここにいたい。おまえは？"
+        },
+        {
+          "speaker": "player",
+          "text": "私も待ちます。濡れたくないのと……今、急いで帰りたくないので。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩は屋根の内側へ一歩動き、私の立つ場所を空けた。袖が触れるほどには近くない。それでも声が小さいので、続きを聞く時だけ顔を上げる。先輩は雨の向こうをしばらく見てから、家の鉢は今どうなっているだろう、と呟いた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私にも帰って確かめたい窓があった。雨を止ませられる人ではなく、同じ雨の中で今の予定を選ぶ人が隣にいる。弱くなったところで、私は駅まで歩きたいと伝えた。先輩も頷き、先に屋根を出て道の水たまりを確かめた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "wait",
+          "text": "待ちたい時間を自分で選び、歩き出す時も伝える",
+          "next": "home",
+          "effect": "conferencePractical",
+          "setFlags": [
+            "chosenPause"
+          ]
+        },
+        {
+          "id": "together",
+          "text": "「先輩と待つ時間が、好きでした」と伝える",
+          "next": "home",
+          "effect": "rehearse"
+        }
+      ]
+    },
+    {
+      "id": "home",
+      "title": "花のない窓辺",
+      "chapter": 1,
+      "location": "ウェザーの自宅",
+      "storyTime": {
+        "date": "6月8日",
+        "period": "夕方"
+      },
+      "characterId": "weather",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "実物の鉢を見に来るかと誘われ、私は先輩の家を訪ねた。窓のそばには支えに沿って伸びるつるがある。写真よりずっと高いところへ葉が来ていて、私は顔を上げた。先輩は説明せず、私がひと通り見るまで後ろにいた。"
+        },
+        {
+          "speaker": "player",
+          "text": "ここで、毎朝見てるんですね。私の黄色い鉢も、今度見に来てほしいです。"
+        },
+        {
+          "speaker": "weather",
+          "text": "行きたい。おまえの部屋の朝も。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "振り向くと声が近かった。先輩は半歩離れ、台所の方へ顔を向ける。簡単な夕食を二人で用意して食べ、食器を片づけたあと、私は窓辺の椅子へ戻った。葉の影はもう薄くなっている。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩は別の椅子へ腰を下ろし、まだ咲かないな、と言った。がっかりした声ではなかった。私も花のためだけに来たのではないと気づき、鞄を取る手を少し遅らせた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "visit",
+          "text": "次は私の窓辺も見に来てほしいと約束して帰る",
+          "next": "later",
+          "effect": "homeTogether",
+          "setFlags": [
+            "twoWindows"
+          ]
+        },
+        {
+          "id": "talk",
+          "text": "「花がなくても、今日は来てよかったです」と話して帰る",
+          "next": "later",
+          "effect": "homeTalk"
+        },
+        {
+          "id": "stay",
+          "text": "「今夜、先輩のそばにいたいです」と伝える",
+          "next": "consent",
+          "effect": "hotelInvite",
+          "when": {
+            "min": {
+              "trust": 35,
+              "desire": 8
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "consent",
+      "title": "聞こえる声で",
+      "chapter": 1,
+      "location": "ウェザーの自宅",
+      "storyTime": {
+        "date": "6月8日",
+        "period": "夜"
+      },
+      "characterId": "weather",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先輩は窓から私へ目を戻した。椅子の間は変わらないまま、声だけがこちらへ届く。小さくても聞き違えようのない言い方だった。"
+        },
+        {
+          "speaker": "weather",
+          "text": "オレも、おまえに触れたい。今夜、一緒にいたい。恋人になる話とは、別に。"
+        },
+        {
+          "speaker": "player",
+          "text": "私もそうしたいです。でも、途中でやめたいと思ったら言います。先輩も、そうしてください。"
+        },
+        {
+          "speaker": "weather",
+          "text": "言う。どちらかが止めたら止める。今から帰ってもいい。今夜、どうしたいかを聞かせてくれ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "年上の人に任せてしまう返事はしたくなかった。私は自分の鞄から手を離し、膝の上へ置いた。窓へ向いていた体を彼の方へ向け直すと、ようやく二人だけで座っている気がした。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「今夜は、一緒にいたいです」と答える",
+          "next": "night",
+          "effect": "consent",
+          "setFlags": [
+            "mutualConsent",
+            "hadNight"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「今日は帰ります。また昼に会いたいです」と伝える",
+          "next": "later",
+          "effect": "walkHome",
+          "setFlags": [
+            "declinedTouch"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "night",
+      "title": "影が消えるまで",
+      "chapter": 1,
+      "location": "ウェザーの自宅",
+      "storyTime": {
+        "date": "6月8日",
+        "period": "夜"
+      },
+      "characterId": "weather",
+      "rating": "fade",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先輩が立ち、私の前で手を差し出した。取ってから私も立つと、肩へ触れるために腕を少し上げる。先輩が身を屈め、近づいていいかと尋ねた。私は頷き、言葉でも答える。"
+        },
+        {
+          "speaker": "player",
+          "text": "はい。私も、近づきたいです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "唇が触れ、離れたところで目が合った。いつもの静かな顔のまま、呼吸だけが少し違う。私がつないだ手を握り直すと、彼の指も応えた。もう一度口づけし、窓の灯りを消して奥の部屋へ向かった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌朝、先輩がカーテンを少し開けた。まだ花のない鉢を見てから、私の方へ戻ってくる。朝食のあと帰りますと話すと、先輩は頷き、二つの椅子を机へ寄せた。夜にはよく見えなかった手の動きを、私は朝の光の中で見ていた。",
+          "storyTime": {
+            "date": "6月9日",
+            "period": "朝"
+          }
+        }
+      ],
+      "choices": [
+        {
+          "id": "home",
+          "text": "朝食を食べて、自分の家へ戻る",
+          "next": "after_message"
+        }
+      ],
+      "when": {
+        "flags": [
+          "mutualConsent"
+        ]
+      }
+    },
+    {
+      "id": "after_message",
+      "title": "今日の写真",
+      "chapter": 1,
+      "location": "自分の部屋",
+      "storyTime": {
+        "date": "6月9日",
+        "period": "夜"
+      },
+      "characterId": "weather",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "自分の窓辺へ戻ると、葉が一枚、昨日と違う方を向いていた。写真に撮って送ったあと、私は端末を置けずにいた。植物の続きを送れば、昨夜のことを話さずにも済む。それだけで終えたいのか、自分へ聞く間に返事が来た。"
+        },
+        {
+          "speaker": "weather",
+          "text": "おまえの鉢、見に行きたい。また会いたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私は黄色い縁を指で触り、先輩がいた部屋の朝を思い出した。次に望むのはどんな時間だろう。葉が変わるより早く答えを出す必要はなく、けれど今伝えたい言葉はあった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "again",
+          "text": "また夜も会いたいです。先輩のことが、前より好きになりました",
+          "next": "later",
+          "effect": "messageAgain",
+          "setFlags": [
+            "ongoing"
+          ],
+          "replyVariants": [
+            {
+              "text": "オレも。次に会った時、もう一度言いたい。"
+            }
+          ]
+        },
+        {
+          "id": "nights",
+          "text": "恋人とは決めず、望む夜にも会う友達でいたいです",
+          "next": "later",
+          "effect": "messageBoundaries",
+          "setFlags": [
+            "ongoing"
+          ],
+          "replyVariants": [
+            {
+              "text": "分かった。オレもそうしたい。その時に、また聞こう。"
+            }
+          ]
+        },
+        {
+          "id": "days",
+          "text": "次からは昼に会う友達でいたいです",
+          "next": "later",
+          "effect": "messageDaily",
+          "setFlags": [
+            "endedNight"
+          ],
+          "replyVariants": [
+            {
+              "text": "昼にしよう。おまえの都合のいい日に、会いたい。"
+            }
+          ]
+        }
+      ],
+      "message": true
+    },
+    {
+      "id": "later",
+      "title": "つぼみを見つけた日",
+      "chapter": 1,
+      "location": "公園の休憩所",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "weather",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "六月の間、互いの家で望む夜を過ごした。泊まらず帰る日も、鉢を見て食事をするだけの日もある。別々の窓から送る写真には少しずつ葉が増えた。私は彼の家の明るさを、画面の色だけではなく覚えるようになった。",
+          "when": {
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "六月の間、互いの鉢を見に行き、昼を一緒に食べた。先輩が私の部屋へ来た日は、黄色い縁を長く見て、これを選んでよかったな、と言った。私も彼の窓の広さを覚え、写真に写らない場所まで思い浮かべるようになった。",
+          "when": {
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "今朝見つけたつぼみの写真を見せ、端末をしまった。先輩はそれ以上の説明を求めず、私の顔へ目を戻す。今日は花の報告の先に話したいことがあった。膝に触れる鞄の紐を、私は一度緩めた。"
+        },
+        {
+          "speaker": "weather",
+          "text": "まだ、聞いてる。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "tell",
+          "text": "ウェザー先輩を好きになったと、自分から話す",
+          "next": "confess_player",
+          "when": {
+            "min": {
+              "trust": 40,
+              "romancePlayer": 35,
+              "romanceChar": 35
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "listen",
+          "text": "先輩が私へ言おうとしていることを待つ",
+          "next": "confess_char",
+          "when": {
+            "min": {
+              "trust": 40,
+              "romancePlayer": 20,
+              "romanceChar": 40
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "pact",
+          "text": "違う窓辺の今を、互いに見せに行く相手でいたい",
+          "next": "pact",
+          "when": {
+            "min": {
+              "trust": 40,
+              "comfort": 60
+            },
+            "flags": [
+              "myWindow",
+              "ownPot",
+              "ownMorning",
+              "chosenPause",
+              "twoWindows"
+            ],
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "nights",
+          "text": "望む夜にも会う、今の親密な友情を続けたい",
+          "next": "fwb_choice",
+          "when": {
+            "min": {
+              "trust": 45,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "love",
+          "text": "夜を重ねた今、先輩の恋人になりたい",
+          "next": "end_fwb_love",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 30,
+              "romanceChar": 30,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "friends",
+          "text": "これからも、昼に会って話す友達でいたい",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_player",
+      "title": "花の話を終えて",
+      "chapter": 4,
+      "location": "公園の休憩所",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "weather",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先輩が好きです、と言うまでに、私は一度窓の話へ戻りそうになった。けれど今日は何も持っていなくても会いたかった。そう続けると、彼は体を少しこちらへ向けた。"
+        },
+        {
+          "speaker": "player",
+          "text": "会ってない朝にも、先輩がどうしてるか考えます。花が咲いたからじゃなくて、私が会いたいから、会いに行きたいです。"
+        },
+        {
+          "speaker": "weather",
+          "text": "オレも、おまえを待ってる。用事のある日だけじゃない。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "待っている顔を目の前にすると、それ以上の理由がうまく出なくなった。私は指を開き、彼の手の置かれたところを見た。花の名前を知らなくても花を見られるように、今はこの気持ちを全部説明せず、望みだけを渡してよかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「私と付き合ってください」と伝える",
+          "next": "end_love_a",
+          "effect": "messageHeart"
+        },
+        {
+          "id": "no",
+          "text": "「今は友達として会いたいです」と伝え直す",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_char",
+      "title": "静かな人の望み",
+      "chapter": 4,
+      "location": "公園の休憩所",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "weather",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先輩の手が、何もない膝の上で一度動いた。私が見ていることに気づくと、彼は手を隠さず、そのまま口を開いた。顔を上げた先に、いつもより長くこちらを見る目があった。"
+        },
+        {
+          "speaker": "weather",
+          "text": "おまえが好きだ。恋人として、一緒にいたい。オレはそう思ってる。おまえは？"
+        },
+        {
+          "speaker": "narrator",
+          "text": "短い言葉のあとに、葉の擦れる音が入った。聞こえなかったふりはできないし、したくなかった。私は自分の返事を急いで形にせず、嬉しいと思ったところと、今選びたいところを確かめた。先輩はその間、動かなかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「私も好きです。恋人になりたいです」と答える",
+          "next": "end_love_b",
+          "effect": "messageHeart"
+        },
+        {
+          "id": "no",
+          "text": "「恋人ではなく、友達でいたいです」と答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "refusedConfession",
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pact",
+      "title": "二つの窓を残して",
+      "chapter": 4,
+      "location": "公園の休憩所",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "weather",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "同じ場所へ鉢を集めたいわけではなかった。私の黄色い鉢は私の窓へ、先輩の鉢はあの広い窓へ置いたまま、互いの今を見に行きたい。そう話すと、先輩はしばらく空いた手を見ていた。"
+        },
+        {
+          "speaker": "player",
+          "text": "花が終わっても、朝の話をしたいです。先輩の方からも、見に来たいって言ってもらえたら嬉しいです。"
+        },
+        {
+          "speaker": "weather",
+          "text": "行きたい。オレの方にも、来てほしい。何も変わらない日でも。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "恋人になる話とは違うと確かめてから、次の休日を選んだ。彼が私の予定を聞き、私も彼が空けたい時間を尋ねる。二つの窓のどちらも、もう一方へ合わせて向きを変える必要はなかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "互いの今の暮らしを、見せに行く相手になる",
+          "next": "end_special",
+          "effect": "homeTogether"
+        },
+        {
+          "id": "friends",
+          "text": "決まった約束はせず、気軽に昼へ誘う友達を選ぶ",
+          "next": "end_friend",
+          "effect": "friendPromise"
+        }
+      ]
+    },
+    {
+      "id": "fwb_choice",
+      "title": "今夜とは別の返事",
+      "chapter": 4,
+      "location": "公園の休憩所",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "weather",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人とは決めず、望む夜をこれからも過ごしたいと話した。先輩は私が言い終えるのを待ち、オレも、と返す。合わせてくれたのか確かめるためではなく、その人の望みを聞きたくて顔を上げた。"
+        },
+        {
+          "speaker": "weather",
+          "text": "会いたい夜には誘う。違う日は断ってくれ。途中でやめてもいい。オレも言う。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私は頷き、自分からも誘いたいと答えた。次は昼に鉢を見る予定だった。それを夜へ変える必要はなく、二人で時刻を確かめる。先輩が立つのを見て、私も自分の鞄を持った。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "その都度望みを伝える、親密な友人として続ける",
+          "next": "end_fwb",
+          "effect": "messageBoundaries"
+        },
+        {
+          "id": "day",
+          "text": "次からは昼に会う友達に戻る",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "end_friend",
+      "title": "咲いたよ、と送る",
+      "chapter": 5,
+      "location": "公園の休憩所",
+      "storyTime": {
+        "date": "7月13日",
+        "period": "昼"
+      },
+      "characterId": "weather",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人にはならないと伝えた時、先輩は一度目を伏せ、分かったと答えた。数日後に私の鉢で花が咲き、写真を送ると、見たい、と短く返った。今日会うことは、私も望んで決めた。",
+          "when": {
+            "flags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "昼に会う友達でいようと話してから、先輩とは窓辺の写真を送り合っていた。触れた夜を忘れようと急がず、今朝咲いた花を自分の言葉で知らせた。今日は公園で会う約束だった。",
+          "when": {
+            "flags": [
+              "hadNight"
+            ],
+            "notFlags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "今朝咲いた花を先輩へ送り、昼は公園で会った。花の形を見せる写真と、自分の窓辺に置かれた写真を一枚ずつ。先輩は後の方を長く見て、黄色が入ると違うな、と言った。",
+          "when": {
+            "notFlags": [
+              "hadNight",
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "weather",
+          "text": "こっちも咲いた。写真、送る。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩の端末を覗き、私は自分の花とは少し違う色に笑った。育て方の答えをもらうためだけに会ったのではなく、互いの朝の続きを聞いている。帰る前に次の昼を尋ねたら、彼の方から一日が返ってきた。"
+        }
+      ],
+      "choices": [],
+      "ending": "FRIEND"
+    },
+    {
+      "id": "end_love_a",
+      "title": "朝を待つ人",
+      "chapter": 5,
+      "location": "公園と街路",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "weather",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "オレも付き合いたい、と先輩が言った。私が手を伸ばすと、彼は大きな掌を上へ向ける。握ってから立ち上がるまでの短い間、私は自分から伝えられたことを、指の温かさで確かめていた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌週の朝、先輩の窓で咲いた花を見に行った。玄関で靴を脱ぐより先に、彼が私の顔を見て、来てくれて嬉しい、と言う。私は花の話をするつもりで来た口を閉じ、私も、と笑った。",
+          "storyTime": {
+            "date": "7月6日",
+            "period": "朝"
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "窓の前で並ぶと、肩の高さは違っても、同じ花へ目が向いた。見終えてから彼の手へ触れる。花はそのまま窓に残し、私たちは朝食を取りに台所へ移った。会いに来たのは、この先へ続く時間だった。"
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_A"
+    },
+    {
+      "id": "end_love_b",
+      "title": "名前を呼ぶまで",
+      "chapter": 5,
+      "location": "公園と街路",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "weather",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私も好きだと返すと、先輩は息を一つ吐いた。嬉しい、と小さく言われたので、私は聞こえましたと笑った。もっと近くへ行っていいか尋ね、頷きを待ってから隣へ寄る。彼の手が私の指へ触れ、確かめるように握った。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌週、待ち合わせの先輩を見つけた。遠くから名前を呼ぶとこちらを向き、いつものように大きく手を振ることはしない。それでも私が歩き終える場所を空けてくれるので、迷わず隣へ入れた。",
+          "storyTime": {
+            "date": "7月6日",
+            "period": "昼"
+          }
+        },
+        {
+          "speaker": "weather",
+          "text": "今日は、おまえが行きたい方へ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私は寄りたい店を指した。彼がそちらへ体を向けてから、自分の手を差し出す。取ってもらえるまで待つ時間は短く、つないで歩く時間は、まだいくらでも長くできそうだった。"
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_B"
+    },
+    {
+      "id": "end_fwb",
+      "title": "違う窓へ帰る朝",
+      "chapter": 5,
+      "location": "ウェザーの自宅",
+      "storyTime": {
+        "date": "7月13日",
+        "period": "夜"
+      },
+      "characterId": "weather",
+      "rating": "fade",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "今夜会いたいと互いに話し、私は先輩の家へ来た。夕食を食べたあと、窓の葉を一緒に眺める。泊まりたいですと改めて伝えると、彼も一緒にいてほしいと答えた。明日は朝食のあと帰ると、私は自分の予定を話した。"
+        },
+        {
+          "speaker": "weather",
+          "text": "分かった。今は、こっちへ来てほしい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私は自分から隣へ座った。手を取って顔を上げれば、先輩が身を屈める。近づく速さまで同じでなくていいと知ってから、私は途中で待って、とも言えるようになった。今夜はそのまま口づけを返し、二人で灯りを落とした。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝、自分の鉢も見たいので帰ります、と話した。先輩は頷き、玄関で私の鞄を渡す。家へ戻って窓を開けると、こちらにも一つ花があった。写真を送るかはあとで決め、まず自分で長く見た。",
+          "storyTime": {
+            "date": "7月14日",
+            "period": "朝"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB"
+    },
+    {
+      "id": "end_fwb_love",
+      "title": "今の望みに触れる",
+      "chapter": 5,
+      "location": "公園と主人公の自宅",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "weather",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "今は恋人になりたい、と伝えた。先輩はすぐ手を伸ばさず、私の顔を見てから同じ言葉を返す。夜に近くで知った表情が、昼の光では別の色を持って見えた。"
+        },
+        {
+          "speaker": "weather",
+          "text": "オレも、おまえの恋人になりたい。今、そうしたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私は彼の手を取った。今まで触れた夜を消さず、今の返事をその上へ重ねる。次の休日は私の家へ来てほしいと誘うと、彼も予定を確かめた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌週、黄色い鉢の前へ先輩を案内した。咲いた花を見終えても彼はすぐ帰らず、私も帰すための話をしなかった。隣に椅子を置いて朝食を食べる。恋人、と呼ぶにはまだ照れたけれど、その席を近くへ寄せるのは自分でできた。",
+          "storyTime": {
+            "date": "7月6日",
+            "period": "朝"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB_TO_LOVE"
+    },
+    {
+      "id": "end_special",
+      "title": "二つの窓のあいだ",
+      "chapter": 5,
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "7月13日",
+        "period": "朝"
+      },
+      "characterId": "weather",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先輩が私の窓辺へ来た朝、咲いていたのは一輪だけだった。もっと咲くと思っていたと話すと、彼はその一輪を見たまま、今日はこれだ、と言う。私は黄色い鉢を動かさず、隣に腰を下ろした。"
+        },
+        {
+          "speaker": "player",
+          "text": "次は、先輩の窓へ行きます。花がなくても。今度は私から、朝ご飯を持って。"
+        },
+        {
+          "speaker": "weather",
+          "text": "来てほしい。オレも、用意して待つ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "恋人という名前をつけずに、互いの今へ通う約束ができた。暮らしを一つにするわけではなく、どちらの窓も別の方を向いたままだ。帰る先輩へ手を振ったあと、私は鉢の横へ本を戻す。今日の窓辺には、その本も入っていた。"
+        }
+      ],
+      "choices": [],
+      "ending": "SPECIAL"
+    }
+  ],
+  "endingDescriptions": {
+    "FRIEND": {
+      "title": "咲いたよ、と送る",
+      "description": "別々の窓で見つけた花を知らせ、昼に会う。互いの今の好みを聞き合う友人として。"
+    },
+    "LOVE_A": {
+      "title": "朝を待つ人",
+      "description": "自分から好きと伝え、その人の朝へ会いに行く。花を見終えたあとも続く、恋人の時間。"
+    },
+    "LOVE_B": {
+      "title": "名前を呼ぶまで",
+      "description": "静かな人が言葉にした望みへ、自分の好きも返す。待ち合わせの隣を、迷わず選べるように。"
+    },
+    "FWB": {
+      "title": "違う窓へ帰る朝",
+      "description": "互いに望む夜を過ごし、朝はそれぞれの窓へ帰る。自分の暮らしも残る親密な友情。"
+    },
+    "FWB_TO_LOVE": {
+      "title": "今の望みに触れる",
+      "description": "重ねた夜を大切にしたまま、今は恋人でいたいと伝え合う。昼の光の中でも、椅子を近くへ。"
+    },
+    "SPECIAL": {
+      "title": "二つの窓のあいだ",
+      "description": "苗と鉢、違う朝、待つ時間を重ね、互いの今の暮らしへ通う。恋人とは別の、二つの窓を見せ合う相手。"
+    }
+  }
+}

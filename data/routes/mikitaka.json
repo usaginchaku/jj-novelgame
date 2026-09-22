@@ -1,0 +1,1212 @@
+{
+  "id": "mikitaka",
+  "title": "ミキタカ — 二つの名前で照らすもの",
+  "intro": "切り抜いた紙の向こうに、違う形が現れた。\n同じものを見たはずの人へ、自分の見え方を手渡していく。",
+  "startEvent": "shadow",
+  "character": {
+    "name": "ミキタカ",
+    "adult": true,
+    "heightCm": null,
+    "heightBasis": "確定身長を確認できず",
+    "profile": "常識の外からの好奇心。礼儀正しさ。恩や不公平への敏感さ。",
+    "personality": [
+      "常識の外からの好奇心",
+      "礼儀正しさ",
+      "恩や不公平への敏感さ"
+    ],
+    "speech": {
+      "firstPerson": "わたし",
+      "addressing": "主人公は姓＋さん/あなた。丁寧語を自然に用いる。",
+      "tone": "です・ますと素朴な質問。語尾は感情と相手に合わせる。",
+      "habits": [
+        "です・ますと素朴な質問",
+        "比喩を独自に受け取る",
+        "相手をさん付け"
+      ],
+      "signaturePhrases": [],
+      "signatureNote": "日常の固定口癖は採用しない。象徴的な原作台詞と普段の話し方を混同せず、名台詞を貼り付けない。",
+      "avoid": [
+        "本当に異星人と断定",
+        "全台詞が奇行",
+        "人間の感情を何も理解しない"
+      ]
+    },
+    "referenceSection": "docs/CHARACTER_REFERENCE.md#cast-mikitaka"
+  },
+  "au": {
+    "role": "学年・専攻未確定。大学の公開企画で接点を作る",
+    "routeEnabled": true,
+    "addressing": [
+      {
+        "text": "{player.lastName}さん"
+      }
+    ]
+  },
+  "endingDescriptions": {
+    "FRIEND": {
+      "title": "見つけたら、呼ぶ",
+      "description": "違う机から、面白い形を見つけたら呼び合う友人。まだ分からないものも、一緒に覗ける。"
+    },
+    "LOVE_A": {
+      "title": "返事も、自分のもの",
+      "description": "自分の望みで好きだと伝え、相手の望みも受け取る。紙を持たない休日には、空いた手をつなぐ。"
+    },
+    "LOVE_B": {
+      "title": "隣へ呼ぶ声",
+      "description": "恩返しではない告白へ、自分の好きで答える。もう近くにいる人を、嬉しくてもう一度呼ぶ。"
+    },
+    "FWB": {
+      "title": "箱を持たない訪問",
+      "description": "互いが望む夜に会い、翌朝には自分の用事へ帰る。昼の発見も分け合う、親密な友人。"
+    },
+    "FWB_TO_LOVE": {
+      "title": "重ね直す名前",
+      "description": "過ごした夜を残したまま、今は恋人になりたいと選ぶ。短い散歩にも、会えた嬉しさを先に渡す。"
+    },
+    "SPECIAL": {
+      "title": "名札の端まで",
+      "description": "違う見え方を消さず、二人の名前で作り続ける相棒。一つに決めない影のそばで、互いの手が動く。"
+    }
+  },
+  "events": [
+    {
+      "id": "shadow",
+      "chapter": 1,
+      "title": "切り落とした方",
+      "location": "大学の公開企画室",
+      "storyTime": {
+        "date": "5月11日",
+        "period": "昼"
+      },
+      "characterId": "mikitaka",
+      "rating": "general",
+      "tags": [
+        "mikitaka"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "大学の公開企画で、紙を切って影を作る机に座った。隣の人は私が切り落とした紙を見て、それも使ってよいですかと尋ねる。どうぞと渡すと、灯りの前へかざし、丸い穴の縁だけを壁へ映した。捨てるつもりだった端が、急に見覚えのない形になる。"
+        },
+        {
+          "speaker": "mikitaka",
+          "text": "ありがとうございます。わたしはミキタカと申します。この穴は、何を切った跡ですか。"
+        },
+        {
+          "speaker": "player",
+          "text": "葉っぱを作るつもりだったんです。でも、少し失敗して。私は{player.lastName}です。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼は失敗という言葉を聞いても紙を下ろさず、葉っぱには見えませんね、と率直に言った。私は笑って頷く。それから影を指すと、こちらは窓に見えると教えてくれた。私も隣から覗き、もう一枚切ってみたくなった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "look",
+          "text": "捨てる前に、別の角度から影を一緒に見る",
+          "next": "pair",
+          "effect": "ask"
+        },
+        {
+          "id": "paper",
+          "text": "使える端切れを選び、二人で道具を片づける",
+          "next": "pair",
+          "effect": "workTogether"
+        }
+      ]
+    },
+    {
+      "id": "pair",
+      "chapter": 1,
+      "title": "同じ形ではなく",
+      "location": "次の公開制作日",
+      "storyTime": {
+        "date": "5月18日",
+        "period": "昼"
+      },
+      "characterId": "mikitaka",
+      "rating": "general",
+      "tags": [
+        "mikitaka"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "次の企画日にまた会った。ミキタカさんは前の切り紙を持ってきていて、私も自分で作った葉の形を出す。二枚を重ねれば窓の中に葉が見えると思ったのに、近づけすぎると輪郭がつぶれた。私は同じ大きさに切り直そうとして手を止める。"
+        },
+        {
+          "speaker": "mikitaka",
+          "text": "片方を変える前に、置く場所を変えてみませんか。窓の方が、大きいとは限りませんから。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "紙を動かす役と灯りを見る役を交代した。遠ざけると影が変わる。私が面白いと言ったところで彼が首を傾げたので、今度はこちらへ来てもらった。隣へ並ぶと、同じ壁でも見ていた場所が少し違っていた。"
+        },
+        {
+          "speaker": "player",
+          "text": "私は、端が重ならないところが好きです。窓から出ていこうとしてるみたいで。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "two_views",
+          "text": "形を揃えず、互いに好きな置き方を試す",
+          "next": "label",
+          "effect": "honest",
+          "setFlags": [
+            "twoViews"
+          ]
+        },
+        {
+          "id": "move",
+          "text": "道具の位置を変え、映り方を確かめる",
+          "next": "label",
+          "effect": "compareNotes"
+        }
+      ]
+    },
+    {
+      "id": "label",
+      "chapter": 1,
+      "title": "一人の名前では",
+      "location": "公開企画室の展示棚",
+      "storyTime": {
+        "date": "5月25日",
+        "period": "昼"
+      },
+      "characterId": "mikitaka",
+      "rating": "general",
+      "tags": [
+        "mikitaka"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "二人で作った影を写真に残し、短い感想と一緒に棚へ置くことになった。私が説明を書いていたので、係の人は私の名前だけを札へ書きかける。ミキタカさんが、その前に、と静かに声を出した。私はペンを置き、彼の方を見る。"
+        },
+        {
+          "speaker": "mikitaka",
+          "text": "これは、二人で作りました。紙を切った人だけのものではありません。わたしの名前も、同じところへお願いします。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "係の人が聞き直し、二人分の札を用意してくれた。私も、位置を変えたのはミキタカさんだと話す。彼は当然のように頷いたが、棚を離れる前に名前の並びをもう一度確かめた。"
+        },
+        {
+          "speaker": "player",
+          "text": "言ってくれてよかったです。私、自分だけだとそのまま受け取ってしまうところでした。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "both_names",
+          "text": "二人のしたことを、自分の言葉でも札へ添える",
+          "next": "message",
+          "effect": "homeTalk",
+          "setFlags": [
+            "bothNames"
+          ]
+        },
+        {
+          "id": "invite",
+          "text": "「次も、ミキタカさんと作りたいです」と誘う",
+          "next": "message",
+          "effect": "lunchTwo"
+        },
+        {
+          "id": "help",
+          "text": "展示と片づけを二人で終える",
+          "next": "message",
+          "effect": "shiftRest"
+        }
+      ]
+    },
+    {
+      "id": "message",
+      "chapter": 2,
+      "title": "壁に届くまで",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "5月28日",
+        "period": "夜"
+      },
+      "characterId": "mikitaka",
+      "rating": "general",
+      "tags": [
+        "mikitaka"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "連絡先を交換したミキタカさんから、家で映した影の写真が届いた。公開企画の白い壁とは違い、壁紙の模様が穴の中へ入っている。紙の形は同じはずなのに、昼にはなかった奥行きが見えた。"
+        },
+        {
+          "speaker": "mikitaka",
+          "text": "ここでは、窓の向こうに線がありました。紙だけ持ち帰ったつもりでしたが、場所も必要だったようです。あなたの方では、どう見えますか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私は机の灯りを向け、自分の葉の形を壁へ映した。写真を撮る前に、何に見えるか考える。正解を当てるためではない問いを送られると、自分の部屋の壁まで見直したくなった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "glad",
+          "text": "また隣で、一緒に見たいです。写真も送ります",
+          "next": "outside",
+          "effect": "messageHeart",
+          "replyVariants": [
+            {
+              "text": "わたしもです。次の札にも、二人の名前を書きたいですね。あなたの写真を待っています。",
+              "when": {
+                "flags": [
+                  "bothNames"
+                ]
+              }
+            },
+            {
+              "text": "わたしも、隣で見たいです。写真とは違うところを、教えてください。"
+            }
+          ],
+          "lockRoute": "mikitaka"
+        },
+        {
+          "id": "notice",
+          "text": "こちらでは葉の端が、波のように見えました",
+          "next": "outside",
+          "effect": "messageListen",
+          "replyVariants": [
+            {
+              "text": "波ですか。わたしも、見てみたいです。紙の名前を変えずに、別のものにも見えるのですね。"
+            }
+          ],
+          "lockRoute": "mikitaka"
+        },
+        {
+          "id": "thanks",
+          "text": "写真、ありがとうございます。次の企画でも見せてください",
+          "next": "outside",
+          "effect": "messageDaily",
+          "replyVariants": [
+            {
+              "text": "はい。紙も持っていきます。折れないように、箱に入れました。"
+            }
+          ],
+          "lockRoute": "mikitaka"
+        }
+      ],
+      "message": true
+    },
+    {
+      "id": "outside",
+      "chapter": 2,
+      "title": "持ち帰らない景色",
+      "location": "公園の木陰",
+      "storyTime": {
+        "date": "6月1日",
+        "period": "昼"
+      },
+      "characterId": "mikitaka",
+      "rating": "general",
+      "tags": [
+        "mikitaka"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "企画の帰り、私から公園へ誘った。木漏れ日が道へ丸く落ちていて、ミキタカさんは少し離れた二つを見比べる。紙を持ってくればよかったと言いかけた私に、今日は持っていなくてよかったかもしれません、と返ってきた。"
+        },
+        {
+          "speaker": "mikitaka",
+          "text": "ここへ別の影を足すと、先にあったものを見なくなりそうです。今は、これを見たいです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私は空の手を見て、しばらくそのまま立った。風が吹くと、丸い光も動く。同じところを指そうとしても、次には少し違う位置になる。ミキタカさんが声を上げて笑ったので、何が見えたのか聞きたくなった。"
+        },
+        {
+          "speaker": "player",
+          "text": "私には、今のは魚が逃げたみたいに見えました。ミキタカさんは？"
+        },
+        {
+          "speaker": "narrator",
+          "text": "階段を上がったように見えた、と教えてくれた。どちらにも見える気がして、私はもう一度道へ目を落とす。写真を撮らなくても、あとでこの人に話せるものが一つできた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "no_copy",
+          "text": "何も足さず、今日見えたものを二人で話す",
+          "next": "home",
+          "effect": "conferencePractical",
+          "setFlags": [
+            "unmadeView"
+          ]
+        },
+        {
+          "id": "beside",
+          "text": "隣で笑う彼を見て、また会いたいと伝える",
+          "next": "home",
+          "effect": "walkClose"
+        },
+        {
+          "id": "finish",
+          "text": "木陰で休み、帰る道を一緒に選ぶ",
+          "next": "home",
+          "effect": "walkHome"
+        }
+      ]
+    },
+    {
+      "id": "home",
+      "chapter": 3,
+      "title": "箱を開いた午後",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "6月8日",
+        "period": "夕方"
+      },
+      "characterId": "mikitaka",
+      "rating": "general",
+      "tags": [
+        "mikitaka"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "家の壁でも二枚を重ねてみたいと、ミキタカさんを誘った。彼は紙を箱へ入れて持ってきて、玄関で丁寧に挨拶をする。机へ自分の葉を置くと、彼も窓の紙を隣へ並べた。まず明るいままで形を見てから、机の灯りだけをつける。"
+        },
+        {
+          "speaker": "mikitaka",
+          "text": "同じ紙なのに、こちらの部屋では違って見えますね。近くへ置いてもよいですか。"
+        },
+        {
+          "speaker": "player",
+          "text": "はい。私はこっちを持ちます。……あ、そこ。今の、好きです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼が紙を止め、私は灯りを見る方へ移る。壁だけでなく、その間で紙を支えている人の手まで見えた。やがて道具を片づけ、二人で用意した簡単な夕食を食べる。照明を全部戻すと、さっきまでの窓は跡もなく消えていた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "talk",
+          "text": "「消えたあとも、ここで一緒に話したいです」と伝える",
+          "next": "evening",
+          "effect": "hotelTalk"
+        },
+        {
+          "id": "rest",
+          "text": "食後もしばらく、今日の見え方を話す",
+          "next": "evening",
+          "effect": "homeRest"
+        }
+      ]
+    },
+    {
+      "id": "evening",
+      "chapter": 3,
+      "title": "残ってほしい人",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "6月8日",
+        "period": "夜"
+      },
+      "characterId": "mikitaka",
+      "rating": "general",
+      "tags": [
+        "mikitaka"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "片づけた箱を彼が持ち上げると、箱の下に隠れていた白い天板が見えた。そこだけ片づいたように見えて、私は自分の皿をもう一度流しへ寄せる。帰りの道は大丈夫ですかと訊くと、ミキタカさんは分かりますと答え、それから私の顔を見た。"
+        },
+        {
+          "speaker": "mikitaka",
+          "text": "何か、まだ話したいことがありますか。わたしは、聞きたいです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "道を説明するために引き止めたいわけではなかった。私はもう分かっている部屋の中を見ず、彼へ向き直る。何が映ったかではなく、誰とここにいたいかを、今日は自分の声で伝えたかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "stay",
+          "text": "「今夜は、ミキタカさんの近くにいたいです」と伝える",
+          "next": "consent",
+          "effect": "hotelInvite",
+          "when": {
+            "min": {
+              "trust": 45,
+              "desire": 8
+            }
+          }
+        },
+        {
+          "id": "next_time",
+          "text": "「また会いたいです」と伝え、今日は見送る",
+          "next": "next",
+          "effect": "walkHome"
+        }
+      ]
+    },
+    {
+      "id": "consent",
+      "chapter": 3,
+      "title": "恩返しではない望み",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "6月8日",
+        "period": "夜"
+      },
+      "characterId": "mikitaka",
+      "rating": "general",
+      "tags": [
+        "mikitaka"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "ミキタカさんは箱を机へ戻した。私が席を勧める前に、自分から椅子へ座り直す。私は向かいへ戻り、急に早くなった呼吸を一度整えた。"
+        },
+        {
+          "speaker": "mikitaka",
+          "text": "わたしも、あなたに触れたいです。今夜、一緒にいたい。招いてくださったお礼としてではなく、わたしが望んでいます。"
+        },
+        {
+          "speaker": "player",
+          "text": "私もそうしたいです。でも、今夜のことと、恋人になる約束は別にして話したい。途中でやめたくなったら、私も言います。"
+        },
+        {
+          "speaker": "mikitaka",
+          "text": "はい。わたしも言います。どちらかが止めたいと思ったら、その時に止めましょう。今から帰ることもできます。あなたがどうしたいか、もう一度聞かせてください。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "知らない経験を試すための返事ではないと、自分の中でも確かめた。私は椅子の背へ預けていた体を起こす。近づく前の少し離れた場所で、自分も同じ望みを持っていることを言いたかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「今夜、一緒にいてほしいです」と答える",
+          "next": "night",
+          "effect": "consent",
+          "setFlags": [
+            "consented",
+            "hadNight"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「今日はここまでにしたいです」と伝える",
+          "next": "next",
+          "effect": "walkHome",
+          "setFlags": [
+            "declinedTouch"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "night",
+      "chapter": 3,
+      "title": "影ではない方へ",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "6月8日",
+        "period": "夜"
+      },
+      "characterId": "mikitaka",
+      "rating": "fade",
+      "tags": [
+        "mikitaka"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私は椅子を彼の隣へ寄せた。手に触れてよいですかと尋ねられ、はいと返す。指が重なると、紙を持っていた時には分からなかった温かさがあった。互いに体を向けて顔を近づけ、目を閉じる前に私からも、キスしたいですと伝えた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼が頷き、唇が触れた。少し離れると、ミキタカさんが私の姓を呼ぶ。その声に返事をしてから、もう一度自分から近づいた。壁へ何が映るかは見ず、二人で立ち上がって部屋の奥へ進む。消した灯りのあとにも、つないだ手はそこにあった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝、目を開けると、彼もこちらを見ていた。おはようございますと言い合ってから、私は朝食を一緒に食べたいと話す。ミキタカさんは頷き、帰る時刻も決めておきましょうと答えた。起き上がる前に、今の気持ちも話したいと私へ向く。",
+          "storyTime": {
+            "date": "6月9日",
+            "period": "朝"
+          }
+        },
+        {
+          "speaker": "mikitaka",
+          "text": "わたしは、またあなたとこうして会いたいです。あなたも、今思っていることを聞かせてくれますか。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "again",
+          "text": "「恋人の約束はせず、また望む夜に会いたいです」と答える",
+          "next": "next",
+          "effect": "messageBoundaries",
+          "setFlags": [
+            "ongoing"
+          ]
+        },
+        {
+          "id": "more",
+          "text": "「また夜も会いたいです。あなたをもっと好きになりました」と答える",
+          "next": "next",
+          "effect": "messageAgain",
+          "setFlags": [
+            "ongoing"
+          ]
+        },
+        {
+          "id": "day",
+          "text": "「これからは、昼に会う友人でいたいです」と答える",
+          "next": "next",
+          "effect": "messageDaily",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ],
+      "when": {
+        "flags": [
+          "consented"
+        ]
+      }
+    },
+    {
+      "id": "next",
+      "chapter": 4,
+      "title": "光をつける前の話",
+      "location": "公園の休憩所",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "mikitaka",
+      "rating": "general",
+      "tags": [
+        "mikitaka"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "六月には公開企画や散歩で会い、互いが望んだ夜には私の家でも過ごした。朝はそれぞれの予定へ戻り、紙を持ってこない日も増える。新しい影を見つけなくても、声を聞きたいと自分から連絡するようになっていた。",
+          "when": {
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "昼に会う友人でいたいと答えてから、ミキタカさんとは企画室や公園で会った。夜の返事を変えさせるような話はなかった。少しぎこちなかった私も、彼が見つけた木漏れ日を指すうち、いつもの声で自分の見え方を話せた。",
+          "when": {
+            "flags": [
+              "hadNight",
+              "endedNight"
+            ],
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "六月には公開企画や散歩で会った。彼が作った紙を見せてもらう日も、何も持たずに食事をする日もある。二人で同じものを作らなくても、会えば話したいことが残るようになっていた。",
+          "when": {
+            "notFlags": [
+              "hadNight"
+            ]
+          }
+        },
+        {
+          "speaker": "mikitaka",
+          "text": "今日は、先にお話を聞きたいです。箱は、そのあとに開けてもかまいませんか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼が持ってきた箱を隣へ置いた。私も自分の葉を入れた封筒を鞄へ戻す。形を借りて話すのではなく、まだ映っていない自分の気持ちを伝えるために、顔を上げた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "tell",
+          "text": "自分から、ミキタカさんが好きだと伝える",
+          "next": "confess_player",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 35,
+              "romanceChar": 25
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "listen",
+          "text": "彼が自分から言おうとしている言葉を聞く",
+          "next": "confess_mikitaka",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 20,
+              "romanceChar": 35
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "our_work",
+          "text": "二人の名前で、まだない形を作り続けたいと話す",
+          "next": "own_work",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 35,
+              "romanceChar": 30,
+              "comfort": 20
+            },
+            "flags": [
+              "twoViews",
+              "bothNames",
+              "unmadeView"
+            ],
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "nights",
+          "text": "望む夜にも会う、親密な友人でいたいと話す",
+          "next": "fwb_choice",
+          "when": {
+            "min": {
+              "trust": 50,
+              "desire": 25,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "love",
+          "text": "「今は、あなたの恋人になりたいです」と伝える",
+          "next": "end_fwb_love",
+          "when": {
+            "min": {
+              "trust": 60,
+              "romancePlayer": 50,
+              "romanceChar": 40,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          },
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "friends",
+          "text": "互いに見つけたものを話す友人でいたいと伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_player",
+      "chapter": 4,
+      "title": "名前を呼んでから",
+      "location": "公園の休憩所",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "mikitaka",
+      "rating": "general",
+      "tags": [
+        "mikitaka"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "ミキタカさん、と呼ぶと、彼が私を見る。何かを見つけた時の呼び方とは違って聞こえただろうか。私は封筒を鞄から出そうとする癖を止め、自分の手を膝へ置いた。"
+        },
+        {
+          "speaker": "player",
+          "text": "あなたが何を見たか聞くのが好きです。でも、最近は、見るものがなくても会いたくなりました。隣にいてほしいと思うんです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼は頷いていたが、私がまだ言葉を探していると分かると待ってくれた。その目を見て、自分がどんな答えを望んでいるかはっきりする。知らない形を一緒に試す時よりも、続きを口にするのが怖かった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "like",
+          "text": "「好きです。私と付き合ってください」と伝える",
+          "next": "end_love_a",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "choose",
+          "text": "「あなたの恋人になりたいです。どう思いますか」と尋ねる",
+          "next": "end_love_a",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "wait",
+          "text": "「友人として、これからも会いたいです」と伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_mikitaka",
+      "chapter": 4,
+      "title": "望んでいる形",
+      "location": "公園の休憩所",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "mikitaka",
+      "rating": "general",
+      "tags": [
+        "mikitaka"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "ミキタカさんは私の話を聞く前に、自分も伝えたいことがあると言った。隣の箱から手を離し、体ごとこちらを向く。何を言うか考える間、私も箱の蓋を見ずにその顔を待った。"
+        },
+        {
+          "speaker": "mikitaka",
+          "text": "わたしは、あなたが好きです。友人として会うだけでなく、恋人になりたい。これは、あなたによくしていただいたお返しではありません。わたしの望みです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "最後の言葉は、少し強く聞こえた。受け取った親切と同じだけ返すためではないと、彼は自分で言ったのだ。私も自分の望みだけで答えてよいと思うと、膝に置いた指がわずかにほどけた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「私も好きです。あなたと付き合いたいです」と答える",
+          "next": "end_love_b",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「恋人にはなれません。友人でいたいです」と答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "refusedConfession",
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "own_work",
+      "chapter": 4,
+      "title": "どちらの名前も",
+      "location": "公園の休憩所",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "mikitaka",
+      "rating": "general",
+      "tags": [
+        "mikitaka"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人とは別に、二人で作る相手でいたいと話した。自分だけでは選ばなかった形を、どちらか一人の手柄にせず残したい。ミキタカさんは箱の中を見てから、私の方へ顔を上げた。"
+        },
+        {
+          "speaker": "mikitaka",
+          "text": "わたしも、そうしたいです。あなたの考えを手伝うだけではなく、わたしの見たい形も、一緒に作ってほしい。"
+        },
+        {
+          "speaker": "player",
+          "text": "はい。うまく重ならなかったら、どちらかを消す前に、置く場所から考えたいです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼が頷き、窓の紙を箱から出した。私は葉を並べて、次はこの二枚を支える枠を作ろうと提案する。どちらも自分で動かせるようにと話すうち、枠の形は最初の四角から少し変わった。"
+        },
+        {
+          "speaker": "mikitaka",
+          "text": "できたら、二人の名前で置きましょう。どちらが先でも、両方が読める場所に。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私は同じ大きさで書きたいと答えた。彼が嬉しそうに笑う。まだ何も切っていないのに、机を挟んで向かいに座る次の時間が見えるようだった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "partners",
+          "text": "「二人で決めましょう」と、共同で作る相棒になる",
+          "next": "end_special",
+          "effect": "homeTogether",
+          "setFlags": [
+            "ourWork"
+          ]
+        },
+        {
+          "id": "friend",
+          "text": "今はそれぞれの見つけたものを話す友人でいたいと答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fwb_choice",
+      "chapter": 4,
+      "title": "二人の言葉を聞く",
+      "location": "公園の休憩所",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "mikitaka",
+      "rating": "general",
+      "tags": [
+        "mikitaka"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人の約束はせず、望む夜にも会いたいと話した。ミキタカさんはその言葉を聞いてから、自分も同じ形を望むと答える。合わせてくれるのではないかと心配しかけたが、彼の方から次に聞きたいことが続いた。"
+        },
+        {
+          "speaker": "mikitaka",
+          "text": "会う時にも、泊まりたいかはお互いに聞きたいです。途中でやめたい時も、言いましょう。前の答えを、今の答えの代わりにはしたくありません。"
+        },
+        {
+          "speaker": "player",
+          "text": "私もそうしたいです。昼に会う時も、夜に誘う時も、自分から言います。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼は次の空いている日を話し、私も自分の予定を出した。どちらも無理をしない日が、一つ見つかる。今日はまず散歩をして帰ろうと立ち上がり、私は封筒の入った鞄を手に取った。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "continue",
+          "text": "親密な友人として、次の夜を二人で選ぶ",
+          "next": "end_fwb",
+          "effect": "messageBoundaries"
+        },
+        {
+          "id": "daytime",
+          "text": "考え直し、昼に会う友人でいたいと答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "end_friend",
+      "chapter": 5,
+      "title": "見つけたら、呼ぶ",
+      "location": "大学の公開企画室",
+      "storyTime": {
+        "date": "7月13日",
+        "period": "昼"
+      },
+      "characterId": "mikitaka",
+      "rating": "general",
+      "tags": [
+        "mikitaka"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人にはなれないと答えた時、ミキタカさんは少し目を伏せた。分かりましたという返事のあと、すぐに別の話を重ねずに別れた。次の公開企画へ行きたいと私から知らせると、自分も行くつもりですと返ってきた。",
+          "when": {
+            "flags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "昼に会う友人でいたいと答えてから、次の約束は企画室になった。夜の気持ちを変えさせようとはされなかった。少しぎこちないままでも、新しい材料を見つけると私は自然に彼を呼べた。",
+          "when": {
+            "flags": [
+              "hadNight",
+              "endedNight"
+            ],
+            "notFlags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "友人としてまた企画へ来ようと約束し、今日はそれぞれ別の机へ座った。ミキタカさんは違う材料を選び、私は前より細い形を切っている。知らない参加者と話したあと、彼がこちらへ手を振った。",
+          "when": {
+            "notFlags": [
+              "hadNight",
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "mikitaka",
+          "text": "こちら、見ていただけますか。わたしには鳥に見えたのですが、隣の方は船だとおっしゃいました。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私は近くへ行き、両方に見えますねと笑った。自分の紙も見せると、彼はまだ分からないと首を傾げる。分からないまま一緒に覗く時間が好きだった。帰りには別の友人の予定も話し、次に会った時へまた小さな見つけ物を残した。"
+        }
+      ],
+      "choices": [],
+      "ending": "FRIEND"
+    },
+    {
+      "id": "end_love_a",
+      "chapter": 5,
+      "title": "返事も、自分のもの",
+      "location": "公園の休憩所",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "mikitaka",
+      "rating": "general",
+      "tags": [
+        "mikitaka"
+      ],
+      "body": [
+        {
+          "speaker": "mikitaka",
+          "text": "わたしも、あなたが好きです。恋人として、会いたいです。伝えてくださって、嬉しい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "返ってきた声を聞くと、自分の口元が緩んだ。彼の顔にも同じような笑みが見えて、私は手をつなぎたいと頼む。頷いて出された手を取り、言えてよかったですともう一度伝えた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "次の休日、何も作る予定を入れずに出かけた。彼が道の影へ目を留め、私も隣で立ち止まる。今日は紙を持っていませんねと言われ、手は空いてますと答えた。ミキタカさんがこちらを見て、ゆっくりその手を取った。",
+          "storyTime": {
+            "date": "7月6日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_A"
+    },
+    {
+      "id": "end_love_b",
+      "chapter": 5,
+      "title": "隣へ呼ぶ声",
+      "location": "公園の休憩所",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "mikitaka",
+      "rating": "general",
+      "tags": [
+        "mikitaka"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私も好きですと答えると、ミキタカさんは息をつき、それからはっきり笑った。お礼を言いかけるのを見て、私も自分がそうしたいんですと続ける。彼は分かりましたと頷き、今度は嬉しいですと言った。"
+        },
+        {
+          "speaker": "player",
+          "text": "私も嬉しいです。今、隣へ寄ってもいいですか。"
+        },
+        {
+          "speaker": "mikitaka",
+          "text": "はい。わたしも、近くにいたいです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌週、待ち合わせへ来た彼に私から手を振った。近くへ来て姓を呼ばれ、もうここにいますと笑う。分かっていますと返った声まで嬉しそうに聞こえて、私は彼の手を自分から取った。行く場所の相談は、並んでから始めた。",
+          "storyTime": {
+            "date": "7月6日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_B"
+    },
+    {
+      "id": "end_fwb",
+      "chapter": 5,
+      "title": "箱を持たない訪問",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "7月13日",
+        "period": "夜"
+      },
+      "characterId": "mikitaka",
+      "rating": "fade",
+      "tags": [
+        "mikitaka"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "今日は紙の箱を持ってこなかったと、ミキタカさんが玄関で言った。食事を置く机がいつもより広い。私は今夜も一緒にいたいと伝え、彼も泊まりたいと答えた。翌朝の予定を聞いてから、二人で夕食を並べる。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "食後、私は彼の隣へ座った。手に触れてほしいと話すと、自分も触れたいですと返る。指が重なったあと、二人で体を向けて近づいた。唇が離れると少し照れて笑い、もう一度は私から手を引く。部屋の奥へ移り、二人で灯りを消した。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝、彼は自分の鞄を持ち、玄関で帰る支度をした。箱がないので身軽ですと言うから、私も今日は自分の紙を出さないまま見送った。次は昼に散歩をしたいと話すと、行きたい場所を考えておきますと返る。私はその声を聞いてから、自分の用事へ向かった。",
+          "storyTime": {
+            "date": "7月14日",
+            "period": "朝"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB"
+    },
+    {
+      "id": "end_fwb_love",
+      "chapter": 5,
+      "title": "重ね直す名前",
+      "location": "公園の休憩所",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "mikitaka",
+      "rating": "general",
+      "tags": [
+        "mikitaka"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "今は恋人になりたいと伝えた。ミキタカさんは目を伏せて少し考え、それから顔を上げる。私の気持ちが変わったことを、前の言葉と比べて責められることはなかった。"
+        },
+        {
+          "speaker": "mikitaka",
+          "text": "わたしも、あなたの恋人になりたいです。今まで一緒にいた夜も、大切にしたい。そのうえで、今はそう望んでいます。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "はい、と答えてから、私もですと付け足した。手を取ると、何度も触れた指が新しい返事をくれる。知っている温かさを、そのまま隣へ連れていけることが嬉しかった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "次の休日は、互いに別の用事を終えてから会った。短い時間でも顔を見たいと、自分から誘った日だった。彼が見つけた景色を聞く前に、私は会えて嬉しいですと伝える。ミキタカさんも同じ言葉を返し、そこから散歩を始めた。",
+          "storyTime": {
+            "date": "7月6日",
+            "period": "夕方"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB_TO_LOVE"
+    },
+    {
+      "id": "end_special",
+      "chapter": 5,
+      "title": "名札の端まで",
+      "location": "公開企画の作品机",
+      "storyTime": {
+        "date": "7月20日",
+        "period": "昼"
+      },
+      "characterId": "mikitaka",
+      "rating": "general",
+      "tags": [
+        "mikitaka"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "二枚の紙を別々に動かせる枠ができた。私が葉をずらすと、ミキタカさんが窓を少し回す。片方の思う形へ固定せずにいると、初めて見た影が壁へ現れた。企画の係の人に置き場所を確認してから、二人で机の端へ運ぶ。"
+        },
+        {
+          "speaker": "mikitaka",
+          "text": "名前は、ここでよいでしょうか。影には入りませんが、近づくと読めます。"
+        },
+        {
+          "speaker": "player",
+          "text": "はい。両方、同じ大きさですね。私も、自分の名前は自分で書きたいです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "ペンを受け取り、彼の文字の隣へ自分の姓を書いた。恋人になるのとは違う形で、二人が作ったものへ二人の名を残す。ミキタカさんは名札の端を整え、それから作品の方へ戻った。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "見に来た人が何の形か尋ねると、彼は一つに決めていませんと答えた。私は隣で、自分には今こう見えると話す。次は違う形になるかもしれない。その時にも片方だけが決めず、互いの手が動くところを見ていたかった。"
+        }
+      ],
+      "choices": [],
+      "ending": "SPECIAL"
+    }
+  ]
+}

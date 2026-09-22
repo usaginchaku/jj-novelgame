@@ -1,0 +1,1208 @@
+{
+  "id": "giorno",
+  "title": "ジョルノ — 咲く前にも、会いに",
+  "intro": "まだ花のない鉢の前で、後輩が足を止めた。\n先へ進もうとする人へ、今ここで一緒にいたいと伝える。",
+  "startEvent": "pot",
+  "character": {
+    "name": "ジョルノ",
+    "adult": true,
+    "heightCm": 172,
+    "heightBasis": "二次資料JoJo Wikiの身長欄と出典注記を照合。原作592話プロフィール。アニメ175とは分離。書籍・設定表現物は未照合。AUで同値を採用。",
+    "profile": "静かな意志と目的意識。状況への機転。穏やかな外見に反した強硬さ。",
+    "personality": [
+      "静かな意志と目的意識",
+      "状況への機転",
+      "穏やかな外見に反した強硬さ"
+    ],
+    "speech": {
+      "firstPerson": "ぼく",
+      "addressing": "主人公は姓＋先輩。先輩へ丁寧語、親しさが増しても一律に粗野化しない。",
+      "tone": "先輩には丁寧語。語尾は感情と相手に合わせる。",
+      "habits": [
+        "先輩には丁寧語",
+        "順序立てて結論を出す",
+        "断る時は穏やかでも撤回しない"
+      ],
+      "signaturePhrases": [],
+      "signatureNote": "日常の固定口癖は採用しない。象徴的な原作台詞と普段の話し方を混同せず、名台詞を貼り付けない。",
+      "avoid": [
+        "全て計画済みの万能聖人",
+        "原作の未成年年齢",
+        "DIOとの血縁をAUで確定"
+      ]
+    },
+    "referenceSection": "docs/CHARACTER_REFERENCE.md#cast-giorno"
+  },
+  "au": {
+    "role": "学部2年候補・生命科学／生物工学系候補",
+    "routeEnabled": true,
+    "addressing": [
+      {
+        "text": "{player.lastName}先輩"
+      }
+    ]
+  },
+  "endingDescriptions": {
+    "FRIEND": {
+      "title": "見つけたら知らせる",
+      "description": "互いの発見を気軽に持ち寄る友達。自分の見た朝のことを、今度は自分の声で話す。"
+    },
+    "LOVE_A": {
+      "title": "先に、会いたい",
+      "description": "用事を足さず、自分から好きを伝える。手をつないで歩く先は、二人の途中で選んでいく。"
+    },
+    "LOVE_B": {
+      "title": "返事の先にある肩",
+      "description": "先を見ていた人の、今の告白へ答える。返事を待っていた指を、自分の手で迎える。"
+    },
+    "FWB": {
+      "title": "朝の光を分けて",
+      "description": "望む夜に会い、翌朝はそれぞれの予定へ。昼の発見も伝え合う、親密な友人。"
+    },
+    "FWB_TO_LOVE": {
+      "title": "先延ばしにしない今",
+      "description": "過ごした夜の先で、今の望みを恋人の名にする。何も急がない昼にも、また会いたいと伝える。"
+    },
+    "SPECIAL": {
+      "title": "咲いていない鉢を見に",
+      "description": "結果が出る前も、互いの続きを隠さず見せる相棒。花のない日にも、最初に呼びたい人がいる。"
+    }
+  },
+  "events": [
+    {
+      "id": "pot",
+      "chapter": 1,
+      "title": "まだ何もない鉢",
+      "location": "大学の公開温室",
+      "storyTime": {
+        "date": "4月23日",
+        "period": "昼"
+      },
+      "characterId": "giorno",
+      "rating": "general",
+      "tags": [
+        "giorno"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "公開日の手伝いで、花の咲いた鉢を前へ運んでいた。後輩のジョルノくんは、奥の小さな鉢を動かさずにいる。葉しかないから後ろでいいと思った私へ、これはここに置きたいです、と静かな声が来た。"
+        },
+        {
+          "speaker": "giorno",
+          "text": "少し前には、この葉もなかったんです。花がないと何も起きていないように見えるのは、もったいないと思います。"
+        },
+        {
+          "speaker": "player",
+          "text": "でも、この高さだと奥の人から見えないよ。前へ出すなら、置き方も変えた方がよくない？"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼は反論を聞くと、鉢ではなく台の方を見る。持ち上げて見せるのでなく、来た人が近づける場所を作ろうとした。私は空いている端を指した。ジョルノくんが一度頷き、その場所へ自分の手で鉢を移すのを見ていた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "ask",
+          "text": "どの葉が新しいのか、彼の隣で聞く",
+          "next": "sign",
+          "effect": "ask"
+        },
+        {
+          "id": "place",
+          "text": "人の通り道を空け、台の配置を一緒に変える",
+          "next": "sign",
+          "effect": "workTogether"
+        }
+      ]
+    },
+    {
+      "id": "sign",
+      "chapter": 1,
+      "title": "下を向くための札",
+      "location": "公開温室の作業台",
+      "storyTime": {
+        "date": "4月30日",
+        "period": "昼"
+      },
+      "characterId": "giorno",
+      "rating": "general",
+      "tags": [
+        "giorno"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "前へ出した鉢には、まだ足を止める人が少なかった。私が説明を長く書こうとすると、ジョルノくんは紙を受け取る前に首を振った。読んで終わりにしたくありません、と言われ、私は書きかけた文を見直す。"
+        },
+        {
+          "speaker": "giorno",
+          "text": "ここを見て、と一つだけ書きませんか。葉の縁の色なら、近づけば分かります。答えは全部書かない方がいい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私は初めて来た時、どこへ目を向ければよいか分からなかった。だから名前だけでは足りないと思うと話す。彼は少し考え、私の文を一つ残した。二人で短くした札を置くと、葉へ顔を寄せるための空白ができた。"
+        },
+        {
+          "speaker": "player",
+          "text": "これなら私も見つけられる。説明するより、見てもらいたかったんだね。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "look_first",
+          "text": "答えを書き尽くさず、見る手掛かりを二人で残す",
+          "next": "failure",
+          "effect": "honest",
+          "setFlags": [
+            "letItShow"
+          ]
+        },
+        {
+          "id": "clear",
+          "text": "読みやすさを確かめ、札を作り直す",
+          "next": "failure",
+          "effect": "compareNotes"
+        }
+      ]
+    },
+    {
+      "id": "failure",
+      "chapter": 1,
+      "title": "見せる方にも残す",
+      "location": "温室横の休憩所",
+      "storyTime": {
+        "date": "5月7日",
+        "period": "昼"
+      },
+      "characterId": "giorno",
+      "rating": "general",
+      "tags": [
+        "giorno"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "ジョルノくんが持ってきた記録には、うまく伸びた葉の写真と、変化しなかった鉢の写真があった。後の方を別にしようとしたので、今日は見せないのと尋ねる。もう少し確かめてから、と返った声には、いつもの迷いのなさがなかった。"
+        },
+        {
+          "speaker": "giorno",
+          "text": "同じように世話をしたつもりでした。違いが分からないまま、説明するのは嫌なんです。"
+        },
+        {
+          "speaker": "player",
+          "text": "分からないって書くのも、記録じゃない？　私は、うまくいった方だけ見て、自分にはできないって思いそう。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼は写真を見たまま黙った。やがて、ではこのまま残します、と答える。ただし原因を調べるのはやめませんと言い添えた顔が少し頑固で、私はつい笑った。やめてほしいわけじゃないよ、と自分の方から言うと、彼の指が紙を押さえる力を緩めた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "unanswered",
+          "text": "分からない部分も隠さず、一緒に続きを見たいと話す",
+          "next": "message",
+          "effect": "homeTalk",
+          "setFlags": [
+            "keptFailure"
+          ]
+        },
+        {
+          "id": "invite",
+          "text": "「作業が終わっても、ジョルノくんと話したい」と誘う",
+          "next": "message",
+          "effect": "lunchTwo"
+        },
+        {
+          "id": "notes",
+          "text": "記録を日付順へ並べ、片づけまで手伝う",
+          "next": "message",
+          "effect": "shiftRest"
+        }
+      ]
+    },
+    {
+      "id": "message",
+      "chapter": 2,
+      "title": "昨日からの一枚",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "5月10日",
+        "period": "夜"
+      },
+      "characterId": "giorno",
+      "rating": "general",
+      "tags": [
+        "giorno"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "ジョルノくんから葉の写真が届いた。違いはほんの少しで、前の画像と並べなければ気づけなかったかもしれない。私は二枚を行き来し、新しく開きかけた端へ目を止めた。"
+        },
+        {
+          "speaker": "giorno",
+          "text": "先輩が見ていたところが、少し開きました。写真だと薄く見えますが、実物はもう少し色があります。今度、見てください。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "画面へ顔を近づけてから、彼が温室で同じ姿勢になるのを思い出す。小さな変化を送ってもらうと、次に会うまでの時間にも続きがあるようだった。私は画像を閉じずに返事を考えた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "glad",
+          "text": "ジョルノくんと一緒に見たい。次に会うの、楽しみ",
+          "next": "quiet",
+          "effect": "messageHeart",
+          "replyVariants": [
+            {
+              "text": "ぼくも楽しみです。変わらなかった方も、先輩に見てもらいたい。",
+              "when": {
+                "flags": [
+                  "keptFailure"
+                ]
+              }
+            },
+            {
+              "text": "ぼくもです。先輩が見つけたところから、また見てみましょう。"
+            }
+          ],
+          "lockRoute": "giorno"
+        },
+        {
+          "id": "notice",
+          "text": "端が少し違うね。実物で確かめたいな",
+          "next": "quiet",
+          "effect": "messageListen",
+          "replyVariants": [
+            {
+              "text": "そこです。気づいてもらえると、送った甲斐があります。"
+            }
+          ],
+          "lockRoute": "giorno"
+        },
+        {
+          "id": "thanks",
+          "text": "写真ありがとう。次の作業の時に見せてね",
+          "next": "quiet",
+          "effect": "messageDaily",
+          "replyVariants": [
+            {
+              "text": "はい。前の写真も残しておきます。比べると分かりやすいので。"
+            }
+          ],
+          "lockRoute": "giorno"
+        }
+      ],
+      "message": true
+    },
+    {
+      "id": "quiet",
+      "chapter": 2,
+      "title": "作業のない椅子",
+      "location": "温室前のベンチ",
+      "storyTime": {
+        "date": "5月18日",
+        "period": "夕方"
+      },
+      "characterId": "giorno",
+      "rating": "general",
+      "tags": [
+        "giorno"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "手伝いを終えても、ジョルノくんは次に直す札のことを話していた。熱心に聞いていたはずなのに、私は途中で、少し座りたいなと言った。疲れましたか、とすぐ問われて首を振る。疲れたからだけではなかった。"
+        },
+        {
+          "speaker": "player",
+          "text": "何も決めない時間も、ジョルノくんと過ごしたい。次の用事を考える前に。"
+        },
+        {
+          "speaker": "giorno",
+          "text": "……分かりました。では、今日はこれ以上、札の話はしません。先輩は、何を話したいですか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "話題まで一つ決める必要があるように聞こえて、私は笑った。今は風が気持ちいいね、と答える。ジョルノくんはベンチへ座り、しばらく本当に黙っていた。こちらが何も出さなくても、彼の肩は隣から動かなかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "stay_here",
+          "text": "次の成果を決めず、隣で過ごす時間を選ぶ",
+          "next": "home",
+          "effect": "conferencePractical",
+          "setFlags": [
+            "presentTime"
+          ]
+        },
+        {
+          "id": "closer",
+          "text": "「今みたいに、二人でいるのが好き」と伝える",
+          "next": "home",
+          "effect": "walkClose"
+        },
+        {
+          "id": "walk",
+          "text": "夕方の風を感じながら、駅まで一緒に歩く",
+          "next": "home",
+          "effect": "walkHome"
+        }
+      ]
+    },
+    {
+      "id": "home",
+      "chapter": 3,
+      "title": "窓辺を空けて",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "6月1日",
+        "period": "夕方"
+      },
+      "characterId": "giorno",
+      "rating": "general",
+      "tags": [
+        "giorno"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "公開企画のあと、希望者へ分けてもらえる小さな鉢を一つ持ち帰った。置く場所を一緒に考えてほしくて、ジョルノくんを家へ誘う。彼は鉢そのものより先に、窓から差す光と棚の高さを見た。私は自分が毎朝目にできる場所がいいと話した。"
+        },
+        {
+          "speaker": "giorno",
+          "text": "ここなら、無理に奥へ置かなくて済みますね。先輩が世話を続けられる場所を、先に決めた方がいいと思います。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼に全部決めてもらうのではなく、二人で一つずつ候補を外した。棚の上へ置くと、窓辺が少し狭くなる。その分だけ机を動かしてから、買ってきた夕食を広げた。食後、ジョルノくんは洗った皿を拭き、私は元の場所へ戻す。"
+        },
+        {
+          "speaker": "player",
+          "text": "ありがとう。次に来た時、ちゃんと育ってるところを見せられるといいな。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "talk",
+          "text": "「育ってなくても、また会いに来て」と笑って誘う",
+          "next": "evening",
+          "effect": "hotelTalk"
+        },
+        {
+          "id": "rest",
+          "text": "鉢の置き方を最後に確かめ、食後も少し休む",
+          "next": "evening",
+          "effect": "homeRest"
+        }
+      ]
+    },
+    {
+      "id": "evening",
+      "chapter": 3,
+      "title": "誘い直す言葉",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "6月1日",
+        "period": "夜"
+      },
+      "characterId": "giorno",
+      "rating": "general",
+      "tags": [
+        "giorno"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "窓辺を見る用事が終わると、部屋には二人の話だけが残った。ジョルノくんが帰る時刻を確かめ、私は頷く。頼みたいことをもう一つ作れば引き止められるかもしれないが、そうしたかったわけではない。"
+        },
+        {
+          "speaker": "giorno",
+          "text": "先輩、何かまだ気になることがありますか。鉢のことなら、また連絡してくれて構いません。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私は鉢ではなく彼の顔を見た。丁寧に答えてくれる後輩へ、用事のある先輩としてしか声を掛けられないまま終わりたくない。膝に置いた手をほどき、自分が今ここで望むことを選んだ。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "stay",
+          "text": "「今夜は、ジョルノくんの近くにいたい」と伝える",
+          "next": "consent",
+          "effect": "hotelInvite",
+          "when": {
+            "min": {
+              "trust": 45,
+              "desire": 8
+            }
+          }
+        },
+        {
+          "id": "next_time",
+          "text": "「また会いたい」と伝え、今日は見送る",
+          "next": "next",
+          "effect": "walkHome"
+        }
+      ]
+    },
+    {
+      "id": "consent",
+      "chapter": 3,
+      "title": "先輩への返事だけでなく",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "6月1日",
+        "period": "夜"
+      },
+      "characterId": "giorno",
+      "rating": "general",
+      "tags": [
+        "giorno"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "ジョルノくんは立ちかけた椅子へ座り直した。驚いたかどうか、すぐには分からなかった。ただ、丁寧に整えた返事を探す前に、一度こちらの目を見た。"
+        },
+        {
+          "speaker": "giorno",
+          "text": "ぼくも、先輩に触れたいです。今夜、一緒にいたい。頼まれたからではなく、ぼくがそうしたいと思っています。"
+        },
+        {
+          "speaker": "player",
+          "text": "私もそうしたい。でも今夜のことと、恋人になる約束は別にして話したい。途中でやめたくなったら、私も言うね。"
+        },
+        {
+          "speaker": "giorno",
+          "text": "はい。ぼくも言います。どちらかが止めたいなら、そこでやめましょう。今から帰ってほしいなら、そう言ってください。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼の返事を聞いてから頷いた。何をしてもらえるかではなく、この人と何をしたいかを、今日は自分で答える。机の向こうにいた手へ近づく前に、私はもう一度口を開いた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「今夜は一緒にいてほしい」と答える",
+          "next": "night",
+          "effect": "consent",
+          "setFlags": [
+            "consented",
+            "hadNight"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「今日はここまでにしたい」と伝える",
+          "next": "next",
+          "effect": "walkHome",
+          "setFlags": [
+            "declinedTouch"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "night",
+      "chapter": 3,
+      "title": "窓を見ない夜",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "6月1日",
+        "period": "夜"
+      },
+      "characterId": "giorno",
+      "rating": "fade",
+      "tags": [
+        "giorno"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私が椅子を隣へ寄せると、ジョルノくんが手を差し出した。重ねた指が握り返され、近づいてもいいですかと聞かれる。うん、と答えて体を向けた。彼が少し顔を下げ、私は自分から距離を縮める。唇が触れたあと、いつもの落ち着いた目を近くで見た。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "もう一度、と言う声が少し揺れた。彼は頷き、私が近づくのを待つ。やがて二人で椅子を離れ、つないだ手をそのまま部屋の奥へ持っていった。窓辺の鉢を見直すことなく、灯りを消した。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝、窓の光で目が覚めた。ジョルノくんも起きていて、おはようございますと近くで言う。朝食を一緒に食べたいと話してから、私は彼の顔をもう一度見た。帰る時刻を決める前に、続けたい話があった。",
+          "storyTime": {
+            "date": "6月2日",
+            "period": "朝"
+          }
+        },
+        {
+          "speaker": "giorno",
+          "text": "ぼくは、また先輩とこうして会いたいです。先輩は、今どうしたいですか。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "again",
+          "text": "「恋人の約束はせず、また望む夜に会いたい」と答える",
+          "next": "next",
+          "effect": "messageBoundaries",
+          "setFlags": [
+            "ongoing"
+          ]
+        },
+        {
+          "id": "more",
+          "text": "「また夜も会いたい。ジョルノくんをもっと好きになった」と答える",
+          "next": "next",
+          "effect": "messageAgain",
+          "setFlags": [
+            "ongoing"
+          ]
+        },
+        {
+          "id": "day",
+          "text": "「これからは昼に会う友達でいたい」と答える",
+          "next": "next",
+          "effect": "messageDaily",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ],
+      "when": {
+        "flags": [
+          "consented"
+        ]
+      }
+    },
+    {
+      "id": "next",
+      "chapter": 4,
+      "title": "花より先に話すこと",
+      "location": "温室前のベンチ",
+      "storyTime": {
+        "date": "6月22日",
+        "period": "夕方"
+      },
+      "characterId": "giorno",
+      "rating": "general",
+      "tags": [
+        "giorno"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "六月は作業や食事で会い、二人が望んだ夜には私の家でも過ごした。朝にはそれぞれの用事へ戻り、鉢を見に来ただけで帰る日もある。小さな変化の写真が届かない日にも、私は自分から会いたいと連絡した。",
+          "when": {
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "昼に会う友達でいたいと答えてから、ジョルノくんは温室や食事へ誘ってくれた。夜の返事を変えさせる話はなかった。最初に少し照れた私も、鉢の写真を見せるうち、自分の失敗を笑って話せるようになった。",
+          "when": {
+            "flags": [
+              "hadNight",
+              "endedNight"
+            ],
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "六月にも温室や食事で会った。持ち帰った鉢は、花が咲くより先に葉を一枚増やした。うまくいかない日も写真を見せると、ジョルノくんは分かることとまだ分からないことを分けて返した。私は用事がなくても、会いたい日を知らせるようになった。",
+          "when": {
+            "notFlags": [
+              "hadNight"
+            ]
+          }
+        },
+        {
+          "speaker": "giorno",
+          "text": "先輩、今日は鉢の話ではないんですよね。連絡に書いてあったこと、聞いてもいいですか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼が手元の資料を鞄へしまった。先の予定を立てる人の隣で、私は今日の自分の気持ちを置きたかった。風に動く葉を見ず、こちらを待っている顔へ向き直った。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "tell",
+          "text": "自分から、好きだと伝えたいと言う",
+          "next": "confess_player",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 35,
+              "romanceChar": 25
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "listen",
+          "text": "ジョルノくんが言おうとしていることを聞く",
+          "next": "confess_giorno",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 20,
+              "romanceChar": 35
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "our_growth",
+          "text": "結果が出る前も、互いの続きを見せ合う相手でいたいと話す",
+          "next": "own_growth",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 35,
+              "romanceChar": 30,
+              "comfort": 20
+            },
+            "flags": [
+              "letItShow",
+              "keptFailure",
+              "presentTime"
+            ],
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "nights",
+          "text": "これからも、望む夜に会う友人でいたいと話す",
+          "next": "fwb_choice",
+          "when": {
+            "min": {
+              "trust": 50,
+              "desire": 25,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "love",
+          "text": "「今は、ジョルノくんの恋人になりたい」と伝える",
+          "next": "end_fwb_love",
+          "when": {
+            "min": {
+              "trust": 60,
+              "romancePlayer": 50,
+              "romanceChar": 40,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          },
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "friends",
+          "text": "気軽に頼り、昼にも誘い合う友達でいたいと話す",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_player",
+      "chapter": 4,
+      "title": "咲いたら、ではなく",
+      "location": "温室前のベンチ",
+      "storyTime": {
+        "date": "6月22日",
+        "period": "夕方"
+      },
+      "characterId": "giorno",
+      "rating": "general",
+      "tags": [
+        "giorno"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "ジョルノくんの名を呼ぶと、彼は一度頷いた。次の言葉を急かさないので、私も何かを説明する先輩の声へ逃げずに済んだ。うまくまとまってから渡そうとすると、いつまでも言えない気がした。"
+        },
+        {
+          "speaker": "player",
+          "text": "ジョルノくんが好き。鉢のことが分からない時だけじゃなくて、何も変わらない日にも会いたい。今の私が、そう思ってる。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "言った途端、彼の目を見るのが恥ずかしくなった。けれど、ぼくも、と小さく返った声を聞いて顔を上げる。どんな返事なのかを先回りして決めず、自分の望みの続きを口にしたかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "like",
+          "text": "「私と付き合ってほしい」と伝える",
+          "next": "end_love_a",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "choose",
+          "text": "「ジョルノくんの恋人になりたい。どうかな」と尋ねる",
+          "next": "end_love_a",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "wait",
+          "text": "「今日は、友達としてまた誘いたい」と伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_giorno",
+      "chapter": 4,
+      "title": "待つ方の人",
+      "location": "温室前のベンチ",
+      "storyTime": {
+        "date": "6月22日",
+        "period": "夕方"
+      },
+      "characterId": "giorno",
+      "rating": "general",
+      "tags": [
+        "giorno"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "ジョルノくんは資料をしまった鞄へ手を置き、それから私へ向き直った。何を言うかは決めているらしい。けれど、いつものように次の手順まで並べる声ではなかった。最初に私の姓を呼んだ。"
+        },
+        {
+          "speaker": "giorno",
+          "text": "{player.lastName}先輩、ぼくは先輩が好きです。恋人になりたい。先のことを考える時、今一緒にいたい気持ちまで後回しにしたくありません。ぼくと、付き合ってください。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "言い切ったあと、彼は黙った。次の返事を自分で決められない場所に座る人を、私はまっすぐ見た。いつも落ち着いている手の指が、鞄の縁へ少しだけ沈んでいた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「私も好き。ジョルノくんと付き合いたい」と答える",
+          "next": "end_love_b",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「恋人にはなれない。友達でいたい」と答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "refusedConfession",
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "own_growth",
+      "chapter": 4,
+      "title": "まだ見えない続きも",
+      "location": "温室前のベンチ",
+      "storyTime": {
+        "date": "6月22日",
+        "period": "夕方"
+      },
+      "characterId": "giorno",
+      "rating": "general",
+      "tags": [
+        "giorno"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人になるのとは違うけれど、結果が出る前から見せ合う相手でいたいと話した。成功した写真だけでなく、何も変わらない鉢を、最初に見せてもらえる人になりたい。ジョルノくんは少し黙り、あの時の記録を思い出しました、と答えた。"
+        },
+        {
+          "speaker": "giorno",
+          "text": "ぼくは、ちゃんと分かってから伝えたくなります。でも先輩には、分からないままでも見ていてほしい。先輩の方も、途中から見せてください。"
+        },
+        {
+          "speaker": "player",
+          "text": "うん。できたら褒めてもらうだけじゃなくて、まだどうなるか分からないところから、一緒に考えたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼が自分も別の小さな鉢を持ち帰ったと話した。種類も置き場所も違うから、同じ育ち方にはならない。それなら並べて比べるのでなく、それぞれの続きを見せようと私から提案した。"
+        },
+        {
+          "speaker": "giorno",
+          "text": "それなら、次はぼくの方から見せます。まだ、花はありませんけど。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "知ってる、と笑うと、彼も少し笑った。見せる理由を花が咲く日まで取っておかなくていい。そのことを、次の約束へ書き込む代わりに、私は彼の目を見て頷いた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "partners",
+          "text": "「咲く前から、見に行きたい」と、途中を分け合う相棒になる",
+          "next": "end_special",
+          "effect": "homeTogether",
+          "setFlags": [
+            "ourGrowth"
+          ]
+        },
+        {
+          "id": "friend",
+          "text": "今は気になった時に相談する友達でいたいと答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fwb_choice",
+      "chapter": 4,
+      "title": "明日の予定を消さずに",
+      "location": "温室前のベンチ",
+      "storyTime": {
+        "date": "6月22日",
+        "period": "夕方"
+      },
+      "characterId": "giorno",
+      "rating": "general",
+      "tags": [
+        "giorno"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人と決めず、望む夜にも会う友人でいたいと話すと、ジョルノくんは頷いた。ぼくもそうしたいです、と返った声を聞いて、私も肩の力を抜く。前に過ごした夜ではなく、今日の言葉へ答えてくれたのが嬉しかった。"
+        },
+        {
+          "speaker": "giorno",
+          "text": "会ったから必ず泊まる、とは決めないようにしましょう。途中でやめたい時も言ってください。ぼくも、自分の気持ちを話します。"
+        },
+        {
+          "speaker": "player",
+          "text": "うん。次の日に予定がある時も、ちゃんと言うね。昼に遊ぶ日も残したい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼が次に空いている日を尋ね、私も自分の用事を確かめた。その日は翌朝に別れると決めてから、今日は一緒に夕食を取ることにする。隣で立ち上がった人の鞄には、まだ温室の資料が入っていた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "continue",
+          "text": "親密な友人として、次の夜を二人で選ぶ",
+          "next": "end_fwb",
+          "effect": "messageBoundaries"
+        },
+        {
+          "id": "daytime",
+          "text": "考え直し、昼に会う友達でいたいと答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "end_friend",
+      "chapter": 5,
+      "title": "見つけたら知らせる",
+      "location": "公開温室",
+      "storyTime": {
+        "date": "7月6日",
+        "period": "昼"
+      },
+      "characterId": "giorno",
+      "rating": "general",
+      "tags": [
+        "giorno"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人にはなれないと答えた時、ジョルノくんは少し目を伏せ、分かりましたと言った。その日は次の約束を急がず別れた。数日後、鉢に新しい葉が出たと私から送ると、今度見せてくださいと返事が来た。",
+          "when": {
+            "flags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "昼に会う友達でいたいと答えてから、次は温室で会った。夜の返事を蒸し返されることはなかった。私も少し照れくさいまま、持ち帰った鉢の写真を見せることから話し始めた。",
+          "when": {
+            "flags": [
+              "hadNight",
+              "endedNight"
+            ],
+            "notFlags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "友達としてまた一緒に手伝おうと約束し、今日は温室へ来た。私が持ってきた写真を見て、ジョルノくんは新しい葉の位置をすぐ指した。自分が毎朝見ていたものを、誰かにも見つけてもらえると嬉しかった。",
+          "when": {
+            "notFlags": [
+              "hadNight",
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "giorno",
+          "text": "ここですね。次は、先輩の方から来た人へ説明してみませんか。ぼくが知らない朝の様子も。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "やってみる、と答えた。隣の台には別の学生も来て、それぞれの見つけたことを話している。ジョルノくんへ任せきりにせず、自分の声で一つ説明したあと、私は彼の方へ小さく手を振った。帰りに食べたいものも、あとで自分から誘おうと思った。"
+        }
+      ],
+      "choices": [],
+      "ending": "FRIEND"
+    },
+    {
+      "id": "end_love_a",
+      "chapter": 5,
+      "title": "先に、会いたい",
+      "location": "温室前のベンチ",
+      "storyTime": {
+        "date": "6月22日",
+        "period": "夕方"
+      },
+      "characterId": "giorno",
+      "rating": "general",
+      "tags": [
+        "giorno"
+      ],
+      "body": [
+        {
+          "speaker": "giorno",
+          "text": "ぼくも好きです。先輩と付き合いたい。……先に言われるとは、思っていませんでした。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "少しだけ困ったような顔に笑い、私も言えてよかったと答えた。手を出すと、彼は自分の鞄を横へ置いて取ってくれる。資料より先に自分へ向いた指を、私はゆっくり握り返した。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "次の休日、何の用事もなく街で待ち合わせた。先輩が見たいところから行きましょうと言われ、私は彼の隣へ並ぶ。じゃあ少し歩こうと手を取り、行く先はその途中で決めた。いつもより遅く曲がった角の先に、まだ知らない店があった。",
+          "storyTime": {
+            "date": "6月29日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_A"
+    },
+    {
+      "id": "end_love_b",
+      "chapter": 5,
+      "title": "返事の先にある肩",
+      "location": "温室前のベンチ",
+      "storyTime": {
+        "date": "6月22日",
+        "period": "夕方"
+      },
+      "characterId": "giorno",
+      "rating": "general",
+      "tags": [
+        "giorno"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私も好き、と答えると、ジョルノくんの指が鞄の縁から離れた。落ち着いて見えた声にも、待っている時間があったのだと思う。私は自分から手を伸ばし、今度はここに置いてと掌を向けた。"
+        },
+        {
+          "speaker": "player",
+          "text": "嬉しい。言ってくれて、ありがとう。"
+        },
+        {
+          "speaker": "giorno",
+          "text": "ぼくも、聞いてもらえて嬉しいです。いい返事だったから、というだけじゃなくて。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌週、手をつないで歩きながら、私は彼の横顔を見た。気づかれても目を逸らさずにいると、どうしましたかと聞かれる。好きだなと思って、と答えたら、彼も前を向くまで少し間があった。その間だけ、私は握った指へ力を足した。",
+          "storyTime": {
+            "date": "6月29日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_B"
+    },
+    {
+      "id": "end_fwb",
+      "chapter": 5,
+      "title": "朝の光を分けて",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "7月6日",
+        "period": "夜"
+      },
+      "characterId": "giorno",
+      "rating": "fade",
+      "tags": [
+        "giorno"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "今夜は会いたいと互いに連絡し、ジョルノくんが夕食を持って来た。私は今夜も一緒にいたいと伝え、彼も泊まりたいと答える。翌朝にはそれぞれの用事へ出ると確かめてから、二人で皿を並べた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "食後に隣へ座ると、彼がこちらを見た。手に触れたいと自分から言い、指を重ねる。近づいてきた顔へ私も向き、彼が少し身を寄せるのを待って唇を重ねた。離れたあとにもう一度笑い、二人で部屋の奥へ移った。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝、私は窓辺の鉢を見てから食事を用意した。ジョルノくんが気づいた新しい葉を、あとで写真に撮ると話す。今は朝食を一緒に食べたかった。玄関で別れ、次の連絡は自分の用事が終わってから送ろうと思った。",
+          "storyTime": {
+            "date": "7月7日",
+            "period": "朝"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB"
+    },
+    {
+      "id": "end_fwb_love",
+      "chapter": 5,
+      "title": "先延ばしにしない今",
+      "location": "温室前のベンチ",
+      "storyTime": {
+        "date": "6月22日",
+        "period": "夕方"
+      },
+      "characterId": "giorno",
+      "rating": "general",
+      "tags": [
+        "giorno"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "今は恋人になりたいと言ったあと、私は彼の顔を見て待った。近くで過ごした夜を、返事の保証にはしたくなかった。ジョルノくんは小さく息を吸い、こちらへ体を向けた。"
+        },
+        {
+          "speaker": "giorno",
+          "text": "ぼくも、先輩の恋人になりたいです。今までが嫌になったわけではありません。でも、次に会う時には、そう呼びたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "頷いて手を出すと、彼の手も同じところへ来た。慣れた指へ新しい返事を重ね、私は少し笑った。まだ咲いていない花を待つように、この言葉まで待たなくてよかったのだと思った。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "次の休日は外で会い、夕方には別々の家へ帰った。その短い別れ際にも、私はまた会いたいと伝える。ジョルノくんが自分もですと答え、次は彼の方から日を挙げた。夜を重ねた続きに、何も急がない昼が一つ加わった。",
+          "storyTime": {
+            "date": "6月29日",
+            "period": "夕方"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB_TO_LOVE"
+    },
+    {
+      "id": "end_special",
+      "chapter": 5,
+      "title": "咲いていない鉢を見に",
+      "location": "公開温室の休憩所",
+      "storyTime": {
+        "date": "7月13日",
+        "period": "昼"
+      },
+      "characterId": "giorno",
+      "rating": "general",
+      "tags": [
+        "giorno"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "互いの鉢の写真を持ち寄ると、ジョルノくんの方は前とあまり変わっていなかった。私の方には葉の傷んだところがある。どちらも隠さず並べ、次にどうするか分かることから話した。彼はまだ分からないところで言葉を止め、私もそれを待てた。"
+        },
+        {
+          "speaker": "giorno",
+          "text": "次に変わるまで見せない、とはしません。先輩の方も、咲いたらではなく、見せたい時に教えてください。"
+        },
+        {
+          "speaker": "player",
+          "text": "うん。何も変わらなかったって話すためにも、会いに来たい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼が少し笑い、写真を横へ置いた。恋人とは別に、途中から見ていてほしい相手ができた。記録を閉じてからも帰り支度には移らず、私は今日の温室で気づいた匂いを話す。ジョルノくんは何の匂いか決める前に、隣で一度深く息をした。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "帰る前に、温室に並ぶ鉢を二人で見て回った。小さく巻いた新しい葉を見つけ、彼を呼ぶ。最初に自分の声が届く相手が、この人であることを嬉しく思いながら。"
+        }
+      ],
+      "choices": [],
+      "ending": "SPECIAL"
+    }
+  ]
+}

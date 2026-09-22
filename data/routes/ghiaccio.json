@@ -1,0 +1,1385 @@
+{
+  "id": "ghiaccio",
+  "title": "ギアッチョ — 同じ答えにはしない",
+  "intro": "曖昧な矢印を、実際に歩いて確かめる。\n違う感想を持つ二人が、次も話したい相手になっていく。",
+  "startEvent": "notice",
+  "character": {
+    "name": "ギアッチョ",
+    "adult": true,
+    "heightCm": 171,
+    "heightBasis": "二次資料JoJo Wikiの身長欄と出典注記を照合。黄金の風アニメ設定表CR200-00。書籍・設定表現物は未照合。AUで同値を採用。",
+    "profile": "言葉や理屈への強いこだわり。短気。状況判断の速さ。",
+    "personality": [
+      "言葉や理屈への強いこだわり",
+      "短気",
+      "状況判断の速さ"
+    ],
+    "speech": {
+      "firstPerson": "オレ",
+      "addressing": "主人公は姓/おまえ。砕けた常体。罵倒を日常の呼び名にしない。",
+      "tone": "引っかかった語を繰り返して論点を詰める。語尾は感情と相手に合わせる。",
+      "habits": [
+        "引っかかった語を繰り返して論点を詰める",
+        "苛立つと口が荒い",
+        "静かな場面も置く"
+      ],
+      "signaturePhrases": [],
+      "signatureNote": "日常の固定口癖は採用しない。象徴的な原作台詞と普段の話し方を混同せず、名台詞を貼り付けない。",
+      "avoid": [
+        "理由なく怒鳴るだけ",
+        "怒鳴り声を親密さにする",
+        "常に根掘り葉掘りを引用"
+      ]
+    },
+    "referenceSection": "docs/CHARACTER_REFERENCE.md#cast-ghiaccio"
+  },
+  "au": {
+    "role": "修士課程候補。研究会の指摘は鋭い",
+    "routeEnabled": true,
+    "addressing": [
+      {
+        "text": "{player.lastName}"
+      }
+    ]
+  },
+  "endingDescriptions": {
+    "FRIEND": {
+      "title": "言い合える席",
+      "description": "言いたいことを言い、相手の話も聞く。違う好みを持ったまま、また同じ席へ。"
+    },
+    "LOVE_A": {
+      "title": "私が先に言った日",
+      "description": "私から渡した好きに、彼の言葉が返る。二人にだけ分かる待ち合わせが増える。"
+    },
+    "LOVE_B": {
+      "title": "返事のあとの遠回り",
+      "description": "先を決められない返事を待った人と、近道を選ばず帰る。"
+    },
+    "FWB": {
+      "title": "違う匙、同じ夜",
+      "description": "好みも帰る家も別々のまま。互いが望む夜を選ぶ、親密な友人として。"
+    },
+    "FWB_TO_LOVE": {
+      "title": "呼び方が一つ増える",
+      "description": "夜を重ねて変わった望みを伝える。知っている相手へ、恋人という約束が加わる。"
+    },
+    "SPECIAL": {
+      "title": "最初の感想を渡す相手",
+      "description": "賛成してくれるからではなく、自分で見て違うことを言うから。互いの最初の聞き手になる。"
+    }
+  },
+  "events": [
+    {
+      "id": "notice",
+      "title": "すぐ、の向こう側",
+      "chapter": 1,
+      "location": "学内の公開展示会場",
+      "storyTime": {
+        "date": "6月2日",
+        "period": "昼"
+      },
+      "characterId": "ghiaccio",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "受付でもらった案内には、駅からすぐ、と書かれていた。私は昼休みに展示を見に来ただけなのに、建物を一つ間違えて汗をかいていた。入口で紙を扇いでいると、研究会で何度か顔を合わせたギアッチョ先輩が、その文字を指した。眼鏡の向こうで眉が寄る。"
+        },
+        {
+          "speaker": "ghiaccio",
+          "text": "すぐってどこまでだよ。改札からか、駅の出口からか。それを書かなきゃ、歩く方には分かんねえだろ。"
+        },
+        {
+          "speaker": "player",
+          "text": "私も、違う建物へ行きました。でも、ここで怒っても案内は変わらないですよ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "言ってから、言いすぎたかと思った。先輩は私ではなく紙を睨み、鞄からペンを出す。じゃあ変える、と返ってきた声の勢いに、私は思わず笑った。会場の人へ空白の紙を一枚もらい、迷った場所を自分で描いてみる。先輩は私の記憶を待ちながら、入口の名前を確かめに外へ出た。"
+        },
+        {
+          "speaker": "ghiaccio",
+          "text": "東側ってだけじゃ足りねえ。入口が二つあった。おまえ、どっちから来た。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "戻ってきた人の手には、見てきたばかりの案内の写真があった。怒るだけで人へ任せるのではない。その小さな事実に少し安心して、私は通ってきた遠回りを、隠さず線にした。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "draw",
+          "text": "迷った道も消さずに、二人で案内を描く",
+          "next": "walk",
+          "effect": "workTogether",
+          "setFlags": [
+            "wrongTurn"
+          ],
+          "lockRoute": "ghiaccio"
+        },
+        {
+          "id": "interest",
+          "text": "「先輩が確かめるところ、私も見たいです」と言う",
+          "next": "walk",
+          "effect": "gameDate",
+          "lockRoute": "ghiaccio"
+        }
+      ]
+    },
+    {
+      "id": "walk",
+      "title": "六分と少し",
+      "chapter": 1,
+      "location": "駅から会場への道",
+      "storyTime": {
+        "date": "6月8日",
+        "period": "昼"
+      },
+      "characterId": "ghiaccio",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "案内を渡したあと、先輩から実際に歩いてみると連絡が来た。私は行くと返した。展示を見るだけならもう済んでいる。それでも、自分の間違えた道を二人で辿るのが楽しみだった。改札で会うと、先輩は端末の時計を開き、私の靴を見た。"
+        },
+        {
+          "speaker": "ghiaccio",
+          "text": "普通に歩けよ。時間に合わせて急いだら、測る意味がねえ。"
+        },
+        {
+          "speaker": "player",
+          "text": "分かってます。先輩も、いつもの速さだと私が追いかけることになります。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩は一度足元を見た。それから私が歩き出すのを待ち、隣へ来る。横断歩道で止まり、途中の曲がり角で立ち止まって看板を探す。六分を少し過ぎて入口へ着くと、先輩は短く息を吐いた。"
+        },
+        {
+          "speaker": "ghiaccio",
+          "text": "信号で変わるな。六分ちょうど、とは書けねえ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私は時間の横へ、信号待ちを含む、と書き足した。先輩が覗き込んだので紙を持つ手を少し下げる。頷く顔が近く、同じ数字を見ているはずなのに、自分の方だけ違うことに気を取られた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "record",
+          "text": "信号と曲がり角を、数字と一緒に記録する",
+          "next": "taste",
+          "effect": "shiftHelp",
+          "setFlags": [
+            "walkedProof"
+          ]
+        },
+        {
+          "id": "pace",
+          "text": "「次も、この速さで一緒に歩きたいです」と言う",
+          "next": "taste",
+          "effect": "walkClose"
+        }
+      ]
+    },
+    {
+      "id": "taste",
+      "title": "同じ味とは限らない",
+      "chapter": 1,
+      "location": "通りの小さな喫茶店",
+      "storyTime": {
+        "date": "6月14日",
+        "period": "昼"
+      },
+      "characterId": "ghiaccio",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "歩いた道の途中にあった喫茶店へ、今度は用事なしで入った。注文を待つ間、先輩はメニューの濃厚という文字を見つけた。何がどのくらい濃いのかと呟く声へ、私は先に口を挟んだ。今日は食べてから考えませんか、と。先輩は少し不満そうに、運ばれてくる皿の方を見た。"
+        },
+        {
+          "speaker": "ghiaccio",
+          "text": "オレは意味が分からねえって言ってるんだ。嫌いとは言ってねえ。"
+        },
+        {
+          "speaker": "player",
+          "text": "じゃあ、私が好きでも、間違いって言わないでくださいね。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "一口食べると、思ったより酸味が強かった。私は好きだと言い、先輩は眉を寄せた。合わない、と短く言われても、今度は困らなかった。同じものを食べたあとで違う答えが出たのだから、それをなかったことにしたくない。"
+        },
+        {
+          "speaker": "ghiaccio",
+          "text": "おまえは、ここがいいのか。"
+        },
+        {
+          "speaker": "player",
+          "text": "はい。甘いだけより、もう一口食べたくなります。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩はもう一度だけ食べた。それからやっぱり合わないと、今度は少し笑って言った。私は残りをゆっくり食べる。向かいの人も、自分の選んだ飲み物を飲んでいた。二人とも同じ顔で終わらなくていい昼休みだった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "different",
+          "text": "違う感想を、そのまま二人のメモに残す",
+          "next": "message",
+          "effect": "homeTogether",
+          "setFlags": [
+            "differentTaste"
+          ]
+        },
+        {
+          "id": "smile",
+          "text": "「今、笑いましたね。もう一回見たかったです」とからかう",
+          "next": "message",
+          "effect": "honest"
+        }
+      ]
+    },
+    {
+      "id": "message",
+      "title": "短くしすぎた文",
+      "chapter": 1,
+      "location": "自分の部屋",
+      "storyTime": {
+        "date": "6月14日",
+        "period": "夜"
+      },
+      "characterId": "ghiaccio",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "あの味を何と書けばよいか考えていたら、先輩から連絡が来た。画面には、今日の店の名前だけが先にあり、少しあとから一文が足された。短すぎて意味が伝わらないのを、自分でも見つけたのかもしれない。"
+        },
+        {
+          "speaker": "ghiaccio",
+          "text": "次は別の店。来週、行けるか。……オレが選ぶ。おまえの感想も聞く。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私は端末を机へ置きかけて、もう一度持ち直した。案内のために始まったやりとりが、店を選ぶ話に変わっている。返事を待つ人の顔が思い浮かぶと、用件だけで閉じたくなくなった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "menu",
+          "text": "行けます。私も、ちゃんと自分の感想を言いますね",
+          "next": "opening",
+          "effect": "messageDaily",
+          "replyVariants": [
+            {
+              "text": "そうしてくれ。合わせられても分からねえからな。"
+            }
+          ]
+        },
+        {
+          "id": "happy",
+          "text": "行きたいです。先輩が次も誘ってくれたの、嬉しいです",
+          "next": "opening",
+          "effect": "messageHeart",
+          "replyVariants": [
+            {
+              "when": {
+                "min": {
+                  "romanceChar": 20
+                }
+              },
+              "text": "オレもまた会いたかったんだよ。……時間、あとで送る。"
+            },
+            {
+              "text": "だったら来いよ。店が決まったら時間も送る。"
+            }
+          ]
+        }
+      ],
+      "message": true
+    },
+    {
+      "id": "opening",
+      "title": "直った矢印",
+      "chapter": 2,
+      "location": "公開展示の入口",
+      "storyTime": {
+        "date": "6月21日",
+        "period": "昼"
+      },
+      "characterId": "ghiaccio",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "食事へ行く前に、二人で展示の入口を覗いた。受付の横には、私たちが直した道順が置かれていた。駅から来た人が紙を見て頷き、迷わず会場へ入っていく。先輩は何も言わずにその背中を見送り、残っていた説明をもう一度読んだ。"
+        },
+        {
+          "speaker": "ghiaccio",
+          "text": "ここ、まだ紛らわしい。次の角じゃなくて、この角だ。矢印の根元がずれてる。"
+        },
+        {
+          "speaker": "player",
+          "text": "本当ですね。でも先輩、さっきの人、ちゃんと着きましたよ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩はペンを持ったまま目を上げた。分かってる、と返る声が少し小さくなる。受付の人へ修正していいか訊き、許可をもらってから細い線を引いた。私は紙を押さえ、書き直した矢印が乾くまで手を離さなかった。"
+        },
+        {
+          "speaker": "ghiaccio",
+          "text": "これでいい。少なくとも、オレたちが見つけた分はな。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "外へ出ると、先輩は入口を振り返らなかった。私は一度だけ見て、それから歩き出した隣の人を追う。正確にしたかったことと、ここへまた来たかったことが、自分の中で別々に残った。どちらも本当なのが、少し嬉しかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "finish",
+          "text": "二人で確かめた案内を写真に残し、食事へ向かう",
+          "next": "kitchen",
+          "effect": "conferencePractical",
+          "setFlags": [
+            "finishedMap"
+          ]
+        },
+        {
+          "id": "look",
+          "text": "「先輩と直せてよかったです」と隣で伝える",
+          "next": "kitchen",
+          "effect": "rehearse"
+        }
+      ]
+    },
+    {
+      "id": "kitchen",
+      "title": "計らないひと匙",
+      "chapter": 2,
+      "location": "ギアッチョの自宅",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "ghiaccio",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先輩が選んだ店で話した料理を、今度は家で作ることになった。買い物を一緒に済ませ、私は小さな台所へ立つ。レシピを開いた先輩が、適量の二文字を見つけて顔をしかめた。笑いそうになるのを見られ、先に何だよと言われる。"
+        },
+        {
+          "speaker": "player",
+          "text": "今日は私が、味見します。先輩も食べて、自分の分を決めてください。"
+        },
+        {
+          "speaker": "ghiaccio",
+          "text": "それなら最初からそう書けよって話だろ。……分かった、少しずつな。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "匙の先だけを入れて混ぜ、皿へ取った分を二人で食べる。私はもう少し塩が欲しく、先輩は今でいいと言った。鍋ごと変えず、それぞれの皿へ少し足す。どちらかが我慢して同じ味にしなくても、食卓は二人分になった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "食べ始めると、先輩はレシピの画面を閉じた。私がどうですかと訊く前に、悪くねえ、と返ってくる。まだ途中なのに採点みたいですねと言うと、そうじゃねえ、うまいって言ってるんだよ、と少し声が上がった。私は頷き、自分の皿へ目を戻した。顔が熱くなった理由は、料理の湯気だけにしておいた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "own",
+          "text": "自分の好みをもう一度確かめ、先輩の分も尋ねる",
+          "next": "late",
+          "effect": "homeTogether",
+          "setFlags": [
+            "ownSpoon"
+          ]
+        },
+        {
+          "id": "again",
+          "text": "「また先輩と作って食べたいです」と言う",
+          "next": "late",
+          "effect": "homeTalk"
+        }
+      ]
+    },
+    {
+      "id": "late",
+      "title": "八時を少し過ぎて",
+      "chapter": 3,
+      "location": "ギアッチョの自宅",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夜"
+      },
+      "characterId": "ghiaccio",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "食器を拭いているうちに八時を過ぎた。私は時計を見て、まだ帰れる電車が何本もあることを確かめた。先輩は椅子へ掛けた上着を取ってくれたけれど、すぐには私へ渡さなかった。袖が裏返っていたのを直し、それからこちらへ向ける。"
+        },
+        {
+          "speaker": "ghiaccio",
+          "text": "駅まで行くなら、もう少し涼しくなってる。"
+        },
+        {
+          "speaker": "player",
+          "text": "はい。……まだ、ここにいてもいいですか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "言った自分の声を聞いて、私は上着を受け取る手を止めた。先輩も動かなくなる。時間が余っているから、という理由を足せば、さっきまでと同じ話へ戻せる。けれど、その言葉で隠したくない気持ちがあった。先輩の指が持つ布の端を見てから、顔を上げた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "home",
+          "text": "「次も、一緒に食べる約束をしたかったんです」と伝えて帰る",
+          "next": "weeks",
+          "effect": "walkTogether"
+        },
+        {
+          "id": "touch",
+          "text": "「先輩と近くにいたいです。触れてもいいですか」と訊く",
+          "next": "consent",
+          "effect": "hotelInvite",
+          "when": {
+            "min": {
+              "trust": 38,
+              "desire": 8
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "consent",
+      "title": "曖昧にしない願い",
+      "chapter": 3,
+      "location": "ギアッチョの自宅",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夜"
+      },
+      "characterId": "ghiaccio",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "上着が椅子へ戻された。先輩は私へ向き直り、眼鏡を一度押し上げた。何かを細かく直す時と違って、指がすぐには離れない。私も黙ったままにはしたくなくて、さっきの問いをもう少し先まで言った。"
+        },
+        {
+          "speaker": "player",
+          "text": "触れたいだけじゃなくて、今夜、一緒にいたいです。でも、途中でやめたくなったら言います。先輩も、言ってください。"
+        },
+        {
+          "speaker": "ghiaccio",
+          "text": "ああ。オレも一緒にいたい。やめるって言われたら止める。オレが嫌ならオレも言う。それは、ごまかす話じゃねえ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "まっすぐな返事を聞いて、胸の奥が熱くなった。恋人になるかどうかまで今決めるのかと訊くと、先輩は首を横に振った。"
+        },
+        {
+          "speaker": "ghiaccio",
+          "text": "それと今夜の返事は別だろ。帰りたくなったっていい。……今、おまえはどうしたいんだ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "訊かれたことへ、私は自分の言葉で答えたかった。そばへ来た手はまだ宙にあり、その先を決めるまでの短い間も、先輩の顔を見ることができた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「今夜は、一緒にいたいです」と指を重ねる",
+          "next": "night",
+          "effect": "consent",
+          "setFlags": [
+            "mutualConsent",
+            "hadNight"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「やっぱり今日は帰りたいです」と伝える",
+          "next": "weeks",
+          "effect": "walkHome",
+          "setFlags": [
+            "contactDeclined"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "night",
+      "title": "言葉が遅れる時",
+      "chapter": 3,
+      "location": "ギアッチョの自宅",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夜"
+      },
+      "characterId": "ghiaccio",
+      "rating": "fade",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私が指を重ねると、先輩は手を下ろすのではなく、そのまま引き寄せた。近づいてから目が合い、二人とも少しだけ止まる。何でも言葉にしていた人の口元が、今は何も言わずに動いた。私はその頬へ触れ、頷いた。"
+        },
+        {
+          "speaker": "ghiaccio",
+          "text": "……笑うなよ。慣れてるふりをする気はねえからな。"
+        },
+        {
+          "speaker": "player",
+          "text": "笑ってません。私も、どうしたらいいか考えてます。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "言い終えると、先輩が少しだけ笑った。唇が触れたあと、私も息をこぼす。今の笑いは違いますと言いかけて、代わりにもう一度手を引いた。先輩は私の顔を見て頷き、二人で灯りを落とした部屋へ進んだ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌朝、目を開けた先輩は時計を見てから私へ戻った。何時ですかと訊くと、八時ちょうど、いや一分過ぎ、と声が返る。寝起きまで言い直すのがおかしくて、私は毛布の中で笑ってしまった。",
+          "storyTime": {
+            "date": "6月29日",
+            "period": "朝"
+          }
+        },
+        {
+          "speaker": "ghiaccio",
+          "text": "今のは笑っただろ。"
+        },
+        {
+          "speaker": "player",
+          "text": "はい。でも、好きな方の笑いです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩は何か言いかけ、結局、朝飯にするぞと起き上がった。私も身支度をして台所へ行く。昨夜の近さとは別に、今日何を食べるかを二人で選ぶ時間があった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "return",
+          "text": "朝食を一緒に片づけ、自分の家へ戻る",
+          "next": "after_message"
+        }
+      ],
+      "when": {
+        "flags": [
+          "mutualConsent"
+        ]
+      }
+    },
+    {
+      "id": "after_message",
+      "title": "送る前に一度読む",
+      "chapter": 3,
+      "location": "自分の部屋",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "夜"
+      },
+      "characterId": "ghiaccio",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "自分の部屋へ帰り、借りた小さな袋を鞄から出した。中に忘れ物がないか確かめると、先輩からちょうど連絡が来る。昨夜のことをどこから話せばいいか迷っていた私は、その短い文を、いつもよりゆっくり読んだ。"
+        },
+        {
+          "speaker": "ghiaccio",
+          "text": "昨日の残り、こっちは食べた。おまえ、帰ってからちゃんと休んだか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "食事の話ならすぐ返せる。けれど、それだけで閉じたくはなかった。私は一度打った文を読み直し、自分で望んでいない曖昧さを消した。今の気持ちなら、今の言葉で送ってよかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "again",
+          "text": "また夜も一緒にいたいです。先輩のこと、前より好きです",
+          "next": "weeks",
+          "effect": "messageAgain",
+          "setFlags": [
+            "fwbOngoing"
+          ],
+          "replyVariants": [
+            {
+              "text": "オレもまた会いたい。好きって話も、次は顔を見て聞かせろよ。"
+            }
+          ]
+        },
+        {
+          "id": "nights",
+          "text": "恋人の約束はせず、望む夜に会える友達でいたいです",
+          "next": "weeks",
+          "effect": "messageBoundaries",
+          "setFlags": [
+            "fwbOngoing"
+          ],
+          "replyVariants": [
+            {
+              "text": "分かった。オレもそれがいい。次も、同じ返事と決めつけはしねえ。"
+            }
+          ]
+        },
+        {
+          "id": "day",
+          "text": "嬉しかったですが、次からは昼に遊ぶ友達でいたいです",
+          "next": "weeks",
+          "effect": "messageDaily",
+          "setFlags": [
+            "endedIntimacy"
+          ],
+          "replyVariants": [
+            {
+              "text": "分かった。昼にしよう。別の店も、まだ行ってねえしな。"
+            }
+          ]
+        }
+      ],
+      "message": true
+    },
+    {
+      "id": "weeks",
+      "title": "並ばない感想",
+      "chapter": 4,
+      "location": "映画館の前の広場",
+      "storyTime": {
+        "date": "7月12日",
+        "period": "昼"
+      },
+      "characterId": "ghiaccio",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "七月に入って、私たちは望む夜にも何度か会った。食事をしたあとで互いに残りたいかを訊き、泊まった朝も同じものを好きなふりはしなかった。先輩が匙を置いたあとも、私は自分の分へ砂糖を足した。それでも、私の新しい感想にはすぐ反論が返ってきた。",
+          "when": {
+            "flags": [
+              "fwbOngoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "七月に入っても、私たちは昼に会って、それぞれの家へ帰った。店を変え、歩く道を変えるたび、同じものへの感想が違った。先輩と話す前に自分の答えを揃えておく必要はなくて、考えかけのことも少しずつ言えるようになった。",
+          "when": {
+            "notFlags": [
+              "fwbOngoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "今日は二人で映画を見た。出口を出るなり、先輩が最後の場面について話し出した。人物の動きがおかしいと言うので、私はその直前の沈黙が好きだったと返した。先輩は足を止め、そんな話をしてたか、と眉を寄せる。"
+        },
+        {
+          "speaker": "player",
+          "text": "違う話かもしれません。でも私が最初に言いたかったのは、そっちです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩はしばらく黙り、じゃあそっちから聞く、と言った。日陰の縁へ移動して、私は好きだったところを最初から話した。聞き終えた先輩がやっぱり納得いかねえと返すのを、今日は楽しみに待てた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "both",
+          "text": "違う感想をどちらも話し、次に見る作品を持ち寄る",
+          "next": "decision",
+          "effect": "conferencePractical",
+          "setFlags": [
+            "heardDifference"
+          ]
+        },
+        {
+          "id": "want",
+          "text": "「こんな話をする相手が、先輩でよかったです」と言う",
+          "next": "decision",
+          "effect": "gameDate"
+        }
+      ]
+    },
+    {
+      "id": "decision",
+      "title": "次の予定の前に",
+      "chapter": 4,
+      "location": "喫茶店の外の小さな広場",
+      "storyTime": {
+        "date": "7月19日",
+        "period": "夕方"
+      },
+      "characterId": "ghiaccio",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先輩から新しい映画の案内が届き、その話をしに会った。店を出てもまだ明るく、私は袋から二枚の紙を出した。どちらを選ぶかでまた少し揉めそうだったけれど、今日はその前に言いたいことがあった。先輩は私が紙をしまうのを見て、口を閉じる。"
+        },
+        {
+          "speaker": "ghiaccio",
+          "text": "何だよ。そっちの話を先にするか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私は頷いた。予定を決めるためなら、いつもの速さで話せる。けれど目の前の人とこれからどう会いたいかは、言う前に一度、息を吸いたかった。先輩の足が動かずにいることを確かめて、顔を上げた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "tell",
+          "text": "自分の言葉で、先輩の恋人になりたいと伝える",
+          "next": "confess_player",
+          "when": {
+            "min": {
+              "trust": 48,
+              "romancePlayer": 35,
+              "romanceChar": 35
+            },
+            "notFlags": [
+              "fwbOngoing"
+            ]
+          }
+        },
+        {
+          "id": "hear",
+          "text": "先輩が話しかけるまで、目を逸らさず待つ",
+          "next": "confess_char",
+          "when": {
+            "min": {
+              "trust": 48,
+              "romancePlayer": 20,
+              "romanceChar": 40
+            },
+            "notFlags": [
+              "fwbOngoing"
+            ]
+          }
+        },
+        {
+          "id": "nights",
+          "text": "昼も夜も、親密な友達として会いたいと言う",
+          "next": "end_fwb",
+          "effect": "messageBoundaries",
+          "setFlags": [
+            "fwbConfirmed"
+          ],
+          "when": {
+            "flags": [
+              "fwbOngoing"
+            ],
+            "min": {
+              "trust": 50,
+              "intimacy": 35
+            }
+          }
+        },
+        {
+          "id": "change",
+          "text": "夜を重ねて変わった望みを話す",
+          "next": "change",
+          "when": {
+            "flags": [
+              "fwbOngoing"
+            ],
+            "min": {
+              "trust": 55,
+              "romancePlayer": 30,
+              "romanceChar": 30,
+              "intimacy": 35
+            }
+          }
+        },
+        {
+          "id": "partner",
+          "text": "最初に感想を聞き合う、互いの相棒でいたいと言う",
+          "next": "pact",
+          "when": {
+            "flags": [
+              "wrongTurn",
+              "walkedProof",
+              "differentTaste",
+              "finishedMap",
+              "ownSpoon",
+              "heardDifference"
+            ],
+            "notFlags": [
+              "fwbOngoing"
+            ],
+            "min": {
+              "trust": 45,
+              "comfort": 65
+            }
+          }
+        },
+        {
+          "id": "friend",
+          "text": "これからも、言いたいことを言える友達でいたいと伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "friendChosen",
+            "endedIntimacy"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_player",
+      "title": "好き、のあとの沈黙",
+      "chapter": 4,
+      "location": "喫茶店の外の広場",
+      "storyTime": {
+        "date": "7月19日",
+        "period": "夕方"
+      },
+      "characterId": "ghiaccio",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "player",
+          "text": "先輩が好きです。違う意見を聞きたいだけじゃなくて、先輩に会いたいんです。恋人になりたいです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "言い終えると、先輩の口が一度開き、すぐ閉じた。いつもなら一語の曖昧さもそのままにしない人が、今は何も指摘しない。私は訂正する場所を探しかけ、やめた。言いたいことは言えたのだから、そのまま聞いてほしかった。"
+        },
+        {
+          "speaker": "ghiaccio",
+          "text": "……オレも好きだ。おまえと付き合いたい。言い方を考えてたら、先に言われた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "悔しそうな声に笑いかけて、目の奥が熱くなった。先輩はその顔を見て慌てたように手を動かし、それから止めた。私は泣いてませんと言う前に、自分の望みをもう一度返したかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「私と付き合ってください」と、もう一度はっきり言う",
+          "next": "end_love_a",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「今は、友達として会うことを選びたいです」と伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "friendChosen",
+            "endedIntimacy"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_char",
+      "title": "言い直さずに聞く",
+      "chapter": 4,
+      "location": "喫茶店の外の広場",
+      "storyTime": {
+        "date": "7月19日",
+        "period": "夕方"
+      },
+      "characterId": "ghiaccio",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先輩は映画の紙を鞄へ押し込み、私へ向き直った。勢いのある動きに少し驚くと、声まで強くなりかけて、途中で小さくなった。誰かへ言い負かすための言葉ではないのだと、それだけで分かった。"
+        },
+        {
+          "speaker": "ghiaccio",
+          "text": "オレは、おまえが好きだ。付き合いたい。店とか映画とか、次の理由を探してばっかりじゃ、いつまでも言えねえから。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "顔を見ると、眼鏡の位置を直そうとした手が途中で下りた。もう隠せるところがないみたいに私を見ている。私は嬉しいかどうかを考える前に、その言葉を自分へ向けてもらったことへ追いつこうとしていた。"
+        },
+        {
+          "speaker": "ghiaccio",
+          "text": "返事は、おまえが決めろ。……今の言い方、命令みてえだったな。そうじゃねえ。聞きたいんだよ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私は頷いた。言い直したところも、その前の少し強すぎる声も、ちゃんと聞こえたままで答えたかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「私も好きです。恋人になりたいです」と答える",
+          "next": "end_love_b",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「恋人にはなれません。友達でいたいです」と答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "declinedConfession",
+            "friendChosen",
+            "endedIntimacy"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "change",
+      "title": "前と違う答え",
+      "chapter": 4,
+      "location": "喫茶店の外の広場",
+      "storyTime": {
+        "date": "7月19日",
+        "period": "夕方"
+      },
+      "characterId": "ghiaccio",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人になるかどうかは別に話せると確かめた、最初の夜を思い出した。あの時は、その答えを先へ置いたまま近づきたかった。何度も夜に会い、翌朝の眠そうな声まで知った今は、そこへ別の希望が増えていた。私は先輩の顔を見て、その違いから話した。"
+        },
+        {
+          "speaker": "player",
+          "text": "前の気持ちが嘘だったわけじゃないです。でも今は、先輩の恋人になりたい。好きです。"
+        },
+        {
+          "speaker": "ghiaccio",
+          "text": "分かってる。変わったら嘘になるって話じゃねえだろ。オレも、おまえと付き合いたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "まっすぐな返事を聞いたら、用意していた説明が少し減った。先輩は減った分を勝手に埋めず、私の言葉を待っている。いつも言い合っていた相手へ、今日は同じ気持ちをそのまま返せる。それが照れくさくて、私は一度だけ足元を見た。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「はい。恋人として、また会いたいです」と答える",
+          "next": "end_fwb_to_love",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "keep",
+          "text": "「まだ約束はせず、親密な友達でいたいです」と答える",
+          "next": "end_fwb",
+          "effect": "messageBoundaries",
+          "setFlags": [
+            "fwbConfirmed"
+          ]
+        },
+        {
+          "id": "friend",
+          "text": "「これからは、昼に会う友達でいたいです」と答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "friendChosen",
+            "endedIntimacy"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pact",
+      "title": "同じ答えにしない約束",
+      "chapter": 4,
+      "location": "喫茶店の外の広場",
+      "storyTime": {
+        "date": "7月19日",
+        "period": "夕方"
+      },
+      "characterId": "ghiaccio",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "最初に迷った道も、好きになれなかった味も、同じ紙の上へ残っていた。分かりやすく直せることと、二人で違ったまま持つことがある。先輩と話すうち、自分の最初の感想を、相手に合わせて薄めることが少なくなった。"
+        },
+        {
+          "speaker": "player",
+          "text": "何か見た時、まず先輩に話したいです。先輩がどう思うかも、聞きたい。恋人になるのとは違うけど、これからも、その相手でいたいです。"
+        },
+        {
+          "speaker": "ghiaccio",
+          "text": "オレも、おまえに聞きたい。賛成してくれるからじゃねえぞ。ちゃんと自分で見て、違うことを言うからだ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩は二枚の映画の紙を出し直した。二人で一つに決めるのかと思ったら、片方を私へ渡す。次とその次、両方行けばいいだろ、と言う声が少し得意げだった。私は自分の選んだ紙を取り、先輩の選んだ方の時間も手帳へ書いた。"
+        },
+        {
+          "speaker": "player",
+          "text": "見たあと、気に入らなくても言っていいですね。"
+        },
+        {
+          "speaker": "ghiaccio",
+          "text": "当たり前だ。オレも言う。言って終わりじゃなくて、聞くところまでな。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「じゃあ、次も最初に先輩へ話します」と約束する",
+          "next": "end_special",
+          "effect": "homeTogether",
+          "setFlags": [
+            "firstListener"
+          ]
+        },
+        {
+          "id": "friend",
+          "text": "「今は、時々一緒に楽しむ友達のままで」と伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "friendChosen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "end_friend",
+      "title": "言い合える席",
+      "chapter": 5,
+      "location": "通りの喫茶店",
+      "storyTime": {
+        "date": "7月26日",
+        "period": "昼"
+      },
+      "characterId": "ghiaccio",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人にはなれないと答えたあと、先輩はすぐには言葉を返さなかった。分かった、と聞こえてから私も頷いた。数日後、別の店を見つけたという連絡が来て、友人も一緒に行こうと話が決まった。",
+          "when": {
+            "flags": [
+              "declinedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "友達として会いたいと話したあと、先輩から別の店の案内が届いた。私は友人も誘い、今度は三人で味の違いを確かめることにした。親しいからといって、同じものを選ぶ約束はしなかった。",
+          "when": {
+            "notFlags": [
+              "declinedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "店でメニューを開くと、先輩がまた説明の曖昧なところを見つけた。私が今日は先に食べましょうと言う前に、隣の友人が笑った。先輩は何がおかしいと訊き、私は前にも同じ話をしたんですと答える。"
+        },
+        {
+          "speaker": "ghiaccio",
+          "text": "同じなら、直ってねえってことだろ。"
+        },
+        {
+          "speaker": "player",
+          "text": "でも、食べた感想はまだですよ。私はこれにします。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "注文が揃い、三人とも違う顔で一口目を食べた。先輩が言い出すより早く、私は好きなところを話す。反論が来るのも楽しみだった。正しさを競うだけではない机へ、次の皿が運ばれてきた。"
+        }
+      ],
+      "choices": [],
+      "ending": "FRIEND"
+    },
+    {
+      "id": "end_love_a",
+      "title": "私が先に言った日",
+      "chapter": 5,
+      "location": "駅への道",
+      "storyTime": {
+        "date": "7月19日",
+        "period": "夕方"
+      },
+      "characterId": "ghiaccio",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "もう一度伝えると、先輩は分かったと頷き、今度は自分から手を差し出した。私が取るまでの間、落ち着かない指が少し動く。握り返すとその動きが止まり、代わりに肩の距離が縮まった。"
+        },
+        {
+          "speaker": "ghiaccio",
+          "text": "もう分かった。聞き間違えてねえ。……嬉しかったんだよ。"
+        },
+        {
+          "speaker": "player",
+          "text": "私もです。先に言えて、よかった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先を越したから嬉しいわけではなかった。自分が言ったことへ、その人の気持ちが返ってきた。その熱が残る手で、私は先輩の指を少し引いた。次の角をどちらへ曲がるか訊くと、近い方じゃなくていい、と返った。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "数日後の待ち合わせで、私は駅からすぐ、とは書かなかった。前に二人で待った改札、と送る。先輩から来た了解の文字を読み、知らない人には伝わらない場所が二人にはあることを、少しだけ嬉しく思った。",
+          "storyTime": {
+            "date": "7月23日",
+            "period": "夕方"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_A"
+    },
+    {
+      "id": "end_love_b",
+      "title": "返事のあとの遠回り",
+      "chapter": 5,
+      "location": "駅への道",
+      "storyTime": {
+        "date": "7月19日",
+        "period": "夕方"
+      },
+      "characterId": "ghiaccio",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私も好きですと答えると、先輩は一度目を閉じた。考えていた言葉をようやく全部使い終えたように、肩が下がる。私が近づくと目が開き、手が差し出された。選べる場所にあるその手を、私は迷わず取った。"
+        },
+        {
+          "speaker": "ghiaccio",
+          "text": "駅まで、六分くらいだ。"
+        },
+        {
+          "speaker": "player",
+          "text": "今日は、もう少しかかってもいいです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩は道の先を見てから、じゃあ向こう、と違う角を指した。短い案内に笑ってしまうと、今は近道の話じゃねえからな、と返る。分かってますと答えた声が、自分でも分かるくらい明るかった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "次に会った日、先輩はまた時計を見た。私が遅れたのかと思って訊くと、違う、自分が早く着いた、と答える。そんな数字は記録しなくていいのに、私はその顔ごと覚えておきたくなった。",
+          "storyTime": {
+            "date": "7月26日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_B"
+    },
+    {
+      "id": "end_fwb",
+      "title": "違う匙、同じ夜",
+      "chapter": 5,
+      "location": "ギアッチョの自宅",
+      "storyTime": {
+        "date": "7月26日",
+        "period": "夜"
+      },
+      "characterId": "ghiaccio",
+      "rating": "fade",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "親密な友達として会い続けると決めたあと、私はまた先輩の家へ行った。食事は二人で作り、味は自分の皿で変えた。帰る時刻の話になる前に、今日は泊まりたいと私から伝える。先輩は食器を置き、オレも一緒にいたい、と顔を見て答えた。"
+        },
+        {
+          "speaker": "ghiaccio",
+          "text": "前と同じだろうって、言わなくて済ませるのは嫌だからな。"
+        },
+        {
+          "speaker": "player",
+          "text": "はい。私も、言いたかったので。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "台所を片づけて戻ると、先輩が座る場所を空けてくれた。そこへ腰を下ろし、私は自分から肩を寄せる。少し照れたような横顔へ触れると、今度は先輩がこちらを向いた。小さく頷き合い、言葉が途切れた後も、互いの顔を確かめた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌朝、コーヒーに砂糖を入れる量が違うのを見て、先輩がそのまま飲んでみろと言った。私は一口試し、やっぱり足しますと答えた。先輩は勝手に瓶を片づけず、私の手元へ置いた。好みも帰る家も別々のまま、また会いたい夜を二人で選んでいく。",
+          "storyTime": {
+            "date": "7月27日",
+            "period": "朝"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB"
+    },
+    {
+      "id": "end_fwb_to_love",
+      "title": "呼び方が一つ増える",
+      "chapter": 5,
+      "location": "駅への道",
+      "storyTime": {
+        "date": "7月19日",
+        "period": "夕方"
+      },
+      "characterId": "ghiaccio",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "はい、と答えると、先輩の手が私の手を探した。触れた時の温かさを既に知っていても、今日はその前に言った言葉が違う。私は指を絡め、自分の中で恋人という呼び方を一度だけ確かめた。慣れた夜を捨てずに、新しく言えることが増えた。"
+        },
+        {
+          "speaker": "ghiaccio",
+          "text": "次に会うのは、昼でもいいよな。いや、昼から会いたい。"
+        },
+        {
+          "speaker": "player",
+          "text": "私もです。映画、まだ二本とも見てませんから。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "どちらを先に見るかで、また少し言い合った。先輩の意見を聞き終えてから、私は自分の理由を言う。最後に決まった順番へ、二人とも頷いた。帰り道の長さだけは、今日は測らなかった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌週、チケットを二枚持って先輩が待っていた。私が近づくと、片方と一緒に空いた手も差し出される。暗い客席へ入る前、つないだ指を一度だけ握り返した。明るい場所で呼び合った言葉を、そこへ持っていけた。",
+          "storyTime": {
+            "date": "7月26日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB_TO_LOVE"
+    },
+    {
+      "id": "end_special",
+      "title": "最初の感想を渡す相手",
+      "chapter": 5,
+      "location": "映画館の近くの喫茶店",
+      "storyTime": {
+        "date": "7月27日",
+        "period": "昼"
+      },
+      "characterId": "ghiaccio",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先輩が選んだ映画を見たあと、私はすぐには感想をまとめられなかった。喫茶店へ入って水を飲み、好きだった一場面だけを先に話す。先輩はそこかよ、と言い、けれど自分の話を始めず続きを待った。私は順番の整っていない言葉を、そのまま置いた。"
+        },
+        {
+          "speaker": "ghiaccio",
+          "text": "オレは、あそこだけ納得いかなかった。だから聞きたかったんだよ。おまえは何を見たのか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "同じ画面の違うところを、二人で少しずつ思い出した。先輩の説明を聞いても、私の好きだった気持ちはなくならない。私がそう言うと、それを変えろとは言ってねえ、と返ってきた。初めて会った頃より、その強い声のどこへ返事をすればいいか分かる。"
+        },
+        {
+          "speaker": "player",
+          "text": "次は私の選んだ方ですね。見たら、最初に感想を聞かせてください。"
+        },
+        {
+          "speaker": "ghiaccio",
+          "text": "分かってる。褒めるとは約束しねえぞ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私は笑って頷いた。鞄に入れた二枚の半券は、同じ作品を見た証拠でしかない。その先で違うことを言い、また聞き合う相手を、私たちは選んでいた。店を出る前に次の日付だけを決め、帰り道では映画と関係のない夕飯の話をした。"
+        }
+      ],
+      "choices": [],
+      "ending": "SPECIAL"
+    }
+  ]
+}

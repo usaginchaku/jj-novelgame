@@ -1,0 +1,1191 @@
+{
+  "id": "sandman",
+  "title": "サンドマン — この道を、もう一度",
+  "intro": "地図には一本の線でも、歩くたび違うものが残った。\n後輩が呼ぶ声の方へ、用事のない日にも曲がりたくなる。",
+  "startEvent": "map",
+  "character": {
+    "name": "サンドマン",
+    "adult": true,
+    "heightCm": null,
+    "heightBasis": "4巻23話までの参照範囲で身長を確認できず",
+    "profile": "自分で学ぶ意志。故郷や土地への思い。周囲と異なる道を選ぶ強さ。",
+    "personality": [
+      "自分で学ぶ意志",
+      "故郷や土地への思い",
+      "周囲と異なる道を選ぶ強さ"
+    ],
+    "speech": {
+      "firstPerson": "オレ",
+      "addressing": "主人公は姓＋先輩。落ち着いた丁寧語と常体。片言にしない。",
+      "tone": "落ち着いた直接の言葉。語尾は感情と相手に合わせる。",
+      "habits": [
+        "落ち着いた直接の言葉",
+        "理由を自分の経験から話す",
+        "必要以上に神秘的にしない"
+      ],
+      "signaturePhrases": [],
+      "signatureNote": "日常の固定口癖は採用しない。象徴的な原作台詞と普段の話し方を混同せず、名台詞を貼り付けない。",
+      "avoid": [
+        "片言日本語",
+        "民族を一括りにした精霊の比喩",
+        "後半の名称・能力・立場"
+      ]
+    },
+    "referenceSection": "docs/CHARACTER_REFERENCE.md#cast-sandman"
+  },
+  "au": {
+    "role": "学部2年。環境・地学・フィールド系は候補",
+    "routeEnabled": true,
+    "addressing": [
+      {
+        "text": "{player.lastName}先輩"
+      }
+    ]
+  },
+  "endingDescriptions": {
+    "FRIEND": {
+      "title": "見つけたら、呼ぶ",
+      "description": "互いに気になる道を持ち寄り、気軽に歩く友達。先へ着くより、見つけた時に隣へ声を掛ける。"
+    },
+    "LOVE_A": {
+      "title": "呼ぶ声が近い",
+      "description": "自分から好きと伝え、返ってきた手を取る。どこへも行かない日にも、名前を呼んで近づきたい。"
+    },
+    "LOVE_B": {
+      "title": "その隣を選んで",
+      "description": "彼が向き直って伝えた告白へ、自分の好きも返す。道の途中でも、手をつなぎたいと言えるように。"
+    },
+    "FWB": {
+      "title": "朝、別の道へ",
+      "description": "望む夜を一緒に過ごし、朝には別々の予定へ。次の誘いを互いから渡す親密な友情。"
+    },
+    "FWB_TO_LOVE": {
+      "title": "行き先に書かない名前",
+      "description": "重ねた夜の先で、今は恋人を選ぶ。遠くまで行かない日にも、隣で次の約束を聞く。"
+    },
+    "SPECIAL": {
+      "title": "まだ丸のない場所",
+      "description": "互いが立ち止まった場所を持ち寄り、同じ道を歩き直す相棒。まだ知らない角を、二人の紙に残しておく。"
+    }
+  },
+  "events": [
+    {
+      "id": "map",
+      "chapter": 1,
+      "title": "地図の外の入口",
+      "location": "街歩き企画の集合所",
+      "storyTime": {
+        "date": "4月27日",
+        "period": "昼"
+      },
+      "characterId": "sandman",
+      "rating": "general",
+      "tags": [
+        "sandman"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "公開の街歩き企画で配られた地図を広げると、学部二年のサンドマンくんが隣へ来た。学内で何度か話す後輩だ。印刷された線は大通りを回っているが、彼は公園へ抜ける入口を指した。前に自分で歩いたことがあるという。"
+        },
+        {
+          "speaker": "sandman",
+          "text": "{player.lastName}先輩、ここからも行けます。坂の途中に案内がありました。今日は、あの道をもう一度確かめたいです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "係の人へ通れる道かを確かめてから、二人でそちらを選んだ。角を曲がると人の声が少し遠のく。私は地図を閉じる前に、彼が指した場所へ小さな丸をつけた。知らないところへ連れていかれるだけでなく、自分も戻ってこられる入口を覚えておきたかった。"
+        },
+        {
+          "speaker": "player",
+          "text": "あの案内、私も読んでみたい。どこから見つけたの？"
+        }
+      ],
+      "choices": [
+        {
+          "id": "ask",
+          "text": "彼がこの道を歩いた時のことを、隣で聞く",
+          "next": "name",
+          "effect": "ask"
+        },
+        {
+          "id": "walk",
+          "text": "地図と案内を確かめながら一緒に歩く",
+          "next": "name",
+          "effect": "workTogether"
+        }
+      ]
+    },
+    {
+      "id": "name",
+      "chapter": 1,
+      "title": "名前だけでは分からない",
+      "location": "街の小さな資料展示",
+      "storyTime": {
+        "date": "5月4日",
+        "period": "昼"
+      },
+      "characterId": "sandman",
+      "rating": "general",
+      "tags": [
+        "sandman"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "前に通った道の古い写真があると知り、サンドマンくんと展示を見に来た。今は舗装された角に、小さな水路が写っている。地名の読み方を私が取り違えると、彼も知らないと首を振り、受付へ尋ねに行こうとした。"
+        },
+        {
+          "speaker": "sandman",
+          "text": "似た名前を知っていても、ここが同じとは限らないです。聞ける人がいるなら、聞いて帰りたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "戻ってきた彼は教わった読みを紙へ書き、聞けなかった部分には何も足さなかった。私も今の道の写真を開いて隣へ置く。同じ角を写したはずなのに、何が変わったかを二人で挙げるだけでずいぶん時間が過ぎた。"
+        },
+        {
+          "speaker": "player",
+          "text": "次に歩く時、ここで止まって見よう。名前を覚えたら、急に通り過ぎにくくなった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "return",
+          "text": "資料で知った角へ、二人でもう一度行こうと誘う",
+          "next": "hill",
+          "effect": "honest",
+          "setFlags": [
+            "knownCorner"
+          ]
+        },
+        {
+          "id": "notes",
+          "text": "教わった読み方と写真をそれぞれ記録する",
+          "next": "hill",
+          "effect": "compareNotes"
+        }
+      ]
+    },
+    {
+      "id": "hill",
+      "chapter": 1,
+      "title": "先に着いた人",
+      "location": "公園へ続く坂道",
+      "storyTime": {
+        "date": "5月11日",
+        "period": "昼"
+      },
+      "characterId": "sandman",
+      "rating": "general",
+      "tags": [
+        "sandman"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "同じ坂を歩くと、サンドマンくんの足が少しずつ先へ進んだ。私は途中の曲がり角で足を止め、前に写真で見た軒を探す。気づいた彼が戻ってきて、道を間違えましたかと尋ねた。"
+        },
+        {
+          "speaker": "player",
+          "text": "ううん。ここから見ると、屋根の形が残ってた。サンドマンくんにも見せたかったんだけど、呼ぶ前に先へ行っちゃった。"
+        },
+        {
+          "speaker": "sandman",
+          "text": "……そこは通り過ぎました。オレは坂を上がったところばかり見てた。先輩の立っていた場所、もう一度いいですか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "場所を少し空けると、彼は同じところへ立った。身を乗り出さなくても見える線を私が指し、その先を二人で追う。今度は歩き出す時に彼がこちらを見るので、私はもう少しだけ、と笑って端末を出した。写真を撮り終えるまで、彼の足音は先へ行かなかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "corner",
+          "text": "自分が止まった場所から見えるものを、彼へ渡す",
+          "next": "message",
+          "effect": "homeTalk",
+          "setFlags": [
+            "myStop"
+          ]
+        },
+        {
+          "id": "two",
+          "text": "「戻ってきてくれて嬉しい。一緒に見たかった」と伝える",
+          "next": "message",
+          "effect": "lunchTwo"
+        },
+        {
+          "id": "rest",
+          "text": "休憩を取ってから、一緒に坂の先へ向かう",
+          "next": "message",
+          "effect": "shiftRest"
+        }
+      ]
+    },
+    {
+      "id": "message",
+      "chapter": 2,
+      "title": "線の横にある声",
+      "location": "自分の部屋",
+      "storyTime": {
+        "date": "5月14日",
+        "period": "夜"
+      },
+      "characterId": "sandman",
+      "rating": "general",
+      "tags": [
+        "sandman"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "サンドマンくんから、地図の写真が届いた。坂道の途中に印が増えている。私が立ち止まった角だった。大きな観光の印とは違う小さな丸へ、私は画面越しに指を寄せた。"
+        },
+        {
+          "speaker": "sandman",
+          "text": "次はここから曲がってみたいです。先輩が見ていた屋根の、反対側へ出ます。よかったら一緒に。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "その道を知らないことより、歩いている彼の横顔を思い出した。今度は自分が先に気づけるものもあるだろうか。私は地図を開いたまま、行きたいと返す文を書いた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "glad",
+          "text": "一緒に行きたい。サンドマンくんと歩く日を楽しみにしてる",
+          "next": "closed",
+          "effect": "messageHeart",
+          "replyVariants": [
+            {
+              "text": "オレもです。今度は先輩が止まるところも、一緒に見たい。",
+              "when": {
+                "flags": [
+                  "myStop"
+                ]
+              }
+            },
+            {
+              "text": "オレも楽しみです。次の昼、空いていたら行きませんか。"
+            }
+          ],
+          "lockRoute": "sandman"
+        },
+        {
+          "id": "notice",
+          "text": "私が止まった角も入ってるね。覚えてくれてたんだ",
+          "next": "closed",
+          "effect": "messageListen",
+          "replyVariants": [
+            {
+              "text": "忘れてないです。もう一度、あそこから見ようと思いました。"
+            }
+          ],
+          "lockRoute": "sandman"
+        },
+        {
+          "id": "thanks",
+          "text": "地図ありがとう。予定の合う日に確かめに行こう",
+          "next": "closed",
+          "effect": "messageDaily",
+          "replyVariants": [
+            {
+              "text": "はい。通れる時間も調べておきます。"
+            }
+          ],
+          "lockRoute": "sandman"
+        }
+      ],
+      "message": true
+    },
+    {
+      "id": "closed",
+      "chapter": 2,
+      "title": "通れなかった先へ",
+      "location": "公園横の歩道",
+      "storyTime": {
+        "date": "5月25日",
+        "period": "昼"
+      },
+      "characterId": "sandman",
+      "rating": "general",
+      "tags": [
+        "sandman"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "曲がろうと思っていた道に、工事中の案内が出ていた。サンドマンくんは立ち止まり、地図へもう一度目を落とす。通り抜けられなくても、次の角までは別の道がある。私がそちらを示すと、彼は頷いたが、案内の終わる日をしばらく見ていた。"
+        },
+        {
+          "speaker": "sandman",
+          "text": "今日は戻ります。けれど、ここを歩くのはやめたくない。開いてから、もう一度来ます。"
+        },
+        {
+          "speaker": "player",
+          "text": "じゃあ、その時も誘って。今日は向こうでご飯にしよう。歩けなかった道の分、お腹が空かないわけじゃないし。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼が少し笑い、地図をたたんだ。早く着くためだけなら、何度も同じ街へ来なくていい。私は彼が次も歩くつもりの道を一緒に見てから、自分の選んだ店へ向かった。角を曲がる時、今度は彼が私の方へ行先を尋ねた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "again_walk",
+          "text": "道が開いた日に、二人で続きを歩こうと約束する",
+          "next": "home",
+          "effect": "conferencePractical",
+          "setFlags": [
+            "unfinishedWay"
+          ]
+        },
+        {
+          "id": "closer",
+          "text": "「遠回りになっても、一緒に来てよかった」と伝える",
+          "next": "home",
+          "effect": "walkClose"
+        },
+        {
+          "id": "meal",
+          "text": "今日は食事を楽しみ、駅まで一緒に歩く",
+          "next": "home",
+          "effect": "walkHome"
+        }
+      ]
+    },
+    {
+      "id": "home",
+      "chapter": 3,
+      "title": "二枚の地図を重ねる",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "6月8日",
+        "period": "夕方"
+      },
+      "characterId": "sandman",
+      "rating": "general",
+      "tags": [
+        "sandman"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "歩いた道の写真を少し大きな画面で見ようと、サンドマンくんを家へ誘った。机の上には私の地図と彼の地図が並ぶ。同じ道を通ったのに、印をつけた場所が違う。私は自分の丸を一つ指し、その日に店の前で聞こえた音のことを話した。"
+        },
+        {
+          "speaker": "sandman",
+          "text": "オレは、その手前を覚えてます。先輩が何か言いかけたんですが、車が通って、聞き直せなかった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "何を言ったか考え、たいしたことじゃないと思ったが、彼は聞きたいと返した。あの窓の色が好き、と私は今の部屋で言い直す。そうでしたか、と頷く顔を見てから、二人で写真を閉じて夕食にした。"
+        },
+        {
+          "speaker": "player",
+          "text": "今なら、聞こえたね。次はその窓も見せる。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "talk",
+          "text": "食事のあとも隣で、写真に写らなかったことを話す",
+          "next": "evening",
+          "effect": "hotelTalk"
+        },
+        {
+          "id": "rest",
+          "text": "地図を片づけ、二人で食後をゆっくり過ごす",
+          "next": "evening",
+          "effect": "homeRest"
+        }
+      ]
+    },
+    {
+      "id": "evening",
+      "chapter": 3,
+      "title": "帰る道を選ぶ前に",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "6月8日",
+        "period": "夜"
+      },
+      "characterId": "sandman",
+      "rating": "general",
+      "tags": [
+        "sandman"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "片づけた机には地図の端だけが見えていた。サンドマンくんが自分の分を取り、丁寧に折り目を合わせる。私は帰り道に気をつけてと言いかけて、その前に、今日は楽しかったと伝えた。"
+        },
+        {
+          "speaker": "sandman",
+          "text": "オレもです。……もう少し、一緒にいたいと思っています。次の道の話じゃなくて。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼が畳んだ地図を手にしたままこちらを見る。後輩を家へ呼んだ日の続きが、そこで少し違う顔になった。私は向かいの椅子から立たず、自分もまだ帰したくないと思っていたことを聞いてもらいたかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "stay",
+          "text": "「私も。今夜は、サンドマンくんの近くにいたい」と伝える",
+          "next": "consent",
+          "effect": "hotelInvite",
+          "when": {
+            "min": {
+              "trust": 45,
+              "desire": 8
+            }
+          }
+        },
+        {
+          "id": "next_time",
+          "text": "「また来て。次も一緒に歩こう」と今日は見送る",
+          "next": "next",
+          "effect": "walkHome"
+        }
+      ]
+    },
+    {
+      "id": "consent",
+      "chapter": 3,
+      "title": "届けるための言葉",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "6月8日",
+        "period": "夜"
+      },
+      "characterId": "sandman",
+      "rating": "general",
+      "tags": [
+        "sandman"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "彼は地図を鞄へしまい、空いた手を机へ置いた。私の方へまだ伸ばさないその指を見て、私は自分の手も膝から上げる。"
+        },
+        {
+          "speaker": "sandman",
+          "text": "オレも先輩に触れたいです。今夜、一緒にいたい。先輩が望むなら、ここに。"
+        },
+        {
+          "speaker": "player",
+          "text": "うん、私も触れたい。でも、恋人になる約束は今夜とは別に話したい。途中でやめたくなったら、言うね。"
+        },
+        {
+          "speaker": "sandman",
+          "text": "オレも言います。どちらかが止めたいなら、そこで止める。今日は帰ってほしいと言っても、構いません。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私は頷き、少し息を吐いた。ゆっくり選んだ言葉が、机の向こうへ届いている。次に差し出すものを地図や写真にせず、自分の望みのまま渡したかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「今夜、一緒にいてほしい」と答える",
+          "next": "night",
+          "effect": "consent",
+          "setFlags": [
+            "consented",
+            "hadNight"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「今日はここまで。また昼に会いたい」と伝える",
+          "next": "next",
+          "effect": "walkHome",
+          "setFlags": [
+            "declinedTouch"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "night",
+      "chapter": 3,
+      "title": "歩幅のない近さ",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "6月8日",
+        "period": "夜"
+      },
+      "characterId": "sandman",
+      "rating": "fade",
+      "tags": [
+        "sandman"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "彼が手を差し出し、私は立ってその隣へ移った。椅子を寄せて座り直すと、歩く時には見えなかった指の動きが近くにある。近づいていいですかと聞かれ、私は頷く代わりに、うんと声で答えた。二人で少しずつ体を向け、顔の距離を縮める。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "唇が触れる直前に目を閉じた。離れてから彼の顔をもう一度見ると、いつも道の先を見ている目が、私の方へ留まっていた。もう一回、と頼んで肩へ手を置く。彼も近づき、やがて二人で席を離れた。つないだ手をそのままに、部屋の奥の灯りを落とした。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝、私が起きた時には彼も目を開けていた。おはよう、と小さく言うと、同じ挨拶が近くから返る。朝食を食べてから帰ると聞き、私は頷いた。まだ起き出す前に、彼がこちらへ向き直った。",
+          "storyTime": {
+            "date": "6月9日",
+            "period": "朝"
+          }
+        },
+        {
+          "speaker": "sandman",
+          "text": "オレは、またこうして会いたいです。先輩は、今どう思っていますか。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "again",
+          "text": "「恋人とは決めず、また望む夜に会いたい」と答える",
+          "next": "next",
+          "effect": "messageBoundaries",
+          "setFlags": [
+            "ongoing"
+          ]
+        },
+        {
+          "id": "more",
+          "text": "「また夜も会いたい。サンドマンくんをもっと好きになった」と答える",
+          "next": "next",
+          "effect": "messageAgain",
+          "setFlags": [
+            "ongoing"
+          ]
+        },
+        {
+          "id": "day",
+          "text": "「これからは昼に会う友達でいたい」と答える",
+          "next": "next",
+          "effect": "messageDaily",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "chapter": 4,
+      "title": "開いた道の途中で",
+      "location": "公園の休憩所",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "sandman",
+      "rating": "general",
+      "tags": [
+        "sandman"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "六月は街を歩き、互いに望んだ夜には私の家で過ごした。食事だけで帰る日もあり、朝はそれぞれの予定へ向かう。今日は工事の終わった道を歩いてから、前にも来た休憩所へ寄った。地図を出さずに曲がれる角が、二人の間に増えている。",
+          "when": {
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "昼に会う友達でいたいと話してから、次の散歩は工事が終わった日にした。彼は夜の返事を変えさせようとはせず、私が立ち止まる場所を一緒に見た。少し照れたままでも、今日はどちらへ行く、と自分から訊けるようになった。",
+          "when": {
+            "flags": [
+              "hadNight",
+              "endedNight"
+            ],
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "六月にも街を歩いた。工事の終わった道へようやく入ると、見たかった屋根は思ったより手前にあった。私はここだったんだと笑い、彼も地図へ目を落とす。今日の帰りは、前にも来た休憩所へ寄ることにした。",
+          "when": {
+            "notFlags": [
+              "hadNight"
+            ]
+          }
+        },
+        {
+          "speaker": "sandman",
+          "text": "ここで、少し座りませんか。先輩が話したいと言っていたこと、聞きたいです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私は隣へ腰を下ろし、自分の地図を鞄へしまった。行先を決めるためではない時間ができると、どうしていいか少し迷う。それでも顔を上げた先に、待っている人がいた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "tell",
+          "text": "自分からサンドマンくんが好きだと伝える",
+          "next": "confess_player",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 35,
+              "romanceChar": 25
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "listen",
+          "text": "サンドマンくんが言おうとしていることを聞く",
+          "next": "confess_sandman",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 20,
+              "romanceChar": 35
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "shared_map",
+          "text": "互いが立ち止まった場所を持ち寄る地図を、これからも作りたい",
+          "next": "own_map",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 35,
+              "romanceChar": 30,
+              "comfort": 20
+            },
+            "flags": [
+              "knownCorner",
+              "myStop",
+              "unfinishedWay"
+            ],
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "nights",
+          "text": "望む夜にも会う親密な友情を続けたいと話す",
+          "next": "fwb_choice",
+          "when": {
+            "min": {
+              "trust": 50,
+              "desire": 25,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "love",
+          "text": "「今は、サンドマンくんの恋人になりたい」と伝える",
+          "next": "end_fwb_love",
+          "when": {
+            "min": {
+              "trust": 60,
+              "romancePlayer": 50,
+              "romanceChar": 40,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          },
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "friends",
+          "text": "気軽に歩きや食事へ誘い合う友達でいたいと話す",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_player",
+      "chapter": 4,
+      "title": "行先を言わずに",
+      "location": "公園の休憩所",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "sandman",
+      "rating": "general",
+      "tags": [
+        "sandman"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "サンドマンくんが好き、と言うと、彼の手が鞄の上で止まった。私は自分の声の続きを急がず、彼の顔を見た。言い方を考えてきたはずなのに、目の前ではどれも長すぎる気がした。"
+        },
+        {
+          "speaker": "player",
+          "text": "一緒に歩きたい場所があるから誘ってた。でも今は、どこへも行かない日にも会いたい。サンドマンくんの隣にいたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼が私の姓を呼び、いつもの先輩をつけた。その呼び方のままでも、今日の声は遠くから道を教える時とは違う。私は少し照れたまま、手を膝の上で開いた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "like",
+          "text": "「私と付き合ってほしい」と伝える",
+          "next": "end_love_a",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "choose",
+          "text": "「サンドマンくんの恋人になりたい。どうかな」と尋ねる",
+          "next": "end_love_a",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "wait",
+          "text": "「今は友達として、これからも会いたい」と伝え直す",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_sandman",
+      "chapter": 4,
+      "title": "向かう先を変えて",
+      "location": "公園の休憩所",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "sandman",
+      "rating": "general",
+      "tags": [
+        "sandman"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "彼は私の方へ体を向け、少し黙った。歩きながらなら道のことを挟めるのに、今日は何も間に入れなかった。私はその静かな始め方に、背筋を少し伸ばした。"
+        },
+        {
+          "speaker": "sandman",
+          "text": "{player.lastName}先輩。オレは先輩が好きです。恋人として会いたい。歩く場所を考えている時にも、先輩が来る日のことを先に考えるようになりました。付き合ってもらえませんか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "言葉が終わってからも、彼は同じ方を向いていた。私はうっかり地図へ目を落としかけ、もう鞄へしまったことを思い出す。隠すものがない膝へ手を置き、聞きたかった声に、自分の返事を重ねようとした。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「私も好き。サンドマンくんと付き合いたい」と答える",
+          "next": "end_love_b",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「恋人にはなれない。友達でいたい」と答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "refusedConfession",
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "own_map",
+      "chapter": 4,
+      "title": "丸が二つある角",
+      "location": "公園の休憩所",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "sandman",
+      "rating": "general",
+      "tags": [
+        "sandman"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私は畳んだ地図をもう一度出した。歩いた線だけでなく、互いが立ち止まった場所も残していきたい。恋人になるのとは違う相棒の話として伝えると、彼は私の丸の横へ自分の紙を置いた。"
+        },
+        {
+          "speaker": "sandman",
+          "text": "同じ道でも、先輩は違うところを残すんですね。オレはこっちを見ていた。次は、二つとも歩きたいです。"
+        },
+        {
+          "speaker": "player",
+          "text": "それなら、もう一回行こう。私も、先に着くことばかり考えてた日はあるし。今度はまだ丸のない方も。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼が知らない角を一つ指した。私も知らなかったので、その横は空けておいた。次に何を書くかは行ってみないと分からない。地図を重ねず並べたまま、二人で次の休みを選んだ。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "partners",
+          "text": "互いが見つけた場所を持ち寄り、歩き直す相棒になる",
+          "next": "end_special",
+          "effect": "homeTogether",
+          "setFlags": [
+            "ourMap"
+          ]
+        },
+        {
+          "id": "friend",
+          "text": "地図を一緒に作るとは決めず、気軽に誘う友達を選ぶ",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fwb_choice",
+      "chapter": 4,
+      "title": "誘う日の言葉",
+      "location": "公園の休憩所",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "sandman",
+      "rating": "general",
+      "tags": [
+        "sandman"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人の約束はせず、望む夜にも会いたいと言った。彼は少し考えてから、オレもそうしたいですと答えた。私は頷き、自分から誘う時にもちゃんと言いたいと続ける。"
+        },
+        {
+          "speaker": "sandman",
+          "text": "オレからも誘います。その時に会いたいか、聞きたいです。途中でやめたい時も言ってください。オレも言います。"
+        },
+        {
+          "speaker": "player",
+          "text": "うん。昼に歩く日も、そのまま続けたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼が自分の予定を開き、私は会える日を指した。翌朝に用事がある日は無理をせず、別の日を二人で選ぶ。話し終えると地図の入った鞄を持ち、今日はどちらの道で帰ろうかと私から訊いた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "continue",
+          "text": "その都度誘い合う親密な友人として続ける",
+          "next": "end_fwb",
+          "effect": "messageBoundaries"
+        },
+        {
+          "id": "daytime",
+          "text": "考え直し、昼に会う友達でいたいと伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "end_friend",
+      "chapter": 5,
+      "title": "見つけたら、呼ぶ",
+      "location": "街歩き企画の集合所",
+      "storyTime": {
+        "date": "7月13日",
+        "period": "昼"
+      },
+      "characterId": "sandman",
+      "rating": "general",
+      "tags": [
+        "sandman"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人にはなれないと答えると、彼はしばらくして分かりましたと言った。その日は次の予定を決めずに別れた。数日後、私から公開企画の案内を送ると、一緒に歩きたいと返ってきた。私もそうしたいと答えて、今日を選んだ。",
+          "when": {
+            "flags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "昼に会う友達でいたいと話してから、次は公開の街歩きで会った。彼は夜の返事を変えさせようとはしなかった。私は少し照れながらも、自分が調べた道の案内を開き、今日はここが気になると話した。",
+          "when": {
+            "flags": [
+              "hadNight",
+              "endedNight"
+            ],
+            "notFlags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "友達としてこれからも誘い合おうと約束し、今日は公開の街歩きへ来た。集合所で彼を見つけ、自分から名前を呼ぶ。サンドマンくんは地図をたたみ、私が来る方へ場所を空けた。",
+          "when": {
+            "notFlags": [
+              "hadNight",
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "sandman",
+          "text": "今日は先輩が見つけた方から行きましょう。オレも、まだ歩いてないです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "ほかの参加者と挨拶を交わし、私は配られた地図へ自分の印を足した。早く着いたら先で待つより、見つけた時に呼んでねと彼に言う。はい、と返る声を隣に聞いて、私も最初の角を曲がった。"
+        }
+      ],
+      "choices": [],
+      "ending": "FRIEND"
+    },
+    {
+      "id": "end_love_a",
+      "chapter": 5,
+      "title": "呼ぶ声が近い",
+      "location": "公園の休憩所",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "sandman",
+      "rating": "general",
+      "tags": [
+        "sandman"
+      ],
+      "body": [
+        {
+          "speaker": "sandman",
+          "text": "オレも好きです。先輩と付き合いたい。話してくれて、嬉しいです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "頷いたあと、自分も嬉しいと言うまで少し間が空いた。彼が手を出し、私は掌を重ねる。握ってから立つと、いつもの帰り道へ向かう足が少し違った。指を離す理由を探さなくていいことに、曲がり角まで来てから気づいた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌週、待ち合わせで彼の名を呼んだ。見つけてもらうためだけでなく、呼びたかったからだった。隣へ行くと手が差し出され、私は自分の方からも取る。今日は遠くへ行かず、近くの店でゆっくり食べることにした。",
+          "storyTime": {
+            "date": "7月6日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_A"
+    },
+    {
+      "id": "end_love_b",
+      "chapter": 5,
+      "title": "その隣を選んで",
+      "location": "公園の休憩所",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "sandman",
+      "rating": "general",
+      "tags": [
+        "sandman"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私も好き、と答えると、彼の指が鞄から離れた。私は顔が熱くなるのを隠さず、言ってくれて嬉しいと続ける。彼が少し笑い、オレも、と返した。いつもの短さでも、今日はその声を何度も聞きたくなった。"
+        },
+        {
+          "speaker": "player",
+          "text": "帰る前に、もう少しここにいてもいい？"
+        },
+        {
+          "speaker": "sandman",
+          "text": "オレも、もう少し一緒にいたいです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌週、歩く途中で自分から彼の手へ触れた。近づいても迷惑でないか確かめる代わりに、つなぎたいと頼む。彼が手を開き、私はそこへ指を重ねた。目を向ける先がときどき違っても、角を曲がる時には同じ方へ向けた。",
+          "storyTime": {
+            "date": "7月6日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_B"
+    },
+    {
+      "id": "end_fwb",
+      "chapter": 5,
+      "title": "朝、別の道へ",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "7月13日",
+        "period": "夜"
+      },
+      "characterId": "sandman",
+      "rating": "fade",
+      "tags": [
+        "sandman"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "互いに今夜会いたいと伝え、サンドマンくんが私の家へ来た。夕食のあと、今日は泊まってほしいと改めて言う。彼も一緒にいたいと答え、翌朝は食事のあと帰ると自分の予定を話した。私は地図を棚へ置き、隣へ座った。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "触れたいと言って手を出すと、彼も掌を向けた。指が重なり、二人でゆっくり体を向ける。近づくところで互いの顔を見て、私は自分から少し前へ出た。口づけのあとも手を離さず、二人で灯りを落として部屋の奥へ移った。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝、玄関で彼を送った。今日は別々の用事へ行くので、途中まで一緒に歩く約束はしなかった。次に会いたい日は自分から知らせるねと言うと、オレからも、と返る。扉を閉めてから私は自分の鞄を取り、今日通る道を思い浮かべた。",
+          "storyTime": {
+            "date": "7月14日",
+            "period": "朝"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB"
+    },
+    {
+      "id": "end_fwb_love",
+      "chapter": 5,
+      "title": "行き先に書かない名前",
+      "location": "公園の休憩所",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "sandman",
+      "rating": "general",
+      "tags": [
+        "sandman"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "今は恋人になりたいと言い、彼の返事を待った。重ねた夜のことを先に話せば言いやすい気もしたが、今日はそれだけを渡したかった。彼は私を見て、小さく頷いた。"
+        },
+        {
+          "speaker": "sandman",
+          "text": "オレも、先輩の恋人になりたいです。今までの時間も大事です。その上で、今はそう呼びたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私も、と返し、隣の手を取った。知っている指に触れるのに、今日は少し照れる。次はどこへ行こうかと訊く前に、私はもう少しここにいたいと話した。彼も頷き、二人で荷物を足元へ戻した。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌週は短い散歩のあと、まだ明るいうちに別れた。恋人になったから長くいなければと思わず、次に会いたい日を伝える。彼が自分の予定を挙げるまで、私はつないだ手をそのままにしていた。",
+          "storyTime": {
+            "date": "7月6日",
+            "period": "夕方"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB_TO_LOVE"
+    },
+    {
+      "id": "end_special",
+      "chapter": 5,
+      "title": "まだ丸のない場所",
+      "location": "街の公園へ続く道",
+      "storyTime": {
+        "date": "7月20日",
+        "period": "昼"
+      },
+      "characterId": "sandman",
+      "rating": "general",
+      "tags": [
+        "sandman"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "彼が気になった角を歩き、私の見たい窓の前でも立ち止まった。今度の地図には丸が二色ある。案内に載る名所ではない場所が増え、私は道の線を引くより先に、小さく窓と書いた。"
+        },
+        {
+          "speaker": "sandman",
+          "text": "ここは、オレだけならまた通り過ぎたと思います。次に先輩がいない日でも、思い出す。"
+        },
+        {
+          "speaker": "player",
+          "text": "私も、こっちの坂はサンドマンくんを思い出すよ。まだ歩いてない方も、今度見に行こう。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼は頷き、次の角で足を止めた。二人とも知らない道が、公園の入口へ続いている。恋人とは別の相棒の紙へ、まだ丸はつけない。どこで立ち止まるかを決めず、私は彼と並んで歩き出した。"
+        }
+      ],
+      "choices": [],
+      "ending": "SPECIAL"
+    }
+  ]
+}

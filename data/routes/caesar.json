@@ -1,0 +1,1225 @@
+{
+  "id": "caesar",
+  "title": "シーザー — 消し跡まで、きみへ",
+  "intro": "きれいに引いた線から、二人で少しはみ出して。\n気障な友人の見栄と不器用さを、同じ紙の上で知っていく。",
+  "startEvent": "paper",
+  "character": {
+    "name": "シーザー",
+    "adult": true,
+    "profile": "自負が強く、身なりや仕事の仕上がりにも気を配る同期。女性への気遣いは自然だが、気障さも短気さもある。ジョセフには容赦なく言い返す。",
+    "heightCm": 186,
+    "heightBasis": "原作プロフィール/公式設定本を参照する二次資料で確認。一次書籍現物は未照合。出典は人物参考資料。AUでは同値を採用。",
+    "personality": [
+      "誇りが高く、自分の技量や美意識に自信がある",
+      "女性への気遣いと気障さが自然に同居する",
+      "仲間思いだが意地っ張りで、ジョセフの挑発には熱くなる",
+      "面倒見がよくても誰にでも無条件に穏やかな人物ではない"
+    ],
+    "speech": {
+      "firstPerson": "おれ",
+      "addressing": "ジョセフには名前/おまえ。主人公には名前/きみ。花京院はAUの学年関係に従って先輩。",
+      "tone": "日常は整った言い方だが、悪友には鋭く短く言い返す。気遣いは講釈より手を貸す動作と一言で見せる。",
+      "habits": [
+        "〜だろう、〜じゃないか、〜するななどを相手に合わせる",
+        "ジョセフの大げさな言い分の穴を突く",
+        "自分の段取りや出来に自信を見せる"
+      ],
+      "signaturePhrases": [],
+      "signatureNote": "日常の固定口癖は今回採用しない。戦闘や死に関わる名台詞を毎日の口癖に転用しない。",
+      "avoid": [
+        "無欠点の執事や常時敬語の世話係",
+        "主人公を常に子ども扱いする",
+        "本ルートで主人公に失恋した恋敵として扱う",
+        "イタリア語やレディ呼びを根拠なく連発する"
+      ]
+    },
+    "referenceSection": "docs/CHARACTER_REFERENCE.md#シーザー"
+  },
+  "au": {
+    "role": "建築・デザイン系3年・同期",
+    "routeEnabled": true,
+    "addressing": [
+      {
+        "text": "{player.firstName}"
+      }
+    ]
+  },
+  "endingDescriptions": {
+    "FRIEND": {
+      "title": "余白には三人分",
+      "description": "気楽に言い合える友人として、次の寄り道を考える。地図の余白は、三人の昼食の予定で埋まる。"
+    },
+    "LOVE_A": {
+      "title": "隣に置いた返事",
+      "description": "格好いいところも意地っ張りなところも見て、自分から好きだと伝える。今度は恋人として、隣を歩く。"
+    },
+    "LOVE_B": {
+      "title": "いつもの顔が赤くなる",
+      "description": "飾らない告白に、同じ気持ちを返す。気障な友人の照れた顔を、今度は近くで見られる。"
+    },
+    "FWB": {
+      "title": "鍵はそれぞれの鞄に",
+      "description": "互いに望む夜を過ごし、昼にも遠慮なく笑い合う友人。帰り際には、次の寄り道が決まっている。"
+    },
+    "FWB_TO_LOVE": {
+      "title": "折り目を重ねて",
+      "description": "親密な友人として会った時間を持ったまま、恋人として選び合う。知った道にも、新しい歩き方がある。"
+    },
+    "SPECIAL": {
+      "title": "消し跡のある約束",
+      "description": "見栄も迷いも隠しきらず、二人のためだけの地図を作る恋人になる。間違えた道まで、次の約束へ描き足す。"
+    }
+  },
+  "events": [
+    {
+      "id": "paper",
+      "chapter": 1,
+      "title": "折り目をつける前に",
+      "location": "学食の窓際",
+      "storyTime": {
+        "date": "4月18日",
+        "period": "昼"
+      },
+      "characterId": "caesar",
+      "rating": "general",
+      "tags": [
+        "caesar"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "シーザーが広げた紙のせいで、昼食の皿が机の端へ追いやられた。新しく来る人向けの、学内の休憩場所を載せる小さな地図だ。建物の線はきれいで、私がいつも通る道まで少しよそ行きに見えた。画面用の案内も作りたいから見てくれ、と頼まれたのに、私は紙の方に見入っていた。"
+        },
+        {
+          "speaker": "caesar",
+          "text": "眺めるだけでも悪くないだろう。だが、きみには歩いた時のことも聞きたい。"
+        },
+        {
+          "speaker": "player",
+          "text": "うん。きれい。でも、お昼の前に全部見るなら、皿を戻す場所も地図に描いて。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "シーザーは笑い、私の皿を空いた方へ戻した。その手つきが自然すぎて、軽口の続きを忘れる。こちらへ引き寄せられた紙を押さえ、私はようやくペンを取った。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "walk_map",
+          "text": "実際に歩いて確かめようと誘う",
+          "next": "slope",
+          "effect": "workTogether"
+        },
+        {
+          "id": "favorite",
+          "text": "シーザーが好きな場所を、先に教えてと頼む",
+          "next": "slope",
+          "effect": "ask"
+        }
+      ]
+    },
+    {
+      "id": "slope",
+      "chapter": 1,
+      "title": "眺めのいい遠回り",
+      "location": "学内の坂道",
+      "storyTime": {
+        "date": "4月21日",
+        "period": "夕方"
+      },
+      "characterId": "caesar",
+      "rating": "general",
+      "tags": [
+        "caesar"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "地図に沿って歩くと、シーザーの選んだ道は確かに眺めがよかった。けれど、講義帰りの荷物を持って階段を二つ上がる頃には、私は返事が少し遅くなっていた。前を歩いていたシーザーが戻り、鞄を持とうとする。その手へ渡す前に、私は坂の下を指した。"
+        },
+        {
+          "speaker": "player",
+          "text": "私の荷物を持ってくれても、地図を見る人の荷物は軽くならないよ。下の道も載せたい。"
+        },
+        {
+          "speaker": "caesar",
+          "text": "……その通りだな。景色ばかり見ていた。もう一度、下から行こう。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "引き返す足取りは少し速く、悔しかったのだろうかと横顔を見る。シーザーは私が追いつくと速度を落とした。今度は鞄を奪わず、私の歩く速さで分岐まで戻った。二本目の線を引くために立ち止まると、彼の肩も隣で止まった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "my_route",
+          "text": "自分が通りたい道を、紙へはっきり描き足す",
+          "next": "table",
+          "effect": "honest",
+          "setFlags": [
+            "differentTaste"
+          ]
+        },
+        {
+          "id": "both_routes",
+          "text": "二つの道の違いを、一緒に書き添える",
+          "next": "table",
+          "effect": "compareNotes"
+        }
+      ]
+    },
+    {
+      "id": "table",
+      "chapter": 1,
+      "title": "似合う場所より",
+      "location": "学食",
+      "storyTime": {
+        "date": "4月24日",
+        "period": "昼"
+      },
+      "characterId": "caesar",
+      "rating": "general",
+      "tags": [
+        "caesar"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "昼の机に地図を広げていると、ジョセフが上から覗き込んだ。シーザーの選ぶ場所は洒落ていて座りにくそうだと言われ、シーザーがすぐに言い返す。私が間に置いた椅子の絵は、その二人の視線の下にあった。"
+        },
+        {
+          "speaker": "joseph",
+          "text": "ここで弁当食うのかよ。もっと日陰の、寝っ転がれるところも入れようぜ。"
+        },
+        {
+          "speaker": "caesar",
+          "text": "寝るための地図じゃあない。だが、日陰は増やす。おまえの意見を全部捨てるわけでもないさ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "珍しく同じものを選んだ二人を見て笑った。シーザーは私にも好きな場所を訊く。見栄えのいい場所を選んだら褒められそうだったけれど、浮かんだのは建物の裏の小さなベンチだった。風を避けて、一人で昼を食べたことがある。"
+        },
+        {
+          "speaker": "player",
+          "text": "建物の裏の小さなベンチ、風をよけられて好きなんだ。あそこも一度見てほしい。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "plain_bench",
+          "text": "見栄えに関係なく、自分の好きなベンチは残したいと伝える",
+          "next": "message",
+          "effect": "homeTalk",
+          "setFlags": [
+            "ownPlace"
+          ]
+        },
+        {
+          "id": "two_seats",
+          "text": "「二人で座るなら、どこがいい？」と聞く",
+          "next": "message",
+          "effect": "lunchTwo"
+        },
+        {
+          "id": "group_lunch",
+          "text": "三人で使える休憩場所から印をつける",
+          "next": "message",
+          "effect": "shiftRest"
+        }
+      ]
+    },
+    {
+      "id": "message",
+      "chapter": 2,
+      "title": "紙の端の文字",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "4月30日",
+        "period": "夜"
+      },
+      "characterId": "caesar",
+      "rating": "general",
+      "tags": [
+        "caesar"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "送られてきた修正版を開くと、シーザーの細い線の間に、私が提案した道が入っていた。折り畳む位置には建物が重ならず、小さなベンチの印もある。私が歩いてみた時間のメモは、下の余白にきれいに収まっていた。"
+        },
+        {
+          "speaker": "caesar",
+          "text": "きみの書いたところは残した。これなら、眺めるだけで終わらない地図になりそうだ。明日、紙でも渡す。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "役に立ったという嬉しさより先に、覚えていてくれた、と思った。自分の字はもう残っていないのに、紙の中へ入れてもらったものがある。私は画像を大きくし、端に小さく付いた二人分の作業メモを見た。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "glad",
+          "text": "私の好きなところ、覚えててくれて嬉しい",
+          "next": "draft",
+          "effect": "messageHeart",
+          "replyVariants": [
+            {
+              "text": "きみが自分で選んだ場所だからな。一度、一緒に座ってみたいと思っていた。",
+              "when": {
+                "flags": [
+                  "ownPlace"
+                ]
+              }
+            },
+            {
+              "text": "一緒に作っているんだ。忘れるわけがないだろう。"
+            }
+          ],
+          "lockRoute": "caesar"
+        },
+        {
+          "id": "keep",
+          "text": "途中の案も、捨てずに見せてほしい",
+          "next": "draft",
+          "effect": "messageListen",
+          "replyVariants": [
+            {
+              "text": "あまり格好のいいものじゃないぞ。……分かった。取っておく。"
+            }
+          ],
+          "lockRoute": "caesar"
+        },
+        {
+          "id": "check",
+          "text": "ありがとう。明日、もう一度歩いて確かめるね",
+          "next": "draft",
+          "effect": "messageDaily",
+          "replyVariants": [
+            {
+              "text": "付き合う。前より楽に歩けるはずだ。"
+            }
+          ],
+          "lockRoute": "caesar"
+        }
+      ],
+      "message": true
+    },
+    {
+      "id": "draft",
+      "chapter": 2,
+      "title": "消し跡のある紙",
+      "location": "学内の空き教室",
+      "storyTime": {
+        "date": "5月9日",
+        "period": "夕方"
+      },
+      "characterId": "caesar",
+      "rating": "general",
+      "tags": [
+        "caesar"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "空き教室へ入ると、シーザーは完成稿の下へ何かを滑り込ませた。私が椅子を引いた拍子に、下の紙が一枚床へ落ちる。拾った紙には線が何本も重なり、消した跡で表面が少し毛羽立っていた。あの滑らかな地図になる前に、こんなに迷っていたのだと初めて知った。"
+        },
+        {
+          "speaker": "caesar",
+          "text": "それは失敗した方だ。見せるなら、ちゃんとできたものにしたい。"
+        },
+        {
+          "speaker": "player",
+          "text": "私は、こっちも見たいよ。どこを迷ったのか、シーザーから聞きたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "返そうとしても、シーザーはすぐには受け取らなかった。椅子を引いて私の隣へ座り、一本だけ濃く残った線を指す。自分の案を悪く言う時の口調には、他人に言われたくなさそうな意地がある。私は先に褒めて済ませず、その線の話を聞いた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "keep_draft",
+          "text": "消し跡の紙を預かり、「これも好き」と目を見て言う",
+          "next": "delivery",
+          "effect": "walkClose",
+          "setFlags": [
+            "keptDraft"
+          ]
+        },
+        {
+          "id": "compare",
+          "text": "完成稿と並べて、変えたところを確かめる",
+          "next": "delivery",
+          "effect": "walkHome"
+        }
+      ]
+    },
+    {
+      "id": "delivery",
+      "chapter": 2,
+      "title": "迷わず着ける",
+      "location": "学内の案内スペース",
+      "storyTime": {
+        "date": "5月18日",
+        "period": "昼"
+      },
+      "characterId": "caesar",
+      "rating": "general",
+      "tags": [
+        "caesar"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "印刷した地図を折る作業に、花京院先輩も手を貸してくれた。最初の一枚で私が折る位置を間違えると、シーザーが横から直しかける。私は別の一枚を花京院先輩に渡し、手元の紙を自分で折り直した。シーザーは途中で手を引き、次の紙をこちらへ滑らせた。"
+        },
+        {
+          "speaker": "kakyoin",
+          "text": "二人で歩いた道なら、使う人にも伝わると思うよ。ここ、休む場所までの距離が書いてあるのがいいね。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "人が地図を持って出ていくたびに、シーザーは少し背筋を伸ばした。戻ってきた人が、迷わずベンチへ着けたと話してくれた時、彼は私を見た。得意そうな顔だったので、私も同じくらい得意な顔を返した。"
+        },
+        {
+          "speaker": "caesar",
+          "text": "歩き直してよかったな。……次は、きみの分を一枚取っておこう。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "our_copy",
+          "text": "「二人で使う一枚も欲しい」と頼む",
+          "next": "home",
+          "effect": "conferenceClose"
+        },
+        {
+          "id": "finished",
+          "text": "残りを片づけ、みんなで完成を喜ぶ",
+          "next": "home",
+          "effect": "conferencePractical"
+        }
+      ]
+    },
+    {
+      "id": "home",
+      "chapter": 3,
+      "title": "きれいにしきれない部屋",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "5月18日",
+        "period": "夜"
+      },
+      "characterId": "caesar",
+      "rating": "general",
+      "tags": [
+        "caesar"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "完成のお祝いに、帰り道で買ったものを私の家で食べることにした。着いてから机の上の課題を慌てて寄せていると、シーザーは玄関で靴を揃えたまま、まだ部屋へ入らずに待っていた。完璧に片づけるから少し待って、と言った自分が、どこかで聞いた言い方をしていると気づく。"
+        },
+        {
+          "speaker": "caesar",
+          "text": "机に二人分の場所があればいい。きみの部屋を採点しに来たんじゃあない。"
+        },
+        {
+          "speaker": "player",
+          "text": "じゃあ、残りは見なかったことにして。……お皿、こっちから取ってもらっていい？"
+        },
+        {
+          "speaker": "narrator",
+          "text": "頼むと、シーザーは私が示した棚へ向かった。自分の家ではないから、一つずつ確かめている。いつも自然に世話を焼く人が、今日は私の部屋の使い方を訊いてくる。食べ終えたあとも、その声を聞いていたくなった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "stay",
+          "text": "「今夜、ここで一緒にいてほしい」と伝える",
+          "next": "consent",
+          "effect": "hotelInvite",
+          "when": {
+            "min": {
+              "trust": 45,
+              "desire": 12
+            }
+          }
+        },
+        {
+          "id": "talk",
+          "text": "食器を片づけながら、また来てほしいと伝える",
+          "next": "later",
+          "effect": "hotelTalk"
+        },
+        {
+          "id": "see_you",
+          "text": "次は外で遊ぼうと約束して、見送る",
+          "next": "later",
+          "effect": "homeRest"
+        }
+      ]
+    },
+    {
+      "id": "consent",
+      "chapter": 3,
+      "title": "あなたにいてほしい",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "5月18日",
+        "period": "夜"
+      },
+      "characterId": "caesar",
+      "rating": "general",
+      "tags": [
+        "caesar"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私が一緒にいてほしいと言うと、シーザーは帰り支度を止めた。鞄を床へ戻し、私の前で立ち止まる。普段の気障な言葉が返ってこないので、言ったことが急に自分の胸へ届いた。"
+        },
+        {
+          "speaker": "caesar",
+          "text": "おれも、きみに触れたい。今夜はここにいたいと思っている。だが、恋人になる約束とは別に、きみの気持ちを聞きたい。"
+        },
+        {
+          "speaker": "player",
+          "text": "私も、触れてほしい。途中でやめたくなったら言うね。シーザーも、嫌なことは言ってほしい。"
+        },
+        {
+          "speaker": "caesar",
+          "text": "ああ。どちらがやめたいと言っても、そこで止めよう。やっぱり帰ってほしい、でも構わない。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "自分の部屋なのに、シーザーが立っているところだけ少し違って見えた。私は近くの椅子を脇へ寄せ、彼へ向かう場所を空ける。それでも最後の一歩は、言葉を返してからにした。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「一緒にいたい」と答え、手を差し出す",
+          "next": "night",
+          "effect": "consent",
+          "setFlags": [
+            "consented",
+            "hadNight"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「やっぱり、今日はここまでにしたい」と伝える",
+          "next": "later",
+          "effect": "walkHome"
+        }
+      ]
+    },
+    {
+      "id": "night",
+      "chapter": 3,
+      "title": "紙より近いところ",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "5月18日",
+        "period": "夜"
+      },
+      "characterId": "caesar",
+      "rating": "fade",
+      "tags": [
+        "caesar"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "差し出した手を取られて、私はシーザーへ近づいた。顔を上げると、彼が先に少し身を屈める。唇が触れたあと、どんな顔をすればいいか分からず笑ってしまった。シーザーも目を細め、私の手を握り直した。"
+        },
+        {
+          "speaker": "caesar",
+          "text": "そんな顔をされたら、格好つけている場合じゃなくなるな。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "もっと近くにいて、と私から伝えた。シーザーの腕へ手を添え、寝室の方へ案内する。机に置いた地図は畳んだままで、今日はもう広げなくてよかった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝、身支度を済ませて部屋へ戻ると、シーザーが食器棚の前で振り返った。昨日訊いた場所をもう一度確かめるので、私は隣へ行って皿を出した。何でも分かっているような顔ではない彼と、自分の家の朝を迎えた。",
+          "storyTime": {
+            "date": "5月19日",
+            "period": "朝"
+          }
+        },
+        {
+          "speaker": "caesar",
+          "text": "また会いたい。昼に遊ぶのも、こうして夜を過ごすのも。きみは、どうしたい？"
+        }
+      ],
+      "choices": [
+        {
+          "id": "again",
+          "text": "友達のまま、また互いに望む夜に会いたいと答える",
+          "next": "later",
+          "effect": "messageBoundaries",
+          "setFlags": [
+            "ongoing"
+          ]
+        },
+        {
+          "id": "more",
+          "text": "また会いたいし、前より好きになったと伝える",
+          "next": "later",
+          "effect": "messageAgain",
+          "setFlags": [
+            "ongoing"
+          ]
+        },
+        {
+          "id": "daytime",
+          "text": "次からは昼に遊ぶ友達でいたいと答える",
+          "next": "later",
+          "effect": "messageDaily",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ],
+      "when": {
+        "flags": [
+          "consented"
+        ]
+      }
+    },
+    {
+      "id": "later",
+      "chapter": 4,
+      "title": "折り目の先の道",
+      "location": "学内の小さなベンチ",
+      "storyTime": {
+        "date": "6月10日",
+        "period": "夕方"
+      },
+      "characterId": "caesar",
+      "rating": "general",
+      "tags": [
+        "caesar"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "その後も昼に遊び、互いに会いたいと伝えた夜には二人で過ごした。私の家の日も、シーザーの家の日もあった。朝に別れてから、昨夜言いそびれた冗談を送る。地図が完成する前には知らなかったやりとりが、少しずつ増えていった。",
+          "when": {
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "昼に遊ぶ友達でいたいと伝えてから、シーザーは明るい時間の待ち合わせへ変えてくれた。最初は少しぎこちなかったけれど、私が坂道の文句を言うと、変わらないなと笑った。その返事に、私も顔を上げられた。",
+          "when": {
+            "flags": [
+              "hadNight",
+              "endedNight"
+            ],
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "地図ができてからも、シーザーとは何度か街を歩いた。どちらかが見たいものに付き合い、道が違えば言い合いになる。課題のために会う理由はなくなったのに、次の約束は残った。",
+          "when": {
+            "notFlags": [
+              "hadNight"
+            ]
+          }
+        },
+        {
+          "speaker": "caesar",
+          "text": "きみが選んだ場所で、少し休もう。今日は急いで直す線もない。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "小さなベンチへ並んで座ると、私たちが作った地図が二人の間に置かれた。折り目は増えている。最初にきれいだと思った紙とは違うけれど、今はこちらの方を持って歩きたかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "tell",
+          "text": "シーザーに、話したいことがあると伝える",
+          "next": "confess_player",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 35,
+              "romanceChar": 25
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "listen",
+          "text": "シーザーの言葉の続きを待つ",
+          "next": "confess_caesar",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 20,
+              "romanceChar": 35
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "rough_map",
+          "text": "預かった下描きを返し、二人のための地図を作りたいと言う",
+          "next": "unfinished",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 35,
+              "romanceChar": 30,
+              "comfort": 20
+            },
+            "flags": [
+              "differentTaste",
+              "ownPlace",
+              "keptDraft"
+            ],
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "nights",
+          "text": "親密な友人として、これからも会いたいと伝える",
+          "next": "fwb_choice",
+          "when": {
+            "min": {
+              "trust": 50,
+              "desire": 25,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "love",
+          "text": "「今は、シーザーの恋人になりたい」と伝える",
+          "next": "end_fwb_love",
+          "when": {
+            "min": {
+              "trust": 60,
+              "romancePlayer": 50,
+              "romanceChar": 40,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "friends",
+          "text": "「これからも友達として、気楽に会いたい」と伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_player",
+      "chapter": 4,
+      "title": "きれいに言えなくても",
+      "location": "学内のベンチ",
+      "storyTime": {
+        "date": "6月10日",
+        "period": "夕方"
+      },
+      "characterId": "caesar",
+      "rating": "general",
+      "tags": [
+        "caesar"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "好きだと伝えたい、と言うつもりが、シーザー、と名前だけ呼んで止まった。彼はこちらを向き、軽く笑いかける。その顔を見ていたら、いつもの気の利いた返事を待っている自分に気づいた。今日は私から言いたいのに。"
+        },
+        {
+          "speaker": "player",
+          "text": "うまく言えなくても、最後まで聞いて。きれいなところだけ見て好きになったわけじゃないの。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "シーザーの笑みが少し消えた。怒ったのではなく、こちらを見る目が変わる。消し跡のある紙を机に並べた時みたいに、私は今ある言葉をそのまま出した。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "like",
+          "text": "「好き。私と付き合ってほしい」と伝える",
+          "next": "end_love_a",
+          "effect": "messageHeart"
+        },
+        {
+          "id": "beside",
+          "text": "「格好つけてる時も、意地張ってる時も、恋人として隣にいたい」と伝える",
+          "next": "end_love_a",
+          "effect": "messageHeart"
+        },
+        {
+          "id": "friends",
+          "text": "「今は友達として、そばにいたい」と伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_caesar",
+      "chapter": 4,
+      "title": "飾らない一言",
+      "location": "学内のベンチ",
+      "storyTime": {
+        "date": "6月10日",
+        "period": "夕方"
+      },
+      "characterId": "caesar",
+      "rating": "general",
+      "tags": [
+        "caesar"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "シーザーは地図を一度畳み、鞄へしまった。手持ち無沙汰になった指が膝の上で止まる。いつもなら冗談を言うところなのに、その日は私の顔をじっと見た。"
+        },
+        {
+          "speaker": "caesar",
+          "text": "きみが好きだ。友人として会うだけでは、足りなくなった。おれと付き合ってほしい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "普段はもっと気障なことを平気で言う人なのに、その短い言葉だけで返事が遅れた。シーザーが少し眉を寄せ、笑いに変えようとしかける。その前に私は、ちゃんと聞こえてる、と小さく答えた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「私も好き。恋人になりたい」と答える",
+          "next": "end_love_b",
+          "effect": "messageHeart"
+        },
+        {
+          "id": "no",
+          "text": "「恋人にはなれない。友達でいたい」と答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "refusedConfession",
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "unfinished",
+      "chapter": 4,
+      "title": "まだ引いていない線",
+      "location": "学内のベンチ",
+      "storyTime": {
+        "date": "6月10日",
+        "period": "夕方"
+      },
+      "characterId": "caesar",
+      "rating": "general",
+      "tags": [
+        "caesar"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "預かっていた下描きを返すと、シーザーは少し驚いた顔をした。捨てずに持っていたのか、と訊かれ、返す約束だったでしょうと笑う。綺麗にできた地図の裏へそれを重ね、私は二人で行きたい場所を、これから足していきたいと伝えた。"
+        },
+        {
+          "speaker": "caesar",
+          "text": "人に配るためじゃなく、二人のためのものか。……それなら、見栄えだけで道を選ぶわけにはいかないな。"
+        },
+        {
+          "speaker": "player",
+          "text": "私も、遠慮してついていくだけにはしない。歩けない日は言うし、行きたい道も言う。シーザーにも、そうしてほしい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼は紙の端へ、まだ名前のない道を一本引いた。初めて見る少し迷った線だった。私の方へペンを渡してから、まっすぐ顔を見てくる。"
+        },
+        {
+          "speaker": "caesar",
+          "text": "これから先も、きみと歩きたい。格好よく案内できる日ばかりじゃない。それでも、おれの恋人として、一緒に道を足してくれるか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私はペンを握り、彼の線の先へ短い線をつないだ。上手に描けなかったところを消さずに残す。シーザーがそれを見て、ふっと笑った。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "together",
+          "text": "「うん。私たちの地図を、恋人として一緒に作っていきたい」",
+          "next": "end_special",
+          "effect": "messageHeart"
+        },
+        {
+          "id": "friends",
+          "text": "「今は、友達として一緒に歩きたい」と答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "refusedConfession",
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fwb_choice",
+      "chapter": 4,
+      "title": "帰り道も知っている",
+      "location": "学内のベンチ",
+      "storyTime": {
+        "date": "6月10日",
+        "period": "夕方"
+      },
+      "characterId": "caesar",
+      "rating": "general",
+      "tags": [
+        "caesar"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人になる約束は今はしたくないけれど、望む夜には触れ合いたい。言い終えると、私は自分の膝を見た。シーザーの返事を待ちながら、昼に言い合って笑ったことも、朝に食器の場所を教えたことも思い出していた。"
+        },
+        {
+          "speaker": "caesar",
+          "text": "おれも、きみとそうして会いたい。泊まるかどうかも、触れるかどうかも、その時に聞こう。途中で気が変わったら、言ってくれ。おれもそうする。"
+        },
+        {
+          "speaker": "player",
+          "text": "うん。私からも誘うね。昼に遊ぶ約束も、なくしたくない。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "なくすものか、と返ってきた声に顔を上げた。シーザーは地図を鞄へ入れ、今日の食事の話を始める。私は自分が行きたい店を挙げた。彼の知っている道と、私が選ぶ行き先を合わせて、ベンチから立った。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "continue",
+          "text": "親密な友人として、次に会う日を決める",
+          "next": "end_fwb",
+          "effect": "messageBoundaries"
+        },
+        {
+          "id": "daytime",
+          "text": "これからは、昼に遊ぶ友達でいたいと伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "end_friend",
+      "chapter": 5,
+      "title": "余白には三人分",
+      "location": "学食",
+      "storyTime": {
+        "date": "6月20日",
+        "period": "昼"
+      },
+      "characterId": "caesar",
+      "rating": "general",
+      "tags": [
+        "caesar"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人にはなれないと答えたあと、シーザーは少し顔を逸らした。分かった、と言われ、すぐに笑ってもらおうとはしなかった。数日後、ジョセフと昼を食べるけれど来るか、と届いた連絡に、私も行くと返した。",
+          "when": {
+            "flags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "昼に遊ぶ友達でいたいと話してから、夜の誘いは来なくなった。次に会うのはみんなと食べる昼にした。あの朝のことを消さずに、それでも今日は自分から挨拶できた。",
+          "when": {
+            "flags": [
+              "hadNight",
+              "endedNight"
+            ],
+            "notFlags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "友達としてまた歩こうと約束し、その前に三人で昼を食べることになった。私が学食へ着くと、シーザーとジョセフはもう地図を広げていた。",
+          "when": {
+            "notFlags": [
+              "hadNight",
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "joseph",
+          "text": "この辺に安い店、足しとこうぜ。散歩だけじゃ腹は膨れねえだろ。"
+        },
+        {
+          "speaker": "caesar",
+          "text": "店名を書くなら、せめて読める字で書け。きみまで真似しなくていいからな。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私が笑いながら細いペンを出すと、シーザーは紙の端を押さえてくれた。綺麗な完成稿の余白へ、三人分の昼食の候補が増えていく。今度は最初に皿の場所を空けてから、私は次の店の名前を書いた。"
+        }
+      ],
+      "choices": [],
+      "ending": "FRIEND"
+    },
+    {
+      "id": "end_love_a",
+      "chapter": 5,
+      "title": "隣に置いた返事",
+      "location": "学内のベンチと街路",
+      "storyTime": {
+        "date": "6月10日",
+        "period": "夕方"
+      },
+      "characterId": "caesar",
+      "rating": "general",
+      "tags": [
+        "caesar"
+      ],
+      "body": [
+        {
+          "speaker": "caesar",
+          "text": "おれも好きだ。付き合おう。……先に言わせてしまったな。もっと気の利いたことを考えていたんだが。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "今のでいい、と答えたら、シーザーの顔が少し崩れた。私が手を差し出すと、今度は迷わず取ってくれる。立ち上がった彼と並び、先ほどまで隣に置いていた鞄を、空いている手へ持ち替えた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "休日に街を歩くと、シーザーは店先の細かい飾りまでよく見つけた。私も自分が気づいたものを指し、二人で何度も立ち止まる。行き先へ着くまでずいぶんかかったけれど、急いでいたわけでもない。",
+          "storyTime": {
+            "date": "6月21日",
+            "period": "昼"
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "まだ歩けるか、と訊かれ、今日はもう少し、と答えた。彼が嬉しそうに次の角を指す。案内されるだけではない場所を、恋人として歩いている。その手を少し引いて、今度は私が気になった店へ向かった。"
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_A"
+    },
+    {
+      "id": "end_love_b",
+      "chapter": 5,
+      "title": "いつもの顔が赤くなる",
+      "location": "学内のベンチと駅前",
+      "storyTime": {
+        "date": "6月10日",
+        "period": "夕方"
+      },
+      "characterId": "caesar",
+      "rating": "general",
+      "tags": [
+        "caesar"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私も好きだと答えると、シーザーは目を伏せ、短く息を吐いた。その横顔が少し赤く見えたので、つい覗き込む。見なくていい、と言われたけれど、さっきまでずっと私を見ていたのは彼の方だった。"
+        },
+        {
+          "speaker": "player",
+          "text": "今度は私にも見せて。シーザーが照れてるところ、嬉しいから。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼は困ったように笑ってから、私の手を取った。何か言い返されると思っていたので、私の方が黙ってしまう。隣へ並んで歩くと、いつもの道にまだ慣れないものが一つ増えた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "次に駅前で会うと、シーザーは私に気づいてすぐ歩いてきた。気障な挨拶を半分まで言い、私が笑ったところで自分も笑う。続きを聞くより先に手を取って、今日はどこへ行くのかと尋ねた。",
+          "storyTime": {
+            "date": "6月21日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_B"
+    },
+    {
+      "id": "end_fwb",
+      "chapter": 5,
+      "title": "鍵はそれぞれの鞄に",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "6月20日",
+        "period": "夜"
+      },
+      "characterId": "caesar",
+      "rating": "fade",
+      "tags": [
+        "caesar"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "今日は私から誘った。買ってきた夕食を机へ広げていると、シーザーが飲み物を冷蔵庫へ入れていいかと訊く。昨日まで別々の生活をしていた人が、今夜ここにいる。そのことが、何度会っても少し嬉しい。"
+        },
+        {
+          "speaker": "player",
+          "text": "今夜、泊まっていってほしい。シーザーは？"
+        },
+        {
+          "speaker": "caesar",
+          "text": "おれもそうしたい。明日は昼に出るつもりだが、それでいいか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "頷いてから食事をした。食べ終えた皿を洗うのは私で、シーザーが拭いてくれた。片づけが終わると、私から手を取る。昼には遠慮なく言い合う人の近くで、今夜の返事をもう一度顔に見た。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "昼、シーザーが鞄の中の鍵を確かめる間に、私は残った飲み物を手渡した。次はそちらへ遊びに行きたいと言うと、食べたいものを考えておけと返ってくる。扉を開けたあとも、次の夜の話だけでは終わらず、昼の寄り道の候補が増えた。",
+          "storyTime": {
+            "date": "6月21日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB"
+    },
+    {
+      "id": "end_fwb_love",
+      "chapter": 5,
+      "title": "折り目を重ねて",
+      "location": "学内のベンチと街路",
+      "storyTime": {
+        "date": "6月10日",
+        "period": "夕方"
+      },
+      "characterId": "caesar",
+      "rating": "general",
+      "tags": [
+        "caesar"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人になりたいと言うと、シーザーは私の手元ではなく顔を見た。膝の地図を折りかけた手が止まる。彼が私の部屋で食器の場所を訊いた朝も、二人で買い物をした夕方も思い出した。そこへまだ増やしたいものがあって、私は彼を見返した。"
+        },
+        {
+          "speaker": "caesar",
+          "text": "おれも、きみと付き合いたい。帰ってから次に会う日を考えるのは、もう夜だけじゃなかった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私も同じ、と答えて肩を寄せた。シーザーは少しこちらへ体を向け、私の指を握る。何度も知った近さに、初めてする約束が重なった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "次に会った昼、彼の鞄から、折り目の増えた地図が出てきた。まだ使ってるの、と訊くと、きみと作ったんだからな、と当たり前のように返ってくる。私は地図を畳んで彼へ返し、今度は手をつないで歩き始めた。",
+          "storyTime": {
+            "date": "6月21日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB_TO_LOVE"
+    },
+    {
+      "id": "end_special",
+      "chapter": 5,
+      "title": "消し跡のある約束",
+      "location": "街の小さな公園",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "昼"
+      },
+      "characterId": "caesar",
+      "rating": "general",
+      "tags": [
+        "caesar"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人として二人の地図を作ろうと約束してから、初めて知らない街へ出かけた。道を一つ間違え、目的の建物はその日閉まっていた。シーザーは案内の紙を確かめ、珍しく不機嫌な顔を自分の予定へ向けた。私はその腕に軽く触れ、向こうの公園で休もうと指した。"
+        },
+        {
+          "speaker": "caesar",
+          "text": "初めからきれいに案内できれば、もっとよかったんだがな。"
+        },
+        {
+          "speaker": "player",
+          "text": "今日は、ここまで来たからこの場所を見つけたんだよ。私、こっちも地図に入れたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "シーザーは少し黙ってから、鞄の下描きを広げた。私が足した不格好な線の先へ、今日歩いた道をつなぐ。間違えたところを消そうとしたので、そのままにして、と頼んだ。彼は私を見て、ペンの先を浮かせた。"
+        },
+        {
+          "speaker": "caesar",
+          "text": "分かった。次に間違えたら、おれから描き足す。きみも遠慮するな。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私は頷き、紙を押さえていた彼の手へ自分の手を重ねた。完成させて誰かに見せるためのものではなく、何度でも一緒に開く地図だった。休んだらどちらへ行こうかと聞くと、今度は二人で別の道を指して笑った。"
+        }
+      ],
+      "choices": [],
+      "ending": "SPECIAL"
+    }
+  ]
+}

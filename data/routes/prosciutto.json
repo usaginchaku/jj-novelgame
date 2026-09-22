@@ -1,0 +1,1354 @@
+{
+  "id": "prosciutto",
+  "title": "プロシュート — 次は私が決める",
+  "intro": "卒業して、すべての指導や評価から離れたあと。\n街で再会した人と、今度は自分の予定を選んでいく。",
+  "startEvent": "reunion",
+  "character": {
+    "name": "プロシュート",
+    "adult": true,
+    "heightCm": 178,
+    "heightBasis": "二次資料JoJo Wikiの身長欄と出典注記を照合。黄金の風アニメ設定表CR200-00。書籍・設定表現物は未照合。AUで同値を採用。",
+    "profile": "厳格な実行主義。後輩の成長を求める。自分も代償を払う覚悟。",
+    "personality": [
+      "厳格な実行主義",
+      "後輩の成長を求める",
+      "自分も代償を払う覚悟"
+    ],
+    "speech": {
+      "firstPerson": "オレ",
+      "addressing": "主人公は姓/おまえ。私的な距離でも命令への服従を要求しない。",
+      "tone": "叱る理由を具体的に示す。語尾は感情と相手に合わせる。",
+      "habits": [
+        "叱る理由を具体的に示す",
+        "〜しろ、〜だぜを要所に",
+        "褒める時も短く明瞭"
+      ],
+      "signaturePhrases": [],
+      "signatureNote": "日常の固定口癖は採用しない。象徴的な原作台詞と普段の話し方を混同せず、名台詞を貼り付けない。",
+      "avoid": [
+        "命令への服従を恋愛条件にする",
+        "万能な兄貴",
+        "脅す名台詞を日常へ転用"
+      ]
+    },
+    "referenceSection": "docs/CHARACTER_REFERENCE.md#cast-prosciutto"
+  },
+  "au": {
+    "role": "助教（確定）。恋愛は卒業後かつ全利害終了後",
+    "routeEnabled": true,
+    "addressing": [
+      {
+        "text": "{player.lastName}"
+      }
+    ]
+  },
+  "endingDescriptions": {
+    "FRIEND": {
+      "title": "待ち合わせの輪の中",
+      "description": "気兼ねなく誘い、違う好みも笑い合う。次の行き先を持ち寄る友達へ。"
+    },
+    "LOVE_A": {
+      "title": "私から呼ぶ",
+      "description": "私の言葉から始まった恋。迷わず進む人へ、私からも手を差し出す。"
+    },
+    "LOVE_B": {
+      "title": "迎えに来る人",
+      "description": "返事を待っていた人に、自分の望みを返す。待ち合わせが二人の楽しみになる。"
+    },
+    "FWB": {
+      "title": "次に残る夜",
+      "description": "望む夜は親密な友人として。昼の予定も自分の帰り道も、そのまま持っている。"
+    },
+    "FWB_TO_LOVE": {
+      "title": "もう一つの約束",
+      "description": "重ねた夜を否定せず、恋人として新しい待ち合わせを選ぶ。"
+    },
+    "SPECIAL": {
+      "title": "二人で持つ行き先",
+      "description": "互いを連れ出し、行き先を任せ合う。恋人とは違う、休日の相棒になる。"
+    }
+  },
+  "events": [
+    {
+      "id": "reunion",
+      "title": "待ち合わせではない午後",
+      "chapter": 1,
+      "location": "街の古書市",
+      "storyTime": {
+        "date": "5月10日",
+        "period": "昼"
+      },
+      "characterId": "prosciutto",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "背表紙を抜こうとした指の横から、別の手が一冊を押し戻した。隣まで来ていた人を見上げ、私は小さく息を止める。プロシュート先生は値札より先に、外れかけた表紙の角を見ていた。大学を卒業して一年になる。成績も履修も、指導や研究、推薦に関わることもすべて終わり、先生の署名をもらう用事はもう一つもない。"
+        },
+        {
+          "speaker": "prosciutto",
+          "text": "買うなら中も見ろ。表紙だけ立派でも、肝心なページが抜けてりゃ使い物にならねえ。"
+        },
+        {
+          "speaker": "player",
+          "text": "使うためじゃなくて、眺めたくて。……でも、抜けてたら嫌ですね。見てみます。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "言い返したつもりの声が、昔より楽に出た。先生は本を取らず、私が開くのを待っている。紙には薄く雨に濡れた跡があり、その波打つ端まで気に入ってしまった。店の人へ代金を渡すと、先生はようやく自分の選んだ本を出した。二人の包みが、同じ茶色の袋へ入れられかける。"
+        },
+        {
+          "speaker": "prosciutto",
+          "text": "別でいい。こいつはこいつで選んだんだ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "店先を離れると、通りの先に昼食の看板が見えた。挨拶だけならここで終われる。私は袋の底を支え直し、何を食べたいかを考えた。先生に聞く前に、自分の行きたい店を決めてみた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "invite",
+          "text": "「私、あの店へ行きます。一緒にどうですか」と誘う",
+          "next": "market",
+          "effect": "workTogether",
+          "setFlags": [
+            "ownInvitation"
+          ],
+          "lockRoute": "prosciutto"
+        },
+        {
+          "id": "company",
+          "text": "「本の話、もう少し聞きたいです」と隣へ並ぶ",
+          "next": "market",
+          "effect": "gameDate",
+          "lockRoute": "prosciutto"
+        }
+      ]
+    },
+    {
+      "id": "market",
+      "title": "引き返す道",
+      "chapter": 1,
+      "location": "川沿いの週末市",
+      "storyTime": {
+        "date": "5月17日",
+        "period": "昼"
+      },
+      "characterId": "prosciutto",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先週別れる前に、今度は川沿いの市へ行くと約束した。私は朝から寄りたい店を三つ決めてきたのに、一番楽しみにしていた露店は休みだった。貼り紙を見上げたまま黙ると、先生が私の持っていた地図を覗く。風に煽られた端を押さえる指が、私の指と少し離れて並んだ。"
+        },
+        {
+          "speaker": "prosciutto",
+          "text": "閉まってる店を見てても開かねえぞ。残りはどこだ。"
+        },
+        {
+          "speaker": "player",
+          "text": "二つ先です。でも、その前に川へ下りたいです。せっかく晴れたので。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先生は時計を見た。急かされるかと思った私の横で、もう階段の方を向いている。予定を変えたいと言うのは、怒られるための予告ではなかった。石段へ下りると、店のざわめきが頭の上へ残り、川面の光が靴先で揺れた。"
+        },
+        {
+          "speaker": "prosciutto",
+          "text": "なら行くぞ。戻る時に迷うなよ。オレは腹が減ってる。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私は笑って先に二段下りた。ついてくる靴音が止まると、振り返る前に少し待ちたくなる。先生は手すりの切れたところだけ私より前へ出て、それからまた同じ速さに戻った。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "lead",
+          "text": "戻る道は自分で選び、先生を次の店へ誘う",
+          "next": "showroom",
+          "effect": "shiftHelp",
+          "setFlags": [
+            "pickedWay"
+          ]
+        },
+        {
+          "id": "near",
+          "text": "川を見ている先生の隣に、もう少し立っている",
+          "next": "showroom",
+          "effect": "walkClose"
+        }
+      ]
+    },
+    {
+      "id": "showroom",
+      "title": "選び直した一枚",
+      "chapter": 1,
+      "location": "小さな写真展",
+      "storyTime": {
+        "date": "5月24日",
+        "period": "昼"
+      },
+      "characterId": "prosciutto",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先生が選んだ写真展は、駅から少し歩いた建物の二階にあった。壁を巡る速さが違うので、途中で何度か離れた。私は曇った窓の写真の前で長く足を止め、先に出口へ行ったはずの先生が戻ってきても、すぐには振り向かなかった。どこで撮ったのか分からない道なのに、明日もそこへ誰かが帰る気がした。"
+        },
+        {
+          "speaker": "prosciutto",
+          "text": "それか。オレは隣の方がいい。余計なものが少ねえ。"
+        },
+        {
+          "speaker": "player",
+          "text": "私は、この端の洗濯物が好きです。邪魔かもしれないけど、誰かが住んでるので。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先生は写真へ目を戻した。私の理由を言い換えたり、正しい見方へ直したりはしない。ただ一歩近くへ寄り、さっきは通り過ぎた角を見ている。展示室を出たあと、売店には二枚とも絵葉書があった。私は自分が選んだ方を取り、先生は違う一枚を取った。"
+        },
+        {
+          "speaker": "prosciutto",
+          "text": "次に見ても同じのを選ぶか、覚えとけよ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "袋を受け取る手を見ながら、またどこかへ行くつもりで話しているのだと思った。自分と違うものを気に入る人の横にいるのは、思ったより落ち着かない。けれど、その落ち着かなさをもう少し知りたかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "postcard",
+          "text": "自分の選んだ一枚を、次の外出のしおりにする",
+          "next": "message",
+          "effect": "homeTogether",
+          "setFlags": [
+            "keptDetour"
+          ]
+        },
+        {
+          "id": "tell",
+          "text": "「先生が戻ってきてくれたの、嬉しかったです」と言う",
+          "next": "message",
+          "effect": "walkClose"
+        }
+      ]
+    },
+    {
+      "id": "message",
+      "title": "次は私が決める",
+      "chapter": 1,
+      "location": "自分の部屋",
+      "storyTime": {
+        "date": "5月24日",
+        "period": "夜"
+      },
+      "characterId": "prosciutto",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "絵葉書を机に立てると、昼の照明より少し青く見えた。次は私が行き先を選ぶ番だ。案内を見比べるうち、先生に見せたらどんな顔をするだろうという基準が、一つ混じってきた。端末が鳴り、開いたばかりの予定表を閉じる。"
+        },
+        {
+          "speaker": "prosciutto",
+          "text": "来週の土曜は空いてる。行きたいところがあるなら、決まってから送れ。場所だけじゃなく、何時に会うかもな。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "せっかちな言い方を目で追って、笑ってしまった。いつか行きたい、で終わらせる気がないのだ。私は行き先を一つに絞り、その下へ少しだけ自分の言葉を足した。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "plan",
+          "text": "十一時、駅前で。私が選んだ店に付き合ってください",
+          "next": "missed",
+          "effect": "messageDaily",
+          "replyVariants": [
+            {
+              "text": "分かった。店の名前も送れ。楽しみにしてる。"
+            }
+          ]
+        },
+        {
+          "id": "miss",
+          "text": "決めました。行き先もですが、先生に会うのが楽しみです",
+          "next": "missed",
+          "effect": "messageHeart",
+          "replyVariants": [
+            {
+              "when": {
+                "min": {
+                  "romanceChar": 20
+                }
+              },
+              "text": "オレもだ。待ち合わせに遅れるなよ。話す時間が減る。"
+            },
+            {
+              "text": "そう言われたなら、予定は空けとく。場所を送れ。"
+            }
+          ]
+        }
+      ],
+      "message": true
+    },
+    {
+      "id": "missed",
+      "title": "十五分の遅れ",
+      "chapter": 2,
+      "location": "駅前から続く商店街",
+      "storyTime": {
+        "date": "5月31日",
+        "period": "昼"
+      },
+      "characterId": "prosciutto",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "止まった電車の中から連絡を送り、駅へ着いた時には約束を十五分過ぎていた。改札の外で先生は壁へ寄らずに立っていた。私が謝りながら近づくと、まず腕時計へ目が落ち、それから顔へ戻る。息を切らしたまま言い訳を続けかけて、私は一度口を閉じた。"
+        },
+        {
+          "speaker": "prosciutto",
+          "text": "連絡は来てた。遅れた分まで走って転ぶ気か。水、飲んでから行くぞ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "差し出されたのは、まだ封の切れていない小さな水だった。受け取りながら、待たせたことより先に自分が焦っていたことに気づく。予約した店には連絡できていた。先生は私に店の人への説明を任せ、私が話し終わると入口の重い扉を押さえた。"
+        },
+        {
+          "speaker": "player",
+          "text": "次は、一本早いのにします。でも今日は、このまま一緒に食べたいです。"
+        },
+        {
+          "speaker": "prosciutto",
+          "text": "そのために来たんだろ。オレもだ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "席へ着くと、水の瓶が鞄の中で軽く鳴った。予定どおりに運ばなかった日まで、なかったことにしなくてよかった。向かいから差し出されたメニューを受け取り、私は今日いちばん食べたかったものを指した。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "settle",
+          "text": "自分で頼み、待っていてくれたことに礼を言う",
+          "next": "supper",
+          "effect": "conferencePractical"
+        },
+        {
+          "id": "honest",
+          "text": "「会えなくなるかと思って、嫌だったんです」と話す",
+          "next": "supper",
+          "effect": "rehearse"
+        }
+      ]
+    },
+    {
+      "id": "supper",
+      "title": "休日の台所",
+      "chapter": 2,
+      "location": "プロシュートの自宅",
+      "storyTime": {
+        "date": "6月7日",
+        "period": "夕方"
+      },
+      "characterId": "prosciutto",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "食材の市で買いすぎた袋を見て、先生が自分の家で食べるかと訊いた。外で食べるつもりだった私は、少し迷ってから頷いた。教わりに行くのではない。そう思うほど肩へ力が入り、玄関では脱いだ靴を揃え直してしまう。先生はその間に窓を開け、台所へ袋を運んでいた。"
+        },
+        {
+          "speaker": "prosciutto",
+          "text": "突っ立ってるなら皿を出せ。そこだ。……何もしねえで待ちたいなら、それでもいい。"
+        },
+        {
+          "speaker": "player",
+          "text": "出します。今日は私の選んだものもあるので、盛りつけはやらせてください。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先生は戸棚の手前から二枚を渡し、残りは私に任せた。思ったより大きな皿に戸惑っていると、向こうではもう鍋に火が入っている。手順を説明する声はなく、湯気の向こうから、ときどき必要なものだけ訊かれた。私も味見の順を自分で決め、先に取りたそうな指を軽く避ける。"
+        },
+        {
+          "speaker": "prosciutto",
+          "text": "まだなのか。"
+        },
+        {
+          "speaker": "player",
+          "text": "あと少しです。先生こそ、待っててください。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "言い終わる前に笑ってしまった。先生は片眉を上げ、それでも手を引いた。皿を運ぶと向かいの椅子が引かれ、昼の店とは違う低い灯りの下で、二人分の食事が始まった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "share",
+          "text": "次に行きたい市の話をしながら食べる",
+          "next": "threshold",
+          "effect": "homeTogether",
+          "setFlags": [
+            "sharedTable"
+          ]
+        },
+        {
+          "id": "close",
+          "text": "「また、こうして二人で食べたいです」と伝える",
+          "next": "threshold",
+          "effect": "homeTalk"
+        }
+      ]
+    },
+    {
+      "id": "threshold",
+      "title": "玄関までの距離",
+      "chapter": 3,
+      "location": "プロシュートの自宅",
+      "storyTime": {
+        "date": "6月7日",
+        "period": "夜"
+      },
+      "characterId": "prosciutto",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "食器を洗って手を拭くと、帰る支度をするにはちょうどいい時間だった。先生は玄関へ置いた私の袋を持ち上げ、持ち手が切れかけているのを見つけた。別の袋へ入れ替える間、私はすぐそばで中身を押さえた。指が触れそうで触れない場所から、食後に使った石鹸の匂いがした。"
+        },
+        {
+          "speaker": "prosciutto",
+          "text": "これなら持つ。帰り道で落とすなよ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "渡された袋は、さっきよりずっと持ちやすかった。今夜の楽しさをそこへしまって帰ることもできる。私は持ち手へ指を通し、まだ上着を取らずに先生の顔を見た。何かを頼む時の返事を知っているつもりで、今ほしい返事だけは知らなかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "leave",
+          "text": "次の外出を約束して、今日は帰る",
+          "next": "weeks",
+          "effect": "walkTogether"
+        },
+        {
+          "id": "touch",
+          "text": "「まだ帰りたくないです。先生に触れてほしい」と伝える",
+          "next": "consent",
+          "effect": "hotelInvite",
+          "when": {
+            "min": {
+              "trust": 38,
+              "desire": 8
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "consent",
+      "title": "今、ここで選ぶ",
+      "chapter": 3,
+      "location": "プロシュートの自宅",
+      "storyTime": {
+        "date": "6月7日",
+        "period": "夜"
+      },
+      "characterId": "prosciutto",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先生は袋を机へ戻した。それから私の前へ来て、触れる寸前のところで立ち止まる。逃げる場所を探したのではなく、上着も靴もそこにあることを確かめた。帰れるままで、私はここへ残りたいと思っていた。"
+        },
+        {
+          "speaker": "prosciutto",
+          "text": "オレも触れたい。今夜、おまえと過ごしたい。だが、昔の先生に合わせて返事するな。"
+        },
+        {
+          "speaker": "player",
+          "text": "合わせてません。私がそうしたいんです。……途中で怖くなったら、止めてもいいですか。"
+        },
+        {
+          "speaker": "prosciutto",
+          "text": "いいに決まってる。オレも嫌なことは言う。恋人になる約束を、今夜の条件にする気もねえ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "短い答えを聞くと、次の言葉を探す呼吸が少し楽になった。待つ姿は、何を言っても同じなのではなかった。肩がわずかに張り、私を見る目は昼の店より動かない。それを見てから、自分の返事を選んだ。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「今夜は一緒にいたいです」と手を差し出す",
+          "next": "night",
+          "effect": "consent",
+          "setFlags": [
+            "mutualConsent",
+            "hadNight"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「やっぱり今日は帰ります」と上着を取る",
+          "next": "weeks",
+          "effect": "walkHome",
+          "setFlags": [
+            "contactDeclined"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "night",
+      "title": "呼び名のあとで",
+      "chapter": 3,
+      "location": "プロシュートの自宅",
+      "storyTime": {
+        "date": "6月7日",
+        "period": "夜"
+      },
+      "characterId": "prosciutto",
+      "rating": "fade",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "取られた手を少し引くと、先生が私の方へ一歩寄った。頬に触れる指を避けずにいると、名前を低く呼ばれる。返事をしようと開いた口が、笑う形になった。近くで見た目元には、私がこれまで遠くから見ていた厳しさが、そのまま残っていた。"
+        },
+        {
+          "speaker": "prosciutto",
+          "text": "どうした。"
+        },
+        {
+          "speaker": "player",
+          "text": "見たくなっただけです。もう少し、近くで。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先生の袖をつかみ、自分から顔を上げた。唇が触れたあと、背中へ回った手に頷いて応える。もう一度、今度は私から、と言う声が思ったより小さくなっても、聞き返されなかった。手をつないだまま、灯りの届く部屋を離れた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝、目が覚めると先生はまだ隣にいた。起きようとして毛布を引っかけた私へ、眠そうな目が向く。昨夜よりずっと無造作な髪を見つけ、笑うのをこらえきれなかった。",
+          "storyTime": {
+            "date": "6月8日",
+            "period": "朝"
+          }
+        },
+        {
+          "speaker": "prosciutto",
+          "text": "笑う前に水を飲め。……オレの分も、そこにある。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "二つ並んだコップを持って戻ると、片方を受け取る手が私の指に一度触れた。朝食のあとには自分の家へ帰る。その予定を話しながら、私はゆっくり水を飲んだ。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "home",
+          "text": "朝食を済ませ、自分の家へ帰る",
+          "next": "after_message"
+        }
+      ],
+      "when": {
+        "flags": [
+          "mutualConsent"
+        ]
+      }
+    },
+    {
+      "id": "after_message",
+      "title": "自分の鍵を回して",
+      "chapter": 3,
+      "location": "自分の部屋",
+      "storyTime": {
+        "date": "6月8日",
+        "period": "夜"
+      },
+      "characterId": "prosciutto",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "自宅の鍵を回した時、ようやく昨夜の服のままだと意識した。着替えて窓を開け、買い置きのパンを片づける。いつもの部屋へ戻っても、あの低い声は薄れなかった。連絡を入れようと端末を持つと、先に短い通知があった。"
+        },
+        {
+          "speaker": "prosciutto",
+          "text": "帰れたか。昨日の袋、底にもう一つ小さいのが入ってる。忘れてねえだろうな。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "覗くと、市で選んだ菓子が残っていた。二人で食べるのを忘れた一つを、私は袋から出した。次に会いたい理由へしてもいいし、今日は一人で食べてもいい。何を望んでいるか、返事にしてみた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "again",
+          "text": "また二人で夜を過ごしたいです。先生をもっと好きになりました",
+          "next": "weeks",
+          "effect": "messageAgain",
+          "setFlags": [
+            "fwbOngoing"
+          ],
+          "replyVariants": [
+            {
+              "text": "オレも会いたい。次も、そうしたくなったら言え。"
+            }
+          ]
+        },
+        {
+          "id": "nights",
+          "text": "恋人になる約束はせず、望む夜に会う友達でいたいです",
+          "next": "weeks",
+          "effect": "messageBoundaries",
+          "setFlags": [
+            "fwbOngoing"
+          ],
+          "replyVariants": [
+            {
+              "text": "分かった。オレもそれでいい。会うたびに、お互いの気持ちは聞く。"
+            }
+          ]
+        },
+        {
+          "id": "days",
+          "text": "嬉しかったです。でも次からは、昼に遊ぶ友達でいたいです",
+          "next": "weeks",
+          "effect": "messageDaily",
+          "setFlags": [
+            "endedIntimacy"
+          ],
+          "replyVariants": [
+            {
+              "text": "分かった。次は昼にしよう。あの市の続きが残ってる。"
+            }
+          ]
+        }
+      ],
+      "message": true
+    },
+    {
+      "id": "weeks",
+      "title": "決めた日、変えた日",
+      "chapter": 4,
+      "location": "街の広場",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "昼"
+      },
+      "characterId": "prosciutto",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "六月の間、私たちは二度、市の帰りに一緒に食事をした。そのうち互いが望んだ夜には泊まり、翌朝には別々の予定へ出かけた。誘う側は決まっていなかった。私が先に帰ると言った日も、先生は次の昼食の店を訊いた。",
+          "when": {
+            "flags": [
+              "fwbOngoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "六月の間、私たちは明るい時間に何度か会った。夜はそれぞれの家へ帰り、買ったものの使い道をあとから知らせた。近さを急いで変えなくても、次の行き先は増えていった。",
+          "when": {
+            "notFlags": [
+              "fwbOngoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "今日は私の選んだ屋外の市へ来ていた。売り切れの札を見て立ち止まった先生へ、少し離れた店を指す。予定どおりではないことに眉を寄せながらも、先生は私の向いた方へ歩き出した。私も先生の選んだ店で、買うつもりのなかった小さな缶を一つ買った。"
+        },
+        {
+          "speaker": "prosciutto",
+          "text": "次はどっちが決めるんだった。"
+        },
+        {
+          "speaker": "player",
+          "text": "私です。まだ、今日の続きがあるので。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先生は缶の入った袋を見て頷いた。その横へ並ぶたび、言い忘れたことが少しずつ増える。今なら立ち止まって話せる場所を、私は広場の端に見つけた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "usual",
+          "text": "次も、自分で決めた行き先を持ってくる",
+          "next": "decision",
+          "effect": "shiftRest"
+        },
+        {
+          "id": "date",
+          "text": "「行く場所より、一緒に行きたい人が決まってます」と言う",
+          "next": "decision",
+          "effect": "gameDate"
+        }
+      ]
+    },
+    {
+      "id": "decision",
+      "title": "選んだ人の方へ",
+      "chapter": 4,
+      "location": "広場のベンチ",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "prosciutto",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "袋を足元へ置くと、先生も腰を下ろした。人の流れが正面を横切り、二人の間には行き先の印刷された紙が残っている。私はそれを畳んだ。次にどこへ行くかなら何度も話した。今日はそれとは少し違う話も、ここに置いて帰りたかった。"
+        },
+        {
+          "speaker": "prosciutto",
+          "text": "言いたいことがあるなら聞く。店は逃げねえ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "急かすような言い方なのに、先生の手は袋へ伸びなかった。私は膝の上へ紙を置き、指の腹で折り目をなぞる。昔なら聞きたかった正解ではなく、今の自分が欲しいものを考えた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "tell",
+          "text": "「先生の恋人になりたいです」と、自分から伝える",
+          "next": "confess_player",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 40,
+              "romanceChar": 40
+            },
+            "notFlags": [
+              "fwbOngoing"
+            ]
+          }
+        },
+        {
+          "id": "listen",
+          "text": "私を見ている先生の言葉を待つ",
+          "next": "confess_char",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 20,
+              "romanceChar": 45
+            },
+            "notFlags": [
+              "fwbOngoing"
+            ]
+          }
+        },
+        {
+          "id": "nights",
+          "text": "望む夜にも会う、今の関係を続けたいと言う",
+          "next": "end_fwb",
+          "effect": "messageBoundaries",
+          "setFlags": [
+            "fwbConfirmed"
+          ],
+          "when": {
+            "flags": [
+              "fwbOngoing"
+            ],
+            "min": {
+              "trust": 55,
+              "intimacy": 35
+            }
+          }
+        },
+        {
+          "id": "change",
+          "text": "重ねた夜のあとで、恋人になりたいと話す",
+          "next": "change",
+          "when": {
+            "flags": [
+              "fwbOngoing"
+            ],
+            "min": {
+              "trust": 55,
+              "romancePlayer": 30,
+              "romanceChar": 30,
+              "intimacy": 35
+            }
+          }
+        },
+        {
+          "id": "partner",
+          "text": "行き先を交代で選び、互いを連れ出す相棒でいたいと言う",
+          "next": "pact",
+          "when": {
+            "flags": [
+              "ownInvitation",
+              "pickedWay",
+              "keptDetour",
+              "sharedTable"
+            ],
+            "notFlags": [
+              "fwbOngoing"
+            ],
+            "min": {
+              "trust": 45,
+              "comfort": 65,
+              "intimacy": 14
+            }
+          }
+        },
+        {
+          "id": "friends",
+          "text": "これからも、気兼ねなく誘える友達でいたいと言う",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "friendChosen",
+            "endedIntimacy"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_player",
+      "title": "言い直さない言葉",
+      "chapter": 4,
+      "location": "広場のベンチ",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "prosciutto",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "言ってから、呼び名だけが昔のままだと気づいた。先生は目を細め、返事をする前に一度息を吸った。私が照れ隠しに紙を開こうとすると、その手元を見て、今はそれをしまえ、と言う。私は笑えずに、けれど目を逸らさずに紙を畳み直した。"
+        },
+        {
+          "speaker": "prosciutto",
+          "text": "オレもおまえが好きだ。付き合いたい。……言われてから返すつもりじゃなかったがな。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "膝の上の指から力が抜けた。相手が誰でも同じ返事なのではない。その声を聞きたくて、今日まで何度も自分で予定を決めてきた。私は肩に掛かった髪を払い、もう一度だけはっきり言いたくなった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「はい。私と付き合ってください」と答える",
+          "next": "end_love_a",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「今は、友達として会い続けたいです」と伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "friendChosen",
+            "endedIntimacy"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_char",
+      "title": "予定にない返事",
+      "chapter": 4,
+      "location": "広場のベンチ",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "prosciutto",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私が言葉を探している間に、先生が姿勢を変えた。正面の人通りではなく、私の方へ体が向く。近づいた膝を見てから顔を上げると、いつもの迷いのない目が、今日は返事を待つ場所にあった。"
+        },
+        {
+          "speaker": "prosciutto",
+          "text": "おまえが好きだ。次からは恋人として会いたい。行き先を決めるのとは違う。ここは、オレ一人じゃ決められねえからな。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "まっすぐな言葉に胸が熱くなった。先生は続きを重ねなかった。私の膝に置いた紙が風で少し浮き、その角を自分の手で押さえる。答えを出すまでの間も、私はここに座っていてよかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「私も好きです。恋人になりたいです」と答える",
+          "next": "end_love_b",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「恋人にはなれません。友達でいたいです」と答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "declinedConfession",
+            "friendChosen",
+            "endedIntimacy"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "change",
+      "title": "帰る前に伝える",
+      "chapter": 4,
+      "location": "広場のベンチ",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "prosciutto",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "夜に会う約束の楽しさがなくなったのではない、と先に伝えた。先生は黙って聞いていた。朝になって自分の鍵を回すとき、次も同じように会いたいと思う。その次へ、今は別の言葉を足したかった。"
+        },
+        {
+          "speaker": "player",
+          "text": "好きです。先生の恋人として、これからも会いたいです。"
+        },
+        {
+          "speaker": "prosciutto",
+          "text": "オレもそう思ってた。今までの約束を、勝手に変える気はなかった。おまえが同じなら、今、変えたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "机も部屋の灯りもない、明るい場所で聞く声だった。先生の手がベンチの上で私の方へ向き、私はその手首のすぐそばへ指を置いた。触れ慣れたところに、まだ言わなければ伝わらない気持ちがあった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「はい。恋人になってください」と手を取る",
+          "next": "end_fwb_to_love",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "keep",
+          "text": "まだ恋人の約束はせず、親密な友達でいたいと言う",
+          "next": "end_fwb",
+          "effect": "messageBoundaries",
+          "setFlags": [
+            "fwbConfirmed"
+          ]
+        },
+        {
+          "id": "friends",
+          "text": "これからは昼に会う友達でいたいと言う",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedIntimacy",
+            "friendChosen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pact",
+      "title": "片方だけの地図ではなく",
+      "chapter": 4,
+      "location": "広場のベンチ",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "prosciutto",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先生の選んだ道に黙ってついていくのでも、自分の予定へ付き合わせるだけでもない。川へ下りた日や、違う写真を買った日を思い出した。私が先へ行く時、振り返ればそこにいてほしい。そして私も、先生の選んだものを見に行きたかった。"
+        },
+        {
+          "speaker": "player",
+          "text": "恋人になる約束とは違うんです。でも、行ってみたい場所を見つけたら、まず先生を誘いたい。先生にも、私を連れ出してほしいです。"
+        },
+        {
+          "speaker": "prosciutto",
+          "text": "いいぜ。だが、任せるって言って何も選ばねえのはなしだ。オレも、おまえの選んだ日には口だけ出す気はねえ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先生は畳んだ紙の裏を指した。次の場所を今決めろというのではなく、私が何か書くのを待っている。私は日付だけを書き、その隣へ先生のペンを置いた。行き先はまだ、二人とも知らなかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「次は私の番です。その次は、先生に任せます」と約束する",
+          "next": "end_special",
+          "effect": "homeTogether",
+          "setFlags": [
+            "dayPartners"
+          ]
+        },
+        {
+          "id": "friends",
+          "text": "時々、思いついた時に誘う友達でいたいと伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "friendChosen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "end_friend",
+      "title": "待ち合わせの輪の中",
+      "chapter": 5,
+      "location": "街の広場",
+      "storyTime": {
+        "date": "7月5日",
+        "period": "昼"
+      },
+      "characterId": "prosciutto",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人にはなれないと答えた日、先生は短く分かったと言った。すぐに笑う必要はなかった。数日たって届いた市の案内へ、友人も誘っていいですかと返すと、集合場所だけが迷いなく返ってきた。",
+          "when": {
+            "flags": [
+              "declinedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "これからどう会いたいかを話したあと、先生から次の市の案内が届いた。私は友人も誘っていいですかと返し、待ち合わせの時間を決めた。自分で選んだ距離のまま、また会える約束だった。",
+          "when": {
+            "notFlags": [
+              "declinedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "広場へ着くと、先生は既に案内板を見ていた。友人たちが遅れず来るかと訊かれ、さっき連絡があったと端末を振る。先生は頷き、私の持っている地図を覗いた。今日は違う入口から回るつもりだと話すと、口元が少し上がった。"
+        },
+        {
+          "speaker": "prosciutto",
+          "text": "前よりまともな道になったじゃねえか。迷ったら、おまえが聞けよ。"
+        },
+        {
+          "speaker": "player",
+          "text": "はい。先生が気になる店を見つけたら、ちゃんと言ってくださいね。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "やって来た友人へ手を振り、私は地図を開いた。先頭を決めるほどの列でもない。誰かが立ち止まれば一緒に店を覗き、また歩く。袋の中で買ったものが増えるたび、帰ってから話すことも増えた。"
+        }
+      ],
+      "choices": [],
+      "ending": "FRIEND"
+    },
+    {
+      "id": "end_love_a",
+      "title": "私から呼ぶ",
+      "chapter": 5,
+      "location": "広場から駅への道",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "prosciutto",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "頷き合って立つと、先生が私の袋を取ろうとした。半分は自分で持ちますと言って一つを残し、空いた方の手を差し出した。先生は一瞬だけその手を見て、しっかり握った。自分から言った言葉が、歩き始める指先まで残っている。"
+        },
+        {
+          "speaker": "prosciutto",
+          "text": "次は何だ。まだ言いたそうな顔してるぞ。"
+        },
+        {
+          "speaker": "player",
+          "text": "次も、私から誘っていいですか。先生に言われる前に。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "好きにしろ、と返った声には、少しだけ笑いが混じった。駅までの途中で絵葉書の店を見つける。今度は先生が足を止め、私を振り返った。どちらが先でも、もうそれが嬉しい。私はつないだ手を引き、まだ開いている入口へ向かった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "数日後、机に並べた二枚の葉書を写真に撮って送った。片方を選んだ理由は相変わらず違う。違うまま同じ場所へ置けることが、思っていたより私の暮らしを明るくした。",
+          "storyTime": {
+            "date": "7月2日",
+            "period": "夜"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_A"
+    },
+    {
+      "id": "end_love_b",
+      "title": "迎えに来る人",
+      "chapter": 5,
+      "location": "広場から駅への道",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "prosciutto",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "返事を聞いた先生は、ようやく肩の力を抜いた。決めた予定へ迷いなく進む人が、私の言葉だけは待っていた。そのことが嬉しくて、立ち上がる時に顔を見すぎてしまった。"
+        },
+        {
+          "speaker": "prosciutto",
+          "text": "そんなに見るな。……見たいなら、歩きながらにしろ。"
+        },
+        {
+          "speaker": "player",
+          "text": "危ないですよ、それ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "笑って言うと、先生も笑った。駅へ向かう人の流れの手前で、向こうから手が差し出される。私は袋を持ち替えてからそれを取った。待っていてもらう短い時間が、急いで埋めなくていいものに変わっていた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "次の休日、改札を出た私を見つけた先生が、先に歩き出さずに待っていた。何を食べるか訊く前に、私が会いたかったですと言う。先生は頷き、オレもだ、と近い声で返した。行き先はそのあと、二人で選んだ。",
+          "storyTime": {
+            "date": "7月5日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_B"
+    },
+    {
+      "id": "end_fwb",
+      "title": "次に残る夜",
+      "chapter": 5,
+      "location": "プロシュートの自宅",
+      "storyTime": {
+        "date": "7月5日",
+        "period": "夜"
+      },
+      "characterId": "prosciutto",
+      "rating": "fade",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人の約束をせず、望む夜にも会う。それを改めて確かめた次の週末、先生の家には私の好きな料理の匂いがした。靴を脱ぐ前に今夜は泊まりたいと伝えると、先生は私の顔を見て、自分もそうしたいと答えた。毎回来る道を覚えても、その返事は省かれなかった。"
+        },
+        {
+          "speaker": "prosciutto",
+          "text": "食べてからだ。冷めたのを食わせるために用意したんじゃねえ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "急いでいないことまで言い方がせっかちで、私は笑って鞄を下ろした。食事を終え、先生が食器を置いて戻るのを待つ。近づいた手へ自分から指を絡めると、今度は先生が足を止めた。私は頷き、もう一度その手を引いた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌朝、食卓へ置かれた二つの皿の間に、市の案内が一枚あった。次は昼に友人たちとも行く。その話をしながらパンを割り、私は今日帰る時刻を伝えた。先生は聞き終えてから、自分の分のコーヒーを注ぐ。夜の約束に、昼の私たちが隠れてしまうことはなかった。",
+          "storyTime": {
+            "date": "7月6日",
+            "period": "朝"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB"
+    },
+    {
+      "id": "end_fwb_to_love",
+      "title": "もう一つの約束",
+      "chapter": 5,
+      "location": "広場から駅への道",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "prosciutto",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先生は、私が置いた指ごと手を取った。夜に知った温かさが、広場の明るさの中で少し違って感じられた。呼び名を急に変える必要も、これまでの約束を間違いにする必要もなかった。恋人になりたいと言えた今日が、そこへ一つ重なる。"
+        },
+        {
+          "speaker": "prosciutto",
+          "text": "次は昼から空けとけ。いや、空いてる日を教えろ。オレも合わせる。"
+        },
+        {
+          "speaker": "player",
+          "text": "じゃあ、丸一日一緒にいたいです。行き先は半分ずつ決めませんか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先生はすぐに端末を出しかけ、私の手を握ったままだと気づいた。そのままもう少し、と頼むと、今決めなくても逃げねえよ、と返ってくる。歩き出してからも手は離れなかった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌週、二つの行き先を書いた紙を持って駅で会った。家へ向かう道だけではない場所に、私たちの待ち合わせが増える。最初の角では私が先に曲がり、その次は先生が私を呼んだ。",
+          "storyTime": {
+            "date": "7月5日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB_TO_LOVE"
+    },
+    {
+      "id": "end_special",
+      "title": "二人で持つ行き先",
+      "chapter": 5,
+      "location": "路地の小さな市場",
+      "storyTime": {
+        "date": "7月12日",
+        "period": "昼"
+      },
+      "characterId": "prosciutto",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "次の行き先を先生へ送ったあとも、私は一度だけ変更した。寄ってみたかった店が別の日なら開くと知ったからだ。謝る文を消し、理由と新しい待ち合わせを書いて送る。返ってきたのは、その日は空いているという短い返事だった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "市場の入口で会うと、先生は私が用意した紙を受け取った。先に地図を読もうとした手を、私は笑いながら止める。今日は私が案内しますと言うと、先生は紙を畳んで内ポケットへ入れた。"
+        },
+        {
+          "speaker": "prosciutto",
+          "text": "任せた。つまらなかったら、そう言うぞ。"
+        },
+        {
+          "speaker": "player",
+          "text": "はい。私も先生の番で、そう言います。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "角を曲がると、小さな屋台から甘い匂いがした。先生が思わずそちらを見たのを見つけ、予定にない店の前で立ち止まる。自分の決めた道に縛りつけたいわけではない。二人とも食べたいものを買い、紙袋をそれぞれの手に持った。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "帰りの駅で別れる前、先生が次は自分の番だと言った。何を見に行くのか訊いても、決まってから送る、としか返らない。私は楽しみにしていますと答えた。恋人とは違う約束が、私の休日に、まだ知らない行き先を一つ残した。"
+        }
+      ],
+      "choices": [],
+      "ending": "SPECIAL"
+    }
+  ],
+  "playerContext": {
+    "role": "大学卒業後・全ての履修/評価/指導/研究上の利害終了後",
+    "profile": "大学を卒業して一年。元の助教とは成績・履修・指導・研究・推薦等の利害をすべて終え、自分の暮らしを送っている。再会後の予定は、互いの意思で私的に選ぶ。"
+  }
+}

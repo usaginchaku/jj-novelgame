@@ -1,0 +1,1199 @@
+{
+  "id": "narancia",
+  "title": "ナランチャ — 曲が止まっても",
+  "intro": "同じ振りを覚えたのに、隣へ目をやるたび遅れてしまう。\n短い発表のあとにも、まだ一緒に踊りたい人がいた。",
+  "startEvent": "step",
+  "character": {
+    "name": "ナランチャ",
+    "adult": true,
+    "heightCm": 164,
+    "heightBasis": "二次資料JoJo Wikiの身長欄と出典注記を照合。原作572話プロフィール。旧170.5・アニメ170の異同あり。現行漫画値を採用。書籍・設定表現物は未照合。AUで同値を採用。",
+    "profile": "感情に率直。仲間への強い感謝。不器用でも譲れない思いは貫く。",
+    "personality": [
+      "感情に率直",
+      "仲間への強い感謝",
+      "不器用でも譲れない思いは貫く"
+    ],
+    "speech": {
+      "firstPerson": "オレ",
+      "addressing": "主人公は名前/おまえ。気軽な常体。年下・後輩とは未確定のため先輩呼びを固定しない。",
+      "tone": "喜怒哀楽が直接声に出る。語尾は感情と相手に合わせる。",
+      "habits": [
+        "喜怒哀楽が直接声に出る",
+        "納得するまで聞き返す",
+        "誘いも不満も回りくどくしない"
+      ],
+      "signaturePhrases": [],
+      "signatureNote": "日常の固定口癖は採用しない。象徴的な原作台詞と普段の話し方を混同せず、名台詞を貼り付けない。",
+      "avoid": [
+        "幼児化",
+        "無知を常に笑う",
+        "主人公が保護者になる"
+      ]
+    },
+    "referenceSection": "docs/CHARACTER_REFERENCE.md#cast-narancia"
+  },
+  "au": {
+    "role": "学年・専攻未確定。学生間の企画で出会う",
+    "routeEnabled": true,
+    "addressing": [
+      {
+        "text": "{player.lastName}"
+      }
+    ]
+  },
+  "endingDescriptions": {
+    "FRIEND": {
+      "title": "また、曲をかけよう",
+      "description": "踊る日も遊ぶ日も、自分から呼び合える友達。新しい曲を持ってきたら、まず隣へ手招きする。"
+    },
+    "LOVE_A": {
+      "title": "笑うところまで",
+      "description": "自分から好きを伝え、何度も返る嬉しい声を受け取る。踊らない日にも、つないだ手が少し揺れる。"
+    },
+    "LOVE_B": {
+      "title": "止まっていた手が",
+      "description": "率直な告白へ自分の好きも返す。手を取り、まだ何も始まっていない休日から笑い合う。"
+    },
+    "FWB": {
+      "title": "踊らない夜の足音",
+      "description": "互いが望む夜に会い、朝は自分の予定へ。帰ったあとも小さな節が残る、親密な友人。"
+    },
+    "FWB_TO_LOVE": {
+      "title": "今日、呼びたい名前",
+      "description": "一緒に過ごした夜をそのままに、今は恋人になりたいと伝え合う。曲が止まったあとも手を取る。"
+    },
+    "SPECIAL": {
+      "title": "一拍、追いかけて",
+      "description": "二人で苦労して作った一拍から、次の振りへ。拍手のない日にも続きを踊りたくなる相棒。"
+    }
+  },
+  "events": [
+    {
+      "id": "step",
+      "chapter": 1,
+      "title": "二人目の足音",
+      "location": "学内企画の練習室",
+      "storyTime": {
+        "date": "4月24日",
+        "period": "夕方"
+      },
+      "characterId": "narancia",
+      "rating": "general",
+      "tags": [
+        "narancia"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "学生企画で踊る人を募っていると聞き、見学のつもりで練習室へ入った。ナランチャは一曲の途中を何度もかけ直していた。学内で話したことはあったが、踊る姿を見るのは初めてだった。速すぎるように見えた足が、音の中では一つも余らない。"
+        },
+        {
+          "speaker": "narancia",
+          "text": "見てるだけか？　ここ、二人でやった方が面白えと思うんだ。やってみろよ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "できるか分からないと答えると、だから今やるんだろ、と手招きされた。荷物を壁際へ置き、彼の横へ立つ。肩の高さがほとんど変わらないから、鏡の中で目が合うと逃げ場がなかった。最初の一歩を真似しただけで、私は少し笑っていた。"
+        },
+        {
+          "speaker": "player",
+          "text": "もう一回。今、反対の足から出ちゃった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "ask",
+          "text": "彼の足元を見て、自分も曲の頭から試す",
+          "next": "turn",
+          "effect": "ask"
+        },
+        {
+          "id": "join",
+          "text": "一緒に企画へ参加し、まず短い振りを覚える",
+          "next": "turn",
+          "effect": "workTogether"
+        }
+      ]
+    },
+    {
+      "id": "turn",
+      "chapter": 1,
+      "title": "隣を見るところ",
+      "location": "学内企画の練習室",
+      "storyTime": {
+        "date": "5月1日",
+        "period": "夕方"
+      },
+      "characterId": "narancia",
+      "rating": "general",
+      "tags": [
+        "narancia"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "二人の動きが合ってきたところで、私は最後の向きだけ変えたいと話した。並んで正面を向くより、一度互いを見る方が楽しそうだったからだ。ナランチャは説明の途中で立ち、じゃあやってみようぜと曲を止めた。"
+        },
+        {
+          "speaker": "narancia",
+          "text": "そっち向いたら、おまえとぶつかんねえか。ここまで来てみろ。……あ、手はこっちに出せばいいのか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "ぶつからない間隔を確かめてから、ゆっくり一度動いた。振り返った先に彼の顔があり、私は足の続きを忘れる。ナランチャは笑わず、そこ止めるのもいいなと言った。失敗がそのまま振りになるなんて思わず、私はもう一度同じところで止まった。"
+        },
+        {
+          "speaker": "player",
+          "text": "ここで目が合うの、好きかも。音が戻ってくるまで、一拍だけ。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "face",
+          "text": "二人が顔を合わせる一拍を、振りの中へ残す",
+          "next": "miss",
+          "effect": "honest",
+          "setFlags": [
+            "ourPause"
+          ]
+        },
+        {
+          "id": "repeat",
+          "text": "足がぶつからない間隔を、二人で確かめる",
+          "next": "miss",
+          "effect": "compareNotes"
+        }
+      ]
+    },
+    {
+      "id": "miss",
+      "chapter": 1,
+      "title": "止めたのは曲だけ",
+      "location": "学内企画の練習室",
+      "storyTime": {
+        "date": "5月8日",
+        "period": "夕方"
+      },
+      "characterId": "narancia",
+      "rating": "general",
+      "tags": [
+        "narancia"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "通して踊ってみると、最後へ来る前に何度もずれた。ナランチャが音を止め、頭を振る。私は軽く笑って済ませようとしたが、彼は今のはよくない、と自分の足元を見ていた。私の方だけ合っていたわけでもないのに、慰める側へ回るのは違う気がした。"
+        },
+        {
+          "speaker": "player",
+          "text": "悔しいね。私も、そこまで行くと最初のこと忘れる。できた時の感じ、もう一回つかみたい。"
+        },
+        {
+          "speaker": "narancia",
+          "text": "だろ。オレ、できてねえのに本番だけ何とかなるって言いたくねえんだよ。……途中からやろう。最初はもう覚えてる。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "短く区切って繰り返したあと、ようやく二人の足が同じところへ戻った。声が出たのは私の方が先で、ナランチャもこっちを向いて笑う。差し出された掌へ自分の掌を打ち合わせると、思ったより大きな音がした。帰る前には、どちらからともなくもう一回と曲をかけた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "keep",
+          "text": "うまく戻れた短い振りを、二人のものとして磨く",
+          "next": "message",
+          "effect": "homeTalk",
+          "setFlags": [
+            "workedThrough"
+          ]
+        },
+        {
+          "id": "two",
+          "text": "「ナランチャとできたのが嬉しい」と、そのまま伝える",
+          "next": "message",
+          "effect": "lunchTwo"
+        },
+        {
+          "id": "rest",
+          "text": "今日できたところを確認し、二人で片づける",
+          "next": "message",
+          "effect": "shiftRest"
+        }
+      ]
+    },
+    {
+      "id": "message",
+      "chapter": 2,
+      "title": "止めた画面の先",
+      "location": "自分の部屋",
+      "storyTime": {
+        "date": "5月11日",
+        "period": "夜"
+      },
+      "characterId": "narancia",
+      "rating": "general",
+      "tags": [
+        "narancia"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "二人で確認するために了承して撮った練習動画が、ナランチャから届いた。うまく踊れた部分より、終わったあとに顔を見合わせて笑うところを繰り返してしまう。私が映像を止めると、彼からもう一文来た。"
+        },
+        {
+          "speaker": "narancia",
+          "text": "最後、オレの方が先に笑ってると思ってた。おまえも同じ顔してんじゃん。これ、本番でもやろうな。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "同じ顔、と言われると急に再生しにくくなった。それでも削除したくはなくて、自分の端末へ保存する。部屋に彼がいなくても、鏡越しではないあの目を思い出せた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "glad",
+          "text": "次もナランチャと踊りたい。本番も、そのあとも",
+          "next": "show",
+          "effect": "messageHeart",
+          "replyVariants": [
+            {
+              "text": "オレも！　あそこ、二人でできたやつだからな。本番終わっても、やろうぜ。",
+              "when": {
+                "flags": [
+                  "workedThrough"
+                ]
+              }
+            },
+            {
+              "text": "終わったら別の曲もやろう。おまえとだと、思いつくこと増えるんだ。"
+            }
+          ],
+          "lockRoute": "narancia"
+        },
+        {
+          "id": "notice",
+          "text": "笑うタイミングまで一緒だったんだね。見ててまた笑った",
+          "next": "show",
+          "effect": "messageListen",
+          "replyVariants": [
+            {
+              "text": "オレも見直した。早くまた会ってやりてえな。"
+            }
+          ],
+          "lockRoute": "narancia"
+        },
+        {
+          "id": "thanks",
+          "text": "動画ありがとう。振りを忘れないように見ておくね",
+          "next": "show",
+          "effect": "messageDaily",
+          "replyVariants": [
+            {
+              "text": "おう。次、最初から通してみようぜ。"
+            }
+          ],
+          "lockRoute": "narancia"
+        }
+      ],
+      "message": true
+    },
+    {
+      "id": "show",
+      "chapter": 2,
+      "title": "二人が止まる一拍",
+      "location": "学内の小さな発表会場",
+      "storyTime": {
+        "date": "5月25日",
+        "period": "昼"
+      },
+      "characterId": "narancia",
+      "rating": "general",
+      "tags": [
+        "narancia"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "発表の日、始まる前は床がいつもより広く見えた。ナランチャも靴の紐を結び直し、立ってからもう一度足を動かす。私が緊張してると言うと、オレもだ、と隠さず返った。曲が始まったので、それ以上は話さずに位置へ向かった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "練習したところまで来ると、今度は待ちきれずに顔を向けそうになった。一拍遅らせる。彼がこちらを見た時、息をする場所がようやく戻った。最後まで踊り終え、拍手の中で隣へ目をやると、彼も私を探していた。"
+        },
+        {
+          "speaker": "narancia",
+          "text": "できた！　見たか、最後。……見たよな、一緒にやってたんだから。"
+        },
+        {
+          "speaker": "player",
+          "text": "見てたよ。途中で笑いそうになった。あの一拍、またやりたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "客席へ戻る途中、別の参加者から声を掛けられた。ナランチャは二人で考えたと話し、私の方へ体を寄せる。その袖が腕へ触れたままなので、私は自分の返事を少し遅らせた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "new_song",
+          "text": "発表のない日にも、二人で別の曲を作りたいと誘う",
+          "next": "home",
+          "effect": "conferencePractical",
+          "setFlags": [
+            "afterStage"
+          ]
+        },
+        {
+          "id": "closer",
+          "text": "「今日は、もう少しナランチャといたい」と言う",
+          "next": "home",
+          "effect": "walkClose"
+        },
+        {
+          "id": "walk",
+          "text": "二人で達成を喜び、ほかの発表も楽しむ",
+          "next": "home",
+          "effect": "walkHome"
+        }
+      ]
+    },
+    {
+      "id": "home",
+      "chapter": 3,
+      "title": "踊らない夕方",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "6月8日",
+        "period": "夕方"
+      },
+      "characterId": "narancia",
+      "rating": "general",
+      "tags": [
+        "narancia"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "発表の映像を見てから夕食にしようと、ナランチャを家へ呼んだ。彼が買ってきたパンを皿へ移し、低い机の横へ座る。画面の中の二人より、目の前で袖をまくる腕の方へ目が行く。自分の部屋では、踊るための間隔を取らなくてよかった。"
+        },
+        {
+          "speaker": "narancia",
+          "text": "ここ、ちょっと足浮いてねえ？　オレ、本番じゃ気づかなかった。……次はもっとちゃんとできるな。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "次の話がもうあることが嬉しくて、私は一度映像を止めた。食べようと言うと、彼も画面を閉じる。パンの端を割って皿へ分け、何を挟むかで少し言い合う。どちらも相手の分まで決めず、出来上がった方を見せ合って笑った。"
+        },
+        {
+          "speaker": "player",
+          "text": "今日は踊る場所ないけど、来てもらってよかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "talk",
+          "text": "片づけたあと、隣で食後の話を続ける",
+          "next": "evening",
+          "effect": "hotelTalk"
+        },
+        {
+          "id": "rest",
+          "text": "皿を片づけ、二人でゆっくり休む",
+          "next": "evening",
+          "effect": "homeRest"
+        }
+      ]
+    },
+    {
+      "id": "evening",
+      "chapter": 3,
+      "title": "帰る足を止める",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "6月8日",
+        "period": "夜"
+      },
+      "characterId": "narancia",
+      "rating": "general",
+      "tags": [
+        "narancia"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "台所には洗った皿が伏せてある。帰る時間だねと私が言えば、それで今日が終わる。私は布巾をたたむのに妙に時間を掛け、ナランチャが部屋へ戻ってからも少し立っていた。"
+        },
+        {
+          "speaker": "narancia",
+          "text": "なあ、もう帰った方がいいか。オレ、まだいたいんだけど。おまえ、疲れた？"
+        },
+        {
+          "speaker": "narrator",
+          "text": "疲れたわけではないと答え、私も机の横へ戻った。彼が少し場所を空けたので、そこへ座る。鏡がなくても見える近さに顔があり、今日は一拍待つ理由もなかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "stay",
+          "text": "「私も、今夜はナランチャの近くにいたい」と伝える",
+          "next": "consent",
+          "effect": "hotelInvite",
+          "when": {
+            "min": {
+              "trust": 45,
+              "desire": 8
+            }
+          }
+        },
+        {
+          "id": "next_time",
+          "text": "「また来て。今度は昼から遊ぼう」と、今日は見送る",
+          "next": "next",
+          "effect": "walkHome"
+        }
+      ]
+    },
+    {
+      "id": "consent",
+      "chapter": 3,
+      "title": "今、そうしたい",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "6月8日",
+        "period": "夜"
+      },
+      "characterId": "narancia",
+      "rating": "general",
+      "tags": [
+        "narancia"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "ナランチャが一度口を開いて閉じた。いつもすぐ言葉になる人なので、私はその一瞬を見逃せなかった。彼の手が自分の膝へ戻り、私の返事を待つようにそこへ置かれた。"
+        },
+        {
+          "speaker": "narancia",
+          "text": "オレ、おまえに触れたい。今夜、一緒にいたい。……おまえも、そう思ってる？"
+        },
+        {
+          "speaker": "player",
+          "text": "うん、私も。でも、恋人になる話は今夜のことと分けて話したい。途中でやめたくなったら、言うね。"
+        },
+        {
+          "speaker": "narancia",
+          "text": "分かった。オレも言う。どっちかが止めたいなら止めるし、今日は帰ってって言ってもいい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "顔を見たまま頷くと、彼も小さく頷いた。差し出す前の指が落ち着かない。練習の終わりに打ち合わせた掌の温かさを思い出し、今はもっと長くそこへ触れていたいと思った。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「今夜、一緒にいてほしい」と答える",
+          "next": "night",
+          "effect": "consent",
+          "setFlags": [
+            "consented",
+            "hadNight"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「今日はここまで。また昼に会いたい」と伝える",
+          "next": "next",
+          "effect": "walkHome",
+          "setFlags": [
+            "declinedTouch"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "night",
+      "chapter": 3,
+      "title": "一拍より長く",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "6月8日",
+        "period": "夜"
+      },
+      "characterId": "narancia",
+      "rating": "fade",
+      "tags": [
+        "narancia"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "手を出すと、彼が取った。二人で少しずつ向きを変え、膝が近くなる。顔へ触れていいかと尋ねられて頷くと、彼の指が頬へ届いた。私は目を閉じる前に、私も近づきたい、と声にした。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "ほんの少し顎を上げれば、唇が触れた。いつも曲が戻るのを待つ時間より長く、離れたあとも彼の目が目の前にあった。もう一回、と私が言うと、ナランチャも頷く。今度は自分から肩へ手を置き、距離を確かめた。やがて手を取り合って立ち、灯りを消して部屋の奥へ移った。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝、隣で動く気配がして目を開けた。ナランチャも起きていて、小さくおはようと言う。昨日と同じ人なのに、寝起きの声をまだ聞いたことがなかった。朝食を食べてから帰ると話す彼へ頷き、私は毛布の端を少し持ち上げた。",
+          "storyTime": {
+            "date": "6月9日",
+            "period": "朝"
+          }
+        },
+        {
+          "speaker": "narancia",
+          "text": "また、こうして会いたい。おまえは？　今、どう思ってる？"
+        }
+      ],
+      "choices": [
+        {
+          "id": "again",
+          "text": "「恋人とは決めず、また望む夜に会いたい」と答える",
+          "next": "next",
+          "effect": "messageBoundaries",
+          "setFlags": [
+            "ongoing"
+          ]
+        },
+        {
+          "id": "more",
+          "text": "「また夜も会いたい。もっと好きになった」と答える",
+          "next": "next",
+          "effect": "messageAgain",
+          "setFlags": [
+            "ongoing"
+          ]
+        },
+        {
+          "id": "day",
+          "text": "「これからは昼に会う友達でいたい」と答える",
+          "next": "next",
+          "effect": "messageDaily",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "chapter": 4,
+      "title": "次に誘う時の声",
+      "location": "大学の中庭",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "narancia",
+      "rating": "general",
+      "tags": [
+        "narancia"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "六月は練習のない日にも会い、互いに望んだ夜には私の家で過ごした。朝はそれぞれの用事へ出て、食事だけで帰る日もある。会いたいと送るのは彼からばかりではなくなった。今日は昼に、曲の話とは別の続きをしたかった。",
+          "when": {
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "昼に会う友達でいたいと話してから、次は練習室で会った。彼は夜の返事を変えさせようとはしなかった。初めは少し照れたが、踊り終わったあとに笑うタイミングは前と変わらない。私から昼食へ誘う声も、少しずついつもに戻った。",
+          "when": {
+            "flags": [
+              "hadNight",
+              "endedNight"
+            ],
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "発表のあとも、ときどき空いた練習室で踊った。出番を待つ必要がないので、気になる曲を途中で替える日もある。今日は何も持たずに昼食へ誘った。ナランチャが部屋の予約は取ってないよなと確かめるので、うん、と私は笑った。",
+          "when": {
+            "notFlags": [
+              "hadNight"
+            ]
+          }
+        },
+        {
+          "speaker": "narancia",
+          "text": "じゃあ、時間あるな。おまえ、何か言いかけてたろ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼がベンチへ腰を下ろし、私も隣へ座った。通り過ぎる人たちを目で追っているふりをやめると、近くに自分の名前を呼ぶ声がある。その声へ何を返したいのか、今日は自分から言い出したかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "tell",
+          "text": "自分からナランチャが好きだと伝える",
+          "next": "confess_player",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 35,
+              "romanceChar": 25
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "listen",
+          "text": "ナランチャの言葉を待ち、顔を向ける",
+          "next": "confess_narancia",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 20,
+              "romanceChar": 35
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "duet",
+          "text": "発表のためだけではない二人のダンスを続けたいと話す",
+          "next": "own_dance",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 35,
+              "romanceChar": 30,
+              "comfort": 20
+            },
+            "flags": [
+              "ourPause",
+              "workedThrough",
+              "afterStage"
+            ],
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "nights",
+          "text": "望む夜にも会う親密な友情を続けたいと話す",
+          "next": "fwb_choice",
+          "when": {
+            "min": {
+              "trust": 50,
+              "desire": 25,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "love",
+          "text": "「今は、ナランチャの恋人になりたい」と伝える",
+          "next": "end_fwb_love",
+          "when": {
+            "min": {
+              "trust": 60,
+              "romancePlayer": 50,
+              "romanceChar": 40,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          },
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "friends",
+          "text": "これからも踊ったり遊んだりする友達でいたいと伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_player",
+      "chapter": 4,
+      "title": "止まった時も、隣へ",
+      "location": "大学の中庭",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "narancia",
+      "rating": "general",
+      "tags": [
+        "narancia"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "好き、と言う前に、私はナランチャの名前を呼んだ。彼はもうこちらを向いているのに、もう一度顔を向けようとして体ごと動いた。その不器用な近づき方が嬉しく、続きを言えなくなる前に口を開く。"
+        },
+        {
+          "speaker": "player",
+          "text": "ナランチャが好き。一緒にできた時だけじゃなくて、家で動画を見てる日に、その場にナランチャがいないのが残念だった。今は、そういう方が気になる。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼の手がベンチの縁から離れた。私は自分の手を握り、また開く。踊る時なら音に合わせればよかったのに、今日は次の一歩まで自分の声で渡さなければならなかった。彼は急かさず、私を見ていた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "like",
+          "text": "「私と付き合ってほしい」と伝える",
+          "next": "end_love_a",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "choose",
+          "text": "「ナランチャの恋人になりたい。どう思う？」と聞く",
+          "next": "end_love_a",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "wait",
+          "text": "「今は友達として、これからも会いたい」と伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_narancia",
+      "chapter": 4,
+      "title": "覚えた振りではなく",
+      "location": "大学の中庭",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "narancia",
+      "rating": "general",
+      "tags": [
+        "narancia"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "ナランチャは少し前へ身を乗り出し、言いたいことがあると話した。言い始めたら途中で曲げない人の顔だったので、私は頷いて待つ。彼は私の名前を呼び、もう一度息を吸った。"
+        },
+        {
+          "speaker": "narancia",
+          "text": "オレ、おまえが好きだ。踊るのも楽しいけど、それだけじゃねえ。二人で会う日は、来る前から楽しみで、帰るのが嫌になる。恋人になりたい。おまえと付き合いたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "言い終えると、彼は今度はじっとしていた。いつも嬉しいことがあるとすぐ動く手が、膝の上から離れない。私は視線を落として逃げかけ、彼が目の前で待っていることをもう一度確かめた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「私も好き。ナランチャと付き合いたい」と答える",
+          "next": "end_love_b",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「恋人にはなれない。友達でいたい」と答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "refusedConfession",
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "own_dance",
+      "chapter": 4,
+      "title": "拍手のない日にも",
+      "location": "大学の中庭",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "narancia",
+      "rating": "general",
+      "tags": [
+        "narancia"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "二人で考えて踊る相棒でいたいと話すと、ナランチャが、次の発表か、と身を起こした。私は首を振り、出る予定のない曲も作りたいと続ける。あの一拍のところが、誰にも見せなくても好きだった。"
+        },
+        {
+          "speaker": "narancia",
+          "text": "オレも、あれ好きだ。じゃあ次、もっと長くしようぜ。おまえがこっち見た時に、オレが逆向いてたらどうなるかな。"
+        },
+        {
+          "speaker": "player",
+          "text": "追いかけるみたいになりそう。やってみたい。でも私からも、逆へ行ってみる。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼が座ったまま足を少し動かすので、私はつられて同じ方へ出した。次は違う、と二人で笑う。恋人としてではなく二人で踊り続けたいという話を確かめたあと、ナランチャは早く練習室を取りたいと言った。私も自分の予定を開き、空いている時間を探した。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "partners",
+          "text": "二人の振りを作り続けるダンスの相棒になる",
+          "next": "end_special",
+          "effect": "homeTogether",
+          "setFlags": [
+            "ourDuet"
+          ]
+        },
+        {
+          "id": "friend",
+          "text": "組を決めず、気軽に踊りに誘う友達でいたいと話す",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fwb_choice",
+      "chapter": 4,
+      "title": "次は自分から",
+      "location": "大学の中庭",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "narancia",
+      "rating": "general",
+      "tags": [
+        "narancia"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人の約束はせず、望む夜にも会いたいと言った。ナランチャは私が話し終えると、オレもそうしたいと返す。曖昧なまま笑って済まされなかったので、私も顔を上げた。"
+        },
+        {
+          "speaker": "narancia",
+          "text": "会いたくなったら誘う。嫌な日は断っていいし、途中でやめたくなったら言ってくれ。オレも言うから。"
+        },
+        {
+          "speaker": "player",
+          "text": "うん。私からも誘う。昼に遊ぶのも、そのまま続けたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "じゃあ今日は飯のあとどうする、と彼が尋ねた。夜のことを話したあとでも、まだ午後が残っている。私は寄りたい店を一つ挙げ、自分からベンチを立った。彼が同じように荷物を持ち、隣へ来た。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "continue",
+          "text": "その都度誘い合う親密な友人として続ける",
+          "next": "end_fwb",
+          "effect": "messageBoundaries"
+        },
+        {
+          "id": "daytime",
+          "text": "考え直し、昼に会う友達でいたいと伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "end_friend",
+      "chapter": 5,
+      "title": "また、曲をかけよう",
+      "location": "学内企画の練習室",
+      "storyTime": {
+        "date": "7月13日",
+        "period": "昼"
+      },
+      "characterId": "narancia",
+      "rating": "general",
+      "tags": [
+        "narancia"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人にはなれないと答えた時、ナランチャは俯き、しばらくして分かったと言った。その日は次の練習を決めずに帰った。数日後、私から踊りたい曲を送ると、やってみたいと返ってきた。会う日を決めたのは、それからだった。",
+          "when": {
+            "flags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "昼に会う友達でいたいと答えてから、ナランチャは夜の返事を変えさせようとはしなかった。私から曲を送り、次に練習室で会う。少し照れたままでも、彼が手を上げてくれると私も振り返せた。",
+          "when": {
+            "flags": [
+              "hadNight",
+              "endedNight"
+            ],
+            "notFlags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "これからも友達として遊ぼうと話し、今日は練習室へ来た。私は自分の荷物を壁へ置き、ナランチャの持ってきた曲を尋ねる。前より速い音が流れ始め、私も靴を確かめた。",
+          "when": {
+            "notFlags": [
+              "hadNight",
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "ほかの参加者も集まり、順番に好きな曲をかけた。ナランチャは自分が踊り終えると、今度は私の番だと言って場所を空ける。私は一曲を選び、彼の方へ手招きした。"
+        },
+        {
+          "speaker": "narancia",
+          "text": "オレもか？　いいぜ。途中で変な方へ行っても、ちゃんと呼べよ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "そっちこそ、と返して笑った。次に顔を合わせる一拍を、私ももう知っている。練習のあと何を食べるかは、曲が止まってから二人で考えることにした。"
+        }
+      ],
+      "choices": [],
+      "ending": "FRIEND"
+    },
+    {
+      "id": "end_love_a",
+      "chapter": 5,
+      "title": "笑うところまで",
+      "location": "大学の中庭",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "narancia",
+      "rating": "general",
+      "tags": [
+        "narancia"
+      ],
+      "body": [
+        {
+          "speaker": "narancia",
+          "text": "オレも好きだ。おまえと付き合いたい。……嬉しい。今、すげえ嬉しい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "何度も言われると、私も自分の顔が隠せなくなった。ナランチャが手を出し、私は笑ったまま取る。練習の終わりに打ち合わせるのでなく、握ったままでいる手だった。彼が少し揺らすので、私も同じように揺らした。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌週、何も踊らない約束で街へ出た。歩いているだけなのに、好きな音が店から聞こえるたび二人の足が少し速くなる。止まって笑い合った時、私はもう一度好きだと言った。彼は少し照れたように笑い、それから自分も同じ言葉を返した。",
+          "storyTime": {
+            "date": "7月6日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_A"
+    },
+    {
+      "id": "end_love_b",
+      "chapter": 5,
+      "title": "止まっていた手が",
+      "location": "大学の中庭",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "narancia",
+      "rating": "general",
+      "tags": [
+        "narancia"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私も好きと答えると、ナランチャは一度顔を上げ、またこちらを見る。本当かと訊かれて、うんと返した。もう一度聞きたそうな顔へ、自分から手を差し出す。彼はそこでようやく大きく笑った。"
+        },
+        {
+          "speaker": "narancia",
+          "text": "よかった！　手、つないでいいか。……もう出してくれてるな。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "いいよ、と笑いながら答えた。掌が重なっても、しばらくは座ったままでいたかった。次に踊る話より先に、今ここからどこへ行きたいかを二人で考えた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌週の待ち合わせでは、私も見つけた方から手を振った。彼が少し早足になり、近づくともう一度名前を呼ぶ。今日は何からする、と訊く声を聞きながら、私は指をつないだ。まだどこへも行っていないのに、来てよかったと思った。",
+          "storyTime": {
+            "date": "7月6日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_B"
+    },
+    {
+      "id": "end_fwb",
+      "chapter": 5,
+      "title": "踊らない夜の足音",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "7月13日",
+        "period": "夜"
+      },
+      "characterId": "narancia",
+      "rating": "fade",
+      "tags": [
+        "narancia"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "互いに今夜会いたいと伝え、ナランチャが家へ来た。夕食のあと、今日は泊まりたいと彼が言う。私も一緒にいてほしいと答え、翌朝は食事を済ませてから別れると確かめた。並んで洗った皿を置く音が止むと、彼が私の方を向いた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "手へ触れたいと自分から話し、彼の返事を待って取った。顔の近さはもう知っているのに、唇を合わせる直前にはまだ少し止まってしまう。ナランチャは急がず、もう一度いいかと訊いた。私は頷いて近づき、口づけを返してから二人で灯りを落とした。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝、台所でパンを温める間、彼が小さく曲を口ずさんだ。踊るほどの場所はないから、私は向かいで聞く。帰る時には次の昼にも会いたいと言われ、自分の予定を話した。玄関を閉めても、さっきの節が口に残っていた。",
+          "storyTime": {
+            "date": "7月14日",
+            "period": "朝"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB"
+    },
+    {
+      "id": "end_fwb_love",
+      "chapter": 5,
+      "title": "今日、呼びたい名前",
+      "location": "大学の中庭",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "narancia",
+      "rating": "general",
+      "tags": [
+        "narancia"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "今は恋人になりたい、と言うと、ナランチャがこちらへ向き直った。前の夜を言い訳にするつもりはなかったので、私は黙って次の言葉を待つ。彼は私の名前を呼び、それから頷いた。"
+        },
+        {
+          "speaker": "narancia",
+          "text": "オレも、おまえの恋人になりたい。今までだって会えて嬉しかった。それが嫌になったんじゃねえよ。今、そうしたいんだ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私も、と答えると、彼の手が差し出された。何度も触れた指を握り返しながら、今度は何もない昼にも恋人と呼べるのだと思う。恥ずかしくなって少し笑ったら、彼も同じ顔になった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌週、練習のあとで昼を食べた。ほかの参加者と別れて二人になったところで、私は彼の手へ触れる。曲はとっくに止まっていたが、隣へ向く足はもう迷わなかった。今日はどこかへ寄って帰ろう、と私から誘った。",
+          "storyTime": {
+            "date": "7月6日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB_TO_LOVE"
+    },
+    {
+      "id": "end_special",
+      "chapter": 5,
+      "title": "一拍、追いかけて",
+      "location": "学内企画の練習室",
+      "storyTime": {
+        "date": "7月20日",
+        "period": "昼"
+      },
+      "characterId": "narancia",
+      "rating": "general",
+      "tags": [
+        "narancia"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "新しい振りでは、私が顔を向けるとナランチャは逆へ動く。追いつくつもりで一歩出たら、彼も戻ってきて、二人で笑って止まった。見せる日が決まっていないから、ここを削らずに何度も試せた。"
+        },
+        {
+          "speaker": "narancia",
+          "text": "今の、いい！　おまえが先に行った方が面白い。もう一回やろう。オレ、戻るとこ変えてみる。"
+        },
+        {
+          "speaker": "player",
+          "text": "じゃあ、私は待たないで行くね。追いついてきて。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼が音をかけ直し、私は始まる前から位置へ立った。恋人の約束とは違う、二人で作る続きを待つ時間がある。曲が終わってもすぐには止めず、息を整えながら相手の顔を見た。拍手はなかったけれど、自分が今笑っていることは、隣の人にも分かっていた。"
+        }
+      ],
+      "choices": [],
+      "ending": "SPECIAL"
+    }
+  ]
+}

@@ -1,0 +1,1996 @@
+{
+  "id": "kakyoin",
+  "title": "花京院 — 用事のない日にも",
+  "intro": "講義棟、ゲームの盤面、教室の帰り道。\nいつも近くにいた先輩が、いない日を知る。\n次に会う理由は、あなたの言葉で。",
+  "startEvent": "desk",
+  "character": {
+    "name": "花京院",
+    "adult": true,
+    "profile": "落ち着いて周りを見ている情報系の先輩。ゲームでは腕にも勝ち方にも自負があり、涼しい顔でからかう。大学とサークルとバイトで、付き合いが自然に重なっている。",
+    "heightCm": 178,
+    "heightBasis": "原作プロフィールを参照する二次資料で確認。一次書籍現物は未照合。出典は人物参考資料。AUでは同値を採用。",
+    "personality": [
+      "落ち着いた観察と分析が得意",
+      "仲間への信頼や誇りを大事にする",
+      "負けず嫌いで、ゲームや得意分野では手加減ばかりしない",
+      "冗談や皮肉を淡々と言い、相手の反応を見る面がある"
+    ],
+    "speech": {
+      "firstPerson": "僕",
+      "addressing": "主人公の姓/名＋さんは既存ルール。ジョセフは名前/きみ。後輩との親しさを無視して全員に敬語にはしない。",
+      "tone": "普段は落ち着いた常体に必要な丁寧語が混ざる。バイトや研究会での説明は簡潔で具体的。ゲームでは自信や皮肉をにじませる。",
+      "habits": [
+        "〜だね、〜かな、〜だろうを文脈に応じて使う",
+        "感情を大声にせず、一言の指摘で冗談を返す",
+        "勝負では遠慮なく自分の読みを通す"
+      ],
+      "signaturePhrases": [],
+      "signatureNote": "日常の固定口癖は今回採用しない。「レロレロ」等を本物の恒常的な癖として貼り付けず、戦闘の名乗りや能力名も持ち込まない。",
+      "avoid": [
+        "全員にですますだけで話す説明装置",
+        "いつも穏やかで勝負欲や皮肉がない人物化",
+        "後輩の行動を常に管理する保護者役",
+        "淡々としていることを感情がないことと取り違える"
+      ]
+    },
+    "referenceSection": "docs/CHARACTER_REFERENCE.md#花京院"
+  },
+  "au": {
+    "role": "情報系4年・先輩",
+    "routeEnabled": true,
+    "addressing": [
+      {
+        "when": {
+          "min": {
+            "friendship": 40
+          }
+        },
+        "text": "{player.firstName}さん"
+      },
+      {
+        "text": "{player.lastName}さん"
+      }
+    ]
+  },
+  "endingDescriptions": {
+    "FRIEND": {
+      "title": "次は私の番",
+      "description": "三人分の机に、新しい点数表を広げる。次の一局を、友達として待っている。"
+    },
+    "LOVE_A": {
+      "title": "余白に書く名前",
+      "description": "用事の向こうに隠していた言葉を、私から。隣の椅子へ座る人と、これからの予定を決める。"
+    },
+    "LOVE_B": {
+      "title": "先輩の待ち時間",
+      "description": "先の読めない返事を待っていた先輩と、手をつなぐ。駅までの道が、今日は少し先まで続く。"
+    },
+    "FWB": {
+      "title": "夜にも、つづき",
+      "description": "望む夜には、親密な友人として会う。朝の点数表にも、次の楽しみが残っている。"
+    },
+    "FWB_TO_LOVE": {
+      "title": "待ち合わせをしよう",
+      "description": "幾つもの夜を経て、恋人として約束する。知っている手の温かさを、明るい道へ持っていく。"
+    },
+    "SPECIAL": {
+      "title": "空欄のままで",
+      "description": "授業も勝負もない日に、互いを最初に誘う。恋人とは違う日々の相棒として、二つの家から会いに行く。"
+    }
+  },
+  "events": [
+    {
+      "id": "desk",
+      "chapter": 1,
+      "title": "余白の使い道",
+      "location": "情報棟のラウンジ",
+      "storyTime": {
+        "date": "6月3日",
+        "period": "昼"
+      },
+      "characterId": "kakyoin",
+      "rating": "general",
+      "tags": [
+        "kakyoin"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "印刷したコース図を窓にかざすと、折り目のところだけ光が透けた。ロボット教室の体験会で使う道順の紙だ。曲がり角を足したつもりが、二本の線は小さな迷路になっている。講義帰りに寄ったラウンジでそれを眺めていたら、隣の机にいた花京院先輩が立ち上がり、手にしていたペンで図の角を指した。"
+        },
+        {
+          "speaker": "kakyoin",
+          "text": "その道だと、帰ってこなくなるね。僕ならここで右に曲がる。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "ペン先は紙に触れず、行き止まりの一つ手前で止まった。同じ学科の先輩で、サークルでもバイト先でも顔を合わせる人だ。何かを見せる前からそこにいることが多くて、今日はどこで会うだろうと考えたことは、まだなかった。"
+        },
+        {
+          "speaker": "player",
+          "text": "帰ってくるのも課題、じゃ駄目ですか。……冗談です。そこ、私も今気づきました。"
+        },
+        {
+          "speaker": "kakyoin",
+          "text": "それなら気づいた者同士で直そう。正解だけ教えるより面白くなると思うんだ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私が空けた向かいの席へ、先輩はノートパソコンごと移ってきた。勝手に線を消すのではなく、私のペンが動くのを待っている。窓の外から運動部の掛け声が上がり、その一声が遠ざかる間に、紙の上に二人分の影が重なった。昼休みの残りは、思っていたより短かった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "draw_together",
+          "text": "余白に、二人の案を並べて描く",
+          "next": "club",
+          "effect": "workTogether",
+          "setFlags": [
+            "labHabit"
+          ]
+        },
+        {
+          "id": "ask_reason",
+          "text": "先輩がその曲がり角を選んだ理由を聞く",
+          "next": "club",
+          "effect": "compareNotes"
+        }
+      ]
+    },
+    {
+      "id": "club",
+      "chapter": 1,
+      "title": "負けたままの盤面",
+      "location": "ゲームサークルの部室",
+      "storyTime": {
+        "date": "6月5日",
+        "period": "夕方"
+      },
+      "characterId": "kakyoin",
+      "rating": "general",
+      "tags": [
+        "kakyoin"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "部室に入ると、ジョセフが両手を頭の後ろで組んでいた。机の向こうでは花京院先輩が、勝ったばかりの駒を箱へ戻している。ジョセフに「敵討ち頼むぜ」と椅子を譲られたけれど、私も先週ここで負けた一人だ。鞄を下ろす前に先輩と目が合い、片づけかけの手が止まった。"
+        },
+        {
+          "speaker": "kakyoin",
+          "text": "今日はどっちの敵討ちだい。きみの分なら、前より難しくするよ。"
+        },
+        {
+          "speaker": "player",
+          "text": "それ、歓迎してくれてます？　私、今度は勝ちたいんですけど。"
+        },
+        {
+          "speaker": "joseph",
+          "text": "やるなら今だぜ。オレの名勝負で、先輩もだいぶ消耗してるはずだからよォ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "花京院先輩はジョセフの残した点数表を私へ向けた。桁の違う数字を見て笑ってしまうと、ジョセフは「笑うところじゃねえ」と自分の課題に向き直る。始まった対局で、私はわざと右側の駒へ視線を流した。先輩の指がそちらへ動き、それからわずかに戻る。さっきまでの余裕が、一手ぶんだけ止まった。"
+        },
+        {
+          "speaker": "kakyoin",
+          "text": "……今のは、いい手だった。次は通らないけどね。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "盤面から上がった視線を正面で受けた。褒められたことより、先輩が箱の蓋を遠ざけたことが嬉しい。窓際に夕日の帯が伸びても、二人とも時計を見るのを忘れていた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "rematch",
+          "text": "負けたところを残して、もう一局頼む",
+          "next": "shift",
+          "effect": "gamePartners",
+          "setFlags": [
+            "clubHabit"
+          ]
+        },
+        {
+          "id": "next_opponent",
+          "text": "「次も、私の相手をしてくれますか」と誘う",
+          "next": "shift",
+          "effect": "gameDate"
+        },
+        {
+          "id": "study_move",
+          "text": "最後の一手を一緒に確かめる",
+          "next": "shift",
+          "effect": "gamePractice"
+        }
+      ]
+    },
+    {
+      "id": "shift",
+      "chapter": 1,
+      "title": "間違える場所",
+      "location": "ロボット教室",
+      "storyTime": {
+        "date": "6月7日",
+        "period": "昼"
+      },
+      "characterId": "kakyoin",
+      "rating": "general",
+      "tags": [
+        "kakyoin"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "試作のコースに置いたロボットは、同じ角で二度止まった。今日の授業は終わり、社員さんが奥で翌週の名簿を確認している。私と花京院先輩は床に貼った紙を挟んでしゃがみ、子どもが手を伸ばす高さから道を見直していた。先輩の作った見本はきれいに一周する。けれど、見本をまねたらそれで終わってしまう気もした。"
+        },
+        {
+          "speaker": "player",
+          "text": "ここだけ、答えの矢印を外してみませんか。間違ったら、どこを変えたいか聞きたいです。"
+        },
+        {
+          "speaker": "kakyoin",
+          "text": "初めての子には難しくないかな。全員が同じところで止まると、説明が追いつかなくなる。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "仕事を教わった頃なら、その一言で矢印を貼り直していたと思う。今日は、さっきまで机に残っていた子の顔が浮かんだ。失敗した車体をもう一度走らせようと、椅子から半分立ち上がっていた。私は矢印を剥がしかけた手を止め、先輩にコースの端を押さえてもらった。"
+        },
+        {
+          "speaker": "player",
+          "text": "全員じゃなくて、早くできた子だけならどうでしょう。先に、私が説明してみます。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩は少し黙って、紙の裏へ二通りの進め方を書いた。私の案も消されずに残っている。線を引き終えると、ペンをこちらへ差し出してきた。"
+        },
+        {
+          "speaker": "kakyoin",
+          "text": "じゃあ、僕が最初の生徒になる。簡単に正解したら、もう少し難しくしてもらうよ。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "try_together",
+          "text": "先輩相手に、最後まで説明してみる",
+          "next": "closing",
+          "effect": "shiftHelp",
+          "setFlags": [
+            "shiftHabit"
+          ]
+        },
+        {
+          "id": "own_idea",
+          "text": "「先輩にも面白いと思ってほしいんです」と言う",
+          "next": "closing",
+          "effect": "honest"
+        },
+        {
+          "id": "small_trial",
+          "text": "一つの角だけ変えて、二人で試す",
+          "next": "closing",
+          "effect": "shiftRest"
+        }
+      ]
+    },
+    {
+      "id": "closing",
+      "chapter": 1,
+      "title": "いない日の予定",
+      "location": "教室の控室から駅前",
+      "storyTime": {
+        "date": "6月7日",
+        "period": "夕方"
+      },
+      "characterId": "kakyoin",
+      "rating": "general",
+      "tags": [
+        "kakyoin"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "教材を棚へ戻し、電源を切ったことを社員さんに報告してから、ようやく名札を外した。狭い控室では花京院先輩がしゃがんで靴紐を結んでいる。通ろうとした私に気づいて膝を寄せたので、鞄を抱え直して横を抜けた。さっきまで一緒に床を見ていた人が立ち上がると、話しかける角度が少し変わる。"
+        },
+        {
+          "speaker": "kakyoin",
+          "text": "来週、研究会で何日か大学を空けるんだ。次のシフトも、僕はいない。コースの続き、戻ってから見せてくれるかな。"
+        },
+        {
+          "speaker": "player",
+          "text": "はい。先輩が帰ってきたら、一周で済まないくらい難しくしておきます。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "言ってから、授業の教材を難しくしてどうするんだろうと笑った。先輩も口元を緩め、手にしていた家の鍵を鞄の内ポケットへ落とす。駅へ向かう道では、私が少し内側を歩いた。閉店前のパン屋から甘い匂いが流れ、つい二人そろって店内を見てしまう。"
+        },
+        {
+          "speaker": "kakyoin",
+          "text": "それは僕への挑戦状だね。受け取るよ。……戻るのは十五日。月曜には、いつものところにいると思う。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私が聞くより先に、帰る日まで教えてくれた。横断歩道の向こうで青が点滅し始めたけれど、どちらも走り出さなかった。もう一度信号が変わるまで、その日付を覚えておく時間があった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "walk_close",
+          "text": "青になるまで、先輩の隣でもう少し話す",
+          "next": "absence_message",
+          "effect": "walkClose"
+        },
+        {
+          "id": "see_you",
+          "text": "「帰ったら勝負ですね」と手を振る",
+          "next": "absence_message",
+          "effect": "shiftRest"
+        }
+      ]
+    },
+    {
+      "id": "absence_message",
+      "chapter": 2,
+      "title": "宛先を選ぶ",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "6月12日",
+        "period": "夜"
+      },
+      "characterId": "kakyoin",
+      "rating": "general",
+      "tags": [
+        "kakyoin"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "昼のラウンジでは、いつもの席にジョセフが座っていた。充電器を貸したら今度は課題の答えを聞かれ、それは貸せないと笑い返した。夕方の教室では、私が教材の箱を開け、社員さんと二人で授業を回した。何も困らず終わったのに、帰りの控室で今日のことを話そうとして、一度だけ空の椅子を見た。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "自宅で、床に広げたコース図だけの写真を撮る。子どもたちが試した道は、最初の案よりずっと曲がりくねっていた。送る前から、先輩ならどの角を指すだろうと画面を拡大してしまう。届いたのは、その人からの短い通知だった。"
+        },
+        {
+          "speaker": "kakyoin",
+          "text": "研究会は明日まで。そっちのコースはどうなった？　僕の知らないうちに難しくなっていそうだ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "撮ったコース図を先に送り、その下へ返事を打ち始めた。写真には写らなかった今日のことを、何から伝えよう。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "miss_you",
+          "text": "ちゃんと回せました。でも、先輩にもいてほしかったです",
+          "next": "return",
+          "effect": "messageHeart",
+          "setFlags": [
+            "noticedAbsence"
+          ],
+          "replyVariants": [
+            {
+              "text": "僕もその場で見たかった。戻ったら、きみの話から聞かせて。"
+            }
+          ]
+        },
+        {
+          "id": "empty_chair",
+          "text": "終わってから、つい先輩の席を見ちゃいました。コースはこんな感じです",
+          "next": "return",
+          "effect": "messageDaily",
+          "setFlags": [
+            "noticedAbsence"
+          ],
+          "replyVariants": [
+            {
+              "text": "それなら席を取っておいて。写真の続きは、戻ってから聞くよ。"
+            }
+          ]
+        },
+        {
+          "id": "challenge",
+          "text": "挑戦状です。答えは帰ってくるまで内緒にしておきます",
+          "next": "return",
+          "effect": "messageJoke",
+          "replyVariants": [
+            {
+              "text": "受け取った。解けても黙っているのが、一番難しそうだけどね。"
+            }
+          ]
+        }
+      ],
+      "message": true
+    },
+    {
+      "id": "return",
+      "chapter": 2,
+      "title": "用件のその先",
+      "location": "情報棟のラウンジ",
+      "storyTime": {
+        "date": "6月16日",
+        "period": "昼"
+      },
+      "characterId": "kakyoin",
+      "rating": "general",
+      "tags": [
+        "kakyoin"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "ラウンジの入口から、見慣れた髪が見えた。先輩は窓際ではなく通路側の席で、折り畳んだ紙を広げている。私が机まで行くと、顔を上げるより先に鞄を隣へ寄せた。その動作があまりに普段どおりで、用意していた「お帰りなさい」が少し遅れた。"
+        },
+        {
+          "speaker": "player",
+          "text": "お帰りなさい。写真だけじゃ、分からないところもありましたよね。"
+        },
+        {
+          "speaker": "kakyoin",
+          "text": "ただいま。分からなかったのは、どうして最後だけこんなに難しくしたのか、かな。僕に勝たせる気がないのはよく分かった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "広げていたのは研究会の資料ではなく、写真から写したコースだった。鉛筆の線が二度消された跡に、指先を置く。先輩はその箇所だけ紙を押さえ、私の顔を見た。答えを教えてもらう側に回ったのが気に入らないのか、それとも私が笑っているせいなのか、口の端が上がっていた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "授業の報告を終えても、先輩は紙を畳まなかった。私は空になった弁当袋を鞄へしまい、机の端に肘をつく。もう伝えなければならないことはない。そのあとに座っている時間を、少しだけ欲しいと思った。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "invite_lunch",
+          "text": "「今度は用事なしで、お昼に付き合ってください」と誘う",
+          "next": "rehearsal",
+          "effect": "lunchTwo",
+          "lockRoute": "kakyoin"
+        },
+        {
+          "id": "walk_to_class",
+          "text": "次の講義まで、一緒に廊下を歩く",
+          "next": "rehearsal",
+          "effect": "walkTogether",
+          "lockRoute": "kakyoin"
+        },
+        {
+          "id": "show_result",
+          "text": "教材を片づける前に、できたところを全部見せる",
+          "next": "rehearsal",
+          "effect": "workTogether",
+          "lockRoute": "kakyoin"
+        }
+      ]
+    },
+    {
+      "id": "rehearsal",
+      "chapter": 2,
+      "title": "消さずに残す",
+      "location": "情報棟の空き教室",
+      "storyTime": {
+        "date": "6月19日",
+        "period": "夕方"
+      },
+      "characterId": "kakyoin",
+      "rating": "general",
+      "tags": [
+        "kakyoin"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "体験会まで、あと二日。借りた空き教室で説明の練習をすると、花京院先輩の話は予定の時間を少し越えた。どこも間違っていなくて、順番も明快だ。だからこそ削る場所を言い出しにくく、私はストップウォッチを止めたあともしばらく数字を眺めていた。"
+        },
+        {
+          "speaker": "kakyoin",
+          "text": "遠慮しなくていい。何秒、余った？"
+        },
+        {
+          "speaker": "player",
+          "text": "余ったんじゃなくて……増えてます。センサーの仕組みのところ、先輩がすごく楽しそうで、止めそびれました。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩は数字を見て、額へ掛かった髪を払った。それから、私の笑いを見つけたように目を細める。"
+        },
+        {
+          "speaker": "kakyoin",
+          "text": "楽しそうだった、で減点を軽くするつもりなら失敗だね。……ここを別紙にしよう。本当に聞きたい子には、あとから見せられる。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "取り消し線を引いた説明は、捨てられずに紙の下半分へ移った。先輩が書き直している間、私は机に置いたロボットを手前へ戻す。机の端から落ちそうになった紙を二人で押さえ、しばらく指の場所を譲り合っていた。何かに手間取る先輩を見るのは初めてではないけれど、それを隣で見ていられるのは、まだ少し新しかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "listen_again",
+          "text": "「短くした方も聞かせてください」と椅子を寄せる",
+          "next": "open_day",
+          "effect": "rehearse"
+        },
+        {
+          "id": "keep_notes",
+          "text": "別紙を受け取り、二人で説明の順を決める",
+          "next": "open_day",
+          "effect": "conferencePractical"
+        }
+      ]
+    },
+    {
+      "id": "open_day",
+      "chapter": 2,
+      "title": "最後の一周",
+      "location": "ロボット教室・体験会",
+      "storyTime": {
+        "date": "6月21日",
+        "period": "昼"
+      },
+      "characterId": "kakyoin",
+      "rating": "general",
+      "tags": [
+        "kakyoin"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "体験会の日、ジョセフは受付脇で教材の予備を数えていた。花京院先輩が説明を始めると、私の出番を確かめるようにこちらを一度見た。頷いてから床へしゃがみ、車体を最初の線へ置く。曲がり角で止まった子には、すぐに正解を指ささず、変えてみたい場所を聞いた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "最後の回では、矢印を二つ外したコースを一人の子が選んだ。私の隣へ来た先輩は口を開きかけ、子どもの手が動き出すのを見ると閉じた。車体が予想と逆へ進む。先輩と目を合わせてしまい、声を出して笑わないように下唇を噛んだ。少し遠回りしたあと、ロボットはちゃんと元の線へ帰ってきた。"
+        },
+        {
+          "speaker": "joseph",
+          "text": "完走っと。先輩、今の顔、子どもに見られてなくてよかったなァ。"
+        },
+        {
+          "speaker": "kakyoin",
+          "text": "説明したいのを我慢していたんだ。ジョセフ、片づける前にきみもやってみる？"
+        },
+        {
+          "speaker": "narrator",
+          "text": "挑戦を引き受けたジョセフの車体は、私たちの前で早々に横を向いた。「床のせいだろ、これ」と言うので、床は一日ずっと同じだと返す。先輩はコースの端を膝で押さえたまま笑っていた。いつもの部室みたいな顔が、仕事場にもある。その隣で、私の手から離れた教材がまだ使われているのを眺めた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "全員で片づけ、社員さんへの報告まで終えたあと、花京院先輩が書き込みだらけの別紙を返してくれた。"
+        },
+        {
+          "speaker": "kakyoin",
+          "text": "持っていてくれるかな。次に僕が説明を長くしたら、それを出して止めて。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "keep_for_us",
+          "text": "「二人で作った分なので」と、折らずに鞄へ入れる",
+          "next": "evening_message",
+          "effect": "conferenceClose"
+        },
+        {
+          "id": "next_time",
+          "text": "次も使えるように、ファイルへしまう",
+          "next": "evening_message",
+          "effect": "friendPromise"
+        }
+      ]
+    },
+    {
+      "id": "evening_message",
+      "chapter": 2,
+      "title": "見ていたもの",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "6月21日",
+        "period": "夜"
+      },
+      "characterId": "kakyoin",
+      "rating": "general",
+      "tags": [
+        "kakyoin"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "靴を脱いでからもしばらく、足の裏に教室の床の感触が残っていた。鞄から別紙を出して机へ置く。先輩の小さな文字の隣には、私が練習中に付けた大きな丸がある。片づけの時には言えなかったことが、眠る前になって幾つも浮かんだ。"
+        },
+        {
+          "speaker": "kakyoin",
+          "text": "今日はお疲れさま。子どもが走らせ直すところ、最後まで待ってよかった。きみがあそこで譲らなくて、助かったよ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "何度も読み直すほど長い文章ではない。それでも、画面を消したらすぐには眠れそうになくて、膝の上へ端末を戻した。先輩の前で言い張った日のことを、今なら少し違う言い方で話せる気がした。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "your_look",
+          "text": "先輩が笑ってくれたの、私、けっこう嬉しかったです",
+          "next": "afternoon",
+          "effect": "messageHeart",
+          "replyVariants": [
+            {
+              "text": "きみも笑いそうだったね。僕の方を見たから、余計に我慢できなくなった。",
+              "when": {
+                "min": {
+                  "romanceChar": 30
+                }
+              }
+            },
+            {
+              "text": "あれは笑うよ。次の回も一緒にやれたらいいね。"
+            }
+          ]
+        },
+        {
+          "id": "your_side",
+          "text": "先輩も、何か言いかけてましたよね。今度聞きたいです",
+          "next": "afternoon",
+          "effect": "messageListen",
+          "replyVariants": [
+            {
+              "text": "今度は二人で会いたい、と思っていたんだ。仕事の帰りにでも、話そう。",
+              "when": {
+                "min": {
+                  "romanceChar": 25
+                }
+              }
+            },
+            {
+              "text": "説明しすぎるのは、僕の方だったという話。また昼に聞いて。"
+            }
+          ]
+        },
+        {
+          "id": "rematch",
+          "text": "次は説明じゃなくて、ゲームで私を待っていてください",
+          "next": "afternoon",
+          "effect": "messageJoke",
+          "replyVariants": [
+            {
+              "text": "それは待つけど、勝ちは譲らないよ。来週、二人用のを開けよう。"
+            }
+          ]
+        }
+      ],
+      "message": true
+    },
+    {
+      "id": "afternoon",
+      "chapter": 3,
+      "title": "机を空ける",
+      "location": "花京院の自宅",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "昼"
+      },
+      "characterId": "kakyoin",
+      "rating": "general",
+      "tags": [
+        "kakyoin"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "体験会から一週間たった土曜、短いシフトのあとで花京院先輩と駅前まで歩いた。昼食をまだ決めていないと言うと、家に二人分ならある、と少し考えてから誘われた。何度か訊いていた二人用のゲームも、部室の棚ではなく自宅に置いたままらしい。私は近くの店で飲み物を二本買い、先輩の後ろについて階段を上がった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "玄関で靴を脱ぐと、机の上には途中まで広げたゲームの盤面があった。先輩はそれを見て一瞬止まり、それから駒を元の箱へ収めていく。私のための場所を作っているのが分かると、鞄を下ろすだけの動作が妙にぎこちなくなった。"
+        },
+        {
+          "speaker": "kakyoin",
+          "text": "説明書を読んでいたら、始めてしまってね。少し待って。食べながら駒を動かすほど器用ではないんだ。"
+        },
+        {
+          "speaker": "player",
+          "text": "一人二役でやってたんですか。……どっちが勝ってました？"
+        },
+        {
+          "speaker": "kakyoin",
+          "text": "それをきみに教えたら、次に僕が負けるだろう。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "台所から皿の触れ合う音がした。頼まれてきゅうりを洗い、水を切って渡す。先輩は鍋の湯が沸くまでの間に、狭い調理台のどこを私へ空けるかを考えているようだった。大学では何度も隣に立ったのに、ここではまだ、食器を取る場所さえ知らない。一本の箸を引き出しへ戻すのにも尋ねてしまい、そのたびに返事が近くで聞こえた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "help_meal",
+          "text": "空いている皿を並べ、食事の支度を一緒にする",
+          "next": "after_meal",
+          "effect": "homeTogether"
+        },
+        {
+          "id": "stay_near",
+          "text": "手を止めた先輩に、研究会での話をねだる",
+          "next": "after_meal",
+          "effect": "homeTalk"
+        },
+        {
+          "id": "set_table",
+          "text": "飲み物と箸を置いて、できるのを待つ",
+          "next": "after_meal",
+          "effect": "homeRest"
+        }
+      ]
+    },
+    {
+      "id": "after_meal",
+      "chapter": 3,
+      "title": "一人分ずつの午後",
+      "location": "花京院の自宅",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "kakyoin",
+      "rating": "general",
+      "tags": [
+        "kakyoin"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "食べ終えて机を空けると、しまったばかりの盤面が戻ってきた。最初の一局は私が勝った。先輩は点数を確認し直してから、もう一度だけと言った。その二度目まで終わる頃には、窓に入る光が机を横切り、私は自分の鞄から薄い羽織を出していた。"
+        },
+        {
+          "speaker": "player",
+          "text": "今のは、最初からその手を考えてました？"
+        },
+        {
+          "speaker": "kakyoin",
+          "text": "途中からだよ。最初から読めていたら、一局目も僕が勝っている。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "悔しさを隠さない言い方に笑うと、先輩が先に目を逸らした。片づけを始めようとして、盤面の脇へ置いた読みかけの本を見つける。私は提出前の課題を持っていたし、先輩にはその本の続きがある。二人で何かをし続けなければ、ここにいられないわけではないのかもしれない。帰る時刻を見ようとして出した端末を、まだ鞄へ戻せずにいた。"
+        },
+        {
+          "speaker": "kakyoin",
+          "text": "急ぐ用事がなければ、もう少し使っていていいよ、その机。僕は少し読むから。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "quiet_time",
+          "text": "「課題を少しだけ、ここで進めてもいいですか」と残る",
+          "next": "quiet_room",
+          "effect": "homeTogether",
+          "setFlags": [
+            "quietEase"
+          ]
+        },
+        {
+          "id": "two_of_us",
+          "text": "「本の前に、もう少し先輩と話したいです」と言う",
+          "next": "quiet_room",
+          "effect": "hotelTalk",
+          "setFlags": [
+            "twoTalk"
+          ]
+        },
+        {
+          "id": "go_home",
+          "text": "次の対戦を約束して、今日は帰る",
+          "next": "days",
+          "effect": "homeRest"
+        }
+      ]
+    },
+    {
+      "id": "quiet_room",
+      "chapter": 3,
+      "title": "ページの止まるところ",
+      "location": "花京院の自宅",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "kakyoin",
+      "rating": "general",
+      "tags": [
+        "kakyoin"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "課題の続きを開いてから、思ったより長く集中していた。顔を上げると、向かいの先輩はまだ本を読んでいる。私が迷ってペンを止めても覗き込まず、自分のページをめくる。その音を聞きながら一行書けたので、消していた箇所へ、ようやく線を引けた。",
+          "when": {
+            "flags": [
+              "quietEase"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "二人で話しているうちに、先輩の本は開かれないまま机の端へ移った。研究会での発表のことから、ひとつも説明の通じなかった昼食の注文の話になり、私は声を立てて笑った。落ち着いて見える人が言い訳を足すほどおかしくて、笑ったせいで少し濡れた目尻を指で拭いた。",
+          "when": {
+            "flags": [
+              "twoTalk"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "外から自転車のベルが聞こえ、窓を閉めるために先輩が立った。戻ってきた時、机の角に置いていた私の端末が震えたので、手を伸ばす。落としかけた端末を先輩の手が下から受け、私の指はその上で止まった。先輩は急に握ったりせず、私が取り直すまでそのままにしていた。"
+        },
+        {
+          "speaker": "kakyoin",
+          "text": "取れた？"
+        },
+        {
+          "speaker": "narrator",
+          "text": "短い問いに頷いて、端末を机へ置いた。指が離れたあとも、私は何を見ようとしたのか思い出せないでいた。先輩が本へ戻るまでのわずかな間に、さっきより近くで見た顔をもう一度見たくなった。言葉にするかどうかを、まだ私が選べる距離だった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "again_daytime",
+          "text": "「また、こういう午後をご一緒したいです」と伝えて帰る",
+          "next": "days",
+          "effect": "walkTogether"
+        },
+        {
+          "id": "want_touch",
+          "text": "「まだ帰りたくないです。先輩に、触れてほしい」と伝える",
+          "next": "consent",
+          "effect": "hotelInvite",
+          "when": {
+            "min": {
+              "trust": 50,
+              "desire": 12
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "consent",
+      "chapter": 3,
+      "title": "手を伸ばす前に",
+      "location": "花京院の自宅",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夜"
+      },
+      "characterId": "kakyoin",
+      "rating": "general",
+      "tags": [
+        "kakyoin"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "灯りを点けると、窓に映る部屋の中で私と先輩が向き合った。先輩は本を閉じて机の端へ置き、椅子を引いて私の前に立つ。私も立ち上がったけれど、まだどこにも触れなかった。昼間から一緒に過ごしていた人へ、今はその一歩が違う長さに感じられる。"
+        },
+        {
+          "speaker": "kakyoin",
+          "text": "僕も、きみに触れたい。今夜、ここで一緒に過ごしてほしい。……恋人になる返事を、今もらおうとしているわけじゃないよ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩の手は、私を急がせるようには動かなかった。伸ばしかけた自分の指を、一度だけ握り込む。初めて訪ねた部屋の灯りも、昼間に触れた食器の感触も、まだ新しい。そこへ今夜の記憶を重ねたいと思うと、怖さもあった。黙ったままでは伝わらないことを、ゆっくり声にした。"
+        },
+        {
+          "speaker": "player",
+          "text": "私も、一緒にいたいです。でも、途中でやめたくなったら……言ってもいいですか。先輩も、嫌なことは教えてください。"
+        },
+        {
+          "speaker": "kakyoin",
+          "text": "うん。どちらが止めても、そこでやめよう。帰りたくなってもいい。僕は、今のきみの返事を聞きたいんだ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "見上げると、先輩の視線が一度だけ私の口元へ落ち、それから目へ戻った。机の上には二人の食器もゲームももうない。空いた場所に夜が広がっている。私は息を整え、彼の前に立ったまま、自分の望む方を言った。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「今夜は、先輩と一緒にいたいです」と手を取る",
+          "next": "intimate",
+          "effect": "consent",
+          "setFlags": [
+            "mutualConsent",
+            "hadNight"
+          ]
+        },
+        {
+          "id": "not_tonight",
+          "text": "「やっぱり、今日は帰ります」と伝える",
+          "next": "days",
+          "effect": "walkHome",
+          "setFlags": [
+            "contactDeclined"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "intimate",
+      "chapter": 3,
+      "title": "灯りの向こう",
+      "location": "花京院の自宅",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夜"
+      },
+      "characterId": "kakyoin",
+      "rating": "fade",
+      "tags": [
+        "kakyoin"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "差し出された手に指を重ねると、先輩が初めて握り返した。近づいた分だけ顎を上げ、私は空いている手を彼の腕へ添える。待っていたはずの近さに少し戸惑って笑うと、先輩も息をこぼした。その笑いを途中で聞き逃すほど、ゆっくり顔が近づいた。"
+        },
+        {
+          "speaker": "kakyoin",
+          "text": "急がなくていい。僕も、急ぎたくないから。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "触れた唇から離れても、先輩の顔はすぐそばにあった。私はもう一度、と言う代わりに彼の手を引いた。昼間は机の向こうでしか見なかった人が、今は私の小さな動きを見ている。もう少し近くへ行きたいと口にすると、先輩は頷き、手をつないだまま寝室へ案内してくれた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝、先に目を開けた私に気づいて、先輩が枕から少し顔を上げた。窓の方は薄く明るく、昨日しまい忘れた本が床際に見える。私は毛布の端を直し、隣で彼が眠っていたことを、しばらくそのまま確かめていた。",
+          "storyTime": {
+            "date": "6月29日",
+            "period": "朝"
+          }
+        },
+        {
+          "speaker": "kakyoin",
+          "text": "おはよう。……朝ご飯の前に、あの本を拾わないとね。昨日の僕は、だいぶ散らかしたみたいだ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "寝起きの言い方がおかしくて、私は枕に顔を半分隠して笑った。起きて身支度を整えると、先輩が台所で食パンの袋を開けていた。食べる枚数を訊かれ、一枚、と答える。昨夜のことをすぐ何かの名前にしないまま、向かいの椅子へ座ることができた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "back_home",
+          "text": "朝食のあと帰宅し、夜に連絡する",
+          "next": "morning_message"
+        }
+      ],
+      "when": {
+        "flags": [
+          "mutualConsent"
+        ]
+      }
+    },
+    {
+      "id": "morning_message",
+      "chapter": 3,
+      "title": "自分の部屋から",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "夜"
+      },
+      "characterId": "kakyoin",
+      "rating": "general",
+      "tags": [
+        "kakyoin"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "自分の部屋に戻って、洗濯と買い物を済ませたら、思ったより早く夜になった。昨日の服を畳み終えたところで、端末が短く鳴った。先輩の名前を見ると、昨夜の部屋の灯りが思い浮かぶ。通知を開く手が少しだけ遅れて、その間にも、次に会った時はどんな顔で挨拶をするだろうと考えていた。"
+        },
+        {
+          "speaker": "kakyoin",
+          "text": "忘れ物はなさそうだよ。今日はちゃんと休めた？"
+        },
+        {
+          "speaker": "narrator",
+          "text": "端末を持ち直し、窓際の椅子へ座った。先輩の家からではなく、自分の部屋から返事を書く。その小さな距離があるおかげで、昨夜から持ち帰った気持ちを、急がずに選べそうだった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "again",
+          "text": "また二人で夜を過ごしたいです。先輩を、前より好きになってます",
+          "next": "days",
+          "effect": "messageAgain",
+          "setFlags": [
+            "fwbOngoing",
+            "changingWish"
+          ],
+          "replyVariants": [
+            {
+              "text": "僕もまた会いたい。きみの気持ちのことも、次に顔を見て聞かせて。"
+            }
+          ]
+        },
+        {
+          "id": "keep_nights",
+          "text": "友達のまま、またこうして会いたいです。先輩はどうですか",
+          "next": "days",
+          "effect": "messageBoundaries",
+          "setFlags": [
+            "fwbOngoing"
+          ],
+          "replyVariants": [
+            {
+              "text": "僕もそうしたい。次も、お互いに会いたい夜に。昼の対戦の約束も忘れないで。"
+            }
+          ]
+        },
+        {
+          "id": "daytime_only",
+          "text": "昨日は嬉しかったです。でも次からは、昼に遊ぶ友達でいたいです",
+          "next": "days",
+          "effect": "messageDaily",
+          "setFlags": [
+            "endedIntimacy"
+          ],
+          "replyVariants": [
+            {
+              "text": "分かった。次は昼に会おう。途中のゲーム、きみの手番からだったね。"
+            }
+          ]
+        }
+      ],
+      "message": true
+    },
+    {
+      "id": "days",
+      "chapter": 4,
+      "title": "何度も開く扉",
+      "location": "情報棟とゲームサークル",
+      "storyTime": {
+        "date": "7月11日",
+        "period": "昼"
+      },
+      "characterId": "kakyoin",
+      "rating": "general",
+      "tags": [
+        "kakyoin"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "六月の終わりから七月にかけて、私たちは何度か二人で会った。夕飯を食べてそのまま帰る日も、別れ際に私からもう少しいたいと伝える夜もあった。先輩が先に誘った夜には、端末越しではなく玄関で顔を見て頷いた。大学へ行けば課題もあれば、サークルで負ける日もある。その合間に、互いに望んだ夜がもう一度、二度と重なっていった。泊まった翌朝に一局だけ遊んだ時、先輩は負けたあとで、朝食が先だったと呟いた。",
+          "when": {
+            "flags": [
+              "fwbOngoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "六月の終わりから七月にかけて、いつもの場所で何度も顔を合わせた。自宅で会った翌日の返事のとおり、私たちは明るい時間に遊び、夕方になるとそれぞれの家へ帰った。少しぎこちない挨拶になった最初の日、先輩は勝負を始める前に私の手札を数え違えた。そのことをからかったら、次の二局をきっちり取り返された。",
+          "when": {
+            "flags": [
+              "hadNight",
+              "endedIntimacy"
+            ],
+            "notFlags": [
+              "fwbOngoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "七月に入っても、大学の扉を開けると見知った顔がいた。花京院先輩が先にいる日も、私が課題をしているところへ先輩が来る日もある。会えない日は、会えないままそれぞれの用事を済ませた。次に話すことが一つ増えるのが、前より少し楽しみになった。",
+          "when": {
+            "notFlags": [
+              "hadNight"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "今日は昼のラウンジで顔を合わせ、そのまま部室へ寄った。ジョセフが借りていたゲームを返しに来ていて、箱の中に入れた別のゲームの駒を先輩に見つけられていた。私が棚の箱を下ろす間にも、言い訳と指摘が行き来する。二人用の箱を手に取ったところで、先輩が私の方を見た。"
+        },
+        {
+          "speaker": "kakyoin",
+          "text": "それ、続きが残っているね。今日は三人だから、あとにしようか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "あと、という言葉だけで次の約束ができる。私は箱を一段上へ戻し、三人で遊べるものを下ろした。ジョセフが私の椅子まで引いて「味方はこっちな」と言うので、まだ決めていないと笑った。先輩が静かにルールを広げる。その手順が、いつの間にか私の知っているものになっていた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "promise_two",
+          "text": "帰り際、「二人用の続きは、二人で」と誘う",
+          "next": "quiet_message",
+          "effect": "gameDate"
+        },
+        {
+          "id": "usual_table",
+          "text": "三人で遊んだあと、先輩と棚を片づける",
+          "next": "quiet_message",
+          "effect": "walkTogether"
+        }
+      ]
+    },
+    {
+      "id": "quiet_message",
+      "chapter": 4,
+      "title": "空けておく時間",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "7月12日",
+        "period": "夜"
+      },
+      "characterId": "kakyoin",
+      "rating": "general",
+      "tags": [
+        "kakyoin"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "来週の予定を確かめていたら、教室のシフトも授業も、先輩と重ならない日があった。空欄へ何かを書き足すほどの用事はない。私は端末を机の上へ置き、その空欄のまわりを指でたどった。先に届いた通知を見て、少しだけ笑ってしまう。"
+        },
+        {
+          "speaker": "kakyoin",
+          "text": "来週、会える日が少ないね。金曜のサークルには行くつもり。きみは？"
+        },
+        {
+          "speaker": "narrator",
+          "text": "用事が重なるのを待つだけでなく、行く日を知らせ合うようになった。どのくらい先のことまで返そうか迷い、入力欄の文字を一度だけ消した。予定を合わせる短い返事にも、言っておきたいことを少し混ぜられる。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "want_see",
+          "text": "私も行きます。ゲームもしたいけど、先輩に会いたいです",
+          "next": "decision",
+          "effect": "messageFuture",
+          "replyVariants": [
+            {
+              "text": "僕も会いたい。ゲームを始める前に、少し話そう。",
+              "when": {
+                "min": {
+                  "romanceChar": 30
+                }
+              }
+            },
+            {
+              "text": "じゃあ、待っているよ。きみが来るまで箱は開けないでおく。"
+            }
+          ]
+        },
+        {
+          "id": "save_evening",
+          "text": "行きます。そのあとの夜も、一緒に過ごせたら嬉しいです",
+          "next": "decision",
+          "effect": "messageAgain",
+          "when": {
+            "flags": [
+              "fwbOngoing"
+            ]
+          },
+          "replyVariants": [
+            {
+              "text": "うん、僕も。その前に、金曜はゆっくり晩ご飯にしよう。"
+            }
+          ]
+        },
+        {
+          "id": "daily",
+          "text": "行きます。先輩の分も、席を空けておきますね",
+          "next": "decision",
+          "effect": "messageDaily",
+          "replyVariants": [
+            {
+              "text": "ありがとう。今度は僕が先に着いて、きみの席を取っておくかもしれないけど。"
+            }
+          ]
+        }
+      ],
+      "message": true
+    },
+    {
+      "id": "decision",
+      "chapter": 4,
+      "title": "約束のない日にも",
+      "location": "ゲームサークルの部室",
+      "storyTime": {
+        "date": "7月18日",
+        "period": "夕方"
+      },
+      "characterId": "kakyoin",
+      "rating": "general",
+      "tags": [
+        "kakyoin"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "ジョセフが次の用事へ出ていくと、部室には私たちだけが残った。窓際の机へ移り、片づけた箱の角を揃える。六月には名前のなかった次の約束が、今は幾つも思い浮かぶ。先輩と向かい合う椅子は、ラウンジにも、教室にも、この部屋にもあった。"
+        },
+        {
+          "speaker": "kakyoin",
+          "text": "もうすぐ授業が減るね。毎日ここへ来る理由は、少なくなりそうだ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "言いながら、先輩は鞄を持ち上げなかった。私も膝の上で手をほどく。研究会へ行っていたあの数日を思い出すと、いない席を見ただけで終わった時間と、今から自分で作れる時間との間に、細い隙間があるように感じた。"
+        },
+        {
+          "speaker": "kakyoin",
+          "text": "僕はまた、きみと会いたいと思っている。授業のついでじゃなくても。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "窓の外で、別の部屋を片づける音がした。私はその音が止むまで先輩の顔を見ていた。軽い返事にも、今までと違う言葉にもできる。ここで一緒に過ごしてきた時間を、持っていきたい方へ、少しだけ動かした。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "tell_him",
+          "text": "「先輩に、私から伝えたいことがあります」",
+          "next": "confess_player",
+          "when": {
+            "min": {
+              "trust": 55,
+              "romancePlayer": 40,
+              "romanceChar": 35
+            },
+            "notFlags": [
+              "fwbOngoing"
+            ]
+          }
+        },
+        {
+          "id": "hear_him",
+          "text": "先輩がまだ言わずにいる言葉を、待つ",
+          "next": "confess_kakyoin",
+          "when": {
+            "min": {
+              "trust": 55,
+              "romancePlayer": 20,
+              "romanceChar": 40
+            },
+            "notFlags": [
+              "fwbOngoing"
+            ]
+          }
+        },
+        {
+          "id": "continue_nights",
+          "text": "「昼も夜も、今みたいに会い続けたいです」",
+          "next": "fwb_agree",
+          "when": {
+            "min": {
+              "trust": 55,
+              "desire": 25,
+              "intimacy": 35
+            },
+            "flags": [
+              "fwbOngoing"
+            ]
+          }
+        },
+        {
+          "id": "change_us",
+          "text": "「夜を重ねるうちに、望むことが変わってきました」",
+          "next": "fwb_change",
+          "when": {
+            "min": {
+              "trust": 65,
+              "romancePlayer": 50,
+              "romanceChar": 45,
+              "intimacy": 35
+            },
+            "flags": [
+              "fwbOngoing"
+            ]
+          }
+        },
+        {
+          "id": "ordinary_days",
+          "text": "「何もない日も、先輩のいつもの相手になりたいです」",
+          "next": "special_agree",
+          "when": {
+            "min": {
+              "trust": 55,
+              "comfort": 65,
+              "intimacy": 7
+            },
+            "flags": [
+              "labHabit",
+              "clubHabit",
+              "shiftHabit",
+              "noticedAbsence",
+              "quietEase"
+            ],
+            "notFlags": [
+              "fwbOngoing"
+            ]
+          }
+        },
+        {
+          "id": "friends",
+          "text": "「これからも、友達として一緒に遊びたいです」",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "friendChosen",
+            "endedIntimacy"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_player",
+      "chapter": 4,
+      "title": "私からの一手",
+      "location": "ゲームサークルの部室",
+      "storyTime": {
+        "date": "7月18日",
+        "period": "夕方"
+      },
+      "characterId": "kakyoin",
+      "rating": "general",
+      "tags": [
+        "kakyoin"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "伝えたいことがある、と言っただけで口の中が乾いた。先輩は机の箱を棚へ戻しかけていた手を止め、それを脇へ置き直す。片づけることを途中でやめて、私の方へ椅子を向けた。その静かな動作に、逃げ道を塞がれたのではなく、話す場所を作ってもらった気がした。"
+        },
+        {
+          "speaker": "player",
+          "text": "あの、先輩。私、今日まで、何回も用事を探してました。聞きたいことがあるとか、ゲームが途中だとか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "そこまで言うと、思い当たる顔をされるのではないかと怖くなった。けれど先輩は頷いただけだった。机の縁を押さえる指が一本ずつ離れ、膝へ戻る。私の話を待つ姿を見ていたら、うまく言って分かってもらおうという気持ちが、少しずつほどけた。"
+        },
+        {
+          "speaker": "kakyoin",
+          "text": "うん。用事の続きでも、そうじゃなくても、聞いているよ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩が研究会から戻った日、紙を畳まずにいてくれたことを思い出した。なくなってもいい理由を間に置いて、一緒に座っていた。今度はその紙を取り上げるように、言いたい言葉だけを差し出せばいい。私は先輩の目を見て、息を吸った。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "say_like",
+          "text": "「好きです。先輩の恋人になりたいです」と伝える",
+          "next": "end_love_a",
+          "effect": "messageHeart",
+          "setFlags": [
+            "playerConfessed",
+            "dating"
+          ]
+        },
+        {
+          "id": "say_choose",
+          "text": "「用事がなくても先輩に会いたいです。私と付き合ってください」と伝える",
+          "next": "end_love_a",
+          "effect": "messageHeart",
+          "setFlags": [
+            "playerConfessed",
+            "dating"
+          ]
+        },
+        {
+          "id": "stay_friends",
+          "text": "「今は、友達として会う約束がしたいです」と伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "friendChosen",
+            "endedIntimacy"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_kakyoin",
+      "chapter": 4,
+      "title": "読めなかった返事",
+      "location": "ゲームサークルの部室",
+      "storyTime": {
+        "date": "7月18日",
+        "period": "夕方"
+      },
+      "characterId": "kakyoin",
+      "rating": "general",
+      "tags": [
+        "kakyoin"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "花京院先輩は鞄の持ち手をつかみ、結局、持ち上げずに離した。授業のついででなくても、という言葉の続きはまだそこにある。私が急いで返さずにいると、先輩は一度窓の外を見た。盤面を前にした時には見せない間だった。"
+        },
+        {
+          "speaker": "kakyoin",
+          "text": "僕は、きみが好きだ。後輩だから気にかけている、だけじゃ足りなくなった。恋人として、そばにいてほしい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "聞こえた言葉をすぐ自分のことにできず、私は先輩の顔を見つめていた。いつも考えを読まれている気がした人が、今は私の返事だけを待っている。口元には小さな笑いが残っていたけれど、膝に置いた手はじっと動かなかった。"
+        },
+        {
+          "speaker": "kakyoin",
+          "text": "……こういう時まで、先のことを全部読めたらいいのにね。きみが何を言うか、今は分からない。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "冗談の形になりきらなかった一言に、私の方の緊張も少し揺れた。机のこちら側から手を伸ばせる距離だった。触れなくても、選んだ言葉は届く。私は膝に置いていた鞄を足元へ下ろし、先輩に向き直った。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "accept",
+          "text": "「私も好きです。恋人として、一緒にいたいです」と答える",
+          "next": "end_love_b",
+          "effect": "messageHeart",
+          "setFlags": [
+            "kakyoinConfessed",
+            "dating"
+          ]
+        },
+        {
+          "id": "decline",
+          "text": "「嬉しいです。でも、恋人にはなれません。友達でいたいです」と答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "declinedConfession",
+            "friendChosen",
+            "endedIntimacy"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fwb_agree",
+      "chapter": 4,
+      "title": "次に会う夜",
+      "location": "部室から駅へ向かう道",
+      "storyTime": {
+        "date": "7月18日",
+        "period": "夕方"
+      },
+      "characterId": "kakyoin",
+      "rating": "general",
+      "tags": [
+        "kakyoin"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "部室を閉めて、駅までの道を歩き出した。今みたいに会い続けたい、と伝えた言葉を、先輩は歩きながらもう一度確かめるように頷いていた。昼間の勝負も、夜に二人で過ごしたことも、どちらかを隠す話にはしたくなかった。横断歩道の手前で立ち止まると、私は先輩の方へ体を向けた。"
+        },
+        {
+          "speaker": "player",
+          "text": "恋人になる約束は、今はしたいと思っていません。でも、先輩とああして夜を過ごすのは好きです。昼も、今までみたいに遊びたい。"
+        },
+        {
+          "speaker": "kakyoin",
+          "text": "僕も、きみとそうやって会いたい。きみが来たいと言ってくれるのも、僕から誘えるのも、嬉しいんだ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私の返事が終わるまで、先輩は道の先へ目を戻さなかった。信号が変わり、人が横を通り抜けていく。肩の近くに触れた鞄の紐を直すだけの時間にも、その言葉を少しずつ受け取った。"
+        },
+        {
+          "speaker": "kakyoin",
+          "text": "今度も、嫌になったら言おう。僕も言う。……それと、泊まる日の朝に対戦するのは考え直したい。寝起きで負けた記録が増える。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "笑ってしまうと、先輩もやっと前を向いた。手をつなぐ代わりに歩幅を揃え、青になった道へ一緒に踏み出す。次に訪ねる夜のことを、帰りたくない勢いだけでなく、自分の部屋へ帰れる私のままで考えた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "continue",
+          "text": "「私もそうしたいです。次の夜も、会う約束をしましょう」",
+          "next": "end_fwb",
+          "effect": "messageBoundaries",
+          "setFlags": [
+            "fwbConfirmed"
+          ]
+        },
+        {
+          "id": "daytime",
+          "text": "「やっぱり、これからは昼に遊ぶ友達でいたいです」",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedIntimacy",
+            "friendChosen"
+          ]
+        }
+      ],
+      "when": {
+        "flags": [
+          "fwbOngoing"
+        ]
+      }
+    },
+    {
+      "id": "fwb_change",
+      "chapter": 4,
+      "title": "夜の外へ持っていく",
+      "location": "ゲームサークルの部室",
+      "storyTime": {
+        "date": "7月18日",
+        "period": "夕方"
+      },
+      "characterId": "kakyoin",
+      "rating": "general",
+      "tags": [
+        "kakyoin"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "変わってきました、と言ったあと、私は先輩の返事を待たずに言葉を探した。何度か夜を一緒に過ごしても、翌朝になればそれぞれの予定があり、大学で会えば友達として笑っていた。その全部が嫌になったわけではない。むしろ、次を楽しみにするたびに、言わずにいたものが一つずつ増えていた。"
+        },
+        {
+          "speaker": "player",
+          "text": "先輩のことが好きです。会える夜を待つだけじゃなくて、恋人になりたいと思うようになりました。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩の手が机の上へ出て、私の指の少し手前で止まった。初めて泊まった夜にも、まだ触れない手を見た。そのことを思い出しながら、今は私から手の甲へ指を重ねた。先輩がこちらを見て、ゆっくり息をつく。"
+        },
+        {
+          "speaker": "kakyoin",
+          "text": "僕も、好きだよ。これまでの約束があるから、勝手に変えたくなかった。……きみと付き合いたい。昼に会う時も、そう言って待ち合わせをしたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩の親指が私の指の脇へ触れた。それ以上は握られずにいるので、返事を忘れていたことに気づいた。何度も近くで見てきた顔なのに、その間だけは知らない表情を探すように見つめてしまった。私の言葉を待つ人へ、今度は先に笑いかけた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "be_lovers",
+          "text": "「はい。これからは、先輩の恋人として会いたいです」",
+          "next": "end_fwb_to_love",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating",
+            "changedFromFwb"
+          ]
+        },
+        {
+          "id": "still_friends",
+          "text": "「今、約束するのはまだ迷います。親密な友達のまま会いたいです」",
+          "next": "end_fwb",
+          "effect": "messageBoundaries",
+          "setFlags": [
+            "fwbConfirmed"
+          ]
+        },
+        {
+          "id": "only_friends",
+          "text": "「少し距離を変えて、友達として会いたいです」",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedIntimacy",
+            "friendChosen"
+          ]
+        }
+      ],
+      "when": {
+        "flags": [
+          "fwbOngoing"
+        ]
+      }
+    },
+    {
+      "id": "special_agree",
+      "chapter": 4,
+      "title": "用事のない火曜日",
+      "location": "ゲームサークルの部室",
+      "storyTime": {
+        "date": "7月18日",
+        "period": "夕方"
+      },
+      "characterId": "kakyoin",
+      "rating": "general",
+      "tags": [
+        "kakyoin"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "いつもの相手になりたい、と言ってから、ずいぶん欲張った言い方だったかもしれないと思った。課題を一緒に考えて、勝負をして、教室を閉める。先輩の家では別々のものを読んだ。そのどこにもいない日があったから、私から空けておきたい時間があると分かった。"
+        },
+        {
+          "speaker": "player",
+          "text": "何かを教えてほしいからとか、用事があるからだけじゃなくて。何もしない午後でも、先輩と過ごしたいんです。"
+        },
+        {
+          "speaker": "kakyoin",
+          "text": "……それなら、火曜の午後を空けておこうかな。僕も、そういう時に最初に声をかける相手が、きみだといいと思う。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩は端末の予定を開いたけれど、すぐには何も入力しなかった。私は机へ身を寄せ、その画面の空いたところを見る。授業や仕事の名前では埋まらない空欄が、そこにはあった。"
+        },
+        {
+          "speaker": "kakyoin",
+          "text": "恋人になる、という約束とは違うんだけど。きみと日々を重ねていくなら、僕は、これがいい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩の言い方を聞いて、自分が欲しかったものに、ようやく手が届いた気がした。特別な予定を増やすのではなく、今日みたいな時間を二人から選ぶ。私は椅子を少し寄せ、火曜の午後の欄を指した。ゲームを始める前みたいに、先輩が私の手元を見ている。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "our_afternoon",
+          "text": "「私も。その時間は、先輩と一緒に過ごしたいです」",
+          "next": "end_special",
+          "effect": "homeTogether",
+          "setFlags": [
+            "dailyPartners"
+          ]
+        },
+        {
+          "id": "club_friends",
+          "text": "「今は、みんなとサークルで会う約束にしておきたいです」",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "friendChosen",
+            "endedIntimacy"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "end_friend",
+      "chapter": 5,
+      "title": "次は私の番",
+      "location": "ゲームサークルの部室",
+      "storyTime": {
+        "date": "7月25日",
+        "period": "昼"
+      },
+      "characterId": "kakyoin",
+      "rating": "general",
+      "tags": [
+        "kakyoin"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人にはなれないと伝えた日、先輩はすぐに笑い話へ変えなかった。少し時間がほしいと言われて、次の連絡は私から急がずに待った。数日後に届いた対戦の誘いを見て、行きたい、と返した。今日は、その約束で部室へ来た。",
+          "when": {
+            "flags": [
+              "declinedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "これからは昼に遊ぶ友達でいたいと話した時、先輩は頷いて、次の誘いをサークルの時間に変えてくれた。二人きりで夜を過ごした記憶まで消えるわけではない。それでも、今日どこで会いたいかは、あらためて選んで伝えられた。",
+          "when": {
+            "flags": [
+              "hadNight",
+              "endedIntimacy"
+            ],
+            "notFlags": [
+              "declinedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "友達としてまた遊びたい、と言ったら、先輩は次こそ勝つつもりだと返した。その約束を鞄に入れるような気分で部室へ来ると、机の上にはもう箱が並んでいた。今日は私も、早く帰る用事はない。",
+          "when": {
+            "notFlags": [
+              "hadNight",
+              "declinedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "扉を開けたところで、ジョセフが点数表を私へ突き出した。さっきまでの勝ち分を記念撮影しておきたいらしい。花京院先輩は私の椅子を空けながら、その表の一箇所を指さしている。私が覗き込むと、ジョセフの足し算だけが二点多かった。"
+        },
+        {
+          "speaker": "kakyoin",
+          "text": "そこを直しても、まだ勝っているよ。次の一局までならね。"
+        },
+        {
+          "speaker": "joseph",
+          "text": "余裕だな、先輩。よーし、今来たばっかの{player.lastName}にも、その顔覚えといてもらおうぜ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私は箱から自分の駒を選び、二人の間へ置いた。先輩が新しい点数表を広げる。いつも端でメモに使われる余白へ、今日は私が最初の線を引いた。見せると、先輩の口元がほんの少し上がった。"
+        },
+        {
+          "speaker": "player",
+          "text": "始めましょう。今日は私も、負けるつもりないです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "花京院先輩の手から、最初の札が伏せられた。ジョセフが身を乗り出し、私は次の一手を考える。この机にはまだ、三人分の昼の時間が残っていた。"
+        }
+      ],
+      "choices": [],
+      "ending": "FRIEND"
+    },
+    {
+      "id": "end_love_a",
+      "chapter": 5,
+      "title": "余白に書く名前",
+      "location": "部室と情報棟のラウンジ",
+      "storyTime": {
+        "date": "7月18日",
+        "period": "夕方"
+      },
+      "characterId": "kakyoin",
+      "rating": "general",
+      "tags": [
+        "kakyoin"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "言い終えたあと、私は先輩の返事より先に自分の手元を見そうになった。机の向こうから名前を呼ばれ、なんとか顔を上げる。先輩は笑っていた。いつもの、いい手を読んだ時の笑いではなく、何かを言おうとしてうまく順序がつかないような、小さな笑いだった。"
+        },
+        {
+          "speaker": "kakyoin",
+          "text": "僕も好きだよ、{address}。付き合ってほしい。……きみに先を越されることまで、考えていたはずなんだけどな。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "悔しいんですか、と聞く声が少し震えた。先輩は首を横に振り、私が机に置いた手へ自分の手を添えた。私はその指を握り返す。座ったまま届く距離だったのに、今までどれほど遠回りしてきたのだろう。そう思っても、その道を短くし直したくはなかった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "四日後、ラウンジで課題をしていると、隣の椅子が静かに引かれた。来ると知っていたのに、顔を見る前から笑ってしまう。花京院先輩は私のノートを覗き、途中まで書いた図の脇に、持っていた小さな紙を置いた。新しく見つけたゲームの、二人で試したい手順だった。",
+          "storyTime": {
+            "date": "7月22日",
+            "period": "昼"
+          }
+        },
+        {
+          "speaker": "kakyoin",
+          "text": "今日は、きみの用事が終わるまで待っている。これはそのあと。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私が今度の行き先を聞くと、先輩は少し迷ってから、まず昼ご飯だね、と言った。先のことならいつも用意しているように見えた人と、一緒に予定を決める。私は課題の終わりに線を引き、その紙をノートへ挟んだ。次に開くときは、隣から同じ手が伸びてくる。"
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_A"
+    },
+    {
+      "id": "end_love_b",
+      "chapter": 5,
+      "title": "先輩の待ち時間",
+      "location": "部室から駅への道",
+      "storyTime": {
+        "date": "7月18日",
+        "period": "夕方"
+      },
+      "characterId": "kakyoin",
+      "rating": "general",
+      "tags": [
+        "kakyoin"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私も好きです、と答えると、先輩の手がようやく膝から離れた。けれど、すぐには私へ伸びてこなかった。机の端で止まっているその手を見て、私は自分から指先を重ねる。指先がそっと握り返され、向かいで先輩が息を吐いた。私もようやく笑えたけれど、重ねた手を見ると、返事をした時より頬が熱くなった。"
+        },
+        {
+          "speaker": "kakyoin",
+          "text": "……よかった。言うところまでは考えてきたのに、その先を何も決められなくてね。"
+        },
+        {
+          "speaker": "player",
+          "text": "じゃあ、帰りながら決めませんか。駅まで、まだ時間ありますから。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "鞄を持つために一度手を離し、部室の鍵を返してから外へ出た。先輩は空いている方の手をこちらへ向けて待っていた。私がそこへ指を入れると、歩き出すタイミングが少しずれる。普段なら何も考えず揃う歩幅に、二人で小さく笑った。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "次に二人で歩いたのは、一週間後の教室帰りだった。仕事中の先輩は、私の説明が長いと平然と時計を指した。私も、センサーの話を始めかけた先輩へ例の別紙を見せた。控室で名札を外す頃には、どちらが先に笑ったのか分からなくなっていた。",
+          "storyTime": {
+            "date": "7月25日",
+            "period": "夕方"
+          }
+        },
+        {
+          "speaker": "kakyoin",
+          "text": "今日は駅の手前で曲がろうか。きみと行ってみたい店があるんだ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "外へ出てから、私は先輩の手を取った。どの店か聞くと、着くまで内緒だと返ってくる。知らない答えを一つ持った人の隣で、今日はいつもより先まで歩ける。信号の変わり目を二人で待ちながら、その店へ入るときにも、まだ手を離したくないだろうと思った。"
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_B"
+    },
+    {
+      "id": "end_fwb",
+      "chapter": 5,
+      "title": "夜にも、つづき",
+      "location": "花京院の自宅",
+      "storyTime": {
+        "date": "7月25日",
+        "period": "夜"
+      },
+      "characterId": "kakyoin",
+      "rating": "fade",
+      "tags": [
+        "kakyoin"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "約束した夜、花京院先輩の家へ行くと、玄関から夕飯の匂いがした。次も会おうと二人で約束してから、初めて訪ねる日だった。呼び鈴を押したあと一度だけ鞄の紐を握り直す。開いた扉の向こうで、先輩は私の持ってきた小さな袋に目を留めた。"
+        },
+        {
+          "speaker": "kakyoin",
+          "text": "それ、ゲーム？　今日は夕飯のあとでお願いするよ。僕は朝の再戦を避けるつもりで、早く用意したんだ。"
+        },
+        {
+          "speaker": "player",
+          "text": "分かってます。今日は食べてからです。私も、お腹すきました。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "部屋へ上がり、先輩が皿を運ぶ間に、私は飲み物を置いた。引き出しを開ける前にもう尋ねなくていい。けれど泊まるかどうかは、同じように決めたことにはならない。食事を終えて向かい合った時、私は今日は一緒にいたい、と言った。先輩は私の顔を見て、僕も、と答えた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "対戦は私が一局目を取り、二局目は先輩が取り返した。引き分けの点数を見て顔を上げると、先輩も同じところを見ていた。私が手を差し出すと、盤面の上ではなく、その脇で握り返される。今度は急いで点数をつけなくてよかった。"
+        },
+        {
+          "speaker": "kakyoin",
+          "text": "続きは、また起きてから。……今の勝ち負けだけは、ちゃんと覚えておいてね。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "笑って頷き、私は先輩と一緒に立った。寝室へ向かう前に、机の上の箱へ蓋をする。昼の私たちにも分かる約束が、そこに一つ残った。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌朝、先輩が朝食を並べている間に、私は昨日の点数を紙へ書いた。引き分けの横へ小さく「続く」と足す。気づいた先輩が私の向かいに座り、食べてから、とまだ何も言っていない私を牽制した。笑うと、同じ顔で返ってきた。",
+          "storyTime": {
+            "date": "7月26日",
+            "period": "朝"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB"
+    },
+    {
+      "id": "end_fwb_to_love",
+      "chapter": 5,
+      "title": "待ち合わせをしよう",
+      "location": "部室と街の通り",
+      "storyTime": {
+        "date": "7月18日",
+        "period": "夕方"
+      },
+      "characterId": "kakyoin",
+      "rating": "general",
+      "tags": [
+        "kakyoin"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人として会いたい、と答えると、先輩の指が今度こそ私の手を包んだ。慣れたはずの触れ方なのに、少し強く握り返してしまった。先輩も気づいたように笑い、机へ置いていたもう片方の手で、私の鞄が倒れないように起こしてくれた。"
+        },
+        {
+          "speaker": "kakyoin",
+          "text": "次は外で待ち合わせをしよう。僕の家へ来る途中じゃなくて、二人で行く場所を決めたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "その場で互いの予定を開き、一日だけ空いている日を見つけた。先輩の家で夕飯を作ったことや、朝食を向かい合って食べたことが浮かぶ。私は画面の日付へ指を置き、今度は何を一緒に見られるだろうと考えた。先輩が予定の欄に書き込むまで、指を離すのを忘れていた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "待ち合わせの日、駅前の人混みの向こうに先輩を見つけた。私より先に来ていたらしい。近づきながら手を上げると、先輩は時計から顔を離し、こちらへ歩いてきた。予定の時刻にはまだ少し早い。",
+          "storyTime": {
+            "date": "7月26日",
+            "period": "昼"
+          }
+        },
+        {
+          "speaker": "player",
+          "text": "待たせちゃいました？"
+        },
+        {
+          "speaker": "kakyoin",
+          "text": "少しだけ。僕が早く着きすぎたんだ。……家で待つより、時計を見る回数が多かったね。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "思いがけず正直な言い方に笑うと、先輩は私の鞄を軽く目で示した。中には貸し借りしていた本が入っていたけれど、返すのはあとでいい。まず昼食の店を決め、遠回りできる道へ出た。人を避けて肩が離れかけたとき、私が手を伸ばし、先輩がつかまえた。知っている温かさを、今日の明るい道へ持っていった。"
+        }
+      ],
+      "choices": [],
+      "ending": "FWB_TO_LOVE"
+    },
+    {
+      "id": "end_special",
+      "chapter": 5,
+      "title": "空欄のままで",
+      "location": "花京院の自宅",
+      "storyTime": {
+        "date": "7月23日",
+        "period": "昼"
+      },
+      "characterId": "kakyoin",
+      "rating": "general",
+      "tags": [
+        "kakyoin"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "火曜の午後を一緒に過ごすと決め、最初に会えたのは、その翌日の水曜だった。先輩に急な研究室の用事が入り、私にも課題の締切があったからだ。一日ずれても、約束そのものは消えなかった。私は読みかけのノートを持って先輩の家へ行き、玄関で自分の靴を端へ寄せた。"
+        },
+        {
+          "speaker": "kakyoin",
+          "text": "今日は何かしたいこと、ある？　僕は、この前の続きが少しあるけど。"
+        },
+        {
+          "speaker": "player",
+          "text": "私もです。あとで一緒に買い物へ行けたら嬉しいです。家の食材、切らしちゃって。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩は自分も補充したいものがあると言って、買い物袋を玄関へ置いた。それから机に戻り、私のノートを置く分だけ本を寄せた。台所の場所も、勝負の時の癖も知っているけれど、今日は何を話すかまでは知らない。知らないまま向かいへ座り、それぞれの続きを開いた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "書き終えた私がペンを置くと、少しして先輩も本を閉じた。待ってくれていたのか聞こうとして、ページの端を折りかけてやめた指を見る。もう少し読むなら、と言うと、先輩は首を横に振った。"
+        },
+        {
+          "speaker": "kakyoin",
+          "text": "続きは、またきみが来た時に読む。今は、買い物へ行こう。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "二人で家を出て、角の店まで歩く。帰りはそれぞれの家で食べるものを買うから、袋は二つだ。私は先輩の方へ傾きかけた小さな箱を直し、先輩は私の袋からはみ出す長い野菜を笑った。来週の欄には、何をするかまだ書いていない。けれど最初に声をかける相手は決まっている。次に開ける扉を思い浮かべながら、別れ道まで並んで歩いた。"
+        }
+      ],
+      "choices": [],
+      "ending": "SPECIAL"
+    }
+  ]
+}

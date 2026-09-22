@@ -1,0 +1,1235 @@
+{
+  "id": "gyro",
+  "title": "ジャイロ — まだ誰もできない遊び",
+  "intro": "外れた予想も、うまくいかない冗談も。\n自分の一機を持って戻った日から、次に会う楽しみが増えていく。",
+  "startEvent": "wing",
+  "character": {
+    "name": "ジャイロ",
+    "adult": true,
+    "heightCm": null,
+    "heightBasis": "4巻23話までの参照範囲で身長を確認できず",
+    "profile": "実務の腕と自信。独特のユーモア。自分が納得することへの執着。",
+    "personality": [
+      "実務の腕と自信",
+      "独特のユーモア",
+      "自分が納得することへの執着"
+    ],
+    "speech": {
+      "firstPerson": "オレ",
+      "addressing": "主人公は名前/おまえ。砕けた常体。研究会など公的な場では必要な敬語を使う。",
+      "tone": "くだけた断定。語尾は感情と相手に合わせる。",
+      "habits": [
+        "くだけた断定",
+        "教える時は具体的",
+        "ふざけた調子から真剣さへ切り替わる"
+      ],
+      "signaturePhrases": [],
+      "signatureNote": "日常の固定口癖は採用しない。象徴的な原作台詞と普段の話し方を混同せず、名台詞を貼り付けない。",
+      "avoid": [
+        "ジョセフの先読み芸を移す",
+        "後年の過去・能力・名台詞",
+        "常に完璧な陽気な兄貴"
+      ]
+    },
+    "referenceSection": "docs/CHARACTER_REFERENCE.md#cast-gyro"
+  },
+  "au": {
+    "role": "大学院生。M1〜M2・医工/生体/材料系は候補",
+    "routeEnabled": true,
+    "addressing": [
+      {
+        "text": "{player.lastName}"
+      }
+    ]
+  },
+  "events": [
+    {
+      "id": "wing",
+      "title": "飛ばす前の大見得",
+      "chapter": 1,
+      "location": "大学の公開体験室",
+      "storyTime": {
+        "date": "5月8日",
+        "period": "昼"
+      },
+      "characterId": "gyro",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "紙飛行機の実演机に、さっきまで人だかりができていた。片づけを手伝いに来た私へ、大学院生のジャイロ先輩が最後の一機を見せる。昼に挨拶した時はよく通る声で冗談を言っていた人が、今は紙の縁を目の高さへ持ち上げ、折り目を爪でほんの少し押していた。"
+        },
+        {
+          "speaker": "gyro",
+          "text": "見とけよ。こいつは向こうの箱に入る。片づけまで自分でやる、よくできた飛行機だ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "通路に人がいないのを確かめて放たれた機体は、箱を越えて壁の手前に落ちた。私は笑いを堪えきれず、先輩がこちらを向く前に拾いに行く。「残業か」と背後で聞こえたので、戻りながら、帰りたくなかったんですね、と返した。先輩は口を開きかけ、そのまま笑った。"
+        },
+        {
+          "speaker": "player",
+          "text": "もう一枚、紙ありますか。私も自分で折ってみたいです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "余った紙を二枚渡され、一枚を机へ置いた。先輩の折り方を横で見ながら、角を合わせる。私の機体は少し太くなったが、取り替えてもらう気にはならなかった。誰もいなくなった通路が、急に広く見えた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "trial",
+          "text": "自分の一機を飛ばし、落ちた場所から折り方を考える",
+          "next": "lunch",
+          "effect": "workTogether",
+          "setFlags": [
+            "ownTrial"
+          ],
+          "lockRoute": "gyro"
+        },
+        {
+          "id": "invite",
+          "text": "「次は先輩と勝負したいです」と笑って誘う",
+          "next": "lunch",
+          "effect": "gameDate",
+          "lockRoute": "gyro"
+        }
+      ]
+    },
+    {
+      "id": "lunch",
+      "title": "採用されない冗談",
+      "chapter": 1,
+      "location": "学食の窓際",
+      "storyTime": {
+        "date": "5月15日",
+        "period": "昼"
+      },
+      "characterId": "gyro",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "昼の学食で先輩を見つけ、空いている向かいへ座った。あの機体は持って帰ったと話すと、もう働かせてないのかと言われる。私が箸を割る間、先輩は今日の定食にやけに立派な名前をつけ始めた。焼き魚一切れに大陸を越える旅を背負わせ、最後に肝心の語呂が合わなくなる。"
+        },
+        {
+          "speaker": "player",
+          "text": "長旅でしたね。最後の三文字だけ、置いてきた方がよかったかも。"
+        },
+        {
+          "speaker": "gyro",
+          "text": "そこが一番いいところだろうが。もう一回聞け。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "もう一度聞いても合わなかった。私は汁椀を置いて笑い、先輩もついに箸の先で魚を指した。「こいつが聞いてりゃ泣くぜ」。くだらないと言いながら、食べ終わる頃には自分でも続きの名前を考えている。通路を歩くジョセフに声を掛けられ、何を笑ってるんだと訊かれても、どこから説明すればいいのか分からなかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "joke",
+          "text": "私の短い名前を返して、二人で出来を比べる",
+          "next": "slope",
+          "effect": "gamePartners",
+          "setFlags": [
+            "returnJoke"
+          ]
+        },
+        {
+          "id": "near",
+          "text": "笑いが収まるまで、向かいの席でもう少し過ごす",
+          "next": "slope",
+          "effect": "walkClose"
+        }
+      ]
+    },
+    {
+      "id": "slope",
+      "title": "外れたままで終わらせない",
+      "chapter": 1,
+      "location": "予約した公開体験室",
+      "storyTime": {
+        "date": "5月22日",
+        "period": "夕方"
+      },
+      "characterId": "gyro",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "空いている時間の使用許可を取り、先輩とまた紙飛行機を飛ばした。机の横に箱を置き、私は家で折った一機を出す。先輩は翼を見て右へ曲がると予想したが、飛ばしてみると左の床へ落ちた。私が拾って振り返ると、先輩はもう次の紙を折りかけていた。"
+        },
+        {
+          "speaker": "gyro",
+          "text": "待て、今のをもう一回。投げるところから見せろ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "失敗の理由を言い当てて終わりにはしないらしい。何度か投げ、今度は先輩にも同じ機体を渡す。持つ位置を指一本分変えた時だけ、落ちる先が違った。私は床の印を貼り直し、先輩が線の後ろへ戻ってくるのを待った。"
+        },
+        {
+          "speaker": "player",
+          "text": "まだ箱には入ってませんよ。さっきの予想も、外れたままです。"
+        },
+        {
+          "speaker": "gyro",
+          "text": "分かってるって。ここで帰ったら、明日も気になるだろ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私も、明日まで待つのは嫌だった。最後の一回を私が投げ、箱の縁に当たって落ちた紙へ二人で声を上げる。終了時刻にはまだ入らなかったけれど、片づけの手つきまで急いでいた最初の日とは違い、次に直す場所を話しながら部屋を出た。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "retry",
+          "text": "当たった位置をメモして、次も同じ機体を持ってくる",
+          "next": "message",
+          "effect": "homeTogether",
+          "setFlags": [
+            "sharedFailure"
+          ]
+        },
+        {
+          "id": "smile",
+          "text": "「先輩と試すと、帰りたくなくなります」と伝える",
+          "next": "message",
+          "effect": "walkClose"
+        },
+        {
+          "id": "rest",
+          "text": "今日はよく飛ばしたと笑い、夕食の話に変える",
+          "next": "message",
+          "effect": "shiftRest"
+        }
+      ]
+    },
+    {
+      "id": "message",
+      "title": "箱の外から",
+      "chapter": 2,
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "5月25日",
+        "period": "夜"
+      },
+      "characterId": "gyro",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "夜、ジャイロ先輩から届いた写真には、机の上の紙飛行機と、遠くに置かれた小さな空き箱が写っていた。本文は「本日の成績、箱の周囲を完全制圧」。私は自分の鞄から機体を出し、少しつぶれた先端を指で戻す。"
+        },
+        {
+          "speaker": "gyro",
+          "text": "一回入ったんだが、撮ろうとしたら次が入らねえ。おまえの方はどうだ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先に成功されたのか、と悔しくなった。けれど送られてきたのは、うまくいかなかった方の写真だ。机の端へ自分の機体を置いて撮る。返信欄を開く時には、次の空き時間まで考えていた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "paper",
+          "text": "まだ箱の外です。次は一緒に確かめましょう",
+          "next": "target",
+          "effect": "messageDaily",
+          "replyVariants": [
+            {
+              "text": "よし。入ったところを見逃すなよ。おまえの番も、ちゃんと見てる。"
+            }
+          ]
+        },
+        {
+          "id": "you",
+          "text": "飛行機もですけど、先輩に会いたくなりました",
+          "next": "target",
+          "effect": "messageHeart",
+          "replyVariants": [
+            {
+              "text": "オレも会いてえよ。次は写真じゃなくて、目の前で笑え。",
+              "when": {
+                "min": {
+                  "romancePlayer": 15
+                }
+              }
+            },
+            {
+              "text": "また吹き出す用意か？　今度こそ決めるから、見に来いよ。"
+            }
+          ]
+        }
+      ],
+      "message": true
+    },
+    {
+      "id": "target",
+      "title": "狙うところを決める",
+      "chapter": 2,
+      "location": "体験室と帰り道",
+      "storyTime": {
+        "date": "6月1日",
+        "period": "昼"
+      },
+      "characterId": "gyro",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "今度の機体は箱に入った。先輩が先に腕を上げたので、私はつられて手を出し、掌を軽く打ち合わせる。乾いた音のあと、もう一回、と私から紙を拾った。何度飛ばしても同じように入るわけではなく、うまくいくたびに先輩の顔を見てしまう。"
+        },
+        {
+          "speaker": "player",
+          "text": "次は、箱を二つ並べませんか。どっちに入れるか、飛ばす前に言うんです。"
+        },
+        {
+          "speaker": "gyro",
+          "text": "いいじゃねえか。外したら「本当はそっちだった」ってのは、なしだぜ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "自分の案で先に失敗すると、思った以上に悔しかった。先輩は容赦なく笑い、次には自分も外した。私が同じ調子で笑い返すと、言い訳をしかけた口が歪む。帰り道、今日は妙に腹が減ったと言われて、二人分の箱を入れた袋を私が持ち直した。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "角の店で買った温かいパンを食べながら歩く。先輩は中のチーズを急いで噛み、言いかけたことを飲み込んだ。熱かったんですね、と聞くと首だけ振る。私は自分の分に息を吹きかけ、少し冷めてから食べた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "aim",
+          "text": "次の遊び方も自分で考え、先輩の案と持ち寄る",
+          "next": "home",
+          "effect": "conferencePractical",
+          "setFlags": [
+            "ownAim"
+          ]
+        },
+        {
+          "id": "together",
+          "text": "また二人で出かけたいと、次の休日を尋ねる",
+          "next": "home",
+          "effect": "rehearse"
+        },
+        {
+          "id": "finish",
+          "text": "パンを食べ終え、また学食で会おうと手を振る",
+          "next": "home",
+          "effect": "walkHome"
+        }
+      ]
+    },
+    {
+      "id": "home",
+      "title": "畳まない一枚",
+      "chapter": 3,
+      "location": "ジャイロの自宅",
+      "storyTime": {
+        "date": "6月8日",
+        "period": "夕方"
+      },
+      "characterId": "gyro",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "二つの箱を使う遊びの続きを考えようと誘われ、休日に先輩の部屋を訪ねた。買ってきた夕食の袋を机へ置くと、先輩は紙を片側へ寄せる。私は飛行機用とは別に、試してみたい遊びの簡単な図も持ってきた。紙の上を指で辿る先輩の横へ、椅子を動かす。"
+        },
+        {
+          "speaker": "gyro",
+          "text": "ここの線、二本あった方が面白くねえか。近道に見える方が、最後に遠回りになる。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私は紙を裏返し、自分の案を描き直した。先輩がその上へ手を出すので、空いている一枚を渡す。「そっちにも描いてください。比べたいです」。並んだ二枚は少しずつ違う形になり、途中から夕食の容器を置く場所もなくなった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "紙をまとめて棚へ移し、食べる方を先にする。先輩があの定食のくだらない魚の名前を持ち出したので、またそれですかと笑うと、「覚えてんじゃねえか」と箸を向けられた。覚えてしまっていた。何の役にも立たない言葉が、部屋へ来る前から私の中にある。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "片づけを終えた机には、白い紙が一枚残った。続きを描くつもりで手を伸ばしたのに、隣から名前を呼ばれて振り向くと、先輩は紙ではなく私を見ていた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "play",
+          "text": "今度は紙を使わない言葉遊びを出して、先輩を困らせる",
+          "next": "later",
+          "effect": "homeTogether",
+          "setFlags": [
+            "unscoredTime"
+          ]
+        },
+        {
+          "id": "talk",
+          "text": "「今日は、遊びより先輩の話を聞きたいです」と伝える",
+          "next": "later",
+          "effect": "homeTalk"
+        },
+        {
+          "id": "stay",
+          "text": "「今夜はここにいたいです。先輩に触れたい」と伝える",
+          "next": "consent",
+          "effect": "hotelInvite",
+          "when": {
+            "min": {
+              "trust": 35,
+              "desire": 8
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "consent",
+      "title": "ふざける口を閉じて",
+      "chapter": 3,
+      "location": "ジャイロの自宅",
+      "storyTime": {
+        "date": "6月8日",
+        "period": "夜"
+      },
+      "characterId": "gyro",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "言ってしまうと、先輩は持っていたペンを机へ置いた。何か冗談が返ると思いかけていた私は、何も続かない間に自分の呼吸を聞く。椅子の縁へ置いた指を引っ込めず、そのまま顔を上げた。"
+        },
+        {
+          "speaker": "gyro",
+          "text": "オレも触りたい。今夜、おまえと一緒にいたい。……今のは、笑わせるために言ってねえからな。"
+        },
+        {
+          "speaker": "player",
+          "text": "はい。私もそうしたいです。恋人になるかは、今夜の返事と別にしたい。でも、近くにいたいのは本当です。"
+        },
+        {
+          "speaker": "gyro",
+          "text": "分かった。途中で嫌になったら言えよ。止めるのは、おまえもオレも同じだ。今から帰るって言っても、ちゃんと送る。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "頷いたあとにも選べる時間があった。先輩の手はまだ自分の膝にあり、私も椅子を動かしていない。その少しの距離を、自分からなくしたいと思った。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「一緒にいてください」と自分から手を差し出す",
+          "next": "night",
+          "effect": "consent",
+          "setFlags": [
+            "mutualConsent",
+            "hadNight"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「今日は帰ります。また会いたいです」と伝える",
+          "next": "later",
+          "effect": "walkHome",
+          "setFlags": [
+            "declinedTouch"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "night",
+      "title": "投げない手",
+      "chapter": 3,
+      "location": "ジャイロの自宅",
+      "storyTime": {
+        "date": "6月8日",
+        "period": "夜"
+      },
+      "characterId": "gyro",
+      "rating": "fade",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "差し出した手を取られ、私は椅子を隣へ寄せた。先輩が体をこちらへ向ける。紙の折り方を教わった時にはあんなに近くで見ていた指が、今は何も持たずに私の手へ重なっていて、どこを見ればいいのか迷った。"
+        },
+        {
+          "speaker": "gyro",
+          "text": "キスしていいか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "はい、と返して顔を近づける。触れた唇が離れたところで、私は小さく笑ってしまった。先輩が少し眉を上げたので、嬉しいだけです、と言う。肩の力が抜けたのは彼の方も同じように見えた。もう一度は私から近づき、つないだ手をほどかずに立ち上がって、二人で奥の部屋へ移った。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝、先輩が台所でパンを袋から出していた。私は借りた毛布を畳んでから近づき、飲み物の用意を手伝う。昨日の白い紙は机に残ったままだ。何も描かれていないところへ、二人分の皿の影が落ちていた。",
+          "storyTime": {
+            "date": "6月9日",
+            "period": "朝"
+          }
+        }
+      ],
+      "choices": [
+        {
+          "id": "home",
+          "text": "朝食を一緒に食べ、自分の予定へ帰る",
+          "next": "after_message"
+        }
+      ]
+    },
+    {
+      "id": "after_message",
+      "title": "帰ったあとの一行",
+      "chapter": 3,
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "6月9日",
+        "period": "夜"
+      },
+      "characterId": "gyro",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "自宅で鞄を開けると、持ち帰った遊びの図が少し曲がっていた。紙を机へ広げたところで端末が鳴る。先輩から、忘れ物はなかったかという短い文が届いた。私は大丈夫ですと打ち、それだけでは送りたくなくて指を止めた。"
+        },
+        {
+          "speaker": "gyro",
+          "text": "昨日の続き、またしたい。遊びの方だけじゃなくてな。おまえがどう思ってるか、聞きたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "机の紙から目を離し、自分の気持ちを確かめる。朝には言えなかったことも、今なら言葉にできそうだった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "nights",
+          "text": "恋人とは決めず、また望む夜に会いたいです",
+          "next": "later",
+          "effect": "messageBoundaries",
+          "setFlags": [
+            "ongoing"
+          ],
+          "replyVariants": [
+            {
+              "text": "オレもそうしたい。会う時にも聞くぜ。次の日、空いてるところを送る。"
+            }
+          ]
+        },
+        {
+          "id": "again",
+          "text": "また夜も会いたいです。先輩のこと、もっと好きになりました",
+          "next": "later",
+          "effect": "messageAgain",
+          "setFlags": [
+            "ongoing"
+          ],
+          "replyVariants": [
+            {
+              "text": "ああ、また会おう。今それを目の前で聞きたくなった。"
+            }
+          ]
+        },
+        {
+          "id": "days",
+          "text": "これからは昼に会う友人でいたいです",
+          "next": "later",
+          "effect": "messageDaily",
+          "setFlags": [
+            "endedNight"
+          ],
+          "replyVariants": [
+            {
+              "text": "分かった。じゃ、次は昼飯にしよう。遊びの続きも残ってるしな。"
+            }
+          ]
+        }
+      ],
+      "message": true
+    },
+    {
+      "id": "later",
+      "title": "先に口を開く",
+      "chapter": 4,
+      "location": "街の軽食店",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "gyro",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "六月の後半も先輩とは食事や試作の遊びに付き合い、互いに会いたい夜には彼の部屋で過ごした。朝にはそれぞれの予定へ戻る。今日は昼飯に誘われ、私は先に店へ着いて、二人で座れる席を選んだ。",
+          "when": {
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "昼に会いたいと返したあとも、先輩はいつもの調子で食事に誘ってくれた。少し照れくさかった最初の昼を過ぎると、試作の遊びの話でまた時間が足りなくなる。今日は私が先に店へ着いて、二人で座れる席を選んだ。",
+          "when": {
+            "flags": [
+              "hadNight",
+              "endedNight"
+            ],
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "六月の後半も、学食で会えば向かいへ座り、都合が合う日には試作の遊びを持ち寄った。笑いどころがずれるのも、先輩の案を先に解いてしまうのも楽しい。今日は私から昼飯に誘い、二人で座れる席を選んだ。",
+          "when": {
+            "notFlags": [
+              "hadNight"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "食べ終わる頃、先輩が紙ナプキンを一枚抜いた。何か折るつもりかと思ったが、口元を拭いて机へ置く。それからこちらを見るので、私も飲み物を置いた。今日はもう、次の遊びの説明はしなくていい。"
+        },
+        {
+          "speaker": "gyro",
+          "text": "なあ、{player.lastName}。このあと、まだ時間あるか。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "tell",
+          "text": "好きだと、自分から伝える",
+          "next": "confess_player",
+          "when": {
+            "min": {
+              "trust": 40,
+              "romancePlayer": 35,
+              "romanceChar": 35
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "listen",
+          "text": "先輩の続きの言葉を待つ",
+          "next": "confess_char",
+          "when": {
+            "min": {
+              "trust": 40,
+              "romancePlayer": 20,
+              "romanceChar": 40
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "pact",
+          "text": "二人でまだない遊びを考える相棒になりたいと話す",
+          "next": "pact",
+          "when": {
+            "min": {
+              "trust": 40,
+              "comfort": 60
+            },
+            "flags": [
+              "ownTrial",
+              "returnJoke",
+              "sharedFailure",
+              "ownAim",
+              "unscoredTime"
+            ],
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "nights",
+          "text": "これからも望む夜に会う友人でいたいと話す",
+          "next": "fwb_choice",
+          "when": {
+            "min": {
+              "trust": 45,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "love",
+          "text": "「今は先輩の恋人になりたいです」と伝える",
+          "next": "end_fwb_love",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 30,
+              "romanceChar": 30,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "friends",
+          "text": "これからも冗談と昼飯を分け合う友人でいたいと話す",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_player",
+      "title": "笑われても言いたい",
+      "chapter": 4,
+      "location": "街の軽食店",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "gyro",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "はい、と答えてから、先に話してもいいですかと続けた。先輩は椅子へ深く座り直し、いいぜと言う。話すための時間をもらった途端、喉が狭くなった。いつもならつまらない冗談でも出てくるのに、今日は言い換えたくない。"
+        },
+        {
+          "speaker": "player",
+          "text": "面白いことがあった時、先輩に話したくなります。でも最近は、何もなくても会いたいです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩の口元が少し動いた。笑うのかと思って目を逸らしかけたけれど、まだその声は出てこない。私は膝の上で握った手を開き、テーブルの向こうへ、用意してきた言葉を渡した。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「好きです。私と付き合ってください」と伝える",
+          "next": "end_love_a",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「今は、気の合う友人でいたいです」と伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_char",
+      "title": "続きに冗談はない",
+      "chapter": 4,
+      "location": "街の軽食店",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "gyro",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先輩は一度店内へ目をやり、こちらへ顔を戻した。人の多さを気にしたのかと思ったが、声がよく通る人にしては小さく私の姓を呼ぶ。私は聞き落とさないよう、机へ少し近づいた。"
+        },
+        {
+          "speaker": "gyro",
+          "text": "オレはおまえが好きだ。次に何して遊ぶかじゃなくて、次もおまえといたいって考えてる。恋人になってくれねえか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "何か落ちが来る気がして、一瞬だけ待ってしまった。けれど先輩は笑わず、私の返事を待っている。言葉のあとに残った静けさまで、自分へ差し出されたように感じた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「私も好きです。先輩と付き合いたいです」と答える",
+          "next": "end_love_b",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「恋人にはなれません。友人でいたいです」と答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "refusedConfession",
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pact",
+      "title": "出題者を交代する",
+      "chapter": 4,
+      "location": "街の軽食店",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "gyro",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "二人で新しい遊びを考える相棒になりたい、と話した。先輩のやり方を教わるだけで終わるのは、もう惜しかった。私が考えた仕掛けで先輩が困る顔も見たい。そう付け足すと、先輩はようやく声を出して笑った。"
+        },
+        {
+          "speaker": "gyro",
+          "text": "言ったな。手加減しねえぞ。次の題はおまえが出せ。その次はオレだ。"
+        },
+        {
+          "speaker": "player",
+          "text": "はい。でも自分が答えを知ってる問題じゃなくて、一緒に試すところからです。私も、まだできないことを持ってきます。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩は机の端の紙ナプキンへ手を伸ばしかけ、汚れているのを見てやめた。私は鞄から自分のノートを出して、次の頁を開く。食べ物はこぼさない、店の机では実験しない、と二人で笑いながら最初の予定だけ書いた。"
+        },
+        {
+          "speaker": "gyro",
+          "text": "できなかったら、できるまで考える。飽きたら次も考える。……こっちは長くなるぜ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "長くなってほしかった。恋人とは違う名前で、この人と約束する時間がある。先輩が帰るために椅子を引くまで、私はノートを閉じなかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「楽しみです」と、次の題を持ってくる約束をする",
+          "next": "end_special",
+          "effect": "homeTogether",
+          "setFlags": [
+            "partners"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "今は気軽に遊ぶ友人でいたいと伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fwb_choice",
+      "title": "次も聞く声",
+      "chapter": 4,
+      "location": "街の軽食店",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "gyro",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人と決めずに、望む夜も一緒に過ごす友人でいたいと話した。先輩は飲み物を置いたまま、私を見て頷く。店のざわめきの中でも、その返事だけは近くに聞こえた。"
+        },
+        {
+          "speaker": "gyro",
+          "text": "オレもそれがいい。会ったら必ず泊まるってことにはしねえ。その時にも聞くし、途中でやめたくなったら言う。"
+        },
+        {
+          "speaker": "player",
+          "text": "私も言います。先輩が来たい日だけじゃなくて、私からも誘っていいですか。"
+        },
+        {
+          "speaker": "gyro",
+          "text": "そりゃ誘えよ。待ってるだけにさせる気か。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "少し笑ってしまった。次に会えそうな日を二つ出すと、先輩が片方を選ぶ。予定を書き終えるまで向かいで待っている人へ、今日は食事だけで帰りますねと伝えると、ああ、といつもの声が返った。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "互いに望む夜を重ねる友人として、次の日を選ぶ",
+          "next": "end_fwb",
+          "effect": "messageBoundaries"
+        },
+        {
+          "id": "no",
+          "text": "考え直し、昼に遊ぶ友人でいたいと話す",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "end_friend",
+      "title": "くだらない話を、もう一度",
+      "chapter": 5,
+      "location": "大学の学食",
+      "storyTime": {
+        "date": "7月6日",
+        "period": "昼"
+      },
+      "characterId": "gyro",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人にはなれないと答えた時、先輩は口を結び、分かったと言った。その日はそこで別れた。数日後、学食で見つけて私から声を掛けると、向かいの席の荷物をどけてくれた。",
+          "when": {
+            "flags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "昼に会う友人でいようと話してから、次は学食に誘った。先輩は夜の返事を聞き直すことなく、今日の定食を先に見に行く。私は自分の食べたいものを選び、同じ卓へトレーを置いた。",
+          "when": {
+            "flags": [
+              "hadNight",
+              "endedNight"
+            ],
+            "notFlags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "友人としてまた遊ぼうと話してから、次は学食で会った。先輩が私のトレーを見て、今日も魚かと言う。あの長い名前を覚えているか訊くと、先輩は忘れるかよと胸を張った。",
+          "when": {
+            "notFlags": [
+              "hadNight",
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "ジョセフが隣の椅子へ座り、何を話していたんだと身を乗り出した。私はあの魚の名前を先輩にもう一度言わせたくて、説明を任せる。途中で語呂が合わなくなり、今度はジョセフが先に吹き出した。"
+        },
+        {
+          "speaker": "gyro",
+          "text": "だから、そこがいいんだって。おまえらにはまだ早えーな。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "二人が言い合う間に、私は熱いうちに魚を食べた。午後の用事へ先に立つ時、またね、と手を振る。先輩はまだ諦めず、帰り際の私へ続きを投げてきた。全部は聞こえなかったので、次に会ったら聞くことがもうできていた。"
+        }
+      ],
+      "choices": [],
+      "ending": "FRIEND"
+    },
+    {
+      "id": "end_love_a",
+      "title": "言った方の顔",
+      "chapter": 5,
+      "location": "街の軽食店",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "gyro",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "gyro",
+          "text": "オレも好きだぜ。……先に言われるとは思わなかった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先輩が口元を指で一度こすった。よかった、と声にすると、やっと自分がどれほど緊張していたか分かる。私は笑ってから、今日は私の方が先でしたねと言ってしまった。先輩も笑い、そこは勝ち負けじゃねえだろ、と返した。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "店を出て、通りの端へ並んで立つ。私から手を差し出すと、先輩は見下ろして、それから取ってくれた。掌を打ち合わせた時よりもずっと長く触れている。歩き出しても放さないつもりで、指を少し曲げた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "次の休日は遊び道具を持たずに会った。途中で面白い看板を見つけ、二人で立ち止まる。先輩が私へ話を振ろうとした時、つないでいた手を私から少し引いた。今日は先に顔を見たかった。何だよ、とこちらを向いた口元が、そのまま緩んだ。",
+          "storyTime": {
+            "date": "7月6日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_A"
+    },
+    {
+      "id": "end_love_b",
+      "title": "何も持たない掌",
+      "chapter": 5,
+      "location": "街の軽食店",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "gyro",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私も好きですと言うと、先輩は息を吐いて椅子の背へ体を預けた。ずっと待っていたのはこちらだと思っていたのに、その顔を見たら何も言えなくなる。机の上へ手を出すと、先輩が身を起こした。"
+        },
+        {
+          "speaker": "player",
+          "text": "嬉しいです。今、手をつなぎたいです。"
+        },
+        {
+          "speaker": "gyro",
+          "text": "ああ。オレも。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "差し出された掌へ指を重ねた。短い返事のあと、二人ともすぐには次の話をしなかった。店員が空いた皿を下げに来て、ようやく机の端へ手を寄せる。それでも離すのは惜しくて、椅子を少しだけ近づけた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌週、待ち合わせへ向かうと先輩が先に手を上げた。軽く打ち合わせるつもりで出した私の手を、そのまま握る。驚いて顔を見ると、今日はこっちだと言われた。私も握り返し、並んで歩き出した。",
+          "storyTime": {
+            "date": "7月6日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_B"
+    },
+    {
+      "id": "end_fwb",
+      "title": "白い紙は、そのままに",
+      "chapter": 5,
+      "location": "ジャイロの自宅",
+      "storyTime": {
+        "date": "7月13日",
+        "period": "夜"
+      },
+      "characterId": "gyro",
+      "rating": "fade",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "今夜も会いたいと互いに連絡してから、先輩の部屋へ来た。持ってきた遊びの図を見せてから棚へ置き、夕食は二人で買ったものを分け、私は、明日は用事があるから朝早く出ますと伝えた。先輩も起きる時刻を確かめ、食べ終えると自分の皿と一緒に私の皿を台所へ運んだ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "机が空くと、私は隣へ座り直した。触れたいですと言う声が前より自然に出る。それでも先輩の返事を待ち、差し出された手を取ってから近づいた。キスがほどけたあと、もう少し、と私から頼む。先輩が頷き、二人で椅子を戻して奥へ移った。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝、鞄へ遊びの図を入れていると、先輩が次はこれを試そうぜと別の一枚を見せた。私は時計を確かめ、今日はもう出ますと笑う。先輩も紙を机へ戻し、玄関まで来てくれた。夜を過ごした部屋から、昼にする約束を一つ持って帰った。",
+          "storyTime": {
+            "date": "7月14日",
+            "period": "朝"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB"
+    },
+    {
+      "id": "end_fwb_love",
+      "title": "今は、恋人と呼びたい",
+      "chapter": 5,
+      "location": "街の軽食店",
+      "storyTime": {
+        "date": "6月29日",
+        "period": "昼"
+      },
+      "characterId": "gyro",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "今は恋人になりたいと伝えると、先輩が手にしていたグラスを置いた。私は目を逸らさず、続きを待つ。一緒に過ごした夜の数を、返事の代わりに数えることはしなかった。"
+        },
+        {
+          "speaker": "gyro",
+          "text": "オレもそう呼びたい。今までが嫌だったわけじゃねえよ。けど、次に会う時は、おまえの恋人でいたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "はい、と答えてから、自分の声が小さすぎた気がして頷き直した。先輩が机の上へ手を出す。慣れた指を取っても、今日はいつもより上手く握れなかった。先輩が笑いかけるので、嬉しいんですと先に言った。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "次の休日、散歩の途中で紙飛行機のセットを見つけた。先輩が箱を手に取り、私へ向ける。買いますかと聞かれているのに、先に顔を見てしまう。何だよと笑う人へ、今日も会いたかったですと答えてから、ようやく箱の中を覗いた。",
+          "storyTime": {
+            "date": "7月6日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB_TO_LOVE"
+    },
+    {
+      "id": "end_special",
+      "title": "まだ誰もできない遊び",
+      "chapter": 5,
+      "location": "使用許可を取った体験室",
+      "storyTime": {
+        "date": "7月20日",
+        "period": "昼"
+      },
+      "characterId": "gyro",
+      "rating": "general",
+      "tags": [
+        "daily"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私が持ってきたのは、紙飛行機を途中の輪へ通してから箱へ入れる案だった。机に固定する紙の輪を作るだけで、最初の一時間が過ぎる。先輩は通る幅を決めかけて、私が持つ機体を見てからもう少し広げた。簡単すぎると言っていたくせに、最初の一投は輪の手前へ落ちた。"
+        },
+        {
+          "speaker": "gyro",
+          "text": "笑ってねえで、おまえもやれ。作ったやつが一番にできるとは限らねえんだぞ。"
+        },
+        {
+          "speaker": "player",
+          "text": "知ってます。だから、先輩とやりたかったんです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私の一投も輪へ当たった。二人で紙を拾い、輪の高さと投げる場所を変える。近道のつもりが余計に難しくなったところで、先輩が妙に長い名前をつけた。魚の時よりひどい、と言うと、そこは比べるなと笑われる。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "最後まで箱には入らなかった。使用時刻を確かめ、片づけながら次の手を話す。折り畳める輪を私が鞄へ入れ、先輩は二つの機体を箱へ収めた。恋人ではない相棒と、できなかったものを分けて持つ。部屋を出る時、次はもっと難しくしようと言いかけた先輩を見て、私はもう笑っていた。"
+        }
+      ],
+      "choices": [],
+      "ending": "SPECIAL"
+    }
+  ],
+  "endingDescriptions": {
+    "FRIEND": {
+      "title": "くだらない話を、もう一度",
+      "description": "昼飯と冗談を分け合う友人。まだ聞いていない続きが、次の席に残っている。"
+    },
+    "LOVE_A": {
+      "title": "言った方の顔",
+      "description": "好きだと自分から伝える。軽く打ち合わせていた掌を、今度は長くつないで歩く。"
+    },
+    "LOVE_B": {
+      "title": "何も持たない掌",
+      "description": "冗談の続かない告白へ、自分の言葉で答える。何も持たない手にも、会う楽しみが増える。"
+    },
+    "FWB": {
+      "title": "白い紙は、そのままに",
+      "description": "互いに望む夜を重ねる、親密な友人。朝は自分の予定へ帰り、昼の遊びも持ち帰る。"
+    },
+    "FWB_TO_LOVE": {
+      "title": "今は、恋人と呼びたい",
+      "description": "過ごした夜の先で、今は恋人になりたいと選ぶ。何をするかより先に、会いたかったと伝える。"
+    },
+    "SPECIAL": {
+      "title": "まだ誰もできない遊び",
+      "description": "教わるだけでなく、自分の題も持ち寄る相棒。できなかった遊びを分けて持ち、続きを試しに会う。"
+    }
+  }
+}

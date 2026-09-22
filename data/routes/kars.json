@@ -1,0 +1,1210 @@
+{
+  "id": "kars",
+  "title": "カーズ — 答えのない午後",
+  "intro": "卒業後、公開展示で再会した人。\nかつての評価を離れて、あなたは自分の足で隣へ立つ。",
+  "startEvent": "glass",
+  "character": {
+    "name": "カーズ",
+    "adult": true,
+    "heightCm": null,
+    "heightBasis": "約196cmはアニメ設定表の図からの推定表記であり、確定数値として採用しない",
+    "profile": "知略と圧倒的な自負。目的達成への執念。自分の合理に固執し手段を選びがち。",
+    "personality": [
+      "知略と圧倒的な自負",
+      "目的達成への執念",
+      "自分の合理に固執し手段を選びがち"
+    ],
+    "speech": {
+      "firstPerson": "未確定（通常は主語を省略）",
+      "addressing": "主人公は姓/君。原作の貴様を教員の日常呼称へ機械的に移さない。",
+      "tone": "評価を短く言い切る。語尾は感情と相手に合わせる。",
+      "habits": [
+        "評価を短く言い切る",
+        "反論を試す問い",
+        "自称このカーズは強調時だけ"
+      ],
+      "signaturePhrases": [],
+      "signatureNote": "日常の固定口癖は採用しない。象徴的な原作台詞と普段の話し方を混同せず、名台詞を貼り付けない。",
+      "avoid": [
+        "公正で慈愛深い先生だけにする",
+        "評価権限で親密さを得る",
+        "能力設定を研究力の説明に使う"
+      ]
+    },
+    "referenceSection": "docs/CHARACTER_REFERENCE.md#cast-kars"
+  },
+  "au": {
+    "role": "教授・研究室PI。恋愛は卒業後かつ全利害終了後",
+    "routeEnabled": true,
+    "addressing": [
+      {
+        "text": "{player.lastName}"
+      }
+    ]
+  },
+  "endingDescriptions": {
+    "FRIEND": {
+      "title": "同じものを違って見る",
+      "description": "答えを教わる時間を離れ、互いに異論を持ち寄る友人へ。次の展示はあなたが選ぶ。"
+    },
+    "LOVE_A": {
+      "title": "呼び掛けの続き",
+      "description": "かつての呼び方で、今の望みを伝える。好きだと言った自分の声と、手を取る返事を連れて歩く。"
+    },
+    "LOVE_B": {
+      "title": "待ち合わせより早く",
+      "description": "彼から差し出された、恋人としての誘い。まだ開かれていない図録が、あなたを待っている。"
+    },
+    "FWB": {
+      "title": "額縁の外の時間",
+      "description": "昼の異論も、互いに望む夜も重ねる友人。朝にはそれぞれの予定へ向かう。"
+    },
+    "FWB_TO_LOVE": {
+      "title": "昼にも、その名前を",
+      "description": "重ねた夜の先で、恋人として会いたいと選び合う。外で待ち合わせた昼にも、話の続きがある。"
+    },
+    "SPECIAL": {
+      "title": "まだ見つけていない",
+      "description": "答えと目的を急がない時間を、恋人として分け合う。彼が端末を伏せ、あなたと同じものを見る午後。"
+    }
+  },
+  "events": [
+    {
+      "id": "glass",
+      "chapter": 1,
+      "title": "ガラスのこちら側",
+      "location": "街の公開展示室",
+      "storyTime": {
+        "date": "5月10日",
+        "period": "昼"
+      },
+      "characterId": "kars",
+      "rating": "general",
+      "tags": [
+        "kars"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "薄い葉脈の標本を覗き込んでいると、ガラスにもう一人の顔が映った。カーズ先生だった。卒業して、履修も評価も指導も、研究や推薦に関わる用事もすべて終わっている。今日は二人とも入場券を買って来た客で、私は返しそびれた課題のように身を固くする必要はなかった。それなのに挨拶の声だけ、昔の高さに戻る。"
+        },
+        {
+          "speaker": "kars",
+          "text": "そこより、裏から光を通してみるといい。形の理由がよく分かる。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "促された側へ回ると、確かに細い筋まで見えた。でも私は、最初の側に落ちていた影も好きだった。そう口にすると、先生は光源ではなく私を見た。採点を待っていた頃なら続けなかった一言を、私はまだ持っている。"
+        },
+        {
+          "speaker": "player",
+          "text": "どちらからでも見たいです。今日は、時間もありますから。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "both",
+          "text": "裏側を見てから、影のあった側へも戻る",
+          "next": "label",
+          "effect": "workTogether"
+        },
+        {
+          "id": "beside",
+          "text": "先生が足を止めた展示を、一緒に見たいと誘う",
+          "next": "label",
+          "effect": "ask"
+        }
+      ]
+    },
+    {
+      "id": "label",
+      "chapter": 1,
+      "title": "名前の付かない欠け",
+      "location": "公開展示室",
+      "storyTime": {
+        "date": "5月10日",
+        "period": "夕方"
+      },
+      "characterId": "kars",
+      "rating": "general",
+      "tags": [
+        "kars"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "出口近くの一枚には、形の違う葉がぎっしり写っていた。小さな説明文字を追うだけでも目が疲れ、端の不揃いな葉は、写真の縁で切れている。先生は説明を読んでから、整理が甘い、と短く言った。私は端の葉を見直した。切られたところに虫が食べた穴があり、それが気になって先へ進めない。"
+        },
+        {
+          "speaker": "kars",
+          "text": "何を見せたいのか、選ばねば伝わらん。全部並べるのは、選ぶ労力を放棄しているだけだ。"
+        },
+        {
+          "speaker": "player",
+          "text": "でも、私が覚えて帰るのはこの一枚です。整ってないから、どう育ったのか知りたくなりました。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先生の目が写真の端へ動いた。納得したとも、間違いだとも言わない。退室の案内が流れるまで、二人で同じ欠けを見ていた。先に歩き出した先生が扉を押さえ、その向こうで私を待った。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "keep_question",
+          "text": "分からないままでも、この葉が気になったと伝える",
+          "next": "cafe",
+          "effect": "honest",
+          "setFlags": [
+            "unclassified"
+          ]
+        },
+        {
+          "id": "compare",
+          "text": "図録に同じ葉の全体写真がないか探す",
+          "next": "cafe",
+          "effect": "compareNotes"
+        }
+      ]
+    },
+    {
+      "id": "cafe",
+      "chapter": 1,
+      "title": "予定表の余白",
+      "location": "街の喫茶店",
+      "storyTime": {
+        "date": "5月17日",
+        "period": "昼"
+      },
+      "characterId": "kars",
+      "rating": "general",
+      "tags": [
+        "kars"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "図録の続きが気になり、私から再び先生を誘った。喫茶店では、展示の不備を挙げる先生の話に何度か笑ってしまう。容赦がないのに、見ていない箇所の悪口は言わない。ページをめくろうとした手が重なりかけ、私は先に指を引いた。"
+        },
+        {
+          "speaker": "kars",
+          "text": "来週、別の展示がある。君も来るといい。午後なら空いているだろう。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "その日はジョセフと昼を食べる約束があった。変更を頼む文章が一瞬頭に浮かび、私は端末を伏せる。今日ここへ来たのも、次に誰と会うかも、自分で決めたかった。先生の誘いが嬉しいことまで消す必要はない。"
+        },
+        {
+          "speaker": "player",
+          "text": "その午後は約束があります。翌週なら、私から待ち合わせの場所を送ってもいいですか。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "my_day",
+          "text": "先約を守り、自分が空いている日を伝える",
+          "next": "message",
+          "effect": "homeTalk",
+          "setFlags": [
+            "ownSchedule"
+          ]
+        },
+        {
+          "id": "later",
+          "text": "約束の後に、二人で夕食を取る予定にする",
+          "next": "message",
+          "effect": "lunchTwo"
+        },
+        {
+          "id": "catalogue",
+          "text": "今回は図録だけ貸してもらい、次は後日決める",
+          "next": "message",
+          "effect": "shiftRest"
+        }
+      ]
+    },
+    {
+      "id": "message",
+      "chapter": 2,
+      "title": "余白への書き込み",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "5月20日",
+        "period": "夜"
+      },
+      "characterId": "kars",
+      "rating": "general",
+      "tags": [
+        "kars"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "図録を読み終えた夜、先生から写真が届いた。あの端の葉が載った別のページだった。全体を見ると、穴の隣にも葉脈が続いている。分からなかったことは少し減ったのに、先生がこれを探した時間の方が気になってしまう。"
+        },
+        {
+          "speaker": "kars",
+          "text": "君の気にしていた一枚だ。次は実物のある方へ行こう。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "写真を拡大する指が、送信時刻で止まった。返信にお礼だけを書き、それでは足りなくて消す。夜更けの部屋で、私は誰にも見えない顔をしながら文字を打った。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "glad",
+          "text": "覚えていてくれて、嬉しいです。また一緒に見たいです",
+          "next": "walk",
+          "effect": "messageHeart",
+          "replyVariants": [
+            {
+              "text": "君があれほど足を止める理由を、確かめたくなった。",
+              "when": {
+                "flags": [
+                  "unclassified"
+                ]
+              }
+            },
+            {
+              "text": "次の展示は見応えがある。時間を取っておけ。"
+            }
+          ],
+          "lockRoute": "kars"
+        },
+        {
+          "id": "ask",
+          "text": "先生は、あの一枚の何が気になりましたか",
+          "next": "walk",
+          "effect": "messageListen",
+          "replyVariants": [
+            {
+              "text": "写真では決められん。実物を見てから話そう。"
+            }
+          ],
+          "lockRoute": "kars"
+        },
+        {
+          "id": "thanks",
+          "text": "ありがとうございます。図録と見比べてみます",
+          "next": "walk",
+          "effect": "messageDaily",
+          "replyVariants": [
+            {
+              "text": "裏の写真もある。明日送る。"
+            }
+          ],
+          "lockRoute": "kars"
+        }
+      ],
+      "message": true
+    },
+    {
+      "id": "walk",
+      "chapter": 2,
+      "title": "短い道を選ばずに",
+      "location": "展示館前の遊歩道",
+      "storyTime": {
+        "date": "5月31日",
+        "period": "夕方"
+      },
+      "characterId": "kars",
+      "rating": "general",
+      "tags": [
+        "kars"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "次の展示を見た帰り、駅への近道から外れた遊歩道で足を止めた。木の影が地面を渡り、葉の一枚一枚を数えるより先に、その揺れをしばらく見ていたくなる。先生は数歩先で振り返った。急ぎませんか、と聞くより先に、私は自分の行きたい方を指した。"
+        },
+        {
+          "speaker": "player",
+          "text": "あちらを回って帰りたいです。少し遠くなりますけど。"
+        },
+        {
+          "speaker": "kars",
+          "text": "遠回りをするだけのものがあるのか？"
+        },
+        {
+          "speaker": "narrator",
+          "text": "分かりません、と答えると、先生の眉が動いた。私は一人でも歩くつもりで踏み出す。すぐ後ろから足音が追いつき、並んだ影の幅が変わった。先生が何も言わない間、理由を用意しなくても、このまま歩ける気がした。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "detour",
+          "text": "結論を探さず、見つけたものを並んで話す",
+          "next": "rain",
+          "effect": "walkClose",
+          "setFlags": [
+            "unplanned"
+          ]
+        },
+        {
+          "id": "station",
+          "text": "次の予定を確認し、駅へ向かう",
+          "next": "rain",
+          "effect": "walkHome"
+        }
+      ]
+    },
+    {
+      "id": "rain",
+      "chapter": 2,
+      "title": "閉じた傘",
+      "location": "街の小さな展示館",
+      "storyTime": {
+        "date": "6月7日",
+        "period": "夕方"
+      },
+      "characterId": "kars",
+      "rating": "general",
+      "tags": [
+        "kars"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "また展示を見に出掛けた日は、雨だった。目当ての展示室が設備点検で閉じ、先生は入口の掲示を長く見たあと、手帳をしまった。別の会場へ移れば時間を無駄にせずに済む、と言う。けれど私は、軒先で傘を畳む先生ともう少し話したかった。"
+        },
+        {
+          "speaker": "kars",
+          "text": "この距離まで来て、閉まった扉を見るだけとはな。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "口調が鋭いままなので、慰める言葉は飲み込んだ。軒を流れる水が靴先を避けて落ちている。近くに古い温室の写真を扱う店があったと話すと、先生は、君はよく脇道を見ている、とこちらを見た。呆れたのか興味を持ったのか、まだ決められない顔だった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "together",
+          "text": "「先生となら、見つからなくても歩きたいです」と言う",
+          "next": "room",
+          "effect": "conferenceClose"
+        },
+        {
+          "id": "look",
+          "text": "店の場所を調べ、二人で探しに行く",
+          "next": "room",
+          "effect": "conferencePractical"
+        }
+      ]
+    },
+    {
+      "id": "room",
+      "chapter": 3,
+      "title": "訪ねる理由",
+      "location": "カーズの自宅",
+      "storyTime": {
+        "date": "6月7日",
+        "period": "夜"
+      },
+      "characterId": "kars",
+      "rating": "general",
+      "tags": [
+        "kars"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "写真の店はまだ開いていて、先生は古い図版を一枚買った。額を合わせたところまで見ていかないかと誘われ、夕食を買って先生の家へ寄った。研究室へ入る時に探した名札も、提出するものも、今日は鞄にない。玄関で上着を脱ぎ、普通の来客として靴を揃えた。"
+        },
+        {
+          "speaker": "kars",
+          "text": "あの店を選んだのは君だ。掛ける場所も、意見を聞こう。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "壁の高い位置を示すと、先生が図版を持ち上げた。下から見て首を傾げ、もう少し右、と言ってしまってから笑う。先生は文句を言ったが、腕を下ろさずに動かしてくれた。夕食の間も図版は壁に立て掛けたままで、私は帰りの時間を見てから、またその向こうの人を見た。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "stay",
+          "text": "「今夜は、もっと近くにいたいです」と伝える",
+          "next": "consent",
+          "effect": "hotelInvite",
+          "when": {
+            "min": {
+              "trust": 45,
+              "desire": 12
+            }
+          }
+        },
+        {
+          "id": "talk",
+          "text": "帰る時間まで話し、また会う約束をする",
+          "next": "next",
+          "effect": "hotelTalk"
+        },
+        {
+          "id": "home",
+          "text": "図版の位置を決めて、今日は帰る",
+          "next": "next",
+          "effect": "homeRest"
+        }
+      ]
+    },
+    {
+      "id": "consent",
+      "chapter": 3,
+      "title": "返事の届く距離",
+      "location": "カーズの自宅",
+      "storyTime": {
+        "date": "6月7日",
+        "period": "夜"
+      },
+      "characterId": "kars",
+      "rating": "general",
+      "tags": [
+        "kars"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私の言葉で、先生は皿を重ねる手を止めた。二人で片づけを終えると、机から離れた場所で向き合う。私の顔を見下ろす人へ、自分から近づきたい。けれど、そのまま何もかも決まったことにはしたくなかった。"
+        },
+        {
+          "speaker": "kars",
+          "text": "君に触れたい。今夜、一緒にいてほしい。恋人になる約束とは別に、今の君の返事を聞いている。"
+        },
+        {
+          "speaker": "player",
+          "text": "私も、触れてほしいです。でも、途中でやめたくなったら止めたいです。先生も、同じように言ってください。"
+        },
+        {
+          "speaker": "kars",
+          "text": "ああ。どちらが止めても、そこで止める。今から帰ることもできる。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "玄関へ続く明かりは点いたままだった。私は出口を見て、それからもう一度先生の顔を見た。評価を待つためではなく、望んだことを自分の声で伝えるために。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「私は、ここにいたいです」と手を差し出す",
+          "next": "night",
+          "effect": "consent",
+          "setFlags": [
+            "consented",
+            "hadNight"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「今日は帰ります」と答える",
+          "next": "next",
+          "effect": "walkHome",
+          "setFlags": [
+            "declinedTouch"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "night",
+      "chapter": 3,
+      "title": "壁に残る光",
+      "location": "カーズの自宅",
+      "storyTime": {
+        "date": "6月7日",
+        "period": "夜"
+      },
+      "characterId": "kars",
+      "rating": "fade",
+      "tags": [
+        "kars"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "差し出した手を取られると、ためらっていた足が一歩動いた。先生が身を屈め、私はその肩へ指を置く。顔が近づく前に目が合ったので、小さく頷いた。触れた唇から離れたあとも、先生の襟に掛けた指をほどきたくなかった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "もう少し、と自分から言うと、手が背中へ添えられた。急かされないことがかえって恥ずかしく、でも顔を隠す代わりに近づいた。二人で寝室へ移り、灯りを落とした。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝、身支度を済ませて居間へ戻ると、図版は昨夜決めた位置に掛かっていた。窓からの光が額の下へ伸びている。先生は私の立つ場所を見て、そこからならよく見えるだろう、と言った。私は頷き、鞄を取る前に次のことを考えた。",
+          "storyTime": {
+            "date": "6月8日",
+            "period": "朝"
+          }
+        },
+        {
+          "speaker": "kars",
+          "text": "また来るか。こういう夜にも、君と会いたい。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "again",
+          "text": "「恋人の約束はせず、また二人で夜を過ごしたいです」",
+          "next": "next",
+          "effect": "messageBoundaries",
+          "setFlags": [
+            "ongoing"
+          ]
+        },
+        {
+          "id": "more",
+          "text": "「また夜も会いたいです。好きな気持ちも、大きくなりました」",
+          "next": "next",
+          "effect": "messageAgain",
+          "setFlags": [
+            "ongoing"
+          ]
+        },
+        {
+          "id": "day",
+          "text": "「これからは昼に会う友人でいたいです」",
+          "next": "next",
+          "effect": "messageDaily",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ],
+      "when": {
+        "flags": [
+          "consented"
+        ]
+      }
+    },
+    {
+      "id": "next",
+      "chapter": 4,
+      "title": "図録を持たない日",
+      "location": "街の庭園",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "kars",
+      "rating": "general",
+      "tags": [
+        "kars"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "六月の間、展示のない日にも食事をした。二人が望んだ夜には家へ寄り、泊まるかどうかはそのつど話した。昼に見る横顔と、目覚めてすぐ近くで見る顔が、一人の人として馴染んでいく。今日は外で会おうと私から誘った。",
+          "when": {
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "昼に会いたいと伝えてから、先生の誘いは食事や展示の予定になった。一度触れた手をどう見たらいいか迷った日も、意見の食い違う話をするうちに、自分の言葉が戻ってきた。今日は私から庭園へ誘った。",
+          "when": {
+            "flags": [
+              "hadNight",
+              "endedNight"
+            ],
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "六月の間、展示のない日にも二度ほど食事をした。店を選び、時間を合わせる連絡が増える。今日は図録の話を持たずに、庭園へ来ませんかと私から誘った。",
+          "when": {
+            "notFlags": [
+              "hadNight"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "夕方の園路で、先生は閉園時刻を確認した。それから、今日は何を見せたい、と私に訊く。答えを用意してきたわけではなかった。ただ、一緒にいる時間の使い方を、また自分で選びたかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "tell",
+          "text": "好きだと、自分から伝えたいと言う",
+          "next": "confess_player",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 35,
+              "romanceChar": 25
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "listen",
+          "text": "先生がこちらを見る、その続きを待つ",
+          "next": "confess_kars",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 20,
+              "romanceChar": 35
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "unknown",
+          "text": "「目的を決めずに、次も二人で出掛けませんか」と誘う",
+          "next": "no_map",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 35,
+              "romanceChar": 30,
+              "comfort": 20
+            },
+            "flags": [
+              "unclassified",
+              "ownSchedule",
+              "unplanned"
+            ],
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "nights",
+          "text": "これからも、親密な友人として会いたいと話す",
+          "next": "fwb_choice",
+          "when": {
+            "min": {
+              "trust": 50,
+              "desire": 25,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "love",
+          "text": "「今は、恋人として一緒にいたいです」と伝える",
+          "next": "end_fwb_love",
+          "when": {
+            "min": {
+              "trust": 60,
+              "romancePlayer": 50,
+              "romanceChar": 40,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          },
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "friends",
+          "text": "これからも、意見を言い合える友人でいたいと伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_player",
+      "chapter": 4,
+      "title": "昔の呼び方で",
+      "location": "街の庭園",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "kars",
+      "rating": "general",
+      "tags": [
+        "kars"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先生、と呼び掛けると、昔と同じように顔がこちらを向いた。そこへ持っていく言葉は、昔なら言えなかったものだった。葉の影を踏まないように歩いていた足を止め、私は相手も止まるのを待った。"
+        },
+        {
+          "speaker": "player",
+          "text": "また会いたくなるのは、展示が好きだからだけじゃありません。帰り道に、先生と話したことを何度も思い出します。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先生は答えを挟まずに聞いていた。言い始めたら震えると思っていた声が、意外に続く。ずっと見上げる必要があるのに、目を逸らしたくはなかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "like",
+          "text": "「好きです。私と付き合ってください」",
+          "next": "end_love_a",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "with_you",
+          "text": "「先生の恋人になりたいです。私を選んでもらえますか」",
+          "next": "end_love_a",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "wait",
+          "text": "今日は、友人としての約束にしたいと伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_kars",
+      "chapter": 4,
+      "title": "結論ではない言葉",
+      "location": "街の庭園",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "kars",
+      "rating": "general",
+      "tags": [
+        "kars"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "閉園を知らせる放送が鳴り、先生は出口へ歩き出しかけて止まった。私は横に並ぶ。急げばまだ一本早い電車に乗れるはずなのに、その話はされなかった。"
+        },
+        {
+          "speaker": "kars",
+          "text": "君に会いたいと思う時間が増えた。理由を整理するより、言っておく方がいいだろう。君が好きだ。恋人になってほしい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "はっきり言い切る声なのに、返事の場所だけが空いていた。私は肩に掛けた鞄を持ち直し、目の前の顔を見る。知っていたつもりの人が、私から何かを受け取ろうとしている。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「私も好きです。恋人になりたいです」と答える",
+          "next": "end_love_b",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「恋人にはなれません。友人でいたいです」と答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "refusedConfession",
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "no_map",
+      "chapter": 4,
+      "title": "選ばなかった道の先",
+      "location": "街の庭園",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "kars",
+      "rating": "general",
+      "tags": [
+        "kars"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "目的を決めずに出掛けようと誘うと、先生は、また遠回りか、と言った。口元にはわずかな笑みがあったが、その問いはまだ私の答えを試しているようだった。私は帰り道で拾った話を、次の約束へ持っていきたかった。"
+        },
+        {
+          "speaker": "player",
+          "text": "見つかるか分からないものを、一緒に探したいです。先生となら、何もなかった日も覚えていられる気がします。"
+        },
+        {
+          "speaker": "kars",
+          "text": "何もなかった、と君はそう簡単に決めるのか。……いいだろう。行き先はその日に決める。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "先に条件を付けるのかと思ったら、先生は手帳を出さなかった。何曜日なら空いている、と訊かれて、自分の予定を考える。答えを出すのが早い人を、私の何でもない暮らしの方へ待たせていた。"
+        },
+        {
+          "speaker": "kars",
+          "text": "君となら、まだ見ていないものがある。恋人として、その続きを見たい。君も望むか。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "together",
+          "text": "「望みます。先生と恋人として、見つけに行きたいです」",
+          "next": "end_special",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating",
+            "withoutMap"
+          ]
+        },
+        {
+          "id": "friend",
+          "text": "「友人として、一緒に出掛けたいです」と答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "refusedConfession",
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fwb_choice",
+      "chapter": 4,
+      "title": "次の夜を尋ねる",
+      "location": "街の庭園",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "kars",
+      "rating": "general",
+      "tags": [
+        "kars"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人になる約束をせず、望んだ夜にまた会いたいと話した。先生は私の顔を見て、同じように会いたい、と返した。言い終えたあと、園路の砂を踏む音が戻ってくる。"
+        },
+        {
+          "speaker": "kars",
+          "text": "君からも誘えばいい。予定が合わない時は、そう答える。君もそうしろ。"
+        },
+        {
+          "speaker": "player",
+          "text": "はい。途中でやめたい時も言います。先生にも、そうしてほしいです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "頷くのを見てから、私は今週の予定を話した。仕事にも研究にも属さない、私たちが自分で選んだ時間だった。先生は二つの日付を挙げ、どちらがいい、と訊いた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "continue",
+          "text": "親密な友人として、会う日を決める",
+          "next": "end_fwb",
+          "effect": "messageBoundaries"
+        },
+        {
+          "id": "daytime",
+          "text": "考え直し、昼に会う友人でいたいと伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "end_friend",
+      "chapter": 5,
+      "title": "同じものを違って見る",
+      "location": "街の公開展示室",
+      "storyTime": {
+        "date": "7月12日",
+        "period": "昼"
+      },
+      "characterId": "kars",
+      "rating": "general",
+      "tags": [
+        "kars"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人にはなれないという返事を、先生は短く受け止めた。少し間を置いてから届いた展示の誘いに、私は行きたいと答えた。今日は自分で選んだ図録を持っている。",
+          "when": {
+            "flags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "昼に会う友人へ戻りたいと伝えてから、夜の誘いはなくなった。次の展示の前で会うと、先生は私が持参した図録を見て、今度は何を見つけた、と訊いた。",
+          "when": {
+            "flags": [
+              "hadNight",
+              "endedNight"
+            ],
+            "notFlags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "また展示を見ようと約束し、今日は私の選んだ会場で待ち合わせた。以前なら説明を待ったところでも、自分から先に足を止められる。",
+          "when": {
+            "notFlags": [
+              "hadNight",
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "kars",
+          "text": "君の選ぶものは、相変わらず妙だな。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "そう言いながら、先生は私が読んでいる解説の横へ来た。帰りはジョセフと食事の約束があるので、見る時間は決めてある。時計を確かめ、もう一枚だけ、と私が指すと、先生は先にその前へ回った。次に会ったら異論が続くだろう。それを楽しみにして、私はガラスへ近づいた。"
+        }
+      ],
+      "choices": [],
+      "ending": "FRIEND"
+    },
+    {
+      "id": "end_love_a",
+      "chapter": 5,
+      "title": "呼び掛けの続き",
+      "location": "街の庭園と駅前",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "kars",
+      "rating": "general",
+      "tags": [
+        "kars"
+      ],
+      "body": [
+        {
+          "speaker": "kars",
+          "text": "君を選ぶ。恋人として会おう。……そこで逃げるように目を逸らすな。返事をした相手を見てくれ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "からかわれたのかと思って顔を上げると、先生もまだ私を見ていた。差し出された手へ自分の手を重ねる。指が閉じたところで、ようやく笑えた。歩き出すまでの僅かな時間に、好きだと言った声が何度も耳へ戻る。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "次の待ち合わせでは、先生と呼ぶ前に手を振った。こちらへ来る足が少し速くなる。好きな展示は相変わらず一致しなかったけれど、帰りに食べたいものなら今日は同じだった。改札を出た先生の手を取って、私から店の方向へ歩き出した。",
+          "storyTime": {
+            "date": "7月5日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_A"
+    },
+    {
+      "id": "end_love_b",
+      "chapter": 5,
+      "title": "待ち合わせより早く",
+      "location": "街の庭園と喫茶店",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "kars",
+      "rating": "general",
+      "tags": [
+        "kars"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私も好きです、と答えると、先生は近くへ来た。すぐ触れずに差し出された手を、私が取る。閉園を知らせる音楽の中で歩き出し、出口の前でまた顔を見た。言われたことを思い出すたび、足元の道が少し違って見えた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "休日の喫茶店に、先生は待ち合わせより早く来ていた。私も早く着いたつもりだったので立ち止まると、待たせるつもりだったのか、と言われる。笑いながら席へ近づき、まだ開かれていない図録に気づいた。",
+          "storyTime": {
+            "date": "7月5日",
+            "period": "昼"
+          }
+        },
+        {
+          "speaker": "player",
+          "text": "それ、一緒に見るのを待ってくれてたんですか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "君がどこを選ぶか見たかった、と先生はページを開いた。私は隣の椅子へ移る前に、少しだけ顔を隠した。次から早く来る理由が、私にも一つ増えた。"
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_B"
+    },
+    {
+      "id": "end_fwb",
+      "chapter": 5,
+      "title": "額縁の外の時間",
+      "location": "カーズの自宅",
+      "storyTime": {
+        "date": "7月12日",
+        "period": "夜"
+      },
+      "characterId": "kars",
+      "rating": "fade",
+      "tags": [
+        "kars"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "夕食のあと、壁の図版を掛ける位置を少し変えてみた。先生は、前の方がよい、と即座に言う。私が笑って戻すと、後ろから手を伸ばす代わりに、隣へ来て額を支えた。仕事を終えて会った今夜も、一緒にいたいかと互いに言葉で確かめた。"
+        },
+        {
+          "speaker": "player",
+          "text": "今夜は、泊まりたいです。朝は自分の予定へ行きます。"
+        },
+        {
+          "speaker": "kars",
+          "text": "ああ。今夜、君といたい。明日の時間になったら起こそう。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "額を掛け終えてから、私がその手に触れた。何度も見た部屋の灯りを、今夜も二人で落とす。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝、鞄を持って居間を横切ると、図版へ当たる光はもう高かった。玄関で靴を履き、また都合のいい日を連絡します、と振り返る。先生は扉を開けて待っていた。外の風を吸い込み、私は自分の一日へ向かった。",
+          "storyTime": {
+            "date": "7月13日",
+            "period": "朝"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB"
+    },
+    {
+      "id": "end_fwb_love",
+      "chapter": 5,
+      "title": "昼にも、その名前を",
+      "location": "街の庭園",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "kars",
+      "rating": "general",
+      "tags": [
+        "kars"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人として会いたいと伝えても、触れ慣れた手にはすぐ触れなかった。先生は少し顎を引き、私の言葉を聞き終える。向かい合って答えを待つのは、何度目の夜よりも落ち着かなかった。"
+        },
+        {
+          "speaker": "kars",
+          "text": "同じことを言おうと思っていた。君と付き合いたい。今までを取り消すのではなく、その先の話だ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "はい、と答え、私から手を取った。先生は指の間を確かめるように握り直す。閉園へ向かう人の流れに並んでも、今日は離れなかった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "次の昼、外で待ち合わせた先生に、夜には話しそびれたことを話した。くだらない話だと思われるかもしれない。けれど途中で時計へ視線を逃がさずに聞く横顔を見て、続きも聞いてほしいと思った。",
+          "storyTime": {
+            "date": "7月5日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB_TO_LOVE"
+    },
+    {
+      "id": "end_special",
+      "chapter": 5,
+      "title": "まだ見つけていない",
+      "location": "街の庭園と郊外の道",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "kars",
+      "rating": "general",
+      "tags": [
+        "kars"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "先生と恋人として出掛けたいと答えると、では七月の日曜、と日付だけが決まった。行き先を決めない約束に、先生はまだ少し不満そうだった。それでも手を伸ばしてきたので、私は笑いながら取った。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "日曜、駅を出てから二人で道を選んだ。地図に名前のない小さな花を見つけ、私はしゃがむ。先生はすぐ調べようと端末を出したが、私が見終わるまで画面を伏せていた。",
+          "storyTime": {
+            "date": "7月6日",
+            "period": "昼"
+          }
+        },
+        {
+          "speaker": "kars",
+          "text": "名前は後で調べる。今は、何を見ている？"
+        },
+        {
+          "speaker": "narrator",
+          "text": "花の下の小さな影を指すと、先生も隣にしゃがんだ。分かった、と言われるより前の時間が長くなる。膝の近くへ落ちた影が二つになり、私は今日の帰り道で何を話すのか、まだ知らずにいられた。"
+        }
+      ],
+      "choices": [],
+      "ending": "SPECIAL"
+    }
+  ],
+  "playerContext": {
+    "role": "情報系を卒業した成人。カーズとの履修・評価・指導・研究・推薦等の全利害終了後",
+    "profile": "親しみやすく、好意が表情に出やすい。卒業後の暮らしの中で、公開展示をきっかけにカーズと再会する。現在も将来も彼から評価・指導を受ける関係ではない。"
+  }
+}

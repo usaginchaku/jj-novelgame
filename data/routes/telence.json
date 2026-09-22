@@ -1,0 +1,1220 @@
+{
+  "id": "telence",
+  "title": "テレンス — まだ開けない続きを",
+  "intro": "画面の中では、次の手を読まれてしまう。\nそれでも、会いたい理由まで彼に決められるわけではない。",
+  "startEvent": "controller",
+  "character": {
+    "name": "テレンス・T・ダービー",
+    "adult": true,
+    "heightCm": null,
+    "heightBasis": "確認した公式紹介・二次プロフィールに確定身長なし",
+    "profile": "礼儀の表面と強い勝利欲。相手の心理を読む自信。優位が揺れると余裕を失う。",
+    "personality": [
+      "礼儀の表面と強い勝利欲",
+      "相手の心理を読む自信",
+      "優位が揺れると余裕を失う"
+    ],
+    "speech": {
+      "firstPerson": "わたし",
+      "addressing": "主人公への呼称はAUのaddressingを使用。親しさだけで呼び捨てや敬語を一律変更しない。",
+      "tone": "丁寧で端正な説明。語尾は感情と相手に合わせる。",
+      "habits": [
+        "丁寧で端正な説明",
+        "結果を確信して念を押す",
+        "〜ございますは必要な時だけ"
+      ],
+      "signaturePhrases": [],
+      "signatureNote": "日常の固定口癖は採用しない。象徴的な原作台詞と普段の話し方を混同せず、名台詞を貼り付けない。",
+      "avoid": [
+        "兄ダニエルのカード賭博と混同",
+        "心が本当に読める",
+        "ゲーム結果を恋愛同意にする"
+      ]
+    },
+    "referenceSection": "docs/CHARACTER_REFERENCE.md#cast-telence"
+  },
+  "au": {
+    "role": "学年・専攻未確定の大学関係者。具体的役職は本文で断定しない",
+    "routeEnabled": true,
+    "addressing": [
+      {
+        "text": "{player.lastName}さん"
+      }
+    ]
+  },
+  "endingDescriptions": {
+    "FRIEND": {
+      "title": "まだ負けたままでは終わらない",
+      "description": "読む人と、読まれたままではいない友人。次の対戦にも、自分の走りを持っていく。"
+    },
+    "LOVE_A": {
+      "title": "先に渡した言葉",
+      "description": "予想される前に、自分から恋を伝える。順位とは違う嬉しさが、返事のあとにも残る。"
+    },
+    "LOVE_B": {
+      "title": "分からないから訊くこと",
+      "description": "彼からの告白へ、自分の言葉で返す。答えを当てるだけではない待ち合わせが始まる。"
+    },
+    "FWB": {
+      "title": "ゲームをしまったあと",
+      "description": "勝敗と関係なく、望む夜に会う親密な友人。画面を消したあとにも、見たい顔がある。"
+    },
+    "FWB_TO_LOVE": {
+      "title": "同じ返事を、今選ぶ",
+      "description": "夜を重ねた二人が、今の希望として恋人を選ぶ。知っている温かさと一緒に、昼の街へ。"
+    },
+    "SPECIAL": {
+      "title": "はじめてを取り置く",
+      "description": "勝つところだけを見せず、知らない遊びを一緒に始める相棒。次の初めてを、互いが来るまで残しておく。"
+    }
+  },
+  "events": [
+    {
+      "id": "controller",
+      "chapter": 1,
+      "title": "二つ目のコントローラー",
+      "location": "学内の公開ゲーム体験会",
+      "storyTime": {
+        "date": "5月10日",
+        "period": "昼"
+      },
+      "characterId": "telence",
+      "rating": "general",
+      "tags": [
+        "telence"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "公開ゲーム体験会の机で、空いていたコントローラーを取った。隣のテレンスさんとは、大学の催しで何度か挨拶したことがある。所属や学年より先に覚えたのは、勝ちそうな時ほど姿勢が静かになる人だということだった。画面には短い周回コースが映っている。"
+        },
+        {
+          "speaker": "telence",
+          "text": "このコースは初めてですか。では、最初の一周で曲がる場所を覚えてください。そのあとは遠慮しません。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "端正な声のまま言われて、私は笑った。一周目から置き去りにされるかと思ったら、彼の車は少し前で速度を落とす。次の周回に入った途端、その差は遠慮なく広がった。私が角を曲がり損ねると、彼の口元だけが動く。"
+        },
+        {
+          "speaker": "player",
+          "text": "今、笑いましたね。次はそこ、ちゃんと曲がります。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "learn",
+          "text": "曲がり損ねた場所を確かめ、もう一度挑む",
+          "next": "replay",
+          "effect": "workTogether"
+        },
+        {
+          "id": "watch",
+          "text": "テレンスさんの走りを、隣で一度見せてもらう",
+          "next": "replay",
+          "effect": "ask"
+        }
+      ]
+    },
+    {
+      "id": "replay",
+      "chapter": 1,
+      "title": "勝ったことにしない",
+      "location": "公開ゲーム体験会",
+      "storyTime": {
+        "date": "5月10日",
+        "period": "夕方"
+      },
+      "characterId": "telence",
+      "rating": "general",
+      "tags": [
+        "telence"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "何度か走るうち、私は初めて先にゴールした。嬉しくて振り向くと、テレンスさんは自分の手元を見ていた。終盤だけ車が動かなかったのを思い出し、私はリプレイを止めた。接続の表示が一度途切れている。"
+        },
+        {
+          "speaker": "telence",
+          "text": "……今の結果は、記録に残りませんね。機器の問題です。"
+        },
+        {
+          "speaker": "player",
+          "text": "それは分かってます。でも途中は、私も追いついてたと思います。そこまで、なかったことにはしたくないです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼は私を見て、すぐ画面へ戻った。巻き戻した映像では、確かに最後の角までは近かった。私が喜んだ瞬間ごと訂正されるのは嫌だったけれど、故障を勝ちにしたいわけでもない。二人で別のコントローラーをつなぎ直した。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "again_fair",
+          "text": "故障の勝ちは数えず、追いついた走りで再戦する",
+          "next": "cafe",
+          "effect": "honest",
+          "setFlags": [
+            "fairRematch"
+          ]
+        },
+        {
+          "id": "practice",
+          "text": "勝敗はいったん置き、曲がり方を練習する",
+          "next": "cafe",
+          "effect": "compareNotes"
+        }
+      ]
+    },
+    {
+      "id": "cafe",
+      "chapter": 1,
+      "title": "やめる時刻",
+      "location": "学内のラウンジ",
+      "storyTime": {
+        "date": "5月17日",
+        "period": "昼"
+      },
+      "characterId": "telence",
+      "rating": "general",
+      "tags": [
+        "telence"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "翌週、また遊ぼうと誘われてラウンジへ来た。持ち込んだ画面で対戦していると、約束した終了時刻が近づく。テレンスさんはあと一回、と新しいコースを選びかけた。私にはジョセフと課題をする約束があった。勝てそうな気がしたのも本当で、指を離すまで少し迷った。"
+        },
+        {
+          "speaker": "telence",
+          "text": "次なら、あなたの得意なコースです。ここで終わりにしてよいのですか。"
+        },
+        {
+          "speaker": "player",
+          "text": "勝ちたいです。でも、今日はここまでにします。次も遊びたいので、別の日に続きをお願いしていいですか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "私がコントローラーを置くと、彼も操作を止めた。勝負の続きより、返事の方を待つ数秒が長かった。やがて彼は予定表を出し、ではいつにしましょう、と訊いた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "own_time",
+          "text": "先約を守って帰り、次に会う日を自分から提案する",
+          "next": "message",
+          "effect": "homeTalk",
+          "setFlags": [
+            "ownTime"
+          ]
+        },
+        {
+          "id": "lunch",
+          "text": "今日は帰り、次は対戦前に二人で昼食を取る約束をする",
+          "next": "message",
+          "effect": "lunchTwo"
+        },
+        {
+          "id": "schedule",
+          "text": "終了時刻を確かめ、次の対戦時間だけ決める",
+          "next": "message",
+          "effect": "shiftRest"
+        }
+      ]
+    },
+    {
+      "id": "message",
+      "chapter": 2,
+      "title": "予測の外に置く文字",
+      "location": "主人公の自宅",
+      "storyTime": {
+        "date": "5月20日",
+        "period": "夜"
+      },
+      "characterId": "telence",
+      "rating": "general",
+      "tags": [
+        "telence"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "テレンスさんから、次に走るコースの画像が届いた。近道の入口に印があり、私は前回そこを通り過ぎていた。教える必要はないのにと思い、しばらく拡大したまま見る。"
+        },
+        {
+          "speaker": "telence",
+          "text": "次は、ここも試してください。知っている相手に勝つ方が面白いですから。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "言い方まで勝負なのがおかしくて、私は声を出さずに笑った。次に会う時に勝ちたい。でも、それだけなら別の相手でもいいはずだった。返事を打つ手が、画像の端にある名前で止まった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "glad",
+          "text": "次も会えるのが嬉しいです。今度は、その道を使いますね",
+          "next": "unexpected",
+          "effect": "messageHeart",
+          "replyVariants": [
+            {
+              "text": "わたしも楽しみにしています。今度は、時間内で決着をつけましょう。",
+              "when": {
+                "flags": [
+                  "ownTime"
+                ]
+              }
+            },
+            {
+              "text": "それは結構。使うと分かっていても、簡単には止めませんよ。"
+            }
+          ],
+          "lockRoute": "telence"
+        },
+        {
+          "id": "challenge",
+          "text": "教えてもらった道で勝っても、文句はなしですよ",
+          "next": "unexpected",
+          "effect": "messageListen",
+          "replyVariants": [
+            {
+              "text": "勝てたら、の話ですが。ええ、約束しましょう。"
+            }
+          ],
+          "lockRoute": "telence"
+        },
+        {
+          "id": "check",
+          "text": "確認しました。次に走るまでに覚えておきます",
+          "next": "unexpected",
+          "effect": "messageDaily",
+          "replyVariants": [
+            {
+              "text": "では、次の対戦で。曲がり始めをよく見てください。"
+            }
+          ],
+          "lockRoute": "telence"
+        }
+      ],
+      "message": true
+    },
+    {
+      "id": "unexpected",
+      "chapter": 2,
+      "title": "記録を更新しない寄り道",
+      "location": "ゲームを置いたラウンジ",
+      "storyTime": {
+        "date": "5月25日",
+        "period": "昼"
+      },
+      "characterId": "telence",
+      "rating": "general",
+      "tags": [
+        "telence"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "レースのあと、私は同じゲームの自由に走るモードを開いた。順位は出ない。端に見えていた景色へ車を向けると、テレンスさんが、そちらに近道はありません、と言った。私は知っていますと返し、そのまま橋の下へ進んだ。"
+        },
+        {
+          "speaker": "player",
+          "text": "ここ、下からも見たかったんです。せっかく作ってあるから。"
+        },
+        {
+          "speaker": "telence",
+          "text": "……景色を見るために、わざわざ走るのですか。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "不思議そうな声が、勝ちを確信した時より近く感じられた。私は車を止め、画面に映る夕日を見せる。彼の車も隣へ来て、同じ向きで止まった。何も更新されない画面を、二人でしばらく見ていた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "off_record",
+          "text": "順位の出ない場所へ、もう少し一緒に寄り道する",
+          "next": "match",
+          "effect": "walkClose",
+          "setFlags": [
+            "offRecord"
+          ]
+        },
+        {
+          "id": "return",
+          "text": "見終えたら戻り、対戦の続きを始める",
+          "next": "match",
+          "effect": "walkHome"
+        }
+      ]
+    },
+    {
+      "id": "match",
+      "chapter": 2,
+      "title": "きれいではない負け方",
+      "location": "学内のゲーム交流会",
+      "storyTime": {
+        "date": "6月7日",
+        "period": "昼"
+      },
+      "characterId": "telence",
+      "rating": "general",
+      "tags": [
+        "telence"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "交流会で花京院先輩とテレンスさんが対戦した。私は画面の横で、二人の顔を交互に見ていた。先にゴールしたのは花京院先輩だった。テレンスさんは画面が切り替わるまで操作を止めず、それからコントローラーを机へ置いた。置く音が、いつもより少し強い。"
+        },
+        {
+          "speaker": "kakyoin",
+          "text": "最後の分岐、来ると思っていました。もう一度やりますか。"
+        },
+        {
+          "speaker": "telence",
+          "text": "ええ。……いえ、いま一度、走りを見直してからにします。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "花京院先輩が他の台へ移ると、テレンスさんはリプレイを開いた。私は軽く励まそうとしてやめた。悔しがっているところを、見なかったことにする方が失礼な気がした。画面へ目を戻し、読み違えた角を一緒に見た。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "beside",
+          "text": "「こういう時も、隣で見ていていいですか」と訊く",
+          "next": "room",
+          "effect": "conferenceClose"
+        },
+        {
+          "id": "review",
+          "text": "リプレイを一緒に見て、次の作戦を考える",
+          "next": "room",
+          "effect": "conferencePractical"
+        }
+      ]
+    },
+    {
+      "id": "room",
+      "chapter": 3,
+      "title": "しまわれたコントローラー",
+      "location": "テレンスの自宅",
+      "storyTime": {
+        "date": "6月7日",
+        "period": "夜"
+      },
+      "characterId": "telence",
+      "rating": "general",
+      "tags": [
+        "telence"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "交流会のあと、夕食を買ってテレンスさんの家へ寄った。続きの対戦をするつもりだったが、食べ終えると彼はコントローラーを箱へ戻した。まだやらないのですかと聞いたら、少し休みます、と返ってくる。私は空いた机に肘をつきかけ、向かいの顔を見た。"
+        },
+        {
+          "speaker": "telence",
+          "text": "負けた話を、楽しそうに聞かないでください。まだ腹が立っています。"
+        },
+        {
+          "speaker": "player",
+          "text": "楽しいのは、今ここで話してる方です。いつも勝ってるテレンスさんだけだと、知らなかったので。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼が何か言い返そうとして、やめた。片づいた机には、二人の手元を隠す画面がない。沈黙に困ってゲームを戻したくなったけれど、今日はそのまま話していたかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "stay",
+          "text": "「今夜は、もっと近くにいたいです」と伝える",
+          "next": "consent",
+          "effect": "hotelInvite",
+          "when": {
+            "min": {
+              "trust": 45,
+              "desire": 12
+            }
+          }
+        },
+        {
+          "id": "talk",
+          "text": "時間まで話し、次の対戦以外の約束もする",
+          "next": "next",
+          "effect": "hotelTalk"
+        },
+        {
+          "id": "home",
+          "text": "今日は帰り、また会う日を決める",
+          "next": "next",
+          "effect": "homeRest"
+        }
+      ]
+    },
+    {
+      "id": "consent",
+      "chapter": 3,
+      "title": "読みでは決めない",
+      "location": "テレンスの自宅",
+      "storyTime": {
+        "date": "6月7日",
+        "period": "夜"
+      },
+      "characterId": "telence",
+      "rating": "general",
+      "tags": [
+        "telence"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "近くにいたいと言うと、彼の視線が私の手元へ落ちた。次に何をするか当てられそうで、自分から顔を上げる。彼もこちらを見た。画面の中の癖を読まれた時と違って、今は返事を聞いてほしかった。"
+        },
+        {
+          "speaker": "telence",
+          "text": "わたしも、あなたに触れたい。今夜、一緒にいてほしいと思っています。恋人になる約束とは別に、あなたもそう望みますか。"
+        },
+        {
+          "speaker": "player",
+          "text": "はい。私も触れてほしいです。でも、途中でやめたくなったら、止めてください。テレンスさんも、嫌なことは言ってください。"
+        },
+        {
+          "speaker": "telence",
+          "text": "分かりました。どちらかがやめたいなら止めましょう。今から帰っても構いません。あなたの言葉で、聞かせてください。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "勝ち負けを挟めない問いが、机の上に残った。私は自分の鞄を脇へ寄せ、まだ彼に触れずに指を開いた。残るのなら、自分でそう言ってからにしたかった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「一緒にいたいです」と答え、手を差し出す",
+          "next": "night",
+          "effect": "consent",
+          "setFlags": [
+            "consented",
+            "hadNight"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「今日は帰ります」と答える",
+          "next": "next",
+          "effect": "walkHome",
+          "setFlags": [
+            "declinedTouch"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "night",
+      "chapter": 3,
+      "title": "画面のない間",
+      "location": "テレンスの自宅",
+      "storyTime": {
+        "date": "6月7日",
+        "period": "夜"
+      },
+      "characterId": "telence",
+      "rating": "fade",
+      "tags": [
+        "telence"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "手を取った彼が隣へ座り直し、私は顔を近づけた。椅子の向きを変える小さな音が、いつもより大きく聞こえる。彼が少し身を屈めたので、目を合わせたまま頷けた。唇が触れて離れるまで、二人とも余計な言葉を探さなかった。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "離れたあと、彼の袖口へ指を掛けた。もう一度、と言う私の声を聞いてから手が背中に添えられる。二人で立ち上がり、寝室へ移った。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝、身支度を終えて戻ると、食卓の端に昨夜しまった箱があった。私がそちらを見たのに気づき、彼は朝食の皿を先に出す。今日はまだ始めません、と言われて笑った。帰りの時間を確認してから、私は向かいに座った。",
+          "storyTime": {
+            "date": "6月8日",
+            "period": "朝"
+          }
+        },
+        {
+          "speaker": "telence",
+          "text": "また、こうして会いたいです。昼にも、二人が望む夜にも。あなたはどうですか。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "again",
+          "text": "「恋人の約束はせず、また夜も会いたいです」と答える",
+          "next": "next",
+          "effect": "messageBoundaries",
+          "setFlags": [
+            "ongoing"
+          ]
+        },
+        {
+          "id": "more",
+          "text": "「また夜も会いたいです。前より好きになってます」と答える",
+          "next": "next",
+          "effect": "messageAgain",
+          "setFlags": [
+            "ongoing"
+          ]
+        },
+        {
+          "id": "day",
+          "text": "「これからは、昼に遊ぶ友達でいたいです」と答える",
+          "next": "next",
+          "effect": "messageDaily",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ],
+      "when": {
+        "flags": [
+          "consented"
+        ]
+      }
+    },
+    {
+      "id": "next",
+      "chapter": 4,
+      "title": "新しい箱を開ける前",
+      "location": "街のカフェ",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "telence",
+      "rating": "general",
+      "tags": [
+        "telence"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "六月の間、対戦のない日にも会い、二人とも望んだ夜には彼の家で過ごした。翌朝の予定があれば早く帰り、昼に会った時にはまた勝負をした。よく知ったつもりの人が負けて言葉に詰まると、今でも少し可笑しかった。",
+          "when": {
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "昼に遊ぶ友達でいたいと話してから、夜の誘いはなくなった。対戦中は相変わらず容赦がなかったが、私の返事を持ち出して揶揄されることはない。今日はゲームを買った帰りに、二人で食事をした。",
+          "when": {
+            "flags": [
+              "hadNight",
+              "endedNight"
+            ],
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "六月の間、対戦だけでなく食事にも誘い合った。画面の外で話すと、思ったとおりに進まないことも増える。それが嫌ではなく、今日はゲームを買った帰りにもう一軒、と私から誘った。",
+          "when": {
+            "notFlags": [
+              "hadNight"
+            ]
+          }
+        },
+        {
+          "speaker": "telence",
+          "text": "これは初めて遊びます。まだ、勝ち方は見ていませんよ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼が袋の中の箱を少し見せた。今日は開けずにおこうと思っていたけれど、初めての手つきを隣で見たい気もする。私は飲み終えたグラスから手を離し、先に話したかった方へ顔を上げた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "tell",
+          "text": "自分から好きだと伝えたいと言う",
+          "next": "confess_player",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 35,
+              "romanceChar": 25
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "listen",
+          "text": "テレンスさんがこちらを見る、その続きを待つ",
+          "next": "confess_telence",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 20,
+              "romanceChar": 35
+            },
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "new_game",
+          "text": "二人とも知らない遊びを、最初から一緒に始めたいと話す",
+          "next": "beginner",
+          "when": {
+            "min": {
+              "trust": 50,
+              "romancePlayer": 35,
+              "romanceChar": 30,
+              "comfort": 20
+            },
+            "flags": [
+              "fairRematch",
+              "ownTime",
+              "offRecord"
+            ],
+            "notFlags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "nights",
+          "text": "親密な友人として、これからも会いたいと話す",
+          "next": "fwb_choice",
+          "when": {
+            "min": {
+              "trust": 50,
+              "desire": 25,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          }
+        },
+        {
+          "id": "love",
+          "text": "「今は、恋人として一緒にいたいです」と伝える",
+          "next": "end_fwb_love",
+          "when": {
+            "min": {
+              "trust": 60,
+              "romancePlayer": 50,
+              "romanceChar": 40,
+              "intimacy": 30
+            },
+            "flags": [
+              "ongoing"
+            ]
+          },
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "friends",
+          "text": "一緒に遊び、言い合える友達でいたいと伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_player",
+      "chapter": 4,
+      "title": "当てられる前に",
+      "location": "街のカフェ",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "telence",
+      "rating": "general",
+      "tags": [
+        "telence"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "私から話したいと言うと、彼は箱を袋へ戻した。次の言葉まで予想されていそうで、私は一度笑いかけ、真面目な顔へ戻る。誰が先に気づいたかを競いたいのではなかった。私が好きだと思っている人へ、私から渡したかった。"
+        },
+        {
+          "speaker": "player",
+          "text": "対戦してない時にも会いたくなります。勝てたら嬉しいけど、それがなくても、次もテレンスさんと会いたいです。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼は今度こそ言葉を挟まなかった。グラスの水滴が机へ落ち、私はそれを拭くふりをせずに相手を見ていた。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "like",
+          "text": "「好きです。私と付き合ってください」",
+          "next": "end_love_a",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "choose",
+          "text": "「恋人として、あなたの隣を選びたいです」と伝える",
+          "next": "end_love_a",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "wait",
+          "text": "今は友人として、また会う約束をしたいと伝える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "confess_telence",
+      "chapter": 4,
+      "title": "答えを知らない問い",
+      "location": "街のカフェ",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "telence",
+      "rating": "general",
+      "tags": [
+        "telence"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "彼は袋の口を折り、指で一度押さえた。試合を始める時のようにきれいに揃えてから、顔を上げる。私の返事を読む前に、今の自分の方を差し出すような声だった。"
+        },
+        {
+          "speaker": "telence",
+          "text": "あなたが好きです。恋人として会いたいと思っています。対戦する口実を考えるより、先に言うべきでした。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "聞き終えると、私は短く息を吸った。彼の目がその動きを追い、それから手元へ逸れかけて戻る。読まれたくないというより、言うまで待っていてほしかった。私は姿勢を直し、自分の言葉を探した。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "「私も好きです。恋人になりたいです」と答える",
+          "next": "end_love_b",
+          "effect": "messageHeart",
+          "setFlags": [
+            "dating"
+          ]
+        },
+        {
+          "id": "no",
+          "text": "「恋人にはなれません。友達でいたいです」と答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "refusedConfession",
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "beginner",
+      "chapter": 4,
+      "title": "説明書の最初の頁",
+      "location": "街のカフェ",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "telence",
+      "rating": "general",
+      "tags": [
+        "telence"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "二人とも知らない遊びを一緒に始めたいと言うと、彼は勝ち方を調べていないと先ほど言ったでしょう、と返した。私が笑うと、少しだけ眉を寄せる。それでも箱を袋から出し、机の上へ置いた。"
+        },
+        {
+          "speaker": "player",
+          "text": "勝つ前のテレンスさんと、同じところから始めたいんです。私も失敗するし、途中で景色を見に行くかもしれませんけど。"
+        },
+        {
+          "speaker": "telence",
+          "text": "それは予想しています。……では、今回は先に練習しておくのをやめましょう。あなたが来るまで、開けずにおきます。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "その約束が彼にはどのくらい大きいのか、箱から離れない指を見て考えた。勝っている人を見るだけでなく、何もできないところから隣にいたかった。私は帰る予定の時刻を確かめ、次に会う日を指した。"
+        },
+        {
+          "speaker": "telence",
+          "text": "恋人になる約束とは違いますが、最初に一緒に遊ぶ相手になってほしい。勝つところばかり見せたいわけでは、なくなったようです。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "partners",
+          "text": "「私も、その相手でいたいです」と次の約束をする",
+          "next": "end_special",
+          "effect": "homeTogether",
+          "setFlags": [
+            "firstPlay"
+          ]
+        },
+        {
+          "id": "friend",
+          "text": "時々対戦する友達として会いたいと答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fwb_choice",
+      "chapter": 4,
+      "title": "勝負を置いて話す",
+      "location": "街のカフェ",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "telence",
+      "rating": "general",
+      "tags": [
+        "telence"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人の約束をせず、望む夜に会う友人でいたいと伝えた。彼は箱を袋へ戻し、私の話を最後まで聞いた。机に遮るものがなくなってから、同じように望んでいます、と返ってくる。"
+        },
+        {
+          "speaker": "telence",
+          "text": "誘いを受けるかどうかは、その時に。途中でやめたい場合も伝えてください。わたしも、同じように言います。"
+        },
+        {
+          "speaker": "player",
+          "text": "はい。私からも誘います。ゲームに勝ったご褒美には、しないでくださいね。"
+        },
+        {
+          "speaker": "telence",
+          "text": "それは、まったく別の話です。あなたに会いたい時に誘います。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "きっぱりした返事に笑うと、彼も少し笑った。では、もう少し何か頼みますか、と訊かれて、私はメニューを開き直す。まだこの席で話したいことがあった。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "continue",
+          "text": "親密な友人として、これからも会うと答える",
+          "next": "end_fwb",
+          "effect": "messageBoundaries"
+        },
+        {
+          "id": "daytime",
+          "text": "考え直し、昼に遊ぶ友達でいたいと答える",
+          "next": "end_friend",
+          "effect": "friendPromise",
+          "setFlags": [
+            "endedNight"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "end_friend",
+      "chapter": 5,
+      "title": "まだ負けたままでは終わらない",
+      "location": "学内のゲーム交流会",
+      "storyTime": {
+        "date": "7月12日",
+        "period": "昼"
+      },
+      "characterId": "telence",
+      "rating": "general",
+      "tags": [
+        "telence"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人にはなれないと答えたあと、彼は少し黙ってから分かりましたと言った。次の交流会の連絡は何日か後に来た。対戦ならしたい、と私から返し、自分のコントローラーを持ってきた。",
+          "when": {
+            "flags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "昼に遊ぶ友達でいたいと話すと、次に来たのは交流会の案内だった。夜の誘いはなくなり、私も自分から得意なコースの話を送れた。今日はその続きができる。",
+          "when": {
+            "flags": [
+              "hadNight",
+              "endedNight"
+            ],
+            "notFlags": [
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "友人としてまた遊ぼうと約束し、交流会へ来た。今日は花京院先輩も同じ台にいて、順番を決めながら楽しそうに画面を見ている。私は二人の間へコントローラーを置いた。",
+          "when": {
+            "notFlags": [
+              "hadNight",
+              "refusedConfession"
+            ]
+          }
+        },
+        {
+          "speaker": "telence",
+          "text": "練習してきましたね。その顔なら、言わなくても分かります。"
+        },
+        {
+          "speaker": "player",
+          "text": "それは当たってます。でも、勝つかどうかはまだですよ。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼の口元が上がった。開始の合図で画面へ向き直る。隣から短い声が聞こえ、今度はこちらが先に笑った。終わったら次の相手へ渡す、その順番まで含めて今日は楽しみだった。"
+        }
+      ],
+      "choices": [],
+      "ending": "FRIEND"
+    },
+    {
+      "id": "end_love_a",
+      "chapter": 5,
+      "title": "先に渡した言葉",
+      "location": "街のカフェと街路",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "telence",
+      "rating": "general",
+      "tags": [
+        "telence"
+      ],
+      "body": [
+        {
+          "speaker": "telence",
+          "text": "わたしも好きです。あなたと付き合いたい。……あなたが先に言うとは、思っていませんでした。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "初めて先にゴールした時より、返事に困った。嬉しいですとだけ言うと、彼もすぐには次を続けない。会計を済ませて外へ出るまで、その短い沈黙を私は何度も思い出した。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "翌週、待ち合わせに来た彼へ私から手を差し出した。今度は驚かれずに取られる。それでも、何を話し始めるかまでは決まっていない。今日はゲームの店へ向かわず、私の行きたかった場所へ二人で曲がった。",
+          "storyTime": {
+            "date": "7月5日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_A"
+    },
+    {
+      "id": "end_love_b",
+      "chapter": 5,
+      "title": "分からないから訊くこと",
+      "location": "街のカフェと駅前",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "telence",
+      "rating": "general",
+      "tags": [
+        "telence"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人になりたいと返すと、彼の指が袋から離れた。何度も見ていた手の動きが、その時だけ遅く感じられる。店を出てから手を取ってもいいですかと訊かれ、私は返事の代わりにせず、はいと声にして手を伸ばした。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "次の待ち合わせで、彼は行き先を二つ挙げた。私がどちらを選ぶか当てないのですか、とからかうと、今日は聞きます、と返る。考えながら歩く私を、急いで答えへ追い込まなかった。",
+          "storyTime": {
+            "date": "7月5日",
+            "period": "昼"
+          }
+        },
+        {
+          "speaker": "narrator",
+          "text": "でも、そちらを選ぶと思いました、と決まってから言われて笑った。調子のいいところは残っている。つないだ手を少し引いて、私が先に店の入口へ向かった。"
+        }
+      ],
+      "choices": [],
+      "ending": "LOVE_B"
+    },
+    {
+      "id": "end_fwb",
+      "chapter": 5,
+      "title": "ゲームをしまったあと",
+      "location": "テレンスの自宅",
+      "storyTime": {
+        "date": "7月12日",
+        "period": "夜"
+      },
+      "characterId": "telence",
+      "rating": "fade",
+      "tags": [
+        "telence"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "対戦を終えると、私は約束した時刻にコントローラーを置いた。今日は泊まりたいと来る前にも話し、今も一緒にいたいと伝える。彼も同じ返事をしてから、画面を消した。勝敗の残った数字が暗くなり、二人の顔だけが薄く映る。"
+        },
+        {
+          "speaker": "telence",
+          "text": "次の対戦は、また別の日にしましょう。今夜は、あなたの方を見ていたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "その言葉に照れたのを隠すものはもうなかった。隣へ座り直し、自分から手に触れる。彼が顔を向けるまで待ち、二人で近づいた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "——暗転——"
+        },
+        {
+          "speaker": "narrator",
+          "text": "朝食のあと、私は帰る支度をした。彼は箱を開けずに玄関へ来る。次の対戦までに練習しておきます、と言うと、もちろんこちらも、と返ってきた。私は笑って靴を履き、別々に過ごす一日へ出た。",
+          "storyTime": {
+            "date": "7月13日",
+            "period": "朝"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB"
+    },
+    {
+      "id": "end_fwb_love",
+      "chapter": 5,
+      "title": "同じ返事を、今選ぶ",
+      "location": "街のカフェ",
+      "storyTime": {
+        "date": "6月28日",
+        "period": "夕方"
+      },
+      "characterId": "telence",
+      "rating": "general",
+      "tags": [
+        "telence"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "恋人になりたいと話したあと、彼は私の顔を見ていた。夜に会いたいと言った時の自分も思い出す。その希望は嘘ではなくて、今はそこへ、もう一つの言葉を足したかった。"
+        },
+        {
+          "speaker": "telence",
+          "text": "わたしも、あなたと付き合いたいです。今までの答えを、そのまま次に当てはめたくありません。今のあなたと、そう決めたい。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "はい、と頷いてから、机の上へ手を置いた。彼の手が近づき、私は自分で指を重ねる。よく知った温かさへ、新しく呼べる名前が増えた。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "次の休日、二人で昼の街へ出た。どちらの家へ行くためでもなく、ただ隣を歩く。ゲームの店の前を通ると、彼が足を止めたので私も笑って止まった。好きなものを見つける横顔は同じでも、その腕に触れるまでのためらいが少し短くなっていた。",
+          "storyTime": {
+            "date": "7月5日",
+            "period": "昼"
+          }
+        }
+      ],
+      "choices": [],
+      "ending": "FWB_TO_LOVE"
+    },
+    {
+      "id": "end_special",
+      "chapter": 5,
+      "title": "はじめてを取り置く",
+      "location": "テレンスの自宅",
+      "storyTime": {
+        "date": "7月12日",
+        "period": "昼"
+      },
+      "characterId": "telence",
+      "rating": "general",
+      "tags": [
+        "telence"
+      ],
+      "body": [
+        {
+          "speaker": "narrator",
+          "text": "約束の日、箱にはまだ封がついていた。テレンスさんは私が座るのを待ってから開け、コントローラーを一つ渡す。最初の操作説明で彼も同じ間違いをし、二人の画面が同時に止まった。私は思わず笑ったが、彼の顔を見てすぐ隠すのも違うと思った。"
+        },
+        {
+          "speaker": "telence",
+          "text": "今のは説明の順番が悪い。……いえ、わたしが一つ飛ばしました。"
+        },
+        {
+          "speaker": "player",
+          "text": "じゃあ、そこから戻りましょう。私も分かってないので。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "彼が戻した説明を一緒に読み、もう一度動かす。今度は私が先に進み、彼が少し悔しそうにこちらを見る。そこへ新しい景色が開いたので、私は競争を止めて指さした。彼の操作も止まった。"
+        },
+        {
+          "speaker": "telence",
+          "text": "ここは、少し見ていきましょうか。記録には、なりませんけれど。"
+        },
+        {
+          "speaker": "narrator",
+          "text": "頷き、二人で画面の奥を見る。終わりの時刻には保存して、それぞれの予定へ戻った。次は一人で先へ進まない、と互いに約束して。恋人という名前ではないけれど、初めてを残しておいてくれる人がいる。帰り道、まだ見ていない続きを私は楽しみにした。"
+        }
+      ],
+      "choices": [],
+      "ending": "SPECIAL"
+    }
+  ]
+}
